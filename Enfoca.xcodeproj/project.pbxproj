@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
+		0FA4A48F1EC89C0D00F31F9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48E1EC89C0D00F31F9A /* ViewController.swift */; };
+		0FA4A4921EC89C0D00F31F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4901EC89C0D00F31F9A /* Main.storyboard */; };
+		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
+		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
+		0FA4A4A21EC89C0D00F31F9A /* EnfocaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FA4A49E1EC89C0D00F31F9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FA4A4811EC89C0D00F31F9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FA4A4881EC89C0D00F31F9A;
+			remoteInfo = Enfoca;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FA4A4891EC89C0D00F31F9A /* Enfoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enfoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0FA4A48E1EC89C0D00F31F9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0FA4A4911EC89C0D00F31F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FA4A4961EC89C0D00F31F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0FA4A4981EC89C0D00F31F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnfocaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnfocaTests.swift; sourceTree = "<group>"; };
+		0FA4A4A31EC89C0D00F31F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0FA4A4861EC89C0D00F31F9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FA4A49A1EC89C0D00F31F9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FA4A4801EC89C0D00F31F9A = {
+			isa = PBXGroup;
+			children = (
+				0FA4A48B1EC89C0D00F31F9A /* Enfoca */,
+				0FA4A4A01EC89C0D00F31F9A /* EnfocaTests */,
+				0FA4A48A1EC89C0D00F31F9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0FA4A48A1EC89C0D00F31F9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4891EC89C0D00F31F9A /* Enfoca.app */,
+				0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FA4A48B1EC89C0D00F31F9A /* Enfoca */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */,
+				0FA4A48E1EC89C0D00F31F9A /* ViewController.swift */,
+				0FA4A4901EC89C0D00F31F9A /* Main.storyboard */,
+				0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */,
+				0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */,
+				0FA4A4981EC89C0D00F31F9A /* Info.plist */,
+			);
+			path = Enfoca;
+			sourceTree = "<group>";
+		};
+		0FA4A4A01EC89C0D00F31F9A /* EnfocaTests */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */,
+				0FA4A4A31EC89C0D00F31F9A /* Info.plist */,
+			);
+			path = EnfocaTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0FA4A4881EC89C0D00F31F9A /* Enfoca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FA4A4A61EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "Enfoca" */;
+			buildPhases = (
+				0FA4A4851EC89C0D00F31F9A /* Sources */,
+				0FA4A4861EC89C0D00F31F9A /* Frameworks */,
+				0FA4A4871EC89C0D00F31F9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Enfoca;
+			productName = Enfoca;
+			productReference = 0FA4A4891EC89C0D00F31F9A /* Enfoca.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0FA4A49C1EC89C0D00F31F9A /* EnfocaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FA4A4A91EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "EnfocaTests" */;
+			buildPhases = (
+				0FA4A4991EC89C0D00F31F9A /* Sources */,
+				0FA4A49A1EC89C0D00F31F9A /* Frameworks */,
+				0FA4A49B1EC89C0D00F31F9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FA4A49F1EC89C0D00F31F9A /* PBXTargetDependency */,
+			);
+			name = EnfocaTests;
+			productName = EnfocaTests;
+			productReference = 0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0FA4A4811EC89C0D00F31F9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Trevis Thomas";
+				TargetAttributes = {
+					0FA4A4881EC89C0D00F31F9A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KRNJ229R7J;
+						ProvisioningStyle = Automatic;
+					};
+					0FA4A49C1EC89C0D00F31F9A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KRNJ229R7J;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0FA4A4881EC89C0D00F31F9A;
+					};
+				};
+			};
+			buildConfigurationList = 0FA4A4841EC89C0D00F31F9A /* Build configuration list for PBXProject "Enfoca" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0FA4A4801EC89C0D00F31F9A;
+			productRefGroup = 0FA4A48A1EC89C0D00F31F9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0FA4A4881EC89C0D00F31F9A /* Enfoca */,
+				0FA4A49C1EC89C0D00F31F9A /* EnfocaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0FA4A4871EC89C0D00F31F9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */,
+				0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */,
+				0FA4A4921EC89C0D00F31F9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FA4A49B1EC89C0D00F31F9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FA4A4851EC89C0D00F31F9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA4A48F1EC89C0D00F31F9A /* ViewController.swift in Sources */,
+				0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FA4A4991EC89C0D00F31F9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA4A4A21EC89C0D00F31F9A /* EnfocaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0FA4A49F1EC89C0D00F31F9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FA4A4881EC89C0D00F31F9A /* Enfoca */;
+			targetProxy = 0FA4A49E1EC89C0D00F31F9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0FA4A4901EC89C0D00F31F9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FA4A4911EC89C0D00F31F9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FA4A4961EC89C0D00F31F9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0FA4A4A41EC89C0D00F31F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0FA4A4A51EC89C0D00F31F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0FA4A4A71EC89C0D00F31F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KRNJ229R7J;
+				INFOPLIST_FILE = Enfoca/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0FA4A4A81EC89C0D00F31F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KRNJ229R7J;
+				INFOPLIST_FILE = Enfoca/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0FA4A4AA1EC89C0D00F31F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KRNJ229R7J;
+				INFOPLIST_FILE = EnfocaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.EnfocaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enfoca.app/Enfoca";
+			};
+			name = Debug;
+		};
+		0FA4A4AB1EC89C0D00F31F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KRNJ229R7J;
+				INFOPLIST_FILE = EnfocaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.EnfocaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enfoca.app/Enfoca";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FA4A4841EC89C0D00F31F9A /* Build configuration list for PBXProject "Enfoca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FA4A4A41EC89C0D00F31F9A /* Debug */,
+				0FA4A4A51EC89C0D00F31F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FA4A4A61EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "Enfoca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FA4A4A71EC89C0D00F31F9A /* Debug */,
+				0FA4A4A81EC89C0D00F31F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0FA4A4A91EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "EnfocaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FA4A4AA1EC89C0D00F31F9A /* Debug */,
+				0FA4A4AB1EC89C0D00F31F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0FA4A4811EC89C0D00F31F9A /* Project object */;
+}
