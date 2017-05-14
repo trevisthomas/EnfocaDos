@@ -1,810 +1,2413 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
-		0FA4A48F1EC89C0D00F31F9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48E1EC89C0D00F31F9A /* ViewController.swift */; };
-		0FA4A4921EC89C0D00F31F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4901EC89C0D00F31F9A /* Main.storyboard */; };
-		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
-		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
-		0FA4A4A21EC89C0D00F31F9A /* EnfocaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */; };
-		0FA4A4AF1EC89DEF00F31F9A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */; };
-		0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */; };
-		0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */; };
-		0FA4A4DE1EC8E91E00F31F9A /* CardOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D41EC8E91E00F31F9A /* CardOrder.swift */; };
-		0FA4A4DF1EC8E91E00F31F9A /* CardSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */; };
-		0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D61EC8E91E00F31F9A /* Gender.swift */; };
-		0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */; };
-		0FA4A4E21EC8E91E00F31F9A /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */; };
-		0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D91EC8E91E00F31F9A /* Tag.swift */; };
-		0FA4A4E41EC8E91E00F31F9A /* TagAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DA1EC8E91E00F31F9A /* TagAssociation.swift */; };
-		0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DB1EC8E91E00F31F9A /* User.swift */; };
-		0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */; };
-		0FA4A4E71EC8E91E00F31F9A /* WordPairOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */; };
-		0FA4A4EF1EC8E94700F31F9A /* CloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */; };
-		0FA4A4F01EC8E94700F31F9A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */; };
-		0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */; };
-		0FA4A4F21EC8E94700F31F9A /* LocalCloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */; };
-		0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */; };
-		0FA4A4F41EC8E94700F31F9A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EE1EC8E94700F31F9A /* WebService.swift */; };
-		0FA4A4FE1EC8E9AF00F31F9A /* EnfocaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4F91EC8E9AF00F31F9A /* EnfocaError.swift */; };
-		0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */; };
-		0FA4A5061EC8EAF100F31F9A /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5041EC8EAF100F31F9A /* EnumCollection.swift */; };
-		0FA4A50C1EC8EB2500F31F9A /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */; };
-		0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */; };
-		0FA4A50E1EC8EB2500F31F9A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */; };
-		0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */; };
-		0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5131EC8EC6E00F31F9A /* Perform.swift */; };
-		0FA4A5181EC8EC6E00F31F9A /* Perform+Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5141EC8EC6E00F31F9A /* Perform+Tags.swift */; };
-		0FA4A5191EC8EC6E00F31F9A /* Perform+WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */; };
-		0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */; };
-		0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */; };
-		0FA4A5241EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */; };
-		0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */; };
-		0FA4A5261EC8EC9000F31F9A /* FetchUserRecordId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */; };
-		0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */; };
-		0FA4A5281EC8EC9000F31F9A /* InternalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5211EC8EC9000F31F9A /* InternalUser.swift */; };
-		0FA4A52C1EC8EC9C00F31F9A /* BaseCKOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5291EC8EC9C00F31F9A /* BaseCKOperation.swift */; };
-		0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52A1EC8EC9C00F31F9A /* BaseOperation.swift */; };
-		0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */; };
-		0FA4A5311EC8ECA500F31F9A /* MonitoredBaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */; };
-		0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */; };
-		0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */; };
-		0FA4A5371EC8ECB400F31F9A /* OperationFetchMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */; };
-		0FA4A5411EC8ECD200F31F9A /* OperationCreateTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53A1EC8ECD200F31F9A /* OperationCreateTag.swift */; };
-		0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */; };
-		0FA4A5431EC8ECD200F31F9A /* OperationDeleteRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */; };
-		0FA4A5441EC8ECD200F31F9A /* OperationFetchTagAssociations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53D1EC8ECD200F31F9A /* OperationFetchTagAssociations.swift */; };
-		0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */; };
-		0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */; };
-		0FA4A5471EC8ECD200F31F9A /* OperationUpdateWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */; };
-		0FA4A54C1EC8ECE200F31F9A /* OperationCountWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */; };
-		0FA4A54D1EC8ECE200F31F9A /* OperationCreateWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */; };
-		0FA4A54E1EC8ECE200F31F9A /* OperationFetchWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */; };
-		0FA4A54F1EC8ECE200F31F9A /* OperationPagedWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */; };
-		0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5501EC8EE5B00F31F9A /* Globals.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0FA4A49E1EC89C0D00F31F9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FA4A4811EC89C0D00F31F9A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FA4A4881EC89C0D00F31F9A;
-			remoteInfo = Enfoca;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0FA4A4891EC89C0D00F31F9A /* Enfoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enfoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FA4A48E1EC89C0D00F31F9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0FA4A4911EC89C0D00F31F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0FA4A4961EC89C0D00F31F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnfocaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnfocaTests.swift; sourceTree = "<group>"; };
-		0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
-		0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		0FA4A4BE1EC8C98000F31F9A /* Enfoca.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Enfoca.entitlements; sourceTree = "<group>"; };
-		0FA4A4C71EC8CBA100F31F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FA4A4CC1EC8CCC000F31F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FA4A4D41EC8E91E00F31F9A /* CardOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardOrder.swift; path = Models/CardOrder.swift; sourceTree = "<group>"; };
-		0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardSide.swift; path = Models/CardSide.swift; sourceTree = "<group>"; };
-		0FA4A4D61EC8E91E00F31F9A /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
-		0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonDateFormatter.swift; path = Models/JsonDateFormatter.swift; sourceTree = "<group>"; };
-		0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetaData.swift; path = Models/MetaData.swift; sourceTree = "<group>"; };
-		0FA4A4D91EC8E91E00F31F9A /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = Models/Tag.swift; sourceTree = "<group>"; };
-		0FA4A4DA1EC8E91E00F31F9A /* TagAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagAssociation.swift; path = Models/TagAssociation.swift; sourceTree = "<group>"; };
-		0FA4A4DB1EC8E91E00F31F9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
-		0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordPair.swift; path = Models/WordPair.swift; sourceTree = "<group>"; };
-		0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordPairOrder.swift; path = Models/WordPairOrder.swift; sourceTree = "<group>"; };
-		0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudKitWebService.swift; path = Network/CloudKitWebService.swift; sourceTree = "<group>"; };
-		0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = Network/DataStore.swift; sourceTree = "<group>"; };
-		0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoWebService.swift; path = Network/DemoWebService.swift; sourceTree = "<group>"; };
-		0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalCloudKitWebService.swift; path = Network/LocalCloudKitWebService.swift; sourceTree = "<group>"; };
-		0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressObserver.swift; path = Network/ProgressObserver.swift; sourceTree = "<group>"; };
-		0FA4A4EE1EC8E94700F31F9A /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Network/WebService.swift; sourceTree = "<group>"; };
-		0FA4A4F91EC8E9AF00F31F9A /* EnfocaError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfocaError.swift; sourceTree = "<group>"; };
-		0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
-		0FA4A5041EC8EAF100F31F9A /* EnumCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnumCollection.swift; path = Utilities/EnumCollection.swift; sourceTree = "<group>"; };
-		0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Sequence+.swift"; path = "Extensions/Sequence+.swift"; sourceTree = "<group>"; };
-		0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+.swift"; path = "Extensions/UITableView+.swift"; sourceTree = "<group>"; };
-		0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+.swift"; path = "Extensions/UIViewController+.swift"; sourceTree = "<group>"; };
-		0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorDelegate.swift; path = Network/Operations/Public/ErrorDelegate.swift; sourceTree = "<group>"; };
-		0FA4A5131EC8EC6E00F31F9A /* Perform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Perform.swift; path = Network/Operations/Public/Perform.swift; sourceTree = "<group>"; };
-		0FA4A5141EC8EC6E00F31F9A /* Perform+Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Perform+Tags.swift"; path = "Network/Operations/Public/Perform+Tags.swift"; sourceTree = "<group>"; };
-		0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Perform+WordPair.swift"; path = "Network/Operations/Public/Perform+WordPair.swift"; sourceTree = "<group>"; };
-		0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseUserOperation.swift; path = Network/Operations/Core/Authentication/BaseUserOperation.swift; sourceTree = "<group>"; };
-		0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudAuthOperation.swift; path = Network/Operations/Core/Authentication/CloudAuthOperation.swift; sourceTree = "<group>"; };
-		0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchIncrementAndSaveSeedIfNecessary.swift; path = Network/Operations/Core/Authentication/FetchIncrementAndSaveSeedIfNecessary.swift; sourceTree = "<group>"; };
-		0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchOrCreateEnfocaId.swift; path = Network/Operations/Core/Authentication/FetchOrCreateEnfocaId.swift; sourceTree = "<group>"; };
-		0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchUserRecordId.swift; path = Network/Operations/Core/Authentication/FetchUserRecordId.swift; sourceTree = "<group>"; };
-		0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchUserRecordOperation.swift; path = Network/Operations/Core/Authentication/FetchUserRecordOperation.swift; sourceTree = "<group>"; };
-		0FA4A5211EC8EC9000F31F9A /* InternalUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InternalUser.swift; path = Network/Operations/Core/Authentication/InternalUser.swift; sourceTree = "<group>"; };
-		0FA4A5291EC8EC9C00F31F9A /* BaseCKOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseCKOperation.swift; path = Network/Operations/Core/BaseCKOperation.swift; sourceTree = "<group>"; };
-		0FA4A52A1EC8EC9C00F31F9A /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseOperation.swift; path = Network/Operations/Core/BaseOperation.swift; sourceTree = "<group>"; };
-		0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudKitConverters.swift; path = Network/Operations/Core/CloudKitConverters.swift; sourceTree = "<group>"; };
-		0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonitoredBaseOperation.swift; path = Network/Operations/Core/MonitoredBaseOperation.swift; sourceTree = "<group>"; };
-		0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadWriteMutex.swift; path = Network/Operations/Core/ReadWriteMutex.swift; sourceTree = "<group>"; };
-		0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateMetaData.swift; path = Network/Operations/Core/Meta/OperationCreateMetaData.swift; sourceTree = "<group>"; };
-		0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationFetchMetaData.swift; path = Network/Operations/Core/Meta/OperationFetchMetaData.swift; sourceTree = "<group>"; };
-		0FA4A53A1EC8ECD200F31F9A /* OperationCreateTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateTag.swift; path = Network/Operations/Core/Tags/OperationCreateTag.swift; sourceTree = "<group>"; };
-		0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateTagAssociation.swift; path = Network/Operations/Core/Tags/OperationCreateTagAssociation.swift; sourceTree = "<group>"; };
-		0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationDeleteRecord.swift; path = Network/Operations/Core/Tags/OperationDeleteRecord.swift; sourceTree = "<group>"; };
-		0FA4A53D1EC8ECD200F31F9A /* OperationFetchTagAssociations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationFetchTagAssociations.swift; path = Network/Operations/Core/Tags/OperationFetchTagAssociations.swift; sourceTree = "<group>"; };
-		0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationFetchTags.swift; path = Network/Operations/Core/Tags/OperationFetchTags.swift; sourceTree = "<group>"; };
-		0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateTag.swift; path = Network/Operations/Core/Tags/OperationUpdateTag.swift; sourceTree = "<group>"; };
-		0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateWordPair.swift; path = Network/Operations/Core/Tags/OperationUpdateWordPair.swift; sourceTree = "<group>"; };
-		0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCountWordPairs.swift; path = Network/Operations/Core/WordPairs/OperationCountWordPairs.swift; sourceTree = "<group>"; };
-		0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateWordPair.swift; path = Network/Operations/Core/WordPairs/OperationCreateWordPair.swift; sourceTree = "<group>"; };
-		0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationFetchWordPairs.swift; path = Network/Operations/Core/WordPairs/OperationFetchWordPairs.swift; sourceTree = "<group>"; };
-		0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationPagedWordPairs.swift; path = Network/Operations/Core/WordPairs/OperationPagedWordPairs.swift; sourceTree = "<group>"; };
-		0FA4A5501EC8EE5B00F31F9A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = Utility/Globals.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		0FA4A4861EC89C0D00F31F9A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FA4A4AF1EC89DEF00F31F9A /* CloudKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FA4A49A1EC89C0D00F31F9A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		0FA4A4801EC89C0D00F31F9A = {
-			isa = PBXGroup;
-			children = (
-				0FA4A48B1EC89C0D00F31F9A /* Enfoca */,
-				0FA4A4A01EC89C0D00F31F9A /* EnfocaTests */,
-				0FA4A4AD1EC89DEF00F31F9A /* Frameworks */,
-				0FA4A48A1EC89C0D00F31F9A /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		0FA4A48A1EC89C0D00F31F9A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4891EC89C0D00F31F9A /* Enfoca.app */,
-				0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0FA4A48B1EC89C0D00F31F9A /* Enfoca */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4F51EC8E94D00F31F9A /* Network */,
-				0FA4A4E81EC8E92500F31F9A /* Models */,
-				0FA4A4B01EC8A37200F31F9A /* Core */,
-				0FA4A4B41EC8A56200F31F9A /* Features */,
-				0FA4A4CB1EC8CC8A00F31F9A /* Resources */,
-				0FA4A4BA1EC8B02300F31F9A /* Shared */,
-				0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */,
-				0FA4A4BE1EC8C98000F31F9A /* Enfoca.entitlements */,
-				0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */,
-				0FA4A4901EC89C0D00F31F9A /* Main.storyboard */,
-				0FA4A48E1EC89C0D00F31F9A /* ViewController.swift */,
-			);
-			path = Enfoca;
-			sourceTree = "<group>";
-		};
-		0FA4A4A01EC89C0D00F31F9A /* EnfocaTests */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4B31EC8A46200F31F9A /* Resources */,
-				0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */,
-			);
-			path = EnfocaTests;
-			sourceTree = "<group>";
-		};
-		0FA4A4AD1EC89DEF00F31F9A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0FA4A4B01EC8A37200F31F9A /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		0FA4A4B31EC8A46200F31F9A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4CC1EC8CCC000F31F9A /* Info.plist */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		0FA4A4B41EC8A56200F31F9A /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4B51EC8A56F00F31F9A /* Loading */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		0FA4A4B51EC8A56F00F31F9A /* Loading */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */,
-				0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */,
-			);
-			path = Loading;
-			sourceTree = "<group>";
-		};
-		0FA4A4BA1EC8B02300F31F9A /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A5081EC8EB1700F31F9A /* Extensions */,
-				0FA4A5031EC8EACD00F31F9A /* Utilities */,
-				0FA4A4F91EC8E9AF00F31F9A /* EnfocaError.swift */,
-				0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		0FA4A4CB1EC8CC8A00F31F9A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4C71EC8CBA100F31F9A /* Info.plist */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		0FA4A4E81EC8E92500F31F9A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4D41EC8E91E00F31F9A /* CardOrder.swift */,
-				0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */,
-				0FA4A4D61EC8E91E00F31F9A /* Gender.swift */,
-				0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */,
-				0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */,
-				0FA4A4D91EC8E91E00F31F9A /* Tag.swift */,
-				0FA4A4DA1EC8E91E00F31F9A /* TagAssociation.swift */,
-				0FA4A4DB1EC8E91E00F31F9A /* User.swift */,
-				0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */,
-				0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		0FA4A4F51EC8E94D00F31F9A /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A50F1EC8EC5200F31F9A /* Operations */,
-				0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */,
-				0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */,
-				0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */,
-				0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */,
-				0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */,
-				0FA4A4EE1EC8E94700F31F9A /* WebService.swift */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
-		0FA4A5031EC8EACD00F31F9A /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A5041EC8EAF100F31F9A /* EnumCollection.swift */,
-				0FA4A5501EC8EE5B00F31F9A /* Globals.swift */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
-		0FA4A5081EC8EB1700F31F9A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */,
-				0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */,
-				0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		0FA4A50F1EC8EC5200F31F9A /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A5111EC8EC5F00F31F9A /* Public */,
-				0FA4A5101EC8EC5A00F31F9A /* Core */,
-			);
-			name = Operations;
-			sourceTree = "<group>";
-		};
-		0FA4A5101EC8EC5A00F31F9A /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A5391EC8ECC400F31F9A /* WordPairs */,
-				0FA4A5381EC8ECBB00F31F9A /* Tags */,
-				0FA4A5331EC8ECAB00F31F9A /* Meta */,
-				0FA4A5291EC8EC9C00F31F9A /* BaseCKOperation.swift */,
-				0FA4A52A1EC8EC9C00F31F9A /* BaseOperation.swift */,
-				0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */,
-				0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */,
-				0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */,
-				0FA4A51A1EC8EC7E00F31F9A /* Authentication */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		0FA4A5111EC8EC5F00F31F9A /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */,
-				0FA4A5131EC8EC6E00F31F9A /* Perform.swift */,
-				0FA4A5141EC8EC6E00F31F9A /* Perform+Tags.swift */,
-				0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */,
-			);
-			name = Public;
-			sourceTree = "<group>";
-		};
-		0FA4A51A1EC8EC7E00F31F9A /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */,
-				0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */,
-				0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */,
-				0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */,
-				0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */,
-				0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */,
-				0FA4A5211EC8EC9000F31F9A /* InternalUser.swift */,
-			);
-			name = Authentication;
-			sourceTree = "<group>";
-		};
-		0FA4A5331EC8ECAB00F31F9A /* Meta */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */,
-				0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */,
-			);
-			name = Meta;
-			sourceTree = "<group>";
-		};
-		0FA4A5381EC8ECBB00F31F9A /* Tags */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A53A1EC8ECD200F31F9A /* OperationCreateTag.swift */,
-				0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */,
-				0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */,
-				0FA4A53D1EC8ECD200F31F9A /* OperationFetchTagAssociations.swift */,
-				0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */,
-				0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */,
-				0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */,
-			);
-			name = Tags;
-			sourceTree = "<group>";
-		};
-		0FA4A5391EC8ECC400F31F9A /* WordPairs */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */,
-				0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */,
-				0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */,
-				0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */,
-			);
-			name = WordPairs;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		0FA4A4881EC89C0D00F31F9A /* Enfoca */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0FA4A4A61EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "Enfoca" */;
-			buildPhases = (
-				0FA4A4851EC89C0D00F31F9A /* Sources */,
-				0FA4A4861EC89C0D00F31F9A /* Frameworks */,
-				0FA4A4871EC89C0D00F31F9A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Enfoca;
-			productName = Enfoca;
-			productReference = 0FA4A4891EC89C0D00F31F9A /* Enfoca.app */;
-			productType = "com.apple.product-type.application";
-		};
-		0FA4A49C1EC89C0D00F31F9A /* EnfocaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0FA4A4A91EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "EnfocaTests" */;
-			buildPhases = (
-				0FA4A4991EC89C0D00F31F9A /* Sources */,
-				0FA4A49A1EC89C0D00F31F9A /* Frameworks */,
-				0FA4A49B1EC89C0D00F31F9A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0FA4A49F1EC89C0D00F31F9A /* PBXTargetDependency */,
-			);
-			name = EnfocaTests;
-			productName = EnfocaTests;
-			productReference = 0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		0FA4A4811EC89C0D00F31F9A /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Trevis Thomas";
-				TargetAttributes = {
-					0FA4A4881EC89C0D00F31F9A = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = KRNJ229R7J;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 1;
-							};
-							com.apple.iCloud = {
-								enabled = 1;
-							};
-						};
-					};
-					0FA4A49C1EC89C0D00F31F9A = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = KRNJ229R7J;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0FA4A4881EC89C0D00F31F9A;
-					};
-				};
-			};
-			buildConfigurationList = 0FA4A4841EC89C0D00F31F9A /* Build configuration list for PBXProject "Enfoca" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 0FA4A4801EC89C0D00F31F9A;
-			productRefGroup = 0FA4A48A1EC89C0D00F31F9A /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				0FA4A4881EC89C0D00F31F9A /* Enfoca */,
-				0FA4A49C1EC89C0D00F31F9A /* EnfocaTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		0FA4A4871EC89C0D00F31F9A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */,
-				0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */,
-				0FA4A4921EC89C0D00F31F9A /* Main.storyboard in Resources */,
-				0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FA4A49B1EC89C0D00F31F9A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		0FA4A4851EC89C0D00F31F9A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FA4A4F01EC8E94700F31F9A /* DataStore.swift in Sources */,
-				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
-				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,
-				0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */,
-				0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */,
-				0FA4A5281EC8EC9000F31F9A /* InternalUser.swift in Sources */,
-				0FA4A54D1EC8ECE200F31F9A /* OperationCreateWordPair.swift in Sources */,
-				0FA4A5191EC8EC6E00F31F9A /* Perform+WordPair.swift in Sources */,
-				0FA4A5471EC8ECD200F31F9A /* OperationUpdateWordPair.swift in Sources */,
-				0FA4A4F21EC8E94700F31F9A /* LocalCloudKitWebService.swift in Sources */,
-				0FA4A52C1EC8EC9C00F31F9A /* BaseCKOperation.swift in Sources */,
-				0FA4A5061EC8EAF100F31F9A /* EnumCollection.swift in Sources */,
-				0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */,
-				0FA4A48F1EC89C0D00F31F9A /* ViewController.swift in Sources */,
-				0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */,
-				0FA4A5181EC8EC6E00F31F9A /* Perform+Tags.swift in Sources */,
-				0FA4A50C1EC8EB2500F31F9A /* Sequence+.swift in Sources */,
-				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
-				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
-				0FA4A5311EC8ECA500F31F9A /* MonitoredBaseOperation.swift in Sources */,
-				0FA4A4FE1EC8E9AF00F31F9A /* EnfocaError.swift in Sources */,
-				0FA4A54E1EC8ECE200F31F9A /* OperationFetchWordPairs.swift in Sources */,
-				0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */,
-				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
-				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,
-				0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */,
-				0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */,
-				0FA4A4DF1EC8E91E00F31F9A /* CardSide.swift in Sources */,
-				0FA4A4E21EC8E91E00F31F9A /* MetaData.swift in Sources */,
-				0FA4A4DE1EC8E91E00F31F9A /* CardOrder.swift in Sources */,
-				0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */,
-				0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */,
-				0FA4A54F1EC8ECE200F31F9A /* OperationPagedWordPairs.swift in Sources */,
-				0FA4A54C1EC8ECE200F31F9A /* OperationCountWordPairs.swift in Sources */,
-				0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */,
-				0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */,
-				0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */,
-				0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */,
-				0FA4A5241EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
-				0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */,
-				0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */,
-				0FA4A4EF1EC8E94700F31F9A /* CloudKitWebService.swift in Sources */,
-				0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */,
-				0FA4A5431EC8ECD200F31F9A /* OperationDeleteRecord.swift in Sources */,
-				0FA4A50E1EC8EB2500F31F9A /* UIViewController+.swift in Sources */,
-				0FA4A4E71EC8E91E00F31F9A /* WordPairOrder.swift in Sources */,
-				0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */,
-				0FA4A4F41EC8E94700F31F9A /* WebService.swift in Sources */,
-				0FA4A5371EC8ECB400F31F9A /* OperationFetchMetaData.swift in Sources */,
-				0FA4A5261EC8EC9000F31F9A /* FetchUserRecordId.swift in Sources */,
-				0FA4A4E41EC8E91E00F31F9A /* TagAssociation.swift in Sources */,
-				0FA4A5411EC8ECD200F31F9A /* OperationCreateTag.swift in Sources */,
-				0FA4A5441EC8ECD200F31F9A /* OperationFetchTagAssociations.swift in Sources */,
-				0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */,
-				0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FA4A4991EC89C0D00F31F9A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FA4A4A21EC89C0D00F31F9A /* EnfocaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0FA4A49F1EC89C0D00F31F9A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0FA4A4881EC89C0D00F31F9A /* Enfoca */;
-			targetProxy = 0FA4A49E1EC89C0D00F31F9A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0FA4A4901EC89C0D00F31F9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FA4A4911EC89C0D00F31F9A /* Base */,
-			);
-			name = Main.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
-		0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FA4A4961EC89C0D00F31F9A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		0FA4A4A41EC89C0D00F31F9A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		0FA4A4A51EC89C0D00F31F9A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		0FA4A4A71EC89C0D00F31F9A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
-				DEVELOPMENT_TEAM = KRNJ229R7J;
-				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		0FA4A4A81EC89C0D00F31F9A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
-				DEVELOPMENT_TEAM = KRNJ229R7J;
-				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		0FA4A4AA1EC89C0D00F31F9A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = KRNJ229R7J;
-				INFOPLIST_FILE = EnfocaTests/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.EnfocaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enfoca.app/Enfoca";
-			};
-			name = Debug;
-		};
-		0FA4A4AB1EC89C0D00F31F9A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = KRNJ229R7J;
-				INFOPLIST_FILE = EnfocaTests/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.EnfocaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enfoca.app/Enfoca";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		0FA4A4841EC89C0D00F31F9A /* Build configuration list for PBXProject "Enfoca" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FA4A4A41EC89C0D00F31F9A /* Debug */,
-				0FA4A4A51EC89C0D00F31F9A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0FA4A4A61EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "Enfoca" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FA4A4A71EC89C0D00F31F9A /* Debug */,
-				0FA4A4A81EC89C0D00F31F9A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0FA4A4A91EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "EnfocaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FA4A4AA1EC89C0D00F31F9A /* Debug */,
-				0FA4A4AB1EC89C0D00F31F9A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 0FA4A4811EC89C0D00F31F9A /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0FA4A4801EC89C0D00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A48B1EC89C0D00F31F9A</string>
+				<string>0FA4A4A01EC89C0D00F31F9A</string>
+				<string>0FA4A4AD1EC89DEF00F31F9A</string>
+				<string>0FA4A48A1EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4811EC89C0D00F31F9A</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0830</string>
+				<key>LastUpgradeCheck</key>
+				<string>0830</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Trevis Thomas</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>0FA4A4881EC89C0D00F31F9A</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.3.2</string>
+						<key>DevelopmentTeam</key>
+						<string>KRNJ229R7J</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.Push</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+							<key>com.apple.iCloud</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>0FA4A49C1EC89C0D00F31F9A</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.3.2</string>
+						<key>DevelopmentTeam</key>
+						<string>KRNJ229R7J</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+						<key>TestTargetID</key>
+						<string>0FA4A4881EC89C0D00F31F9A</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>0FA4A4841EC89C0D00F31F9A</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>0FA4A4801EC89C0D00F31F9A</string>
+			<key>productRefGroup</key>
+			<string>0FA4A48A1EC89C0D00F31F9A</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>0FA4A4881EC89C0D00F31F9A</string>
+				<string>0FA4A49C1EC89C0D00F31F9A</string>
+			</array>
+		</dict>
+		<key>0FA4A4841EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0FA4A4A41EC89C0D00F31F9A</string>
+				<string>0FA4A4A51EC89C0D00F31F9A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0FA4A4851EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FA4A4F01EC8E94700F31F9A</string>
+				<string>0FA4A4E61EC8E91E00F31F9A</string>
+				<string>0FA4A5361EC8ECB400F31F9A</string>
+				<string>0FA4A5461EC8ECD200F31F9A</string>
+				<string>0FA4A4F31EC8E94700F31F9A</string>
+				<string>0FA4A5281EC8EC9000F31F9A</string>
+				<string>0FA4A54D1EC8ECE200F31F9A</string>
+				<string>0FA4A5191EC8EC6E00F31F9A</string>
+				<string>0FA4A5471EC8ECD200F31F9A</string>
+				<string>0FA4A4F21EC8E94700F31F9A</string>
+				<string>0FA4A52C1EC8EC9C00F31F9A</string>
+				<string>0FA4A5061EC8EAF100F31F9A</string>
+				<string>0FA4A5511EC8EE5B00F31F9A</string>
+				<string>0FA4A48F1EC89C0D00F31F9A</string>
+				<string>0FA4A52D1EC8EC9C00F31F9A</string>
+				<string>0FA4A5181EC8EC6E00F31F9A</string>
+				<string>0FA4A50C1EC8EB2500F31F9A</string>
+				<string>0FA4A4E31EC8E91E00F31F9A</string>
+				<string>0FA4A4F11EC8E94700F31F9A</string>
+				<string>0FA4A5311EC8ECA500F31F9A</string>
+				<string>0FA4A4FE1EC8E9AF00F31F9A</string>
+				<string>0FA4A54E1EC8ECE200F31F9A</string>
+				<string>0FA4A48D1EC89C0D00F31F9A</string>
+				<string>0FA4A5421EC8ECD200F31F9A</string>
+				<string>0FA4A5231EC8EC9000F31F9A</string>
+				<string>0FA4A5161EC8EC6E00F31F9A</string>
+				<string>0FA4A4B91EC8ADF400F31F9A</string>
+				<string>0FA4A4DF1EC8E91E00F31F9A</string>
+				<string>0FA4A4E21EC8E91E00F31F9A</string>
+				<string>0FA4A4DE1EC8E91E00F31F9A</string>
+				<string>0FA4A4E51EC8E91E00F31F9A</string>
+				<string>0FA4A4E11EC8E91E00F31F9A</string>
+				<string>0FA4A54F1EC8ECE200F31F9A</string>
+				<string>0FA4A54C1EC8ECE200F31F9A</string>
+				<string>0FA4A5011EC8E9AF00F31F9A</string>
+				<string>0FA4A50D1EC8EB2500F31F9A</string>
+				<string>0FA4A5321EC8ECA500F31F9A</string>
+				<string>0FA4A5221EC8EC9000F31F9A</string>
+				<string>0FA4A5241EC8EC9000F31F9A</string>
+				<string>0FA4A5451EC8ECD200F31F9A</string>
+				<string>0FA4A52E1EC8EC9C00F31F9A</string>
+				<string>0FA4A4EF1EC8E94700F31F9A</string>
+				<string>0FA4A4E01EC8E91E00F31F9A</string>
+				<string>0FA4A5431EC8ECD200F31F9A</string>
+				<string>0FA4A50E1EC8EB2500F31F9A</string>
+				<string>0FA4A4E71EC8E91E00F31F9A</string>
+				<string>0FA4A5271EC8EC9000F31F9A</string>
+				<string>0FA4A4F41EC8E94700F31F9A</string>
+				<string>0FA4A5371EC8ECB400F31F9A</string>
+				<string>0FA4A5261EC8EC9000F31F9A</string>
+				<string>0FA4A4E41EC8E91E00F31F9A</string>
+				<string>0FA4A5411EC8ECD200F31F9A</string>
+				<string>0FA4A5441EC8ECD200F31F9A</string>
+				<string>0FA4A5251EC8EC9000F31F9A</string>
+				<string>0FA4A5171EC8EC6E00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FA4A4861EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FA4A4AF1EC89DEF00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FA4A4871EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FA4A4971EC89C0D00F31F9A</string>
+				<string>0FA4A4941EC89C0D00F31F9A</string>
+				<string>0FA4A4921EC89C0D00F31F9A</string>
+				<string>0FA4A4B71EC8A69000F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FA4A4881EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0FA4A4A61EC89C0D00F31F9A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>0FA4A4851EC89C0D00F31F9A</string>
+				<string>0FA4A4861EC89C0D00F31F9A</string>
+				<string>0FA4A4871EC89C0D00F31F9A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Enfoca</string>
+			<key>productName</key>
+			<string>Enfoca</string>
+			<key>productReference</key>
+			<string>0FA4A4891EC89C0D00F31F9A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>0FA4A4891EC89C0D00F31F9A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Enfoca.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>0FA4A48A1EC89C0D00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4891EC89C0D00F31F9A</string>
+				<string>0FA4A49D1EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A48B1EC89C0D00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4B01EC8A37200F31F9A</string>
+				<string>0FA4A4B41EC8A56200F31F9A</string>
+				<string>0FA4A4E81EC8E92500F31F9A</string>
+				<string>0FA4A4F51EC8E94D00F31F9A</string>
+				<string>0FA4A4CB1EC8CC8A00F31F9A</string>
+				<string>0FA4A4BA1EC8B02300F31F9A</string>
+				<string>0FA4A4931EC89C0D00F31F9A</string>
+				<string>0FA4A4BE1EC8C98000F31F9A</string>
+				<string>0FA4A4951EC89C0D00F31F9A</string>
+				<string>0FA4A4901EC89C0D00F31F9A</string>
+				<string>0FA4A48E1EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Enfoca</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A48C1EC89C0D00F31F9A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A48D1EC89C0D00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A48C1EC89C0D00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A48E1EC89C0D00F31F9A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A48F1EC89C0D00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A48E1EC89C0D00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4901EC89C0D00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4911EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>path</key>
+			<string>.</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4911EC89C0D00F31F9A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4921EC89C0D00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4901EC89C0D00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4931EC89C0D00F31F9A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4941EC89C0D00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4931EC89C0D00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4951EC89C0D00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4961EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>path</key>
+			<string>.</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4961EC89C0D00F31F9A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4971EC89C0D00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4951EC89C0D00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4991EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FA4A4A21EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FA4A49A1EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FA4A49B1EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FA4A49C1EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0FA4A4A91EC89C0D00F31F9A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>0FA4A4991EC89C0D00F31F9A</string>
+				<string>0FA4A49A1EC89C0D00F31F9A</string>
+				<string>0FA4A49B1EC89C0D00F31F9A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>0FA4A49F1EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>EnfocaTests</string>
+			<key>productName</key>
+			<string>EnfocaTests</string>
+			<key>productReference</key>
+			<string>0FA4A49D1EC89C0D00F31F9A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>0FA4A49D1EC89C0D00F31F9A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>EnfocaTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>0FA4A49E1EC89C0D00F31F9A</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>0FA4A4811EC89C0D00F31F9A</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>0FA4A4881EC89C0D00F31F9A</string>
+			<key>remoteInfo</key>
+			<string>Enfoca</string>
+		</dict>
+		<key>0FA4A49F1EC89C0D00F31F9A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>0FA4A4881EC89C0D00F31F9A</string>
+			<key>targetProxy</key>
+			<string>0FA4A49E1EC89C0D00F31F9A</string>
+		</dict>
+		<key>0FA4A4A01EC89C0D00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4B31EC8A46200F31F9A</string>
+				<string>0FA4A4A11EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>EnfocaTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4A11EC89C0D00F31F9A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EnfocaTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4A21EC89C0D00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4A11EC89C0D00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4A41EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
+				<string>DEBUG</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0FA4A4A51EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Owholemodule</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0FA4A4A61EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0FA4A4A71EC89C0D00F31F9A</string>
+				<string>0FA4A4A81EC89C0D00F31F9A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0FA4A4A71EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string>Enfoca/Enfoca.entitlements</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>KRNJ229R7J</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Enfoca/Resources/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.ttdc.Enfoca</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0FA4A4A81EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string>Enfoca/Enfoca.entitlements</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>KRNJ229R7J</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Enfoca/Resources/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.ttdc.Enfoca</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Owholemodule</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0FA4A4A91EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0FA4A4AA1EC89C0D00F31F9A</string>
+				<string>0FA4A4AB1EC89C0D00F31F9A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0FA4A4AA1EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>KRNJ229R7J</string>
+				<key>INFOPLIST_FILE</key>
+				<string>EnfocaTests/Resources/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.ttdc.EnfocaTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Enfoca.app/Enfoca</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0FA4A4AB1EC89C0D00F31F9A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>KRNJ229R7J</string>
+				<key>INFOPLIST_FILE</key>
+				<string>EnfocaTests/Resources/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.ttdc.EnfocaTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Enfoca.app/Enfoca</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0FA4A4AD1EC89DEF00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4AE1EC89DEF00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4AE1EC89DEF00F31F9A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CloudKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CloudKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>0FA4A4AF1EC89DEF00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4AE1EC89DEF00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4B01EC8A37200F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A48C1EC89C0D00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4B31EC8A46200F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4CC1EC8CCC000F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4B41EC8A56200F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4B51EC8A56F00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Features</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4B51EC8A56F00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4B61EC8A69000F31F9A</string>
+				<string>0FA4A4B81EC8ADF400F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Loading</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4B61EC8A69000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Loading.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4B71EC8A69000F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4B61EC8A69000F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4B81EC8ADF400F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>LoadingViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4B91EC8ADF400F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4B81EC8ADF400F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4BA1EC8B02300F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A5081EC8EB1700F31F9A</string>
+				<string>0FA4A5031EC8EACD00F31F9A</string>
+				<string>0FA4A4F91EC8E9AF00F31F9A</string>
+				<string>0FA4A4FC1EC8E9AF00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Shared</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4BE1EC8C98000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.entitlements</string>
+			<key>path</key>
+			<string>Enfoca.entitlements</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4C71EC8CBA100F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4CB1EC8CC8A00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4C71EC8CBA100F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4CC1EC8CCC000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4D41EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CardOrder.swift</string>
+			<key>path</key>
+			<string>CardOrder.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4D51EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CardSide.swift</string>
+			<key>path</key>
+			<string>CardSide.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4D61EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Gender.swift</string>
+			<key>path</key>
+			<string>Gender.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4D71EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>JsonDateFormatter.swift</string>
+			<key>path</key>
+			<string>JsonDateFormatter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4D81EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MetaData.swift</string>
+			<key>path</key>
+			<string>MetaData.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4D91EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Tag.swift</string>
+			<key>path</key>
+			<string>Tag.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4DA1EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>TagAssociation.swift</string>
+			<key>path</key>
+			<string>TagAssociation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4DB1EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>User.swift</string>
+			<key>path</key>
+			<string>User.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4DC1EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>WordPair.swift</string>
+			<key>path</key>
+			<string>WordPair.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4DD1EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>WordPairOrder.swift</string>
+			<key>path</key>
+			<string>WordPairOrder.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4DE1EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4D41EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4DF1EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4D51EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E01EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4D61EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E11EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4D71EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E21EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4D81EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E31EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4D91EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E41EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4DA1EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E51EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4DB1EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E61EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4DC1EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E71EC8E91E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4DD1EC8E91E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4E81EC8E92500F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A4D41EC8E91E00F31F9A</string>
+				<string>0FA4A4D51EC8E91E00F31F9A</string>
+				<string>0FA4A4D61EC8E91E00F31F9A</string>
+				<string>0FA4A4D71EC8E91E00F31F9A</string>
+				<string>0FA4A4D81EC8E91E00F31F9A</string>
+				<string>0FA4A4D91EC8E91E00F31F9A</string>
+				<string>0FA4A4DA1EC8E91E00F31F9A</string>
+				<string>0FA4A4DB1EC8E91E00F31F9A</string>
+				<string>0FA4A4DC1EC8E91E00F31F9A</string>
+				<string>0FA4A4DD1EC8E91E00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>path</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4E91EC8E94700F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CloudKitWebService.swift</string>
+			<key>path</key>
+			<string>CloudKitWebService.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4EA1EC8E94700F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>DataStore.swift</string>
+			<key>path</key>
+			<string>DataStore.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4EB1EC8E94700F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>DemoWebService.swift</string>
+			<key>path</key>
+			<string>DemoWebService.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4EC1EC8E94700F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>LocalCloudKitWebService.swift</string>
+			<key>path</key>
+			<string>LocalCloudKitWebService.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4ED1EC8E94700F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ProgressObserver.swift</string>
+			<key>path</key>
+			<string>ProgressObserver.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4EE1EC8E94700F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>WebService.swift</string>
+			<key>path</key>
+			<string>WebService.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4EF1EC8E94700F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4E91EC8E94700F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4F01EC8E94700F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4EA1EC8E94700F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4F11EC8E94700F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4EB1EC8E94700F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4F21EC8E94700F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4EC1EC8E94700F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4F31EC8E94700F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4ED1EC8E94700F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4F41EC8E94700F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4EE1EC8E94700F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A4F51EC8E94D00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A50F1EC8EC5200F31F9A</string>
+				<string>0FA4A4E91EC8E94700F31F9A</string>
+				<string>0FA4A4EA1EC8E94700F31F9A</string>
+				<string>0FA4A4EB1EC8E94700F31F9A</string>
+				<string>0FA4A4EC1EC8E94700F31F9A</string>
+				<string>0FA4A4ED1EC8E94700F31F9A</string>
+				<string>0FA4A4EE1EC8E94700F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Network</string>
+			<key>path</key>
+			<string>Network</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4F91EC8E9AF00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EnfocaError.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4FC1EC8E9AF00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TypeAliases.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A4FE1EC8E9AF00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4F91EC8E9AF00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5011EC8E9AF00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A4FC1EC8E9AF00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5031EC8EACD00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A5041EC8EAF100F31F9A</string>
+				<string>0FA4A5501EC8EE5B00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Utilities</string>
+			<key>path</key>
+			<string>Utilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5041EC8EAF100F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>EnumCollection.swift</string>
+			<key>path</key>
+			<string>EnumCollection.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5061EC8EAF100F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5041EC8EAF100F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5081EC8EB1700F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A5091EC8EB2500F31F9A</string>
+				<string>0FA4A50A1EC8EB2500F31F9A</string>
+				<string>0FA4A50B1EC8EB2500F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Extensions</string>
+			<key>path</key>
+			<string>Extensions</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5091EC8EB2500F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Sequence+.swift</string>
+			<key>path</key>
+			<string>Sequence+.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A50A1EC8EB2500F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UITableView+.swift</string>
+			<key>path</key>
+			<string>UITableView+.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A50B1EC8EB2500F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UIViewController+.swift</string>
+			<key>path</key>
+			<string>UIViewController+.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A50C1EC8EB2500F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5091EC8EB2500F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A50D1EC8EB2500F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A50A1EC8EB2500F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A50E1EC8EB2500F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A50B1EC8EB2500F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A50F1EC8EC5200F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A5101EC8EC5A00F31F9A</string>
+				<string>0FA4A5111EC8EC5F00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Operations</string>
+			<key>path</key>
+			<string>Operations</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5101EC8EC5A00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A51A1EC8EC7E00F31F9A</string>
+				<string>0FA4A5331EC8ECAB00F31F9A</string>
+				<string>0FA4A5381EC8ECBB00F31F9A</string>
+				<string>0FA4A5391EC8ECC400F31F9A</string>
+				<string>0FA4A5291EC8EC9C00F31F9A</string>
+				<string>0FA4A52A1EC8EC9C00F31F9A</string>
+				<string>0FA4A52B1EC8EC9C00F31F9A</string>
+				<string>0FA4A52F1EC8ECA500F31F9A</string>
+				<string>0FA4A5301EC8ECA500F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
+			<key>path</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5111EC8EC5F00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A5121EC8EC6E00F31F9A</string>
+				<string>0FA4A5141EC8EC6E00F31F9A</string>
+				<string>0FA4A5151EC8EC6E00F31F9A</string>
+				<string>0FA4A5131EC8EC6E00F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Public</string>
+			<key>path</key>
+			<string>Public</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5121EC8EC6E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ErrorDelegate.swift</string>
+			<key>path</key>
+			<string>ErrorDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5131EC8EC6E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Perform.swift</string>
+			<key>path</key>
+			<string>Perform.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5141EC8EC6E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Perform+Tags.swift</string>
+			<key>path</key>
+			<string>Perform+Tags.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5151EC8EC6E00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Perform+WordPair.swift</string>
+			<key>path</key>
+			<string>Perform+WordPair.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5161EC8EC6E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5121EC8EC6E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5171EC8EC6E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5131EC8EC6E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5181EC8EC6E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5141EC8EC6E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5191EC8EC6E00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5151EC8EC6E00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A51A1EC8EC7E00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A51B1EC8EC9000F31F9A</string>
+				<string>0FA4A51C1EC8EC9000F31F9A</string>
+				<string>0FA4A51D1EC8EC9000F31F9A</string>
+				<string>0FA4A51E1EC8EC9000F31F9A</string>
+				<string>0FA4A51F1EC8EC9000F31F9A</string>
+				<string>0FA4A5201EC8EC9000F31F9A</string>
+				<string>0FA4A5211EC8EC9000F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Authentication</string>
+			<key>path</key>
+			<string>Authentication</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A51B1EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>BaseUserOperation.swift</string>
+			<key>path</key>
+			<string>BaseUserOperation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A51C1EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CloudAuthOperation.swift</string>
+			<key>path</key>
+			<string>CloudAuthOperation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A51D1EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>FetchIncrementAndSaveSeedIfNecessary.swift</string>
+			<key>path</key>
+			<string>FetchIncrementAndSaveSeedIfNecessary.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A51E1EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>FetchOrCreateEnfocaId.swift</string>
+			<key>path</key>
+			<string>FetchOrCreateEnfocaId.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A51F1EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>FetchUserRecordId.swift</string>
+			<key>path</key>
+			<string>FetchUserRecordId.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5201EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>FetchUserRecordOperation.swift</string>
+			<key>path</key>
+			<string>FetchUserRecordOperation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5211EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>InternalUser.swift</string>
+			<key>path</key>
+			<string>InternalUser.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5221EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A51B1EC8EC9000F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5231EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A51C1EC8EC9000F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5241EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A51D1EC8EC9000F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5251EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A51E1EC8EC9000F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5261EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A51F1EC8EC9000F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5271EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5201EC8EC9000F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5281EC8EC9000F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5211EC8EC9000F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5291EC8EC9C00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>BaseCKOperation.swift</string>
+			<key>path</key>
+			<string>BaseCKOperation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A52A1EC8EC9C00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>BaseOperation.swift</string>
+			<key>path</key>
+			<string>BaseOperation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A52B1EC8EC9C00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CloudKitConverters.swift</string>
+			<key>path</key>
+			<string>CloudKitConverters.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A52C1EC8EC9C00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5291EC8EC9C00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A52D1EC8EC9C00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A52A1EC8EC9C00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A52E1EC8EC9C00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A52B1EC8EC9C00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A52F1EC8ECA500F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MonitoredBaseOperation.swift</string>
+			<key>path</key>
+			<string>MonitoredBaseOperation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5301EC8ECA500F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ReadWriteMutex.swift</string>
+			<key>path</key>
+			<string>ReadWriteMutex.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5311EC8ECA500F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A52F1EC8ECA500F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5321EC8ECA500F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5301EC8ECA500F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5331EC8ECAB00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A5341EC8ECB400F31F9A</string>
+				<string>0FA4A5351EC8ECB400F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Meta</string>
+			<key>path</key>
+			<string>Meta</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5341EC8ECB400F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationCreateMetaData.swift</string>
+			<key>path</key>
+			<string>OperationCreateMetaData.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5351EC8ECB400F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationFetchMetaData.swift</string>
+			<key>path</key>
+			<string>OperationFetchMetaData.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5361EC8ECB400F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5341EC8ECB400F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5371EC8ECB400F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5351EC8ECB400F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5381EC8ECBB00F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A53A1EC8ECD200F31F9A</string>
+				<string>0FA4A53B1EC8ECD200F31F9A</string>
+				<string>0FA4A53C1EC8ECD200F31F9A</string>
+				<string>0FA4A53D1EC8ECD200F31F9A</string>
+				<string>0FA4A53E1EC8ECD200F31F9A</string>
+				<string>0FA4A53F1EC8ECD200F31F9A</string>
+				<string>0FA4A5401EC8ECD200F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Tags</string>
+			<key>path</key>
+			<string>Tags</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5391EC8ECC400F31F9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FA4A5481EC8ECE200F31F9A</string>
+				<string>0FA4A5491EC8ECE200F31F9A</string>
+				<string>0FA4A54A1EC8ECE200F31F9A</string>
+				<string>0FA4A54B1EC8ECE200F31F9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>WordPairs</string>
+			<key>path</key>
+			<string>WordPairs</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A53A1EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationCreateTag.swift</string>
+			<key>path</key>
+			<string>OperationCreateTag.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A53B1EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationCreateTagAssociation.swift</string>
+			<key>path</key>
+			<string>OperationCreateTagAssociation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A53C1EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationDeleteRecord.swift</string>
+			<key>path</key>
+			<string>OperationDeleteRecord.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A53D1EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationFetchTagAssociations.swift</string>
+			<key>path</key>
+			<string>OperationFetchTagAssociations.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A53E1EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationFetchTags.swift</string>
+			<key>path</key>
+			<string>OperationFetchTags.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A53F1EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationUpdateTag.swift</string>
+			<key>path</key>
+			<string>OperationUpdateTag.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5401EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationUpdateWordPair.swift</string>
+			<key>path</key>
+			<string>OperationUpdateWordPair.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5411EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A53A1EC8ECD200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5421EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A53B1EC8ECD200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5431EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A53C1EC8ECD200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5441EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A53D1EC8ECD200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5451EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A53E1EC8ECD200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5461EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A53F1EC8ECD200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5471EC8ECD200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5401EC8ECD200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5481EC8ECE200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationCountWordPairs.swift</string>
+			<key>path</key>
+			<string>OperationCountWordPairs.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5491EC8ECE200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationCreateWordPair.swift</string>
+			<key>path</key>
+			<string>OperationCreateWordPair.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A54A1EC8ECE200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationFetchWordPairs.swift</string>
+			<key>path</key>
+			<string>OperationFetchWordPairs.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A54B1EC8ECE200F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>OperationPagedWordPairs.swift</string>
+			<key>path</key>
+			<string>OperationPagedWordPairs.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A54C1EC8ECE200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5481EC8ECE200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A54D1EC8ECE200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5491EC8ECE200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A54E1EC8ECE200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A54A1EC8ECE200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A54F1EC8ECE200F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A54B1EC8ECE200F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FA4A5501EC8EE5B00F31F9A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Globals.swift</string>
+			<key>path</key>
+			<string>Globals.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FA4A5511EC8EE5B00F31F9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FA4A5501EC8EE5B00F31F9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>0FA4A4811EC89C0D00F31F9A</string>
+</dict>
+</plist>
