@@ -16,7 +16,58 @@
 		0FA4A4AF1EC89DEF00F31F9A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */; };
 		0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */; };
 		0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */; };
-		0FA4A4BD1EC8B09600F31F9A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4BC1EC8B09600F31F9A /* Globals.swift */; };
+		0FA4A4DE1EC8E91E00F31F9A /* CardOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D41EC8E91E00F31F9A /* CardOrder.swift */; };
+		0FA4A4DF1EC8E91E00F31F9A /* CardSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */; };
+		0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D61EC8E91E00F31F9A /* Gender.swift */; };
+		0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */; };
+		0FA4A4E21EC8E91E00F31F9A /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */; };
+		0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D91EC8E91E00F31F9A /* Tag.swift */; };
+		0FA4A4E41EC8E91E00F31F9A /* TagAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DA1EC8E91E00F31F9A /* TagAssociation.swift */; };
+		0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DB1EC8E91E00F31F9A /* User.swift */; };
+		0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */; };
+		0FA4A4E71EC8E91E00F31F9A /* WordPairOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */; };
+		0FA4A4EF1EC8E94700F31F9A /* CloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */; };
+		0FA4A4F01EC8E94700F31F9A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */; };
+		0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */; };
+		0FA4A4F21EC8E94700F31F9A /* LocalCloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */; };
+		0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */; };
+		0FA4A4F41EC8E94700F31F9A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EE1EC8E94700F31F9A /* WebService.swift */; };
+		0FA4A4FE1EC8E9AF00F31F9A /* EnfocaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4F91EC8E9AF00F31F9A /* EnfocaError.swift */; };
+		0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */; };
+		0FA4A5061EC8EAF100F31F9A /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5041EC8EAF100F31F9A /* EnumCollection.swift */; };
+		0FA4A50C1EC8EB2500F31F9A /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */; };
+		0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */; };
+		0FA4A50E1EC8EB2500F31F9A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */; };
+		0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */; };
+		0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5131EC8EC6E00F31F9A /* Perform.swift */; };
+		0FA4A5181EC8EC6E00F31F9A /* Perform+Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5141EC8EC6E00F31F9A /* Perform+Tags.swift */; };
+		0FA4A5191EC8EC6E00F31F9A /* Perform+WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */; };
+		0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */; };
+		0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */; };
+		0FA4A5241EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */; };
+		0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */; };
+		0FA4A5261EC8EC9000F31F9A /* FetchUserRecordId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */; };
+		0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */; };
+		0FA4A5281EC8EC9000F31F9A /* InternalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5211EC8EC9000F31F9A /* InternalUser.swift */; };
+		0FA4A52C1EC8EC9C00F31F9A /* BaseCKOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5291EC8EC9C00F31F9A /* BaseCKOperation.swift */; };
+		0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52A1EC8EC9C00F31F9A /* BaseOperation.swift */; };
+		0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */; };
+		0FA4A5311EC8ECA500F31F9A /* MonitoredBaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */; };
+		0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */; };
+		0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */; };
+		0FA4A5371EC8ECB400F31F9A /* OperationFetchMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */; };
+		0FA4A5411EC8ECD200F31F9A /* OperationCreateTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53A1EC8ECD200F31F9A /* OperationCreateTag.swift */; };
+		0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */; };
+		0FA4A5431EC8ECD200F31F9A /* OperationDeleteRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */; };
+		0FA4A5441EC8ECD200F31F9A /* OperationFetchTagAssociations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53D1EC8ECD200F31F9A /* OperationFetchTagAssociations.swift */; };
+		0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */; };
+		0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */; };
+		0FA4A5471EC8ECD200F31F9A /* OperationUpdateWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */; };
+		0FA4A54C1EC8ECE200F31F9A /* OperationCountWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */; };
+		0FA4A54D1EC8ECE200F31F9A /* OperationCreateWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */; };
+		0FA4A54E1EC8ECE200F31F9A /* OperationFetchWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */; };
+		0FA4A54F1EC8ECE200F31F9A /* OperationPagedWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */; };
+		0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5501EC8EE5B00F31F9A /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +92,61 @@
 		0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
 		0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		0FA4A4BC1EC8B09600F31F9A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0FA4A4BE1EC8C98000F31F9A /* Enfoca.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Enfoca.entitlements; sourceTree = "<group>"; };
 		0FA4A4C71EC8CBA100F31F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FA4A4CC1EC8CCC000F31F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FA4A4D41EC8E91E00F31F9A /* CardOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardOrder.swift; path = Models/CardOrder.swift; sourceTree = "<group>"; };
+		0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardSide.swift; path = Models/CardSide.swift; sourceTree = "<group>"; };
+		0FA4A4D61EC8E91E00F31F9A /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
+		0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonDateFormatter.swift; path = Models/JsonDateFormatter.swift; sourceTree = "<group>"; };
+		0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetaData.swift; path = Models/MetaData.swift; sourceTree = "<group>"; };
+		0FA4A4D91EC8E91E00F31F9A /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = Models/Tag.swift; sourceTree = "<group>"; };
+		0FA4A4DA1EC8E91E00F31F9A /* TagAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagAssociation.swift; path = Models/TagAssociation.swift; sourceTree = "<group>"; };
+		0FA4A4DB1EC8E91E00F31F9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordPair.swift; path = Models/WordPair.swift; sourceTree = "<group>"; };
+		0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordPairOrder.swift; path = Models/WordPairOrder.swift; sourceTree = "<group>"; };
+		0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudKitWebService.swift; path = Network/CloudKitWebService.swift; sourceTree = "<group>"; };
+		0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = Network/DataStore.swift; sourceTree = "<group>"; };
+		0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoWebService.swift; path = Network/DemoWebService.swift; sourceTree = "<group>"; };
+		0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalCloudKitWebService.swift; path = Network/LocalCloudKitWebService.swift; sourceTree = "<group>"; };
+		0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressObserver.swift; path = Network/ProgressObserver.swift; sourceTree = "<group>"; };
+		0FA4A4EE1EC8E94700F31F9A /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Network/WebService.swift; sourceTree = "<group>"; };
+		0FA4A4F91EC8E9AF00F31F9A /* EnfocaError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfocaError.swift; sourceTree = "<group>"; };
+		0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		0FA4A5041EC8EAF100F31F9A /* EnumCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnumCollection.swift; path = Utilities/EnumCollection.swift; sourceTree = "<group>"; };
+		0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Sequence+.swift"; path = "Extensions/Sequence+.swift"; sourceTree = "<group>"; };
+		0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+.swift"; path = "Extensions/UITableView+.swift"; sourceTree = "<group>"; };
+		0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+.swift"; path = "Extensions/UIViewController+.swift"; sourceTree = "<group>"; };
+		0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorDelegate.swift; path = Network/Operations/Public/ErrorDelegate.swift; sourceTree = "<group>"; };
+		0FA4A5131EC8EC6E00F31F9A /* Perform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Perform.swift; path = Network/Operations/Public/Perform.swift; sourceTree = "<group>"; };
+		0FA4A5141EC8EC6E00F31F9A /* Perform+Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Perform+Tags.swift"; path = "Network/Operations/Public/Perform+Tags.swift"; sourceTree = "<group>"; };
+		0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Perform+WordPair.swift"; path = "Network/Operations/Public/Perform+WordPair.swift"; sourceTree = "<group>"; };
+		0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseUserOperation.swift; path = Network/Operations/Core/Authentication/BaseUserOperation.swift; sourceTree = "<group>"; };
+		0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudAuthOperation.swift; path = Network/Operations/Core/Authentication/CloudAuthOperation.swift; sourceTree = "<group>"; };
+		0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchIncrementAndSaveSeedIfNecessary.swift; path = Network/Operations/Core/Authentication/FetchIncrementAndSaveSeedIfNecessary.swift; sourceTree = "<group>"; };
+		0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchOrCreateEnfocaId.swift; path = Network/Operations/Core/Authentication/FetchOrCreateEnfocaId.swift; sourceTree = "<group>"; };
+		0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchUserRecordId.swift; path = Network/Operations/Core/Authentication/FetchUserRecordId.swift; sourceTree = "<group>"; };
+		0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchUserRecordOperation.swift; path = Network/Operations/Core/Authentication/FetchUserRecordOperation.swift; sourceTree = "<group>"; };
+		0FA4A5211EC8EC9000F31F9A /* InternalUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InternalUser.swift; path = Network/Operations/Core/Authentication/InternalUser.swift; sourceTree = "<group>"; };
+		0FA4A5291EC8EC9C00F31F9A /* BaseCKOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseCKOperation.swift; path = Network/Operations/Core/BaseCKOperation.swift; sourceTree = "<group>"; };
+		0FA4A52A1EC8EC9C00F31F9A /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseOperation.swift; path = Network/Operations/Core/BaseOperation.swift; sourceTree = "<group>"; };
+		0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudKitConverters.swift; path = Network/Operations/Core/CloudKitConverters.swift; sourceTree = "<group>"; };
+		0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonitoredBaseOperation.swift; path = Network/Operations/Core/MonitoredBaseOperation.swift; sourceTree = "<group>"; };
+		0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadWriteMutex.swift; path = Network/Operations/Core/ReadWriteMutex.swift; sourceTree = "<group>"; };
+		0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateMetaData.swift; path = Network/Operations/Core/Meta/OperationCreateMetaData.swift; sourceTree = "<group>"; };
+		0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationFetchMetaData.swift; path = Network/Operations/Core/Meta/OperationFetchMetaData.swift; sourceTree = "<group>"; };
+		0FA4A53A1EC8ECD200F31F9A /* OperationCreateTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateTag.swift; path = Network/Operations/Core/Tags/OperationCreateTag.swift; sourceTree = "<group>"; };
+		0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateTagAssociation.swift; path = Network/Operations/Core/Tags/OperationCreateTagAssociation.swift; sourceTree = "<group>"; };
+		0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationDeleteRecord.swift; path = Network/Operations/Core/Tags/OperationDeleteRecord.swift; sourceTree = "<group>"; };
+		0FA4A53D1EC8ECD200F31F9A /* OperationFetchTagAssociations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationFetchTagAssociations.swift; path = Network/Operations/Core/Tags/OperationFetchTagAssociations.swift; sourceTree = "<group>"; };
+		0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationFetchTags.swift; path = Network/Operations/Core/Tags/OperationFetchTags.swift; sourceTree = "<group>"; };
+		0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateTag.swift; path = Network/Operations/Core/Tags/OperationUpdateTag.swift; sourceTree = "<group>"; };
+		0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateWordPair.swift; path = Network/Operations/Core/Tags/OperationUpdateWordPair.swift; sourceTree = "<group>"; };
+		0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCountWordPairs.swift; path = Network/Operations/Core/WordPairs/OperationCountWordPairs.swift; sourceTree = "<group>"; };
+		0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateWordPair.swift; path = Network/Operations/Core/WordPairs/OperationCreateWordPair.swift; sourceTree = "<group>"; };
+		0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationFetchWordPairs.swift; path = Network/Operations/Core/WordPairs/OperationFetchWordPairs.swift; sourceTree = "<group>"; };
+		0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationPagedWordPairs.swift; path = Network/Operations/Core/WordPairs/OperationPagedWordPairs.swift; sourceTree = "<group>"; };
+		0FA4A5501EC8EE5B00F31F9A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = Utility/Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +190,8 @@
 		0FA4A48B1EC89C0D00F31F9A /* Enfoca */ = {
 			isa = PBXGroup;
 			children = (
+				0FA4A4F51EC8E94D00F31F9A /* Network */,
+				0FA4A4E81EC8E92500F31F9A /* Models */,
 				0FA4A4B01EC8A37200F31F9A /* Core */,
 				0FA4A4B41EC8A56200F31F9A /* Features */,
 				0FA4A4CB1EC8CC8A00F31F9A /* Resources */,
@@ -154,17 +258,12 @@
 		0FA4A4BA1EC8B02300F31F9A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				0FA4A4BB1EC8B03A00F31F9A /* Utility */,
+				0FA4A5081EC8EB1700F31F9A /* Extensions */,
+				0FA4A5031EC8EACD00F31F9A /* Utilities */,
+				0FA4A4F91EC8E9AF00F31F9A /* EnfocaError.swift */,
+				0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		0FA4A4BB1EC8B03A00F31F9A /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4BC1EC8B09600F31F9A /* Globals.swift */,
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		0FA4A4CB1EC8CC8A00F31F9A /* Resources */ = {
@@ -173,6 +272,140 @@
 				0FA4A4C71EC8CBA100F31F9A /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0FA4A4E81EC8E92500F31F9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4D41EC8E91E00F31F9A /* CardOrder.swift */,
+				0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */,
+				0FA4A4D61EC8E91E00F31F9A /* Gender.swift */,
+				0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */,
+				0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */,
+				0FA4A4D91EC8E91E00F31F9A /* Tag.swift */,
+				0FA4A4DA1EC8E91E00F31F9A /* TagAssociation.swift */,
+				0FA4A4DB1EC8E91E00F31F9A /* User.swift */,
+				0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */,
+				0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0FA4A4F51EC8E94D00F31F9A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A50F1EC8EC5200F31F9A /* Operations */,
+				0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */,
+				0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */,
+				0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */,
+				0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */,
+				0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */,
+				0FA4A4EE1EC8E94700F31F9A /* WebService.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		0FA4A5031EC8EACD00F31F9A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A5041EC8EAF100F31F9A /* EnumCollection.swift */,
+				0FA4A5501EC8EE5B00F31F9A /* Globals.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		0FA4A5081EC8EB1700F31F9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */,
+				0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */,
+				0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0FA4A50F1EC8EC5200F31F9A /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A5111EC8EC5F00F31F9A /* Public */,
+				0FA4A5101EC8EC5A00F31F9A /* Core */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
+		0FA4A5101EC8EC5A00F31F9A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A5391EC8ECC400F31F9A /* WordPairs */,
+				0FA4A5381EC8ECBB00F31F9A /* Tags */,
+				0FA4A5331EC8ECAB00F31F9A /* Meta */,
+				0FA4A5291EC8EC9C00F31F9A /* BaseCKOperation.swift */,
+				0FA4A52A1EC8EC9C00F31F9A /* BaseOperation.swift */,
+				0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */,
+				0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */,
+				0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */,
+				0FA4A51A1EC8EC7E00F31F9A /* Authentication */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		0FA4A5111EC8EC5F00F31F9A /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */,
+				0FA4A5131EC8EC6E00F31F9A /* Perform.swift */,
+				0FA4A5141EC8EC6E00F31F9A /* Perform+Tags.swift */,
+				0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */,
+			);
+			name = Public;
+			sourceTree = "<group>";
+		};
+		0FA4A51A1EC8EC7E00F31F9A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */,
+				0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */,
+				0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */,
+				0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */,
+				0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */,
+				0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */,
+				0FA4A5211EC8EC9000F31F9A /* InternalUser.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		0FA4A5331EC8ECAB00F31F9A /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */,
+				0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */,
+			);
+			name = Meta;
+			sourceTree = "<group>";
+		};
+		0FA4A5381EC8ECBB00F31F9A /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A53A1EC8ECD200F31F9A /* OperationCreateTag.swift */,
+				0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */,
+				0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */,
+				0FA4A53D1EC8ECD200F31F9A /* OperationFetchTagAssociations.swift */,
+				0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */,
+				0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */,
+				0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */,
+			);
+			name = Tags;
+			sourceTree = "<group>";
+		};
+		0FA4A5391EC8ECC400F31F9A /* WordPairs */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */,
+				0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */,
+				0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */,
+				0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */,
+			);
+			name = WordPairs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,10 +522,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FA4A4BD1EC8B09600F31F9A /* Globals.swift in Sources */,
+				0FA4A4F01EC8E94700F31F9A /* DataStore.swift in Sources */,
+				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
+				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,
+				0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */,
+				0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */,
+				0FA4A5281EC8EC9000F31F9A /* InternalUser.swift in Sources */,
+				0FA4A54D1EC8ECE200F31F9A /* OperationCreateWordPair.swift in Sources */,
+				0FA4A5191EC8EC6E00F31F9A /* Perform+WordPair.swift in Sources */,
+				0FA4A5471EC8ECD200F31F9A /* OperationUpdateWordPair.swift in Sources */,
+				0FA4A4F21EC8E94700F31F9A /* LocalCloudKitWebService.swift in Sources */,
+				0FA4A52C1EC8EC9C00F31F9A /* BaseCKOperation.swift in Sources */,
+				0FA4A5061EC8EAF100F31F9A /* EnumCollection.swift in Sources */,
+				0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */,
 				0FA4A48F1EC89C0D00F31F9A /* ViewController.swift in Sources */,
+				0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */,
+				0FA4A5181EC8EC6E00F31F9A /* Perform+Tags.swift in Sources */,
+				0FA4A50C1EC8EB2500F31F9A /* Sequence+.swift in Sources */,
+				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
+				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
+				0FA4A5311EC8ECA500F31F9A /* MonitoredBaseOperation.swift in Sources */,
+				0FA4A4FE1EC8E9AF00F31F9A /* EnfocaError.swift in Sources */,
+				0FA4A54E1EC8ECE200F31F9A /* OperationFetchWordPairs.swift in Sources */,
 				0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */,
+				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
+				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,
+				0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */,
 				0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */,
+				0FA4A4DF1EC8E91E00F31F9A /* CardSide.swift in Sources */,
+				0FA4A4E21EC8E91E00F31F9A /* MetaData.swift in Sources */,
+				0FA4A4DE1EC8E91E00F31F9A /* CardOrder.swift in Sources */,
+				0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */,
+				0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */,
+				0FA4A54F1EC8ECE200F31F9A /* OperationPagedWordPairs.swift in Sources */,
+				0FA4A54C1EC8ECE200F31F9A /* OperationCountWordPairs.swift in Sources */,
+				0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */,
+				0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */,
+				0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */,
+				0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */,
+				0FA4A5241EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
+				0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */,
+				0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */,
+				0FA4A4EF1EC8E94700F31F9A /* CloudKitWebService.swift in Sources */,
+				0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */,
+				0FA4A5431EC8ECD200F31F9A /* OperationDeleteRecord.swift in Sources */,
+				0FA4A50E1EC8EB2500F31F9A /* UIViewController+.swift in Sources */,
+				0FA4A4E71EC8E91E00F31F9A /* WordPairOrder.swift in Sources */,
+				0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */,
+				0FA4A4F41EC8E94700F31F9A /* WebService.swift in Sources */,
+				0FA4A5371EC8ECB400F31F9A /* OperationFetchMetaData.swift in Sources */,
+				0FA4A5261EC8EC9000F31F9A /* FetchUserRecordId.swift in Sources */,
+				0FA4A4E41EC8E91E00F31F9A /* TagAssociation.swift in Sources */,
+				0FA4A5411EC8ECD200F31F9A /* OperationCreateTag.swift in Sources */,
+				0FA4A5441EC8ECD200F31F9A /* OperationFetchTagAssociations.swift in Sources */,
+				0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */,
+				0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +739,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
