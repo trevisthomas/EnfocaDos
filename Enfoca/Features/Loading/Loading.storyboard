@@ -60,11 +60,21 @@
                     </view>
                     <connections>
                         <outlet property="darkGrayHeightConstraint" destination="d8p-hL-RQK" id="kgk-bb-Dtn"/>
+                        <outlet property="messageStackView" destination="JbM-OB-5rd" id="uih-v0-vWo"/>
+                        <segue destination="gzU-1a-drj" kind="show" identifier="Home" id="HgW-MC-OnS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSc-ha-2NN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.8" y="-12.143928035982009"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="i3M-9W-hS4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="gzU-1a-drj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J48-7f-JOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="-13"/>
         </scene>
     </scenes>
 </document>
