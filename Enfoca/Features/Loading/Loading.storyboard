@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h2V-Ty-BQf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="qZh-iS-OrO">
+            <objects>
+                <viewController id="h2V-Ty-BQf" customClass="LoadingViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tKs-R1-3mn"/>
+                        <viewControllerLayoutGuide type="bottom" id="pSR-XO-DOA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vTF-nR-41t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-mJ-cOY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bM-zp-J5J">
+                                        <rect key="frame" x="119.5" y="208" width="136" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="FNx-3W-LSZ"/>
+                                            <constraint firstAttribute="width" constant="136" id="fJk-Ky-JYn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.32549019607843138" green="0.34509803921568627" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="383" id="d8p-hL-RQK"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JbM-OB-5rd">
+                                <rect key="frame" x="16" y="391" width="343" height="256"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cp4-mJ-cOY" firstAttribute="top" secondItem="tKs-R1-3mn" secondAttribute="bottom" constant="-20" id="DDM-sw-d5H"/>
+                            <constraint firstItem="4bM-zp-J5J" firstAttribute="centerX" secondItem="vTF-nR-41t" secondAttribute="centerX" id="IJO-4y-gcF"/>
+                            <constraint firstItem="JbM-OB-5rd" firstAttribute="top" secondItem="tKs-R1-3mn" secondAttribute="bottom" constant="371" id="KCU-Yn-stW"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="JbM-OB-5rd" secondAttribute="leading" id="MEC-ll-spM"/>
+                            <constraint firstItem="pSR-XO-DOA" firstAttribute="top" secondItem="JbM-OB-5rd" secondAttribute="bottom" constant="20" id="Nyu-6j-g69"/>
+                            <constraint firstItem="cp4-mJ-cOY" firstAttribute="centerX" secondItem="vTF-nR-41t" secondAttribute="centerX" id="Wty-U3-GAg"/>
+                            <constraint firstItem="cp4-mJ-cOY" firstAttribute="width" secondItem="vTF-nR-41t" secondAttribute="width" id="aeZ-cs-0lj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JbM-OB-5rd" secondAttribute="trailing" id="ixV-WA-0g3"/>
+                            <constraint firstItem="4bM-zp-J5J" firstAttribute="top" secondItem="tKs-R1-3mn" secondAttribute="bottom" constant="188" id="o5c-i7-tMD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="darkGrayHeightConstraint" destination="d8p-hL-RQK" id="kgk-bb-Dtn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSc-ha-2NN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="-12.143928035982009"/>
+        </scene>
+    </scenes>
+</document>

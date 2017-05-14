@@ -13,6 +13,11 @@
 		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
 		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
 		0FA4A4A21EC89C0D00F31F9A /* EnfocaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */; };
+		0FA4A4AF1EC89DEF00F31F9A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */; };
+		0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */; };
+		0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */; };
+		0FA4A4BD1EC8B09600F31F9A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4BC1EC8B09600F31F9A /* Globals.swift */; };
+		0FA4A4CD1EC8CCC000F31F9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4CC1EC8CCC000F31F9A /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +37,15 @@
 		0FA4A4911EC89C0D00F31F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FA4A4961EC89C0D00F31F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0FA4A4981EC89C0D00F31F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnfocaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnfocaTests.swift; sourceTree = "<group>"; };
-		0FA4A4A31EC89C0D00F31F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
+		0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		0FA4A4BC1EC8B09600F31F9A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		0FA4A4BE1EC8C98000F31F9A /* Enfoca.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Enfoca.entitlements; sourceTree = "<group>"; };
+		0FA4A4C71EC8CBA100F31F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FA4A4CC1EC8CCC000F31F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA4A4AF1EC89DEF00F31F9A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +72,7 @@
 			children = (
 				0FA4A48B1EC89C0D00F31F9A /* Enfoca */,
 				0FA4A4A01EC89C0D00F31F9A /* EnfocaTests */,
+				0FA4A4AD1EC89DEF00F31F9A /* Frameworks */,
 				0FA4A48A1EC89C0D00F31F9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,12 +89,15 @@
 		0FA4A48B1EC89C0D00F31F9A /* Enfoca */ = {
 			isa = PBXGroup;
 			children = (
-				0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */,
-				0FA4A48E1EC89C0D00F31F9A /* ViewController.swift */,
-				0FA4A4901EC89C0D00F31F9A /* Main.storyboard */,
+				0FA4A4B01EC8A37200F31F9A /* Core */,
+				0FA4A4B41EC8A56200F31F9A /* Features */,
+				0FA4A4CB1EC8CC8A00F31F9A /* Resources */,
+				0FA4A4BA1EC8B02300F31F9A /* Shared */,
 				0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */,
+				0FA4A4BE1EC8C98000F31F9A /* Enfoca.entitlements */,
 				0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */,
-				0FA4A4981EC89C0D00F31F9A /* Info.plist */,
+				0FA4A4901EC89C0D00F31F9A /* Main.storyboard */,
+				0FA4A48E1EC89C0D00F31F9A /* ViewController.swift */,
 			);
 			path = Enfoca;
 			sourceTree = "<group>";
@@ -90,10 +105,75 @@
 		0FA4A4A01EC89C0D00F31F9A /* EnfocaTests */ = {
 			isa = PBXGroup;
 			children = (
+				0FA4A4B31EC8A46200F31F9A /* Resources */,
 				0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */,
-				0FA4A4A31EC89C0D00F31F9A /* Info.plist */,
 			);
 			path = EnfocaTests;
+			sourceTree = "<group>";
+		};
+		0FA4A4AD1EC89DEF00F31F9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0FA4A4B01EC8A37200F31F9A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0FA4A4B31EC8A46200F31F9A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4CC1EC8CCC000F31F9A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0FA4A4B41EC8A56200F31F9A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4B51EC8A56F00F31F9A /* Loading */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0FA4A4B51EC8A56F00F31F9A /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */,
+				0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		0FA4A4BA1EC8B02300F31F9A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4BB1EC8B03A00F31F9A /* Utility */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0FA4A4BB1EC8B03A00F31F9A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4BC1EC8B09600F31F9A /* Globals.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0FA4A4CB1EC8CC8A00F31F9A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A4C71EC8CBA100F31F9A /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +228,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = KRNJ229R7J;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					0FA4A49C1EC89C0D00F31F9A = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -184,6 +272,7 @@
 				0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */,
 				0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */,
 				0FA4A4921EC89C0D00F31F9A /* Main.storyboard in Resources */,
+				0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA4A4CD1EC8CCC000F31F9A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA4A4BD1EC8B09600F31F9A /* Globals.swift in Sources */,
 				0FA4A48F1EC89C0D00F31F9A /* ViewController.swift in Sources */,
 				0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */,
+				0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +323,7 @@
 				0FA4A4911EC89C0D00F31F9A /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */ = {
@@ -239,6 +332,7 @@
 				0FA4A4961EC89C0D00F31F9A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -343,8 +437,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
 				DEVELOPMENT_TEAM = KRNJ229R7J;
-				INFOPLIST_FILE = Enfoca/Info.plist;
+				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,8 +451,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
 				DEVELOPMENT_TEAM = KRNJ229R7J;
-				INFOPLIST_FILE = Enfoca/Info.plist;
+				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,7 +467,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = KRNJ229R7J;
-				INFOPLIST_FILE = EnfocaTests/Info.plist;
+				INFOPLIST_FILE = EnfocaTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.EnfocaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,7 +482,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = KRNJ229R7J;
-				INFOPLIST_FILE = EnfocaTests/Info.plist;
+				INFOPLIST_FILE = EnfocaTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.EnfocaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +510,7 @@
 				0FA4A4A81EC89C0D00F31F9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FA4A4A91EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "EnfocaTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +519,7 @@
 				0FA4A4AB1EC89C0D00F31F9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
