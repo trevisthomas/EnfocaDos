@@ -10,10 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//        let font = UIFont.systemFont(ofSize: 26)
+        let font = Style.segmentedControlFont()
+        languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
+                                                for: .normal)
     }
 
     override func didReceiveMemoryWarning() {

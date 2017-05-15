@@ -11,9 +11,6 @@ import UIKit
 class LoadingViewController: UIViewController {
     fileprivate var progressLabels : [String: UILabel] = [:]
     @IBOutlet weak var messageStackView: UIStackView!
-
-//    @IBOutlet weak var darkGreyBottomConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var darkGrayHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -54,32 +51,13 @@ class LoadingViewController: UIViewController {
             //            Perform.deleteAllRecords(dataStore: getAppDelegate().applicationDefaults.dataStore, enfocaId: service.enfocaId, db: service.db)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-
 }
 
 extension LoadingViewController : ProgressObserver {
     func startProgress(ofType key : String, message: String){
         print("Starting: \(key) : \(message)")
         
-        DispatchQueue.main.async {
+        invokeLater {
             let label = UILabel()
             
             label.text = message
@@ -89,14 +67,14 @@ extension LoadingViewController : ProgressObserver {
         }
     }
     func updateProgress(ofType key : String, message: String){
-        DispatchQueue.main.async {
+        invokeLater {
             guard let label = self.progressLabels[key] else { return }
             label.text = message
         }
     }
     func endProgress(ofType key : String, message: String) {
         print("Ending: \(key) : \(message)")
-        DispatchQueue.main.async {
+        invokeLater {
             guard let label = self.progressLabels[key] else { return }
             label.text = nil
             self.messageStackView.removeArrangedSubview(label)
@@ -104,6 +82,5 @@ extension LoadingViewController : ProgressObserver {
             
         }
     }
-    
 }
 

@@ -51,7 +51,7 @@ class LocalApplicationDefaults : ApplicationDefaults {
         guard let json = defaults.value(forKey: dataStoreKey) as? String else { return DataStore() }
         
         //In case of a dirty shut down, i dont want the old data lying around
-        defaults.removeObject(forKey: dataStoreKey)
+//        defaults.removeObject(forKey: dataStoreKey)
         
         let ds = DataStore()
         ds.initialize(json: json)

@@ -69,6 +69,7 @@
 		0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */; };
 		0FA4A5561EC8F51B00F31F9A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A5551EC8F51B00F31F9A /* Home.storyboard */; };
 		0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */; };
+		0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5591EC96A7800F31F9A /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDefaults.swift; sourceTree = "<group>"; };
 		0FA4A5551EC8F51B00F31F9A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Home/Home.storyboard; sourceTree = "<group>"; };
 		0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = "<group>"; };
+		0FA4A5591EC96A7800F31F9A /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			children = (
 				0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */,
 				0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */,
+				0FA4A5591EC96A7800F31F9A /* Style.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FA4A4F01EC8E94700F31F9A /* DataStore.swift in Sources */,
+				0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */,
 				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
 				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,

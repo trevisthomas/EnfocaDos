@@ -41,8 +41,8 @@
                                     <constraint firstAttribute="height" constant="383" id="d8p-hL-RQK"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JbM-OB-5rd">
-                                <rect key="frame" x="16" y="391" width="343" height="256"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JbM-OB-5rd">
+                                <rect key="frame" x="16" y="391" width="343" height="61.5"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,7 +51,6 @@
                             <constraint firstItem="4bM-zp-J5J" firstAttribute="centerX" secondItem="vTF-nR-41t" secondAttribute="centerX" id="IJO-4y-gcF"/>
                             <constraint firstItem="JbM-OB-5rd" firstAttribute="top" secondItem="tKs-R1-3mn" secondAttribute="bottom" constant="371" id="KCU-Yn-stW"/>
                             <constraint firstAttribute="leadingMargin" secondItem="JbM-OB-5rd" secondAttribute="leading" id="MEC-ll-spM"/>
-                            <constraint firstItem="pSR-XO-DOA" firstAttribute="top" secondItem="JbM-OB-5rd" secondAttribute="bottom" constant="20" id="Nyu-6j-g69"/>
                             <constraint firstItem="cp4-mJ-cOY" firstAttribute="centerX" secondItem="vTF-nR-41t" secondAttribute="centerX" id="Wty-U3-GAg"/>
                             <constraint firstItem="cp4-mJ-cOY" firstAttribute="width" secondItem="vTF-nR-41t" secondAttribute="width" id="aeZ-cs-0lj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JbM-OB-5rd" secondAttribute="trailing" id="ixV-WA-0g3"/>
