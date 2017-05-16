@@ -52,7 +52,7 @@
                                     <constraint firstAttribute="height" constant="383" id="If7-LZ-hbA"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgK-Ja-kbt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgK-Ja-kbt">
                                 <rect key="frame" x="143.5" y="30" width="89" height="30"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,6 +75,8 @@
                     </view>
                     <connections>
                         <outlet property="languageSegmentedControl" destination="dwd-qq-5mt" id="uND-xA-cZV"/>
+                        <outlet property="oldTitleLabel" destination="c26-yw-H9c" id="bwm-59-RiD"/>
+                        <outlet property="titleLabel" destination="mgK-Ja-kbt" id="OOw-wf-stW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-PW-uCx" userLabel="First Responder" sceneMemberID="firstResponder"/>

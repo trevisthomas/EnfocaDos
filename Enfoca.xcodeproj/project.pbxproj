@@ -70,6 +70,9 @@
 		0FA4A5561EC8F51B00F31F9A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A5551EC8F51B00F31F9A /* Home.storyboard */; };
 		0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */; };
 		0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5591EC96A7800F31F9A /* Style.swift */; };
+		0FA4A55C1ECB4F7B00F31F9A /* UIViewController+TransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A55B1ECB4F7B00F31F9A /* UIViewController+TransitionDelegate.swift */; };
+		0FA4A5601ECB50B500F31F9A /* UIViewController+TransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A55F1ECB50B500F31F9A /* UIViewController+TransitionDelegateTests.swift */; };
+		0FA4A5631ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +154,9 @@
 		0FA4A5551EC8F51B00F31F9A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Home/Home.storyboard; sourceTree = "<group>"; };
 		0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = "<group>"; };
 		0FA4A5591EC96A7800F31F9A /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		0FA4A55B1ECB4F7B00F31F9A /* UIViewController+TransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TransitionDelegate.swift"; sourceTree = "<group>"; };
+		0FA4A55F1ECB50B500F31F9A /* UIViewController+TransitionDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+TransitionDelegateTests.swift"; path = "Shared/Extensions/UIViewController+TransitionDelegateTests.swift"; sourceTree = "<group>"; };
+		0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFromLoadingAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,7 @@
 		0FA4A4A01EC89C0D00F31F9A /* EnfocaTests */ = {
 			isa = PBXGroup;
 			children = (
+				0FA4A55D1ECB507C00F31F9A /* Shared */,
 				0FA4A4B31EC8A46200F31F9A /* Resources */,
 				0FA4A4A11EC89C0D00F31F9A /* EnfocaTests.swift */,
 			);
@@ -227,6 +234,7 @@
 		0FA4A4B01EC8A37200F31F9A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0FA4A5611ECB54EC00F31F9A /* Animators */,
 				0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */,
 				0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */,
 				0FA4A5591EC96A7800F31F9A /* Style.swift */,
@@ -325,6 +333,7 @@
 				0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */,
 				0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */,
 				0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */,
+				0FA4A55B1ECB4F7B00F31F9A /* UIViewController+TransitionDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -420,6 +429,30 @@
 				0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		0FA4A55D1ECB507C00F31F9A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A55E1ECB508A00F31F9A /* Extensions */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		0FA4A55E1ECB508A00F31F9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A55F1ECB50B500F31F9A /* UIViewController+TransitionDelegateTests.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0FA4A5611ECB54EC00F31F9A /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */,
+			);
+			name = Animators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,6 +599,7 @@
 				0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */,
 				0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */,
 				0FA4A4DF1EC8E91E00F31F9A /* CardSide.swift in Sources */,
+				0FA4A55C1ECB4F7B00F31F9A /* UIViewController+TransitionDelegate.swift in Sources */,
 				0FA4A4E21EC8E91E00F31F9A /* MetaData.swift in Sources */,
 				0FA4A4DE1EC8E91E00F31F9A /* CardOrder.swift in Sources */,
 				0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */,
@@ -578,6 +612,7 @@
 				0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */,
 				0FA4A5241EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */,
+				0FA4A5631ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift in Sources */,
 				0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */,
 				0FA4A4EF1EC8E94700F31F9A /* CloudKitWebService.swift in Sources */,
 				0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */,
@@ -600,6 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA4A5601ECB50B500F31F9A /* UIViewController+TransitionDelegateTests.swift in Sources */,
 				0FA4A4A21EC89C0D00F31F9A /* EnfocaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

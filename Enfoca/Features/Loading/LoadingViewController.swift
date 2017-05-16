@@ -9,6 +9,7 @@
 import UIKit
 
 class LoadingViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
     fileprivate var progressLabels : [String: UILabel] = [:]
     @IBOutlet weak var messageStackView: UIStackView!
     @IBOutlet weak var darkGrayHeightConstraint: NSLayoutConstraint!
@@ -45,11 +46,17 @@ class LoadingViewController: UIViewController {
             } else {
                 getAppDelegate().webService = service
                 self.performSegue(withIdentifier: "Home", sender: self)
+                
+                
             }
             
             //            //DELETE ALL
             //            Perform.deleteAllRecords(dataStore: getAppDelegate().applicationDefaults.dataStore, enfocaId: service.enfocaId, db: service.db)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.transitioningDelegate = self
     }
 }
 

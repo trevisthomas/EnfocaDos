@@ -60,6 +60,7 @@
                     <connections>
                         <outlet property="darkGrayHeightConstraint" destination="d8p-hL-RQK" id="kgk-bb-Dtn"/>
                         <outlet property="messageStackView" destination="JbM-OB-5rd" id="uih-v0-vWo"/>
+                        <outlet property="titleLabel" destination="4bM-zp-J5J" id="gfT-Uc-WiJ"/>
                         <segue destination="gzU-1a-drj" kind="show" identifier="Home" id="HgW-MC-OnS"/>
                     </connections>
                 </viewController>

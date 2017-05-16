@@ -10,11 +10,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var oldTitleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let font = UIFont.systemFont(ofSize: 26)
         let font = Style.segmentedControlFont()
         languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
                                                 for: .normal)
