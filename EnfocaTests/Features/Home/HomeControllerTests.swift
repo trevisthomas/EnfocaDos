@@ -14,12 +14,11 @@ class HomeControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        sut = HomeController(service: <#WebService#>)
+//        sut = HomeController(service: WebService)
     }
     
     
-    func test() {
-    }
+    
     
     
 }

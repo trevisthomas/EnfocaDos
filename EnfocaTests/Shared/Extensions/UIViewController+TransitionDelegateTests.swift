@@ -35,10 +35,12 @@ class UIViewController_TransitionDelegateTests: XCTestCase {
         let animator = sut.animationController(forPresented: to, presenting: from, source: from)
         
         
-//        guard let _ = animator as HomeFromLoadingAnimator else {
-//            XCTAssertTrue(false)
-//        }
-        XCTAssertNotNil(animator)
+        guard let a = animator as? HomeFromLoadingAnimator else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertNotNil(a)
         
     }
     
