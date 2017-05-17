@@ -17,5 +17,9 @@ extension UIViewController{
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func services() -> WebService {
+        return (UIApplication.shared.delegate as! AppDelegate).webService
+    }
 }
 

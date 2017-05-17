@@ -13,28 +13,33 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var oldTitleLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var browseByTagCollectionView: UICollectionView!
+    private var controller: HomeController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let font = Style.segmentedControlFont()
-        languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
-                                                for: .normal)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        initializeLookAndFeel()
+        
+        controller = HomeController(service: services())
+        
+        services().fetchUserTags { (tags: [Tag]?, error: EnfocaError?) in
+            if let error = error {
+                self.presentAlert(title: "Error fetching tags", message: error)
+            }
+            guard let tags = tags else {  fatalError() }
+            
+            let dataSource = self.browseByTagCollectionView.dataSource as! TagCollectionViewDataSource
+            
+            dataSource.updateTags(tags: tags)
+            self.browseByTagCollectionView.reloadData()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func initializeLookAndFeel(){
+        let font = Style.segmentedControlFont()
+        languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
+                                                        for: .normal)
     }
-    */
-
 }
