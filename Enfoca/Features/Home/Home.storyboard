@@ -87,7 +87,7 @@
                                             </collectionViewCell>
                                         </cells>
                                         <connections>
-                                            <outlet property="dataSource" destination="AI2-XD-8xV" id="uZQ-PU-dSY"/>
+                                            <outlet property="dataSource" destination="tmx-iS-1cP" id="qdW-Kd-pUX"/>
                                         </connections>
                                     </collectionView>
                                 </subviews>
@@ -128,7 +128,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-PW-uCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="AI2-XD-8xV" customClass="TagCollectionViewDataSource" customModule="Enfoca" customModuleProvider="target"/>
+                <customObject id="tmx-iS-1cP" customClass="TagCollectionViewDataSource" customModule="Enfoca" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-8.8000000000000007" y="51.724137931034484"/>
         </scene>

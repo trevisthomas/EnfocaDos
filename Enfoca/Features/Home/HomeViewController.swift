@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, HomeControllerDelegate {
 
     @IBOutlet weak var oldTitleLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,24 +22,24 @@ class HomeViewController: UIViewController {
 
         initializeLookAndFeel()
         
-        controller = HomeController(service: services())
-        
-        services().fetchUserTags { (tags: [Tag]?, error: EnfocaError?) in
-            if let error = error {
-                self.presentAlert(title: "Error fetching tags", message: error)
-            }
-            guard let tags = tags else {  fatalError() }
-            
-            let dataSource = self.browseByTagCollectionView.dataSource as! TagCollectionViewDataSource
-            
-            dataSource.updateTags(tags: tags)
-            self.browseByTagCollectionView.reloadData()
-        }
+        controller = HomeController(delegate: self)
+        controller.startup()
     }
     
     private func initializeLookAndFeel(){
         let font = Style.segmentedControlFont()
         languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
                                                         for: .normal)
+    }
+    
+    func onTagsLoaded(tags: [Tag]) {
+        let dataSource = self.browseByTagCollectionView.dataSource as! TagCollectionViewDataSource
+        
+        dataSource.updateTags(tags: tags)
+        self.browseByTagCollectionView.reloadData()
+    }
+    
+    func onError(title: String, message: EnfocaError) {
+        self.presentAlert(title: title, message: message)
     }
 }

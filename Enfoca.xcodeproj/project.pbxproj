@@ -89,6 +89,8 @@
 		0FA4A5851ECC152B00F31F9A /* Sequence+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5841ECC152B00F31F9A /* Sequence+Tests.swift */; };
 		0FA4A5881ECC155B00F31F9A /* SharedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5861ECC155B00F31F9A /* SharedMocks.swift */; };
 		0FA4A5891ECC155B00F31F9A /* ToolsForTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5871ECC155B00F31F9A /* ToolsForTesting.swift */; };
+		0FA4A58B1ECCAE9C00F31F9A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A58A1ECCAE9C00F31F9A /* Event.swift */; };
+		0FA4A58D1ECCD8C400F31F9A /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A58C1ECCD8C400F31F9A /* Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +191,8 @@
 		0FA4A5841ECC152B00F31F9A /* Sequence+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Tests.swift"; sourceTree = "<group>"; };
 		0FA4A5861ECC155B00F31F9A /* SharedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMocks.swift; sourceTree = "<group>"; };
 		0FA4A5871ECC155B00F31F9A /* ToolsForTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsForTesting.swift; sourceTree = "<group>"; };
+		0FA4A58A1ECCAE9C00F31F9A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0FA4A58C1ECCD8C400F31F9A /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +278,8 @@
 				0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */,
 				0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */,
 				0FA4A5591EC96A7800F31F9A /* Style.swift */,
+				0FA4A58A1ECCAE9C00F31F9A /* Event.swift */,
+				0FA4A58C1ECCD8C400F31F9A /* Controller.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -664,10 +670,12 @@
 				0FA4A4F21EC8E94700F31F9A /* LocalCloudKitWebService.swift in Sources */,
 				0FA4A52C1EC8EC9C00F31F9A /* BaseCKOperation.swift in Sources */,
 				0FA4A5061EC8EAF100F31F9A /* EnumCollection.swift in Sources */,
+				0FA4A58D1ECCD8C400F31F9A /* Controller.swift in Sources */,
 				0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */,
 				0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */,
 				0FA4A5181EC8EC6E00F31F9A /* Perform+Tags.swift in Sources */,
 				0FA4A50C1EC8EB2500F31F9A /* Sequence+.swift in Sources */,
+				0FA4A58B1ECCAE9C00F31F9A /* Event.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
 				0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */,
