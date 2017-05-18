@@ -21,11 +21,11 @@ class HomeController: Controller {
     
     init(delegate: HomeControllerDelegate) {
         self.delegate = delegate
-//        super.init()
+        
+        initialize()
     }
     
-    func startup(){
-        getAppDelegate().activeController = self
+    private func initialize(){
         
         services.fetchUserTags { (tags: [Tag]?, error: EnfocaError?) in
             if let error = error {

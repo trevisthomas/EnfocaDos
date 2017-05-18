@@ -20,18 +20,20 @@ class HomeControllerTests: XCTestCase {
         services = MockWebService()
         getAppDelegate().webService = services
         
-        sut = HomeController(delegate: delegate)
+        
     }
     
     func testFetchTags_ShouldBeLoadedIntoDelegate(){
-        sut.startup()
+        sut = HomeController(delegate: delegate)
+        
         XCTAssertEqual(services.fetchUserTagsCallCount, 1)
         XCTAssertEqual(delegate.loadedTags!, services.tags)
     }
     
     func testFetchTags_ShouldFailWithError(){
         services.fetchUserTagsError = "Failed To Load"
-        sut.startup()
+
+        sut = HomeController(delegate: delegate)
         
         XCTAssertEqual(services.fetchUserTagsCallCount, 1)
         XCTAssertEqual(delegate.errorMessage, services.fetchUserTagsError)

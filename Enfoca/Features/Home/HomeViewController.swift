@@ -8,14 +8,16 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, HomeControllerDelegate {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var oldTitleLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var browseByTagCollectionView: UICollectionView!
-    private var controller: HomeController!
+    
+    fileprivate var controller: HomeController!
+    
+    fileprivate var browseTagsDataSourceDelegate : TagCollectionViewDataSourceDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,7 @@ class HomeViewController: UIViewController, HomeControllerDelegate {
         initializeLookAndFeel()
         
         controller = HomeController(delegate: self)
-        controller.startup()
+        getAppDelegate().activeController = controller
     }
     
     private func initializeLookAndFeel(){
@@ -31,15 +33,23 @@ class HomeViewController: UIViewController, HomeControllerDelegate {
         languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
                                                         for: .normal)
     }
-    
+}
+
+extension HomeViewController: HomeControllerDelegate{
     func onTagsLoaded(tags: [Tag]) {
-        let dataSource = self.browseByTagCollectionView.dataSource as! TagCollectionViewDataSource
-        
-        dataSource.updateTags(tags: tags)
-        self.browseByTagCollectionView.reloadData()
+        browseTagsDataSourceDelegate = TagCollectionViewDataSourceDelegate(tags: tags, delegate: self)
+        browseByTagCollectionView.dataSource = browseTagsDataSourceDelegate
+        browseByTagCollectionView.delegate = browseTagsDataSourceDelegate
+        browseByTagCollectionView.reloadData()
     }
     
     func onError(title: String, message: EnfocaError) {
         self.presentAlert(title: title, message: message)
+    }
+}
+
+extension HomeViewController: TagCollectionDelegate {
+    func tagSelected(tag: Tag) {
+        print(tag.name)
     }
 }

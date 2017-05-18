@@ -75,7 +75,7 @@
 		0FA4A5651ECBC93700F31F9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5641ECBC93700F31F9A /* HomeController.swift */; };
 		0FA4A5671ECBCB7D00F31F9A /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */; };
 		0FA4A56B1ECC05B200F31F9A /* HomeControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A56A1ECC05B200F31F9A /* HomeControllerTests.swift */; };
-		0FA4A56D1ECC07E600F31F9A /* TagCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A56C1ECC07E600F31F9A /* TagCollectionViewDataSource.swift */; };
+		0FA4A56D1ECC07E600F31F9A /* TagCollectionViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A56C1ECC07E600F31F9A /* TagCollectionViewDataSourceDelegate.swift */; };
 		0FA4A5761ECC148B00F31F9A /* CardOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A56F1ECC148B00F31F9A /* CardOrderTests.swift */; };
 		0FA4A5771ECC148B00F31F9A /* CardSideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5701ECC148B00F31F9A /* CardSideTests.swift */; };
 		0FA4A5781ECC148B00F31F9A /* MetaDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5711ECC148B00F31F9A /* MetaDataTests.swift */; };
@@ -177,7 +177,7 @@
 		0FA4A5641ECBC93700F31F9A /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = Home/HomeController.swift; sourceTree = "<group>"; };
 		0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagCollectionViewCell.swift; path = Home/TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FA4A56A1ECC05B200F31F9A /* HomeControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeControllerTests.swift; path = Features/Home/HomeControllerTests.swift; sourceTree = "<group>"; };
-		0FA4A56C1ECC07E600F31F9A /* TagCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		0FA4A56C1ECC07E600F31F9A /* TagCollectionViewDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCollectionViewDataSourceDelegate.swift; sourceTree = "<group>"; };
 		0FA4A56F1ECC148B00F31F9A /* CardOrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardOrderTests.swift; sourceTree = "<group>"; };
 		0FA4A5701ECC148B00F31F9A /* CardSideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSideTests.swift; sourceTree = "<group>"; };
 		0FA4A5711ECC148B00F31F9A /* MetaDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaDataTests.swift; sourceTree = "<group>"; };
@@ -471,7 +471,7 @@
 				0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */,
 				0FA4A5641ECBC93700F31F9A /* HomeController.swift */,
 				0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */,
-				0FA4A56C1ECC07E600F31F9A /* TagCollectionViewDataSource.swift */,
+				0FA4A56C1ECC07E600F31F9A /* TagCollectionViewDataSourceDelegate.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -659,7 +659,7 @@
 				0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */,
 				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
-				0FA4A56D1ECC07E600F31F9A /* TagCollectionViewDataSource.swift in Sources */,
+				0FA4A56D1ECC07E600F31F9A /* TagCollectionViewDataSourceDelegate.swift in Sources */,
 				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,
 				0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */,
 				0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */,

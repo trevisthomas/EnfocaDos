@@ -82,13 +82,10 @@
                                                     <constraint firstItem="umQ-8k-MRJ" firstAttribute="centerY" secondItem="ysF-Kk-S3b" secondAttribute="centerY" id="sCB-FP-rqg"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outlet property="titleLabel" destination="umQ-8k-MRJ" id="X6A-wg-WsP"/>
+                                                    <outlet property="titleLabel" destination="umQ-8k-MRJ" id="bSJ-UD-svX"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="tmx-iS-1cP" id="qdW-Kd-pUX"/>
-                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,7 +125,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-PW-uCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="tmx-iS-1cP" customClass="TagCollectionViewDataSource" customModule="Enfoca" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-8.8000000000000007" y="51.724137931034484"/>
         </scene>
