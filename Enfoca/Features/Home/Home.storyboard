@@ -46,54 +46,19 @@
                                         </segments>
                                         <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-IV-PFH">
-                                        <rect key="frame" x="0.0" y="275" width="383" height="100"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igz-BK-v1t">
+                                        <rect key="frame" x="0.0" y="275" width="375" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="KtW-AO-v4q"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="YGM-zn-4w5"/>
+                                            <constraint firstAttribute="height" constant="100" id="cE9-qr-Nwk"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qGQ-Lj-8cB">
-                                            <size key="itemSize" width="100" height="100"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TagCollectionViewCellId" reuseIdentifier="TagCollectionViewCellId" id="ysF-Kk-S3b" customClass="TagCollectionViewCell" customModule="Enfoca" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="0.0" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umQ-8k-MRJ">
-                                                            <rect key="frame" x="0.0" y="0.5" width="100" height="100"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </view>
-                                                <color key="backgroundColor" red="0.63860702514648438" green="0.80702608823776245" blue="0.6457703709602356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="umQ-8k-MRJ" firstAttribute="width" secondItem="ysF-Kk-S3b" secondAttribute="width" id="V5l-T2-QN9"/>
-                                                    <constraint firstItem="umQ-8k-MRJ" firstAttribute="centerX" secondItem="ysF-Kk-S3b" secondAttribute="centerX" id="afn-4s-2do"/>
-                                                    <constraint firstItem="umQ-8k-MRJ" firstAttribute="height" secondItem="ysF-Kk-S3b" secondAttribute="height" id="lXe-sA-A92"/>
-                                                    <constraint firstItem="umQ-8k-MRJ" firstAttribute="centerY" secondItem="ysF-Kk-S3b" secondAttribute="centerY" id="sCB-FP-rqg"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="titleLabel" destination="umQ-8k-MRJ" id="bSJ-UD-svX"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="zZT-IV-PFH" firstAttribute="leading" secondItem="3KL-V9-SAs" secondAttribute="leading" id="697-aD-6Dp"/>
-                                    <constraint firstAttribute="trailing" secondItem="zZT-IV-PFH" secondAttribute="trailingMargin" id="G1P-5v-R2S"/>
                                     <constraint firstAttribute="height" constant="383" id="If7-LZ-hbA"/>
-                                    <constraint firstAttribute="bottom" secondItem="zZT-IV-PFH" secondAttribute="bottom" constant="8" id="sus-jX-sRy"/>
+                                    <constraint firstAttribute="bottom" secondItem="Igz-BK-v1t" secondAttribute="bottom" constant="8" id="ekV-Pv-4c9"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgK-Ja-kbt">
@@ -102,6 +67,13 @@
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1e-F6-TjV">
+                                <rect key="frame" x="0.0" y="489" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9NY-fA-4wG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -114,13 +86,19 @@
                             <constraint firstItem="dwd-qq-5mt" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="57" id="KSB-dI-TUk"/>
                             <constraint firstItem="3KL-V9-SAs" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" id="T43-cR-eet"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dwd-qq-5mt" secondAttribute="trailing" constant="-8" id="Uaq-tH-f1E"/>
+                            <constraint firstItem="w1e-F6-TjV" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="469" id="Uoe-zM-M1V"/>
                             <constraint firstItem="c26-yw-H9c" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="188" id="aKV-d0-Adq"/>
+                            <constraint firstItem="w1e-F6-TjV" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" id="jm7-Ob-bX6"/>
+                            <constraint firstItem="Igz-BK-v1t" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" id="jvT-Rx-o1d"/>
+                            <constraint firstItem="Igz-BK-v1t" firstAttribute="leading" secondItem="7Ni-DN-MKS" secondAttribute="leading" id="tXR-Cy-rKG"/>
+                            <constraint firstAttribute="leading" secondItem="w1e-F6-TjV" secondAttribute="leading" id="tym-jk-L9G"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="browseByTagCollectionView" destination="zZT-IV-PFH" id="2Zh-tp-aEn"/>
+                        <outlet property="browseByTagContainerView" destination="w1e-F6-TjV" id="Lpl-ua-k3W"/>
                         <outlet property="languageSegmentedControl" destination="dwd-qq-5mt" id="uND-xA-cZV"/>
                         <outlet property="oldTitleLabel" destination="c26-yw-H9c" id="bwm-59-RiD"/>
+                        <outlet property="quizByTagContainerView" destination="Igz-BK-v1t" id="nJL-Xp-B0r"/>
                         <outlet property="titleLabel" destination="mgK-Ja-kbt" id="OOw-wf-stW"/>
                     </connections>
                 </viewController>

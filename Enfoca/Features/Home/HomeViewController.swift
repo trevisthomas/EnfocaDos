@@ -13,19 +13,26 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var oldTitleLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var browseByTagCollectionView: UICollectionView!
     
     fileprivate var controller: HomeController!
     
-    fileprivate var browseTagsDataSourceDelegate : TagCollectionViewDataSourceDelegate!
+    @IBOutlet weak var quizByTagContainerView: UIView!
+    @IBOutlet weak var browseByTagContainerView: UIView!
+    
+    fileprivate var browseByTagViewController: TagSelectionViewController!
+    fileprivate var quizByTagViewControler: TagSelectionViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initializeLookAndFeel()
         
+        initializeSubViews()
+        
         controller = HomeController(delegate: self)
         getAppDelegate().activeController = controller
+        
+        
     }
     
     private func initializeLookAndFeel(){
@@ -33,14 +40,19 @@ class HomeViewController: UIViewController {
         languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
                                                         for: .normal)
     }
+    
+    private func initializeSubViews() {
+        browseByTagViewController = createTagSelectionViewController(inContainerView: browseByTagContainerView)
+        
+        quizByTagViewControler = createTagSelectionViewController(inContainerView: quizByTagContainerView)
+    }
 }
 
 extension HomeViewController: HomeControllerDelegate{
     func onTagsLoaded(tags: [Tag]) {
-        browseTagsDataSourceDelegate = TagCollectionViewDataSourceDelegate(tags: tags, delegate: self)
-        browseByTagCollectionView.dataSource = browseTagsDataSourceDelegate
-        browseByTagCollectionView.delegate = browseTagsDataSourceDelegate
-        browseByTagCollectionView.reloadData()
+        
+        browseByTagViewController.initialize(tags: tags, browseDelegate: self)
+        quizByTagViewControler.initialize(tags: tags, quizDelegate: self)
     }
     
     func onError(title: String, message: EnfocaError) {
@@ -48,8 +60,16 @@ extension HomeViewController: HomeControllerDelegate{
     }
 }
 
-extension HomeViewController: TagCollectionDelegate {
-    func tagSelected(tag: Tag) {
-        print(tag.name)
+extension HomeViewController: BrowseTagSelectionDelegate {
+    func browseWordsWithTag(withTag tag: Tag) {
+        print("Browse words tagged: \(tag.name)")
     }
 }
+
+extension HomeViewController: QuizTagSelectionDelegate {
+    func quizWordsWithTag(forTag tag: Tag) {
+        print("Quiz words tagged: \(tag.name)")
+    }
+}
+
+

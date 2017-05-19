@@ -21,5 +21,20 @@ extension UIViewController{
     func services() -> WebService {
         return (UIApplication.shared.delegate as! AppDelegate).webService
     }
+    
+    func add(asChildViewController childViewController: UIViewController, toContainerView: UIView) {
+        // Add Child View Controller
+        self.addChildViewController(childViewController)
+        
+        // Add Child View as Subview
+        toContainerView.addSubview(childViewController.view)
+        
+        // Configure Child View
+        childViewController.view.frame = toContainerView.bounds
+        childViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        // Notify Child View Controller
+        childViewController.didMove(toParentViewController: self)
+    }
 }
 
