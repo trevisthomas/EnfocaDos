@@ -54,11 +54,25 @@
                                             <constraint firstAttribute="height" constant="100" id="cE9-qr-Nwk"/>
                                         </constraints>
                                     </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search or Create" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-bF-agk">
+                                        <rect key="frame" x="8" y="122" width="359" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mOg-Kn-YKc"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="VZW-bF-agk" firstAttribute="top" secondItem="dwd-qq-5mt" secondAttribute="bottom" constant="8" id="6Un-pj-KRs"/>
                                     <constraint firstAttribute="height" constant="383" id="If7-LZ-hbA"/>
                                     <constraint firstAttribute="bottom" secondItem="Igz-BK-v1t" secondAttribute="bottom" constant="8" id="ekV-Pv-4c9"/>
+                                    <constraint firstItem="VZW-bF-agk" firstAttribute="width" secondItem="dwd-qq-5mt" secondAttribute="width" id="uvO-u1-ohf"/>
+                                    <constraint firstItem="VZW-bF-agk" firstAttribute="leading" secondItem="3KL-V9-SAs" secondAttribute="leading" constant="8" id="vjq-tM-3Pw"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgK-Ja-kbt">
@@ -83,10 +97,10 @@
                             <constraint firstItem="c26-yw-H9c" firstAttribute="centerX" secondItem="7Ni-DN-MKS" secondAttribute="centerX" id="Bji-D9-Gtv"/>
                             <constraint firstItem="dwd-qq-5mt" firstAttribute="leading" secondItem="7Ni-DN-MKS" secondAttribute="leadingMargin" constant="-8" id="F2d-L4-Q4N"/>
                             <constraint firstItem="3KL-V9-SAs" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="-20" id="JSb-c6-S8d"/>
+                            <constraint firstItem="w1e-F6-TjV" firstAttribute="top" secondItem="3KL-V9-SAs" secondAttribute="bottom" constant="106" id="Jgm-1u-ljv"/>
                             <constraint firstItem="dwd-qq-5mt" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="57" id="KSB-dI-TUk"/>
                             <constraint firstItem="3KL-V9-SAs" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" id="T43-cR-eet"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dwd-qq-5mt" secondAttribute="trailing" constant="-8" id="Uaq-tH-f1E"/>
-                            <constraint firstItem="w1e-F6-TjV" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="469" id="Uoe-zM-M1V"/>
                             <constraint firstItem="c26-yw-H9c" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="188" id="aKV-d0-Adq"/>
                             <constraint firstItem="w1e-F6-TjV" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" id="jm7-Ob-bX6"/>
                             <constraint firstItem="Igz-BK-v1t" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" id="jvT-Rx-o1d"/>
@@ -96,9 +110,11 @@
                     </view>
                     <connections>
                         <outlet property="browseByTagContainerView" destination="w1e-F6-TjV" id="Lpl-ua-k3W"/>
+                        <outlet property="hightConstraintOnGray" destination="If7-LZ-hbA" id="65e-V4-hpx"/>
                         <outlet property="languageSegmentedControl" destination="dwd-qq-5mt" id="uND-xA-cZV"/>
                         <outlet property="oldTitleLabel" destination="c26-yw-H9c" id="bwm-59-RiD"/>
                         <outlet property="quizByTagContainerView" destination="Igz-BK-v1t" id="nJL-Xp-B0r"/>
+                        <outlet property="searchOrCreateTextField" destination="VZW-bF-agk" id="edp-Tn-rqB"/>
                         <outlet property="titleLabel" destination="mgK-Ja-kbt" id="OOw-wf-stW"/>
                     </connections>
                 </viewController>
