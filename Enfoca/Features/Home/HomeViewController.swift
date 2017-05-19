@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var quizByTagContainerView: UIView!
     @IBOutlet weak var browseByTagContainerView: UIView!
     
+    @IBOutlet weak var tableContainerView: UIView!
     fileprivate var browseByTagViewController: TagSelectionViewController!
     fileprivate var quizByTagViewControler: TagSelectionViewController!
     
@@ -42,7 +43,7 @@ class HomeViewController: UIViewController {
     
     private func initializeLookAndFeel(){
         originalHeightConstraintOnGray = hightConstraintOnGray.constant
-        expandedHeightConstraintOnGray = view.frame.height + originalHeightConstraintOnGray
+        expandedHeightConstraintOnGray = view.frame.height + originalHeightConstraintOnGray - tableContainerView.frame.height
         
         searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidChange(_:)), for: [.editingChanged])
         
