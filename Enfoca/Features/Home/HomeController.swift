@@ -12,6 +12,7 @@ import UIKit
 protocol HomeControllerDelegate {
     func onError(title: String, message: EnfocaError)
     func onTagsLoaded(tags : [Tag])
+    func onSearchResults(words: [WordPair])
     
 }
 
@@ -36,6 +37,18 @@ class HomeController: Controller {
             }
             
             self.delegate.onTagsLoaded(tags: tags)
+        }
+    }
+    
+    func search(pattern: String, order: WordPairOrder){
+        services.fetchWordPairs(tagFilter: [], wordPairOrder: order, pattern: pattern) { (pairs: [WordPair]?, error:EnfocaError?) in
+            if let error = error {
+                self.delegate.onError(title: "Error fetching tags", message: error)
+            }
+            guard let pairs = pairs else {
+                return
+            }
+            self.delegate.onSearchResults(words: pairs)
         }
     }
     

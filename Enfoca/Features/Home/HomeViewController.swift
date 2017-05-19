@@ -20,13 +20,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var quizByTagContainerView: UIView!
     @IBOutlet weak var browseByTagContainerView: UIView!
     
+    @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var tableContainerView: UIView!
+    
     fileprivate var browseByTagViewController: TagSelectionViewController!
     fileprivate var quizByTagViewControler: TagSelectionViewController!
     
     @IBOutlet weak var hightConstraintOnGray: NSLayoutConstraint!
-    var originalHeightConstraintOnGray: CGFloat!
-    var expandedHeightConstraintOnGray: CGFloat!
+    
+    private var originalHeightConstraintOnGray: CGFloat!
+    private var expandedHeightConstraintOnGray: CGFloat!
+    
+    fileprivate var wordPairs : [WordPair] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,18 +112,48 @@ class HomeViewController: UIViewController {
         if text.isEmpty {
             hideWordTable()
         } else {
+            controller.search(pattern: text, order: .wordAsc)
             showWordTable()
         }
+        
         
         print(text)
     }
 }
+
+extension HomeViewController: UITableViewDelegate {
+    
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*
+         This was just to see it working.  But in the process of putting this in place it dawned on me that this table that is a list of words should be in a seperate view controller.  The whole thing can then be reused as an embeded view controller.  It'll be much easier to work on the cells that way too considering the wacky animation that is in place now.
+         */
+        
+//        tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
+        let cell = UITableViewCell()
+        cell.textLabel?.text = wordPairs[indexPath.row].word
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return wordPairs.count
+    }
+}
+
 
 extension HomeViewController: HomeControllerDelegate{
     func onTagsLoaded(tags: [Tag]) {
         
         browseByTagViewController.initialize(tags: tags, browseDelegate: self)
         quizByTagViewControler.initialize(tags: tags, quizDelegate: self)
+    }
+    
+    func onSearchResults(words: [WordPair]) {
+        wordPairs.removeAll()
+        wordPairs.append(contentsOf: words)
+        searchTableView.reloadData()
     }
     
     func onError(title: String, message: EnfocaError) {

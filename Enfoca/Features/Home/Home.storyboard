@@ -31,6 +31,10 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YaT-n2-BcB">
                                                 <rect key="frame" x="0.0" y="165" width="375" height="0.0"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="NWj-al-1U9" id="rt5-SV-hYV"/>
+                                                    <outlet property="delegate" destination="NWj-al-1U9" id="nBm-yZ-VwP"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,7 +82,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgK-Ja-kbt">
-                                <rect key="frame" x="143.5" y="30" width="89" height="30"/>
+                                <rect key="frame" x="143" y="30" width="89" height="30"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -145,6 +149,7 @@
                         <outlet property="oldTitleLabel" destination="c26-yw-H9c" id="bwm-59-RiD"/>
                         <outlet property="quizByTagContainerView" destination="Igz-BK-v1t" id="nJL-Xp-B0r"/>
                         <outlet property="searchOrCreateTextField" destination="VZW-bF-agk" id="edp-Tn-rqB"/>
+                        <outlet property="searchTableView" destination="YaT-n2-BcB" id="vxd-Ku-Jbz"/>
                         <outlet property="tableContainerView" destination="qKg-rF-ni1" id="wYM-2x-4Gs"/>
                         <outlet property="titleLabel" destination="mgK-Ja-kbt" id="OOw-wf-stW"/>
                     </connections>
