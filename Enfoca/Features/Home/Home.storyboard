@@ -28,21 +28,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-rF-ni1">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YaT-n2-BcB">
-                                                <rect key="frame" x="0.0" y="165" width="375" height="0.0"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uyl-SK-tr2">
+                                                <rect key="frame" x="0.0" y="19" width="375" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="NWj-al-1U9" id="rt5-SV-hYV"/>
-                                                    <outlet property="delegate" destination="NWj-al-1U9" id="nBm-yZ-VwP"/>
-                                                </connections>
-                                            </tableView>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="YaT-n2-BcB" secondAttribute="bottom" constant="2" id="Ut0-LJ-Nrn"/>
-                                            <constraint firstItem="YaT-n2-BcB" firstAttribute="top" secondItem="qKg-rF-ni1" secondAttribute="top" constant="165" id="WeO-dS-5Gp"/>
-                                            <constraint firstItem="YaT-n2-BcB" firstAttribute="leading" secondItem="qKg-rF-ni1" secondAttribute="leading" id="mVF-J3-4Mb"/>
-                                            <constraint firstAttribute="trailing" secondItem="YaT-n2-BcB" secondAttribute="trailing" id="sje-Wf-T4H"/>
+                                            <constraint firstItem="Uyl-SK-tr2" firstAttribute="top" secondItem="qKg-rF-ni1" secondAttribute="top" constant="165" id="RDq-21-a8P"/>
+                                            <constraint firstAttribute="bottom" secondItem="Uyl-SK-tr2" secondAttribute="bottom" constant="2" id="iSg-uC-E9r"/>
+                                            <constraint firstItem="Uyl-SK-tr2" firstAttribute="leading" secondItem="qKg-rF-ni1" secondAttribute="leading" id="mbd-jk-Jho"/>
+                                            <constraint firstAttribute="trailing" secondItem="Uyl-SK-tr2" secondAttribute="trailing" id="oat-yM-3tv"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c26-yw-H9c">
@@ -108,6 +104,9 @@
                                     <segment title="Spanish"/>
                                 </segments>
                                 <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="languageSegmentedControlChanged:" destination="NWj-al-1U9" eventType="valueChanged" id="LRc-4h-bAm"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1e-F6-TjV">
                                 <rect key="frame" x="0.0" y="489" width="375" height="100"/>
@@ -144,13 +143,13 @@
                     </view>
                     <connections>
                         <outlet property="browseByTagContainerView" destination="w1e-F6-TjV" id="Lpl-ua-k3W"/>
+                        <outlet property="expandingTableViewHolder" destination="qKg-rF-ni1" id="wWU-vy-dhJ"/>
                         <outlet property="hightConstraintOnGray" destination="If7-LZ-hbA" id="65e-V4-hpx"/>
                         <outlet property="languageSegmentedControl" destination="dwd-qq-5mt" id="uND-xA-cZV"/>
                         <outlet property="oldTitleLabel" destination="c26-yw-H9c" id="bwm-59-RiD"/>
                         <outlet property="quizByTagContainerView" destination="Igz-BK-v1t" id="nJL-Xp-B0r"/>
                         <outlet property="searchOrCreateTextField" destination="VZW-bF-agk" id="edp-Tn-rqB"/>
-                        <outlet property="searchTableView" destination="YaT-n2-BcB" id="vxd-Ku-Jbz"/>
-                        <outlet property="tableContainerView" destination="qKg-rF-ni1" id="wYM-2x-4Gs"/>
+                        <outlet property="searchResultsTableViewContainer" destination="Uyl-SK-tr2" id="bNB-Y6-I7u"/>
                         <outlet property="titleLabel" destination="mgK-Ja-kbt" id="OOw-wf-stW"/>
                     </connections>
                 </viewController>

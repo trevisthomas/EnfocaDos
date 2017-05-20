@@ -92,6 +92,9 @@
 		0FA4A58D1ECCD8C400F31F9A /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A58C1ECCD8C400F31F9A /* Controller.swift */; };
 		0FAD20CC1ECE6231002EACDA /* TagSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */; };
 		0FAD20CE1ECE65B3002EACDA /* TagSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD20CD1ECE65B3002EACDA /* TagSelectionViewController.swift */; };
+		0FD1E2071ED0822900D8BD1A /* WordPairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */; };
+		0FD1E2091ED0827700D8BD1A /* WordPairTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */; };
+		0FD1E20B1ED08E7900D8BD1A /* WordPairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +198,9 @@
 		0FA4A58C1ECCD8C400F31F9A /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TagSelection.storyboard; sourceTree = "<group>"; };
 		0FAD20CD1ECE65B3002EACDA /* TagSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagSelectionViewController.swift; path = Home/TagSelectionViewController.swift; sourceTree = "<group>"; };
+		0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordPairTableViewController.swift; path = Shared/WordPairTableViewController.swift; sourceTree = "<group>"; };
+		0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WordPairTableStoryboard.storyboard; path = Shared/WordPairTableStoryboard.storyboard; sourceTree = "<group>"; };
+		0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordPairTableViewCell.swift; path = Shared/WordPairTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,6 +554,9 @@
 				0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */,
 				0FAD20CD1ECE65B3002EACDA /* TagSelectionViewController.swift */,
 				0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */,
+				0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */,
+				0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */,
+				0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -647,6 +656,7 @@
 			files = (
 				0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */,
 				0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */,
+				0FD1E2091ED0827700D8BD1A /* WordPairTableStoryboard.storyboard in Resources */,
 				0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */,
 				0FAD20CC1ECE6231002EACDA /* TagSelection.storyboard in Resources */,
 				0FA4A5561EC8F51B00F31F9A /* Home.storyboard in Resources */,
@@ -684,9 +694,11 @@
 				0FA4A58D1ECCD8C400F31F9A /* Controller.swift in Sources */,
 				0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */,
 				0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */,
+				0FD1E20B1ED08E7900D8BD1A /* WordPairTableViewCell.swift in Sources */,
 				0FA4A5181EC8EC6E00F31F9A /* Perform+Tags.swift in Sources */,
 				0FA4A50C1EC8EB2500F31F9A /* Sequence+.swift in Sources */,
 				0FA4A58B1ECCAE9C00F31F9A /* Event.swift in Sources */,
+				0FD1E2071ED0822900D8BD1A /* WordPairTableViewController.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
 				0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */,

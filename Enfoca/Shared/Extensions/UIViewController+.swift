@@ -38,3 +38,33 @@ extension UIViewController{
     }
 }
 
+//Is this the best place for these?
+extension UIViewController {
+    
+    func createTagSelectionViewController(inContainerView: UIView) -> TagSelectionViewController {
+        let storyboard = UIStoryboard(name: "TagSelection", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "TagSelectionViewController") as! TagSelectionViewController
+        
+        //Note, this add is a custom method
+        self.add(asChildViewController: viewController, toContainerView: inContainerView)
+        
+        return viewController
+    }
+    
+    func createWordPairTableViewController(inContainerView: UIView) -> WordPairTableViewController {
+        
+        let storyboard = UIStoryboard(name: "WordPairTableStoryboard", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "WordPairTableViewController") as! WordPairTableViewController
+        
+        //Note, this add is a custom method
+        self.add(asChildViewController: viewController, toContainerView: inContainerView)
+        
+        return viewController
+    }
+    
+}
+

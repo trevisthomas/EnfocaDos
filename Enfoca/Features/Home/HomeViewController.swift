@@ -20,16 +20,20 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var quizByTagContainerView: UIView!
     @IBOutlet weak var browseByTagContainerView: UIView!
     
-    @IBOutlet weak var searchTableView: UITableView!
-    @IBOutlet weak var tableContainerView: UIView!
+    
+    @IBOutlet weak var expandingTableViewHolder: UIView!
+    @IBOutlet weak var searchResultsTableViewContainer: UIView!
     
     fileprivate var browseByTagViewController: TagSelectionViewController!
     fileprivate var quizByTagViewControler: TagSelectionViewController!
+    fileprivate var wordPairTableViewController: WordPairTableViewController!
     
     @IBOutlet weak var hightConstraintOnGray: NSLayoutConstraint!
     
     private var originalHeightConstraintOnGray: CGFloat!
     private var expandedHeightConstraintOnGray: CGFloat!
+    
+    fileprivate var order: WordPairOrder!
     
     fileprivate var wordPairs : [WordPair] = []
     
@@ -40,15 +44,22 @@ class HomeViewController: UIViewController {
         
         initializeSubViews()
         
+        loadViewDefaults()
+        
         controller = HomeController(delegate: self)
         getAppDelegate().activeController = controller
         
         
     }
     
+    private func loadViewDefaults(){
+        order = WordPairOrder.wordDesc
+        languageSegmentedControl.selectedSegmentIndex = 1
+    }
+    
     private func initializeLookAndFeel(){
         originalHeightConstraintOnGray = hightConstraintOnGray.constant
-        expandedHeightConstraintOnGray = view.frame.height + originalHeightConstraintOnGray - tableContainerView.frame.height
+        expandedHeightConstraintOnGray = view.frame.height + originalHeightConstraintOnGray - expandingTableViewHolder.frame.height
         
         searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidChange(_:)), for: [.editingChanged])
         
@@ -61,6 +72,9 @@ class HomeViewController: UIViewController {
         browseByTagViewController = createTagSelectionViewController(inContainerView: browseByTagContainerView)
         
         quizByTagViewControler = createTagSelectionViewController(inContainerView: quizByTagContainerView)
+        
+        wordPairTableViewController = createWordPairTableViewController(inContainerView: searchResultsTableViewContainer)
+        
     }
     
     private func isWordTableContracted() -> Bool{
@@ -112,38 +126,31 @@ class HomeViewController: UIViewController {
         if text.isEmpty {
             hideWordTable()
         } else {
-            controller.search(pattern: text, order: .wordAsc)
+            controller.search(pattern: text, order: self.order)
             showWordTable()
         }
-        
-        
+
         print(text)
     }
-}
-
-extension HomeViewController: UITableViewDelegate {
     
-}
-
-extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*
-         This was just to see it working.  But in the process of putting this in place it dawned on me that this table that is a list of words should be in a separate view controller.  The whole thing can then be reused as an embedded view controller.  It'll be much easier to work on the cells that way too considering the wacky animation that is in place now.
-         */
+    @IBAction func languageSegmentedControlChanged(_ sender: UISegmentedControl) {
+        wordPairTableViewController.clearWordPairs()
         
-//        tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
-        let cell = UITableViewCell()
-        cell.textLabel?.text = wordPairs[indexPath.row].word
-        return cell
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            self.order = WordPairOrder.definitionAsc
+        case 1:
+            self.order = WordPairOrder.wordAsc
+        default:
+            fatalError()
+        }
+        
+        controller.search(pattern: searchOrCreateTextField.text ?? "", order: self.order)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return wordPairs.count
-    }
 }
 
-
-extension HomeViewController: HomeControllerDelegate{
+extension HomeViewController: HomeControllerDelegate {
     func onTagsLoaded(tags: [Tag]) {
         
         browseByTagViewController.initialize(tags: tags, browseDelegate: self)
@@ -151,9 +158,7 @@ extension HomeViewController: HomeControllerDelegate{
     }
     
     func onSearchResults(words: [WordPair]) {
-        wordPairs.removeAll()
-        wordPairs.append(contentsOf: words)
-        searchTableView.reloadData()
+        wordPairTableViewController.updateWordPairs(order: self.order, wordPairs: words)
     }
     
     func onError(title: String, message: EnfocaError) {

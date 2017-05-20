@@ -55,22 +55,6 @@ extension TagSelectionViewController {
     
 }
 
-extension UIViewController {
-    
-    func createTagSelectionViewController(inContainerView: UIView) -> TagSelectionViewController {
-        let storyboard = UIStoryboard(name: "TagSelection", bundle: Bundle.main)
-        
-        // Instantiate View Controller
-        let viewController = storyboard.instantiateViewController(withIdentifier: "TagSelectionViewController") as! TagSelectionViewController
-        
-        //Note, this add is a custom method
-        self.add(asChildViewController: viewController, toContainerView: inContainerView)
-        
-        return viewController
-    }
-    
-}
-
 extension TagSelectionViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
