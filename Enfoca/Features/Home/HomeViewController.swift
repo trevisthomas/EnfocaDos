@@ -49,7 +49,8 @@ class HomeViewController: UIViewController {
         controller = HomeController(delegate: self)
         getAppDelegate().activeController = controller
         
-        
+        dismissKeyboardWhenTapped()
+
     }
     
     private func loadViewDefaults(){
@@ -63,6 +64,8 @@ class HomeViewController: UIViewController {
         
         searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidChange(_:)), for: [.editingChanged])
         
+        searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidBegin(_:)), for: [.editingDidBegin])
+        
         let font = Style.segmentedControlFont()
         languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
                                                         for: .normal)
@@ -74,6 +77,8 @@ class HomeViewController: UIViewController {
         quizByTagViewControler = createTagSelectionViewController(inContainerView: quizByTagContainerView)
         
         wordPairTableViewController = createWordPairTableViewController(inContainerView: searchResultsTableViewContainer)
+        
+        wordPairTableViewController.initialize(delegate: self)
         
     }
     
@@ -109,15 +114,21 @@ class HomeViewController: UIViewController {
             return
         }
         
+        dismissKeyboard()
+        
         hightConstraintOnGray.constant = originalHeightConstraintOnGray
         
         
         UIView.animate(withDuration: 0.6, delay: 0.2, options: [.curveEaseInOut], animations: {
             self.view.layoutIfNeeded()
         }) { ( _ ) in
-            //Nada
+            self.wordPairTableViewController.clearWordPairs()
         }
 
+    }
+    
+    func searchOrCreateTextDidBegin(_ textField: UITextField) {
+        showWordTable()
     }
     
     func searchOrCreateTextDidChange(_ textField: UITextField) {
@@ -145,7 +156,14 @@ class HomeViewController: UIViewController {
             fatalError()
         }
         
-        controller.search(pattern: searchOrCreateTextField.text ?? "", order: self.order)
+        
+        let text = searchOrCreateTextField.text ?? "".trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if text.isEmpty {
+            wordPairTableViewController.clearWordPairs()
+        } else {
+            controller.search(pattern: text, order: self.order)
+        }
     }
     
 }
@@ -176,6 +194,10 @@ extension HomeViewController: QuizTagSelectionDelegate {
     func quizWordsWithTag(forTag tag: Tag) {
         print("Quiz words tagged: \(tag.name)")
     }
+}
+
+extension HomeViewController: WordPairTableDelegate {
+    
 }
 
 

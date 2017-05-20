@@ -41,6 +41,7 @@ class HomeController: Controller {
     }
     
     func search(pattern: String, order: WordPairOrder){
+        
         services.fetchWordPairs(tagFilter: [], wordPairOrder: order, pattern: pattern) { (pairs: [WordPair]?, error:EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)

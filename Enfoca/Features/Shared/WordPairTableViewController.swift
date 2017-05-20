@@ -11,6 +11,8 @@ import UIKit
 protocol WordPairTableDelegate {
 //    func fetchWordPairs(callback: ([WordPair])->())
 //    func getWordPairOrder() -> WordPairOrder
+    
+    func dismissKeyboard()
 }
 
 class WordPairTableViewController: UITableViewController {
@@ -30,6 +32,11 @@ class WordPairTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 96 //Doesn't matter
     }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegate.dismissKeyboard()
+    }
+    
 
     // MARK: - Table view data source
 
@@ -101,13 +108,6 @@ class WordPairTableViewController: UITableViewController {
 extension WordPairTableViewController {
     func initialize(delegate: WordPairTableDelegate){
         self.delegate = delegate
-        
-//        self.order = delegate.getWordPairOrder()
-//        
-//        delegate.fetchWordPairs { (wordPairs: [WordPair]) in
-//            self.wordPairs = wordPairs
-//            tableView.reloadData()
-//        }
     }
     
     func updateWordPairs(order: WordPairOrder, wordPairs: [WordPair]) {
