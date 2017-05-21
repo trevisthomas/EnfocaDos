@@ -20,6 +20,8 @@ class TagSelectionViewController: UIViewController {
     fileprivate var quizDelegate: QuizTagSelectionDelegate?
     fileprivate var browseDelegate: BrowseTagSelectionDelegate?
     
+    var animateCollectionViewCellCreation : Bool = true
+    
     fileprivate var tags: [Tag] = []
     
     override func viewDidLoad() {
@@ -67,8 +69,22 @@ extension TagSelectionViewController : UICollectionViewDataSource {
             fatalError()
         }
         
-        cell.seed(tag: tags[indexPath.row])
-        
+        if animateCollectionViewCellCreation {
+            let origFram = cell.frame
+            
+            cell.frame = CGRect(x: origFram.origin.x + collectionView.frame.width, y: origFram.origin.y, width: origFram.width, height: origFram.height)
+            
+            cell.seed(tag: tags[indexPath.row])
+            
+            UIView.animate(withDuration: 0.80, delay: 0.2 * (Double(indexPath.row)), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [], animations: {
+                cell.frame = origFram
+            }) { (_: Bool) in
+                //
+            }
+        }
+//        UIView.animate(withDuration: 1.0) { 
+//            cell.frame = origFram
+//        }
         return cell
     }
     

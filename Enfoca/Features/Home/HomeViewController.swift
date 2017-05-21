@@ -178,6 +178,12 @@ class HomeViewController: UIViewController {
         }
     }
     
+    //Is there a better way to do this?  To detect that the transiton is complete?
+    func transitionComplete() {
+        browseByTagViewController.animateCollectionViewCellCreation = false
+        quizByTagViewControler.animateCollectionViewCellCreation = false
+    }
+    
 }
 
 extension HomeViewController: HomeControllerDelegate {

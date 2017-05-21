@@ -32,7 +32,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Uyl-SK-tr2" firstAttribute="top" secondItem="qKg-rF-ni1" secondAttribute="top" constant="165" id="RDq-21-a8P"/>
                                             <constraint firstAttribute="bottom" secondItem="Uyl-SK-tr2" secondAttribute="bottom" constant="2" id="iSg-uC-E9r"/>

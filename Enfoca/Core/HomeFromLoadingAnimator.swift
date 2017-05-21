@@ -90,6 +90,7 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
             
         }) { _ in
             transitionContext.completeTransition(true)
+            toViewController.transitionComplete()
         }
         
         UIView.animate(withDuration: duration * 0.33, delay: 0, options: [.curveEaseInOut], animations: {
