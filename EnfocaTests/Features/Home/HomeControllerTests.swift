@@ -40,12 +40,28 @@ class HomeControllerTests: XCTestCase {
         XCTAssertEqual(delegate.errorTitle, "Error fetching tags")
         XCTAssertNil(delegate.loadedTags)
     }
+    
+    func testSearch_ShouldMakeServiceCallAndNotifyDelegate(){
+        
+        
+        sut = HomeController(delegate: delegate)
+        XCTAssertEqual(services.fetchWordPairCallCount, 0)
+        
+        sut.search(pattern: "any", order: .definitionAsc)
+        
+        XCTAssertEqual(services.fetchWordPairCallCount, 1)
+        XCTAssertEqual(services.fetchWordPairPattern, "any")
+        XCTAssertEqual(services.fetchWordPairOrder, WordPairOrder.definitionAsc)
+        
+        XCTAssertEqual(delegate.searchResults!, services.wordPairs)
+    }
 }
 
 class MockHomeControllerDelegate : HomeControllerDelegate {
     var errorTitle: String?
     var errorMessage: EnfocaError?
     var loadedTags: [Tag]?
+    var searchResults: [WordPair]?
     
     func onError(title: String, message: EnfocaError) {
         errorTitle = title
@@ -54,6 +70,10 @@ class MockHomeControllerDelegate : HomeControllerDelegate {
     
     func onTagsLoaded(tags: [Tag]) {
         self.loadedTags = tags
+    }
+    
+    func onSearchResults(words: [WordPair]) {
+        self.searchResults = words
     }
 }
 
