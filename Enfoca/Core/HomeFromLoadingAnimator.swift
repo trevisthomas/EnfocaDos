@@ -33,13 +33,49 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
         
 //        toViewController.view.alpha = 0
         toViewController.oldTitleLabel.alpha = 1
+        toViewController.titleLabel.alpha = 0
         
+        
+        let toViewWidth = toViewController.view.frame.width
+        
+        let origLanguageConstant = toViewController.languageSelectorLeftConstraint.constant
+        toViewController.languageSelectorLeftConstraint.constant = toViewController.languageSelectorLeftConstraint.constant - toViewWidth
+        
+        let origSearchConstant = toViewController.searchOrCreateLeftConstraint.constant
+        toViewController.searchOrCreateLeftConstraint.constant = origSearchConstant + toViewWidth
+        let origSearchTableConstant = toViewController.searchResultsTableViewContainerLeftConstraint.constant
+        toViewController.searchResultsTableViewContainerLeftConstraint.constant = origSearchTableConstant + toViewWidth
+        
+        let origQuizLabelConstant = toViewController.quizLabelLeftConstraint.constant
+        let origBrowseLabelConstant = toViewController.browseLabelLeftConstraint.constant
+        
+        toViewController.quizLabelLeftConstraint.constant = origQuizLabelConstant - toViewWidth
+        toViewController.browseLabelLeftConstraint.constant = origBrowseLabelConstant - toViewWidth
+        
+//        let origTitleTopConstant = toViewController.titleTopConstraint.constant
+//        toViewController.titleTopConstraint.constant = origTitleTopConstant - 100 // Just need so shove it off screen.
+        
+        //Magic happens
+        toViewController.view.layoutIfNeeded()
+        
+        
+        toViewController.languageSelectorLeftConstraint.constant = origLanguageConstant
+        toViewController.searchOrCreateLeftConstraint.constant = origSearchConstant
+        toViewController.searchResultsTableViewContainerLeftConstraint.constant = origSearchTableConstant
+        toViewController.quizLabelLeftConstraint.constant = origQuizLabelConstant
+        toViewController.browseLabelLeftConstraint.constant = origBrowseLabelConstant
+        
+//        toViewController.titleTopConstraint.constant = origTitleTopConstant
         
         UIView.animate(withDuration: duration, delay: 0, options: [.curveEaseInOut], animations: {
             
 //            toViewController
             
-            toViewController.oldTitleLabel.alpha = 0
+            
+            
+            toViewController.view.layoutIfNeeded()
+            
+            
             
 //            toViewController.view.alpha = 1
             
@@ -55,6 +91,19 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
         }) { _ in
             transitionContext.completeTransition(true)
         }
+        
+        UIView.animate(withDuration: duration * 0.33, delay: 0, options: [.curveEaseInOut], animations: {
+            toViewController.oldTitleLabel.alpha = 0
+        }) { _ in
+            
+        }
+        
+        UIView.animate(withDuration: duration * 0.33, delay: duration * 0.66, options: [.curveEaseInOut], animations: {
+            toViewController.titleLabel.alpha = 1
+        }) { _ in
+            
+        }
+        
         
     /*
         let xScale = fromViewController.titleLabel.frame.width / toViewController.titleLabel.frame.width

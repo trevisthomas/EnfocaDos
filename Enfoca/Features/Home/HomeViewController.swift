@@ -30,9 +30,15 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var hightConstraintOnGray: NSLayoutConstraint!
     
+    @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchResultsTableViewContainerLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchOrCreateLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var languageSelectorLeftConstraint: NSLayoutConstraint!
     private var originalHeightConstraintOnGray: CGFloat!
     private var expandedHeightConstraintOnGray: CGFloat!
     
+    @IBOutlet weak var browseLabelLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var quizLabelLeftConstraint: NSLayoutConstraint!
     fileprivate var order: WordPairOrder!
     
     fileprivate var wordPairs : [WordPair] = []
@@ -69,6 +75,12 @@ class HomeViewController: UIViewController {
         let font = Style.segmentedControlFont()
         languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
                                                         for: .normal)
+        
+        let placeHolderText = searchOrCreateTextField.placeholder!
+        searchOrCreateTextField.attributedPlaceholder = NSAttributedString(string: placeHolderText,
+                                                               attributes: [NSForegroundColorAttributeName: UIColor(hexString: "#ffffff", alpha: 0.19)])
+        
+        
     }
     
     private func initializeSubViews() {

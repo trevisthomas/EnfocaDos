@@ -95,6 +95,9 @@
 		0FD1E2071ED0822900D8BD1A /* WordPairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */; };
 		0FD1E2091ED0827700D8BD1A /* WordPairTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */; };
 		0FD1E20B1ED08E7900D8BD1A /* WordPairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */; };
+		0FD1E20D1ED1E3F400D8BD1A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20C1ED1E3F400D8BD1A /* String+.swift */; };
+		0FD1E20F1ED1E45600D8BD1A /* String+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20E1ED1E45600D8BD1A /* String+Tests.swift */; };
+		0FD1E2111ED1EF2C00D8BD1A /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +204,9 @@
 		0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordPairTableViewController.swift; path = Shared/WordPairTableViewController.swift; sourceTree = "<group>"; };
 		0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WordPairTableStoryboard.storyboard; path = Shared/WordPairTableStoryboard.storyboard; sourceTree = "<group>"; };
 		0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordPairTableViewCell.swift; path = Shared/WordPairTableViewCell.swift; sourceTree = "<group>"; };
+		0FD1E20C1ED1E3F400D8BD1A /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		0FD1E20E1ED1E45600D8BD1A /* String+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Tests.swift"; path = "Shared/Extensions/String+Tests.swift"; sourceTree = "<group>"; };
+		0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +391,8 @@
 				0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */,
 				0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */,
 				0FA4A55B1ECB4F7B00F31F9A /* UIViewController+TransitionDelegate.swift */,
+				0FD1E20C1ED1E3F400D8BD1A /* String+.swift */,
+				0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -497,6 +505,7 @@
 			children = (
 				0FA4A5841ECC152B00F31F9A /* Sequence+Tests.swift */,
 				0FA4A55F1ECB50B500F31F9A /* UIViewController+TransitionDelegateTests.swift */,
+				0FD1E20E1ED1E45600D8BD1A /* String+Tests.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -702,9 +711,11 @@
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
 				0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */,
+				0FD1E2111ED1EF2C00D8BD1A /* UIColor+.swift in Sources */,
 				0FA4A5671ECBCB7D00F31F9A /* TagCollectionViewCell.swift in Sources */,
 				0FA4A5311EC8ECA500F31F9A /* MonitoredBaseOperation.swift in Sources */,
 				0FA4A4FE1EC8E9AF00F31F9A /* EnfocaError.swift in Sources */,
+				0FD1E20D1ED1E3F400D8BD1A /* String+.swift in Sources */,
 				0FA4A54E1EC8ECE200F31F9A /* OperationFetchWordPairs.swift in Sources */,
 				0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */,
 				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
@@ -752,6 +763,7 @@
 			files = (
 				0FA4A57A1ECC148B00F31F9A /* TagTests.swift in Sources */,
 				0FA4A5781ECC148B00F31F9A /* MetaDataTests.swift in Sources */,
+				0FD1E20F1ED1E45600D8BD1A /* String+Tests.swift in Sources */,
 				0FA4A5831ECC151E00F31F9A /* EnfocaErrorTests.swift in Sources */,
 				0FA4A5811ECC14D300F31F9A /* DataStoreTests.swift in Sources */,
 				0FA4A5771ECC148B00F31F9A /* CardSideTests.swift in Sources */,
