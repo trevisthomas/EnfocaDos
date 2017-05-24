@@ -39,6 +39,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var browseLabelLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var quizLabelLeftConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var magifierCloseView: MagnifierCloseView!
     fileprivate var order: WordPairOrder!
     
     fileprivate var wordPairs : [WordPair] = []
@@ -65,6 +67,7 @@ class HomeViewController: UIViewController {
     }
     
     private func initializeLookAndFeel(){
+        
         originalHeightConstraintOnGray = hightConstraintOnGray.constant
         expandedHeightConstraintOnGray = view.frame.height + originalHeightConstraintOnGray - expandingTableViewHolder.frame.height
         
@@ -79,7 +82,6 @@ class HomeViewController: UIViewController {
         let placeHolderText = searchOrCreateTextField.placeholder!
         searchOrCreateTextField.attributedPlaceholder = NSAttributedString(string: placeHolderText,
                                                                attributes: [NSForegroundColorAttributeName: UIColor(hexString: "#ffffff", alpha: 0.19)])
-        
         
     }
     
@@ -103,7 +105,6 @@ class HomeViewController: UIViewController {
     }
     
     private func showWordTable(){
-        
         guard isWordTableContracted() else {
             print("already expanded")
             return
@@ -111,7 +112,7 @@ class HomeViewController: UIViewController {
         
         hightConstraintOnGray.constant = expandedHeightConstraintOnGray
 
-        
+        magifierCloseView.toggle()
         UIView.animate(withDuration: 1.2, delay: 0.2, options: [.curveEaseInOut], animations: { 
             self.view.layoutIfNeeded()
         }) { ( _ ) in
@@ -130,7 +131,7 @@ class HomeViewController: UIViewController {
         
         hightConstraintOnGray.constant = originalHeightConstraintOnGray
         
-        
+        magifierCloseView.toggle()
         UIView.animate(withDuration: 0.6, delay: 0.2, options: [.curveEaseInOut], animations: {
             self.view.layoutIfNeeded()
         }) { ( _ ) in
@@ -175,6 +176,16 @@ class HomeViewController: UIViewController {
             wordPairTableViewController.clearWordPairs()
         } else {
             controller.search(pattern: text, order: self.order)
+        }
+    }
+    
+    @IBAction func tappedMagnifierCloseAction(_ sender: Any) {
+        //The way this works is anoying.  TODO: Change the MagnifierCloseView so that you can just pass it a boolean. Toggle is anoying
+        if !self.magifierCloseView.isSearchMode! {
+            self.searchOrCreateTextField.text = "" //Causes it to close. No!
+            hideWordTable()
+        } else {
+            showWordTable()
         }
     }
     

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,6 +79,27 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRr-TH-ntc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-Mb-wUs" customClass="MagnifierCloseView" customModule="Enfoca" customModuleProvider="target">
+                                        <rect key="frame" x="323" y="111" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="USj-FT-tIy"/>
+                                            <constraint firstAttribute="width" secondItem="6AG-Mb-wUs" secondAttribute="height" multiplier="1:1" id="knQ-Td-g4n"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fZq-ni-6aq" appends="YES" id="bvw-CV-SRz"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="165" id="j6C-na-lbc"/>
@@ -90,7 +112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or Create" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-bF-agk">
-                                <rect key="frame" x="8" y="111" width="359" height="50"/>
+                                <rect key="frame" x="8" y="111" width="314" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -134,14 +156,16 @@
                             <constraint firstItem="xcw-QZ-dyr" firstAttribute="top" secondItem="3KL-V9-SAs" secondAttribute="bottom" constant="56" id="3tM-uc-4AK"/>
                             <constraint firstItem="mgK-Ja-kbt" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="10" id="8Nb-aH-2eB"/>
                             <constraint firstItem="3KL-V9-SAs" firstAttribute="centerX" secondItem="7Ni-DN-MKS" secondAttribute="centerX" id="9ec-lO-Wjh"/>
+                            <constraint firstItem="6AG-Mb-wUs" firstAttribute="leading" secondItem="VZW-bF-agk" secondAttribute="trailing" constant="1" id="AAI-0h-sP5"/>
                             <constraint firstItem="c26-yw-H9c" firstAttribute="centerX" secondItem="7Ni-DN-MKS" secondAttribute="centerX" id="Bji-D9-Gtv"/>
                             <constraint firstItem="gRr-TH-ntc" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="-20" id="J9r-X9-zy7"/>
                             <constraint firstItem="3KL-V9-SAs" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="-20" id="JSb-c6-S8d"/>
                             <constraint firstItem="w1e-F6-TjV" firstAttribute="top" secondItem="3KL-V9-SAs" secondAttribute="bottom" constant="106" id="Jgm-1u-ljv"/>
+                            <constraint firstItem="6AG-Mb-wUs" firstAttribute="centerY" secondItem="VZW-bF-agk" secondAttribute="centerY" id="O7p-Jc-mRz"/>
                             <constraint firstItem="VZW-bF-agk" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="91" id="Qd0-cL-JkX"/>
                             <constraint firstItem="dwd-qq-5mt" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="44" id="SeJ-hD-U3n"/>
                             <constraint firstItem="3KL-V9-SAs" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" id="T43-cR-eet"/>
-                            <constraint firstItem="VZW-bF-agk" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" constant="-16" id="VDQ-Je-bCa"/>
+                            <constraint firstItem="VZW-bF-agk" firstAttribute="width" secondItem="7Ni-DN-MKS" secondAttribute="width" constant="-61" id="VDQ-Je-bCa"/>
                             <constraint firstItem="c26-yw-H9c" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="188" id="aKV-d0-Adq"/>
                             <constraint firstAttribute="trailing" secondItem="gRr-TH-ntc" secondAttribute="trailing" id="bDA-2T-wZz"/>
                             <constraint firstItem="gRr-TH-ntc" firstAttribute="leading" secondItem="7Ni-DN-MKS" secondAttribute="leading" id="eYx-ZM-Fbm"/>
@@ -162,6 +186,7 @@
                         <outlet property="hightConstraintOnGray" destination="If7-LZ-hbA" id="65e-V4-hpx"/>
                         <outlet property="languageSegmentedControl" destination="dwd-qq-5mt" id="uND-xA-cZV"/>
                         <outlet property="languageSelectorLeftConstraint" destination="jKR-t3-B0Q" id="4Wl-oT-rCD"/>
+                        <outlet property="magifierCloseView" destination="6AG-Mb-wUs" id="vPB-Sv-U5T"/>
                         <outlet property="oldTitleLabel" destination="c26-yw-H9c" id="bwm-59-RiD"/>
                         <outlet property="quizByTagContainerView" destination="Igz-BK-v1t" id="nJL-Xp-B0r"/>
                         <outlet property="quizLabelLeftConstraint" destination="Mfx-YB-9qf" id="I4y-ns-Fkl"/>
@@ -174,8 +199,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-PW-uCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fZq-ni-6aq">
+                    <connections>
+                        <action selector="tappedMagnifierCloseAction:" destination="NWj-al-1U9" id="B3r-FX-edw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-8.8000000000000007" y="51.724137931034484"/>
+            <point key="canvasLocation" x="-4" y="51"/>
         </scene>
     </scenes>
 </document>

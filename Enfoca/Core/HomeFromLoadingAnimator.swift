@@ -10,7 +10,7 @@ import UIKit
 
 public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    private let duration = 2.0
+    private let duration = 1.0
     
     public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
@@ -102,7 +102,8 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
         UIView.animate(withDuration: duration * 0.33, delay: duration * 0.66, options: [.curveEaseInOut], animations: {
             toViewController.titleLabel.alpha = 1
         }) { _ in
-            
+            //Wow.  Is this the best TODO: Consider alternative
+            toViewController.magifierCloseView.initialize()
         }
         
         
