@@ -197,7 +197,7 @@ class MagnifierCloseView: UIView {
                 self.handleLayer.removeFromSuperlayer()
                 self.isSearchMode = false
                 self.setNeedsDisplay() //Gives draw the opertunity to be cleared.
-                self.bounceAnimation()
+                self.springTwistAnimation()
             }
         })
         
@@ -248,15 +248,17 @@ class MagnifierCloseView: UIView {
             rotateAnimation.fromValue = .pi / 2.0
             rotateAnimation.fillMode = kCAFillModeForwards
             rotateAnimation.isRemovedOnCompletion = false
+            rotateAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         } else {
             rotateAnimation.fromValue = 0.0
             rotateAnimation.toValue = .pi / 2.0
             rotateAnimation.beginTime = CACurrentMediaTime() + 0.50
             rotateAnimation.fillMode = kCAFillModeBackwards
             rotateAnimation.isRemovedOnCompletion = true
+            rotateAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         }
         
-        rotateAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        
         
         rotateAnimation.duration =  0.50
         
@@ -316,7 +318,7 @@ class MagnifierCloseView: UIView {
     }
     
     private func handlePath(_ rect: CGRect, rotated: Bool = true) -> UIBezierPath {
-        let handleRadius = rect.height * 0.33
+        let handleRadius = rect.height * 0.20
         
         let center = CGPoint(x: rect.width / 2.0, y: rect.height / 2.0)
         
@@ -360,6 +362,25 @@ class MagnifierCloseView: UIView {
                 self.transform = .identity
             }, completion: { (_ :Bool) in })
         })
+    }
+    
+    private func springTwistAnimation(){
+        
+        let distance : CGFloat = .pi / 16.0
+        
+        UIView.animate(withDuration: 0.20, delay: 0.0, options: [.curveEaseOut], animations: {
+            let transform = self.transform.rotated(by: distance)
+            
+            self.transform = transform
+        }) { (_: Bool) in
+            UIView.animate(withDuration: 0.50, delay: 0.0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0, options: [.curveEaseInOut], animations: {
+                let transform = self.transform.rotated(by: -distance)
+                
+                self.transform = transform
+            }) { (_: Bool) in
+                
+            }
+        }
     }
     
     private func magnificationCirclePath (_ rect: CGRect) -> UIBezierPath{
