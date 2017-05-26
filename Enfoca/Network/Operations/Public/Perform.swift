@@ -41,7 +41,7 @@ class Perform {
         
     }
     
-    class func createDataStore(dataStore: DataStore, enfocaId: NSNumber, db: CKDatabase, privateDb: CKDatabase, progressObserver: ProgressObserver, callback : @escaping (DataStore?, EnfocaError?)->()){
+    class func initializeDataStore(dataStore: DataStore, enfocaId: NSNumber, db: CKDatabase, privateDb: CKDatabase, progressObserver: ProgressObserver, callback : @escaping (DataStore?, EnfocaError?)->()){
         
         let queue = OperationQueue()
         let errorHandler = ErrorHandler(queue: queue, callback: callback)

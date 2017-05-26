@@ -9,10 +9,14 @@
 import UIKit
 
 class DemoWebService : WebService {
-    func initialize(callback: @escaping (Bool, EnfocaError?) -> ()) {
+    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
         callback(true, nil)
     }
     
+    func serialize() -> String? {
+        return nil
+    }
+
     internal func createTag(tagValue: String, callback: @escaping (Tag?, EnfocaError?) -> ()) {
         
         delay(1) {

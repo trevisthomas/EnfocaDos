@@ -12,9 +12,8 @@ protocol ApplicationDefaults {
     var reverseWordPair : Bool {get set}
     var selectedTags : [Tag] {get set}
     var fetchWordPairPageSize : Int {get}
-    var dataStore: DataStore! {get}
-    func save()
-    func load()
+    func save(includingDataStore json: String?)
+    func load() -> String?
 }
 
 class LocalApplicationDefaults : ApplicationDefaults {
@@ -22,7 +21,6 @@ class LocalApplicationDefaults : ApplicationDefaults {
     let dataStoreKey : String = "DataStoreKey"
     var selectedTags : [Tag] = []
     var reverseWordPair : Bool = false
-    var dataStore: DataStore!
     
     var fetchWordPairPageSize: Int {
         get {
@@ -30,31 +28,27 @@ class LocalApplicationDefaults : ApplicationDefaults {
         }
     }
     
-    func save(){
+    func save(includingDataStore json: String?){
         print("Saving user data")
-        saveDataStore(dataStore)
-    }
-    
-    func load(){
-        dataStore = loadOrCreateDataStore()
-        //        dataStore = DataStore()
-    }
-    
-    private func saveDataStore(_ dataStore: DataStore){
+        
         let defaults = UserDefaults.standard
         
-        defaults.setValue(dataStore.toJson(), forKey: dataStoreKey)
+        if let json = json {
+            defaults.setValue(json, forKey: dataStoreKey)
+        }
     }
     
-    private func loadOrCreateDataStore() -> DataStore {
+    func load() -> String? {
         let defaults = UserDefaults.standard
-        guard let json = defaults.value(forKey: dataStoreKey) as? String else { return DataStore() }
+        let json = defaults.value(forKey: dataStoreKey) as? String
         
         //In case of a dirty shut down, i dont want the old data lying around
-//        defaults.removeObject(forKey: dataStoreKey)
+        //        defaults.removeObject(forKey: dataStoreKey)
+
         
-        let ds = DataStore()
-        ds.initialize(json: json)
-        return ds
+        //Load other default settings
+        
+        return json
     }
+    
 }

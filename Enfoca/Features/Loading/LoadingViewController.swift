@@ -36,10 +36,23 @@ class LoadingViewController: UIViewController {
     }
     
     private func initialize(){
+        
+        startProgress(ofType: "Initializing", message: "Loading app defaults")
+        
+        getAppDelegate().applicationDefaults = LocalApplicationDefaults()
+        let dataStoreJson = getAppDelegate().applicationDefaults.load()
+        
+        //TODO: Use this to decide which services implementation to use
+        if isTestMode() {
+            print("We're in test mode")
+        } else {
+            print("Production")
+        }
+        
         let service = LocalCloudKitWebService()
         //        let service = CloudKitWebService()
         //        let service = DemoWebService()
-        service.initialize(dataStore: getAppDelegate().applicationDefaults.dataStore, progressObserver: self) { (success :Bool, error : EnfocaError?) in
+        service.initialize(json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
             
             if let error = error {
                 self.presentAlert(title: "Initialization error", message: error)
@@ -50,6 +63,8 @@ class LoadingViewController: UIViewController {
                 
             }
             
+            self.endProgress(ofType: "Initializing", message: "Initialization complete.")
+            
             //            //DELETE ALL
             //            Perform.deleteAllRecords(dataStore: getAppDelegate().applicationDefaults.dataStore, enfocaId: service.enfocaId, db: service.db)
         }
@@ -57,6 +72,14 @@ class LoadingViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         segue.destination.transitioningDelegate = self
+    }
+    
+    private func isTestMode() -> Bool{
+        if ProcessInfo.processInfo.arguments.contains("UITest") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 

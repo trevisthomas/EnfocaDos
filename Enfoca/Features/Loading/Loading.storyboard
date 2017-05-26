@@ -49,12 +49,12 @@
                         <constraints>
                             <constraint firstItem="cp4-mJ-cOY" firstAttribute="top" secondItem="tKs-R1-3mn" secondAttribute="bottom" constant="-20" id="DDM-sw-d5H"/>
                             <constraint firstItem="4bM-zp-J5J" firstAttribute="centerX" secondItem="vTF-nR-41t" secondAttribute="centerX" id="IJO-4y-gcF"/>
-                            <constraint firstItem="JbM-OB-5rd" firstAttribute="top" secondItem="tKs-R1-3mn" secondAttribute="bottom" constant="371" id="KCU-Yn-stW"/>
                             <constraint firstAttribute="leadingMargin" secondItem="JbM-OB-5rd" secondAttribute="leading" id="MEC-ll-spM"/>
                             <constraint firstItem="cp4-mJ-cOY" firstAttribute="centerX" secondItem="vTF-nR-41t" secondAttribute="centerX" id="Wty-U3-GAg"/>
                             <constraint firstItem="cp4-mJ-cOY" firstAttribute="width" secondItem="vTF-nR-41t" secondAttribute="width" id="aeZ-cs-0lj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JbM-OB-5rd" secondAttribute="trailing" id="ixV-WA-0g3"/>
                             <constraint firstItem="4bM-zp-J5J" firstAttribute="top" secondItem="tKs-R1-3mn" secondAttribute="bottom" constant="188" id="o5c-i7-tMD"/>
+                            <constraint firstItem="JbM-OB-5rd" firstAttribute="top" secondItem="cp4-mJ-cOY" secondAttribute="bottom" constant="8" id="utY-Be-18o"/>
                         </constraints>
                     </view>
                     <connections>

@@ -9,7 +9,28 @@
 import UIKit
 import CloudKit
 
+//Deprecated?
 class CloudKitWebService : WebService {
+    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
+        
+        db = CKContainer.default().publicCloudDatabase
+        Perform.authentcate(db: db) { (userTuple : (Int, CKRecordID)?, error: String?) in
+            guard let userTuple = userTuple else {
+                callback(false, error)
+                return
+            }
+            print("EnfocaId: \(userTuple.0)")
+            self.enfocaId = NSNumber(value: userTuple.0)
+            self.userRecordId = userTuple.1
+            callback(true, nil)
+        }
+    }
+
+    func serialize() -> String? {
+        //
+        return nil
+    }
+
     private(set) var enfocaId : NSNumber!
     private(set) var db : CKDatabase!
     private(set) var userRecordId : CKRecordID!
@@ -24,19 +45,19 @@ class CloudKitWebService : WebService {
         }
     }
    
-    func initialize(callback: @escaping (Bool, EnfocaError?) -> ()) {
-        db = CKContainer.default().publicCloudDatabase
-        Perform.authentcate(db: db) { (userTuple : (Int, CKRecordID)?, error: String?) in
-            guard let userTuple = userTuple else {
-                callback(false, error)
-                return
-            }
-            print("EnfocaId: \(userTuple.0)")
-            self.enfocaId = NSNumber(value: userTuple.0)
-            self.userRecordId = userTuple.1
-            callback(true, nil)
-        }
-    }
+//    func initialize(callback: @escaping (Bool, EnfocaError?) -> ()) {
+//        db = CKContainer.default().publicCloudDatabase
+//        Perform.authentcate(db: db) { (userTuple : (Int, CKRecordID)?, error: String?) in
+//            guard let userTuple = userTuple else {
+//                callback(false, error)
+//                return
+//            }
+//            print("EnfocaId: \(userTuple.0)")
+//            self.enfocaId = NSNumber(value: userTuple.0)
+//            self.userRecordId = userTuple.1
+//            callback(true, nil)
+//        }
+//    }
     
     func fetchUserTags(callback : @escaping([Tag]?, EnfocaError?)->()) {
         guard enfocaId == enfocaId else {

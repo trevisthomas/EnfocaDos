@@ -12,7 +12,8 @@ protocol WebService {
     
     var showNetworkActivityIndicator : Bool {get set}
     
-    func initialize(callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
+    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
+    func serialize() -> String?
     
     func fetchUserTags(callback : @escaping([Tag]?, EnfocaError?)->())
     

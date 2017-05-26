@@ -11,6 +11,7 @@ import CloudKit
 
 
 class LocalCloudKitWebService : WebService {
+    
     private(set) var enfocaId : NSNumber!
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
@@ -26,7 +27,7 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
-    func initialize(dataStore: DataStore, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
         db = CKContainer.default().publicCloudDatabase
         privateDb = CKContainer.default().privateCloudDatabase
@@ -40,12 +41,18 @@ class LocalCloudKitWebService : WebService {
             self.enfocaId = NSNumber(value: userTuple.0)
             self.userRecordId = userTuple.1
             
-            if dataStore.isInitialized {
-                self.dataStore = dataStore
+            let ds = DataStore()
+            
+            if let json = json {
+                ds.initialize(json: json)
+            }
+            
+            if ds.isInitialized {
+                self.dataStore = ds
                 callback(true, nil)
                 return
             } else {
-                Perform.createDataStore(dataStore: dataStore, enfocaId: self.enfocaId, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
+                Perform.initializeDataStore(dataStore: ds, enfocaId: self.enfocaId, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
                     if let error = error {
                         callback(false, error)
                     }
@@ -61,10 +68,14 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
-    func initialize(callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
-        //Deprecated?
-        fatalError()
+    func serialize() -> String? {
+        return dataStore.toJson()
     }
+    
+//    func initialize(callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+//        //Deprecated?
+//        fatalError()
+//    }
     
     func fetchUserTags(callback : @escaping([Tag]?, EnfocaError?)->()) {
         callback(dataStore.allTags(), nil)
