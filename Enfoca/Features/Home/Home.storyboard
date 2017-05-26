@@ -196,6 +196,7 @@
                         <outlet property="searchResultsTableViewContainerLeftConstraint" destination="UOk-r3-N2x" id="LhX-ya-091"/>
                         <outlet property="titleLabel" destination="mgK-Ja-kbt" id="OOw-wf-stW"/>
                         <outlet property="titleTopConstraint" destination="8Nb-aH-2eB" id="oSD-6g-JCW"/>
+                        <segue destination="U16-qW-lzJ" kind="show" identifier="BrowseViewControllerSegue" id="hti-2s-lZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-PW-uCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -206,6 +207,14 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-4" y="51"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="3oK-Vn-0dc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Browse" id="U16-qW-lzJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqC-gY-7Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="463"/>
         </scene>
     </scenes>
 </document>

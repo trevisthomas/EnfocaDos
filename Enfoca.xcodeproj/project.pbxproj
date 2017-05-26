@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
+		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
+		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
+		0F085B701ED74C7B00FC20A1 /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */; };
+		0F085B731ED7500C00FC20A1 /* BrowseControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B721ED7500C00FC20A1 /* BrowseControllerTests.swift */; };
 		0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
 		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
 		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
@@ -114,6 +118,10 @@
 
 /* Begin PBXFileReference section */
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagnifierCloseView.swift; path = CustomViews/MagnifierCloseView.swift; sourceTree = "<group>"; };
+		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Browse.storyboard; path = Browse/Browse.storyboard; sourceTree = "<group>"; };
+		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrowseViewController.swift; path = Browse/BrowseViewController.swift; sourceTree = "<group>"; };
+		0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrowseController.swift; path = Browse/BrowseController.swift; sourceTree = "<group>"; };
+		0F085B721ED7500C00FC20A1 /* BrowseControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrowseControllerTests.swift; path = Features/Browse/BrowseControllerTests.swift; sourceTree = "<group>"; };
 		0FA4A4891EC89C0D00F31F9A /* Enfoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enfoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -240,6 +248,24 @@
 			name = CustomViews;
 			sourceTree = "<group>";
 		};
+		0F085B6A1ED7488300FC20A1 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				0F085B6B1ED748B600FC20A1 /* Browse.storyboard */,
+				0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */,
+				0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */,
+			);
+			name = Browse;
+			sourceTree = "<group>";
+		};
+		0F085B711ED74E5400FC20A1 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				0F085B721ED7500C00FC20A1 /* BrowseControllerTests.swift */,
+			);
+			name = Browse;
+			sourceTree = "<group>";
+		};
 		0FA4A4801EC89C0D00F31F9A = {
 			isa = PBXGroup;
 			children = (
@@ -321,8 +347,9 @@
 		0FA4A4B41EC8A56200F31F9A /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				0FAD20CF1ECF5ACC002EACDA /* Shared */,
 				0FA4A5541EC8F4F400F31F9A /* Home */,
+				0F085B6A1ED7488300FC20A1 /* Browse */,
+				0FAD20CF1ECF5ACC002EACDA /* Shared */,
 				0FA4A4B51EC8A56F00F31F9A /* Loading */,
 			);
 			path = Features;
@@ -534,6 +561,7 @@
 		0FA4A5681ECC056D00F31F9A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0F085B711ED74E5400FC20A1 /* Browse */,
 				0FA4A5691ECC057600F31F9A /* Home */,
 			);
 			name = Features;
@@ -679,6 +707,7 @@
 			files = (
 				0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */,
 				0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */,
+				0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */,
 				0FD1E2091ED0827700D8BD1A /* WordPairTableStoryboard.storyboard in Resources */,
 				0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */,
 				0FAD20CC1ECE6231002EACDA /* TagSelection.storyboard in Resources */,
@@ -725,6 +754,7 @@
 				0FD1E2071ED0822900D8BD1A /* WordPairTableViewController.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
+				0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */,
 				0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */,
 				0FD1E2111ED1EF2C00D8BD1A /* UIColor+.swift in Sources */,
 				0FA4A5671ECBCB7D00F31F9A /* TagCollectionViewCell.swift in Sources */,
@@ -738,6 +768,7 @@
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,
 				0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */,
 				0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */,
+				0F085B701ED74C7B00FC20A1 /* BrowseController.swift in Sources */,
 				0FA4A4DF1EC8E91E00F31F9A /* CardSide.swift in Sources */,
 				0FA4A55C1ECB4F7B00F31F9A /* UIViewController+TransitionDelegate.swift in Sources */,
 				0FA4A4E21EC8E91E00F31F9A /* MetaData.swift in Sources */,
@@ -781,6 +812,7 @@
 				0FA4A5781ECC148B00F31F9A /* MetaDataTests.swift in Sources */,
 				0FD1E20F1ED1E45600D8BD1A /* String+Tests.swift in Sources */,
 				0FA4A5831ECC151E00F31F9A /* EnfocaErrorTests.swift in Sources */,
+				0F085B731ED7500C00FC20A1 /* BrowseControllerTests.swift in Sources */,
 				0FA4A5811ECC14D300F31F9A /* DataStoreTests.swift in Sources */,
 				0FA4A5771ECC148B00F31F9A /* CardSideTests.swift in Sources */,
 				0FA4A5761ECC148B00F31F9A /* CardOrderTests.swift in Sources */,

@@ -195,6 +195,14 @@ class HomeViewController: UIViewController {
         quizByTagViewControler.animateCollectionViewCellCreation = false
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let toBrowseViewController = segue.destination as? BrowseViewController {
+            guard let tag = sender as? Tag else { fatalError() }
+            let browseController = BrowseController(tag: tag, delegate: toBrowseViewController)
+            toBrowseViewController.controller = browseController
+        }
+    }
+    
 }
 
 extension HomeViewController: HomeControllerDelegate {
@@ -216,6 +224,7 @@ extension HomeViewController: HomeControllerDelegate {
 extension HomeViewController: BrowseTagSelectionDelegate {
     func browseWordsWithTag(withTag tag: Tag) {
         print("Browse words tagged: \(tag.name)")
+        performSegue(withIdentifier: "BrowseViewControllerSegue", sender: tag)
     }
 }
 

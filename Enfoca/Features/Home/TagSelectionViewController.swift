@@ -69,22 +69,22 @@ extension TagSelectionViewController : UICollectionViewDataSource {
             fatalError()
         }
         
+        let tag = tags[indexPath.row]
         if animateCollectionViewCellCreation {
             let origFram = cell.frame
             
             cell.frame = CGRect(x: origFram.origin.x + collectionView.frame.width, y: origFram.origin.y, width: origFram.width, height: origFram.height)
             
-            cell.seed(tag: tags[indexPath.row])
+            cell.seed(tag: tag)
             
             UIView.animate(withDuration: 0.80, delay: 0.2 * (Double(indexPath.row)), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [], animations: {
                 cell.frame = origFram
             }) { (_: Bool) in
                 //
             }
+        } else {
+            cell.seed(tag: tag)
         }
-//        UIView.animate(withDuration: 1.0) { 
-//            cell.frame = origFram
-//        }
         return cell
     }
     
