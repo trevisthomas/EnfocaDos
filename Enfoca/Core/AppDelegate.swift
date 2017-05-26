@@ -20,9 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        if isTestMode() {
+            print("We're in test mode")
+        } else {
+            print("Production")
+        }
         
         applicationDefaults = LocalApplicationDefaults()
         applicationDefaults.load()
@@ -57,6 +62,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+func isTestMode() -> Bool{
+    if ProcessInfo.processInfo.arguments.contains("UITest") {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 func getAppDelegate() -> AppDelegate{

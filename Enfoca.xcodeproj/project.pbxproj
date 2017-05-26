@@ -12,6 +12,7 @@
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
 		0F085B701ED74C7B00FC20A1 /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */; };
 		0F085B731ED7500C00FC20A1 /* BrowseControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B721ED7500C00FC20A1 /* BrowseControllerTests.swift */; };
+		0F085B7B1ED8796D00FC20A1 /* EnfocaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B7A1ED8796D00FC20A1 /* EnfocaUITests.swift */; };
 		0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
 		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
 		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
@@ -107,6 +108,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0F085B7D1ED8796D00FC20A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FA4A4811EC89C0D00F31F9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FA4A4881EC89C0D00F31F9A;
+			remoteInfo = Enfoca;
+		};
 		0FA4A49E1EC89C0D00F31F9A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0FA4A4811EC89C0D00F31F9A /* Project object */;
@@ -122,6 +130,9 @@
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrowseViewController.swift; path = Browse/BrowseViewController.swift; sourceTree = "<group>"; };
 		0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrowseController.swift; path = Browse/BrowseController.swift; sourceTree = "<group>"; };
 		0F085B721ED7500C00FC20A1 /* BrowseControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrowseControllerTests.swift; path = Features/Browse/BrowseControllerTests.swift; sourceTree = "<group>"; };
+		0F085B781ED8796D00FC20A1 /* EnfocaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnfocaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F085B7A1ED8796D00FC20A1 /* EnfocaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnfocaUITests.swift; sourceTree = "<group>"; };
+		0F085B7C1ED8796D00FC20A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FA4A4891EC89C0D00F31F9A /* Enfoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enfoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +233,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0F085B751ED8796D00FC20A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FA4A4861EC89C0D00F31F9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,11 +284,21 @@
 			name = Browse;
 			sourceTree = "<group>";
 		};
+		0F085B791ED8796D00FC20A1 /* EnfocaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F085B7A1ED8796D00FC20A1 /* EnfocaUITests.swift */,
+				0F085B7C1ED8796D00FC20A1 /* Info.plist */,
+			);
+			path = EnfocaUITests;
+			sourceTree = "<group>";
+		};
 		0FA4A4801EC89C0D00F31F9A = {
 			isa = PBXGroup;
 			children = (
 				0FA4A48B1EC89C0D00F31F9A /* Enfoca */,
 				0FA4A4A01EC89C0D00F31F9A /* EnfocaTests */,
+				0F085B791ED8796D00FC20A1 /* EnfocaUITests */,
 				0FA4A4AD1EC89DEF00F31F9A /* Frameworks */,
 				0FA4A48A1EC89C0D00F31F9A /* Products */,
 			);
@@ -281,6 +309,7 @@
 			children = (
 				0FA4A4891EC89C0D00F31F9A /* Enfoca.app */,
 				0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */,
+				0F085B781ED8796D00FC20A1 /* EnfocaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,10 +376,10 @@
 		0FA4A4B41EC8A56200F31F9A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0FA4A4B51EC8A56F00F31F9A /* Loading */,
 				0FA4A5541EC8F4F400F31F9A /* Home */,
 				0F085B6A1ED7488300FC20A1 /* Browse */,
 				0FAD20CF1ECF5ACC002EACDA /* Shared */,
-				0FA4A4B51EC8A56F00F31F9A /* Loading */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -615,6 +644,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0F085B771ED8796D00FC20A1 /* EnfocaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F085B811ED8796D00FC20A1 /* Build configuration list for PBXNativeTarget "EnfocaUITests" */;
+			buildPhases = (
+				0F085B741ED8796D00FC20A1 /* Sources */,
+				0F085B751ED8796D00FC20A1 /* Frameworks */,
+				0F085B761ED8796D00FC20A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F085B7E1ED8796D00FC20A1 /* PBXTargetDependency */,
+			);
+			name = EnfocaUITests;
+			productName = EnfocaUITests;
+			productReference = 0F085B781ED8796D00FC20A1 /* EnfocaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		0FA4A4881EC89C0D00F31F9A /* Enfoca */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FA4A4A61EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "Enfoca" */;
@@ -660,6 +707,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Trevis Thomas";
 				TargetAttributes = {
+					0F085B771ED8796D00FC20A1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KRNJ229R7J;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0FA4A4881EC89C0D00F31F9A;
+					};
 					0FA4A4881EC89C0D00F31F9A = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = KRNJ229R7J;
@@ -696,11 +749,19 @@
 			targets = (
 				0FA4A4881EC89C0D00F31F9A /* Enfoca */,
 				0FA4A49C1EC89C0D00F31F9A /* EnfocaTests */,
+				0F085B771ED8796D00FC20A1 /* EnfocaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0F085B761ED8796D00FC20A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FA4A4871EC89C0D00F31F9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -725,6 +786,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F085B741ED8796D00FC20A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F085B7B1ED8796D00FC20A1 /* EnfocaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FA4A4851EC89C0D00F31F9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -831,6 +900,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0F085B7E1ED8796D00FC20A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FA4A4881EC89C0D00F31F9A /* Enfoca */;
+			targetProxy = 0F085B7D1ED8796D00FC20A1 /* PBXContainerItemProxy */;
+		};
 		0FA4A49F1EC89C0D00F31F9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0FA4A4881EC89C0D00F31F9A /* Enfoca */;
@@ -851,6 +925,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0F085B7F1ED8796D00FC20A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = KRNJ229R7J;
+				INFOPLIST_FILE = EnfocaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.EnfocaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Enfoca;
+			};
+			name = Debug;
+		};
+		0F085B801ED8796D00FC20A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = KRNJ229R7J;
+				INFOPLIST_FILE = EnfocaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.EnfocaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Enfoca;
+			};
+			name = Release;
+		};
 		0FA4A4A41EC89C0D00F31F9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1008,6 +1108,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F085B811ED8796D00FC20A1 /* Build configuration list for PBXNativeTarget "EnfocaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F085B7F1ED8796D00FC20A1 /* Debug */,
+				0F085B801ED8796D00FC20A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0FA4A4841EC89C0D00F31F9A /* Build configuration list for PBXProject "Enfoca" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

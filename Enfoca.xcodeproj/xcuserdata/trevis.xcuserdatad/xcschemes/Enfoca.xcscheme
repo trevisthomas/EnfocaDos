@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Enfoca.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0F085B771ED8796D00FC20A1"
+               BuildableName = "EnfocaUITests.xctest"
+               BlueprintName = "EnfocaUITests"
+               ReferencedContainer = "container:Enfoca.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
