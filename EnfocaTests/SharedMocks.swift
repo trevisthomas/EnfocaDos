@@ -75,9 +75,15 @@ class MockWebService : WebService {
         callback(true, nil)
     }
     
+    var fetchUserTagsError: String?
     func fetchUserTags(callback : @escaping([Tag]?, EnfocaError?)->()){
         fetchUserTagsCallCount += 1
-        callback(tags, nil)
+        
+        if let error = fetchUserTagsError {
+            callback(nil, error)
+        } else {
+            callback(tags, nil)
+        }        
     }
     
 //    func activateWordPair(wordPair: WordPair, callback: ((Bool) -> ())?) {

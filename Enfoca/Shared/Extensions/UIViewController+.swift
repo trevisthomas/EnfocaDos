@@ -21,5 +21,62 @@ extension UIViewController{
     func services() -> WebService {
         return (UIApplication.shared.delegate as! AppDelegate).webService
     }
+    
+    func add(asChildViewController childViewController: UIViewController, toContainerView: UIView) {
+        // Add Child View Controller
+        self.addChildViewController(childViewController)
+        
+        // Add Child View as Subview
+        toContainerView.addSubview(childViewController.view)
+        
+        // Configure Child View
+        childViewController.view.frame = toContainerView.bounds
+        childViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        // Notify Child View Controller
+        childViewController.didMove(toParentViewController: self)
+    }
+    
+    //http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+    func dismissKeyboardWhenTapped() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+}
+
+//Is this the best place for these?
+extension UIViewController {
+    
+    func createTagSelectionViewController(inContainerView: UIView) -> TagSelectionViewController {
+        let storyboard = UIStoryboard(name: "TagSelection", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "TagSelectionViewController") as! TagSelectionViewController
+        
+        //Note, this add is a custom method
+        self.add(asChildViewController: viewController, toContainerView: inContainerView)
+        
+        return viewController
+    }
+    
+    func createWordPairTableViewController(inContainerView: UIView) -> WordPairTableViewController {
+        
+        let storyboard = UIStoryboard(name: "WordPairTableStoryboard", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "WordPairTableViewController") as! WordPairTableViewController
+        
+        //Note, this add is a custom method
+        self.add(asChildViewController: viewController, toContainerView: inContainerView)
+        
+        return viewController
+    }
+    
 }
 
