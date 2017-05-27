@@ -96,14 +96,15 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
         UIView.animate(withDuration: duration * 0.33, delay: 0, options: [.curveEaseInOut], animations: {
             toViewController.oldTitleLabel.alpha = 0
         }) { _ in
-            
+            //Wow.  Is this the best TODO: Consider alternative
+            toViewController.magifierCloseView.initialize()
         }
         
         UIView.animate(withDuration: duration * 0.33, delay: duration * 0.66, options: [.curveEaseInOut], animations: {
             toViewController.titleLabel.alpha = 1
         }) { _ in
-            //Wow.  Is this the best TODO: Consider alternative
-            toViewController.magifierCloseView.initialize()
+//            //Wow.  Is this the best TODO: Consider alternative
+//            toViewController.magifierCloseView.initialize()
         }
         
         
