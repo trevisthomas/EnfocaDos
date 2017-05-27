@@ -13,6 +13,7 @@
 		0F085B701ED74C7B00FC20A1 /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */; };
 		0F085B731ED7500C00FC20A1 /* BrowseControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B721ED7500C00FC20A1 /* BrowseControllerTests.swift */; };
 		0F085B7B1ED8796D00FC20A1 /* EnfocaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B7A1ED8796D00FC20A1 /* EnfocaUITests.swift */; };
+		0F085B831ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */; };
 		0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
 		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
 		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
@@ -133,6 +134,7 @@
 		0F085B781ED8796D00FC20A1 /* EnfocaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnfocaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F085B7A1ED8796D00FC20A1 /* EnfocaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnfocaUITests.swift; sourceTree = "<group>"; };
 		0F085B7C1ED8796D00FC20A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseFromHomeAnimator.swift; sourceTree = "<group>"; };
 		0FA4A4891EC89C0D00F31F9A /* Enfoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enfoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -583,6 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */,
+				0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */,
 			);
 			name = Animators;
 			sourceTree = "<group>";
@@ -861,6 +864,7 @@
 				0FA4A50E1EC8EB2500F31F9A /* UIViewController+.swift in Sources */,
 				0FA4A4E71EC8E91E00F31F9A /* WordPairOrder.swift in Sources */,
 				0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */,
+				0F085B831ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift in Sources */,
 				0FA4A4F41EC8E94700F31F9A /* WebService.swift in Sources */,
 				0FA4A5371EC8ECB400F31F9A /* OperationFetchMetaData.swift in Sources */,
 				0FA4A5261EC8EC9000F31F9A /* FetchUserRecordId.swift in Sources */,

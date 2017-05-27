@@ -49,6 +49,7 @@ class CloudAuthOperation : BaseUserOperation {
             //TODO: Show alert
             handleError(message: self.alertMessage)
             user.isAuthenticated = false
+            //TODO: Add a way to have fatal errors that close the app after being presented.
         } else {
             user.isAuthenticated = true
         }

@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GML-ue-jy4">
-                                        <rect key="frame" x="48" y="32.5" width="279" height="26"/>
+                                        <rect key="frame" x="48" y="32" width="279" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -69,6 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="biK-m3-sRK" id="oqN-Uf-oBI"/>
+                        <outlet property="headerBackgroundView" destination="0F6-9P-Mgk" id="aHA-Jq-1t9"/>
                         <outlet property="tableViewContainer" destination="oZ5-GF-viM" id="Bey-nB-cRh"/>
                         <outlet property="titleLabel" destination="GML-ue-jy4" id="W6b-eJ-Glm"/>
                     </connections>

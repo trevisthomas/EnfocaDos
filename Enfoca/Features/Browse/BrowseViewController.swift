@@ -14,6 +14,8 @@ class BrowseViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var tableViewContainer: UIView!
     
+    @IBOutlet weak var headerBackgroundView: UIView!
+    
     var controller : BrowseController!
     
     override func viewDidLoad() {
@@ -31,6 +33,10 @@ class BrowseViewController: UIViewController {
         dismiss(animated: true) { 
             //done
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Preparing")
     }
 
     /*

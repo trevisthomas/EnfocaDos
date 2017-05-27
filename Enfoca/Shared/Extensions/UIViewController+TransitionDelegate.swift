@@ -8,24 +8,32 @@
 
 import UIKit
 
-extension UIViewController : UIViewControllerTransitioningDelegate {
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        print("Presenting \(presenting.description)")
-        
-        if let _ = presented as? HomeViewController, let _ = source as? LoadingViewController {
-            
-            return HomeFromLoadingAnimator()
-        }
-        
-        
-        return nil
-    }
-    
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        print("Dismissing \(dismissed.description)")
-        
-        return nil
-    }
-}
+//@deprecated
+//extension UIViewController : UIViewControllerTransitioningDelegate {
+//    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        //NOTE: Trevis, dont forget that you have to call '*.transitioningDelegate = self' in prepare for segue to wire things up. Dummy.
+//        print("Presenting \(presenting.description)")
+//        
+//        if let _ = presented as? HomeViewController, let _ = source as? LoadingViewController {
+//            
+//            return HomeFromLoadingAnimator()
+//        }
+//        
+//        if let _ = presented as? BrowseViewController, let _ = source as? HomeViewController {
+//            return BrowseFromHomeAnimator()
+//        }
+//        
+//        return nil
+//    }
+//    
+//    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        
+//        print("Dismissing \(dismissed.description)")
+//        
+//        if let _ = dismissed as? BrowseViewController {
+//            return BrowseFromHomeAnimator()
+//        }
+//        
+//        return nil
+//    }
+//}

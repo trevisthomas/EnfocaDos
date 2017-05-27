@@ -9,11 +9,11 @@
 import UIKit
 
 protocol QuizTagSelectionDelegate {
-    func quizWordsWithTag(forTag: Tag)
+    func quizWordsWithTag(forTag: Tag, atRect: CGRect, cell: UICollectionViewCell)
 }
 
 protocol BrowseTagSelectionDelegate {
-    func browseWordsWithTag(withTag: Tag)
+    func browseWordsWithTag(withTag: Tag, atRect: CGRect, cell: UICollectionViewCell)
 }
 
 class TagSelectionViewController: UIViewController {
@@ -95,8 +95,17 @@ extension TagSelectionViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let tag = tags[indexPath.row]
-        quizDelegate?.quizWordsWithTag(forTag: tag)
-        browseDelegate?.browseWordsWithTag(withTag: tag)
+        
+        let attributes = collectionView.layoutAttributesForItem(at: indexPath)
+        let cellRect = attributes!.frame
+        let cellFrameInSuperView = collectionView.convert(cellRect, to: view.window)
+        
+        let cell = collectionView.cellForItem(at: indexPath)!
+//        cell.isHidden = true
+//        print(cell.frame)
+        
+        quizDelegate?.quizWordsWithTag(forTag: tag, atRect: cellFrameInSuperView, cell: cell)
+        browseDelegate?.browseWordsWithTag(withTag: tag, atRect: cellFrameInSuperView, cell: cell)
     }
     
 }

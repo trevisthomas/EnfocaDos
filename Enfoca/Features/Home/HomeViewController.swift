@@ -45,6 +45,8 @@ class HomeViewController: UIViewController {
     
     fileprivate var wordPairs : [WordPair] = []
     
+    fileprivate let browseViewFromHomeAnimator = BrowseFromHomeAnimator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -198,12 +200,44 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let toBrowseViewController = segue.destination as? BrowseViewController {
             guard let tag = sender as? Tag else { fatalError() }
+            
             let browseController = BrowseController(tag: tag, delegate: toBrowseViewController)
+            
+//            toBrowseViewController.sourceFrame = tuple.1
+//            toBrowseViewController.sourceCell = tuple.2
+            toBrowseViewController.transitioningDelegate = self 
             toBrowseViewController.controller = browseController
         }
     }
     
 }
+
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        print("Presenting \(presenting.description)")
+        
+        if let _ = presented as? BrowseViewController, let _ = source as? HomeViewController {
+            browseViewFromHomeAnimator.presenting = true
+            return browseViewFromHomeAnimator
+        }
+        
+        return nil
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        print("Dismissing \(dismissed.description)")
+        
+        if let _ = dismissed as? BrowseViewController {
+            browseViewFromHomeAnimator.presenting = false
+            return browseViewFromHomeAnimator
+        }
+        
+        return nil
+    }
+}
+
 
 extension HomeViewController: HomeControllerDelegate {
     func onTagsLoaded(tags: [Tag]) {
@@ -222,14 +256,20 @@ extension HomeViewController: HomeControllerDelegate {
 }
 
 extension HomeViewController: BrowseTagSelectionDelegate {
-    func browseWordsWithTag(withTag tag: Tag) {
+    func browseWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
         print("Browse words tagged: \(tag.name)")
+        
+//        transitioningDelegate = self
+        
+        browseViewFromHomeAnimator.sourceFrame = atRect
+        browseViewFromHomeAnimator.sourceCell = cell
+        
         performSegue(withIdentifier: "BrowseViewControllerSegue", sender: tag)
     }
 }
 
 extension HomeViewController: QuizTagSelectionDelegate {
-    func quizWordsWithTag(forTag tag: Tag) {
+    func quizWordsWithTag(forTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
         print("Quiz words tagged: \(tag.name)")
     }
 }
