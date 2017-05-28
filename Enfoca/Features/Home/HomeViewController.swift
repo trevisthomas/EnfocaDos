@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var quizLabelLeftConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var magifierCloseView: MagnifierCloseView!
-    fileprivate var order: WordPairOrder!
+    
     
     fileprivate var wordPairs : [WordPair] = []
     
@@ -54,19 +54,11 @@ class HomeViewController: UIViewController {
         
         initializeSubViews()
         
-        loadViewDefaults()
-        
         controller = HomeController(delegate: self)
+        controller.initialize()
         getAppDelegate().activeController = controller
-        
-        dismissKeyboardWhenTapped()
-
     }
     
-    private func loadViewDefaults(){
-        order = WordPairOrder.wordDesc
-        languageSegmentedControl.selectedSegmentIndex = 1
-    }
     
     private func initializeLookAndFeel(){
         
@@ -74,6 +66,9 @@ class HomeViewController: UIViewController {
         expandedHeightConstraintOnGray = view.frame.height + originalHeightConstraintOnGray - expandingTableViewHolder.frame.height
         
         searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidChange(_:)), for: [.editingChanged])
+        
+        searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextEditingDidEnd(_:)), for: [.editingDidEnd])
+        
         
         searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidBegin(_:)), for: [.editingDidBegin])
         
@@ -152,11 +147,15 @@ class HomeViewController: UIViewController {
         if text.isEmpty {
             hideWordTable()
         } else {
-            controller.search(pattern: text, order: self.order)
+            controller.phrase = text
             showWordTable()
         }
 
         print(text)
+    }
+    
+    func searchOrCreateTextEditingDidEnd(_ textField: UITextField) {
+        dismissKeyboard()
     }
     
     @IBAction func languageSegmentedControlChanged(_ sender: UISegmentedControl) {
@@ -164,9 +163,9 @@ class HomeViewController: UIViewController {
         
         switch (sender.selectedSegmentIndex) {
         case 0:
-            self.order = WordPairOrder.definitionAsc
+            controller.wordOrder = WordPairOrder.definitionAsc
         case 1:
-            self.order = WordPairOrder.wordAsc
+            controller.wordOrder = WordPairOrder.wordAsc
         default:
             fatalError()
         }
@@ -177,7 +176,7 @@ class HomeViewController: UIViewController {
         if text.isEmpty {
             wordPairTableViewController.clearWordPairs()
         } else {
-            controller.search(pattern: text, order: self.order)
+            controller.phrase = text
         }
     }
     
@@ -201,11 +200,9 @@ class HomeViewController: UIViewController {
         if let toBrowseViewController = segue.destination as? BrowseViewController {
             guard let tag = sender as? Tag else { fatalError() }
             
-            let browseController = BrowseController(tag: tag, delegate: toBrowseViewController)
+            let browseController = BrowseController(tag: tag, wordOrder: controller.wordOrder, delegate: toBrowseViewController)
             
-//            toBrowseViewController.sourceFrame = tuple.1
-//            toBrowseViewController.sourceCell = tuple.2
-            toBrowseViewController.transitioningDelegate = self 
+            toBrowseViewController.transitioningDelegate = self
             toBrowseViewController.controller = browseController
         }
     }
@@ -247,19 +244,31 @@ extension HomeViewController: HomeControllerDelegate {
     }
     
     func onSearchResults(words: [WordPair]) {
-        wordPairTableViewController.updateWordPairs(order: self.order, wordPairs: words)
+        wordPairTableViewController.updateWordPairs(order: controller.wordOrder, wordPairs: words)
     }
     
     func onError(title: String, message: EnfocaError) {
         self.presentAlert(title: title, message: message)
+    }
+    
+    func onWordPairOrderChanged() {
+        
+        let order : WordPairOrder = controller.wordOrder
+        switch (order) {
+        case .definitionAsc, .definitionDesc:
+            languageSegmentedControl.selectedSegmentIndex = 0
+        case WordPairOrder.wordAsc, WordPairOrder.wordDesc:
+            languageSegmentedControl.selectedSegmentIndex = 1
+        default:
+            fatalError()
+        }
+        
     }
 }
 
 extension HomeViewController: BrowseTagSelectionDelegate {
     func browseWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
         print("Browse words tagged: \(tag.name)")
-        
-//        transitioningDelegate = self
         
         browseViewFromHomeAnimator.sourceFrame = atRect
         browseViewFromHomeAnimator.sourceCell = cell

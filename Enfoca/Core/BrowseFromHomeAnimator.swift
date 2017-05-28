@@ -10,7 +10,7 @@ import UIKit
 
 public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    private let duration = 2.50
+    private let duration = 0.7
     weak var storedContext: UIViewControllerContextTransitioning!
     
     var sourceFrame: CGRect!
@@ -52,7 +52,6 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
         
         self.sourceCell.isHidden = true
         v.backgroundColor = fromViewController.headerBackgroundView.backgroundColor
-//        v.frame = self.sourceFrame
         
         v.frame.origin = fromViewController.headerBackgroundView.frame.origin
         v.frame.size.height = fromViewController.headerBackgroundView.frame.height
@@ -61,7 +60,7 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
         containerView.addSubview(v)
         
         
-        UIView.animate(withDuration: 2.0, delay: 0.0, options: [.curveEaseInOut], animations: {
+        UIView.animate(withDuration: duration * 0.6, delay: 0.0, options: [.curveEaseInOut], animations: {
             v.frame = self.sourceFrame
             
             v.backgroundColor = self.sourceCell.backgroundColor
@@ -69,15 +68,21 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
             toViewController.view.alpha = 1
             
         }) { (_) in
+            self.sourceCell.isHidden = false
+        }
+        
+        fromViewController.headerBackgroundView.isHidden = true
+        
+        UIView.animate(withDuration: duration * 0.4, delay: duration * 0.6, options: [.curveEaseInOut], animations: {
+            v.alpha = 0.0
+        }) { (_) in
+            
             v.removeFromSuperview()
             
-            print(v.frame)
-            self.sourceCell.isHidden = false
+            fromViewController.headerBackgroundView.isHidden = false
             
             self.storedContext.completeTransition(true)
         }
-        
-        
     }
     
     private func performPresent(){
@@ -104,12 +109,9 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
         
         containerView.addSubview(v)
         
-        print(containerView.frame)
-        print(toViewController.headerBackgroundView.frame)
-        print(toViewController.headerBackgroundView.frame.origin)
-        print(toViewController.headerBackgroundView.convert(toViewController.headerBackgroundView.frame, to: toViewController.view))
         
         UIView.animate(withDuration: duration * 0.8, delay: 0.0, options: [.curveEaseInOut], animations: {
+            // For some frustrating reason the toViewController doesnt seem to have been laid out.  The dimentions that i get from it's frame are what I have setup in IB, not the device that i am running on.  I caught this because i was using an iPhone 7 emu and a Plus simuator and this frame comes back as 375, not 414.  Sigh.  Lost an hour on this.
             v.frame.origin = toViewController.headerBackgroundView.frame.origin
             v.frame.size.height = toViewController.headerBackgroundView.frame.height
             v.frame.size.width = containerView.frame.width
@@ -118,30 +120,20 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
             toViewController.view.alpha = 1
             
         }) { (_) in
-            
-            
-            print(v.frame)
-            
-            
-//            self.storedContext.completeTransition(true)
+            toViewController.headerBackgroundView.isHidden = false
         }
-        
-        
-        toViewController.headerBackgroundView.alpha = 0
+
+        toViewController.headerBackgroundView.isHidden = true
         
         UIView.animate(withDuration: duration * 0.2, delay: duration * 0.8, options: [.curveEaseInOut], animations: {
-            toViewController.headerBackgroundView.alpha = 1
+            v.alpha = 0.0
         }) { (_) in
             
             v.removeFromSuperview()
             self.sourceCell.isHidden = false
             self.storedContext.completeTransition(true)
         }
-        
-        
-        
     }
-    
 }
 
 
