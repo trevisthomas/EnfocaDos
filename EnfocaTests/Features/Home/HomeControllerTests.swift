@@ -26,6 +26,8 @@ class HomeControllerTests: XCTestCase {
     func testFetchTags_ShouldBeLoadedIntoDelegate(){
         sut = HomeController(delegate: delegate)
         
+        sut.initialize()
+        
         XCTAssertEqual(services.fetchUserTagsCallCount, 1)
         XCTAssertEqual(delegate.loadedTags!, services.tags)
     }
@@ -34,6 +36,7 @@ class HomeControllerTests: XCTestCase {
         services.fetchUserTagsError = "Failed To Load"
 
         sut = HomeController(delegate: delegate)
+        sut.initialize()
         
         XCTAssertEqual(services.fetchUserTagsCallCount, 1)
         XCTAssertEqual(delegate.errorMessage, services.fetchUserTagsError)
@@ -42,12 +45,14 @@ class HomeControllerTests: XCTestCase {
     }
     
     func testSearch_ShouldMakeServiceCallAndNotifyDelegate(){
-        
-        
         sut = HomeController(delegate: delegate)
+        sut.initialize()
+        
+        sut.wordOrder = WordPairOrder.definitionAsc
+        
         XCTAssertEqual(services.fetchWordPairCallCount, 0)
         
-        sut.search(pattern: "any", order: .definitionAsc)
+        sut.phrase = "any"
         
         XCTAssertEqual(services.fetchWordPairCallCount, 1)
         XCTAssertEqual(services.fetchWordPairPattern, "any")
@@ -62,6 +67,7 @@ class MockHomeControllerDelegate : HomeControllerDelegate {
     var errorMessage: EnfocaError?
     var loadedTags: [Tag]?
     var searchResults: [WordPair]?
+    var wordOrderChangedCount: Int = 0
     
     func onError(title: String, message: EnfocaError) {
         errorTitle = title
@@ -74,6 +80,10 @@ class MockHomeControllerDelegate : HomeControllerDelegate {
     
     func onSearchResults(words: [WordPair]) {
         self.searchResults = words
+    }
+    
+    func onWordPairOrderChanged() {
+        wordOrderChangedCount = wordOrderChangedCount + 1
     }
 }
 

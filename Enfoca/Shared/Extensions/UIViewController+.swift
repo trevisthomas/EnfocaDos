@@ -37,13 +37,6 @@ extension UIViewController{
         childViewController.didMove(toParentViewController: self)
     }
     
-    //http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
-    func dismissKeyboardWhenTapped() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
     func dismissKeyboard() {
         view.endEditing(true)
     }

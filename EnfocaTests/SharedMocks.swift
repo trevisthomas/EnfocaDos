@@ -67,9 +67,15 @@ class MockWebService : WebService {
         self.tags = tags
     }
     
-    init() {
+    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
         self.tags = makeTags()
     }
+    
+    func serialize() -> String?{
+        return nil
+    }
+    
+
     
     func initialize(callback: @escaping (Bool, EnfocaError?) -> ()) {
         callback(true, nil)
@@ -176,13 +182,16 @@ class MockDefaults : ApplicationDefaults {
         return 10
     }
     
-    func save() {
+    
+    
+    func save(includingDataStore json: String?) {
         saveCount += 1
     }
     
-    func load() {
-        
+    func load() -> String? {
+        return nil
     }
+
 }
 
 

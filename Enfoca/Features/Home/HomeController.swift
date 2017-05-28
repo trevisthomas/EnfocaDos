@@ -13,20 +13,35 @@ protocol HomeControllerDelegate {
     func onError(title: String, message: EnfocaError)
     func onTagsLoaded(tags : [Tag])
     func onSearchResults(words: [WordPair])
-    
+    func onWordPairOrderChanged()
 }
 
 class HomeController: Controller {
     
     let delegate: HomeControllerDelegate!
+    var wordOrder: WordPairOrder!
+    {
+        didSet {
+            if oldValue != wordOrder {
+                delegate.onWordPairOrderChanged()
+            }
+        }
+    }
+    
+    var phrase: String! {
+        didSet {
+            if oldValue != phrase {
+                search()
+            }
+        }
+    }
     
     init(delegate: HomeControllerDelegate) {
         self.delegate = delegate
-        
-        initialize()
     }
     
-    private func initialize(){
+    func initialize(){
+        loadDefaults()
         
         services.fetchUserTags { (tags: [Tag]?, error: EnfocaError?) in
             if let error = error {
@@ -40,9 +55,14 @@ class HomeController: Controller {
         }
     }
     
-    func search(pattern: String, order: WordPairOrder){
+    private func loadDefaults(){
+        //TODO: Load from app defaults
+        self.wordOrder = .wordAsc
+    }
+    
+    func search(){
         
-        services.fetchWordPairs(tagFilter: [], wordPairOrder: order, pattern: pattern) { (pairs: [WordPair]?, error:EnfocaError?) in
+        services.fetchWordPairs(tagFilter: [], wordPairOrder: wordOrder, pattern: phrase) { (pairs: [WordPair]?, error:EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)
             }
