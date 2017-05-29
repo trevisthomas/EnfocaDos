@@ -18,6 +18,27 @@ extension UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
     
+    
+    func presentAlert(title : String, message : String?, completion: @escaping ()->()){
+        
+        let alertController = UIAlertController(title: title, message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: completion)
+    }
+    
+    func presentFatalAlert(title : String, message : String?){
+        
+        let alertController = UIAlertController(title: title, message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default,handler: { _ -> (Void) in
+            abort()
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func services() -> WebService {
         return (UIApplication.shared.delegate as! AppDelegate).webService
     }

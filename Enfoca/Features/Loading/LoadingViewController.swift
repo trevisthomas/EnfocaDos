@@ -55,7 +55,7 @@ class LoadingViewController: UIViewController {
         service.initialize(json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
             
             if let error = error {
-                self.presentAlert(title: "Initialization error", message: error)
+                self.presentFatalAlert(title: "Initialization error", message: error)
             } else {
                 getAppDelegate().webService = service
                 self.performSegue(withIdentifier: "Home", sender: self)
