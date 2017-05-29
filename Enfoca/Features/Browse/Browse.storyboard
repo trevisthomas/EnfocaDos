@@ -72,11 +72,20 @@
                         <outlet property="headerBackgroundView" destination="0F6-9P-Mgk" id="aHA-Jq-1t9"/>
                         <outlet property="tableViewContainer" destination="oZ5-GF-viM" id="Bey-nB-cRh"/>
                         <outlet property="titleLabel" destination="GML-ue-jy4" id="W6b-eJ-Glm"/>
+                        <segue destination="rKs-2h-tjs" kind="show" identifier="WordPairEditorViewControllerSegue" id="BGl-Ja-d4P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrp-07-Erd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="157.59999999999999" y="87.706146926536732"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="lK9-OR-MaI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Edit" id="rKs-2h-tjs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJ3-ns-CFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="34"/>
         </scene>
     </scenes>
 </document>

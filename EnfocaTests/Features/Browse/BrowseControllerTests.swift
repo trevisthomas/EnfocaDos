@@ -10,9 +10,9 @@ import XCTest
 @testable import Enfoca
 
 class BrowseControllerTests: XCTestCase {
-    var sut : BrowseController!
-    var delegate : MockBrowseControllerDelegate!
-    var services : MockWebService!
+    private var sut : BrowseController!
+    private var delegate : MockBrowseControllerDelegate!
+    private var services : MockWebService!
     
     override func setUp() {
         super.setUp()
@@ -44,7 +44,7 @@ class BrowseControllerTests: XCTestCase {
     
 }
 
-class MockBrowseControllerDelegate: BrowseControllerDelegate {
+private class MockBrowseControllerDelegate: BrowseControllerDelegate {
     var errorTitle: String!
     var errorMessage: String!
     var browseResult: [WordPair] = []

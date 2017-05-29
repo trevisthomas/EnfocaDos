@@ -16,6 +16,8 @@ class BrowseViewController: UIViewController {
     
     @IBOutlet weak var headerBackgroundView: UIView!
     
+    fileprivate var editWordPairFromCellAnimator = EditWordPairFromCellAnimator()
+    
     fileprivate var wordPairTableViewController: WordPairTableViewController!
     
     var controller : BrowseController!
@@ -33,6 +35,7 @@ class BrowseViewController: UIViewController {
     }
     
     private func initializeSubViews() {
+        
         wordPairTableViewController = createWordPairTableViewController(inContainerView: tableViewContainer)
         
         wordPairTableViewController.initialize(delegate: self)
@@ -50,7 +53,14 @@ class BrowseViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Preparing")
+        if let editWordPairVC = segue.destination as? EditWordPairViewController  {
+            guard let wordPair = sender as? WordPair else { fatalError() }
+            
+            editWordPairVC.transitioningDelegate = self
+            
+            editWordPairVC.controller = EditWordPairController(delegate: editWordPairVC, wordPair: wordPair)
+        }
+        
     }
 
 }
@@ -66,5 +76,36 @@ extension BrowseViewController: BrowseControllerDelegate {
 }
 
 extension BrowseViewController: WordPairTableDelegate {
+    func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
+        
+        editWordPairFromCellAnimator.sourceCell = cell
+        
+        performSegue(withIdentifier: "WordPairEditorViewControllerSegue", sender: wordPair)
+    }
+}
+
+//For animated transitions
+extension BrowseViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        print("Presenting \(presenting.description)")
+        
+        if let _ = presented as? EditWordPairViewController, let _ = source as? BrowseViewController {
+            editWordPairFromCellAnimator.presenting = true
+            return editWordPairFromCellAnimator
+        }
+        
+        return nil
+    }
     
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        print("Dismissing \(dismissed.description)")
+        
+        if let _ = dismissed as? EditWordPairViewController {
+            editWordPairFromCellAnimator.presenting = false
+            return editWordPairFromCellAnimator
+        }
+        
+        return nil
+    }
 }

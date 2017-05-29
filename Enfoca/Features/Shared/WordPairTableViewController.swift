@@ -9,10 +9,8 @@
 import UIKit
 
 protocol WordPairTableDelegate {
-//    func fetchWordPairs(callback: ([WordPair])->())
-//    func getWordPairOrder() -> WordPairOrder
-    
     func dismissKeyboard()
+    func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell)
 }
 
 class WordPairTableViewController: UITableViewController {
@@ -26,9 +24,6 @@ class WordPairTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 96 //Doesn't matter
     }
@@ -55,6 +50,14 @@ class WordPairTableViewController: UITableViewController {
         cell.initialize(wordPair: wordPairs[indexPath.row], order: order)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { fatalError() }
+        
+        let cellFrameInSuperView = tableView.convert(cell.frame, to: view.window)
+        
+        delegate.onWordPairSelected(wordPair: wordPairs[indexPath.row], atRect: cellFrameInSuperView, cell: cell)
     }
     
 

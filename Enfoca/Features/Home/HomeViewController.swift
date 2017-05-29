@@ -209,7 +209,7 @@ class HomeViewController: UIViewController {
     
 }
 
-
+//For animated transitions
 extension HomeViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         print("Presenting \(presenting.description)")
@@ -259,10 +259,7 @@ extension HomeViewController: HomeControllerDelegate {
             languageSegmentedControl.selectedSegmentIndex = 0
         case WordPairOrder.wordAsc, WordPairOrder.wordDesc:
             languageSegmentedControl.selectedSegmentIndex = 1
-        default:
-            fatalError()
         }
-        
     }
 }
 
@@ -284,7 +281,10 @@ extension HomeViewController: QuizTagSelectionDelegate {
 }
 
 extension HomeViewController: WordPairTableDelegate {
-    
+    func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
+        print("Selected \(wordPair.word)")
+        print("at Rect \(atRect)")
+    }
 }
 
 
