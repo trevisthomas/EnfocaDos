@@ -26,11 +26,21 @@ class EditWordPairControllerTests: XCTestCase {
         
         sut = EditWordPairController(delegate: delegate, wordPair: wp)
         
-        XCTAssertTrue(sut.isEditMode())
+        XCTAssertTrue(sut.isEditMode)
         XCTAssertEqual(sut.title(), "Edit")
     }
 }
 
 private class MockEditWordPairControllerDelegate: EditWordPairControllerDelegate {
+    func onTagsLoaded(tags: [Tag], selectedTags: [Tag]) {
+        
+    }
     
+    func onError(title: String, message: EnfocaError) {
+        
+    }
+    
+    func onUpdate() {
+        
+    }
 }

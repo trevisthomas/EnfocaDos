@@ -35,7 +35,6 @@ class WordPair : Hashable {
     private(set) var tags : [Tag] = []
     var metaData : MetaData?
     
-    
     init (pairId: String, word: String, definition: String, dateCreated: Date = Date(), gender: Gender = .notset, tags : [Tag] = [], example: String? = nil) {
         self.pairId = pairId
         self.word = word
@@ -49,7 +48,7 @@ class WordPair : Hashable {
     func addTag(_ tag : Tag) {
         tags.append(tag)
         tags.sort { (t1:Tag, t2:Tag) -> Bool in
-            return t1.name < t2.name
+            return t1.name.lowercased() < t2.name.lowercased()
         }
     }
     

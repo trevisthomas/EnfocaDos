@@ -177,6 +177,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="7vL-qr-CGI" secondAttribute="trailing" constant="-8" id="wpY-hf-8O4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="englishTextField" destination="JaS-aL-IT6" id="Xah-fT-wb8"/>
+                        <outlet property="spanishTextField" destination="jly-Uv-w0u" id="42z-p0-DOg"/>
+                        <outlet property="tagContainerView" destination="7Vu-a4-dXG" id="cYF-Ca-4G1"/>
+                        <outlet property="tagSummaryLabel" destination="7vL-qr-CGI" id="1Cx-sf-AZX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qj-QF-nRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

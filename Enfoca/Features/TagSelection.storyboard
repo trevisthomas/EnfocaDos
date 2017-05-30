@@ -76,6 +76,9 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="132"/>
+                    <connections>
+                        <outlet property="collectionView" destination="khl-B3-aHO" id="jnc-eh-yXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEO-QL-KBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -91,6 +91,9 @@ class HomeViewController: UIViewController {
         
         wordPairTableViewController.initialize(delegate: self)
         
+        browseByTagViewController.animateCollectionViewCellCreation = true
+        quizByTagViewControler.animateCollectionViewCellCreation = true
+        
     }
     
     private func isWordTableContracted() -> Bool{

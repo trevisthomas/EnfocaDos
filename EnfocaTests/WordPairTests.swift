@@ -48,4 +48,19 @@ class WordPairTests: XCTestCase {
         XCTAssertFalse(wp1 == wp2) //Only compared field is the pairId
     }
     
+    func testTags_ShouldSort(){
+        let d = Date()
+        let wp1 = WordPair(pairId: "1234", word: "hello", definition: "hola", dateCreated: d )
+        
+        wp1.addTag(Tag(name: "def"))
+        wp1.addTag(Tag(name: "abc"))
+        
+        XCTAssertEqual(wp1.tags.tagsToText(), "abc, def")
+        
+        wp1.addTag(Tag(name: "DAB"))
+        
+        XCTAssertEqual(wp1.tags.tagsToText(), "abc, DAB, def")
+        
+    }
+    
 }
