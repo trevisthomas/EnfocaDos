@@ -87,6 +87,10 @@ extension EditWordPairViewController: WordTagSelectionDelegate {
     func onTagDeselected(tag: Tag) {
         controller.removeTag(tag: tag)
     }
+    
+    func onShowTagEditor() {
+        print("Show the tag editor")
+    }
 }
 
 

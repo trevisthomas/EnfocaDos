@@ -302,6 +302,7 @@
 		0F085B841EDC642300FC20A1 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				0F911E061EE08DBA00F21855 /* Tag */,
 				0F085B851EDC64DD00FC20A1 /* Edit.storyboard */,
 				0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */,
 				0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */,
@@ -315,6 +316,13 @@
 				0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */,
 			);
 			name = Edit;
+			sourceTree = "<group>";
+		};
+		0F911E061EE08DBA00F21855 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tag;
 			sourceTree = "<group>";
 		};
 		0FA4A4801EC89C0D00F31F9A = {

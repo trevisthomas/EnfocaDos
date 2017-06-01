@@ -19,9 +19,11 @@ protocol BrowseTagSelectionDelegate {
 protocol WordTagSelectionDelegate {
     func onTagSelected(tag: Tag)
     func onTagDeselected(tag: Tag)
+    func onShowTagEditor()
 }
 
 class TagSelectionViewController: UIViewController {
+    
     fileprivate var quizDelegate: QuizTagSelectionDelegate?
     fileprivate var browseDelegate: BrowseTagSelectionDelegate?
     fileprivate var wordTagSelectionDelegate: WordTagSelectionDelegate?
@@ -31,6 +33,8 @@ class TagSelectionViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var animateCollectionViewCellCreation : Bool = false
+    
+    fileprivate let editMarkerTag = Tag(name: "...")
     
     fileprivate var tags: [Tag] = []
     fileprivate var selectedTags: [Tag] = []
@@ -68,6 +72,7 @@ extension TagSelectionViewController {
         self.wordTagSelectionDelegate = delegate
         
         self.tags = []
+        self.tags.append(editMarkerTag)
         self.tags.append(contentsOf: tags)
         
         self.selectedTags.removeAll()
@@ -138,12 +143,22 @@ extension TagSelectionViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let tag = tags[indexPath.row]
+        let cell = collectionView.cellForItem(at: indexPath)!
+        
+        if(tag == editMarkerTag){
+            guard let wordTagSelectionDelegate = wordTagSelectionDelegate else { abort() }
+            wordTagSelectionDelegate.onShowTagEditor()
+            cell.isSelected = false
+            return
+        }
         
         let attributes = collectionView.layoutAttributesForItem(at: indexPath)
         let cellRect = attributes!.frame
         let cellFrameInSuperView = collectionView.convert(cellRect, to: view.window)
         
-        let cell = collectionView.cellForItem(at: indexPath)!
+        
+        
+        
         
         setCellColorIfNeeded(cell)
         
