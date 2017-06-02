@@ -46,7 +46,9 @@ extension Sequence where Iterator.Element == (Tag, Bool) {
 
 extension Sequence where Iterator.Element == Tag {
     func tagsToText() -> String {
-        let array = self as![Tag]
+        let array = self.sorted { (t1:Tag, t2:Tag) -> Bool in
+            return t1.name.lowercased() < t2.name.lowercased()
+        }
         var text : String = ""
         for t in array {
             if !text.isEmpty {
