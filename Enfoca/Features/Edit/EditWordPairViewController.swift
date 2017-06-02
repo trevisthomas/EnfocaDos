@@ -8,18 +8,27 @@
 
 import UIKit
 
+protocol EditWordPairViewControllerDelegate {
+    var sourceWordPair: WordPair {get}
+}
+
 class EditWordPairViewController: UIViewController {
-    var controller: EditWordPairController!
+    
+    fileprivate var controller: EditWordPairController!
     fileprivate var tagViewController: TagSelectionViewController!
 
     @IBOutlet weak var tagSummaryLabel: UILabel!
     @IBOutlet weak var englishTextField: UITextField!
     @IBOutlet weak var spanishTextField: UITextField!
     
+    var delegate: EditWordPairViewControllerDelegate!
+    
     @IBOutlet weak var tagContainerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        controller = EditWordPairController(delegate: self, wordPair: delegate.sourceWordPair)
+        
         initializeLookAndFeel()
         initializeSubViews()
         
@@ -48,19 +57,21 @@ class EditWordPairViewController: UIViewController {
         
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let tagFilterViewController = segue.destination as? TagFilterViewController {
+            
+//            let viewModel = TagFilterViewModel(selectedTags: self.controller.selectedTags, delegate: self)
+//            tagFilterViewController.viewModel = viewModel
+            
+            tagFilterViewController.tagFilterDelegate = self
+            
+        }
     }
-    */
     
     fileprivate func updateFields(){
         title = controller.title()
         tagSummaryLabel.text = controller.tagsAsString()
+        
     }
 
 }
@@ -79,6 +90,29 @@ extension EditWordPairViewController: EditWordPairControllerDelegate {
     }
 }
 
+extension EditWordPairViewController: TagFilterViewControllerDelegate {
+    var selectedTags: [Tag] {
+        get {
+            return controller.selectedTags
+        }
+        set {
+            print(newValue)
+            //Apply the new selecterd tags
+            controller.selectedTags = newValue
+            
+            tagViewController.selectedTags(tags: newValue)
+        }
+    }
+    
+//    func getSelectedTags() -> [Tag] {
+//        <#code#>
+//    }
+//    
+//    func onSelectedTagsChanged(tags: [Tag]) {
+//        
+//    }
+}
+
 extension EditWordPairViewController: WordTagSelectionDelegate {
     func onTagSelected(tag: Tag){
         controller.addTag(tag: tag)
@@ -90,6 +124,7 @@ extension EditWordPairViewController: WordTagSelectionDelegate {
     
     func onShowTagEditor() {
         print("Show the tag editor")
+        performSegue(withIdentifier: "editTags", sender: nil)
     }
 }
 

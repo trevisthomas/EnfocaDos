@@ -18,6 +18,8 @@ class BrowseController : Controller {
     private let delegate: BrowseControllerDelegate
     let wordOrder: WordPairOrder
     
+    var selectedWordPair: WordPair? 
+    
     init(tag: Tag, wordOrder: WordPairOrder, delegate: BrowseControllerDelegate) {
         self.tag = tag
         self.delegate = delegate

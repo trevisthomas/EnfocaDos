@@ -58,11 +58,20 @@ class BrowseViewController: UIViewController {
             
             editWordPairVC.transitioningDelegate = self
             
-            editWordPairVC.controller = EditWordPairController(delegate: editWordPairVC, wordPair: wordPair)
+            editWordPairVC.delegate = self
+            
         }
         
     }
 
+}
+
+extension BrowseViewController: EditWordPairViewControllerDelegate {
+    var sourceWordPair: WordPair {
+        get{
+            return controller.selectedWordPair!
+        }
+    }
 }
 
 extension BrowseViewController: BrowseControllerDelegate {
@@ -79,6 +88,8 @@ extension BrowseViewController: WordPairTableDelegate {
     func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
         
         editWordPairFromCellAnimator.sourceCell = cell
+        
+        controller.selectedWordPair = wordPair 
         
         performSegue(withIdentifier: "WordPairEditorViewControllerSegue", sender: wordPair)
     }

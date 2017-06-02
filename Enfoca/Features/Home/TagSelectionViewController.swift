@@ -41,8 +41,8 @@ class TagSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        collectionView.allowsMultipleSelection = true
     }
     
 }
@@ -75,10 +75,26 @@ extension TagSelectionViewController {
         self.tags.append(editMarkerTag)
         self.tags.append(contentsOf: tags)
         
-        self.selectedTags.removeAll()
-        self.selectedTags.append(contentsOf: selectedTags)
+//        self.selectedTags.removeAll()
+//        self.selectedTags.append(contentsOf: selectedTags)
         
-        collectionView.allowsMultipleSelection = true
+        self.selectedTags(tags: selectedTags)
+        
+//        for i in 0..<tags.count {
+//            let tag = tags[i]
+//            
+//            if (selectedTags.contains(tag)){
+//                let ip = IndexPath(row: i, section: 0)
+//                collectionView.selectItem(at: ip, animated: false, scrollPosition: .left)
+//            }
+//            
+//        }
+        
+    }
+    
+    func selectedTags(tags newSelectedTags: [Tag]) {
+        selectedTags.removeAll()
+        selectedTags.append(contentsOf: newSelectedTags)
         
         for i in 0..<tags.count {
             let tag = tags[i]
@@ -90,6 +106,8 @@ extension TagSelectionViewController {
             
         }
         
+        //Resetting the position so that the act of setting the selcted list doesnt move the damned thing.
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: false)
     }
     
     func reloadTags(tags: [Tag]){
@@ -148,7 +166,8 @@ extension TagSelectionViewController : UICollectionViewDelegate {
         if(tag == editMarkerTag){
             guard let wordTagSelectionDelegate = wordTagSelectionDelegate else { abort() }
             wordTagSelectionDelegate.onShowTagEditor()
-            cell.isSelected = false
+//            cell.isSelected = false
+            collectionView.deselectItem(at: indexPath, animated: false)
             return
         }
         

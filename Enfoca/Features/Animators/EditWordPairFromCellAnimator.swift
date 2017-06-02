@@ -10,7 +10,7 @@ import UIKit
 
 class EditWordPairFromCellAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    private let duration = 4.7
+    private let duration = 0.7
     private weak var storedContext: UIViewControllerContextTransitioning!
     var presenting: Bool = true
     

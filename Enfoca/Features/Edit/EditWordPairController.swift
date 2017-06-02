@@ -19,7 +19,11 @@ class EditWordPairController: Controller {
     private let delegate: EditWordPairControllerDelegate
 //    public let wordPair: WordPair?
     
-    var selectedTags: [Tag] = []
+    var selectedTags: [Tag] = [] {
+        didSet{
+            delegate.onUpdate()
+        }
+    }
     var word: String = ""
     var definition: String = ""
     let isEditMode: Bool
@@ -66,6 +70,8 @@ class EditWordPairController: Controller {
         }
         delegate.onUpdate()
     }
+    
+    
     
     func removeTag(tag: Tag) {
         if let index = selectedTags.index(of: tag) {
