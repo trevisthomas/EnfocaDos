@@ -94,7 +94,7 @@ class Sequence_Tests: XCTestCase {
         let tag2 = Tag(tagId: "", name: "Bird")
         let two = [tag1, tag2]
         let text = two.tagsToText()
-        XCTAssertEqual(text, "Noun, Bird")
+        XCTAssertEqual(text, "Bird, Noun")
         
     }
     
