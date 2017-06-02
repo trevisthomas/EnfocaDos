@@ -44,6 +44,6 @@ class BrowseController : Controller {
     }
     
     func onEvent(event: Event) {
-        
+        print("Browse controler recieved event \(event.type)")
     }
 }

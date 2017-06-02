@@ -31,7 +31,7 @@ class BrowseViewController: UIViewController {
         
         controller.loadWordPairs()
         
-        getAppDelegate().activeController = controller
+        getAppDelegate().addListener(listener: controller)
     }
     
     private func initializeSubViews() {

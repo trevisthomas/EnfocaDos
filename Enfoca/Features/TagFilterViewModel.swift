@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate {
+class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate, Controller {
     var localTempTagFilters : [Tag] = []
     var localTagDictionary : [Tag: Bool] = [:]
 //    private(set) var tagFilterDelegate : TagFilterViewControllerDelegate!
@@ -23,7 +23,7 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate 
     func initialize(delegate: TagFilterViewModelDelegate, callback : @escaping()->()){
         tagFilterViewModelDelegate = delegate
         
-        getAppDelegate().webService.fetchUserTags { (tags:[Tag]?, error : EnfocaError?) in
+        services.fetchUserTags { (tags:[Tag]?, error : EnfocaError?) in
             
             
             guard let tags = tags else {
@@ -70,7 +70,7 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate 
     
     func createCallback(tagCell : TagCell, tagValue : String){
         tagCell.activityIndicator.startAnimating()
-        getAppDelegate().webService.createTag(tagValue: tagValue) { (newTag: Tag?, error :EnfocaError?) in
+        services.createTag(tagValue: tagValue) { (newTag: Tag?, error :EnfocaError?) in
             
             if let error = error {
                 //Should probably refactor and put this logic in the  cell
@@ -87,6 +87,8 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate 
             self.localTempTagFilters = self.allTags
             
             self.tagFilterViewModelDelegate?.reloadTable()
+            
+            getAppDelegate().fireEvent(source: self, event: Event(type: .tagCreated, data: newTag))
         }
     }
     
@@ -105,6 +107,8 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate 
                 if let error = error {
                     self.tagFilterViewModelDelegate?.alert(title: "Error", message: error)
                 }
+                
+                getAppDelegate().fireEvent(source: self, event: Event(type: .tagDeleted, data: tag))
             })
         }
     }
@@ -180,12 +184,16 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate 
         }
         tagFilterViewModelDelegate?.selectedTagsChanged()
     }
+    
+    func onEvent(event: Event) {
+        print("TagFilterViewModel recieved event \(event.type)")
+    }
 }
 
 extension TagFilterViewModel : TagCellDelegate {
     func update(tagCell: TagCell, tag: Tag, newTagName: String) {
 //        tagCell.activityIndicator.startAnimating()
-        getAppDelegate().webService.updateTag(oldTag: tag, newTagName: newTagName) { (tag:Tag?, error:EnfocaError?) in
+        services.updateTag(oldTag: tag, newTagName: newTagName) { (tag:Tag?, error:EnfocaError?) in
 //            tagCell.activityIndicator.stopAnimating()
             if let error = error {
                 //Should probably refactor and put this logic in the  cell
@@ -205,6 +213,8 @@ extension TagFilterViewModel : TagCellDelegate {
             self.localTempTagFilters = self.allTags
             
             self.tagFilterViewModelDelegate?.reloadTable()
+            
+            getAppDelegate().fireEvent(source: self, event: Event(type: .tagUpdate, data: newTag))
             
         }
     }

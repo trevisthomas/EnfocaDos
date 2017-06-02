@@ -19,6 +19,7 @@ class EditWordPairController: Controller {
     private let delegate: EditWordPairControllerDelegate
 //    public let wordPair: WordPair?
     
+    
     var selectedTags: [Tag] = [] {
         didSet{
             delegate.onUpdate()
@@ -28,8 +29,14 @@ class EditWordPairController: Controller {
     var definition: String = ""
     let isEditMode: Bool
     
+    private let originalWordPair: WordPair?
+    
+    
+    
     init(delegate: EditWordPairControllerDelegate, wordPair: WordPair?) {
         self.delegate = delegate
+        
+        self.originalWordPair = wordPair
         
         if let wordPair = wordPair {
             isEditMode = true
@@ -86,7 +93,38 @@ class EditWordPairController: Controller {
     
     func onEvent(event: Event) {
         //TOOD
+        print("EditWP Controller recieved event \(event.type)")
+        
+        switch (event.type) {
+            case .tagCreated, .tagUpdate, .tagDeleted:
+                initialize()
+        }
     }
+    
+    func isValidForSaveOrCreate() -> Bool {
+        
+        if isEditMode {
+            guard let originalWordPair = originalWordPair else { return false }
+            if originalWordPair.word != word || originalWordPair.definition != definition || originalWordPair.tags != selectedTags {
+                return true
+            }
+        } else {
+            return !(word.trim().isEmpty || definition.trim().isEmpty)
+        }
+        
+        return false
+        
+    }
+    
+    func isValidForDelete() -> Bool {
+        guard let _ = originalWordPair else { return false }
+        return true
+    }
+    
+//    func isValidForCreate() -> Bool {
+//        return false
+//    }
+
 
 }
 

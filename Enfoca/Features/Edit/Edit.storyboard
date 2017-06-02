@@ -126,6 +126,14 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.65452438589999995" green="0.66682869199999995" blue="0.66264015440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveOrCreateButtonAction:" destination="j48-e4-Ht7" eventType="touchUpInside" id="YpO-IL-uaC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkC-Ia-nmc">
                                 <rect key="frame" x="196" y="516" width="163" height="50"/>
@@ -134,6 +142,9 @@
                                 <state key="normal" title="Lookup">
                                     <color key="titleColor" red="0.65452438589999995" green="0.66682869199999995" blue="0.66264015440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="lookupButtonAction:" destination="j48-e4-Ht7" eventType="touchUpInside" id="spr-uO-5ql"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btN-63-17b">
                                 <rect key="frame" x="106" y="574" width="163" height="50"/>
@@ -142,6 +153,9 @@
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButtonAction:" destination="j48-e4-Ht7" eventType="touchUpInside" id="U5g-A9-8ss"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,10 +192,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="englishTextField" destination="JaS-aL-IT6" id="Xah-fT-wb8"/>
-                        <outlet property="spanishTextField" destination="jly-Uv-w0u" id="42z-p0-DOg"/>
+                        <outlet property="definitionTextField" destination="JaS-aL-IT6" id="6zv-7W-dy9"/>
+                        <outlet property="deleteButton" destination="btN-63-17b" id="xnt-Ih-Hla"/>
+                        <outlet property="lookupButton" destination="LkC-Ia-nmc" id="48f-KB-LFV"/>
+                        <outlet property="saveOrCreateButton" destination="XZw-WU-nKu" id="i0V-8n-MF8"/>
                         <outlet property="tagContainerView" destination="7Vu-a4-dXG" id="cYF-Ca-4G1"/>
                         <outlet property="tagSummaryLabel" destination="7vL-qr-CGI" id="1Cx-sf-AZX"/>
+                        <outlet property="wordTextField" destination="jly-Uv-w0u" id="1Q1-VL-Ik7"/>
                         <segue destination="XEn-Nx-i62" kind="show" identifier="editTags" id="nYj-BZ-9eo"/>
                     </connections>
                 </viewController>

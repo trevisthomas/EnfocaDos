@@ -56,7 +56,8 @@ class HomeViewController: UIViewController {
         
         controller = HomeController(delegate: self)
         controller.initialize()
-        getAppDelegate().activeController = controller
+        getAppDelegate().addListener(listener: controller)
+        
     }
     
     

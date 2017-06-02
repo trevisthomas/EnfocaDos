@@ -48,6 +48,7 @@ class TagFilterViewController: UIViewController {
             self.tableView.reloadData() // Not unit tested :-(
         }
         
+        getAppDelegate().addListener(listener: viewModel)
         
     }
 

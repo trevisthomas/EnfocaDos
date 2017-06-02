@@ -18,8 +18,11 @@ class EditWordPairViewController: UIViewController {
     fileprivate var tagViewController: TagSelectionViewController!
 
     @IBOutlet weak var tagSummaryLabel: UILabel!
-    @IBOutlet weak var englishTextField: UITextField!
-    @IBOutlet weak var spanishTextField: UITextField!
+    @IBOutlet weak var definitionTextField: UITextField!
+    @IBOutlet weak var wordTextField: UITextField!
+    @IBOutlet weak var saveOrCreateButton: UIButton!
+    @IBOutlet weak var lookupButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     
     var delegate: EditWordPairViewControllerDelegate!
     
@@ -34,7 +37,7 @@ class EditWordPairViewController: UIViewController {
         
         controller.initialize()
         
-        getAppDelegate().activeController = controller
+        getAppDelegate().addListener(listener: controller)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +53,33 @@ class EditWordPairViewController: UIViewController {
     
     private func initializeLookAndFeel() {
         updateFields()
+        
+        if controller.isEditMode {
+            saveOrCreateButton.setTitle("Save", for: .normal)
+            saveOrCreateButton.isEnabled = false
+        } else {
+            saveOrCreateButton.setTitle("Create", for: .normal)
+            deleteButton.isEnabled = false 
+        }
+        
+        wordTextField.addTarget(self, action: #selector(wordTextDidChange(_:)), for: [.editingChanged])
+        
+        definitionTextField.addTarget(self, action: #selector(definitionTextDidChange(_:)), for: [.editingChanged])
+        
     }
+    
+    func definitionTextDidChange(_ textField: UITextField) {
+        controller.definition = textField.text!
+        
+        refreshButtonState()
+    }
+    
+    func wordTextDidChange(_ textField: UITextField) {
+        controller.word = textField.text!
+        
+        refreshButtonState()
+    }
+    
     
     private func initializeSubViews(){
         tagViewController = createTagSelectionViewController(inContainerView: tagContainerView)
@@ -71,9 +100,16 @@ class EditWordPairViewController: UIViewController {
     fileprivate func updateFields(){
         title = controller.title()
         tagSummaryLabel.text = controller.tagsAsString()
-        
+        definitionTextField.text = controller.definition
+        wordTextField.text = controller.word
     }
 
+    @IBAction func deleteButtonAction(_ sender: UIButton) {
+    }
+    @IBAction func saveOrCreateButtonAction(_ sender: UIButton) {
+    }
+    @IBAction func lookupButtonAction(_ sender: UIButton) {
+    }
 }
 
 extension EditWordPairViewController: EditWordPairControllerDelegate {
@@ -101,6 +137,8 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
             controller.selectedTags = newValue
             
             tagViewController.selectedTags(tags: newValue)
+            
+            refreshButtonState()
         }
     }
     
@@ -111,15 +149,21 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
 //    func onSelectedTagsChanged(tags: [Tag]) {
 //        
 //    }
+    
+    fileprivate func refreshButtonState() {
+        saveOrCreateButton.isEnabled = controller.isValidForSaveOrCreate()
+    }
 }
 
 extension EditWordPairViewController: WordTagSelectionDelegate {
     func onTagSelected(tag: Tag){
         controller.addTag(tag: tag)
+        refreshButtonState()
     }
     
     func onTagDeselected(tag: Tag) {
         controller.removeTag(tag: tag)
+        refreshButtonState()
     }
     
     func onShowTagEditor() {

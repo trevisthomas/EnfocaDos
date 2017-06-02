@@ -77,7 +77,7 @@ extension TagSelectionViewController {
         
 //        self.selectedTags.removeAll()
 //        self.selectedTags.append(contentsOf: selectedTags)
-        
+
         self.selectedTags(tags: selectedTags)
         
 //        for i in 0..<tags.count {
@@ -89,6 +89,8 @@ extension TagSelectionViewController {
 //            }
 //            
 //        }
+        
+        collectionView.reloadData() //Woah, do i have to do this first?
         
     }
     
@@ -133,6 +135,10 @@ extension TagSelectionViewController : UICollectionViewDataSource {
         
         cell.seed(tag: tag)
         
+        if (selectedTags.contains(tag)){
+            cell.isSelected = true
+        }
+        
         setCellColorIfNeeded(cell)
         
         if animateCollectionViewCellCreation {
@@ -174,9 +180,6 @@ extension TagSelectionViewController : UICollectionViewDelegate {
         let attributes = collectionView.layoutAttributesForItem(at: indexPath)
         let cellRect = attributes!.frame
         let cellFrameInSuperView = collectionView.convert(cellRect, to: view.window)
-        
-        
-        
         
         
         setCellColorIfNeeded(cell)

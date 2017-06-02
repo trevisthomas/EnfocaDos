@@ -15,6 +15,8 @@ protocol EventListener {
 
 enum EventType {
     case tagUpdate
+    case tagCreated
+    case tagDeleted
     
     
 }

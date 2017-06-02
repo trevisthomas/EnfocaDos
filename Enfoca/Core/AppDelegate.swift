@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct WeakReference<T>
+{
+    weak var _reference:AnyObject?
+    init(_ object:T) {_reference = object as? AnyObject}
+    var reference:T? { return _reference as? T }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var webService : WebService!
     var applicationDefaults : ApplicationDefaults!
-    var activeController: EventListener?
+    
+    fileprivate var eventListeners: [WeakReference<EventListener>] = []
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -56,6 +63,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+extension AppDelegate {
+    
+    func addListener(listener: EventListener) {
+        
+        for ref in eventListeners {
+            guard let l = ref.reference else { continue }
+            if listener as AnyObject === l as AnyObject {
+                return
+            }
+        }
+        
+        let ref = WeakReference<EventListener>(listener)
+        eventListeners.append(ref)
+    }
+    
+    func fireEvent(source: AnyObject, event: Event) {
+        //Hm, should probably remove dereferenced ones.
+        
+        for ref in eventListeners {
+            guard let listener = ref.reference else {
+                //TODO, cleanup?
+                return
+            }
+            
+            if source === listener as AnyObject{
+                
+                return
+            }
+            
+            ref.reference?.onEvent(event: event)
+            
+        }
+    }
+}
+
 
 func getAppDelegate() -> AppDelegate{
     return UIApplication.shared.delegate as! AppDelegate
