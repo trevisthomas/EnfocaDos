@@ -57,7 +57,7 @@ extension TagSelectionViewController {
         
         self.tags = []
         self.tags.append(contentsOf: tags)
-        
+        collectionView.reloadData()
         
     }
     
@@ -66,6 +66,7 @@ extension TagSelectionViewController {
         
         self.tags = []
         self.tags.append(contentsOf: tags)
+        collectionView.reloadData()
     }
     
     func initialize(tags: [Tag], selectedTags: [Tag], delegate: WordTagSelectionDelegate ) {
@@ -75,22 +76,8 @@ extension TagSelectionViewController {
         self.tags.append(editMarkerTag)
         self.tags.append(contentsOf: tags)
         
-//        self.selectedTags.removeAll()
-//        self.selectedTags.append(contentsOf: selectedTags)
-
-        self.selectedTags(tags: selectedTags)
-        
-//        for i in 0..<tags.count {
-//            let tag = tags[i]
-//            
-//            if (selectedTags.contains(tag)){
-//                let ip = IndexPath(row: i, section: 0)
-//                collectionView.selectItem(at: ip, animated: false, scrollPosition: .left)
-//            }
-//            
-//        }
-        
         collectionView.reloadData() //Woah, do i have to do this first?
+        self.selectedTags(tags: selectedTags)
         
     }
     
@@ -135,12 +122,8 @@ extension TagSelectionViewController : UICollectionViewDataSource {
         
         cell.seed(tag: tag)
         
-        if (selectedTags.contains(tag)){
-            cell.isSelected = true
-        }
-        
         setCellColorIfNeeded(cell)
-        
+
         if animateCollectionViewCellCreation {
             let origFram = cell.frame
             
@@ -172,7 +155,6 @@ extension TagSelectionViewController : UICollectionViewDelegate {
         if(tag == editMarkerTag){
             guard let wordTagSelectionDelegate = wordTagSelectionDelegate else { abort() }
             wordTagSelectionDelegate.onShowTagEditor()
-//            cell.isSelected = false
             collectionView.deselectItem(at: indexPath, animated: false)
             return
         }

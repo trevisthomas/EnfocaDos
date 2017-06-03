@@ -63,6 +63,9 @@ class EditWordPairFromCellAnimator: NSObject, UIViewControllerAnimatedTransition
         }) { (_: Bool) in
             //
             self.storedContext.completeTransition(true)
+            for view in views {
+                view.alpha = 1
+            }
         }
         
     }

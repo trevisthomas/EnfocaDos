@@ -11,6 +11,7 @@ import UIKit
 protocol BrowseControllerDelegate {
     func onBrowseResult(words: [WordPair])
     func onError(title: String, message: EnfocaError)
+    func scrollToWordPair(wordPair: WordPair)
 }
 
 class BrowseController : Controller {
@@ -26,7 +27,7 @@ class BrowseController : Controller {
         self.wordOrder = wordOrder
     }
     
-    public func loadWordPairs(){
+    public func loadWordPairs(callback: @escaping ()->() = {}){
         services.fetchWordPairs(tagFilter: [tag], wordPairOrder: wordOrder, pattern: "") { (pairs: [WordPair]?, error:EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)
@@ -35,6 +36,7 @@ class BrowseController : Controller {
                 return
             }
             self.delegate.onBrowseResult(words: pairs)
+            callback()
         }
     }
     
@@ -45,5 +47,17 @@ class BrowseController : Controller {
     
     func onEvent(event: Event) {
         print("Browse controler recieved event \(event.type)")
+        
+        switch(event.type) {
+        case .wordPairUpdated:
+            loadWordPairs(callback: { 
+                //do it
+                self.delegate.scrollToWordPair(wordPair: event.data as! WordPair)
+            })
+        case .wordPairCreated: abort() // can't create from here.
+        default: break
+        }
+        
+        
     }
 }

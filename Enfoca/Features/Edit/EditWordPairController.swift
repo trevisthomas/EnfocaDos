@@ -12,19 +12,19 @@ protocol EditWordPairControllerDelegate {
     func onTagsLoaded(tags: [Tag], selectedTags: [Tag])
     func onError(title: String, message: EnfocaError)
     func onUpdate()
+    func dismissViewController()
 }
 
 class EditWordPairController: Controller {
     //TODO: Shouln't these be weak?
     private let delegate: EditWordPairControllerDelegate
-//    public let wordPair: WordPair?
     
-    
-    var selectedTags: [Tag] = [] {
-        didSet{
-            delegate.onUpdate()
-        }
-    }
+    var selectedTags: [Tag] = []
+//    {
+//        didSet{
+//            delegate.onUpdate()
+//        }
+//    }
     var word: String = ""
     var definition: String = ""
     let isEditMode: Bool
@@ -92,12 +92,10 @@ class EditWordPairController: Controller {
     }
     
     func onEvent(event: Event) {
-        //TOOD
-        print("EditWP Controller recieved event \(event.type)")
-        
         switch (event.type) {
             case .tagCreated, .tagUpdate, .tagDeleted:
                 initialize()
+            default: break
         }
     }
     
@@ -121,10 +119,43 @@ class EditWordPairController: Controller {
         return true
     }
     
-//    func isValidForCreate() -> Bool {
-//        return false
-//    }
+    func performSaveOrCreate() {
+        if isEditMode {
+            //TODO, more validation
+            
+            guard let originalWordPair = originalWordPair else { fatalError() }
+            services.updateWordPair(oldWordPair: originalWordPair, word: word, definition: definition, gender: .notset, example: nil, tags: selectedTags) { (wordPair:WordPair?, error:EnfocaError?) in
+                
+                if let error = error {
+                    self.delegate.onError(title: "Update failed", message: error)
+                }
+                
+                guard let wordPair = wordPair else { return }
+                
+                self.delegate.dismissViewController()
+                
+                getAppDelegate().fireEvent(source: self, event: Event(type: .wordPairUpdated, data: wordPair))
+                
+            }
+        } else {
+            
+            //TODO, more validation
+            services.createWordPair(word: word, definition: definition, tags: selectedTags, gender: .notset, example: nil, callback: { (wordPair: WordPair?, error: EnfocaError?) in
+                
+                if let error = error {
+                    self.delegate.onError(title: "Create failed", message: error)
+                }
+                
+                guard let wordPair = wordPair else { return }
+                
+                self.delegate.dismissViewController()
+                    
+                getAppDelegate().fireEvent(source: self, event: Event(type: .wordPairCreated, data: wordPair))
+                
 
-
+            })
+        }
+    }
+    
 }
 

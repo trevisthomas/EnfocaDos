@@ -43,12 +43,16 @@ class HomeController: Controller {
     func initialize(){
         loadDefaults()
         
+        reloadTags()
+    }
+    
+    private func reloadTags() {
         services.fetchUserTags { (tags: [Tag]?, error: EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)
             }
             guard let tags = tags else {
-                return 
+                return
             }
             
             self.delegate.onTagsLoaded(tags: tags)
@@ -74,7 +78,11 @@ class HomeController: Controller {
     }
     
     func onEvent(event: Event) {
-        //TOOD
+        switch(event.type) {
+        case .tagCreated, .tagDeleted, .tagUpdate:
+            reloadTags()
+        default: break
+        }
     }
     
 }

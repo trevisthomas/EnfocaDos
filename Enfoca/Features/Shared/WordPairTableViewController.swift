@@ -123,6 +123,12 @@ extension WordPairTableViewController {
         self.wordPairs = []
         tableView.reloadData()
     }
+    
+    func scrollToWordPair(wordPair: WordPair) {
+        guard let index = wordPairs.index(of: wordPair) else { return }
+        let path = IndexPath(row: index, section: 0)
+        tableView.selectRow(at: path, animated: true, scrollPosition: .middle)
+    }
 }
 
 

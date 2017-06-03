@@ -82,6 +82,10 @@ extension BrowseViewController: BrowseControllerDelegate {
     func onError(title: String, message: EnfocaError) {
         presentAlert(title: title, message: message)
     }
+    
+    func scrollToWordPair(wordPair: WordPair) {
+        wordPairTableViewController.scrollToWordPair(wordPair: wordPair)
+    }
 }
 
 extension BrowseViewController: WordPairTableDelegate {

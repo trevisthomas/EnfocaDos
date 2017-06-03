@@ -20,7 +20,7 @@ class EditWordPairViewController: UIViewController {
     @IBOutlet weak var tagSummaryLabel: UILabel!
     @IBOutlet weak var definitionTextField: UITextField!
     @IBOutlet weak var wordTextField: UITextField!
-    @IBOutlet weak var saveOrCreateButton: UIButton!
+    @IBOutlet weak var saveOrCreateButton: EnfocaButton!
     @IBOutlet weak var lookupButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -56,7 +56,8 @@ class EditWordPairViewController: UIViewController {
         
         if controller.isEditMode {
             saveOrCreateButton.setTitle("Save", for: .normal)
-            saveOrCreateButton.isEnabled = false
+            saveOrCreateButton.isEnabledEnfoca = false
+            deleteButton.isEnabled = true
         } else {
             saveOrCreateButton.setTitle("Create", for: .normal)
             deleteButton.isEnabled = false 
@@ -88,12 +89,7 @@ class EditWordPairViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tagFilterViewController = segue.destination as? TagFilterViewController {
-            
-//            let viewModel = TagFilterViewModel(selectedTags: self.controller.selectedTags, delegate: self)
-//            tagFilterViewController.viewModel = viewModel
-            
             tagFilterViewController.tagFilterDelegate = self
-            
         }
     }
     
@@ -106,9 +102,16 @@ class EditWordPairViewController: UIViewController {
 
     @IBAction func deleteButtonAction(_ sender: UIButton) {
     }
+    
     @IBAction func saveOrCreateButtonAction(_ sender: UIButton) {
+        controller.performSaveOrCreate()
     }
+    
     @IBAction func lookupButtonAction(_ sender: UIButton) {
+    }
+    
+    fileprivate func refreshButtonState() {
+        saveOrCreateButton.isEnabledEnfoca = controller.isValidForSaveOrCreate()
     }
 }
 
@@ -123,6 +126,12 @@ extension EditWordPairViewController: EditWordPairControllerDelegate {
     
     func onUpdate() {
         updateFields()
+    }
+    
+    func dismissViewController() {
+        dismiss(animated: true) {
+            //done
+        }
     }
 }
 
@@ -142,17 +151,7 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
         }
     }
     
-//    func getSelectedTags() -> [Tag] {
-//        <#code#>
-//    }
-//    
-//    func onSelectedTagsChanged(tags: [Tag]) {
-//        
-//    }
     
-    fileprivate func refreshButtonState() {
-        saveOrCreateButton.isEnabled = controller.isValidForSaveOrCreate()
-    }
 }
 
 extension EditWordPairViewController: WordTagSelectionDelegate {
