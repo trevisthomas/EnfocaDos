@@ -61,6 +61,8 @@ class EditWordPairViewController: UIViewController {
     }
     
     private func initializeLookAndFeel() {
+        hideKeyboardWhenTappedAround()
+        
         updateFields()
         
         if controller.isEditMode {
