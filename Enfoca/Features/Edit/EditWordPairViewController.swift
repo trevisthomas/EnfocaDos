@@ -110,6 +110,7 @@ class EditWordPairViewController: UIViewController {
     }
 
     @IBAction func deleteButtonAction(_ sender: UIButton) {
+        controller.performDelete()
     }
     
     @IBAction func saveOrCreateButtonAction(_ sender: UIButton) {

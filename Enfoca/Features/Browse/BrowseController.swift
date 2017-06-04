@@ -49,12 +49,11 @@ class BrowseController : Controller {
         print("Browse controler recieved event \(event.type)")
         
         switch(event.type) {
-        case .wordPairUpdated:
+        case .wordPairUpdated, .wordPairCreated, .wordPairDeleted:
             loadWordPairs(callback: { 
                 //do it
                 self.delegate.scrollToWordPair(wordPair: event.data as! WordPair)
             })
-        case .wordPairCreated: abort() // can't create from here.
         default: break
         }
         

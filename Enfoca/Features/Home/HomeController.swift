@@ -83,7 +83,7 @@ class HomeController: Controller {
         switch(event.type) {
         case .tagCreated, .tagDeleted, .tagUpdate:
             reloadTags()
-        case .wordPairCreated, .wordPairUpdated:
+        case .wordPairCreated, .wordPairUpdated, .wordPairDeleted:
             search()
         }
     }

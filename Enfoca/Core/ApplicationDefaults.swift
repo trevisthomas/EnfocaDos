@@ -43,7 +43,7 @@ class LocalApplicationDefaults : ApplicationDefaults {
         let json = defaults.value(forKey: dataStoreKey) as? String
         
         //In case of a dirty shut down, i dont want the old data lying around
-        //        defaults.removeObject(forKey: dataStoreKey)
+        defaults.removeObject(forKey: dataStoreKey)
 
         
         //Load other default settings

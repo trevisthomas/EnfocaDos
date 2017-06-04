@@ -128,6 +128,27 @@ class EditWordPairController: Controller {
         return true
     }
     
+    func performDelete() {
+        guard let originalWordPair = originalWordPair else {
+            self.delegate.onError(title: "Delete failed", message: "Failed to delete.  The editor is not configured for delete.")
+            return
+        }
+        
+        services.deleteWordPair(wordPair: originalWordPair) { (wordPair: WordPair?, error: EnfocaError?) in
+            
+            if let error = error {
+                self.delegate.onError(title: "Update failed", message: error)
+            }
+            
+            guard let wordPair = wordPair else { return }
+            
+            self.delegate.dismissViewController()
+            
+            self.fireEvent(source: self, event: Event(type: .wordPairDeleted, data: wordPair))
+            
+        }
+    }
+    
     func performSaveOrCreate() {
         if isEditMode {
             if isTextFieldInvalid() {
@@ -146,7 +167,7 @@ class EditWordPairController: Controller {
                 
                 self.delegate.dismissViewController()
                 
-                getAppDelegate().fireEvent(source: self, event: Event(type: .wordPairUpdated, data: wordPair))
+                self.fireEvent(source: self, event: Event(type: .wordPairUpdated, data: wordPair))
                 
             }
         } else {
@@ -166,7 +187,7 @@ class EditWordPairController: Controller {
                 
                 self.delegate.dismissViewController()
                     
-                getAppDelegate().fireEvent(source: self, event: Event(type: .wordPairCreated, data: wordPair))
+                self.fireEvent(source: self, event: Event(type: .wordPairCreated, data: wordPair))
                 
 
             })

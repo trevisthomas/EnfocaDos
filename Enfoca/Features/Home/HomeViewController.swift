@@ -161,8 +161,6 @@ class HomeViewController: UIViewController {
             controller.phrase = text
             showWordTable()
         }
-
-        
         
     }
     

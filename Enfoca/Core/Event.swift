@@ -19,6 +19,7 @@ enum EventType {
     case tagDeleted
     case wordPairCreated
     case wordPairUpdated
+    case wordPairDeleted
 }
 
 class Event {

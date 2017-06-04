@@ -198,11 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Features/Home/HomeViewController.swift"
-            timestampString = "518290585.378349"
+            timestampString = "518299473.552197"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "tappedMagnifierCloseAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -438,7 +438,7 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/TagFilterViewModel.swift"
-                  timestampString = "518290712.460424"
+                  timestampString = "518300507.66287"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "73"
@@ -453,7 +453,7 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/TagFilterViewModel.swift"
-                  timestampString = "518290712.46298"
+                  timestampString = "518300507.665468"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "75"
@@ -486,7 +486,7 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/TagFilterViewModel.swift"
-                  timestampString = "518290712.483885"
+                  timestampString = "518300507.733975"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "75"
@@ -501,7 +501,7 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/TagFilterViewModel.swift"
-                  timestampString = "518290712.486819"
+                  timestampString = "518300507.736629"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "75"
@@ -518,11 +518,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Features/Edit/EditWordPairViewController.swift"
-            timestampString = "518289524.790408"
+            timestampString = "518300209.293715"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "onShowTagEditor()"
             landmarkType = "7">
          </BreakpointContent>
@@ -556,22 +556,6 @@
             startingLineNumber = "55"
             endingLineNumber = "55"
             landmarkName = "initialize(create:order:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Enfoca/Features/Home/HomeViewController.swift"
-            timestampString = "518290585.378349"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "languageSegmentedControlChanged(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

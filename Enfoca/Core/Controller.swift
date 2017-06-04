@@ -15,12 +15,16 @@ protocol Controller : EventListener {
     
 }
 
+// If i had an initializer, i would use it to assign myself to the app delegate.
 extension Controller {
     var services : WebService {
         get{
             return getAppDelegate().webService
         }
     }
-    // If i had an initializer, i would use ot to assign myself to the app delegate.
+    
+    func fireEvent(source: AnyObject, event: Event) {
+        getAppDelegate().fireEvent(source: source, event: event)
+    }
 }
 
