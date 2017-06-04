@@ -31,21 +31,30 @@ class EditWordPairController: Controller {
     
     private let originalWordPair: WordPair?
     
-    
-    
-    init(delegate: EditWordPairControllerDelegate, wordPair: WordPair?) {
-        self.delegate = delegate
+    init(delegate: EditWordPairControllerDelegate, wordPairOrder order: WordPairOrder, text: String) {
         
+        self.delegate = delegate
+        isEditMode = false
+        originalWordPair =  nil
+        
+        switch(order) {
+        case .definitionAsc, .definitionDesc:
+            self.definition = text
+        case .wordAsc, .wordDesc:
+            self.word = text
+        }
+    }
+    
+    init(delegate: EditWordPairControllerDelegate, wordPair: WordPair) {
+        self.delegate = delegate
         self.originalWordPair = wordPair
         
-        if let wordPair = wordPair {
-            isEditMode = true
-            selectedTags.append(contentsOf: wordPair.tags)
-            word = wordPair.word
-            definition = wordPair.definition
-        } else {
-            isEditMode = false
-        }
+        isEditMode = true
+        selectedTags.append(contentsOf: wordPair.tags)
+        word = wordPair.word
+        definition = wordPair.definition
+    
+        
     }
     
     func initialize(){
@@ -107,7 +116,7 @@ class EditWordPairController: Controller {
                 return true
             }
         } else {
-            return !(word.trim().isEmpty || definition.trim().isEmpty)
+            return !isTextFieldInvalid()
         }
         
         return false
@@ -121,7 +130,10 @@ class EditWordPairController: Controller {
     
     func performSaveOrCreate() {
         if isEditMode {
-            //TODO, more validation
+            if isTextFieldInvalid() {
+                self.delegate.onError(title: "Update failed", message: "Invalid content in word or definition")
+                return
+            }
             
             guard let originalWordPair = originalWordPair else { fatalError() }
             services.updateWordPair(oldWordPair: originalWordPair, word: word, definition: definition, gender: .notset, example: nil, tags: selectedTags) { (wordPair:WordPair?, error:EnfocaError?) in
@@ -139,7 +151,11 @@ class EditWordPairController: Controller {
             }
         } else {
             
-            //TODO, more validation
+            if isTextFieldInvalid() {
+                self.delegate.onError(title: "Create failed", message: "Invalid content in word or definition")
+                return
+            }
+            
             services.createWordPair(word: word, definition: definition, tags: selectedTags, gender: .notset, example: nil, callback: { (wordPair: WordPair?, error: EnfocaError?) in
                 
                 if let error = error {
@@ -156,6 +172,11 @@ class EditWordPairController: Controller {
             })
         }
     }
+    
+    private func isTextFieldInvalid() -> Bool {
+        return word.trim().isEmpty || definition.trim().isEmpty
+    }
+    
     
 }
 

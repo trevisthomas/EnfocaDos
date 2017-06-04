@@ -11,12 +11,14 @@ import UIKit
 protocol WordPairTableDelegate {
     func dismissKeyboard()
     func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell)
+    func onCreate(atRect: CGRect, cell: UITableViewCell)
 }
 
 class WordPairTableViewController: UITableViewController {
     fileprivate var delegate: WordPairTableDelegate!
     fileprivate var wordPairs: [WordPair] = []
     fileprivate var order: WordPairOrder!
+    fileprivate var createText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,24 +42,38 @@ class WordPairTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return wordPairs.count
+        if createText.trim().isEmpty{
+            return wordPairs.count
+        } else {
+            return wordPairs.count + 1
+        }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WordPairTableViewCell.identifier, for: indexPath) as! WordPairTableViewCell
 
-        cell.initialize(wordPair: wordPairs[indexPath.row], order: order)
+        if (wordPairs.count <= indexPath.row) {
+            cell.initialize(create: createText, order: order)
+        } else {
+            cell.initialize(wordPair: wordPairs[indexPath.row], order: order)
+        }
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) else { fatalError() }
+        guard let cell = tableView.cellForRow(at: indexPath) as? WordPairTableViewCell else { fatalError() }
         
         let cellFrameInSuperView = tableView.convert(cell.frame, to: view.window)
         
-        delegate.onWordPairSelected(wordPair: wordPairs[indexPath.row], atRect: cellFrameInSuperView, cell: cell)
+        if cell.isCreateMode {
+            delegate.onCreate(atRect: cellFrameInSuperView, cell: cell)
+        } else {
+            delegate.onWordPairSelected(wordPair: wordPairs[indexPath.row], atRect: cellFrameInSuperView, cell: cell)
+        }
+        
+        
     }
     
 
@@ -109,8 +125,9 @@ class WordPairTableViewController: UITableViewController {
 }
 
 extension WordPairTableViewController {
-    func initialize(delegate: WordPairTableDelegate){
+    func initialize(delegate: WordPairTableDelegate, order: WordPairOrder){
         self.delegate = delegate
+        self.order = order
     }
     
     func updateWordPairs(order: WordPairOrder, wordPairs: [WordPair]) {
@@ -128,6 +145,11 @@ extension WordPairTableViewController {
         guard let index = wordPairs.index(of: wordPair) else { return }
         let path = IndexPath(row: index, section: 0)
         tableView.selectRow(at: path, animated: true, scrollPosition: .middle)
+    }
+    
+    func offerCreation(withText: String){
+        createText = withText
+        tableView.reloadData()
     }
 }
 

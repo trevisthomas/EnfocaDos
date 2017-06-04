@@ -19,10 +19,12 @@ protocol HomeControllerDelegate {
 class HomeController: Controller {
     
     let delegate: HomeControllerDelegate!
-    var wordOrder: WordPairOrder!
+    var selectedWordPair: WordPair?
+    var wordOrder: WordPairOrder = .definitionAsc
     {
         didSet {
             if oldValue != wordOrder {
+                self.search()
                 delegate.onWordPairOrderChanged()
             }
         }
@@ -81,7 +83,8 @@ class HomeController: Controller {
         switch(event.type) {
         case .tagCreated, .tagDeleted, .tagUpdate:
             reloadTags()
-        default: break
+        case .wordPairCreated, .wordPairUpdated:
+            search()
         }
     }
     

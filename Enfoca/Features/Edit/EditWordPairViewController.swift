@@ -10,6 +10,9 @@ import UIKit
 
 protocol EditWordPairViewControllerDelegate {
     var sourceWordPair: WordPair {get}
+    func isCreateMode() -> Bool
+    func getCreateText() -> String
+    func getWordPairOrder() -> WordPairOrder
 }
 
 class EditWordPairViewController: UIViewController {
@@ -21,8 +24,8 @@ class EditWordPairViewController: UIViewController {
     @IBOutlet weak var definitionTextField: UITextField!
     @IBOutlet weak var wordTextField: UITextField!
     @IBOutlet weak var saveOrCreateButton: EnfocaButton!
-    @IBOutlet weak var lookupButton: UIButton!
-    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var lookupButton: EnfocaButton!
+    @IBOutlet weak var deleteButton: EnfocaButton!
     
     var delegate: EditWordPairViewControllerDelegate!
     
@@ -30,7 +33,12 @@ class EditWordPairViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        controller = EditWordPairController(delegate: self, wordPair: delegate.sourceWordPair)
+        
+        if delegate.isCreateMode() {
+            controller = EditWordPairController(delegate: self, wordPairOrder: delegate.getWordPairOrder(), text: delegate.getCreateText())
+        } else {
+            controller = EditWordPairController(delegate: self, wordPair: delegate.sourceWordPair)
+        }
         
         initializeLookAndFeel()
         initializeSubViews()
@@ -38,6 +46,7 @@ class EditWordPairViewController: UIViewController {
         controller.initialize()
         
         getAppDelegate().addListener(listener: controller)
+        refreshButtonState()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,10 +66,10 @@ class EditWordPairViewController: UIViewController {
         if controller.isEditMode {
             saveOrCreateButton.setTitle("Save", for: .normal)
             saveOrCreateButton.isEnabledEnfoca = false
-            deleteButton.isEnabled = true
+            deleteButton.isEnabledEnfoca = true
         } else {
             saveOrCreateButton.setTitle("Create", for: .normal)
-            deleteButton.isEnabled = false 
+            deleteButton.isEnabledEnfoca = false
         }
         
         wordTextField.addTarget(self, action: #selector(wordTextDidChange(_:)), for: [.editingChanged])

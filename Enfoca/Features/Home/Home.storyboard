@@ -200,6 +200,7 @@
                         <outlet property="titleLabel" destination="mgK-Ja-kbt" id="OOw-wf-stW"/>
                         <outlet property="titleTopConstraint" destination="8Nb-aH-2eB" id="oSD-6g-JCW"/>
                         <segue destination="U16-qW-lzJ" kind="show" identifier="BrowseViewControllerSegue" id="hti-2s-lZO"/>
+                        <segue destination="seo-qB-PAl" kind="show" identifier="EditWordPairControllerSegue" id="car-vL-6vY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-PW-uCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,6 +219,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqC-gY-7Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="562" y="463"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="sRv-om-cox">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Edit" id="seo-qB-PAl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OEN-YB-pJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-374" y="591"/>
         </scene>
     </scenes>
 </document>

@@ -38,7 +38,7 @@ class BrowseViewController: UIViewController {
         
         wordPairTableViewController = createWordPairTableViewController(inContainerView: tableViewContainer)
         
-        wordPairTableViewController.initialize(delegate: self)
+        wordPairTableViewController.initialize(delegate: self, order: controller.wordOrder)
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +72,15 @@ extension BrowseViewController: EditWordPairViewControllerDelegate {
             return controller.selectedWordPair!
         }
     }
+    func isCreateMode() -> Bool {
+        return false
+    }
+    func getCreateText() -> String {
+        fatalError()
+    }
+    func getWordPairOrder() -> WordPairOrder {
+        fatalError()
+    }
 }
 
 extension BrowseViewController: BrowseControllerDelegate {
@@ -89,6 +98,10 @@ extension BrowseViewController: BrowseControllerDelegate {
 }
 
 extension BrowseViewController: WordPairTableDelegate {
+    func onCreate(atRect: CGRect, cell: UITableViewCell) {
+        fatalError("Creating from browse is not implemented")
+    }
+
     func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
         
         editWordPairFromCellAnimator.sourceCell = cell

@@ -38,10 +38,10 @@ class EditWordPairFromCellAnimator: NSObject, UIViewControllerAnimatedTransition
         }
         
         
-        //NOTE: Eventually from can be other places. Hm
-        guard let fromViewController = storedContext.viewController(forKey: .from) as? BrowseViewController else {
-            fatalError()
-        }
+//        //NOTE: Eventually from can be other places. Hm
+//        guard let fromViewController = storedContext.viewController(forKey: .from) as? BrowseViewController else {
+//            fatalError()
+//        }
         
         containerView.addSubview(toViewController.view)
         
@@ -73,25 +73,36 @@ class EditWordPairFromCellAnimator: NSObject, UIViewControllerAnimatedTransition
     private func performDismiss() {
         let containerView = storedContext.containerView
         
-        guard let toViewController = storedContext.viewController(forKey: .to) as? BrowseViewController else {
+        
+        if let toViewController = storedContext.viewController(forKey: .to) as? BrowseViewController {
+            
+            containerView.addSubview(toViewController.view)
+            
+            
+            toViewController.view.alpha = 0
+            
+            UIView.animate(withDuration: duration, delay: 0.0, options: [.curveEaseIn], animations: {
+                toViewController.view.alpha = 1
+            }) { (_: Bool) in
+                //
+                self.storedContext.completeTransition(true)
+            }
+        } else if let toViewController = storedContext.viewController(forKey: .to) as? HomeViewController {
+            containerView.addSubview(toViewController.view)
+            
+            
+            toViewController.view.alpha = 0
+            
+            UIView.animate(withDuration: duration, delay: 0.0, options: [.curveEaseIn], animations: {
+                toViewController.view.alpha = 1
+            }) { (_: Bool) in
+                //
+                self.storedContext.completeTransition(true)
+            }
+        } else {
             fatalError()
         }
         
-        guard let fromViewController = storedContext.viewController(forKey: .from) as? EditWordPairViewController else {
-            fatalError()
-        }
-        
-        containerView.addSubview(toViewController.view)
-        
-        
-        toViewController.view.alpha = 0
-        
-        UIView.animate(withDuration: duration, delay: 0.0, options: [.curveEaseIn], animations: {
-            toViewController.view.alpha = 1
-        }) { (_: Bool) in
-            //
-            self.storedContext.completeTransition(true)
-        }
     }
     
     private func allViewsBut(thisView: UIView)->[UIView] {

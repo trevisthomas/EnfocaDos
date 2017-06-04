@@ -17,6 +17,8 @@ class WordPairTableViewCell: UITableViewCell {
     @IBOutlet weak var tagsTextLabel: UILabel!
     @IBOutlet weak var scoreTextLabel: UILabel!
     
+    fileprivate(set) var isCreateMode : Bool = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,6 +34,7 @@ class WordPairTableViewCell: UITableViewCell {
 extension WordPairTableViewCell {
     func initialize(wordPair: WordPair, order: WordPairOrder){
         self.wordPair = wordPair
+        isCreateMode = false
         
         switch order{
         case .definitionAsc, .definitionDesc:
@@ -47,4 +50,15 @@ extension WordPairTableViewCell {
         self.scoreTextLabel.text = wordPair.metaData?.scoreAsString
         
     }
+    
+    func initialize(create: String, order: WordPairOrder) {
+        isCreateMode = true
+        
+        self.primarTextLabel.text = "Create: \(create)"
+        self.scoreTextLabel.text = ""
+        self.tagsTextLabel.text = ""
+        self.secondaryTextLabel.text = ""
+    }
+    
+    
 }

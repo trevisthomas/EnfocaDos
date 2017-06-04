@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var magifierCloseView: MagnifierCloseView!
     
-    
+    fileprivate var editWordPairFromCellAnimator = EditWordPairFromCellAnimator()
     fileprivate var wordPairs : [WordPair] = []
     
     fileprivate let browseViewFromHomeAnimator = BrowseFromHomeAnimator()
@@ -50,11 +50,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        controller = HomeController(delegate: self)
+        
         initializeLookAndFeel()
         
         initializeSubViews()
         
-        controller = HomeController(delegate: self)
+        
         controller.initialize()
         getAppDelegate().addListener(listener: controller)
         
@@ -90,7 +92,7 @@ class HomeViewController: UIViewController {
         
         wordPairTableViewController = createWordPairTableViewController(inContainerView: searchResultsTableViewContainer)
         
-        wordPairTableViewController.initialize(delegate: self)
+        wordPairTableViewController.initialize(delegate: self, order: controller.wordOrder)
         
         browseByTagViewController.animateCollectionViewCellCreation = true
         quizByTagViewControler.animateCollectionViewCellCreation = true
@@ -107,10 +109,12 @@ class HomeViewController: UIViewController {
     
     private func showWordTable(){
         guard isWordTableContracted() else {
-            print("already expanded")
+//            print("already expanded")
             return
         }
         
+        controller.phrase = ""
+        controller.search()
         hightConstraintOnGray.constant = expandedHeightConstraintOnGray
 
         magifierCloseView.toggle()
@@ -123,8 +127,10 @@ class HomeViewController: UIViewController {
     }
     
     private func hideWordTable(){
+        wordPairTableViewController.offerCreation(withText: "")
+        
         guard isWordTableExpanded() else {
-            print("already contracted")
+//            print("already contracted")
             return
         }
         
@@ -148,6 +154,7 @@ class HomeViewController: UIViewController {
     func searchOrCreateTextDidChange(_ textField: UITextField) {
         let text = textField.text ?? ""
         
+        wordPairTableViewController.offerCreation(withText: text)
         if text.isEmpty {
             hideWordTable()
         } else {
@@ -155,7 +162,8 @@ class HomeViewController: UIViewController {
             showWordTable()
         }
 
-        print(text)
+        
+        
     }
     
     func searchOrCreateTextEditingDidEnd(_ textField: UITextField) {
@@ -209,6 +217,15 @@ class HomeViewController: UIViewController {
             toBrowseViewController.transitioningDelegate = self
             toBrowseViewController.controller = browseController
         }
+        
+        if let editWordPairVC = segue.destination as? EditWordPairViewController  {
+            
+            editWordPairVC.transitioningDelegate = self
+            
+            editWordPairVC.delegate = self
+            
+        }
+
     }
     
 }
@@ -223,6 +240,11 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
             return browseViewFromHomeAnimator
         }
         
+        if let _ = presented as? EditWordPairViewController, let _ = source as? HomeViewController {
+            editWordPairFromCellAnimator.presenting = true
+            return editWordPairFromCellAnimator
+        }
+        
         return nil
     }
     
@@ -235,10 +257,14 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
             return browseViewFromHomeAnimator
         }
         
+        if let _ = dismissed as? EditWordPairViewController {
+            editWordPairFromCellAnimator.presenting = false
+            return editWordPairFromCellAnimator
+        }
+        
         return nil
     }
 }
-
 
 extension HomeViewController: HomeControllerDelegate {
     func onTagsLoaded(tags: [Tag]) {
@@ -285,9 +311,47 @@ extension HomeViewController: QuizTagSelectionDelegate {
 }
 
 extension HomeViewController: WordPairTableDelegate {
+    func onCreate(atRect: CGRect, cell: UITableViewCell) {
+        
+        controller.selectedWordPair = nil
+        
+        editWordPairFromCellAnimator.sourceCell = cell
+        
+        performSegue(withIdentifier: "EditWordPairControllerSegue", sender: nil)
+    }
+    
     func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
-        print("Selected \(wordPair.word)")
-        print("at Rect \(atRect)")
+        
+        editWordPairFromCellAnimator.sourceCell = cell
+        
+        controller.selectedWordPair = wordPair
+        
+        performSegue(withIdentifier: "EditWordPairControllerSegue", sender: wordPair)
+    }
+    
+//    func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
+//        print("Selected \(wordPair.word)")
+//        print("at Rect \(atRect)")
+//    }
+}
+
+extension HomeViewController: EditWordPairViewControllerDelegate {
+    func getWordPairOrder() -> WordPairOrder {
+        return controller.wordOrder
+    }
+
+    var sourceWordPair: WordPair {
+        get {
+            return controller.selectedWordPair!
+        }
+    }
+    
+    func isCreateMode() -> Bool {
+        return controller.selectedWordPair == nil
+    }
+    
+    func getCreateText() -> String {
+        return searchOrCreateTextField.text!
     }
 }
 
