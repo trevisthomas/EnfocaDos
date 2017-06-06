@@ -27,6 +27,95 @@
 		0F911E1A1EE518C700F21855 /* BrowseFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E191EE518C700F21855 /* BrowseFeatureTests.swift */; };
 		0F911E1C1EE5B20600F21855 /* UiTestWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */; };
 		0F911E1E1EE736F300F21855 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1D1EE736F300F21855 /* HomeTests.swift */; };
+		0F911E211EE75D4600F21855 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */; };
+		0F911E221EE75D4600F21855 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5591EC96A7800F31F9A /* Style.swift */; };
+		0F911E231EE75D4600F21855 /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */; };
+		0F911E241EE75D4600F21855 /* ApplicationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */; };
+		0F911E251EE75D4600F21855 /* OperationCreateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */; };
+		0F911E261EE75D4600F21855 /* OperationUpdateTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */; };
+		0F911E271EE75D4600F21855 /* ProgressObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */; };
+		0F911E281EE75D4600F21855 /* InternalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5211EC8EC9000F31F9A /* InternalUser.swift */; };
+		0F911E291EE75D4600F21855 /* OperationCreateWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */; };
+		0F911E2A1EE75D4600F21855 /* Perform+WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */; };
+		0F911E2B1EE75D4600F21855 /* OperationUpdateWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */; };
+		0F911E2C1EE75D4600F21855 /* LocalCloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */; };
+		0F911E2D1EE75D4600F21855 /* BaseCKOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5291EC8EC9C00F31F9A /* BaseCKOperation.swift */; };
+		0F911E2E1EE75D4600F21855 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5041EC8EAF100F31F9A /* EnumCollection.swift */; };
+		0F911E2F1EE75D4600F21855 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A58C1ECCD8C400F31F9A /* Controller.swift */; };
+		0F911E301EE75D4600F21855 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5501EC8EE5B00F31F9A /* Globals.swift */; };
+		0F911E311EE75D4600F21855 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52A1EC8EC9C00F31F9A /* BaseOperation.swift */; };
+		0F911E321EE75D4600F21855 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E071EE08E8300F21855 /* TagCell.swift */; };
+		0F911E331EE75D4600F21855 /* EnfocaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E171EE30AD100F21855 /* EnfocaButton.swift */; };
+		0F911E341EE75D4600F21855 /* WordPairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */; };
+		0F911E351EE75D4600F21855 /* Perform+Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5141EC8EC6E00F31F9A /* Perform+Tags.swift */; };
+		0F911E361EE75D4600F21855 /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */; };
+		0F911E371EE75D4600F21855 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A58A1ECCAE9C00F31F9A /* Event.swift */; };
+		0F911E381EE75D4600F21855 /* WordPairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */; };
+		0F911E391EE75D4600F21855 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D91EC8E91E00F31F9A /* Tag.swift */; };
+		0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */; };
+		0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
+		0F911E3C1EE75D4600F21855 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */; };
+		0F911E3D1EE75D4600F21855 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */; };
+		0F911E3E1EE75D4600F21855 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */; };
+		0F911E3F1EE75D4600F21855 /* MonitoredBaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */; };
+		0F911E401EE75D4600F21855 /* EnfocaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4F91EC8E9AF00F31F9A /* EnfocaError.swift */; };
+		0F911E411EE75D4600F21855 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20C1ED1E3F400D8BD1A /* String+.swift */; };
+		0F911E421EE75D4600F21855 /* OperationFetchWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */; };
+		0F911E431EE75D4600F21855 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
+		0F911E441EE75D4600F21855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
+		0F911E451EE75D4600F21855 /* EditWordPairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */; };
+		0F911E461EE75D4600F21855 /* OperationCreateTagAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */; };
+		0F911E471EE75D4600F21855 /* CloudAuthOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */; };
+		0F911E481EE75D4600F21855 /* ErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */; };
+		0F911E491EE75D4600F21855 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */; };
+		0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */; };
+		0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */; };
+		0F911E4C1EE75D4600F21855 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */; };
+		0F911E4D1EE75D4600F21855 /* CardOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D41EC8E91E00F31F9A /* CardOrder.swift */; };
+		0F911E4E1EE75D4600F21855 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DB1EC8E91E00F31F9A /* User.swift */; };
+		0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */; };
+		0F911E501EE75D4600F21855 /* JsonDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */; };
+		0F911E511EE75D4600F21855 /* OperationPagedWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */; };
+		0F911E521EE75D4600F21855 /* OperationCountWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */; };
+		0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */; };
+		0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */; };
+		0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */; };
+		0F911E561EE75D4600F21855 /* BaseUserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */; };
+		0F911E571EE75D4600F21855 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */; };
+		0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
+		0F911E591EE75D4600F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */; };
+		0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */; };
+		0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
+		0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
+		0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5641ECBC93700F31F9A /* HomeController.swift */; };
+		0F911E5E1EE75D4600F21855 /* CloudKitConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */; };
+		0F911E5F1EE75D4600F21855 /* CloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */; };
+		0F911E601EE75D4600F21855 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D61EC8E91E00F31F9A /* Gender.swift */; };
+		0F911E611EE75D4600F21855 /* OperationDeleteRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */; };
+		0F911E621EE75D4600F21855 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */; };
+		0F911E631EE75D4600F21855 /* WordPairOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */; };
+		0F911E641EE75D4600F21855 /* FetchUserRecordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */; };
+		0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */; };
+		0F911E661EE75D4600F21855 /* EditWordPairFromCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */; };
+		0F911E671EE75D4600F21855 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EE1EC8E94700F31F9A /* WebService.swift */; };
+		0F911E681EE75D4600F21855 /* OperationFetchMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */; };
+		0F911E691EE75D4600F21855 /* FetchUserRecordId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */; };
+		0F911E6A1EE75D4600F21855 /* TagFilterViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0B1EE08E8300F21855 /* TagFilterViewModelDelegate.swift */; };
+		0F911E6B1EE75D4600F21855 /* TagAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DA1EC8E91E00F31F9A /* TagAssociation.swift */; };
+		0F911E6C1EE75D4600F21855 /* OperationCreateTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53A1EC8ECD200F31F9A /* OperationCreateTag.swift */; };
+		0F911E6D1EE75D4600F21855 /* TagSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD20CD1ECE65B3002EACDA /* TagSelectionViewController.swift */; };
+		0F911E6E1EE75D4600F21855 /* OperationFetchTagAssociations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53D1EC8ECD200F31F9A /* OperationFetchTagAssociations.swift */; };
+		0F911E6F1EE75D4600F21855 /* FetchOrCreateEnfocaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */; };
+		0F911E701EE75D4600F21855 /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5131EC8EC6E00F31F9A /* Perform.swift */; };
+		0F911E721EE75D4600F21855 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */; };
+		0F911E741EE75D4600F21855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
+		0F911E751EE75D4600F21855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
+		0F911E761EE75D4600F21855 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
+		0F911E771EE75D4600F21855 /* WordPairTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */; };
+		0F911E781EE75D4600F21855 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B851EDC64DD00FC20A1 /* Edit.storyboard */; };
+		0F911E791EE75D4600F21855 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */; };
+		0F911E7A1EE75D4600F21855 /* TagSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */; };
+		0F911E7B1EE75D4600F21855 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A5551EC8F51B00F31F9A /* Home.storyboard */; };
 		0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
 		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
 		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
@@ -158,6 +247,8 @@
 		0F911E191EE518C700F21855 /* BrowseFeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseFeatureTests.swift; sourceTree = "<group>"; };
 		0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiTestWebService.swift; sourceTree = "<group>"; };
 		0F911E1D1EE736F300F21855 /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		0F911E7F1EE75D4600F21855 /* Enfoca Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enfoca Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F911E801EE75D4600F21855 /* Enfoca Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Enfoca Dev-Info.plist"; path = "/Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca Dev-Info.plist"; sourceTree = "<absolute>"; };
 		0FA4A4891EC89C0D00F31F9A /* Enfoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enfoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -259,6 +350,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F911E711EE75D4600F21855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F911E721EE75D4600F21855 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +464,7 @@
 				0FA4A4891EC89C0D00F31F9A /* Enfoca.app */,
 				0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */,
 				0F085B781ED8796D00FC20A1 /* EnfocaUITests.xctest */,
+				0F911E7F1EE75D4600F21855 /* Enfoca Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -465,6 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				0FA4A4C71EC8CBA100F31F9A /* Info.plist */,
+				0F911E801EE75D4600F21855 /* Enfoca Dev-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -720,6 +821,23 @@
 			productReference = 0F085B781ED8796D00FC20A1 /* EnfocaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0F911E1F1EE75D4600F21855 /* Enfoca Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F911E7C1EE75D4600F21855 /* Build configuration list for PBXNativeTarget "Enfoca Dev" */;
+			buildPhases = (
+				0F911E201EE75D4600F21855 /* Sources */,
+				0F911E711EE75D4600F21855 /* Frameworks */,
+				0F911E731EE75D4600F21855 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Enfoca Dev";
+			productName = Enfoca;
+			productReference = 0F911E7F1EE75D4600F21855 /* Enfoca Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0FA4A4881EC89C0D00F31F9A /* Enfoca */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FA4A4A61EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "Enfoca" */;
@@ -771,6 +889,9 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0FA4A4881EC89C0D00F31F9A;
 					};
+					0F911E1F1EE75D4600F21855 = {
+						DevelopmentTeam = KRNJ229R7J;
+					};
 					0FA4A4881EC89C0D00F31F9A = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = KRNJ229R7J;
@@ -808,6 +929,7 @@
 				0FA4A4881EC89C0D00F31F9A /* Enfoca */,
 				0FA4A49C1EC89C0D00F31F9A /* EnfocaTests */,
 				0F085B771ED8796D00FC20A1 /* EnfocaUITests */,
+				0F911E1F1EE75D4600F21855 /* Enfoca Dev */,
 			);
 		};
 /* End PBXProject section */
@@ -817,6 +939,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F911E731EE75D4600F21855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F911E741EE75D4600F21855 /* LaunchScreen.storyboard in Resources */,
+				0F911E751EE75D4600F21855 /* Assets.xcassets in Resources */,
+				0F911E761EE75D4600F21855 /* Browse.storyboard in Resources */,
+				0F911E771EE75D4600F21855 /* WordPairTableStoryboard.storyboard in Resources */,
+				0F911E781EE75D4600F21855 /* Edit.storyboard in Resources */,
+				0F911E791EE75D4600F21855 /* Loading.storyboard in Resources */,
+				0F911E7A1EE75D4600F21855 /* TagSelection.storyboard in Resources */,
+				0F911E7B1EE75D4600F21855 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,6 +989,93 @@
 				0F911E1A1EE518C700F21855 /* BrowseFeatureTests.swift in Sources */,
 				0F911E1E1EE736F300F21855 /* HomeTests.swift in Sources */,
 				0F085B7B1ED8796D00FC20A1 /* EnfocaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F911E201EE75D4600F21855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F911E211EE75D4600F21855 /* DataStore.swift in Sources */,
+				0F911E221EE75D4600F21855 /* Style.swift in Sources */,
+				0F911E231EE75D4600F21855 /* WordPair.swift in Sources */,
+				0F911E241EE75D4600F21855 /* ApplicationDefaults.swift in Sources */,
+				0F911E251EE75D4600F21855 /* OperationCreateMetaData.swift in Sources */,
+				0F911E261EE75D4600F21855 /* OperationUpdateTag.swift in Sources */,
+				0F911E271EE75D4600F21855 /* ProgressObserver.swift in Sources */,
+				0F911E281EE75D4600F21855 /* InternalUser.swift in Sources */,
+				0F911E291EE75D4600F21855 /* OperationCreateWordPair.swift in Sources */,
+				0F911E2A1EE75D4600F21855 /* Perform+WordPair.swift in Sources */,
+				0F911E2B1EE75D4600F21855 /* OperationUpdateWordPair.swift in Sources */,
+				0F911E2C1EE75D4600F21855 /* LocalCloudKitWebService.swift in Sources */,
+				0F911E2D1EE75D4600F21855 /* BaseCKOperation.swift in Sources */,
+				0F911E2E1EE75D4600F21855 /* EnumCollection.swift in Sources */,
+				0F911E2F1EE75D4600F21855 /* Controller.swift in Sources */,
+				0F911E301EE75D4600F21855 /* Globals.swift in Sources */,
+				0F911E311EE75D4600F21855 /* BaseOperation.swift in Sources */,
+				0F911E321EE75D4600F21855 /* TagCell.swift in Sources */,
+				0F911E331EE75D4600F21855 /* EnfocaButton.swift in Sources */,
+				0F911E341EE75D4600F21855 /* WordPairTableViewCell.swift in Sources */,
+				0F911E351EE75D4600F21855 /* Perform+Tags.swift in Sources */,
+				0F911E361EE75D4600F21855 /* Sequence+.swift in Sources */,
+				0F911E371EE75D4600F21855 /* Event.swift in Sources */,
+				0F911E381EE75D4600F21855 /* WordPairTableViewController.swift in Sources */,
+				0F911E391EE75D4600F21855 /* Tag.swift in Sources */,
+				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
+				0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */,
+				0F911E3C1EE75D4600F21855 /* HomeViewController.swift in Sources */,
+				0F911E3D1EE75D4600F21855 /* UIColor+.swift in Sources */,
+				0F911E3E1EE75D4600F21855 /* TagCollectionViewCell.swift in Sources */,
+				0F911E3F1EE75D4600F21855 /* MonitoredBaseOperation.swift in Sources */,
+				0F911E401EE75D4600F21855 /* EnfocaError.swift in Sources */,
+				0F911E411EE75D4600F21855 /* String+.swift in Sources */,
+				0F911E421EE75D4600F21855 /* OperationFetchWordPairs.swift in Sources */,
+				0F911E431EE75D4600F21855 /* MagnifierCloseView.swift in Sources */,
+				0F911E441EE75D4600F21855 /* AppDelegate.swift in Sources */,
+				0F911E451EE75D4600F21855 /* EditWordPairViewController.swift in Sources */,
+				0F911E461EE75D4600F21855 /* OperationCreateTagAssociation.swift in Sources */,
+				0F911E471EE75D4600F21855 /* CloudAuthOperation.swift in Sources */,
+				0F911E481EE75D4600F21855 /* ErrorDelegate.swift in Sources */,
+				0F911E491EE75D4600F21855 /* LoadingViewController.swift in Sources */,
+				0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */,
+				0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */,
+				0F911E4C1EE75D4600F21855 /* MetaData.swift in Sources */,
+				0F911E4D1EE75D4600F21855 /* CardOrder.swift in Sources */,
+				0F911E4E1EE75D4600F21855 /* User.swift in Sources */,
+				0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */,
+				0F911E501EE75D4600F21855 /* JsonDateFormatter.swift in Sources */,
+				0F911E511EE75D4600F21855 /* OperationPagedWordPairs.swift in Sources */,
+				0F911E521EE75D4600F21855 /* OperationCountWordPairs.swift in Sources */,
+				0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */,
+				0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */,
+				0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */,
+				0F911E561EE75D4600F21855 /* BaseUserOperation.swift in Sources */,
+				0F911E571EE75D4600F21855 /* TagFilterViewModel.swift in Sources */,
+				0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */,
+				0F911E591EE75D4600F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
+				0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */,
+				0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */,
+				0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */,
+				0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */,
+				0F911E5E1EE75D4600F21855 /* CloudKitConverters.swift in Sources */,
+				0F911E5F1EE75D4600F21855 /* CloudKitWebService.swift in Sources */,
+				0F911E601EE75D4600F21855 /* Gender.swift in Sources */,
+				0F911E611EE75D4600F21855 /* OperationDeleteRecord.swift in Sources */,
+				0F911E621EE75D4600F21855 /* UIViewController+.swift in Sources */,
+				0F911E631EE75D4600F21855 /* WordPairOrder.swift in Sources */,
+				0F911E641EE75D4600F21855 /* FetchUserRecordOperation.swift in Sources */,
+				0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */,
+				0F911E661EE75D4600F21855 /* EditWordPairFromCellAnimator.swift in Sources */,
+				0F911E671EE75D4600F21855 /* WebService.swift in Sources */,
+				0F911E681EE75D4600F21855 /* OperationFetchMetaData.swift in Sources */,
+				0F911E691EE75D4600F21855 /* FetchUserRecordId.swift in Sources */,
+				0F911E6A1EE75D4600F21855 /* TagFilterViewModelDelegate.swift in Sources */,
+				0F911E6B1EE75D4600F21855 /* TagAssociation.swift in Sources */,
+				0F911E6C1EE75D4600F21855 /* OperationCreateTag.swift in Sources */,
+				0F911E6D1EE75D4600F21855 /* TagSelectionViewController.swift in Sources */,
+				0F911E6E1EE75D4600F21855 /* OperationFetchTagAssociations.swift in Sources */,
+				0F911E6F1EE75D4600F21855 /* FetchOrCreateEnfocaId.swift in Sources */,
+				0F911E701EE75D4600F21855 /* Perform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,6 +1244,37 @@
 			};
 			name = Release;
 		};
+		0F911E7D1EE75D4600F21855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
+				DEVELOPMENT_TEAM = KRNJ229R7J;
+				INFOPLIST_FILE = "Enfoca Dev-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0F911E7E1EE75D4600F21855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
+				DEVELOPMENT_TEAM = KRNJ229R7J;
+				INFOPLIST_FILE = "Enfoca Dev-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		0FA4A4A41EC89C0D00F31F9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1182,6 +1437,15 @@
 			buildConfigurations = (
 				0F085B7F1ED8796D00FC20A1 /* Debug */,
 				0F085B801ED8796D00FC20A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F911E7C1EE75D4600F21855 /* Build configuration list for PBXNativeTarget "Enfoca Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F911E7D1EE75D4600F21855 /* Debug */,
+				0F911E7E1EE75D4600F21855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

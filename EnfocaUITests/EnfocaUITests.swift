@@ -39,8 +39,6 @@ class EnfocaUITests: XCTestCase {
         app.textFields["Search or Create Field"].tap()
         app.textFields["Search or Create Field"].typeText("ella")
         
-        
-        
     }
     
 }

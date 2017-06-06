@@ -105,11 +105,10 @@ func getAppDelegate() -> AppDelegate{
 }
 
 func isTestMode() -> Bool{
-    //        if ProcessInfo.processInfo.arguments.contains("UITest") {
-    //            return true;
-    //        } else {
-    //            return false;
-    //        }
-    return true
+    if ProcessInfo.processInfo.arguments.contains("UITest") {
+        return true;
+    } else {
+        return false;
+    }
 }
 
