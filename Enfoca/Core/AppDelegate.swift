@@ -104,3 +104,12 @@ func getAppDelegate() -> AppDelegate{
     return UIApplication.shared.delegate as! AppDelegate
 }
 
+func isTestMode() -> Bool{
+    //        if ProcessInfo.processInfo.arguments.contains("UITest") {
+    //            return true;
+    //        } else {
+    //            return false;
+    //        }
+    return true
+}
+

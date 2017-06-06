@@ -24,6 +24,9 @@
 		0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */; };
 		0F911E101EE08E8300F21855 /* TagFilterViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0B1EE08E8300F21855 /* TagFilterViewModelDelegate.swift */; };
 		0F911E181EE30AD100F21855 /* EnfocaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E171EE30AD100F21855 /* EnfocaButton.swift */; };
+		0F911E1A1EE518C700F21855 /* BrowseFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E191EE518C700F21855 /* BrowseFeatureTests.swift */; };
+		0F911E1C1EE5B20600F21855 /* UiTestWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */; };
+		0F911E1E1EE736F300F21855 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1D1EE736F300F21855 /* HomeTests.swift */; };
 		0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
 		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
 		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
@@ -152,6 +155,9 @@
 		0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterViewModel.swift; sourceTree = "<group>"; };
 		0F911E0B1EE08E8300F21855 /* TagFilterViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterViewModelDelegate.swift; sourceTree = "<group>"; };
 		0F911E171EE30AD100F21855 /* EnfocaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnfocaButton.swift; path = CustomViews/EnfocaButton.swift; sourceTree = "<group>"; };
+		0F911E191EE518C700F21855 /* BrowseFeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseFeatureTests.swift; sourceTree = "<group>"; };
+		0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiTestWebService.swift; sourceTree = "<group>"; };
+		0F911E1D1EE736F300F21855 /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		0FA4A4891EC89C0D00F31F9A /* Enfoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enfoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -306,6 +312,8 @@
 			children = (
 				0F085B7A1ED8796D00FC20A1 /* EnfocaUITests.swift */,
 				0F085B7C1ED8796D00FC20A1 /* Info.plist */,
+				0F911E191EE518C700F21855 /* BrowseFeatureTests.swift */,
+				0F911E1D1EE736F300F21855 /* HomeTests.swift */,
 			);
 			path = EnfocaUITests;
 			sourceTree = "<group>";
@@ -488,6 +496,7 @@
 				0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */,
 				0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */,
 				0FA4A4EE1EC8E94700F31F9A /* WebService.swift */,
+				0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -840,6 +849,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F911E1A1EE518C700F21855 /* BrowseFeatureTests.swift in Sources */,
+				0F911E1E1EE736F300F21855 /* HomeTests.swift in Sources */,
 				0F085B7B1ED8796D00FC20A1 /* EnfocaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -894,6 +905,7 @@
 				0FA4A4E21EC8E91E00F31F9A /* MetaData.swift in Sources */,
 				0FA4A4DE1EC8E91E00F31F9A /* CardOrder.swift in Sources */,
 				0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */,
+				0F911E1C1EE5B20600F21855 /* UiTestWebService.swift in Sources */,
 				0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */,
 				0FA4A54F1EC8ECE200F31F9A /* OperationPagedWordPairs.swift in Sources */,
 				0FA4A54C1EC8ECE200F31F9A /* OperationCountWordPairs.swift in Sources */,

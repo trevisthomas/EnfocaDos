@@ -40,18 +40,21 @@ class LoadingViewController: UIViewController {
         startProgress(ofType: "Initializing", message: "Loading app defaults")
         
         getAppDelegate().applicationDefaults = LocalApplicationDefaults()
-        let dataStoreJson = getAppDelegate().applicationDefaults.load()
+        
+        let service: WebService
         
         //TODO: Use this to decide which services implementation to use
         if isTestMode() {
             print("We're in test mode")
+            service = UiTestWebService()
         } else {
             print("Production")
+            service = LocalCloudKitWebService()
+            //        let service = CloudKitWebService()
+            //        let service = DemoWebService()
         }
+        let dataStoreJson = getAppDelegate().applicationDefaults.load()
         
-        let service = LocalCloudKitWebService()
-        //        let service = CloudKitWebService()
-        //        let service = DemoWebService()
         service.initialize(json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
             
             if let error = error {
@@ -68,18 +71,13 @@ class LoadingViewController: UIViewController {
             //            //DELETE ALL
             //            Perform.deleteAllRecords(dataStore: getAppDelegate().applicationDefaults.dataStore, enfocaId: service.enfocaId, db: service.db)
         }
+
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         segue.destination.transitioningDelegate = self
-    }
-    
-    private func isTestMode() -> Bool{
-        if ProcessInfo.processInfo.arguments.contains("UITest") {
-            return true;
-        } else {
-            return false;
-        }
     }
 }
 

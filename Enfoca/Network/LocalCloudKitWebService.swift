@@ -92,8 +92,11 @@ class LocalCloudKitWebService : WebService {
     }
     
     func wordPairCount(tagFilter: [Tag], pattern : String?, callback : @escaping(Int?, EnfocaError?)->()) {
-        //Deprecated
-        callback(dataStore.wordPairDictionary.count, nil)
+        //Deprecated  
+        fatalError()
+        
+//        callback(dataStore.wordPairDictionary.count, nil)
+        
         //Git rid of this method after fixing model.
     }
     

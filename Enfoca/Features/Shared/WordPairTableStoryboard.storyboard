@@ -74,6 +74,9 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="wordPairTable"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="NiP-eV-ntV" id="rBe-7G-Sok"/>
                             <outlet property="delegate" destination="NiP-eV-ntV" id="q16-qa-RER"/>

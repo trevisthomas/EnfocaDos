@@ -57,4 +57,8 @@ private class MockBrowseControllerDelegate: BrowseControllerDelegate {
         self.errorTitle = title
         self.errorMessage = message
     }
+    
+    func scrollToWordPair(wordPair: WordPair) {
+        
+    }
 }

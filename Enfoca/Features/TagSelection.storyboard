@@ -59,6 +59,9 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Tag Selection Collection View"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="Yij-YD-eB6" id="68T-pK-vnN"/>
                                     <outlet property="delegate" destination="Yij-YD-eB6" id="Nm4-AV-ow1"/>

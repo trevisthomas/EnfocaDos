@@ -50,11 +50,11 @@ class HomeControllerTests: XCTestCase {
         
         sut.wordOrder = WordPairOrder.definitionAsc
         
-        XCTAssertEqual(services.fetchWordPairCallCount, 0)
+        XCTAssertEqual(services.fetchWordPairCallCount, 2)
         
         sut.phrase = "any"
         
-        XCTAssertEqual(services.fetchWordPairCallCount, 1)
+        XCTAssertEqual(services.fetchWordPairCallCount, 3)
         XCTAssertEqual(services.fetchWordPairPattern, "any")
         XCTAssertEqual(services.fetchWordPairOrder, WordPairOrder.definitionAsc)
         

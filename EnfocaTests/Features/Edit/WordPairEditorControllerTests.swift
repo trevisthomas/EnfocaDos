@@ -43,4 +43,8 @@ private class MockEditWordPairControllerDelegate: EditWordPairControllerDelegate
     func onUpdate() {
         
     }
+    
+    func dismissViewController() {
+        
+    }
 }

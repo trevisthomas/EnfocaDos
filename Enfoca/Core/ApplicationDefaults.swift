@@ -29,6 +29,11 @@ class LocalApplicationDefaults : ApplicationDefaults {
     }
     
     func save(includingDataStore json: String?){
+        if isTestMode() {
+            print("Not saving user defaults.  We're in test mode")
+            return
+        }
+        
         print("Saving user data")
         
         let defaults = UserDefaults.standard
@@ -39,11 +44,18 @@ class LocalApplicationDefaults : ApplicationDefaults {
     }
     
     func load() -> String? {
+        
+        if isTestMode() {
+            print("Not loading user defaults.  We're in test mode")
+            return nil
+        }
+        
         let defaults = UserDefaults.standard
         let json = defaults.value(forKey: dataStoreKey) as? String
         
+        
         //In case of a dirty shut down, i dont want the old data lying around
-        defaults.removeObject(forKey: dataStoreKey)
+//        defaults.removeObject(forKey: dataStoreKey)
 
         
         //Load other default settings

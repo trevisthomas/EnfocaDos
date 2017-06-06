@@ -36,8 +36,8 @@ class EnfocaUITests: XCTestCase {
         //        XCUIApplication().children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .other).element.tap()
         
         let app = XCUIApplication()
-        app.textFields["searchOrCreateTextField"].tap()
-        app.textFields["searchOrCreateTextField"].typeText("ella")
+        app.textFields["Search or Create Field"].tap()
+        app.textFields["Search or Create Field"].typeText("ella")
         
         
         
