@@ -14,7 +14,7 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
 //    private(set) var tagFilterDelegate : TagFilterViewControllerDelegate!
     var tagFilterViewModelDelegate : TagFilterViewModelDelegate?
     var allTags : [Tag] = []
-    private var selectedTags: [Tag]
+    fileprivate var selectedTags: [Tag]
     
     init(selectedTags tags: [Tag]) {
         self.selectedTags = tags
@@ -192,9 +192,9 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
 
 extension TagFilterViewModel : TagCellDelegate {
     func update(tagCell: TagCell, tag: Tag, newTagName: String) {
-//        tagCell.activityIndicator.startAnimating()
+        tagCell.activityIndicator.startAnimating()
         services.updateTag(oldTag: tag, newTagName: newTagName) { (tag:Tag?, error:EnfocaError?) in
-//            tagCell.activityIndicator.stopAnimating()
+            tagCell.activityIndicator.stopAnimating()
             if let error = error {
                 //Should probably refactor and put this logic in the  cell
 //                tagCell.createButton.isHidden = false
@@ -210,9 +210,14 @@ extension TagFilterViewModel : TagCellDelegate {
                 self.allTags[index] = newTag
             }
             
+            //The edited tag  could be selected!
+            if let index = self.selectedTags.index(of: newTag) {
+                self.selectedTags[index] = newTag
+            }
+            
             self.localTempTagFilters = self.allTags
             
-            self.tagFilterViewModelDelegate?.reloadTable()
+//            self.tagFilterViewModelDelegate?.reloadTable()
             
             getAppDelegate().fireEvent(source: self, event: Event(type: .tagUpdate, data: newTag))
             

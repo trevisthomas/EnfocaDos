@@ -58,6 +58,12 @@ class TagFilterViewController: UIViewController {
         searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidBegin(_:)), for: [.editingDidBegin])
         
         searchOrCreateTextField.setPlaceholderTextColor(color: UIColor(hexString: "#ffffff", alpha: 0.19))
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 96 //Doesn't matter
+        
+        
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func tappedMagnifierCloseAction(_ sender: Any) {
@@ -137,15 +143,6 @@ class TagFilterViewController: UIViewController {
         }
     }
     
-}
-
-extension TagFilterViewController : UISearchBarDelegate {
-    
-    //DELETE
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.searchTagsFor(prefix: searchText)
-        tableView.reloadData()
-    }
 }
 
 extension TagFilterViewController : TagFilterViewModelDelegate{

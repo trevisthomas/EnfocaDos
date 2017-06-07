@@ -133,6 +133,10 @@ extension EditWordPairViewController: EditWordPairControllerDelegate {
     }
 
     func onTagsLoaded(tags: [Tag], selectedTags: [Tag]) {
+        
+        refreshButtonState()
+        updateFields()
+        
         tagViewController.initialize(tags: tags, selectedTags: selectedTags, delegate: self)
     }
     
@@ -156,11 +160,12 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
             print(newValue)
             //Apply the new selecterd tags
             controller.selectedTags = newValue
+            controller.initialize()
             
-            tagViewController.selectedTags(tags: newValue)
+//            tagViewController.selectedTags(tags: newValue)
             
-            refreshButtonState()
-            updateFields()
+//            refreshButtonState()
+//            updateFields()
         }
     }
     

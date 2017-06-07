@@ -23,21 +23,57 @@ class TagCell: UITableViewCell {
     
     
     @IBOutlet weak var createButton: UIButton!
-    @IBOutlet weak var primaryStackViewToTopConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var primaryStackViewToTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var centerAlignYEditTagConstraint: NSLayoutConstraint! {
+        didSet {
+            centerAlignYEditTagConstraintOriginal = centerAlignYEditTagConstraint.constant
+        }
+    }
+    
+    @IBOutlet weak var topTagTitleConstraint: NSLayoutConstraint! {
+        didSet{
+            topTagTitleConstraintOriginal = topTagTitleConstraint.constant
+        }
+    }
+    
+    @IBOutlet var bottomSubTitleConstraint: NSLayoutConstraint! {
+        didSet{
+            bottomSubTitleConstraintOriginal = bottomSubTitleConstraint.constant
+        }
+    }
     
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var editTagTextField: UITextField!
     private var isTagEditing : Bool = false
+    
+    private var centerAlignYEditTagConstraintOriginal: CGFloat!
+    private var topTagTitleConstraintOriginal: CGFloat!
+    private var bottomSubTitleConstraintOriginal: CGFloat!
+    
     var tagUpdateDelegate : TagCellDelegate?
     
     var sourceTag : Tag! {
         didSet {
             tagTitleLabel?.text = sourceTag.name
             tagSubtitleLabel?.text = formatDetailText(sourceTag.count)
+            
+            
+//            centerAlignYEditTagConstraintOriginal = centerAlignYEditTagConstraint.constant
+//            topTagTitleConstraintOriginal = topTagTitleConstraint.constant
+         
+//            bottomSubTitleConstraintOriginal = bottomSubTitleConstraint.constant
+            
+            editTagTextField.addTarget(self, action: #selector(wordTextDidChange(_:)), for: [.editingChanged])
+            
+            invokeLater {
+                self.applyTagEditingMode()
+            }
         }
     }
+    
     
     func formatDetailText(_ count : Int ) -> String {
         return "\(count) words tagged."
@@ -70,11 +106,15 @@ class TagCell: UITableViewCell {
             toggleTagEditor()
         } else {
             
-            guard let valid = tagUpdateDelegate?.validate(tag: sourceTag, newTagName: editTagTextField.text) else { return }
+            guard let valid = tagUpdateDelegate?.validate(tag: sourceTag, newTagName: editTagTextField.text) else {
+                    fatalError()
+                }
             
-            guard valid else { return }
+            guard valid else {
+                toggleTagEditor()
+                return
+            }
             
-            print("Save")
             tagTitleLabel?.text = editTagTextField.text
             toggleTagEditor()
             
@@ -83,17 +123,45 @@ class TagCell: UITableViewCell {
         
     }
     
+    func wordTextDidChange(_ textField: UITextField) {
+        guard let valid = tagUpdateDelegate?.validate(tag: sourceTag, newTagName: editTagTextField.text) else {
+            fatalError()
+        }
+        if valid {
+            editButton.setTitle("Save", for: .normal)
+        }
+        else {
+            editButton.setTitle("Done", for: .normal)
+            return
+        }
+
+    }
+    
     func toggleTagEditor() {
-        layoutIfNeeded()
         
         isTagEditing = !isTagEditing
+        
+        applyTagEditingMode()
+    }
+    
+    private func applyTagEditingMode(){
+//        layoutIfNeeded()
+        
+        
         if isTagEditing {
-            editButton.setTitle("Save", for: .normal)
-            primaryStackViewToTopConstraint.constant = -35
+            editButton.setTitle("Done", for: .normal)
+            
+            centerAlignYEditTagConstraint.constant = centerAlignYEditTagConstraintOriginal
+            topTagTitleConstraint.constant = topTagTitleConstraintOriginal + frame.height
+            bottomSubTitleConstraint.isActive = false
+            
             editTagTextField.text = tagTitleLabel?.text
         } else {
             editButton.setTitle("Edit", for: .normal)
-            primaryStackViewToTopConstraint.constant = 5
+            
+            centerAlignYEditTagConstraint.constant = centerAlignYEditTagConstraintOriginal - frame.height
+            topTagTitleConstraint.constant = topTagTitleConstraintOriginal
+            bottomSubTitleConstraint.isActive = true
         }
         
         UIView.animate(withDuration: 0.5) {

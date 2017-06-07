@@ -85,11 +85,13 @@ extension TagSelectionViewController {
         selectedTags.removeAll()
         selectedTags.append(contentsOf: newSelectedTags)
         
+        collectionView.reloadData() //The only reason this is here is to clear the tag selection before reloading them below.
+        
         for i in 0..<tags.count {
             let tag = tags[i]
             
+            let ip = IndexPath(row: i, section: 0)
             if (selectedTags.contains(tag)){
-                let ip = IndexPath(row: i, section: 0)
                 collectionView.selectItem(at: ip, animated: false, scrollPosition: .left)
             }
             
@@ -97,6 +99,8 @@ extension TagSelectionViewController {
         
         //Resetting the position so that the act of setting the selcted list doesnt move the damned thing.
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: false)
+        
+        
     }
     
     func reloadTags(tags: [Tag]){
