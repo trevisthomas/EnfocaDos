@@ -79,9 +79,8 @@ class HomeViewController: UIViewController {
         languageSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font],
                                                         for: .normal)
         
-        let placeHolderText = searchOrCreateTextField.placeholder!
-        searchOrCreateTextField.attributedPlaceholder = NSAttributedString(string: placeHolderText,
-                                                               attributes: [NSForegroundColorAttributeName: UIColor(hexString: "#ffffff", alpha: 0.19)])
+        
+        searchOrCreateTextField.setPlaceholderTextColor(color: UIColor(hexString: "#ffffff", alpha: 0.19))
         
     }
     

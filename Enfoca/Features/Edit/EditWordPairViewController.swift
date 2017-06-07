@@ -160,6 +160,7 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
             tagViewController.selectedTags(tags: newValue)
             
             refreshButtonState()
+            updateFields()
         }
     }
     

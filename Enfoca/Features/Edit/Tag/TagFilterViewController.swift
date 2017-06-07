@@ -18,12 +18,14 @@ protocol TagFilterViewControllerDelegate {
 class TagFilterViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tagSearchBar: UISearchBar!
     @IBOutlet weak var tagSummaryLabel: UILabel!
     @IBOutlet weak var editDoneButton: UIButton!
     @IBOutlet weak var applyButton: UIButton!
     
+    @IBOutlet weak var searchOrCreateTextField: UITextField!
     var tagFilterDelegate : TagFilterViewControllerDelegate!
+    
+    @IBOutlet weak var searchMagnifierView: MagnifierCloseView!
     var viewModel : TagFilterViewModel!
 
     override func viewDidLoad() {
@@ -31,16 +33,7 @@ class TagFilterViewController: UIViewController {
         
         viewModel = TagFilterViewModel(selectedTags: tagFilterDelegate.selectedTags)
         
-        tagSearchBar.backgroundImage = UIImage() //Ah ha!  This gits rid of that horible border!
-        
-//        viewModel = tableView.dataSource as! TagFilterViewModel
-//        viewModel.tagFilterViewModelDelegate = self
-        
-//        viewModel.configureFromDelegate(delegate: tagFilterDelegate){
-//            self.updateSelectedSummary()
-//            self.tableView.reloadData() // Not unit tested :-(
-//        }
-        
+        initLookAndFeel()
         
         
         viewModel.initialize(delegate: self) {
@@ -50,6 +43,53 @@ class TagFilterViewController: UIViewController {
         
         getAppDelegate().addListener(listener: viewModel)
         
+    }
+    
+    private func initLookAndFeel(){
+        
+        searchMagnifierView.initialize()
+        searchMagnifierView.isSearchMode = true
+        
+        searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidChange(_:)), for: [.editingChanged])
+        
+        searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextEditingDidEnd(_:)), for: [.editingDidEnd])
+        
+        
+        searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidBegin(_:)), for: [.editingDidBegin])
+        
+        searchOrCreateTextField.setPlaceholderTextColor(color: UIColor(hexString: "#ffffff", alpha: 0.19))
+    }
+    
+    @IBAction func tappedMagnifierCloseAction(_ sender: Any) {
+        searchOrCreateTextField.text = nil
+        searchOrCreateTextDidChange(searchOrCreateTextField)
+    }
+    
+    func searchOrCreateTextDidChange(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        viewModel.searchTagsFor(prefix: text)
+        tableView.reloadData()
+        updateMagnifier(text)
+    }
+    
+    func searchOrCreateTextDidBegin(_ textField: UITextField) {
+        
+        updateMagnifier(textField.text)
+    }
+    
+    func searchOrCreateTextEditingDidEnd(_ textField: UITextField) {
+        dismissKeyboard()
+        updateMagnifier(textField.text)
+    }
+
+    func updateMagnifier(_ text: String?){
+        let text = text ?? ""
+        if  !text.isEmpty{
+            searchMagnifierView.setSearchModeIfNeeded(false)
+        } else {
+            searchMagnifierView.setSearchModeIfNeeded(true)
+        }
+
     }
 
 //    private func applyFilter(){
@@ -100,6 +140,8 @@ class TagFilterViewController: UIViewController {
 }
 
 extension TagFilterViewController : UISearchBarDelegate {
+    
+    //DELETE
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.searchTagsFor(prefix: searchText)
         tableView.reloadData()
@@ -112,7 +154,7 @@ extension TagFilterViewController : TagFilterViewModelDelegate{
     }
     
     func reloadTable() {
-        tagSearchBar.text = nil
+        searchOrCreateTextField.text = nil
         tableView.reloadData()
     }
     

@@ -65,6 +65,12 @@ class MagnifierCloseView: UIView {
         }
     }
     
+    func setSearchModeIfNeeded(_ newMode: Bool){
+        if newMode != isSearchMode {
+            toggle()
+        }
+    }
+    
     public func toggle() {
         guard let isSearchMode = isSearchMode else {
             return

@@ -13,7 +13,7 @@
         <!--Browse View Controller-->
         <scene sceneID="bPy-Y0-AHU">
             <objects>
-                <viewController id="3hr-uX-jdh" customClass="BrowseViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3hr-uX-jdh" customClass="BrowseViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="drw-49-Ht7"/>
                         <viewControllerLayoutGuide type="bottom" id="nbh-2U-Ib9"/>
