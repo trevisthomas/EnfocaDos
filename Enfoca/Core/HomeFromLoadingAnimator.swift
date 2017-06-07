@@ -23,15 +23,9 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
             fatalError()
         }
         
-        guard let fromViewController = transitionContext.viewController(forKey: .from) as? LoadingViewController else {
-            fatalError()
-        }
         
         containerView.addSubview(toViewController.view)
         
-//        containerView.bringSubview(toFront: fromViewController.view)
-        
-//        toViewController.view.alpha = 0
         toViewController.oldTitleLabel.alpha = 1
         toViewController.titleLabel.alpha = 0
         
@@ -52,12 +46,8 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
         toViewController.quizLabelLeftConstraint.constant = origQuizLabelConstant - toViewWidth
         toViewController.browseLabelLeftConstraint.constant = origBrowseLabelConstant - toViewWidth
         
-//        let origTitleTopConstant = toViewController.titleTopConstraint.constant
-//        toViewController.titleTopConstraint.constant = origTitleTopConstant - 100 // Just need so shove it off screen.
-        
         //Magic happens
         toViewController.view.layoutIfNeeded()
-        
         
         toViewController.languageSelectorLeftConstraint.constant = origLanguageConstant
         toViewController.searchOrCreateLeftConstraint.constant = origSearchConstant
@@ -65,28 +55,10 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
         toViewController.quizLabelLeftConstraint.constant = origQuizLabelConstant
         toViewController.browseLabelLeftConstraint.constant = origBrowseLabelConstant
         
-//        toViewController.titleTopConstraint.constant = origTitleTopConstant
         
         UIView.animate(withDuration: duration, delay: 0, options: [.curveEaseInOut], animations: {
             
-//            toViewController
-            
-            
-            
             toViewController.view.layoutIfNeeded()
-            
-            
-            
-//            toViewController.view.alpha = 1
-            
-            //            toViewController.titleLabel.transform = .identity
-            
-//            toViewController.titleLabel.transform = scaleTransform
-            
-            //            toViewController.titleLabel.center = centerDest
-            
-            //            toViewController.titleLabel.frame.origin = newOrigin
-            //            toViewController.titleLabel.layoutIfNeeded()
             
         }) { _ in
             transitionContext.completeTransition(true)
@@ -103,54 +75,8 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
         UIView.animate(withDuration: duration * 0.33, delay: duration * 0.66, options: [.curveEaseInOut], animations: {
             toViewController.titleLabel.alpha = 1
         }) { _ in
-//            //Wow.  Is this the best TODO: Consider alternative
-//            toViewController.magifierCloseView.initialize()
+            //nada
         }
-        
-        
-    /*
-        let xScale = fromViewController.titleLabel.frame.width / toViewController.titleLabel.frame.width
-//        let yScale = fromViewController.titleLabel.frame.height / toViewController.titleLabel.frame.height
-        
-        let centerDest = toViewController.titleLabel.center
-        
-        toViewController.titleLabel.center = fromViewController.titleLabel.center
-//
-//        let scaleTransform = CGAffineTransform(scaleX: xScale, y: xScale)
-//        toViewController.titleLabel.transform = scaleTransform
-        
-        
-        let oldOrigin = fromViewController.titleLabel.frame.origin
-        
-        let labelScale = fromViewController.titleLabel.font.pointSize / toViewController.titleLabel.font.pointSize
-        
-//        let scaleTransform = toViewController.titleLabel.transform.scaledBy(x: labelScale, y: labelScale)
-        
-        let scaleTransform = toViewController.titleLabel.transform.scaledBy(x: 100, y: 100)
-        
-//        let newOrigin = toViewController.titleLabel.frame.origin
-        
-        toViewController.titleLabel.frame.origin = oldOrigin
-        
-//        toViewController.titleLabel.transform = scaleTransform
-        
-//        toViewController.titleLabel.setNeedsUpdateConstraints()
-        
-        UIView.animate(withDuration: duration, delay: 0, options: [.curveEaseInOut], animations: { 
-//            toViewController.titleLabel.transform = .identity
-            
-            toViewController.titleLabel.transform = scaleTransform
-            
-//            toViewController.titleLabel.center = centerDest
-            
-//            toViewController.titleLabel.frame.origin = newOrigin
-//            toViewController.titleLabel.layoutIfNeeded()
-            
-        }) { _ in
-            transitionContext.completeTransition(true)
-        }
- 
- */
     }
  
 }

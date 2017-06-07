@@ -75,8 +75,6 @@
 		0F911E4E1EE75D4600F21855 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DB1EC8E91E00F31F9A /* User.swift */; };
 		0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */; };
 		0F911E501EE75D4600F21855 /* JsonDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */; };
-		0F911E511EE75D4600F21855 /* OperationPagedWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */; };
-		0F911E521EE75D4600F21855 /* OperationCountWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */; };
 		0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */; };
 		0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */; };
 		0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */; };
@@ -89,7 +87,6 @@
 		0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
 		0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5641ECBC93700F31F9A /* HomeController.swift */; };
 		0F911E5E1EE75D4600F21855 /* CloudKitConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */; };
-		0F911E5F1EE75D4600F21855 /* CloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */; };
 		0F911E601EE75D4600F21855 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D61EC8E91E00F31F9A /* Gender.swift */; };
 		0F911E611EE75D4600F21855 /* OperationDeleteRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */; };
 		0F911E621EE75D4600F21855 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */; };
@@ -164,8 +161,6 @@
 		0F911EB01EE766D900F21855 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DB1EC8E91E00F31F9A /* User.swift */; };
 		0F911EB11EE766D900F21855 /* UiTestWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */; };
 		0F911EB21EE766D900F21855 /* JsonDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D71EC8E91E00F31F9A /* JsonDateFormatter.swift */; };
-		0F911EB31EE766D900F21855 /* OperationPagedWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */; };
-		0F911EB41EE766D900F21855 /* OperationCountWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */; };
 		0F911EB51EE766D900F21855 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */; };
 		0F911EB61EE766D900F21855 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */; };
 		0F911EB71EE766D900F21855 /* ReadWriteMutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5301EC8ECA500F31F9A /* ReadWriteMutex.swift */; };
@@ -178,7 +173,6 @@
 		0F911EBE1EE766D900F21855 /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
 		0F911EBF1EE766D900F21855 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5641ECBC93700F31F9A /* HomeController.swift */; };
 		0F911EC01EE766D900F21855 /* CloudKitConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */; };
-		0F911EC11EE766D900F21855 /* CloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */; };
 		0F911EC21EE766D900F21855 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D61EC8E91E00F31F9A /* Gender.swift */; };
 		0F911EC31EE766D900F21855 /* OperationDeleteRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */; };
 		0F911EC41EE766D900F21855 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */; };
@@ -253,7 +247,6 @@
 		0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DB1EC8E91E00F31F9A /* User.swift */; };
 		0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */; };
 		0FA4A4E71EC8E91E00F31F9A /* WordPairOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */; };
-		0FA4A4EF1EC8E94700F31F9A /* CloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */; };
 		0FA4A4F01EC8E94700F31F9A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */; };
 		0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */; };
 		0FA4A4F21EC8E94700F31F9A /* LocalCloudKitWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */; };
@@ -290,10 +283,8 @@
 		0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */; };
 		0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */; };
 		0FA4A5471EC8ECD200F31F9A /* OperationUpdateWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */; };
-		0FA4A54C1EC8ECE200F31F9A /* OperationCountWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */; };
 		0FA4A54D1EC8ECE200F31F9A /* OperationCreateWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */; };
 		0FA4A54E1EC8ECE200F31F9A /* OperationFetchWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */; };
-		0FA4A54F1EC8ECE200F31F9A /* OperationPagedWordPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */; };
 		0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5501EC8EE5B00F31F9A /* Globals.swift */; };
 		0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */; };
 		0FA4A5561EC8F51B00F31F9A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A5551EC8F51B00F31F9A /* Home.storyboard */; };
@@ -410,7 +401,6 @@
 		0FA4A4DB1EC8E91E00F31F9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
 		0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairOrder.swift; sourceTree = "<group>"; };
-		0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitWebService.swift; sourceTree = "<group>"; };
 		0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoWebService.swift; sourceTree = "<group>"; };
 		0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCloudKitWebService.swift; sourceTree = "<group>"; };
@@ -447,10 +437,8 @@
 		0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFetchTags.swift; sourceTree = "<group>"; };
 		0FA4A53F1EC8ECD200F31F9A /* OperationUpdateTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationUpdateTag.swift; sourceTree = "<group>"; };
 		0FA4A5401EC8ECD200F31F9A /* OperationUpdateWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationUpdateWordPair.swift; sourceTree = "<group>"; };
-		0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationCountWordPairs.swift; sourceTree = "<group>"; };
 		0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationCreateWordPair.swift; sourceTree = "<group>"; };
 		0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFetchWordPairs.swift; sourceTree = "<group>"; };
-		0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationPagedWordPairs.swift; sourceTree = "<group>"; };
 		0FA4A5501EC8EE5B00F31F9A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDefaults.swift; sourceTree = "<group>"; };
 		0FA4A5551EC8F51B00F31F9A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Home/Home.storyboard; sourceTree = "<group>"; };
@@ -782,7 +770,6 @@
 			isa = PBXGroup;
 			children = (
 				0FA4A50F1EC8EC5200F31F9A /* Operations */,
-				0FA4A4E91EC8E94700F31F9A /* CloudKitWebService.swift */,
 				0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */,
 				0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */,
 				0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */,
@@ -890,10 +877,8 @@
 		0FA4A5391EC8ECC400F31F9A /* WordPairs */ = {
 			isa = PBXGroup;
 			children = (
-				0FA4A5481EC8ECE200F31F9A /* OperationCountWordPairs.swift */,
 				0FA4A5491EC8ECE200F31F9A /* OperationCreateWordPair.swift */,
 				0FA4A54A1EC8ECE200F31F9A /* OperationFetchWordPairs.swift */,
-				0FA4A54B1EC8ECE200F31F9A /* OperationPagedWordPairs.swift */,
 			);
 			path = WordPairs;
 			sourceTree = "<group>";
@@ -1292,8 +1277,6 @@
 				0F911E4E1EE75D4600F21855 /* User.swift in Sources */,
 				0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */,
 				0F911E501EE75D4600F21855 /* JsonDateFormatter.swift in Sources */,
-				0F911E511EE75D4600F21855 /* OperationPagedWordPairs.swift in Sources */,
-				0F911E521EE75D4600F21855 /* OperationCountWordPairs.swift in Sources */,
 				0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */,
 				0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */,
 				0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */,
@@ -1306,7 +1289,6 @@
 				0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */,
 				0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */,
 				0F911E5E1EE75D4600F21855 /* CloudKitConverters.swift in Sources */,
-				0F911E5F1EE75D4600F21855 /* CloudKitWebService.swift in Sources */,
 				0F911E601EE75D4600F21855 /* Gender.swift in Sources */,
 				0F911E611EE75D4600F21855 /* OperationDeleteRecord.swift in Sources */,
 				0F911E621EE75D4600F21855 /* UIViewController+.swift in Sources */,
@@ -1385,8 +1367,6 @@
 				0F911EB01EE766D900F21855 /* User.swift in Sources */,
 				0F911EB11EE766D900F21855 /* UiTestWebService.swift in Sources */,
 				0F911EB21EE766D900F21855 /* JsonDateFormatter.swift in Sources */,
-				0F911EB31EE766D900F21855 /* OperationPagedWordPairs.swift in Sources */,
-				0F911EB41EE766D900F21855 /* OperationCountWordPairs.swift in Sources */,
 				0F911EB51EE766D900F21855 /* TypeAliases.swift in Sources */,
 				0F911EB61EE766D900F21855 /* UITableView+.swift in Sources */,
 				0F911EB71EE766D900F21855 /* ReadWriteMutex.swift in Sources */,
@@ -1399,7 +1379,6 @@
 				0F911EBE1EE766D900F21855 /* HomeFromLoadingAnimator.swift in Sources */,
 				0F911EBF1EE766D900F21855 /* HomeController.swift in Sources */,
 				0F911EC01EE766D900F21855 /* CloudKitConverters.swift in Sources */,
-				0F911EC11EE766D900F21855 /* CloudKitWebService.swift in Sources */,
 				0F911EC21EE766D900F21855 /* Gender.swift in Sources */,
 				0F911EC31EE766D900F21855 /* OperationDeleteRecord.swift in Sources */,
 				0F911EC41EE766D900F21855 /* UIViewController+.swift in Sources */,
@@ -1476,8 +1455,6 @@
 				0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */,
 				0F911E1C1EE5B20600F21855 /* UiTestWebService.swift in Sources */,
 				0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */,
-				0FA4A54F1EC8ECE200F31F9A /* OperationPagedWordPairs.swift in Sources */,
-				0FA4A54C1EC8ECE200F31F9A /* OperationCountWordPairs.swift in Sources */,
 				0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */,
 				0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */,
 				0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */,
@@ -1490,7 +1467,6 @@
 				0FA4A5631ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift in Sources */,
 				0FA4A5651ECBC93700F31F9A /* HomeController.swift in Sources */,
 				0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */,
-				0FA4A4EF1EC8E94700F31F9A /* CloudKitWebService.swift in Sources */,
 				0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */,
 				0FA4A5431EC8ECD200F31F9A /* OperationDeleteRecord.swift in Sources */,
 				0FA4A50E1EC8EB2500F31F9A /* UIViewController+.swift in Sources */,

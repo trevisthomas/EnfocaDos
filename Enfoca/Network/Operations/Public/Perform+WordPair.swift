@@ -62,62 +62,6 @@ extension Perform{
         
     }
     
-    class func countWordPairs(withTags tags : [Tag], phrase : String?, enfocaId: NSNumber, db: CKDatabase, callback : @escaping (_ count : Int?, _ error : String?) -> ()) {
-        
-        let queue = OperationQueue()
-        let errorHandler = ErrorHandler(queue: queue, callback: callback)
-        
-        let countWordPairsOperation = OperationCountWordPairs(tags: tags, phrase: phrase, enfocaId: enfocaId, db: db, errorDelegate: errorHandler)
-        let completeOp = BlockOperation {
-            OperationQueue.main.addOperation{
-                callback(countWordPairsOperation.count, nil)
-            }
-        }
-        
-        completeOp.addDependency(countWordPairsOperation)
-        queue.addOperations([countWordPairsOperation, completeOp], waitUntilFinished: false)
-    }
-    
-    class func fetchNextWordPairs(cursor : CKQueryCursor, db: CKDatabase, callback : @escaping([WordPair]?,EnfocaError?)->(), cursorCallback : @escaping(CKQueryCursor)->()){
-        
-        let queue = OperationQueue()
-        let errorHandler = ErrorHandler(queue: queue, callback: callback)
-        
-        let fetchWordPairsOperation = OperationPagedWordPairs(cursor: cursor, db: db, errorDelegate: errorHandler)
-        
-        let completeOp = BlockOperation {
-            OperationQueue.main.addOperation{
-                callback(fetchWordPairsOperation.wordPairs, nil)
-                if let cursor = fetchWordPairsOperation.cursor {
-                    cursorCallback(cursor)
-                }
-            }
-        }
-        
-        completeOp.addDependency(fetchWordPairsOperation)
-        queue.addOperations([fetchWordPairsOperation, completeOp], waitUntilFinished: false)
-    }
-    
-    class func fetchWordPairs(tags: [Tag], wordPairOrder: WordPairOrder, phrase : String?, enfocaId: NSNumber, db: CKDatabase, callback : @escaping([WordPair]?,EnfocaError?)->(), cursorCallback : @escaping(CKQueryCursor)->()){
-        
-        let queue = OperationQueue()
-        let errorHandler = ErrorHandler(queue: queue, callback: callback)
-        
-        let fetchWordPairsOperation = OperationPagedWordPairs(tags: tags, phrase: phrase, order: wordPairOrder, enfocaId: enfocaId, db: db, errorDelegate: errorHandler)
-        
-        let completeOp = BlockOperation {
-            OperationQueue.main.addOperation{
-                callback(fetchWordPairsOperation.wordPairs, nil)
-                if let cursor = fetchWordPairsOperation.cursor {
-                    cursorCallback(cursor)
-                }
-            }
-        }
-        
-        completeOp.addDependency(fetchWordPairsOperation)
-        queue.addOperations([fetchWordPairsOperation, completeOp], waitUntilFinished: false)
-    }
-    
     class func updateWordPair(wordPair : WordPair, enfocaId: NSNumber, db: CKDatabase, callback : @escaping (_ wordPair : WordPair?, _ error : String?) -> ()){
         
         let queue = OperationQueue()

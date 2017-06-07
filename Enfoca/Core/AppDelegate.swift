@@ -11,7 +11,7 @@ import UIKit
 struct WeakReference<T>
 {
     weak var _reference:AnyObject?
-    init(_ object:T) {_reference = object as? AnyObject}
+    init(_ object:T) {_reference = object as AnyObject}
     var reference:T? { return _reference as? T }
 }
 

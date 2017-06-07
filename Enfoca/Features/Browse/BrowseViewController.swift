@@ -54,7 +54,6 @@ class BrowseViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editWordPairVC = segue.destination as? EditWordPairViewController  {
-            guard let wordPair = sender as? WordPair else { fatalError() }
             
             editWordPairVC.transitioningDelegate = self
             

@@ -92,10 +92,6 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
             fatalError()
         }
         
-        guard let fromViewController = storedContext.viewController(forKey: .from) as? HomeViewController else {
-            fatalError()
-        }
-        
         containerView.addSubview(toViewController.view)
         
         
