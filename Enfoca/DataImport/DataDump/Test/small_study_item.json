@@ -1,0 +1,18 @@
+[
+	{
+		"studyItemId" : "000c8c78-205e-4a47-9107-9d277833cce2",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2016-07-30 17:54:23",
+		"word" : "cómplice",
+		"definition" : "accomplice",
+		"example" : []
+	},
+	{
+		"studyItemId" : "000d8ed7-46c0-4865-8542-44b25ff33e15",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2015-10-04 13:59:59",
+		"word" : "comal",
+		"definition" : "griddle",
+		"example" : []
+	}
+]

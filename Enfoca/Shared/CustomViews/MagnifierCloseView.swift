@@ -8,15 +8,19 @@
 
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class MagnifierCloseView: UIView {
     
     
-    @IBInspectable var color: UIColor = UIColor.green
-    @IBInspectable var bgColor: UIColor = UIColor.white
-    @IBInspectable var thickness: CGFloat = 2.0
+//    @IBInspectable var color: UIColor = UIColor.green
+//    @IBInspectable var bgColor: UIColor = UIColor.white
+//    @IBInspectable var thickness: CGFloat = 2.0
     
 //    @IBInspectable var isSearchMode : Bool? = true
+    
+    var color: UIColor = UIColor.green
+    var bgColor: UIColor = UIColor.white
+    var thickness: CGFloat = 2.0
     var isSearchMode : Bool? = nil
     
     let magnifierHeadLayer : CAShapeLayer = CAShapeLayer()

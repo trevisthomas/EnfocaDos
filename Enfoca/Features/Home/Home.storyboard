@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="WFp-p5-r45">
             <objects>
-                <viewController id="NWj-al-1U9" customClass="HomeViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NWj-al-1U9" customClass="HomeViewController" customModule="Enfoca" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PYL-6A-Hq0"/>
                         <viewControllerLayoutGuide type="bottom" id="S7y-6K-mTY"/>
@@ -80,7 +80,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRr-TH-ntc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-Mb-wUs" customClass="MagnifierCloseView" customModule="Enfoca" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-Mb-wUs" customClass="MagnifierCloseView" customModule="Enfoca">
                                         <rect key="frame" x="323" y="111" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>

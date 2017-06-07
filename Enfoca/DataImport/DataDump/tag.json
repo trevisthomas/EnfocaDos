@@ -1,0 +1,192 @@
+[
+	{
+		"tagId" : "0e07ec6b-b7f9-4048-b858-b803255b9fc8",
+		"tagName" : "conjunction",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "17b654f8-2dc4-4b46-b9d9-7ae6a7eafc7e",
+		"tagName" : "food",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "1ac589a7-0cfe-4a5f-8dc1-76986fe83051",
+		"tagName" : "family",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "1ebd6d69-9175-4177-9b38-65785c59c91f",
+		"tagName" : "medicine",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "2d6004ac-22c2-4404-836f-cba7c6e2dcc9",
+		"tagName" : "sport",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "389cb200-1f51-43f4-be51-dd2ae10c95bc",
+		"tagName" : "animal",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "41f3446d-dbe9-4d80-82c9-c3d1cfb6ed00",
+		"tagName" : "insect",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "4a986916-04e5-494f-8164-99922243c49b",
+		"tagName" : "Ferrg, El Dragon",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "4e747525-4953-44af-bd17-c94e5b87151c",
+		"tagName" : "weather",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "50d8daa3-ba70-488c-8f2c-89e05728fbd8",
+		"tagName" : "conjugation",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "5373c40e-fefa-40c8-970b-58ffac0496e9",
+		"tagName" : "home",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "59dde61b-15ea-47f0-b361-1cd633214724",
+		"tagName" : "noun",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "5c80e01d-f50d-4b51-8a69-871735b1db3f",
+		"tagName" : "phrase",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "5daf5c97-45a7-4fb1-b0ed-c2f971e92cef",
+		"tagName" : "job",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "63734629-da0a-40f0-9a09-51e7b9ba8857",
+		"tagName" : "figure of speech",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "670667ad-1da6-4ae4-adbe-ca0107838ae0",
+		"tagName" : "adjective",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "737eee6a-6db9-46da-877a-00a55b0d9094",
+		"tagName" : "Internet",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "842249ec-15b4-4139-b69c-5ec7cfde333d",
+		"tagName" : "instrument",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "8642f45f-d588-47d9-9846-c3e2ad90fe84",
+		"tagName" : "Chapter 14",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "87751166-4b02-446f-9aeb-6b44fa998503",
+		"tagName" : "adverb",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "92e89b70-a818-4baf-a064-84543eb50234",
+		"tagName" : "Spanish is Fun CH 16",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "a4b627ce-7fa2-4f44-84b0-b7bff32d273c",
+		"tagName" : "tool",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "aa10f2a7-9247-4b7a-ae79-d6cd869e1c1a",
+		"tagName" : "nature",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "aa993a68-ca0b-490b-8495-c583f52b479c",
+		"tagName" : "Nosotros No",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "b22806f9-ca54-4d37-b0f9-0476b560190d",
+		"tagName" : "body",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "b6bd8409-78b4-4cc1-8faf-7dcd57aed53a",
+		"tagName" : "Spanish is Fun CH 18",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "bb42d878-31b9-485c-a351-2a5eae14ec0f",
+		"tagName" : "verb",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "bb4762d6-d92d-4d2d-b9b8-4dec19c9161a",
+		"tagName" : "Spanish is Fun CH 19",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "bec45ccc-2275-450d-bf85-424fd90b41bb",
+		"tagName" : "car",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "d060e22e-c417-4663-87d9-409c7907b633",
+		"tagName" : "Travel",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "d091d70f-88a3-4ff0-944e-1659a8b27244",
+		"tagName" : "color",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "d57bf2ff-0c67-45df-b2d8-16cf12b117c7",
+		"tagName" : "preposition",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "d6b8320c-7842-499c-8a21-abaf39c0d397",
+		"tagName" : "Duolingo",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "dc5eddb6-b3f7-4267-90c9-60ad8cb56799",
+		"tagName" : "clothing",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "e1891a01-926e-40f7-8851-97caf6099481",
+		"tagName" : "ordinal",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "e3b7aedd-ed9a-4ae1-90cf-a267099da184",
+		"tagName" : "Software",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "eceb9e3e-f883-4389-8b5d-85a3c220f6ac",
+		"tagName" : "weather",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "ff204940-bd41-44de-887e-e9d468435f9e",
+		"tagName" : "Spanish is Fun CH 15",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	}
+]

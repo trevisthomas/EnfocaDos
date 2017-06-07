@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Pqi-S8-Fpn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Import View Controller-->
+        <scene sceneID="Yuu-vd-px0">
+            <objects>
+                <viewController id="Pqi-S8-Fpn" customClass="DataImportViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qKx-s3-Ggr"/>
+                        <viewControllerLayoutGuide type="bottom" id="z3s-lE-CYM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="glO-DH-S3r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrN-cT-doF">
+                                <rect key="frame" x="72" y="218.5" width="230" height="230"/>
+                                <color key="backgroundColor" red="0.6386070251" green="0.80702608819999999" blue="0.64577037100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="64f-FE-ZpX"/>
+                                    <constraint firstAttribute="width" constant="230" id="eyr-sU-xMb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Perform Import">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performImport:" destination="Pqi-S8-Fpn" eventType="touchUpInside" id="1ay-pi-JF7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enfoca Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-Ik-gU1">
+                                <rect key="frame" x="147" y="160" width="81.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jrN-cT-doF" firstAttribute="top" secondItem="GRg-Ik-gU1" secondAttribute="bottom" constant="28.5" id="0tH-g2-qT6"/>
+                            <constraint firstItem="jrN-cT-doF" firstAttribute="centerY" secondItem="glO-DH-S3r" secondAttribute="centerY" id="CIs-ks-NoQ"/>
+                            <constraint firstItem="jrN-cT-doF" firstAttribute="centerX" secondItem="glO-DH-S3r" secondAttribute="centerX" id="lPJ-EV-arm"/>
+                            <constraint firstItem="GRg-Ik-gU1" firstAttribute="centerX" secondItem="glO-DH-S3r" secondAttribute="centerX" id="uGI-t2-bkB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enfocaIdTextField" destination="GRg-Ik-gU1" id="zIJ-5b-unQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5FL-Qn-AK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="86.806596701649184"/>
+        </scene>
+    </scenes>
+</document>

@@ -110,5 +110,6 @@ func isTestMode() -> Bool{
     } else {
         return false;
     }
+//    return true
 }
 

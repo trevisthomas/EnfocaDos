@@ -13,7 +13,7 @@
         <!--Loading View Controller-->
         <scene sceneID="qZh-iS-OrO">
             <objects>
-                <viewController id="h2V-Ty-BQf" customClass="LoadingViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h2V-Ty-BQf" customClass="LoadingViewController" customModule="Enfoca" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tKs-R1-3mn"/>
                         <viewControllerLayoutGuide type="bottom" id="pSR-XO-DOA"/>

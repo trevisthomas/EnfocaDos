@@ -1,0 +1,30 @@
+ [
+  {
+		"studyItemMetaId" : "00247ad5-0a5b-43b8-b0c8-bf706424f862",
+		"createDate" : "2016-06-05 21:49:40",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ea9cba2e-79db-4ca2-81df-13d61eb4aa88",
+		"incorrectCount" : 0,
+		"viewCount" : 6,
+		"lastUpdate" : "2016-06-28 22:35:12",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 43245,
+		"averageTime" : 7207,
+		"timedViewCount" : 6
+  },
+  {
+		"studyItemMetaId" : "00408d2f-f453-43cf-802b-24f20edb26a0",
+		"createDate" : "2016-07-09 19:26:06",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "08956386-00b5-4a5d-9514-958a9d1ac39b",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2016-07-10 18:04:42",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 12166,
+		"averageTime" : 6083,
+		"timedViewCount" : 2
+  }
+]

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0F911E1F1EE75D4600F21855"
-               BuildableName = "Enfoca Dev.app"
-               BlueprintName = "Enfoca Dev"
+               BlueprintIdentifier = "0F911E811EE766D900F21855"
+               BuildableName = "Data Import.app"
+               BlueprintName = "Data Import"
                ReferencedContainer = "container:Enfoca.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0FA4A4881EC89C0D00F31F9A"
-            BuildableName = "Enfoca.app"
-            BlueprintName = "Enfoca"
+            BlueprintIdentifier = "0F911E811EE766D900F21855"
+            BuildableName = "Data Import.app"
+            BlueprintName = "Data Import"
             ReferencedContainer = "container:Enfoca.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,18 +55,12 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0FA4A4881EC89C0D00F31F9A"
-            BuildableName = "Enfoca.app"
-            BlueprintName = "Enfoca"
+            BlueprintIdentifier = "0F911E811EE766D900F21855"
+            BuildableName = "Data Import.app"
+            BlueprintName = "Data Import"
             ReferencedContainer = "container:Enfoca.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "UITest"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0F911E1F1EE75D4600F21855"
-            BuildableName = "Enfoca Dev.app"
-            BlueprintName = "Enfoca Dev"
+            BlueprintIdentifier = "0F911E811EE766D900F21855"
+            BuildableName = "Data Import.app"
+            BlueprintName = "Data Import"
             ReferencedContainer = "container:Enfoca.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
