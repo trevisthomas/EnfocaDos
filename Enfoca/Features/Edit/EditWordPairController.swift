@@ -101,10 +101,12 @@ class EditWordPairController: Controller {
     }
     
     func onEvent(event: Event) {
+        
+        
         switch (event.type) {
-            case .tagCreated, .tagUpdate, .tagDeleted:
+        case .tagCreated, .tagUpdate, .tagDeleted:
                 initialize()
-            default: break
+        default: break
         }
     }
     

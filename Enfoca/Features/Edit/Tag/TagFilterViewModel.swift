@@ -14,14 +14,12 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
 //    private(set) var tagFilterDelegate : TagFilterViewControllerDelegate!
     var tagFilterViewModelDelegate : TagFilterViewModelDelegate?
     var allTags : [Tag] = []
-    fileprivate var selectedTags: [Tag]
+    fileprivate var selectedTags: [Tag] = []
     
-    init(selectedTags tags: [Tag]) {
-        self.selectedTags = tags
-    }
-    
-    func initialize(delegate: TagFilterViewModelDelegate, callback : @escaping()->()){
+    func initialize(delegate: TagFilterViewModelDelegate, selectedTags: [Tag], callback : @escaping()->()){
         tagFilterViewModelDelegate = delegate
+        
+        self.selectedTags = selectedTags
         
         services.fetchUserTags { (tags:[Tag]?, error : EnfocaError?) in
             
@@ -39,6 +37,8 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
             }
             
             callback()
+            
+            getAppDelegate().addListener(listener: self)
         }
     }
     
@@ -186,15 +186,26 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
     }
     
     func onEvent(event: Event) {
+        //DONT FORGET, I DONT HEAR MY OWN EVENTS
+        switch(event.type) {
+        case .tagUpdate, .tagDeleted:
+            //If the deleted / updated tag was selected, this will update the summary
+            tagFilterViewModelDelegate?.selectedTagsChanged()
+        case .tagCreated:
+            //Blow the whole table away because there is a new tag.
+            tagFilterViewModelDelegate?.reloadTable()
+        default:
+            break
+        }
         print("TagFilterViewModel recieved event \(event.type)")
     }
 }
 
 extension TagFilterViewModel : TagCellDelegate {
-    func update(tagCell: TagCell, tag: Tag, newTagName: String) {
-        tagCell.activityIndicator.startAnimating()
-        services.updateTag(oldTag: tag, newTagName: newTagName) { (tag:Tag?, error:EnfocaError?) in
-            tagCell.activityIndicator.stopAnimating()
+    func update(activityIndicator: ActivityIndicatable, tag oldTag: Tag, newTagName: String) {
+        activityIndicator.startActivity()
+        services.updateTag(oldTag: oldTag, newTagName: newTagName) { (tag:Tag?, error:EnfocaError?) in
+            activityIndicator.stopActivity()
             if let error = error {
                 //Should probably refactor and put this logic in the  cell
 //                tagCell.createButton.isHidden = false
@@ -203,7 +214,10 @@ extension TagFilterViewModel : TagCellDelegate {
             
             guard let newTag = tag else { return }
             
-            self.localTagDictionary[newTag] = false
+            guard let oldSelectedState = self.localTagDictionary[oldTag] else { fatalError() }
+
+            self.localTagDictionary[newTag] = oldSelectedState
+
             
             //Tag update has the same tagId and should match.  Replacing the imutable tag is how i'm getting the update value into the collection
             if let index = self.allTags.index(of: newTag) {
@@ -218,6 +232,9 @@ extension TagFilterViewModel : TagCellDelegate {
             self.localTempTagFilters = self.allTags
             
 //            self.tagFilterViewModelDelegate?.reloadTable()
+            
+            //Just letting the delegate know that tag names have changed.  One may be selected.
+            self.tagFilterViewModelDelegate?.selectedTagsChanged()
             
             getAppDelegate().fireEvent(source: self, event: Event(type: .tagUpdate, data: newTag))
             

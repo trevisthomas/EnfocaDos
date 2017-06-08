@@ -43,5 +43,11 @@ class TagTests: XCTestCase {
         XCTAssertEqual(tag, tag1)
     }
     
+    func testEquatible_ShouldCompareOnlyOnTagId() {
+        let tag = Tag(tagId: "12345", name: "Noun")
+        let tag1 = Tag(tagId: "12345", name: "Not the same... but")
+        
+        XCTAssertEqual(tag, tag1)
+    }
     
 }

@@ -118,7 +118,7 @@ class TagCell: UITableViewCell {
             tagTitleLabel?.text = editTagTextField.text
             toggleTagEditor()
             
-            tagUpdateDelegate?.update(tagCell: self, tag: sourceTag, newTagName: editTagTextField.text!)
+            tagUpdateDelegate?.update(activityIndicator: self, tag: sourceTag, newTagName: editTagTextField.text!)
         }
         
     }
@@ -183,7 +183,17 @@ class TagCell: UITableViewCell {
     }
 }
 
+extension TagCell: ActivityIndicatable {
+    func startActivity() {
+        activityIndicator.startAnimating()
+    }
+    func stopActivity() {
+        activityIndicator.stopAnimating()
+    }
+}
+
+
 protocol TagCellDelegate {
-    func update(tagCell: TagCell, tag: Tag, newTagName: String)
+    func update(activityIndicator: ActivityIndicatable, tag: Tag, newTagName: String)
     func validate(tag: Tag, newTagName: String?) -> Bool
 }

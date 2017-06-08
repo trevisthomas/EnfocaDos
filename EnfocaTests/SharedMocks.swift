@@ -163,6 +163,7 @@ class MockWebService : WebService {
     
     func updateTag(oldTag : Tag, newTagName: String, callback: @escaping(Tag?, EnfocaError?)->()) {
         
+        callback(Tag(tagId: oldTag.tagId, name: newTagName), nil)
     }
     
     func deleteWordPair(wordPair: WordPair, callback: @escaping(WordPair?, EnfocaError?)->()){}

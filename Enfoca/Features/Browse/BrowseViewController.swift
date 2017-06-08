@@ -84,6 +84,7 @@ extension BrowseViewController: EditWordPairViewControllerDelegate {
 
 extension BrowseViewController: BrowseControllerDelegate {
     func onBrowseResult(words: [WordPair]) {
+        titleLabel.text = controller.title() //Because sometimes this is called because the currently viewd tag was updated.
         wordPairTableViewController.updateWordPairs(order: controller.wordOrder, wordPairs: words)
     }
     

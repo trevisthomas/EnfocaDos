@@ -232,6 +232,10 @@
 		0F911F231EE76F0900F21855 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F911EFA1EE76CDD00F21855 /* test.json */; };
 		0F911F281EE78A2100F21855 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A5551EC8F51B00F31F9A /* Home.storyboard */; };
 		0F911F2C1EE8573500F21855 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911F2B1EE8573500F21855 /* UITextField+.swift */; };
+		0F911F2F1EE9017900F21855 /* TagFilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911F2E1EE9017900F21855 /* TagFilterViewModelTests.swift */; };
+		0F911F311EE9053C00F21855 /* ActivityIndicatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911F301EE9053C00F21855 /* ActivityIndicatable.swift */; };
+		0F911F321EE915E400F21855 /* ActivityIndicatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911F301EE9053C00F21855 /* ActivityIndicatable.swift */; };
+		0F911F331EE915E400F21855 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911F2B1EE8573500F21855 /* UITextField+.swift */; };
 		0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */; };
 		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
 		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
@@ -382,6 +386,8 @@
 		0F911F041EE76CFA00F21855 /* OldTagAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldTagAssociation.swift; sourceTree = "<group>"; };
 		0F911F051EE76CFA00F21855 /* OldWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldWordPair.swift; sourceTree = "<group>"; };
 		0F911F2B1EE8573500F21855 /* UITextField+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		0F911F2E1EE9017900F21855 /* TagFilterViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterViewModelTests.swift; sourceTree = "<group>"; };
+		0F911F301EE9053C00F21855 /* ActivityIndicatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatable.swift; sourceTree = "<group>"; };
 		0FA4A4891EC89C0D00F31F9A /* Enfoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enfoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4A48C1EC89C0D00F31F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -569,6 +575,7 @@
 		0F085B8B1EDC681E00FC20A1 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				0F911F2D1EE9015200F21855 /* Tag */,
 				0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */,
 			);
 			path = Edit;
@@ -581,6 +588,7 @@
 				0F911E091EE08E8300F21855 /* TagFilterViewController.swift */,
 				0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */,
 				0F911E0B1EE08E8300F21855 /* TagFilterViewModelDelegate.swift */,
+				0F911F301EE9053C00F21855 /* ActivityIndicatable.swift */,
 			);
 			path = Tag;
 			sourceTree = "<group>";
@@ -623,6 +631,14 @@
 				0F911EEF1EE76CB900F21855 /* small_tag_associations.json */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		0F911F2D1EE9015200F21855 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				0F911F2E1EE9017900F21855 /* TagFilterViewModelTests.swift */,
+			);
+			name = Tag;
 			sourceTree = "<group>";
 		};
 		0FA4A4801EC89C0D00F31F9A = {
@@ -1231,6 +1247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F911F321EE915E400F21855 /* ActivityIndicatable.swift in Sources */,
+				0F911F331EE915E400F21855 /* UITextField+.swift in Sources */,
 				0F911E211EE75D4600F21855 /* DataStore.swift in Sources */,
 				0F911E221EE75D4600F21855 /* Style.swift in Sources */,
 				0F911E231EE75D4600F21855 /* WordPair.swift in Sources */,
@@ -1435,6 +1453,7 @@
 				0F911F0A1EE76CFA00F21855 /* OldWordPair.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
+				0F911F311EE9053C00F21855 /* ActivityIndicatable.swift in Sources */,
 				0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */,
 				0F911F061EE76CFA00F21855 /* Import.swift in Sources */,
 				0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */,
@@ -1510,6 +1529,7 @@
 				0FA4A57B1ECC148B00F31F9A /* UserTests.swift in Sources */,
 				0FA4A5791ECC148B00F31F9A /* TagAssociationTests.swift in Sources */,
 				0FA4A5851ECC152B00F31F9A /* Sequence+Tests.swift in Sources */,
+				0F911F2F1EE9017900F21855 /* TagFilterViewModelTests.swift in Sources */,
 				0FA4A57C1ECC148B00F31F9A /* WordPairTests.swift in Sources */,
 				0FA4A5801ECC14D300F31F9A /* DataStoreJsonTests.swift in Sources */,
 			);

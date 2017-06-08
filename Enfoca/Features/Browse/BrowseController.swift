@@ -15,7 +15,7 @@ protocol BrowseControllerDelegate {
 }
 
 class BrowseController : Controller {
-    private let tag : Tag
+    private var tag : Tag
     private let delegate: BrowseControllerDelegate
     let wordOrder: WordPairOrder
     
@@ -54,6 +54,12 @@ class BrowseController : Controller {
                 //do it
                 self.delegate.scrollToWordPair(wordPair: event.data as! WordPair)
             })
+        case .tagUpdate:
+            guard let updatedTag = event.data as? Tag else { fatalError() }
+            if self.tag.tagId == updatedTag.tagId {
+                self.tag = updatedTag
+                loadWordPairs()
+            }
         default: break
         }
         

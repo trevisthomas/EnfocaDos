@@ -13,7 +13,9 @@ public class Tag : Equatable, Hashable {
     ///
     /// Hash values are not guaranteed to be equal across different executions of
     /// your program. Do not save hash values to use during a future execution.
-    public var hashValue: Int
+    public var hashValue: Int {
+        return tagId.hashValue
+    }
 
     /// Returns a Boolean value indicating whether two values are equal.
     ///
@@ -46,7 +48,7 @@ public class Tag : Equatable, Hashable {
     
         self.tagId = id
         self.name = name
-        self.hashValue = name.hashValue
+        
     }
     
     public func toJson() -> String {
@@ -65,13 +67,12 @@ public class Tag : Equatable, Hashable {
     init (name: String){
         self.tagId = "notset"
         self.name = name
-        self.hashValue = name.hashValue
+        
     }
     
     init (tagId : String, name: String){
         self.tagId = tagId
         self.name = name
-        self.hashValue = name.hashValue
     }
     
     func addWordPair(_ wordPair: WordPair){

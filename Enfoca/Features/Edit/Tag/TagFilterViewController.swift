@@ -31,12 +31,12 @@ class TagFilterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = TagFilterViewModel(selectedTags: tagFilterDelegate.selectedTags)
+        viewModel = TagFilterViewModel()
         
         initLookAndFeel()
         
         
-        viewModel.initialize(delegate: self) {
+        viewModel.initialize(delegate: self, selectedTags: tagFilterDelegate.selectedTags) {
             self.updateSelectedSummary()
             self.tableView.reloadData() // Not unit tested :-(
         }
@@ -61,7 +61,6 @@ class TagFilterViewController: UIViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 96 //Doesn't matter
-        
         
         hideKeyboardWhenTappedAround()
     }
