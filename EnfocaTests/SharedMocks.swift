@@ -172,27 +172,24 @@ class MockWebService : WebService {
     
 }
 
-class MockDefaults : ApplicationDefaults {
-    var reverseWordPair: Bool = false
+class MockApplicationDefaults : ApplicationDefaults {
+    var reverseWordPair : Bool = false
+    var selectedTags : [Tag] = []
+    var fetchWordPairPageSize : Int = 10
     var saveCount = 0
-    var selectedTags: [Tag] = []
-    var tags: [Tag] = []
-    var dataStore: DataStore!
-    
-    var fetchWordPairPageSize: Int {
-        return 10
-    }
-    
-    
-    
     func save(includingDataStore json: String?) {
         saveCount += 1
     }
-    
     func load() -> String? {
-        return nil
+        fatalError()
     }
-
+    
+    var cardOrder: CardOrder = CardOrder.hardest
+    var cardSide: CardSide = CardSide.random
+    var quizWordCount: Int = 5
+    
+    var wordPairOrder: WordPairOrder = WordPairOrder.wordAsc
 }
+
 
 

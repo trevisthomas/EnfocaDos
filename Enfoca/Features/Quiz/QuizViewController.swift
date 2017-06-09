@@ -17,7 +17,6 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var cardSideSegmentedControl: UISegmentedControl!
     @IBOutlet weak var wordOrderPicker: UIPickerView!
-    @IBOutlet weak var selectedTagLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var wordCountLabel: UILabel!
     
@@ -50,7 +49,7 @@ class QuizViewController: UIViewController {
         let font = Style.segmentedControlFont()
         cardSideSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font], for: .normal)
         cardSideSegmentedControl.selectedSegmentIndex = CardSide.values.index(of: viewModel.cardSide)!
-        selectedTagLabel.text = viewModel.tagName
+        titleLabel.text = viewModel.tagName
         
         
         let selectedRow = CardOrder.values.index(of: viewModel.cardOrder)!

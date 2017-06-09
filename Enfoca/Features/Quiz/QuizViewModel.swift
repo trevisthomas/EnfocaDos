@@ -10,7 +10,7 @@ import Foundation
 
 class QuizViewModel: Controller {
     private let tag: Tag
-    private(set) var wordCount: Int!
+    private(set) var wordCount: Int!  
     var cardOrder: CardOrder!
     var cardSide: CardSide!
     
@@ -24,6 +24,11 @@ class QuizViewModel: Controller {
         self.tag = tag
         
         wordCount = appDefaults.quizWordCount
+        
+        if wordCount > tag.count {
+            wordCount = tag.count
+        }
+        
         cardOrder = appDefaults.cardOrder
         cardSide = appDefaults.cardSide
     }
@@ -35,12 +40,20 @@ class QuizViewModel: Controller {
     
     func incrementWordCount() {
         wordCount = wordCount * 2
+        
+        if wordCount > tag.wordPairs.count {
+            wordCount = tag.wordPairs.count
+        }
     }
     
     func decrementWordCount() {
         wordCount = wordCount / 2
         if wordCount < 2 {
             wordCount = 2
+        }
+        
+        if 2 > tag.wordPairs.count {
+            wordCount = tag.wordPairs.count
         }
     }
     

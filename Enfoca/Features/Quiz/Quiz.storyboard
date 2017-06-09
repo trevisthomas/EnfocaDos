@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-8s-92l">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-B8-fPG">
                                         <rect key="frame" x="48" y="32" width="318" height="26"/>
@@ -30,25 +30,16 @@
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Tag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVS-Lk-uWx">
-                                        <rect key="frame" x="8" y="74" width="398" height="38"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
-                                        <color key="textColor" red="0.95675891639999999" green="0.95692259069999996" blue="0.95674854519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="4YW-mC-ZsM"/>
+                                    <constraint firstAttribute="height" constant="64" id="4YW-mC-ZsM"/>
                                     <constraint firstAttribute="trailing" secondItem="DXF-B8-fPG" secondAttribute="trailing" constant="48" id="OZF-Zl-hjb"/>
-                                    <constraint firstItem="BVS-Lk-uWx" firstAttribute="leading" secondItem="q1d-8s-92l" secondAttribute="leading" constant="8" id="gIN-AU-e6H"/>
                                     <constraint firstItem="DXF-B8-fPG" firstAttribute="leading" secondItem="q1d-8s-92l" secondAttribute="leading" constant="48" id="ljz-1o-u3q"/>
-                                    <constraint firstAttribute="trailing" secondItem="BVS-Lk-uWx" secondAttribute="trailing" constant="8" id="mP4-b6-6EK"/>
-                                    <constraint firstItem="BVS-Lk-uWx" firstAttribute="top" secondItem="DXF-B8-fPG" secondAttribute="bottom" constant="16" id="neD-Rn-a6e"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-cp-NnS">
-                                <rect key="frame" x="0.0" y="116" width="414" height="620"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="676"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgd-3r-M2o">
                                         <rect key="frame" x="8" y="74" width="398" height="80"/>
@@ -147,7 +138,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTr-N8-uaL" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
-                                <rect key="frame" x="126" y="354" width="163" height="50"/>
+                                <rect key="frame" x="126" y="298" width="163" height="50"/>
                                 <color key="backgroundColor" red="0.64324307439999995" green="0.80505788330000005" blue="0.46183288099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9wJ-l2-zJy"/>
@@ -179,7 +170,6 @@
                     </view>
                     <connections>
                         <outlet property="cardSideSegmentedControl" destination="pnF-29-0al" id="aoh-4d-HAX"/>
-                        <outlet property="selectedTagLabel" destination="BVS-Lk-uWx" id="F1B-L0-hyW"/>
                         <outlet property="titleLabel" destination="DXF-B8-fPG" id="1sd-IL-pIH"/>
                         <outlet property="wordCountLabel" destination="bfZ-Ux-7sl" id="Gkw-fw-TV3"/>
                         <outlet property="wordOrderPicker" destination="cgd-3r-M2o" id="GoD-OT-X7d"/>
