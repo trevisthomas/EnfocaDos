@@ -14,6 +14,12 @@ protocol ApplicationDefaults {
     var fetchWordPairPageSize : Int {get}
     func save(includingDataStore json: String?)
     func load() -> String?
+    
+    var cardOrder: CardOrder {get set}
+    var cardSide: CardSide {get set}
+    var quizWordCount: Int {get set}
+    
+    var wordPairOrder: WordPairOrder {get set}
 }
 
 class LocalApplicationDefaults : ApplicationDefaults {
@@ -21,6 +27,10 @@ class LocalApplicationDefaults : ApplicationDefaults {
     let dataStoreKey : String = "DataStoreKey"
     var selectedTags : [Tag] = []
     var reverseWordPair : Bool = false
+    var cardOrder: CardOrder = .latestAdded
+    var cardSide: CardSide = .definition
+    var quizWordCount: Int = 8
+    var wordPairOrder: WordPairOrder = .wordAsc
     
     var fetchWordPairPageSize: Int {
         get {

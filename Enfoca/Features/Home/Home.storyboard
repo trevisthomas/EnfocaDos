@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NWj-al-1U9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NWj-al-1U9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -202,6 +202,7 @@
                         <outlet property="titleTopConstraint" destination="8Nb-aH-2eB" id="oSD-6g-JCW"/>
                         <segue destination="U16-qW-lzJ" kind="show" identifier="BrowseViewControllerSegue" id="hti-2s-lZO"/>
                         <segue destination="seo-qB-PAl" kind="show" identifier="EditWordPairControllerSegue" id="car-vL-6vY"/>
+                        <segue destination="9eU-n4-C5g" kind="show" identifier="QuizViewControllerSegue" id="Vst-SI-0fi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-PW-uCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,7 +220,15 @@
                 <viewControllerPlaceholder storyboardName="Browse" id="U16-qW-lzJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqC-gY-7Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562" y="463"/>
+            <point key="canvasLocation" x="-4" y="590"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="Pg1-RE-bVQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Quiz" id="9eU-n4-C5g" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JO5-eg-d4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="595"/>
         </scene>
         <!--Edit-->
         <scene sceneID="sRv-om-cox">

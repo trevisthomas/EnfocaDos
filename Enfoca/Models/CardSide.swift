@@ -12,4 +12,6 @@ enum CardSide : String {
     case term = "Term"
     case definition = "Definition"
     case random = "Random"
+    
+    static let values = [definition, random, term]
 }

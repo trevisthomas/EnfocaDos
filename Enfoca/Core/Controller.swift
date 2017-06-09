@@ -12,6 +12,7 @@ import UIKit
 
 protocol Controller : EventListener {
     var services : WebService {get}
+    var appDefaults: ApplicationDefaults {get}
     
 }
 
@@ -20,6 +21,12 @@ extension Controller {
     var services : WebService {
         get{
             return getAppDelegate().webService
+        }
+    }
+    
+    var appDefaults: ApplicationDefaults {
+        get {
+            return getAppDelegate().applicationDefaults
         }
     }
     

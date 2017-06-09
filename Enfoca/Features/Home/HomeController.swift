@@ -20,6 +20,8 @@ class HomeController: Controller {
     
     let delegate: HomeControllerDelegate!
     var selectedWordPair: WordPair?
+    var selectedQuizTag: Tag?
+    
     var wordOrder: WordPairOrder = .definitionAsc
     {
         didSet {
@@ -62,8 +64,7 @@ class HomeController: Controller {
     }
     
     private func loadDefaults(){
-        //TODO: Load from app defaults
-        self.wordOrder = .wordAsc
+        self.wordOrder = appDefaults.wordPairOrder
     }
     
     func search(){

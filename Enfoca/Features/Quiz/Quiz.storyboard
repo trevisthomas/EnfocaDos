@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k4X-WW-dV3">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz View Controller-->
+        <scene sceneID="B9m-nE-LtS">
+            <objects>
+                <viewController id="k4X-WW-dV3" customClass="QuizViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cwm-oR-RE8"/>
+                        <viewControllerLayoutGuide type="bottom" id="uhx-WB-U6O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uhf-X2-nf1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-8s-92l">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-B8-fPG">
+                                        <rect key="frame" x="48" y="32" width="318" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Tag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVS-Lk-uWx">
+                                        <rect key="frame" x="8" y="74" width="398" height="38"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                        <color key="textColor" red="0.95675891639999999" green="0.95692259069999996" blue="0.95674854519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="4YW-mC-ZsM"/>
+                                    <constraint firstAttribute="trailing" secondItem="DXF-B8-fPG" secondAttribute="trailing" constant="48" id="OZF-Zl-hjb"/>
+                                    <constraint firstItem="BVS-Lk-uWx" firstAttribute="leading" secondItem="q1d-8s-92l" secondAttribute="leading" constant="8" id="gIN-AU-e6H"/>
+                                    <constraint firstItem="DXF-B8-fPG" firstAttribute="leading" secondItem="q1d-8s-92l" secondAttribute="leading" constant="48" id="ljz-1o-u3q"/>
+                                    <constraint firstAttribute="trailing" secondItem="BVS-Lk-uWx" secondAttribute="trailing" constant="8" id="mP4-b6-6EK"/>
+                                    <constraint firstItem="BVS-Lk-uWx" firstAttribute="top" secondItem="DXF-B8-fPG" secondAttribute="bottom" constant="16" id="neD-Rn-a6e"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-cp-NnS">
+                                <rect key="frame" x="0.0" y="116" width="414" height="620"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgd-3r-M2o">
+                                        <rect key="frame" x="8" y="74" width="398" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="g2M-dy-LZT"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="k4X-WW-dV3" id="PvE-aL-H6w"/>
+                                            <outlet property="delegate" destination="k4X-WW-dV3" id="l4t-pr-J8q"/>
+                                        </connections>
+                                    </pickerView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pnF-29-0al">
+                                        <rect key="frame" x="8" y="162" width="398" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="K7m-o7-F4S"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="English"/>
+                                            <segment title="Random"/>
+                                            <segment title="Spanish"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="cardSideSegmentedControlValueChanged:" destination="k4X-WW-dV3" eventType="valueChanged" id="OxZ-3k-dRG"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tO-2S-Pie">
+                                        <rect key="frame" x="77" y="16" width="260" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCX-JF-ofS">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="decrementWordCountAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="2MF-YW-MhQ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Word Count: XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfZ-Ux-7sl">
+                                                <rect key="frame" x="50" y="0.0" width="160" height="50"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNW-IJ-dCL">
+                                                <rect key="frame" x="210" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Ffo-l8-rce"/>
+                                                    <constraint firstAttribute="width" constant="50" id="hzM-aI-ldg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="incrementWordCountAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="u8p-ci-1DS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bCX-JF-ofS" firstAttribute="width" secondItem="UNW-IJ-dCL" secondAttribute="width" id="5xw-FM-Olo"/>
+                                            <constraint firstAttribute="height" constant="50" id="DPy-sy-wC3"/>
+                                            <constraint firstItem="bCX-JF-ofS" firstAttribute="height" secondItem="UNW-IJ-dCL" secondAttribute="height" id="rKz-Qy-W10"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Ir-ilw" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="307" width="163" height="50"/>
+                                        <color key="backgroundColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="163" id="ORL-JL-iFL"/>
+                                            <constraint firstAttribute="height" constant="50" id="Z7O-ds-wja"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="5fQ-fj-dMc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cgd-3r-M2o" firstAttribute="leading" secondItem="xfE-cp-NnS" secondAttribute="leading" constant="8" id="1S7-sY-JnN"/>
+                                    <constraint firstItem="cgd-3r-M2o" firstAttribute="leading" secondItem="pnF-29-0al" secondAttribute="leading" id="Cuv-HW-8LD"/>
+                                    <constraint firstItem="8tO-2S-Pie" firstAttribute="centerX" secondItem="xfE-cp-NnS" secondAttribute="centerX" id="FyP-Ep-kYu"/>
+                                    <constraint firstAttribute="trailing" secondItem="cgd-3r-M2o" secondAttribute="trailing" constant="8" id="Qgs-Wg-SMK"/>
+                                    <constraint firstItem="cgd-3r-M2o" firstAttribute="top" secondItem="8tO-2S-Pie" secondAttribute="bottom" constant="8" id="Wkc-jP-do0"/>
+                                    <constraint firstItem="Gzy-Ir-ilw" firstAttribute="centerX" secondItem="xfE-cp-NnS" secondAttribute="centerX" id="XSD-am-lXw"/>
+                                    <constraint firstItem="cgd-3r-M2o" firstAttribute="width" secondItem="xfE-cp-NnS" secondAttribute="width" constant="-16" id="bGJ-D7-3b5"/>
+                                    <constraint firstItem="8tO-2S-Pie" firstAttribute="top" secondItem="xfE-cp-NnS" secondAttribute="top" constant="16" id="gNw-hp-GOp"/>
+                                    <constraint firstItem="cgd-3r-M2o" firstAttribute="trailing" secondItem="pnF-29-0al" secondAttribute="trailing" id="q8u-gs-hip"/>
+                                    <constraint firstAttribute="bottom" secondItem="pnF-29-0al" secondAttribute="bottom" constant="300" id="wx6-44-wGn"/>
+                                    <constraint firstItem="pnF-29-0al" firstAttribute="top" secondItem="cgd-3r-M2o" secondAttribute="bottom" constant="8" id="xFP-cj-R5L"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTr-N8-uaL" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                <rect key="frame" x="126" y="354" width="163" height="50"/>
+                                <color key="backgroundColor" red="0.64324307439999995" green="0.80505788330000005" blue="0.46183288099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9wJ-l2-zJy"/>
+                                    <constraint firstAttribute="width" constant="163" id="vce-9n-29L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Start!">
+                                    <color key="titleColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startQuizAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="Zy0-wn-H1V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uhx-WB-U6O" firstAttribute="top" secondItem="xfE-cp-NnS" secondAttribute="bottom" id="4nR-cK-zof"/>
+                            <constraint firstItem="q1d-8s-92l" firstAttribute="top" secondItem="Cwm-oR-RE8" secondAttribute="bottom" constant="-20" id="6br-4H-2VQ"/>
+                            <constraint firstItem="q1d-8s-92l" firstAttribute="leading" secondItem="uhf-X2-nf1" secondAttribute="leading" id="GK6-am-yak"/>
+                            <constraint firstItem="DXF-B8-fPG" firstAttribute="top" secondItem="Cwm-oR-RE8" secondAttribute="bottom" constant="12" id="HoM-aK-v5i"/>
+                            <constraint firstItem="mTr-N8-uaL" firstAttribute="centerX" secondItem="xfE-cp-NnS" secondAttribute="centerX" id="Hp0-vS-Isd"/>
+                            <constraint firstItem="xfE-cp-NnS" firstAttribute="top" secondItem="q1d-8s-92l" secondAttribute="bottom" constant="-4" id="awq-vj-buV"/>
+                            <constraint firstAttribute="trailing" secondItem="xfE-cp-NnS" secondAttribute="trailing" id="dtM-Ra-lgX"/>
+                            <constraint firstItem="xfE-cp-NnS" firstAttribute="leading" secondItem="uhf-X2-nf1" secondAttribute="leading" id="hpU-lv-JAu"/>
+                            <constraint firstItem="mTr-N8-uaL" firstAttribute="top" secondItem="pnF-29-0al" secondAttribute="bottom" constant="39" id="jhD-Yc-4Vu"/>
+                            <constraint firstAttribute="trailing" secondItem="q1d-8s-92l" secondAttribute="trailing" id="o4S-5I-ec8"/>
+                            <constraint firstItem="Gzy-Ir-ilw" firstAttribute="top" secondItem="mTr-N8-uaL" secondAttribute="bottom" constant="19" id="xMx-Oh-u3i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardSideSegmentedControl" destination="pnF-29-0al" id="aoh-4d-HAX"/>
+                        <outlet property="selectedTagLabel" destination="BVS-Lk-uWx" id="F1B-L0-hyW"/>
+                        <outlet property="titleLabel" destination="DXF-B8-fPG" id="1sd-IL-pIH"/>
+                        <outlet property="wordCountLabel" destination="bfZ-Ux-7sl" id="Gkw-fw-TV3"/>
+                        <outlet property="wordOrderPicker" destination="cgd-3r-M2o" id="GoD-OT-X7d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kps-BM-sAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+</document>

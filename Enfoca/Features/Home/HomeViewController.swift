@@ -47,6 +47,7 @@ class HomeViewController: UIViewController {
     
     fileprivate let browseViewFromHomeAnimator = BrowseFromHomeAnimator()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -208,7 +209,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let toBrowseViewController = segue.destination as? BrowseViewController {
             guard let tag = sender as? Tag else { fatalError() }
-            
+            //TODO: Didnt you decide not to do this? All delegates all the time right?
             let browseController = BrowseController(tag: tag, wordOrder: controller.wordOrder, delegate: toBrowseViewController)
             
             toBrowseViewController.transitioningDelegate = self
@@ -220,6 +221,13 @@ class HomeViewController: UIViewController {
             editWordPairVC.transitioningDelegate = self
             
             editWordPairVC.delegate = self
+            
+        }
+        
+        if let quizViewController = segue.destination as? QuizViewController {
+//            quizViewController.transitioningDelegate = self
+            
+            quizViewController.delegate = self
             
         }
 
@@ -304,6 +312,11 @@ extension HomeViewController: BrowseTagSelectionDelegate {
 extension HomeViewController: QuizTagSelectionDelegate {
     func quizWordsWithTag(forTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
         print("Quiz words tagged: \(tag.name)")
+        
+        controller.selectedQuizTag = tag
+        
+        performSegue(withIdentifier: "QuizViewControllerSegue", sender: tag)
+        
     }
 }
 
@@ -349,6 +362,12 @@ extension HomeViewController: EditWordPairViewControllerDelegate {
     
     func getCreateText() -> String {
         return searchOrCreateTextField.text!
+    }
+}
+
+extension HomeViewController: QuizViewControllerDelegate {
+    func tagSelectedForQuiz() -> Tag {
+        return controller.selectedQuizTag!
     }
 }
 

@@ -10,6 +10,12 @@
 		0F011EA61EE9E31100939B75 /* TagEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */; };
 		0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
 		0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
+		0F011EAE1EEB25FB00939B75 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EAD1EEB25FB00939B75 /* QuizViewModel.swift */; };
+		0F011EAF1EEB25FB00939B75 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EAD1EEB25FB00939B75 /* QuizViewModel.swift */; };
+		0F011EB11EEB2AAB00939B75 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EB01EEB2AAB00939B75 /* QuizViewController.swift */; };
+		0F011EB21EEB2AAB00939B75 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EB01EEB2AAB00939B75 /* QuizViewController.swift */; };
+		0F011EB41EEB2B2300939B75 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F011EB31EEB2B2300939B75 /* Quiz.storyboard */; };
+		0F011EB51EEB2B2300939B75 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F011EB31EEB2B2300939B75 /* Quiz.storyboard */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -347,6 +353,9 @@
 /* Begin PBXFileReference section */
 		0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagEditorUITests.swift; sourceTree = "<group>"; };
 		0F011EA91EEAF03500939B75 /* CheckMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkView.swift; sourceTree = "<group>"; };
+		0F011EAD1EEB25FB00939B75 /* QuizViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewModel.swift; path = Quiz/QuizViewModel.swift; sourceTree = "<group>"; };
+		0F011EB01EEB2AAB00939B75 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = Quiz/QuizViewController.swift; sourceTree = "<group>"; };
+		0F011EB31EEB2B2300939B75 /* Quiz.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Quiz.storyboard; path = Quiz/Quiz.storyboard; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -528,6 +537,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F011EAC1EEB243600939B75 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				0F011EAD1EEB25FB00939B75 /* QuizViewModel.swift */,
+				0F011EB01EEB2AAB00939B75 /* QuizViewController.swift */,
+				0F011EB31EEB2B2300939B75 /* Quiz.storyboard */,
+			);
+			name = Quiz;
+			sourceTree = "<group>";
+		};
 		0F085B671ED54C1E00FC20A1 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +752,7 @@
 		0FA4A4B41EC8A56200F31F9A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0F011EAC1EEB243600939B75 /* Quiz */,
 				0FA4A5611ECB54EC00F31F9A /* Animators */,
 				0F085B6A1ED7488300FC20A1 /* Browse */,
 				0F085B841EDC642300FC20A1 /* Edit */,
@@ -1173,6 +1193,7 @@
 				0F911E761EE75D4600F21855 /* Browse.storyboard in Resources */,
 				0F911E771EE75D4600F21855 /* WordPairTableStoryboard.storyboard in Resources */,
 				0F911E781EE75D4600F21855 /* Edit.storyboard in Resources */,
+				0F011EB51EEB2B2300939B75 /* Quiz.storyboard in Resources */,
 				0F911E791EE75D4600F21855 /* Loading.storyboard in Resources */,
 				0F911E7A1EE75D4600F21855 /* TagSelection.storyboard in Resources */,
 				0F911E7B1EE75D4600F21855 /* Home.storyboard in Resources */,
@@ -1214,6 +1235,7 @@
 				0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */,
 				0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */,
 				0F911EF11EE76CB900F21855 /* small_study_item_meta.json in Resources */,
+				0F011EB41EEB2B2300939B75 /* Quiz.storyboard in Resources */,
 				0F911EF31EE76CB900F21855 /* small_tag_associations.json in Resources */,
 				0FD1E2091ED0827700D8BD1A /* WordPairTableStoryboard.storyboard in Resources */,
 				0F911EF41EE76CB900F21855 /* small_tag.json in Resources */,
@@ -1285,6 +1307,7 @@
 				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
 				0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */,
 				0F911E3C1EE75D4600F21855 /* HomeViewController.swift in Sources */,
+				0F011EAF1EEB25FB00939B75 /* QuizViewModel.swift in Sources */,
 				0F911E3D1EE75D4600F21855 /* UIColor+.swift in Sources */,
 				0F911E3E1EE75D4600F21855 /* TagCollectionViewCell.swift in Sources */,
 				0F911E3F1EE75D4600F21855 /* MonitoredBaseOperation.swift in Sources */,
@@ -1333,6 +1356,7 @@
 				0F911E6C1EE75D4600F21855 /* OperationCreateTag.swift in Sources */,
 				0F911E6D1EE75D4600F21855 /* TagSelectionViewController.swift in Sources */,
 				0F911E6E1EE75D4600F21855 /* OperationFetchTagAssociations.swift in Sources */,
+				0F011EB21EEB2AAB00939B75 /* QuizViewController.swift in Sources */,
 				0F911E6F1EE75D4600F21855 /* FetchOrCreateEnfocaId.swift in Sources */,
 				0F911E701EE75D4600F21855 /* Perform.swift in Sources */,
 			);
@@ -1437,6 +1461,7 @@
 				0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */,
 				0F911F091EE76CFA00F21855 /* OldTagAssociation.swift in Sources */,
 				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
+				0F011EAE1EEB25FB00939B75 /* QuizViewModel.swift in Sources */,
 				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
 				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,
@@ -1515,6 +1540,7 @@
 				0FA4A5411EC8ECD200F31F9A /* OperationCreateTag.swift in Sources */,
 				0FAD20CE1ECE65B3002EACDA /* TagSelectionViewController.swift in Sources */,
 				0FA4A5441EC8ECD200F31F9A /* OperationFetchTagAssociations.swift in Sources */,
+				0F011EB11EEB2AAB00939B75 /* QuizViewController.swift in Sources */,
 				0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */,
 				0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */,
 			);

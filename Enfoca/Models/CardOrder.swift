@@ -17,8 +17,6 @@ enum CardOrder : String {
     case latestAdded = "Most Reciently Added"
     case random = "Random"
     case leastRecientlyStudied = "Least Reciently Studied"
-//
-//    case TERM_DES("Term Descending", false),
-//    TERM("Term", false),
-
+    
+    static let values : [CardOrder] = [hardest, slowest, easiest, leastStudied, latestAdded, random, leastRecientlyStudied]
 }
