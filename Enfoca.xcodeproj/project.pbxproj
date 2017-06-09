@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F011EA61EE9E31100939B75 /* TagEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -342,6 +343,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagEditorUITests.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 				0F085B7A1ED8796D00FC20A1 /* EnfocaUITests.swift */,
 				0F911E1D1EE736F300F21855 /* HomeTests.swift */,
 				0F085B7C1ED8796D00FC20A1 /* Info.plist */,
+				0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */,
 			);
 			path = EnfocaUITests;
 			sourceTree = "<group>";
@@ -1238,6 +1241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F911E1A1EE518C700F21855 /* BrowseFeatureTests.swift in Sources */,
+				0F011EA61EE9E31100939B75 /* TagEditorUITests.swift in Sources */,
 				0F911E1E1EE736F300F21855 /* HomeTests.swift in Sources */,
 				0F085B7B1ED8796D00FC20A1 /* EnfocaUITests.swift in Sources */,
 			);

@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Enfoca.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0FA4A4881EC89C0D00F31F9A"
+               BuildableName = "Enfoca.app"
+               BlueprintName = "Enfoca"
+               ReferencedContainer = "container:Enfoca.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
