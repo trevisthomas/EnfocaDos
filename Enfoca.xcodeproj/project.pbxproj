@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F011EA61EE9E31100939B75 /* TagEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */; };
+		0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
+		0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -344,6 +346,7 @@
 
 /* Begin PBXFileReference section */
 		0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagEditorUITests.swift; sourceTree = "<group>"; };
+		0F011EA91EEAF03500939B75 /* CheckMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkView.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -530,6 +533,7 @@
 			children = (
 				0F911E171EE30AD100F21855 /* EnfocaButton.swift */,
 				0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */,
+				0F011EA91EEAF03500939B75 /* CheckMarkView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1301,6 +1305,7 @@
 				0F911E4E1EE75D4600F21855 /* User.swift in Sources */,
 				0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */,
 				0F911E501EE75D4600F21855 /* JsonDateFormatter.swift in Sources */,
+				0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */,
 				0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */,
 				0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */,
@@ -1432,6 +1437,7 @@
 				0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */,
 				0F911F091EE76CFA00F21855 /* OldTagAssociation.swift in Sources */,
 				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
+				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
 				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,
 				0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */,

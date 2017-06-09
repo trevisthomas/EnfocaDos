@@ -17,7 +17,7 @@ class TagCell: UITableViewCell {
         // Initialization code
     }
     
-    @IBOutlet weak var tagSelectedView: UIView?
+    @IBOutlet weak var tagSelectedView: CheckMarkView?
     @IBOutlet weak var tagSubtitleLabel: UILabel?
     @IBOutlet weak var tagTitleLabel: UILabel?
     
@@ -60,12 +60,6 @@ class TagCell: UITableViewCell {
             tagTitleLabel?.text = sourceTag.name
             tagSubtitleLabel?.text = formatDetailText(sourceTag.count)
             
-            
-//            centerAlignYEditTagConstraintOriginal = centerAlignYEditTagConstraint.constant
-//            topTagTitleConstraintOriginal = topTagTitleConstraint.constant
-         
-//            bottomSubTitleConstraintOriginal = bottomSubTitleConstraint.constant
-            
             editTagTextField.addTarget(self, action: #selector(wordTextDidChange(_:)), for: [.editingChanged])
             
             invokeLater {
@@ -89,12 +83,16 @@ class TagCell: UITableViewCell {
     var createTagCallback : ((TagCell, String)->())? = nil {
         didSet{
             createButton?.isHidden = createTagCallback == nil
+            
+            
+            tagSelectedView?.isHidden = !(createButton!.isHidden)
         }
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         editButton.isHidden = !editing
+        tagSelectedView?.isHidden = editing
         
         if isTagEditing {
             toggleTagEditor()
@@ -145,7 +143,7 @@ class TagCell: UITableViewCell {
     }
     
     private func applyTagEditingMode(){
-//        layoutIfNeeded()
+        layoutIfNeeded()
         
         
         if isTagEditing {
@@ -178,8 +176,7 @@ class TagCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-        tagSelectedView?.isHidden = !selected
+        tagSelectedView?.checked(selected, animated: true)
     }
 }
 
