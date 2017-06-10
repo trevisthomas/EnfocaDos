@@ -350,6 +350,123 @@ class DataStore {
         })
     }
     
+    
+    func fetchQuiz(cardOrder: CardOrder, wordCount: Int, forTags tags: [Tag]? = nil) -> [WordPair]{
+        
+        var wordPairs: [WordPair] = []
+        if let tags = tags, tags.count > 0 {
+            
+            let tagIds = tags.map({ (tag:Tag) -> AnyHashable in
+                return tag.tagId
+            })
+            
+            let filteredAssociations = tagAssociations.filter({ (tagAss:TagAssociation) -> Bool in
+                return tagIds.contains(tagAss.tagId)
+            })
+            
+            var tempPairs = Set<WordPair>()
+            for ass in filteredAssociations {
+                tempPairs.insert(wordPairDictionary[ass.wordPairId]!)
+            }
+            
+            wordPairs = Array(tempPairs)
+            
+        } else {
+            wordPairs = Array(wordPairDictionary.values)
+        }
+        
+        var sortFunc : ((WordPair, WordPair) -> Bool)?
+        
+        switch (cardOrder) {
+        case .easiest:
+            sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
+                guard let m1 = wp1.metaData else {
+                    return false //If the meta is null then i cant be easy
+                }
+                guard let m2 = wp2.metaData else {
+                    return true
+                }
+                return m1.score > m2.score
+            }
+        case .hardest:
+            sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
+                return wp1.metaData?.score ?? 0 < wp2.metaData?.score ?? 0
+            }
+        case .latestAdded:
+            sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
+                guard let m1 = wp1.metaData else {
+                    return true //If the meta is null, then i must be newer?
+                }
+                guard let m2 = wp2.metaData else {
+                    return false
+                }
+                return m1.dateCreated > m2.dateCreated
+            }
+        case .leastRecientlyStudied:
+            sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
+                
+                //Either the oldest updated date, or null, meaning never
+                
+                guard let dateUpdated = wp1.metaData?.dateUpdated
+                    else {
+                    return true //If the date is null, then i must have never been studied?
+                }
+                guard let dateUpdated2 = wp2.metaData?.dateUpdated else {
+                    return false
+                }
+                
+                return dateUpdated < dateUpdated2
+            }
+        case .leastStudied:
+            sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
+                guard let m1 = wp1.metaData else {
+                    return true //If my meta is null, then i have never been studied
+                }
+                guard let m2 = wp2.metaData else {
+                    return false
+                }
+                return m1.timedViewCount < m2.timedViewCount
+            }
+        case .slowest:
+            sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
+                guard let m1 = wp1.metaData else {
+                    return true //If my meta is null, then i have never been studied
+                }
+                guard let m2 = wp2.metaData else {
+                    return false
+                }
+                return m1.averageTime < m2.averageTime
+            }
+        case .random:
+            sortFunc = nil
+        }
+        
+        if let sortFunc = sortFunc {
+            wordPairs.sort(by: sortFunc)
+        } else {
+            //Random
+            wordPairs.shuffle()
+        }
+        
+        return Array(wordPairs.prefix(wordCount))
+        
+    }
+    
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(WordPair?, EnfocaError?)->()) {
+        
+        //Todo!
+        
+//        guard let wp = wordPairDictionary[forWordPair.pairId] else { fatalError() }
+//        
+//        let metaData : MetaData
+//        if let _ = wp.metaData {
+//            metaData = wp.metaData
+//        } else {
+//            //Factory call back for creating the Meta if there isnt one.
+////            metaData = MetaData(metaId: <#T##String#>, pairId: <#T##String#>, dateCreated: <#T##Date#>, dateUpdated: <#T##Date?#>, incorrectCount: <#T##Int#>, totalTime: <#T##Int#>, timedViewCount: <#T##Int#>)
+//        }
+    }
+    
     func allTags() -> [Tag]{
         return tagDictionary.values.sorted(by: { (t1: Tag, t2: Tag) -> Bool in
             t1.name.lowercased() < t2.name.lowercased()

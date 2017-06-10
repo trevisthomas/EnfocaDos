@@ -502,6 +502,170 @@ class DataStoreTests: XCTestCase {
         
         XCTAssertEqual(result.count, 3)
     }
+    
+    func testQuiz_EasiestShouldBeEasy(){
+        mockDataOne()
+        
+        let result = sut.fetchQuiz(cardOrder: .easiest, wordCount: 3)
+        
+        XCTAssertTrue(result[0].metaData!.score > result[1].metaData!.score)
+        XCTAssertTrue(result[1].metaData!.score > result[2].metaData!.score)
+        
+    }
+    
+    func testQuiz_EasiestShouldBeEasyNil(){
+        mockDataTwo_SomeNilMeta()
+        
+        let result = sut.fetchQuiz(cardOrder: .easiest, wordCount: 3)
+        
+        XCTAssertEqual(result[0], wordPairs[1])
+        XCTAssertEqual(result[1], wordPairs[0])
+        XCTAssertEqual(result[2], wordPairs[2])
+        
+    }
+    
+    func testQuiz_HardestShouldBeHard(){
+        mockDataOne()
+        
+        let result = sut.fetchQuiz(cardOrder: .hardest, wordCount: 3)
+        
+        XCTAssertTrue(result[0].metaData!.score < result[1].metaData!.score)
+        XCTAssertTrue(result[1].metaData!.score < result[2].metaData!.score)
+        
+    }
+    
+    func testQuiz_HardestShouldBeHardNil(){
+        mockDataTwo_SomeNilMeta()
+        
+        let result = sut.fetchQuiz(cardOrder: .hardest, wordCount: 3)
+        
+        XCTAssertEqual(result[0], wordPairs[2])
+        XCTAssertEqual(result[1], wordPairs[0])
+        XCTAssertEqual(result[2], wordPairs[1])
+        
+    }
+    
+    func testQuiz_LatestShouldBeLater(){
+        mockDataOne()
+        
+        let result = sut.fetchQuiz(cardOrder: .latestAdded, wordCount: 3)
+        
+        XCTAssertTrue(result[0].metaData!.dateCreated > result[1].metaData!.dateCreated)
+        XCTAssertTrue(result[1].metaData!.dateCreated > result[2].metaData!.dateCreated)
+        
+        
+    }
+    
+    func testQuiz_LatestShouldBeLaterWithNil(){
+        mockDataTwo_SomeNilMeta()
+        
+        let result = sut.fetchQuiz(cardOrder: .latestAdded, wordCount: 3)
+        
+        XCTAssertEqual(result[0], wordPairs[2])
+        XCTAssertEqual(result[1], wordPairs[1])
+        XCTAssertEqual(result[2], wordPairs[0])
+        
+        
+    }
+    
+    func testQuiz_LeastRecientlyStudied(){
+        mockDataOne()
+        
+        let result = sut.fetchQuiz(cardOrder: .leastRecientlyStudied, wordCount: 3)
+        
+        
+        XCTAssertEqual(result[0], wordPairs[2])
+        XCTAssertEqual(result[1], wordPairs[1])
+        XCTAssertEqual(result[2], wordPairs[0])
+        
+    }
+    
+    func testQuiz_LeastRecientlyStudiedWithNil(){
+        mockDataTwo_SomeNilMeta()
+        
+        let result = sut.fetchQuiz(cardOrder: .leastRecientlyStudied, wordCount: 3)
+        
+        
+        XCTAssertEqual(result[0], wordPairs[2])
+        XCTAssertEqual(result[1], wordPairs[1])
+        XCTAssertEqual(result[2], wordPairs[0])
+        
+    }
+    
+    func testQuiz_LeastOftenStudied(){
+        mockDataOne()
+        
+        let result = sut.fetchQuiz(cardOrder: .leastStudied, wordCount: 3)
+        
+        
+        XCTAssertEqual(result[0], wordPairs[2])
+        XCTAssertEqual(result[1], wordPairs[0])
+        XCTAssertEqual(result[2], wordPairs[1])
+        
+    }
+    
+    func testQuiz_LeastOftenStudiedWithNil(){
+        mockDataTwo_SomeNilMeta()
+        
+        let result = sut.fetchQuiz(cardOrder: .leastStudied, wordCount: 3)
+        
+        
+        XCTAssertEqual(result[0], wordPairs[2])
+        XCTAssertEqual(result[1], wordPairs[0])
+        XCTAssertEqual(result[2], wordPairs[1])
+        
+    }
+
+
+    func testQuiz_SlowestResponses(){
+        mockDataOne()
+        
+        let result = sut.fetchQuiz(cardOrder: .slowest, wordCount: 3)
+        
+        
+        XCTAssertEqual(result[0], wordPairs[0])
+        XCTAssertEqual(result[1], wordPairs[2])
+        XCTAssertEqual(result[2], wordPairs[1])
+        
+    }
+    
+    func testQuiz_SlowestResponsesWithNilMeta(){
+        mockDataTwo_SomeNilMeta()
+        
+        let result = sut.fetchQuiz(cardOrder: .slowest, wordCount: 3)
+        
+        
+        XCTAssertEqual(result[0], wordPairs[2])
+        XCTAssertEqual(result[1], wordPairs[0])
+        XCTAssertEqual(result[2], wordPairs[1])
+        
+    }
+    
+    
+    func testQuiz_Random(){
+        mockDataOne()
+        
+        let result = sut.fetchQuiz(cardOrder: .random, wordCount: 3)
+        var resultAlt = sut.fetchQuiz(cardOrder: .random, wordCount: 3)
+        
+        
+        for _ in 0...10 {
+            if result != resultAlt {
+                return //They didnt match.  This is what i want.
+            } else {
+                //If they matched, try again.
+                resultAlt = sut.fetchQuiz(cardOrder: .random, wordCount: 3)
+            }
+        }
+        
+        //If we get here, after 10 tries all were the same, then random isnt working.  Even with this small set
+        
+        assertionFailure("Failed to mutate.  Random isn't working.")
+        
+    }
+    
+    
+    
 
 }
 
@@ -516,6 +680,21 @@ extension DataStoreTests{
         wordPairs.append(WordPair(pairId: "101", word: "Amarillo", definition: "Yellow"))
         wordPairs.append(WordPair(pairId: "102", word: "Clave", definition: "Nail"))
         
+        let today = Date()
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today)!
+//        let twoDaysAgo = Calendar.current.date(byAdding: .day, value: -2, to: today)!
+        
+        let lastWeek = Calendar.current.date(byAdding: .day, value: -7, to: today)!
+        let lastWeekPlus1 = Calendar.current.date(byAdding: .day, value: 1, to: lastWeek)!
+        let lastWeekPlus2 = Calendar.current.date(byAdding: .day, value: 2, to: lastWeek)!
+        
+        wordPairs[0].metaData = MetaData(metaId: "1010", pairId: wordPairs[0].pairId, dateCreated: lastWeek, dateUpdated: today, incorrectCount: 10, totalTime: 10, timedViewCount: 10)
+        
+        wordPairs[1].metaData = MetaData(metaId: "1011", pairId: wordPairs[1].pairId, dateCreated: lastWeekPlus2, dateUpdated: yesterday, incorrectCount: 0, totalTime: 100, timedViewCount: 11)
+        
+        wordPairs[2].metaData = MetaData(metaId: "1012", pairId: wordPairs[2].pairId, dateCreated: lastWeekPlus1, dateUpdated: nil, incorrectCount: 5, totalTime: 50, timedViewCount: 9)
+        
+        
         wpAss.append(TagAssociation(associationId: "10", wordPairId: wordPairs[0].pairId, tagId: tags[0].tagId))
         
         wpAss.append(TagAssociation(associationId: "11", wordPairId: wordPairs[0].pairId, tagId: tags[2].tagId))
@@ -525,6 +704,41 @@ extension DataStoreTests{
         
         sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: [])
     }
+    
+    func mockDataTwo_SomeNilMeta(){
+        tags.append(Tag(tagId: "1", name: "Noun"))
+        tags.append(Tag(tagId: "2", name: "Verb"))
+        tags.append(Tag(tagId: "3", name: "Adjective"))
+        
+        wordPairs.append(WordPair(pairId: "100", word: "Azul", definition: "Blue"))
+        wordPairs.append(WordPair(pairId: "101", word: "Amarillo", definition: "Yellow"))
+        wordPairs.append(WordPair(pairId: "102", word: "Clave", definition: "Nail"))
+        
+        let today = Date()
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today)!
+        
+        
+        let lastWeek = Calendar.current.date(byAdding: .day, value: -7, to: today)!
+        let lastWeekPlus1 = Calendar.current.date(byAdding: .day, value: 1, to: lastWeek)!
+        
+        wordPairs[0].metaData = MetaData(metaId: "1010", pairId: wordPairs[0].pairId, dateCreated: lastWeek, dateUpdated: today, incorrectCount: 10, totalTime: 10, timedViewCount: 10)
+        
+        wordPairs[1].metaData = MetaData(metaId: "1011", pairId: wordPairs[1].pairId, dateCreated: lastWeekPlus1, dateUpdated: yesterday, incorrectCount: 0, totalTime: 100, timedViewCount: 11)
+        
+        wordPairs[2].metaData = nil
+        
+        
+        wpAss.append(TagAssociation(associationId: "10", wordPairId: wordPairs[0].pairId, tagId: tags[0].tagId))
+        
+        wpAss.append(TagAssociation(associationId: "11", wordPairId: wordPairs[0].pairId, tagId: tags[2].tagId))
+        
+        wpAss.append(TagAssociation(associationId: "12", wordPairId: wordPairs[1].pairId, tagId: tags[0].tagId))
+        
+        
+        sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: [])
+    }
+    
+    
 }
 
 
