@@ -452,19 +452,26 @@ class DataStore {
         
     }
     
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(WordPair?, EnfocaError?)->()) {
+    func updateScore(forWordPair: WordPair, correct: Bool, metaDataFactory: @escaping(WordPair)->(MetaData)) -> MetaData{
         
-        //Todo!
+        guard let wp = wordPairDictionary[forWordPair.pairId] else { fatalError() }
         
-//        guard let wp = wordPairDictionary[forWordPair.pairId] else { fatalError() }
-//        
-//        let metaData : MetaData
-//        if let _ = wp.metaData {
-//            metaData = wp.metaData
-//        } else {
-//            //Factory call back for creating the Meta if there isnt one.
-////            metaData = MetaData(metaId: <#T##String#>, pairId: <#T##String#>, dateCreated: <#T##Date#>, dateUpdated: <#T##Date?#>, incorrectCount: <#T##Int#>, totalTime: <#T##Int#>, timedViewCount: <#T##Int#>)
-//        }
+        let metaData : MetaData
+        if let _ = wp.metaData {
+            metaData = wp.metaData!
+        } else {
+            metaData = metaDataFactory(forWordPair)
+            metaDataDictionary[forWordPair.pairId] = metaData
+            forWordPair.metaData = metaData
+        }
+        
+        if correct {
+            metaData.correct()
+        } else {
+            metaData.incorrect()
+        }
+        
+        return metaData
     }
     
     func allTags() -> [Tag]{

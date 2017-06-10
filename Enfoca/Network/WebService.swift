@@ -35,4 +35,11 @@ protocol WebService {
     func deleteWordPair(wordPair: WordPair, callback: @escaping(WordPair?, EnfocaError?)->())
     
     func deleteTag(tag: Tag, callback: @escaping(Tag?, EnfocaError?)->())
+    
+    /**
+     A null tag is how you ask for words of any tag.
+     */
+    func fetchQuiz(forTag: Tag?, cardOrder: CardOrder, wordCount: Int, callback: @escaping([WordPair]?, EnfocaError?)->())
+    
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(WordPair?, EnfocaError?)->())
 }

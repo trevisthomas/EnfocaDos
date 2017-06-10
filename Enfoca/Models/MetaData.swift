@@ -74,7 +74,14 @@ class MetaData : Hashable {
         self.timedViewCount = timedViewCount
     }
 
+    func correct(){
+        timedViewCount += 1
+    }
     
+    func incorrect(){
+        timedViewCount += 1
+        incorrectCount += 1
+    }
     
     public init (json: String) {
         guard let jsonData = json.data(using: .utf8) else { fatalError() }

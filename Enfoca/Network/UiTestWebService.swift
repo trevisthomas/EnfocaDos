@@ -233,4 +233,12 @@ class UiTestWebService : WebService {
         }
         
     }
+    
+    func fetchQuiz(forTag: Tag?, cardOrder: CardOrder, wordCount: Int, callback: @escaping ([WordPair]?, EnfocaError?) -> ()) {
+        fatalError()
+    }
+    
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
+        fatalError()
+    }
 }

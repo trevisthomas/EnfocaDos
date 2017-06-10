@@ -17,6 +17,8 @@
 		0F011EB41EEB2B2300939B75 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F011EB31EEB2B2300939B75 /* Quiz.storyboard */; };
 		0F011EB51EEB2B2300939B75 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F011EB31EEB2B2300939B75 /* Quiz.storyboard */; };
 		0F011EB81EEB592A00939B75 /* QuizViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EB71EEB592A00939B75 /* QuizViewModelTests.swift */; };
+		0F011EBA1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EB91EEC8B0700939B75 /* OperationUpdateMetaData.swift */; };
+		0F011EBB1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EB91EEC8B0700939B75 /* OperationUpdateMetaData.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -358,6 +360,7 @@
 		0F011EB01EEB2AAB00939B75 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = Quiz/QuizViewController.swift; sourceTree = "<group>"; };
 		0F011EB31EEB2B2300939B75 /* Quiz.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Quiz.storyboard; path = Quiz/Quiz.storyboard; sourceTree = "<group>"; };
 		0F011EB71EEB592A00939B75 /* QuizViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewModelTests.swift; path = Quiz/QuizViewModelTests.swift; sourceTree = "<group>"; };
+		0F011EB91EEC8B0700939B75 /* OperationUpdateMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationUpdateMetaData.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -912,6 +915,7 @@
 			children = (
 				0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */,
 				0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */,
+				0F011EB91EEC8B0700939B75 /* OperationUpdateMetaData.swift */,
 			);
 			path = Meta;
 			sourceTree = "<group>";
@@ -1345,6 +1349,7 @@
 				0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */,
 				0F911E561EE75D4600F21855 /* BaseUserOperation.swift in Sources */,
 				0F911E571EE75D4600F21855 /* TagFilterViewModel.swift in Sources */,
+				0F011EBB1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */,
 				0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */,
 				0F911E591EE75D4600F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */,
@@ -1528,6 +1533,7 @@
 				0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */,
 				0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */,
 				0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */,
+				0F011EBA1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */,
 				0F911E0E1EE08E8300F21855 /* TagFilterViewController.swift in Sources */,
 				0FA4A5241EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */,

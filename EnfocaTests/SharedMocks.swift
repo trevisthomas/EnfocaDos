@@ -170,6 +170,14 @@ class MockWebService : WebService {
     
     func deleteTag(tag: Tag, callback: @escaping(Tag?, EnfocaError?)->()){}
     
+    func fetchQuiz(forTag: Tag?, cardOrder: CardOrder, wordCount: Int, callback: @escaping ([WordPair]?, EnfocaError?) -> ()) {
+        fatalError()
+    }
+    
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
+        fatalError()
+    }
+    
 }
 
 class MockApplicationDefaults : ApplicationDefaults {

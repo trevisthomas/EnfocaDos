@@ -9,6 +9,17 @@
 import UIKit
 
 class DemoWebService : WebService {
+    /**
+     A null tag is how you ask for words of any tag.
+     */
+    func fetchQuiz(forTag: Tag?, cardOrder: CardOrder, wordCount: Int, callback: @escaping ([WordPair]?, EnfocaError?) -> ()) {
+        fatalError()
+    }
+    
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
+        fatalError()
+    }
+
     func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
         callback(true, nil)
     }

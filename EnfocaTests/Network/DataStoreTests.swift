@@ -664,7 +664,29 @@ class DataStoreTests: XCTestCase {
         
     }
     
-    
+    func testQuizScore_ShouldUpdate() {
+        mockDataTwo_SomeNilMeta()
+        
+        let result = sut.fetchQuiz(cardOrder: .easiest, wordCount: 1, forTags: [tags[1]])
+        
+        XCTAssertEqual(result.count, 1)
+        
+        XCTAssertEqual(result[0].word, "Clave")
+        
+        sut.updateScore(forWordPair: result[0], correct: true, metaDataFactory: { (wp: WordPair) -> (MetaData) in
+            let metaData = MetaData(metaId: "mock", pairId: wp.pairId, dateCreated: Date(), dateUpdated: nil, incorrectCount: 0, totalTime: 0, timedViewCount: 0)
+            return metaData
+        })
+        
+        XCTAssertEqual(result[0].metaData?.scoreAsString, "100%")
+        
+        sut.updateScore(forWordPair: result[0], correct: false, metaDataFactory: { (wp: WordPair) -> (MetaData) in
+            let metaData = MetaData(metaId: "mock", pairId: wp.pairId, dateCreated: Date(), dateUpdated: nil, incorrectCount: 0, totalTime: 0, timedViewCount: 0)
+            return metaData
+        })
+        
+        XCTAssertEqual(result[0].metaData?.scoreAsString, "50%")
+    }
     
 
 }
@@ -733,6 +755,8 @@ extension DataStoreTests{
         wpAss.append(TagAssociation(associationId: "11", wordPairId: wordPairs[0].pairId, tagId: tags[2].tagId))
         
         wpAss.append(TagAssociation(associationId: "12", wordPairId: wordPairs[1].pairId, tagId: tags[0].tagId))
+        
+        wpAss.append(TagAssociation(associationId: "13", wordPairId: wordPairs[2].pairId, tagId: tags[1].tagId))
         
         
         sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: [])

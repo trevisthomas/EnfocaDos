@@ -115,4 +115,38 @@ extension Perform{
         
     }
 
+    class func createMetaData(metaDataSource: MetaData, enfocaId: NSNumber, db: CKDatabase, callback : @escaping(_ metaData: MetaData?, _ error: String?)->()) {
+        
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        let createMetaData = OperationCreateMetaData(metaDataSource: metaDataSource, enfocaId: enfocaId, db: db, errorDelegate: errorHandler)
+        
+        let completeOp = BlockOperation {
+            OperationQueue.main.addOperation{
+                callback(createMetaData.metaData, nil)
+            }
+        }
+        
+        completeOp.addDependency(createMetaData)
+        queue.addOperations([createMetaData, completeOp], waitUntilFinished: false)
+    }
+    
+    class func updateMetaData(updatedMetaData: MetaData, enfocaId: NSNumber, db: CKDatabase, callback : @escaping(_ metaData: MetaData?, _ error: String?)->()) {
+        
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        let updateMetaData = OperationUpdateMetaData(updatedMetaData: updatedMetaData, enfocaId: enfocaId, db: db, errorDelegate: errorHandler)
+        
+        let completeOp = BlockOperation {
+            OperationQueue.main.addOperation{
+                callback(updateMetaData.metaData, nil)
+            }
+        }
+        
+        completeOp.addDependency(updateMetaData)
+        queue.addOperations([updateMetaData, completeOp], waitUntilFinished: false)
+    }
+    
 }

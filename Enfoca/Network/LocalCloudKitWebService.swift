@@ -198,10 +198,11 @@ class LocalCloudKitWebService : WebService {
     }
     
     func updateTag(oldTag : Tag, newTagName: String, callback: @escaping(Tag?, EnfocaError?)->()) {
-        
+        showNetworkActivityIndicator = true
         let newTag = dataStore.applyUpdate(oldTag: oldTag, name: newTagName)
         
         Perform.updateTag(updatedTag: newTag, enfocaId: enfocaId, db: db) { (tag:Tag?, error:String?) in
+            self.showNetworkActivityIndicator = false
             
             if let error = error { callback(nil, error) }
             
@@ -285,4 +286,39 @@ class LocalCloudKitWebService : WebService {
             }
         }
     }
+    
+    func fetchQuiz(forTag: Tag?, cardOrder: CardOrder, wordCount: Int, callback: @escaping([WordPair]?, EnfocaError?)->()) {
+        
+        var wordPairs : [WordPair]!
+        if let tag = forTag {
+            wordPairs = dataStore.fetchQuiz(cardOrder: cardOrder, wordCount: wordCount, forTags: [tag])
+        } else {
+            wordPairs = dataStore.fetchQuiz(cardOrder: cardOrder, wordCount: wordCount)
+        }
+        
+        callback(wordPairs, nil)
+    }
+    
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(WordPair?, EnfocaError?)->()) {
+        
+        showNetworkActivityIndicator = true
+        
+        let metaData = dataStore.updateScore(forWordPair: forWordPair, correct: correct) { (wordPair: WordPair) -> (MetaData) in
+            fatalError() //TODO: Create meta data!!
+        }
+        
+        Perform.updateMetaData(updatedMetaData: metaData, enfocaId: enfocaId, db: privateDb) { (metaData: MetaData?, error: String?) in
+            self.showNetworkActivityIndicator = false
+            
+            if let error = error { callback(nil, error) }
+            
+            guard let _ = metaData else { fatalError() }
+            
+            //Do i need to put the score in place?
+            
+            callback(forWordPair, nil)
+        }
+        
+    }
+    
 }
