@@ -75,7 +75,14 @@ class TagFilterViewController: UIViewController {
         viewModel.searchTagsFor(prefix: text)
         tableView.reloadData()
         updateMagnifier(text)
+        
+        
+        if !text.isEmpty {
+            exitEditMode()
+        }
     }
+    
+    
     
     func searchOrCreateTextDidBegin(_ textField: UITextField) {
         
@@ -128,18 +135,26 @@ class TagFilterViewController: UIViewController {
     var selectedPaths : [IndexPath] = []
     @IBAction func editDoneButtonAction(_ sender: Any) {
         if tableView.isEditing {
-            tableView.setEditing(false, animated: true)
-            editDoneButton.setTitle("Edit", for: .normal)
-            for path in selectedPaths {
-                tableView.selectRow(at: path, animated: false, scrollPosition: .none)
-            }
+            exitEditMode()
         } else {
-            editDoneButton.setTitle("Done", for: .normal)
-            if let paths = tableView.indexPathsForSelectedRows {
-                selectedPaths = paths
-            }
-            tableView.setEditing(true, animated: true)
+            enterEditMode()
         }
+    }
+    
+    private func exitEditMode() {
+        tableView.setEditing(false, animated: true)
+        editDoneButton.setTitle("Edit", for: .normal)
+        for path in selectedPaths {
+            tableView.selectRow(at: path, animated: false, scrollPosition: .none)
+        }
+    }
+    
+    private func enterEditMode() {
+        editDoneButton.setTitle("Done", for: .normal)
+        if let paths = tableView.indexPathsForSelectedRows {
+            selectedPaths = paths
+        }
+        tableView.setEditing(true, animated: true)
     }
     
 }

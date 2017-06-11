@@ -84,7 +84,6 @@ class TagCell: UITableViewCell {
         didSet{
             createButton?.isHidden = createTagCallback == nil
             
-            
             tagSelectedView?.isHidden = !(createButton!.isHidden)
         }
     }
@@ -92,7 +91,10 @@ class TagCell: UITableViewCell {
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         editButton.isHidden = !editing
-        tagSelectedView?.isHidden = editing
+        
+        if(createButton!.isHidden) {
+            tagSelectedView?.isHidden = editing
+        }
         
         if isTagEditing {
             toggleTagEditor()
@@ -176,7 +178,7 @@ class TagCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        tagSelectedView?.checked(selected, animated: true)
+        tagSelectedView?.checked(selected, animated: animated)
     }
 }
 
