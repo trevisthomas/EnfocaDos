@@ -26,6 +26,8 @@
 		0F011EC51EED982F00939B75 /* CardRearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EC31EED982F00939B75 /* CardRearViewController.swift */; };
 		0F011EC61EED986400939B75 /* EnfocaHeaderViewAnimationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */; };
 		0F011EC91EEDB4AF00939B75 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EC81EEDB4AF00939B75 /* QuizResultsViewController.swift */; };
+		0F011ECB1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */; };
+		0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -372,6 +374,7 @@
 		0F011EC01EED981100939B75 /* CardFrontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardFrontViewController.swift; path = Quiz/CardFrontViewController.swift; sourceTree = "<group>"; };
 		0F011EC31EED982F00939B75 /* CardRearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardRearViewController.swift; path = Quiz/CardRearViewController.swift; sourceTree = "<group>"; };
 		0F011EC81EEDB4AF00939B75 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizResultsViewController.swift; path = Quiz/QuizResultsViewController.swift; sourceTree = "<group>"; };
+		0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizCardAnimator.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -992,6 +995,7 @@
 				0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */,
 				0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */,
 				0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */,
+				0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -1338,6 +1342,7 @@
 				0F911E391EE75D4600F21855 /* Tag.swift in Sources */,
 				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
 				0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */,
+				0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
 				0F911E3C1EE75D4600F21855 /* HomeViewController.swift in Sources */,
 				0F011EAF1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */,
 				0F911E3D1EE75D4600F21855 /* UIColor+.swift in Sources */,
@@ -1539,6 +1544,7 @@
 				0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */,
 				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,
+				0F011ECB1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
 				0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */,
 				0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */,
 				0F085B701ED74C7B00FC20A1 /* BrowseController.swift in Sources */,

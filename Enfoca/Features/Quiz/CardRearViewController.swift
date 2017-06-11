@@ -13,6 +13,9 @@ class CardRearViewController: UIViewController {
 
     @IBOutlet weak var definitionLabel: UILabel!
     
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var bodyView: UIView!
+    
     private var delegate: CardViewControllerDelegate!
     
     override func viewDidLoad() {
@@ -41,4 +44,13 @@ class CardRearViewController: UIViewController {
         delegate.correct()
     }
 
+}
+
+extension CardRearViewController: QuizCardAnimatorTarget {
+    func getBodyView() -> UIView {
+        return bodyView
+    }
+    func getView() -> UIView {
+        return view
+    }
 }

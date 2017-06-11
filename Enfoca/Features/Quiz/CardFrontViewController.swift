@@ -21,8 +21,12 @@ class CardFrontViewController: UIViewController {
 
     @IBOutlet weak var termLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var bodyView: UIView!
     
     private var delegate: CardViewControllerDelegate!
+    
+    fileprivate var animator: QuizCardAnimator = QuizCardAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,8 @@ class CardFrontViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let to = segue.destination as? CardRearViewController else { fatalError() }
         
+        to.transitioningDelegate = self
+        
         to.initialize(delegate: delegate)
     }
    
@@ -49,7 +55,39 @@ class CardFrontViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+extension CardFrontViewController: QuizCardAnimatorTarget {
+    func getBodyView() -> UIView {
+        return bodyView
+    }
+    func getView() -> UIView {
+        return view
+    }
+}
+
+
+//For animated transitions
+extension CardFrontViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+        if let _ = presented as? CardRearViewController, let _ = source as? CardFrontViewController {
+            
+            animator.presenting = true
+            return self.animator
+        }
+        
+        return nil
+    }
     
-
-
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        
+        if let _ = dismissed as? CardRearViewController {
+            animator.presenting = false
+            return animator
+        }
+        
+        return nil
+    }
 }

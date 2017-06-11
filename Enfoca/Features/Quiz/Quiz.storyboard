@@ -285,10 +285,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5B7-De-YVm">
-                                <rect key="frame" x="0.0" y="91" width="414" height="645"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="636"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv9-Vm-6wE" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
-                                        <rect key="frame" x="126" y="500" width="163" height="64"/>
+                                        <rect key="frame" x="126" y="491" width="163" height="64"/>
                                         <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="nHu-O8-59q"/>
@@ -332,7 +332,7 @@
                         <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="iF2-oU-7CL" firstAttribute="leading" secondItem="4Dp-Pj-bET" secondAttribute="leading" id="6Pb-bn-we8"/>
-                            <constraint firstItem="5B7-De-YVm" firstAttribute="top" secondItem="iF2-oU-7CL" secondAttribute="bottom" constant="-9" id="6hN-ld-g6C"/>
+                            <constraint firstItem="5B7-De-YVm" firstAttribute="top" secondItem="iF2-oU-7CL" secondAttribute="bottom" id="6hN-ld-g6C"/>
                             <constraint firstItem="xOP-a3-li6" firstAttribute="top" secondItem="5B7-De-YVm" secondAttribute="bottom" id="BVe-8X-mz7"/>
                             <constraint firstAttribute="trailing" secondItem="iF2-oU-7CL" secondAttribute="trailing" id="LuP-0h-jVm"/>
                             <constraint firstItem="iF2-oU-7CL" firstAttribute="top" secondItem="4Dp-Pj-bET" secondAttribute="top" id="VxH-Zg-EHo"/>
@@ -341,6 +341,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bodyView" destination="5B7-De-YVm" id="F7h-tm-oIi"/>
+                        <outlet property="headerView" destination="iF2-oU-7CL" id="NKt-0j-C8t"/>
                         <outlet property="termLabel" destination="fcQ-zW-8J7" id="UOK-VU-Wdn"/>
                         <outlet property="timerLabel" destination="mB1-qP-yvu" id="plg-ZX-McL"/>
                         <segue destination="ZOI-8A-KLN" kind="show" identifier="QuizRearViewControllerSegue" id="ew9-Wj-gac"/>
@@ -392,10 +394,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WaG-kp-efN">
-                                <rect key="frame" x="0.0" y="96" width="414" height="640"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="636"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bWL-SL-xY6">
-                                        <rect key="frame" x="34" y="495" width="346" height="64"/>
+                                        <rect key="frame" x="34" y="491" width="346" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-2R-lnr" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="64"/>
@@ -449,9 +451,9 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="WaG-kp-efN" firstAttribute="top" secondItem="f5y-Mu-LBE" secondAttribute="bottom" constant="-4" id="2s0-LU-nx4"/>
+                            <constraint firstItem="WaG-kp-efN" firstAttribute="top" secondItem="f5y-Mu-LBE" secondAttribute="bottom" id="2s0-LU-nx4"/>
                             <constraint firstItem="WaG-kp-efN" firstAttribute="leading" secondItem="KMc-Zr-eUE" secondAttribute="leading" id="YFM-QA-JWw"/>
                             <constraint firstItem="6NP-0i-yXs" firstAttribute="top" secondItem="WaG-kp-efN" secondAttribute="bottom" id="a95-jS-xz8"/>
                             <constraint firstItem="f5y-Mu-LBE" firstAttribute="top" secondItem="KMc-Zr-eUE" secondAttribute="top" id="gDa-PY-56W"/>
@@ -464,7 +466,9 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="bodyView" destination="WaG-kp-efN" id="Rnc-5k-3hK"/>
                         <outlet property="definitionLabel" destination="41O-AB-x6M" id="02G-jg-wy6"/>
+                        <outlet property="headerView" destination="f5y-Mu-LBE" id="6d6-Y2-oT3"/>
                         <segue destination="imM-i9-s0b" kind="show" identifier="QuizResultsSegue" id="wkj-nQ-MFe"/>
                     </connections>
                 </viewController>
