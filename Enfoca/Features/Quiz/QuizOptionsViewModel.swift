@@ -8,8 +8,8 @@
 
 import Foundation
 
-class QuizViewModel: Controller {
-    private let tag: Tag
+class QuizOptionsViewModel: Controller {
+    let tag: Tag
     private(set) var wordCount: Int!  
     var cardOrder: CardOrder!
     var cardSide: CardSide!

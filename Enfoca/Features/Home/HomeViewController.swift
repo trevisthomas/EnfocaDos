@@ -224,7 +224,7 @@ class HomeViewController: UIViewController {
             
         }
         
-        if let quizViewController = segue.destination as? QuizViewController {
+        if let quizViewController = segue.destination as? QuizOptionsViewController {
             quizViewController.transitioningDelegate = self
             
             quizViewController.delegate = self
@@ -250,7 +250,7 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
             return editWordPairFromCellAnimator
         }
         
-        if let _ = presented as? QuizViewController, let _ = source as? HomeViewController {
+        if let _ = presented as? QuizOptionsViewController, let _ = source as? HomeViewController {
             browseViewFromHomeAnimator.presenting = true
             return browseViewFromHomeAnimator
         }
@@ -272,7 +272,7 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
             return editWordPairFromCellAnimator
         }
         
-        if let _ = dismissed as? QuizViewController {
+        if let _ = dismissed as? QuizOptionsViewController {
             browseViewFromHomeAnimator.presenting = false
             return browseViewFromHomeAnimator
         }

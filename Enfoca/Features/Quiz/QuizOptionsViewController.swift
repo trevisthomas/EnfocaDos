@@ -12,7 +12,7 @@ protocol QuizViewControllerDelegate {
     func tagSelectedForQuiz() -> Tag
 }
 
-class QuizViewController: UIViewController {
+class QuizOptionsViewController: UIViewController {
     var delegate : QuizViewControllerDelegate!
     
     @IBOutlet weak var cardSideSegmentedControl: UISegmentedControl!
@@ -21,7 +21,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var wordCountLabel: UILabel!
     @IBOutlet var headerBackgroundView: UIView!
     
-    fileprivate var viewModel : QuizViewModel!
+    fileprivate var viewModel : QuizOptionsViewModel!
     
     @IBAction func incrementWordCountAction(_ sender: UIButton) {
         viewModel.incrementWordCount()
@@ -41,7 +41,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = QuizViewModel(tag: delegate.tagSelectedForQuiz())
+        viewModel = QuizOptionsViewModel(tag: delegate.tagSelectedForQuiz())
         
         initializeLookAndFeel()
     }
@@ -69,21 +69,30 @@ class QuizViewController: UIViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let to = segue.destination as? CardFrontViewController else { fatalError() }
+        
+        to.initialize(delegate: self)
+    }
+    
     @IBAction func startQuizAction(_ sender: EnfocaButton) {
         print("Quiz: \(viewModel.tagName) Words: \(viewModel.wordCount) Card Order: \(viewModel.cardOrder) Card Side: \(viewModel.cardSide)")
+        
+        performSegue(withIdentifier: "BeginQuizSegue", sender: self)
+        
     }
    
 
 }
 
 
-extension QuizViewController: UIPickerViewDelegate {
+extension QuizOptionsViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         viewModel.cardOrder = CardOrder.values[row]
     }
 }
 
-extension QuizViewController: UIPickerViewDataSource {
+extension QuizOptionsViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -97,7 +106,7 @@ extension QuizViewController: UIPickerViewDataSource {
     }
 }
 
-extension QuizViewController: EnfocaHeaderViewAnimationTarget {
+extension QuizOptionsViewController: EnfocaHeaderViewAnimationTarget {
     func getView() -> UIView {
         return view
     }
@@ -106,4 +115,24 @@ extension QuizViewController: EnfocaHeaderViewAnimationTarget {
     }
 }
 
+
+extension QuizOptionsViewController: CardViewControllerDelegate {
+    
+    func getRearWord() -> String {
+        return "Rear"
+    }
+    
+    func getFrontWord() -> String {
+        return "Front"
+    }
+    
+    func correct() {
+        
+    }
+    
+    func incorrect() {
+        
+    }
+    
+}
 
