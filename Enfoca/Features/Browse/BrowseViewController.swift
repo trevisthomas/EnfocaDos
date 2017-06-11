@@ -137,3 +137,12 @@ extension BrowseViewController: UIViewControllerTransitioningDelegate {
         return nil
     }
 }
+
+extension BrowseViewController: EnfocaHeaderViewAnimationTarget {
+    func getView() -> UIView {
+        return view
+    }
+    func getHeaderBackgroundView() -> UIView {
+        return headerBackgroundView
+    }
+}

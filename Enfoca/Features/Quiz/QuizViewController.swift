@@ -19,6 +19,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var wordOrderPicker: UIPickerView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var wordCountLabel: UILabel!
+    @IBOutlet var headerBackgroundView: UIView!
     
     fileprivate var viewModel : QuizViewModel!
     
@@ -75,6 +76,7 @@ class QuizViewController: UIViewController {
 
 }
 
+
 extension QuizViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         viewModel.cardOrder = CardOrder.values[row]
@@ -94,3 +96,14 @@ extension QuizViewController: UIPickerViewDataSource {
         return CardOrder.values[row].rawValue
     }
 }
+
+extension QuizViewController: EnfocaHeaderViewAnimationTarget {
+    func getView() -> UIView {
+        return view
+    }
+    func getHeaderBackgroundView() -> UIView {
+        return headerBackgroundView
+    }
+}
+
+

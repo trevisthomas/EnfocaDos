@@ -225,7 +225,7 @@ class HomeViewController: UIViewController {
         }
         
         if let quizViewController = segue.destination as? QuizViewController {
-//            quizViewController.transitioningDelegate = self
+            quizViewController.transitioningDelegate = self
             
             quizViewController.delegate = self
             
@@ -250,6 +250,11 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
             return editWordPairFromCellAnimator
         }
         
+        if let _ = presented as? QuizViewController, let _ = source as? HomeViewController {
+            browseViewFromHomeAnimator.presenting = true
+            return browseViewFromHomeAnimator
+        }
+        
         return nil
     }
     
@@ -265,6 +270,11 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
         if let _ = dismissed as? EditWordPairViewController {
             editWordPairFromCellAnimator.presenting = false
             return editWordPairFromCellAnimator
+        }
+        
+        if let _ = dismissed as? QuizViewController {
+            browseViewFromHomeAnimator.presenting = false
+            return browseViewFromHomeAnimator
         }
         
         return nil
@@ -314,6 +324,9 @@ extension HomeViewController: QuizTagSelectionDelegate {
         print("Quiz words tagged: \(tag.name)")
         
         controller.selectedQuizTag = tag
+        browseViewFromHomeAnimator.sourceFrame = atRect
+        browseViewFromHomeAnimator.sourceCell = cell
+        
         
         performSegue(withIdentifier: "QuizViewControllerSegue", sender: tag)
         

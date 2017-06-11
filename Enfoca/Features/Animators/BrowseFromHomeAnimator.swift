@@ -39,7 +39,7 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
             fatalError()
         }
         
-        guard let fromViewController = storedContext.viewController(forKey: .from) as? BrowseViewController else {
+        guard let fromViewController = storedContext.viewController(forKey: .from) as? EnfocaHeaderViewAnimationTarget else {
             fatalError()
         }
         
@@ -51,10 +51,10 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
         let v = UIView()
         
         self.sourceCell.isHidden = true
-        v.backgroundColor = fromViewController.headerBackgroundView.backgroundColor
+        v.backgroundColor = fromViewController.getHeaderBackgroundView().backgroundColor
         
-        v.frame.origin = fromViewController.headerBackgroundView.frame.origin
-        v.frame.size.height = fromViewController.headerBackgroundView.frame.height
+        v.frame.origin = fromViewController.getHeaderBackgroundView().frame.origin
+        v.frame.size.height = fromViewController.getHeaderBackgroundView().frame.height
         v.frame.size.width = containerView.frame.width
         
         containerView.addSubview(v)
@@ -71,7 +71,7 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
             self.sourceCell.isHidden = false
         }
         
-        fromViewController.headerBackgroundView.isHidden = true
+        fromViewController.getHeaderBackgroundView().isHidden = true
         
         UIView.animate(withDuration: duration * 0.4, delay: duration * 0.6, options: [.curveEaseInOut], animations: {
             v.alpha = 0.0
@@ -79,7 +79,7 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
             
             v.removeFromSuperview()
             
-            fromViewController.headerBackgroundView.isHidden = false
+            fromViewController.getHeaderBackgroundView().isHidden = false
             
             self.storedContext.completeTransition(true)
         }
@@ -88,14 +88,14 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
     private func performPresent(){
         let containerView = storedContext.containerView
         
-        guard let toViewController = storedContext.viewController(forKey: .to) as? BrowseViewController else {
+        guard let toViewController = storedContext.viewController(forKey: .to) as? EnfocaHeaderViewAnimationTarget else {
             fatalError()
         }
         
-        containerView.addSubview(toViewController.view)
+        containerView.addSubview(toViewController.getView())
         
         
-        toViewController.view.alpha = 0
+        toViewController.getView().alpha = 0
         
         let v = UIView()
         
@@ -108,18 +108,18 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
         
         UIView.animate(withDuration: duration * 0.8, delay: 0.0, options: [.curveEaseInOut], animations: {
             // For some frustrating reason the toViewController doesnt seem to have been laid out.  The dimentions that i get from it's frame are what I have setup in IB, not the device that i am running on.  I caught this because i was using an iPhone 7 emu and a Plus simuator and this frame comes back as 375, not 414.  Sigh.  Lost an hour on this.
-            v.frame.origin = toViewController.headerBackgroundView.frame.origin
-            v.frame.size.height = toViewController.headerBackgroundView.frame.height
+            v.frame.origin = toViewController.getHeaderBackgroundView().frame.origin
+            v.frame.size.height = toViewController.getHeaderBackgroundView().frame.height
             v.frame.size.width = containerView.frame.width
             
-            v.backgroundColor = toViewController.headerBackgroundView.backgroundColor
-            toViewController.view.alpha = 1
+            v.backgroundColor = toViewController.getHeaderBackgroundView().backgroundColor
+            toViewController.getView().alpha = 1
             
         }) { (_) in
-            toViewController.headerBackgroundView.isHidden = false
+            toViewController.getHeaderBackgroundView().isHidden = false
         }
 
-        toViewController.headerBackgroundView.isHidden = true
+        toViewController.getHeaderBackgroundView().isHidden = true
         
         UIView.animate(withDuration: duration * 0.2, delay: duration * 0.8, options: [.curveEaseInOut], animations: {
             v.alpha = 0.0

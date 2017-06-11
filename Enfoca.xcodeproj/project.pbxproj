@@ -19,6 +19,7 @@
 		0F011EB81EEB592A00939B75 /* QuizViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EB71EEB592A00939B75 /* QuizViewModelTests.swift */; };
 		0F011EBA1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EB91EEC8B0700939B75 /* OperationUpdateMetaData.swift */; };
 		0F011EBB1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EB91EEC8B0700939B75 /* OperationUpdateMetaData.swift */; };
+		0F011EBD1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -361,6 +362,7 @@
 		0F011EB31EEB2B2300939B75 /* Quiz.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Quiz.storyboard; path = Quiz/Quiz.storyboard; sourceTree = "<group>"; };
 		0F011EB71EEB592A00939B75 /* QuizViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewModelTests.swift; path = Quiz/QuizViewModelTests.swift; sourceTree = "<group>"; };
 		0F011EB91EEC8B0700939B75 /* OperationUpdateMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationUpdateMetaData.swift; sourceTree = "<group>"; };
+		0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfocaHeaderViewAnimationTarget.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -545,9 +547,9 @@
 		0F011EAC1EEB243600939B75 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				0F011EB31EEB2B2300939B75 /* Quiz.storyboard */,
 				0F011EAD1EEB25FB00939B75 /* QuizViewModel.swift */,
 				0F011EB01EEB2AAB00939B75 /* QuizViewController.swift */,
-				0F011EB31EEB2B2300939B75 /* Quiz.storyboard */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";
@@ -765,8 +767,8 @@
 		0FA4A4B41EC8A56200F31F9A /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				0F011EAC1EEB243600939B75 /* Quiz */,
 				0FA4A5611ECB54EC00F31F9A /* Animators */,
+				0F011EAC1EEB243600939B75 /* Quiz */,
 				0F085B6A1ED7488300FC20A1 /* Browse */,
 				0F085B841EDC642300FC20A1 /* Edit */,
 				0FA4A5541EC8F4F400F31F9A /* Home */,
@@ -977,6 +979,7 @@
 				0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */,
 				0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */,
 				0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */,
+				0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -1539,6 +1542,7 @@
 				0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */,
 				0F085B8A1EDC66A200FC20A1 /* EditWordPairController.swift in Sources */,
 				0FA4A5631ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift in Sources */,
+				0F011EBD1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift in Sources */,
 				0FA4A5651ECBC93700F31F9A /* HomeController.swift in Sources */,
 				0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */,
 				0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */,
