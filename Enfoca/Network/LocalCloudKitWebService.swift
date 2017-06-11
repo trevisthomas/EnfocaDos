@@ -303,20 +303,35 @@ class LocalCloudKitWebService : WebService {
         
         showNetworkActivityIndicator = true
         
-        let metaData = dataStore.updateScore(forWordPair: forWordPair, correct: correct) { (wordPair: WordPair) -> (MetaData) in
-            fatalError() //TODO: Create meta data!!
-        }
         
-        Perform.updateMetaData(updatedMetaData: metaData, enfocaId: enfocaId, db: privateDb) { (metaData: MetaData?, error: String?) in
-            self.showNetworkActivityIndicator = false
+        if let currentMetaData = forWordPair.metaData {
+            //Update
+            self.dataStore.updateScore(metaData: currentMetaData, correct: correct)
             
-            if let error = error { callback(nil, error) }
+            Perform.updateMetaData(updatedMetaData: currentMetaData, enfocaId: enfocaId, db: privateDb) { (metaData: MetaData?, error: String?) in
+                self.showNetworkActivityIndicator = false
+                
+                if let error = error { callback(nil, error) }
+                guard let _ = metaData else { fatalError() }
+                callback(forWordPair, nil)
+            }
+
             
-            guard let _ = metaData else { fatalError() }
+        } else {
+            //Create
+            let newMetaData = MetaData(metaId: "notset", pairId: forWordPair.pairId, dateCreated: Date(), dateUpdated: Date(), incorrectCount: 0, totalTime: 0, timedViewCount: 0)
             
-            //Do i need to put the score in place?
+            dataStore.updateScore(metaData: newMetaData, correct: correct)
             
-            callback(forWordPair, nil)
+            Perform.createMetaData(metaDataSource: newMetaData, enfocaId: enfocaId, db: privateDb, callback: { (metaData: MetaData?, error: String?) in
+                
+                if let error = error { callback(nil, error) }
+                guard let metaData = metaData else { fatalError() }
+                
+                forWordPair.metaData = metaData
+                self.dataStore.add(metaData: metaData)
+                callback(forWordPair, nil)
+            })
         }
         
     }

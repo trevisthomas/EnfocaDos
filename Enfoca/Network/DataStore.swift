@@ -452,26 +452,17 @@ class DataStore {
         
     }
     
-    func updateScore(forWordPair: WordPair, correct: Bool, metaDataFactory: @escaping(WordPair)->(MetaData)) -> MetaData{
-        
-        guard let wp = wordPairDictionary[forWordPair.pairId] else { fatalError() }
-        
-        let metaData : MetaData
-        if let _ = wp.metaData {
-            metaData = wp.metaData!
-        } else {
-            metaData = metaDataFactory(forWordPair)
-            metaDataDictionary[forWordPair.pairId] = metaData
-            forWordPair.metaData = metaData
-        }
-        
+    func updateScore(metaData: MetaData, correct: Bool) {
         if correct {
             metaData.correct()
         } else {
             metaData.incorrect()
         }
-        
-        return metaData
+    }
+    
+    func add(metaData: MetaData) {
+        metaDataDictionary[metaData.pairId] = metaData
+        wordPairDictionary[metaData.pairId]!.metaData = metaData
     }
     
     func allTags() -> [Tag]{

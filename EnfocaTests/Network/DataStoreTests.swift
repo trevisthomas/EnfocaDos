@@ -673,19 +673,25 @@ class DataStoreTests: XCTestCase {
         
         XCTAssertEqual(result[0].word, "Clave")
         
-        sut.updateScore(forWordPair: result[0], correct: true, metaDataFactory: { (wp: WordPair) -> (MetaData) in
-            let metaData = MetaData(metaId: "mock", pairId: wp.pairId, dateCreated: Date(), dateUpdated: nil, incorrectCount: 0, totalTime: 0, timedViewCount: 0)
-            return metaData
-        })
+        XCTAssertNil(result[0].metaData)
         
+        let metaData = MetaData(metaId: "mock", pairId: result[0].pairId, dateCreated: Date(), dateUpdated: nil, incorrectCount: 0, totalTime: 0, timedViewCount: 0)
+        
+        sut.updateScore(metaData: metaData, correct: true)
+        
+        sut.add(metaData: metaData)
+        
+        XCTAssertEqual(result[0].metaData?.timedViewCount, 1)
         XCTAssertEqual(result[0].metaData?.scoreAsString, "100%")
         
-        sut.updateScore(forWordPair: result[0], correct: false, metaDataFactory: { (wp: WordPair) -> (MetaData) in
-            let metaData = MetaData(metaId: "mock", pairId: wp.pairId, dateCreated: Date(), dateUpdated: nil, incorrectCount: 0, totalTime: 0, timedViewCount: 0)
-            return metaData
-        })
+        let result2 = sut.fetchQuiz(cardOrder: .easiest, wordCount: 1, forTags: [tags[1]])
         
+        sut.updateScore(metaData: result2[0].metaData!, correct: false)
+        
+        XCTAssertEqual(result[0].metaData?.timedViewCount, 2)
         XCTAssertEqual(result[0].metaData?.scoreAsString, "50%")
+        
+        
     }
     
 
