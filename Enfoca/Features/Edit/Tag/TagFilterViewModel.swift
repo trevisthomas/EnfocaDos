@@ -132,6 +132,8 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        //This selection and then immediately deslecting is a hack that i put in place because my animations werent running on deselect.  This seemed to fix it.
+        tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
         tableView.deselectRow(at: indexPath, animated: true)
         let tag = localTempTagFilters[indexPath.row]
         localTagDictionary[tag] = false
