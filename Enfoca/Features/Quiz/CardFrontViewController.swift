@@ -40,6 +40,14 @@ class CardFrontViewController: UIViewController {
 
     @IBAction func okButtonAction(_ sender: EnfocaButton) {
         
+        performFlip()
+    }
+    
+    @IBAction func tappedAction(_ sender: UITapGestureRecognizer) {
+        performFlip()
+    }
+    
+    private func performFlip() {
         performSegue(withIdentifier: "QuizRearViewControllerSegue", sender: self)
     }
     
