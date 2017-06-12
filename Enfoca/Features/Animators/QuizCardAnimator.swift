@@ -31,14 +31,15 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         self.storedContext = transitionContext
         
         if(presenting) {
-            performPresent()
+            performFlip(counterClockwise: true)
         } else {
-            performDismiss()
+            performFlip(counterClockwise: false)
         }
+
     }
 
     
-    private func performPresent() {
+    private func performFlip(counterClockwise: Bool) {
         let containerView = storedContext.containerView
         
         guard let toViewController = storedContext.viewController(forKey: .to) as? QuizCardAnimatorTarget else {
@@ -53,17 +54,28 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         CATransaction.begin()
         CATransaction.setCompletionBlock({
-                self.secondHalf(toViewController: toViewController, fromViewController: fromViewController)
+                self.secondHalf(toViewController: toViewController, fromViewController: fromViewController, counterClockwise: counterClockwise)
             })
         
-        let fromRotateTransform = CATransform3DRotate(fromViewController.getBodyView().layer.transform, 0.0 * .pi, 0.0, 1.0, 0.0)
+        var fromRotateTransform = CATransform3DRotate(fromViewController.getBodyView().layer.transform, 0.0 * .pi, 0.0, 1.0, 0.0)
+        
+        //Awesome!
+        //https://stackoverflow.com/questions/347721/how-do-i-apply-a-perspective-transform-to-a-uiview
+        fromRotateTransform.m34 = 1.0 / -1500;
+        
         
         fromViewController.getBodyView().layer.transform = fromRotateTransform
         
         
         let fromRotateAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
-        fromRotateAnimation.fromValue = 0.0
-        fromRotateAnimation.toValue = -0.5 * .pi
+        if counterClockwise {
+            fromRotateAnimation.fromValue = 0.0
+            fromRotateAnimation.toValue = -0.5 * .pi
+        } else {
+            fromRotateAnimation.fromValue = 0.0
+            fromRotateAnimation.toValue = 0.5 * .pi
+        }
+
         fromRotateAnimation.beginTime = CACurrentMediaTime()
         fromRotateAnimation.fillMode = kCAFillModeForwards
         fromRotateAnimation.isRemovedOnCompletion = false
@@ -73,11 +85,15 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         fromViewController.getBodyView().layer.add(fromRotateAnimation, forKey: nil)
         
+        
+        let scaleAnimation = createScaleAnimation()
+        fromViewController.getBodyView().layer.add(scaleAnimation, forKey: nil)
+        
         CATransaction.commit()
     
     }
     
-    private func secondHalf(toViewController: QuizCardAnimatorTarget, fromViewController: QuizCardAnimatorTarget){
+    private func secondHalf(toViewController: QuizCardAnimatorTarget, fromViewController: QuizCardAnimatorTarget, counterClockwise: Bool){
         let containerView = storedContext.containerView
         
         CATransaction.begin()
@@ -92,7 +108,9 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             self.storedContext.completeTransition(true)
         })
         
-        let rotateTransform = CATransform3DRotate(toViewController.getBodyView().layer.transform , 0.5 * .pi, 0.0, 1.0, 0.0)
+        var rotateTransform = CATransform3DRotate(toViewController.getBodyView().layer.transform , 0.0 * .pi, 0.0, 1.0, 0.0)
+        
+        rotateTransform.m34 = 1.0 / -1500;
         
         toViewController.getBodyView().layer.transform = rotateTransform
         
@@ -101,8 +119,14 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
         
-        rotateAnimation.fromValue = 0.5 * .pi
-        rotateAnimation.toValue = 0
+        if counterClockwise {
+            rotateAnimation.fromValue = 0.5 * .pi
+            rotateAnimation.toValue = 0
+        } else {
+            rotateAnimation.fromValue = -0.5 * .pi
+            rotateAnimation.toValue = 0.0
+        }
+        
 //        rotateAnimation.beginTime = CACurrentMediaTime() + duration * 0.5
         rotateAnimation.fillMode = kCAFillModeBackwards
         rotateAnimation.isRemovedOnCompletion = true
@@ -112,14 +136,32 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         toViewController.getBodyView().layer.add(rotateAnimation, forKey: nil)
         
+        //Scale it before you start
+        toViewController.getBodyView().layer.transform = CATransform3DMakeScale(1.0, 1.0, 0.8)
+        
+        let scaleAnimation = createScaleAnimation(delay: true)
+        toViewController.getBodyView().layer.add(scaleAnimation, forKey: nil)
+        
         CATransaction.commit()
         
     }
     
-    
-    private func performDismiss() {
+    private func createScaleAnimation(delay: Bool = false) -> CABasicAnimation {
+        let ani = CABasicAnimation(keyPath: "transform.scale")
         
-        performPresent()
+        if delay {
+            ani.fromValue = 0.8
+            ani.toValue = 1.0
+        } else {
+            ani.fromValue = 1.0
+            ani.toValue = 0.8
+        }
+        
+        ani.fillMode = kCAFillModeForwards
+        ani.isRemovedOnCompletion = false
+        ani.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        ani.duration =  duration * 0.4
+        return ani
     }
-
+    
 }
