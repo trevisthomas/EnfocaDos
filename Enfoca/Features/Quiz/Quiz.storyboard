@@ -546,6 +546,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerHightConstrant" destination="arC-Ts-iod" id="0CJ-JZ-ZS6"/>
                         <outlet property="scoreLabel" destination="f3B-bZ-g9c" id="6oQ-Qn-Fbd"/>
                         <segue destination="6QF-1r-2F4" kind="show" identifier="HomeSegue" id="Ixi-5y-OaF"/>
                     </connections>

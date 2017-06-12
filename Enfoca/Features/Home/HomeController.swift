@@ -46,11 +46,9 @@ class HomeController: Controller {
     
     func initialize(){
         loadDefaults()
-        
-        reloadTags()
     }
     
-    private func reloadTags() {
+    func reloadTags() {
         services.fetchUserTags { (tags: [Tag]?, error: EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)

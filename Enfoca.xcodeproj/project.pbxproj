@@ -28,6 +28,8 @@
 		0F011EC91EEDB4AF00939B75 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EC81EEDB4AF00939B75 /* QuizResultsViewController.swift */; };
 		0F011ECB1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */; };
 		0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */; };
+		0F011ECE1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ECD1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift */; };
+		0F011ECF1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ECD1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -375,6 +377,7 @@
 		0F011EC31EED982F00939B75 /* CardRearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardRearViewController.swift; path = Quiz/CardRearViewController.swift; sourceTree = "<group>"; };
 		0F011EC81EEDB4AF00939B75 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizResultsViewController.swift; path = Quiz/QuizResultsViewController.swift; sourceTree = "<group>"; };
 		0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizCardAnimator.swift; sourceTree = "<group>"; };
+		0F011ECD1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFromQuizResultAnimator.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -994,6 +997,7 @@
 				0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */,
 				0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */,
 				0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */,
+				0F011ECD1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift */,
 				0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */,
 				0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */,
 			);
@@ -1365,6 +1369,7 @@
 				0F911E4E1EE75D4600F21855 /* User.swift in Sources */,
 				0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */,
 				0F911E501EE75D4600F21855 /* JsonDateFormatter.swift in Sources */,
+				0F011ECF1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */,
 				0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */,
 				0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */,
@@ -1515,6 +1520,7 @@
 				0FA4A5061EC8EAF100F31F9A /* EnumCollection.swift in Sources */,
 				0FA4A58D1ECCD8C400F31F9A /* Controller.swift in Sources */,
 				0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */,
+				0F011ECE1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */,
 				0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */,
 				0F911E0C1EE08E8300F21855 /* TagCell.swift in Sources */,
 				0F911E181EE30AD100F21855 /* EnfocaButton.swift in Sources */,

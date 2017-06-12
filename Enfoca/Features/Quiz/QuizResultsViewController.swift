@@ -11,6 +11,7 @@ import UIKit
 class QuizResultsViewController: UIViewController {
 
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,4 +21,20 @@ class QuizResultsViewController: UIViewController {
         performSegue(withIdentifier: "HomeSegue", sender: nil)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let to = segue.destination as? HomeViewController {
+            to.transitioningDelegate = self
+        }
+    }
+}
+
+extension QuizResultsViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        guard let _ = presented as? HomeViewController, let _ = source as? QuizResultsViewController else {
+            fatalError()
+        }
+        
+        return HomeFromQuizResultAnimator()
+    }
 }

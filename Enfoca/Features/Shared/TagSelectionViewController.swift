@@ -55,21 +55,35 @@ extension TagSelectionViewController {
     func initialize(tags: [Tag], browseDelegate: BrowseTagSelectionDelegate){
         self.browseDelegate = browseDelegate
         
+        turnOnAnimation()
+        
         self.tags = []
         self.tags.append(contentsOf: tags)
         collectionView.reloadData()
         
+        invokeLater {
+            self.turnOffAnimation()
+        }
+        
     }
     
     func initialize(tags: [Tag], quizDelegate: QuizTagSelectionDelegate){
+        turnOnAnimation()
         self.quizDelegate = quizDelegate
         
         self.tags = []
         self.tags.append(contentsOf: tags)
         collectionView.reloadData()
+        
+        invokeLater {
+            self.turnOffAnimation()
+        }
+        
     }
     
     func initialize(tags: [Tag], selectedTags: [Tag], delegate: WordTagSelectionDelegate ) {
+        turnOnAnimation()
+        
         self.wordTagSelectionDelegate = delegate
         
         self.tags = []
@@ -79,6 +93,17 @@ extension TagSelectionViewController {
         collectionView.reloadData() //Woah, do i have to do this first?
         self.selectedTags(tags: selectedTags)
         
+        invokeLater {
+            self.turnOffAnimation()
+        }
+    }
+    
+    func turnOnAnimation() {
+        animateCollectionViewCellCreation = true
+    }
+    
+    func turnOffAnimation(){
+        animateCollectionViewCellCreation = false
     }
     
     func selectedTags(tags newSelectedTags: [Tag]) {

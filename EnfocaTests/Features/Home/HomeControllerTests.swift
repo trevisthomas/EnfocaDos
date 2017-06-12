@@ -27,6 +27,7 @@ class HomeControllerTests: XCTestCase {
         sut = HomeController(delegate: delegate)
         
         sut.initialize()
+        sut.reloadTags()
         
         XCTAssertEqual(services.fetchUserTagsCallCount, 1)
         XCTAssertEqual(delegate.loadedTags!, services.tags)
@@ -37,6 +38,7 @@ class HomeControllerTests: XCTestCase {
 
         sut = HomeController(delegate: delegate)
         sut.initialize()
+        sut.reloadTags()
         
         XCTAssertEqual(services.fetchUserTagsCallCount, 1)
         XCTAssertEqual(delegate.errorMessage, services.fetchUserTagsError)
@@ -47,6 +49,7 @@ class HomeControllerTests: XCTestCase {
     func testSearch_ShouldMakeServiceCallAndNotifyDelegate(){
         sut = HomeController(delegate: delegate)
         sut.initialize()
+        sut.reloadTags()
         
         sut.wordOrder = WordPairOrder.definitionAsc
         

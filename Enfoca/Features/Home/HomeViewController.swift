@@ -199,11 +199,10 @@ class HomeViewController: UIViewController {
             showWordTable()
         }
     }
-    
-    //Is there a better way to do this?  To detect that the transiton is complete?
+ 
+    //The animator calls this method to let it know that the transition animation is complete
     func transitionComplete() {
-        browseByTagViewController.animateCollectionViewCellCreation = false
-        quizByTagViewControler.animateCollectionViewCellCreation = false
+        controller.reloadTags()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -11,7 +11,7 @@ import XCTest
 
 class QuizViewModelTests: XCTestCase {
     
-    var sut: QuizViewModel!
+    var sut: QuizOptionsViewModel!
     override func setUp() {
         super.setUp()
         
@@ -29,7 +29,7 @@ class QuizViewModelTests: XCTestCase {
         
         getAppDelegate().applicationDefaults.quizWordCount = 2
         
-        sut = QuizViewModel(tag: tag)
+        sut = QuizOptionsViewModel(tag: tag)
         
         XCTAssertEqual(sut.wordCount, 2)
         
@@ -49,7 +49,7 @@ class QuizViewModelTests: XCTestCase {
         
         getAppDelegate().applicationDefaults.quizWordCount = 8
         
-        sut = QuizViewModel(tag: tag)
+        sut = QuizOptionsViewModel(tag: tag)
         
         XCTAssertEqual(sut.wordCount, 3)
         
