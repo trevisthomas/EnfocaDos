@@ -37,6 +37,8 @@ class TagEditorUITests: XCTestCase {
         let tagSelectionCollectionViewCollectionView = element.children(matching: .other).element(boundBy: 2).collectionViews["Tag Selection Collection View"]
         tagSelectionCollectionViewCollectionView.staticTexts["Verb"].swipeLeft()
         tagSelectionCollectionViewCollectionView.staticTexts["Color"].tap()
+        
+        
         app.tables["wordPairTable"].staticTexts["red"].tap()
         app.collectionViews["Tag Selection Collection View"].staticTexts["..."].tap()
 

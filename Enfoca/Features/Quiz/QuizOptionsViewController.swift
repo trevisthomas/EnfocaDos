@@ -41,7 +41,7 @@ class QuizOptionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = QuizOptionsViewModel(tag: delegate.tagSelectedForQuiz())
+        viewModel = QuizOptionsViewModel(tag: delegate.tagSelectedForQuiz(), delegate: self)
         
         initializeLookAndFeel()
     }
@@ -117,6 +117,10 @@ extension QuizOptionsViewController: EnfocaHeaderViewAnimationTarget {
 
 
 extension QuizOptionsViewController: CardViewControllerDelegate {
+    func onError(title: String, message: EnfocaError) {
+        self.onError(title: title, message: message)
+    }
+
     
     func getRearWord() -> String {
         return "Rear"
@@ -133,6 +137,11 @@ extension QuizOptionsViewController: CardViewControllerDelegate {
     func incorrect() {
         
     }
+    
+    func getWordPairsForMatching() -> [WordPair] {
+        return viewModel.getCurrentIncorrectWordPairs()
+    }
+    
     
 }
 

@@ -39,9 +39,22 @@ class CardRearViewController: UIViewController {
     }
     @IBAction func incorrectButtonAction(_ sender: EnfocaButton) {
         delegate.incorrect()
+        showMatchingRound()
+        
     }
+    
+    private func showMatchingRound() {
+        performSegue(withIdentifier: "MatchingRoundSeque", sender: nil)
+    }
+    
     @IBAction func correctButtonAction(_ sender: EnfocaButton) {
         delegate.correct()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let to = segue.destination as? MatchingRoundViewController {
+            to.initialize(delegate: delegate)
+        }
     }
 
 }

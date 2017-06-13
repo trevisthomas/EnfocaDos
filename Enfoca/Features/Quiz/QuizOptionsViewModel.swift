@@ -8,11 +8,15 @@
 
 import Foundation
 
+
+
 class QuizOptionsViewModel: Controller {
-    let tag: Tag
+    private let tag: Tag
     private(set) var wordCount: Int!  
     var cardOrder: CardOrder!
     var cardSide: CardSide!
+    private(set) var quizWords: [WordPair]!
+    private let delegate: CardViewControllerDelegate
     
     var tagName: String {
         get {
@@ -20,9 +24,9 @@ class QuizOptionsViewModel: Controller {
         }
     }
     
-    init(tag: Tag) {
+    init(tag: Tag, delegate: CardViewControllerDelegate) {
         self.tag = tag
-        
+        self.delegate = delegate
         wordCount = appDefaults.quizWordCount
         
         if wordCount > tag.count {
@@ -57,5 +61,20 @@ class QuizOptionsViewModel: Controller {
         }
     }
     
+    func startQuiz(callback: ()->()){
+        services.fetchQuiz(forTag: tag, cardOrder: cardOrder, wordCount: wordCount) { (wordPairs: [WordPair]?, error: EnfocaError?) in
+            
+            if let error = error { self.delegate.onError(title: "Failed to load quiz words", message: error) }
+            
+            guard let wordPairs = wordPairs else { fatalError() }
+            
+            self.quizWords = wordPairs
+        }
+    }
+    
+    
+    func getCurrentIncorrectWordPairs() -> [WordPair] {
+        return quizWords  //Just for now
+    }
     
 }

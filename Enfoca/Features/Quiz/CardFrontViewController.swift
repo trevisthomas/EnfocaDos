@@ -9,14 +9,6 @@
 import UIKit
 
 
-protocol CardViewControllerDelegate {
-    func getRearWord() -> String
-    func getFrontWord() -> String
-    func correct()
-    func incorrect()
-}
-
-
 class CardFrontViewController: UIViewController {
 
     @IBOutlet weak var termLabel: UILabel!
