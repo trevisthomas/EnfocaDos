@@ -11,15 +11,19 @@ import UIKit
 class MatchingRoundViewController: UIViewController {
     
     private var delegate: CardViewControllerDelegate!
+    fileprivate var viewModel: MatchingRoundViewModel!
 
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.estimatedItemSize = CGSize(width: 20, height: 20)
     }
     
     func initialize(delegate: CardViewControllerDelegate){
         self.delegate = delegate
+        viewModel = MatchingRoundViewModel(wordPairs: delegate.getWordPairsForMatching())
     }
 
     @IBAction func skipAction(_ sender: UIButton) {
@@ -69,16 +73,24 @@ extension MatchingRoundViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return viewModel.matchingPairs.count / 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MatchingQuizTagCell.identifier, for: indexPath) as? MatchingQuizTagCell else { fatalError() }
         
-        if indexPath.section == 0 {
+        let cardSide = indexPath.section == 0 ? CardSide.term : CardSide.definition
+        
+        let matchingPair = viewModel.getPair(cardSide: cardSide, atRow: indexPath.row)
+        
+        cell.setTitle(matchingPair.title)
+        
+        switch matchingPair.cardSide {
+        case .definition:
             cell.applyColors(text: Theme.lightness, background: Theme.green)
-        } else {
+        case .term:
             cell.applyColors(text: Theme.lightness, background: Theme.orange)
+        default: fatalError()
         }
         
         return cell

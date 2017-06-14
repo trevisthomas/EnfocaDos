@@ -61,7 +61,7 @@ class QuizOptionsViewModel: Controller {
         }
     }
     
-    func startQuiz(callback: ()->()){
+    func startQuiz(callback: @escaping ()->()){
         services.fetchQuiz(forTag: tag, cardOrder: cardOrder, wordCount: wordCount) { (wordPairs: [WordPair]?, error: EnfocaError?) in
             
             if let error = error { self.delegate.onError(title: "Failed to load quiz words", message: error) }
@@ -69,12 +69,14 @@ class QuizOptionsViewModel: Controller {
             guard let wordPairs = wordPairs else { fatalError() }
             
             self.quizWords = wordPairs
+            
+            callback()
         }
     }
     
     
     func getCurrentIncorrectWordPairs() -> [WordPair] {
-        return quizWords  //Just for now
+        return Array(quizWords.prefix(5))  //Just for now
     }
     
 }

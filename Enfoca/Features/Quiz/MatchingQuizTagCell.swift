@@ -9,12 +9,6 @@
 import UIKit
 
 
-enum MatchingQuizState {
-    case term
-    case definition
-    case selected
-    case hidden
-}
 
 class MatchingQuizTagCell: UICollectionViewCell {
     static let identifier: String = "MatchingQuizTagCell"
@@ -25,5 +19,9 @@ class MatchingQuizTagCell: UICollectionViewCell {
     func applyColors(text: UIColor, background: UIColor) {
         self.backgroundColor = background
         self.titleLabel.textColor = text
+    }
+    
+    func setTitle(_ title: String) {
+        titleLabel.text = title
     }
 }

@@ -12,10 +12,13 @@ import XCTest
 class QuizViewModelTests: XCTestCase {
     
     var sut: QuizOptionsViewModel!
+    var delegate: MockCardViewControllerDelegate!
     override func setUp() {
         super.setUp()
         
         getAppDelegate().applicationDefaults = MockApplicationDefaults()
+        
+        delegate = MockCardViewControllerDelegate()
         
     }
 
@@ -29,7 +32,7 @@ class QuizViewModelTests: XCTestCase {
         
         getAppDelegate().applicationDefaults.quizWordCount = 2
         
-        sut = QuizOptionsViewModel(tag: tag)
+        sut = QuizOptionsViewModel(tag: tag, delegate: delegate)
         
         XCTAssertEqual(sut.wordCount, 2)
         
@@ -49,7 +52,7 @@ class QuizViewModelTests: XCTestCase {
         
         getAppDelegate().applicationDefaults.quizWordCount = 8
         
-        sut = QuizOptionsViewModel(tag: tag)
+        sut = QuizOptionsViewModel(tag: tag, delegate: delegate)
         
         XCTAssertEqual(sut.wordCount, 3)
         
@@ -59,6 +62,33 @@ class QuizViewModelTests: XCTestCase {
     
     
    
+    
+}
+
+class MockCardViewControllerDelegate: CardViewControllerDelegate {
+    
+    func getRearWord() -> String {
+        return ""
+    }
+    func getFrontWord() -> String {
+        return ""
+    }
+    
+    func correct() {
+        
+    }
+    func incorrect(){
+        
+    }
+    
+    func getWordPairsForMatching() -> [WordPair] {
+        return []
+    }
+    
+    func onError(title: String, message: EnfocaError) {
+        
+    }
+    
     
 }
 

@@ -78,8 +78,9 @@ class QuizOptionsViewController: UIViewController {
     @IBAction func startQuizAction(_ sender: EnfocaButton) {
         print("Quiz: \(viewModel.tagName) Words: \(viewModel.wordCount) Card Order: \(viewModel.cardOrder) Card Side: \(viewModel.cardSide)")
         
-        performSegue(withIdentifier: "BeginQuizSegue", sender: self)
-        
+        viewModel.startQuiz { 
+            self.performSegue(withIdentifier: "BeginQuizSegue", sender: self)
+        }
     }
    
 

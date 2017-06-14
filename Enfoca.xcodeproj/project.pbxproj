@@ -38,6 +38,9 @@
 		0F011EDB1EF059E900939B75 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ED91EF059E900939B75 /* Theme.swift */; };
 		0F011EDD1EF06C4000939B75 /* CardViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDC1EF06C4000939B75 /* CardViewControllerDelegate.swift */; };
 		0F011EDE1EF06C4000939B75 /* CardViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDC1EF06C4000939B75 /* CardViewControllerDelegate.swift */; };
+		0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */; };
+		0F011EE11EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */; };
+		0F011EE31EF0B53C00939B75 /* MatchingRoundViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -390,6 +393,8 @@
 		0F011ED31EF04CA700939B75 /* MatchingRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewController.swift; path = Quiz/MatchingRoundViewController.swift; sourceTree = "<group>"; };
 		0F011ED91EF059E900939B75 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0F011EDC1EF06C4000939B75 /* CardViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardViewControllerDelegate.swift; path = Quiz/CardViewControllerDelegate.swift; sourceTree = "<group>"; };
+		0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModel.swift; path = Quiz/MatchingRoundViewModel.swift; sourceTree = "<group>"; };
+		0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModelTests.swift; path = Quiz/MatchingRoundViewModelTests.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -581,6 +586,7 @@
 				0F011EC31EED982F00939B75 /* CardRearViewController.swift */,
 				0F011ED01EF0490E00939B75 /* MatchingQuizTagCell.swift */,
 				0F011ED31EF04CA700939B75 /* MatchingRoundViewController.swift */,
+				0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */,
 				0F011EC81EEDB4AF00939B75 /* QuizResultsViewController.swift */,
 				0F011EDC1EF06C4000939B75 /* CardViewControllerDelegate.swift */,
 			);
@@ -591,6 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				0F011EB71EEB592A00939B75 /* QuizOptionsViewModelTests.swift */,
+				0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";
@@ -1353,6 +1360,7 @@
 				0F911E301EE75D4600F21855 /* Globals.swift in Sources */,
 				0F911E311EE75D4600F21855 /* BaseOperation.swift in Sources */,
 				0F911E321EE75D4600F21855 /* TagCell.swift in Sources */,
+				0F011EE11EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */,
 				0F911E331EE75D4600F21855 /* EnfocaButton.swift in Sources */,
 				0F911E341EE75D4600F21855 /* WordPairTableViewCell.swift in Sources */,
 				0F911E351EE75D4600F21855 /* Perform+Tags.swift in Sources */,
@@ -1554,6 +1562,7 @@
 				0F911F071EE76CFA00F21855 /* OldMetaData.swift in Sources */,
 				0F011EC41EED982F00939B75 /* CardRearViewController.swift in Sources */,
 				0F911F0A1EE76CFA00F21855 /* OldWordPair.swift in Sources */,
+				0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
 				0F011EDD1EF06C4000939B75 /* CardViewControllerDelegate.swift in Sources */,
@@ -1643,6 +1652,7 @@
 				0F911F2F1EE9017900F21855 /* TagFilterViewModelTests.swift in Sources */,
 				0F011EB81EEB592A00939B75 /* QuizOptionsViewModelTests.swift in Sources */,
 				0FA4A57C1ECC148B00F31F9A /* WordPairTests.swift in Sources */,
+				0F011EE31EF0B53C00939B75 /* MatchingRoundViewModelTests.swift in Sources */,
 				0FA4A5801ECC14D300F31F9A /* DataStoreJsonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

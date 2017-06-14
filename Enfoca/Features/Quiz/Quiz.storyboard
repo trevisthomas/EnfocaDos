@@ -216,7 +216,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="636"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jdv-zM-Aqz">
-                                        <rect key="frame" x="0.0" y="46" width="414" height="590"/>
+                                        <rect key="frame" x="16" y="46" width="382" height="590"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VUK-Mh-Bei">
                                             <size key="itemSize" width="117" height="55"/>
@@ -267,9 +267,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Jdv-zM-Aqz" secondAttribute="trailing" id="0dv-bM-k39"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jdv-zM-Aqz" secondAttribute="trailing" constant="16" id="0dv-bM-k39"/>
                                     <constraint firstItem="jBo-si-mrb" firstAttribute="top" secondItem="sod-yw-sBR" secondAttribute="top" constant="8" id="8xD-l0-mG4"/>
-                                    <constraint firstItem="Jdv-zM-Aqz" firstAttribute="leading" secondItem="sod-yw-sBR" secondAttribute="leading" id="bCM-fR-YE9"/>
+                                    <constraint firstItem="Jdv-zM-Aqz" firstAttribute="leading" secondItem="sod-yw-sBR" secondAttribute="leading" constant="16" id="bCM-fR-YE9"/>
                                     <constraint firstItem="jBo-si-mrb" firstAttribute="centerX" secondItem="sod-yw-sBR" secondAttribute="centerX" id="dRX-1m-Wc8"/>
                                     <constraint firstItem="Jdv-zM-Aqz" firstAttribute="top" secondItem="sod-yw-sBR" secondAttribute="top" constant="46" id="q1m-wk-Plw"/>
                                     <constraint firstAttribute="bottom" secondItem="Jdv-zM-Aqz" secondAttribute="bottom" id="yQg-gb-ywc"/>
@@ -288,6 +288,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="Jdv-zM-Aqz" id="iU3-OH-ImT"/>
                         <segue destination="qW3-WU-nJg" kind="show" identifier="ResumeQuizSegue" id="AKo-2B-8On"/>
                     </connections>
                 </viewController>
