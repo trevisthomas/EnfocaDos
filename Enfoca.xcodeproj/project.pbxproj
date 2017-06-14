@@ -53,6 +53,8 @@
 		0F085B8A1EDC66A200FC20A1 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
 		0F085B8D1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */; };
 		0F085B8F1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */; };
+		0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
+		0F1B05171EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F911E0C1EE08E8300F21855 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E071EE08E8300F21855 /* TagCell.swift */; };
 		0F911E0E1EE08E8300F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
 		0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */; };
@@ -409,6 +411,7 @@
 		0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordPairController.swift; sourceTree = "<group>"; };
 		0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairEditorControllerTests.swift; sourceTree = "<group>"; };
 		0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordPairFromCellAnimator.swift; sourceTree = "<group>"; };
+		0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0F911E071EE08E8300F21855 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		0F911E091EE08E8300F21855 /* TagFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterViewController.swift; sourceTree = "<group>"; };
 		0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterViewModel.swift; sourceTree = "<group>"; };
@@ -886,6 +889,7 @@
 			children = (
 				0FA4A5041EC8EAF100F31F9A /* EnumCollection.swift */,
 				0FA4A5501EC8EE5B00F31F9A /* Globals.swift */,
+				0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1190,6 +1194,7 @@
 					};
 					0F911E1F1EE75D4600F21855 = {
 						DevelopmentTeam = KRNJ229R7J;
+						LastSwiftMigration = 0830;
 					};
 					0F911E811EE766D900F21855 = {
 						DevelopmentTeam = KRNJ229R7J;
@@ -1197,6 +1202,7 @@
 					0FA4A4881EC89C0D00F31F9A = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = KRNJ229R7J;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1429,6 +1435,7 @@
 				0F011ED21EF0490E00939B75 /* MatchingQuizTagCell.swift in Sources */,
 				0F011EC51EED982F00939B75 /* CardRearViewController.swift in Sources */,
 				0F011EB21EEB2AAB00939B75 /* QuizOptionsViewController.swift in Sources */,
+				0F1B05171EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				0F911E6F1EE75D4600F21855 /* FetchOrCreateEnfocaId.swift in Sources */,
 				0F911E701EE75D4600F21855 /* Perform.swift in Sources */,
 			);
@@ -1535,6 +1542,7 @@
 				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
 				0F011EAE1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */,
 				0F011ED11EF0490E00939B75 /* MatchingQuizTagCell.swift in Sources */,
+				0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
 				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,
@@ -1715,6 +1723,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = "Enfoca/Resources/Enfoca Dev-Info.plist";
@@ -1722,6 +1731,8 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Enfoca/Shared/Enfoca Dev-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1730,6 +1741,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = "Enfoca/Resources/Enfoca Dev-Info.plist";
@@ -1737,6 +1749,7 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Enfoca/Shared/Enfoca Dev-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1870,12 +1883,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Enfoca/Shared/Enfoca-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1884,12 +1900,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ttdc.Enfoca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Enfoca/Shared/Enfoca-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};

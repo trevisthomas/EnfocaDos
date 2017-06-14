@@ -19,11 +19,14 @@ class MatchingRoundViewController: UIViewController {
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize = CGSize(width: 20, height: 20)
+        
+        viewModel = MatchingRoundViewModel(wordPairs: delegate.getWordPairsForMatching())
+        
     }
     
     func initialize(delegate: CardViewControllerDelegate){
         self.delegate = delegate
-        viewModel = MatchingRoundViewModel(wordPairs: delegate.getWordPairsForMatching())
+        
     }
 
     @IBAction func skipAction(_ sender: UIButton) {
@@ -64,6 +67,11 @@ extension MatchingRoundViewController: UICollectionViewDelegateFlowLayout {
             return UIEdgeInsets(top: 0.0, left: 0, bottom: 0, right: 0)
         }
     }
+    
+}
+
+extension MatchingRoundViewController: UICollectionViewDelegate {
+    
 }
 
 
