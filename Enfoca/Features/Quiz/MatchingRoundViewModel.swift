@@ -10,9 +10,7 @@ import Foundation
 
 protocol MatchingRoundViewModelDelegate {
     func reloadMatchingPairs()
-    func removeCell(cardSide: CardSide, atRow: Int)
-// animateIncorrect
-//    animateCorrect
+    func incorrect(matchingPair: MatchingPair)
 }
 
 class MatchingRoundViewModel {
@@ -58,9 +56,6 @@ class MatchingRoundViewModel {
             //Score
             let currentSelection = performDeselect(cardSide: cardSide, atRow: atRow)
             if previousSelection === currentSelection {
-//                previousSelection.state = .normal
-//                currentSelection.state = .normal
-                
                 self.previousSelection = nil
                 
                 delegate.reloadMatchingPairs()
@@ -77,14 +72,8 @@ class MatchingRoundViewModel {
             if isCorrect(previous: previousSelection, current: currentSelection) {
                 previousSelection.state = .hidden
                 currentSelection.state = .hidden
-                
-//                matchingPairs.remove(at: matchingPairs.index(where: { (pair: MatchingPair) -> Bool in
-//                    return pair === previousSelection
-//                })!)
-//                
-//                matchingPairs.remove(at: matchingPairs.index(where: { (pair: MatchingPair) -> Bool in
-//                    return pair === currentSelection
-//                })!)
+            } else {
+                self.delegate.incorrect(matchingPair: currentSelection)
             }
             self.previousSelection = nil
             
@@ -94,6 +83,13 @@ class MatchingRoundViewModel {
             self.previousSelection = performSelect(cardSide: cardSide, atRow: atRow)
             delegate.reloadMatchingPairs()
         }
+    }
+    
+    func isDone() -> Bool{
+        
+        return matchingPairs.filter { (mp: MatchingPair) -> Bool in
+            return mp.state != .hidden
+        }.count == 0
     }
     
     private func isCorrect(previous: MatchingPair, current: MatchingPair) -> Bool {

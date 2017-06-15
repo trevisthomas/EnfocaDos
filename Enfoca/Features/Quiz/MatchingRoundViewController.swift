@@ -12,13 +12,16 @@ class MatchingRoundViewController: UIViewController {
     
     private var delegate: CardViewControllerDelegate!
     fileprivate var viewModel: MatchingRoundViewModel!
-
+    fileprivate var incorrectMatchingPair: MatchingPair?
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize = CGSize(width: 20, height: 20)
+        
+        layout.minimumInteritemSpacing = view.frame.width * 0.02133
         
         viewModel = MatchingRoundViewModel(delegate: self, wordPairs: delegate.getWordPairsForMatching())
         
@@ -33,7 +36,7 @@ class MatchingRoundViewController: UIViewController {
         resumeQuiz()
     }
     
-    private func resumeQuiz(){
+    fileprivate func resumeQuiz(){
         performSegue(withIdentifier: "ResumeQuizSegue", sender: nil)
     }
     
@@ -47,17 +50,19 @@ class MatchingRoundViewController: UIViewController {
 
 //Trevis: Dont forget that the FlowDelegate interets from the CollecionViewDelegate too
 extension MatchingRoundViewController: UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5.0 //Column spacing
-    }
+//*** For some reason the custom layout doesn't honor this. I am setting the value explicity in didLoad
+    
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+////        return view.frame.width * 0.02133 //Column spacing
+//        return 50
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5.0 // row spacing
+        return view.frame.width * 0.03 // row spacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -101,42 +106,29 @@ extension MatchingRoundViewController: UICollectionViewDataSource {
         
         cell.setTitle(matchingPair.title)
         
-        
-        switch matchingPair.state {
-        case .disabled:
-            cell.applyColors(text: Theme.lightness, background: Theme.gray)
-        case .hidden:
-            cell.applyColors(text: Theme.lightness, background: Theme.lightness)
-        case .normal:
-            applyNormalColor(matchingPair: matchingPair, cell: cell)
-        case .selected:
-            applyNormalColor(matchingPair: matchingPair, cell: cell)
-            
+        if matchingPair === incorrectMatchingPair {
+            incorrectMatchingPair = nil
+            cell.applyMatchingPair(matchingPair: matchingPair, incorrect: true)
+        } else {
+            cell.applyMatchingPair(matchingPair: matchingPair)
         }
-        
-        
         
         return cell
-    }
-    
-    private func applyNormalColor(matchingPair: MatchingPair, cell: MatchingQuizTagCell) {
-        switch matchingPair.cardSide {
-        case .definition:
-        cell.applyColors(text: Theme.lightness, background: Theme.green)
-        case .term:
-        cell.applyColors(text: Theme.lightness, background: Theme.orange)
-        default: fatalError()
-        }
     }
 }
 
 extension MatchingRoundViewController: MatchingRoundViewModelDelegate {
-    func removeCell(cardSide: CardSide, atRow: Int) {
-        //doit
-    }
-
+   
     func reloadMatchingPairs() {
         collectionView.reloadData()
         collectionView.collectionViewLayout.invalidateLayout()
+        
+        if viewModel.isDone() {
+            self.resumeQuiz()
+        }
+    }
+    
+    func incorrect(matchingPair: MatchingPair) {
+        self.incorrectMatchingPair = matchingPair
     }
 }

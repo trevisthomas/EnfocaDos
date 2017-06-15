@@ -240,6 +240,11 @@
                                                     <constraint firstItem="Mqf-0b-w5v" firstAttribute="leading" secondItem="ZdL-Re-Lfq" secondAttribute="leadingMargin" constant="8" id="aac-QY-9za"/>
                                                     <constraint firstItem="Mqf-0b-w5v" firstAttribute="top" secondItem="ZdL-Re-Lfq" secondAttribute="topMargin" constant="8" id="hMA-Il-eZd"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="titleLabel" destination="Mqf-0b-w5v" id="Kpm-T1-oYG"/>
                                                 </connections>

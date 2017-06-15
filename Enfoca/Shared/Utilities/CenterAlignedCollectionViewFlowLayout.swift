@@ -11,7 +11,6 @@ class CenterAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
         
         // Constants
         let leftPadding: CGFloat = 8
-//        let interItemSpacing: CGFloat = 5
         let interItemSpacing = minimumInteritemSpacing
         
         

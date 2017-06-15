@@ -273,16 +273,66 @@ class MatchingRoundViewModelTests: XCTestCase {
         XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 1).state, .normal)
         XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 2).state, .normal)
         XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 3).state, .normal)
+    }
+    
+    func testMatchingPairs_ShouldHaveIncorrectWhenIncorrect(){
         
         
+        sut.selectPair(cardSide: .definition, atRow: 0)
         
+        XCTAssertEqual(wordPairs.count, 4)
+        
+        XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 0).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 1).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 2).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 3).state, .normal)
+        
+        XCTAssertEqual(sut.getPair(cardSide: .definition, atRow: 0).state, .selected)
+        XCTAssertEqual(sut.getPair(cardSide: .definition, atRow: 1).state, .disabled)
+        XCTAssertEqual(sut.getPair(cardSide: .definition, atRow: 2).state, .disabled)
+        XCTAssertEqual(sut.getPair(cardSide: .definition, atRow: 3).state, .disabled)
+        
+        
+        sut.selectPair(cardSide: .definition, atRow: 1)
+        sut.selectPair(cardSide: .term, atRow: 2)
+        
+        
+        XCTAssertTrue(delegate.incorrectMatchingPair! === sut.getPair(cardSide: .term, atRow: 2))
+        
+        XCTAssertEqual(delegate.reloadCalledCount, 3)
+        
+        XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 0).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 1).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 2).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .term, atRow: 3).state, .normal)
+        
+        XCTAssertEqual(sut.getPair(cardSide: .definition, atRow: 0).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .definition, atRow: 1).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .definition, atRow: 2).state, .normal)
+        XCTAssertEqual(sut.getPair(cardSide: .definition, atRow: 3).state, .normal)
         
         
     }
-    
-    
-    
 
+    func testMatchingPairs_ShouldBeDoneAfterAllCorrect(){
+        XCTAssertEqual(wordPairs.count, 4)
+        
+        XCTAssertFalse(sut.isDone())
+        
+        
+        sut.selectPair(cardSide: .definition, atRow: 0)
+        sut.selectPair(cardSide: .term, atRow: 0)
+        
+        XCTAssertEqual(delegate.reloadCalledCount, 2)
+        
+        for i in 0..<wordPairs.count {
+            sut.selectPair(cardSide: .definition, atRow: i)
+            sut.selectPair(cardSide: .term, atRow: i)
+        }
+        
+        XCTAssertTrue(sut.isDone())
+    }
+    
 }
 
 extension MatchingRoundViewModelTests {
@@ -303,9 +353,9 @@ extension MatchingRoundViewModelTests {
             reloadCalledCount += 1
         }
         
-        var removed: [Removed] = []
-        func removeCell(cardSide: CardSide, atRow: Int) {
-            removed.append(Removed(cardSide: cardSide, atRow: atRow))
+        var incorrectMatchingPair: MatchingPair?
+        func incorrect(matchingPair: MatchingPair) {
+            incorrectMatchingPair = matchingPair
         }
     }
 }
