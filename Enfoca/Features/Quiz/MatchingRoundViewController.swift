@@ -20,7 +20,7 @@ class MatchingRoundViewController: UIViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize = CGSize(width: 20, height: 20)
         
-        viewModel = MatchingRoundViewModel(wordPairs: delegate.getWordPairsForMatching())
+        viewModel = MatchingRoundViewModel(delegate: self, wordPairs: delegate.getWordPairsForMatching())
         
     }
     
@@ -68,10 +68,18 @@ extension MatchingRoundViewController: UICollectionViewDelegateFlowLayout {
         }
     }
     
+    fileprivate func sectionToCardSide(section: Int) -> CardSide {
+        return section == 0 ? CardSide.term : CardSide.definition
+    }
+    
 }
 
 extension MatchingRoundViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cardSide = sectionToCardSide(section: indexPath.section)
+        
+        viewModel.selectPair(cardSide: cardSide, atRow: indexPath.row)
+    }
 }
 
 
@@ -87,22 +95,48 @@ extension MatchingRoundViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MatchingQuizTagCell.identifier, for: indexPath) as? MatchingQuizTagCell else { fatalError() }
         
-        let cardSide = indexPath.section == 0 ? CardSide.term : CardSide.definition
+        let cardSide = sectionToCardSide(section: indexPath.section)
         
         let matchingPair = viewModel.getPair(cardSide: cardSide, atRow: indexPath.row)
         
         cell.setTitle(matchingPair.title)
         
-        switch matchingPair.cardSide {
-        case .definition:
-            cell.applyColors(text: Theme.lightness, background: Theme.green)
-        case .term:
-            cell.applyColors(text: Theme.lightness, background: Theme.orange)
-        default: fatalError()
+        
+        switch matchingPair.state {
+        case .disabled:
+            cell.applyColors(text: Theme.lightness, background: Theme.gray)
+        case .hidden:
+            cell.applyColors(text: Theme.lightness, background: Theme.lightness)
+        case .normal:
+            applyNormalColor(matchingPair: matchingPair, cell: cell)
+        case .selected:
+            applyNormalColor(matchingPair: matchingPair, cell: cell)
+            
         }
+        
+        
         
         return cell
     }
     
-    
+    private func applyNormalColor(matchingPair: MatchingPair, cell: MatchingQuizTagCell) {
+        switch matchingPair.cardSide {
+        case .definition:
+        cell.applyColors(text: Theme.lightness, background: Theme.green)
+        case .term:
+        cell.applyColors(text: Theme.lightness, background: Theme.orange)
+        default: fatalError()
+        }
+    }
+}
+
+extension MatchingRoundViewController: MatchingRoundViewModelDelegate {
+    func removeCell(cardSide: CardSide, atRow: Int) {
+        //doit
+    }
+
+    func reloadMatchingPairs() {
+        collectionView.reloadData()
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
 }

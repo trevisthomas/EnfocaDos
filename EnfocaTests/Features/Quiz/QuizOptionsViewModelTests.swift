@@ -9,7 +9,7 @@
 @testable import Enfoca
 import XCTest
 
-class QuizViewModelTests: XCTestCase {
+class QuizOptionsViewModelTests: XCTestCase {
     
     var sut: QuizOptionsViewModel!
     var delegate: MockCardViewControllerDelegate!
@@ -56,12 +56,7 @@ class QuizViewModelTests: XCTestCase {
         
         XCTAssertEqual(sut.wordCount, 3)
         
-        
-        
     }
-    
-    
-   
     
 }
 

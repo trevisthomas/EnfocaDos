@@ -218,7 +218,7 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jdv-zM-Aqz">
                                         <rect key="frame" x="16" y="46" width="382" height="590"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <collectionViewLayout key="collectionViewLayout" id="fjq-Le-Sje" customClass="CenterAlignedCollectionViewFlowLayout" customModule="Enfoca" customModuleProvider="target"/>
+                                        <collectionViewLayout key="collectionViewLayout" id="KxW-Dy-gJ8" customClass="CenterAlignedCollectionViewFlowLayout" customModule="Enfoca" customModuleProvider="target"/>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MatchingQuizTagCell" id="ZdL-Re-Lfq" customClass="MatchingQuizTagCell" customModule="Enfoca" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
