@@ -4,14 +4,16 @@ import UIKit
 //https://stackoverflow.com/questions/13588283/how-to-center-align-the-cells-of-a-uicollectionview/38254368#38254368
 
 class CenterAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
-    
+
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
         let attributes = super.layoutAttributesForElements(in: rect)
         
         // Constants
         let leftPadding: CGFloat = 8
-        let interItemSpacing: CGFloat = 5
+//        let interItemSpacing: CGFloat = 5
+        let interItemSpacing = minimumInteritemSpacing
+        
         
         // Tracking values
         var leftMargin: CGFloat = leftPadding // Modified to determine origin.x for each item
