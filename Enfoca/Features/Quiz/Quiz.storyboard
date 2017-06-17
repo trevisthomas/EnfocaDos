@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kps-BM-sAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="112"/>
+            <point key="canvasLocation" x="1188" y="-1701"/>
         </scene>
         <!--Matching Round View Controller-->
         <scene sceneID="60i-Mq-omf">
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4m-wK-QWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="1006"/>
+            <point key="canvasLocation" x="1787" y="104"/>
         </scene>
         <!--Card Front View Controller-->
         <scene sceneID="5hr-3h-k45">
@@ -404,7 +404,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1913.0434782608697" y="106.79347826086958"/>
+            <point key="canvasLocation" x="1230" y="-763"/>
         </scene>
         <!--Card Rear View Controller-->
         <scene sceneID="kRA-Rh-Zow">
@@ -525,6 +525,7 @@
                         <outlet property="headerView" destination="f5y-Mu-LBE" id="6d6-Y2-oT3"/>
                         <segue destination="imM-i9-s0b" kind="show" identifier="QuizResultsSegue" id="wkj-nQ-MFe"/>
                         <segue destination="Dm1-0E-fXf" kind="show" identifier="MatchingRoundSeque" id="7OF-2a-AVh"/>
+                        <segue destination="qW3-WU-nJg" kind="show" identifier="CardFrontWithNewWordSegue" id="Exz-4G-xCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lr-11-Wh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -534,7 +535,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2782.608695652174" y="106.79347826086958"/>
+            <point key="canvasLocation" x="2317" y="-763"/>
         </scene>
         <!--Quiz Results View Controller-->
         <scene sceneID="vgj-98-Yvd">
@@ -608,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6D-4T-kaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3707" y="112"/>
+            <point key="canvasLocation" x="3432" y="-763"/>
         </scene>
         <!--Home-->
         <scene sceneID="2ua-VY-hyw">
@@ -616,10 +617,10 @@
                 <viewControllerPlaceholder storyboardName="Home" id="6QF-1r-2F4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vlp-lF-D0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4434" y="112"/>
+            <point key="canvasLocation" x="4241" y="-763"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oQB-FF-xDm"/>
+        <segue reference="Exz-4G-xCA"/>
     </inferredMetricsTieBreakers>
 </document>

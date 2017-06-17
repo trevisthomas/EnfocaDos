@@ -36,8 +36,8 @@
 		0F011ED51EF04CA700939B75 /* MatchingRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ED31EF04CA700939B75 /* MatchingRoundViewController.swift */; };
 		0F011EDA1EF059E900939B75 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ED91EF059E900939B75 /* Theme.swift */; };
 		0F011EDB1EF059E900939B75 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ED91EF059E900939B75 /* Theme.swift */; };
-		0F011EDD1EF06C4000939B75 /* CardViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDC1EF06C4000939B75 /* CardViewControllerDelegate.swift */; };
-		0F011EDE1EF06C4000939B75 /* CardViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDC1EF06C4000939B75 /* CardViewControllerDelegate.swift */; };
+		0F011EDD1EF06C4000939B75 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */; };
+		0F011EDE1EF06C4000939B75 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */; };
 		0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */; };
 		0F011EE11EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */; };
 		0F011EE31EF0B53C00939B75 /* MatchingRoundViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */; };
@@ -363,6 +363,8 @@
 		0FE0158F1EF4B20D00780184 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
 		0FE015901EF4B20D00780184 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EC81EEDB4AF00939B75 /* QuizResultsViewController.swift */; };
 		0FE015911EF4B20D00780184 /* CustomAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0158D1EF4B19700780184 /* CustomAnimations.swift */; };
+		0FE015931EF5976200780184 /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015921EF5976200780184 /* Randomizer.swift */; };
+		0FE015941EF5976200780184 /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015921EF5976200780184 /* Randomizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -399,7 +401,7 @@
 		0F011ED01EF0490E00939B75 /* MatchingQuizTagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingQuizTagCell.swift; path = Quiz/MatchingQuizTagCell.swift; sourceTree = "<group>"; };
 		0F011ED31EF04CA700939B75 /* MatchingRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewController.swift; path = Quiz/MatchingRoundViewController.swift; sourceTree = "<group>"; };
 		0F011ED91EF059E900939B75 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		0F011EDC1EF06C4000939B75 /* CardViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardViewControllerDelegate.swift; path = Quiz/CardViewControllerDelegate.swift; sourceTree = "<group>"; };
+		0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewModel.swift; path = Quiz/QuizViewModel.swift; sourceTree = "<group>"; };
 		0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModel.swift; path = Quiz/MatchingRoundViewModel.swift; sourceTree = "<group>"; };
 		0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModelTests.swift; path = Quiz/MatchingRoundViewModelTests.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
@@ -542,6 +544,7 @@
 		0FD1E20E1ED1E45600D8BD1A /* String+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Tests.swift"; sourceTree = "<group>"; };
 		0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0FE0158D1EF4B19700780184 /* CustomAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimations.swift; sourceTree = "<group>"; };
+		0FE015921EF5976200780184 /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				0F011EB31EEB2B2300939B75 /* Quiz.storyboard */,
+				0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */,
 				0F011EAD1EEB25FB00939B75 /* QuizOptionsViewModel.swift */,
 				0F011EB01EEB2AAB00939B75 /* QuizOptionsViewController.swift */,
 				0F011EC01EED981100939B75 /* CardFrontViewController.swift */,
@@ -598,7 +602,6 @@
 				0F011ED31EF04CA700939B75 /* MatchingRoundViewController.swift */,
 				0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */,
 				0F011EC81EEDB4AF00939B75 /* QuizResultsViewController.swift */,
-				0F011EDC1EF06C4000939B75 /* CardViewControllerDelegate.swift */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				0FA4A5501EC8EE5B00F31F9A /* Globals.swift */,
 				0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */,
 				0FE0158D1EF4B19700780184 /* CustomAnimations.swift */,
+				0FE015921EF5976200780184 /* Randomizer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1387,6 +1391,7 @@
 				0F911E381EE75D4600F21855 /* WordPairTableViewController.swift in Sources */,
 				0F911E391EE75D4600F21855 /* Tag.swift in Sources */,
 				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
+				0FE015941EF5976200780184 /* Randomizer.swift in Sources */,
 				0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */,
 				0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
 				0F011ED51EF04CA700939B75 /* MatchingRoundViewController.swift in Sources */,
@@ -1435,7 +1440,7 @@
 				0F911E641EE75D4600F21855 /* FetchUserRecordOperation.swift in Sources */,
 				0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */,
 				0F911E661EE75D4600F21855 /* EditWordPairFromCellAnimator.swift in Sources */,
-				0F011EDE1EF06C4000939B75 /* CardViewControllerDelegate.swift in Sources */,
+				0F011EDE1EF06C4000939B75 /* QuizViewModel.swift in Sources */,
 				0F911E671EE75D4600F21855 /* WebService.swift in Sources */,
 				0F911E681EE75D4600F21855 /* OperationFetchMetaData.swift in Sources */,
 				0F911E691EE75D4600F21855 /* FetchUserRecordId.swift in Sources */,
@@ -1585,7 +1590,7 @@
 				0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
-				0F011EDD1EF06C4000939B75 /* CardViewControllerDelegate.swift in Sources */,
+				0F011EDD1EF06C4000939B75 /* QuizViewModel.swift in Sources */,
 				0F911F311EE9053C00F21855 /* ActivityIndicatable.swift in Sources */,
 				0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */,
 				0F911F061EE76CFA00F21855 /* Import.swift in Sources */,
@@ -1599,6 +1604,7 @@
 				0FA4A54E1EC8ECE200F31F9A /* OperationFetchWordPairs.swift in Sources */,
 				0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */,
 				0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */,
+				0FE015931EF5976200780184 /* Randomizer.swift in Sources */,
 				0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */,
 				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,

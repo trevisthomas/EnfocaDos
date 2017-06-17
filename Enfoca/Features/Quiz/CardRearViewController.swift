@@ -16,15 +16,15 @@ class CardRearViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var bodyView: UIView!
     
-    private var delegate: CardViewControllerDelegate!
+    private var sharedViewModel: QuizViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        definitionLabel.text = delegate.getRearWord()
+        definitionLabel.text = sharedViewModel.getRearWord()
     }
     
-    func initialize(delegate: CardViewControllerDelegate){
-        self.delegate = delegate
+    func initialize(quizViewModel: QuizViewModel){
+        self.sharedViewModel = quizViewModel
     }
     
     @IBAction func abortButtonAction(_ sender: UIButton) {
@@ -38,9 +38,22 @@ class CardRearViewController: UIViewController {
         }
     }
     @IBAction func incorrectButtonAction(_ sender: EnfocaButton) {
-        delegate.incorrect()
-        showMatchingRound()
+        sharedViewModel.incorrect()
         
+        if sharedViewModel.isTimeForMatchingRound() {
+            showMatchingRound()
+        } else {
+            proceedToNextView()
+        }
+        
+    }
+    
+    private func proceedToNextView() {
+        if sharedViewModel.isFinished() {
+            performSegue(withIdentifier: "QuizResultsSegue", sender: self)
+        } else {
+            performSegue(withIdentifier: "CardFrontWithNewWordSegue", sender: nil)
+        }
     }
     
     private func showMatchingRound() {
@@ -48,13 +61,17 @@ class CardRearViewController: UIViewController {
     }
     
     @IBAction func correctButtonAction(_ sender: EnfocaButton) {
-        delegate.correct()
+        sharedViewModel.correct()
+        proceedToNextView()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? MatchingRoundViewController {
-            to.initialize(delegate: delegate)
+            to.initialize(sharedViewModel: sharedViewModel)
+        } else if let to = segue.destination as? CardFrontViewController {
+            to.initialize(viewModel: sharedViewModel)
         }
+        
     }
 
 }

@@ -8,14 +8,20 @@
 
 import UIKit
 
-protocol CardViewControllerDelegate {
+//protocol CardViewControllerDelegate {
+//    func onError(title: String, message: EnfocaError)
+//}
+
+
+protocol QuizViewModel {
     func getRearWord() -> String
     func getFrontWord() -> String
     
     func correct()
     func incorrect()
     
-    func getWordPairsForMatching() -> [WordPair]
+    func getWordPairsForMatchingRound() -> [WordPair]
     
-    func onError(title: String, message: EnfocaError)
+    func isTimeForMatchingRound() -> Bool
+    func isFinished() -> Bool
 }

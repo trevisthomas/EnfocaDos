@@ -9,8 +9,9 @@
 import UIKit
 
 class MatchingRoundViewController: UIViewController {
+    //This quizViewModel is shared with the other VC's.  This VC just happs to be complex enougn to have is own non shared VM as well.
+    private var sharedViewModel: QuizViewModel!
     
-    private var delegate: CardViewControllerDelegate!
     fileprivate var viewModel: MatchingRoundViewModel!
     fileprivate var incorrectMatchingPair: MatchingPair?
     
@@ -23,13 +24,12 @@ class MatchingRoundViewController: UIViewController {
         
         layout.minimumInteritemSpacing = view.frame.width * 0.02133
         
-        viewModel = MatchingRoundViewModel(delegate: self, wordPairs: delegate.getWordPairsForMatching())
+        viewModel = MatchingRoundViewModel(delegate: self, wordPairs: sharedViewModel.getWordPairsForMatchingRound())
         
     }
     
-    func initialize(delegate: CardViewControllerDelegate){
-        self.delegate = delegate
-        
+    func initialize(sharedViewModel: QuizViewModel){
+        self.sharedViewModel = sharedViewModel
     }
 
     @IBAction func skipAction(_ sender: UIButton) {
@@ -44,7 +44,7 @@ class MatchingRoundViewController: UIViewController {
         
         guard let to = segue.destination as? CardFrontViewController else { fatalError() }
         
-        to.initialize(delegate: delegate)
+        to.initialize(viewModel: sharedViewModel)
     }
 }
 

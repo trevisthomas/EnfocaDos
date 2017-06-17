@@ -171,7 +171,7 @@ class MockWebService : WebService {
     func deleteTag(tag: Tag, callback: @escaping(Tag?, EnfocaError?)->()){}
     
     func fetchQuiz(forTag: Tag?, cardOrder: CardOrder, wordCount: Int, callback: @escaping ([WordPair]?, EnfocaError?) -> ()) {
-        fatalError()
+        callback(wordPairs, nil)
     }
     
     func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
@@ -180,24 +180,24 @@ class MockWebService : WebService {
     
 }
 
-class MockApplicationDefaults : ApplicationDefaults {
-    var reverseWordPair : Bool = false
-    var selectedTags : [Tag] = []
-    var fetchWordPairPageSize : Int = 10
-    var saveCount = 0
-    func save(includingDataStore json: String?) {
-        saveCount += 1
-    }
-    func load() -> String? {
-        fatalError()
-    }
-    
-    var cardOrder: CardOrder = CardOrder.hardest
-    var cardSide: CardSide = CardSide.random
-    var quizWordCount: Int = 5
-    
-    var wordPairOrder: WordPairOrder = WordPairOrder.wordAsc
-}
+//class MockApplicationDefaults : ApplicationDefaults {
+//    var reverseWordPair : Bool = false
+//    var selectedTags : [Tag] = []
+//    var fetchWordPairPageSize : Int = 10
+//    var saveCount = 0
+//    func save(includingDataStore json: String?) {
+//        saveCount += 1
+//    }
+//    func load() -> String? {
+//        fatalError()
+//    }
+//    
+//    var cardOrder: CardOrder = CardOrder.hardest
+//    var cardSide: CardSide = CardSide.random
+//    var quizWordCount: Int = 5
+//    
+//    var wordPairOrder: WordPairOrder = WordPairOrder.wordAsc
+//}
 
 
 

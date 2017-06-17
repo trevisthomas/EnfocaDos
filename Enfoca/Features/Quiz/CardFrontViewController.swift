@@ -17,17 +17,17 @@ class CardFrontViewController: UIViewController {
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    private var delegate: CardViewControllerDelegate!
+    private var sharedViewModel: QuizViewModel!
     
     fileprivate var animator: QuizCardAnimator = QuizCardAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        termLabel.text = delegate.getFrontWord()
+        termLabel.text = sharedViewModel.getFrontWord()
     }
     
-    func initialize(delegate: CardViewControllerDelegate){
-        self.delegate = delegate
+    func initialize(viewModel: QuizViewModel){
+        self.sharedViewModel = viewModel
     }
 
 
@@ -49,7 +49,7 @@ class CardFrontViewController: UIViewController {
         
         to.transitioningDelegate = self
         
-        to.initialize(delegate: delegate)
+        to.initialize(quizViewModel: sharedViewModel)
     }
    
     override func didReceiveMemoryWarning() {

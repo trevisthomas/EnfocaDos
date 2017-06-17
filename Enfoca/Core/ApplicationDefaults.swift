@@ -18,6 +18,7 @@ protocol ApplicationDefaults {
     var cardOrder: CardOrder {get set}
     var cardSide: CardSide {get set}
     var quizWordCount: Int {get set}
+    var numberOfIncorrectAnswersTillReview: Int {get set}
     
     var wordPairOrder: WordPairOrder {get set}
 }
@@ -31,6 +32,7 @@ class LocalApplicationDefaults : ApplicationDefaults {
     var cardSide: CardSide = .definition
     var quizWordCount: Int = 8
     var wordPairOrder: WordPairOrder = .wordAsc
+    var numberOfIncorrectAnswersTillReview: Int = 5
     
     var fetchWordPairPageSize: Int {
         get {

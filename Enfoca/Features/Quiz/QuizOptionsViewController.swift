@@ -8,8 +8,13 @@
 
 import UIKit
 
+//Why is this here? Find out who implements this!
 protocol QuizViewControllerDelegate {
     func tagSelectedForQuiz() -> Tag
+}
+
+protocol QuizOptionsViewControllerDelegate {
+    func onError(title: String, message: EnfocaError)
 }
 
 class QuizOptionsViewController: UIViewController {
@@ -76,7 +81,7 @@ class QuizOptionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let cardFrontViewController = segue.destination as? CardFrontViewController else { fatalError() }
         
-        cardFrontViewController.initialize(delegate: self)
+        cardFrontViewController.initialize(viewModel: viewModel)
         cardFrontViewController.transitioningDelegate = self
     }
     
@@ -121,33 +126,46 @@ extension QuizOptionsViewController: EnfocaHeaderViewAnimationTarget {
     }
 }
 
-
-extension QuizOptionsViewController: CardViewControllerDelegate {
+extension QuizOptionsViewController: QuizOptionsViewControllerDelegate {
     func onError(title: String, message: EnfocaError) {
         self.onError(title: title, message: message)
     }
-
-    
-    func getRearWord() -> String {
-        return "Rear"
-    }
-    
-    func getFrontWord() -> String {
-        return "Front"
-    }
-    
-    func correct() {
-        
-    }
-    
-    func incorrect() {
-        
-    }
-    
-    func getWordPairsForMatching() -> [WordPair] {
-        return viewModel.getCurrentIncorrectWordPairs()
-    }
 }
+
+//extension QuizOptionsViewController: CardViewControllerDelegate {
+//    func onError(title: String, message: EnfocaError) {
+//        self.onError(title: title, message: message)
+//    }
+//
+//    
+//    func getRearWord() -> String {
+//        return viewModel.getCurrentRearWord()
+//    }
+//    
+//    func getFrontWord() -> String {
+//        return viewModel.getCurrentFrontWord()
+//    }
+//    
+//    func correct() {
+//        viewModel.correct()
+//    }
+//    
+//    func incorrect() {
+//        viewModel.inCorrect()
+//    }
+//    
+//    func getWordPairsForMatching() -> [WordPair] {
+//        return viewModel.getWordPairsForReviewRound()
+//    }
+//    
+//    func isTimeForMatchingRound() -> Bool {
+//        return viewModel.isTimeForMatchingRound()
+//    }
+//    
+//    func isFinished() -> Bool {
+//        return viewModel.isFinished()
+//    }
+//}
 
 //For animated transitions
 extension QuizOptionsViewController: UIViewControllerTransitioningDelegate {
