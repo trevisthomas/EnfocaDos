@@ -21,7 +21,11 @@ class QuizOptionsViewController: UIViewController {
     @IBOutlet weak var wordCountLabel: UILabel!
     @IBOutlet var headerBackgroundView: UIView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var topToHeaderBottomConstraint: NSLayoutConstraint!
+    
     fileprivate var viewModel : QuizOptionsViewModel!
+    fileprivate let quizOptionsToCardFrontViewAnimator = QuizOptionsToCardFrontViewAnimator()
     
     @IBAction func incrementWordCountAction(_ sender: UIButton) {
         viewModel.incrementWordCount()
@@ -70,9 +74,10 @@ class QuizOptionsViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let to = segue.destination as? CardFrontViewController else { fatalError() }
+        guard let cardFrontViewController = segue.destination as? CardFrontViewController else { fatalError() }
         
-        to.initialize(delegate: self)
+        cardFrontViewController.initialize(delegate: self)
+        cardFrontViewController.transitioningDelegate = self
     }
     
     @IBAction func startQuizAction(_ sender: EnfocaButton) {
@@ -142,7 +147,27 @@ extension QuizOptionsViewController: CardViewControllerDelegate {
     func getWordPairsForMatching() -> [WordPair] {
         return viewModel.getCurrentIncorrectWordPairs()
     }
-    
-    
 }
+
+//For animated transitions
+extension QuizOptionsViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        print("Presenting \(presenting.description)")
+        
+        if let _ = presented as? CardFrontViewController, let _ = source as? QuizOptionsViewController {
+            quizOptionsToCardFrontViewAnimator.presenting = true
+            return quizOptionsToCardFrontViewAnimator
+        }
+        
+        
+        return nil
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        
+        return nil
+    }
+}
+
 

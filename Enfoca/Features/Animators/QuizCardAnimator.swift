@@ -86,12 +86,16 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         fromViewController.getBodyView().layer.add(fromRotateAnimation, forKey: nil)
         
         
-        let scaleAnimation = createScaleAnimation()
+        let scaleAnimation = createScaleAnimation(duration: duration * 0.4)
         fromViewController.getBodyView().layer.add(scaleAnimation, forKey: nil)
         
         CATransaction.commit()
     
     }
+    
+    /**
+     TODO: Refactor so that you can use the global version of this which is in CustomAnimators
+    **/
     
     private func secondHalf(toViewController: QuizCardAnimatorTarget, fromViewController: QuizCardAnimatorTarget, counterClockwise: Bool){
         let containerView = storedContext.containerView
@@ -139,29 +143,32 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         //Scale it before you start
         toViewController.getBodyView().layer.transform = CATransform3DMakeScale(1.0, 1.0, 0.8)
         
-        let scaleAnimation = createScaleAnimation(delay: true)
+        let scaleAnimation = createScaleAnimation(delay: true, duration: duration * 0.4)
         toViewController.getBodyView().layer.add(scaleAnimation, forKey: nil)
         
         CATransaction.commit()
         
     }
     
-    private func createScaleAnimation(delay: Bool = false) -> CABasicAnimation {
-        let ani = CABasicAnimation(keyPath: "transform.scale")
-        
-        if delay {
-            ani.fromValue = 0.8
-            ani.toValue = 1.0
-        } else {
-            ani.fromValue = 1.0
-            ani.toValue = 0.8
-        }
-        
-        ani.fillMode = kCAFillModeForwards
-        ani.isRemovedOnCompletion = false
-        ani.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        ani.duration =  duration * 0.4
-        return ani
-    }
     
 }
+
+//TODO: Is this useful in global scope?
+func createScaleAnimation(delay: Bool = false, duration: Double) -> CABasicAnimation {
+    let ani = CABasicAnimation(keyPath: "transform.scale")
+    
+    if delay {
+        ani.fromValue = 0.8
+        ani.toValue = 1.0
+    } else {
+        ani.fromValue = 1.0
+        ani.toValue = 0.8
+    }
+    
+    ani.fillMode = kCAFillModeForwards
+    ani.isRemovedOnCompletion = false
+    ani.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    ani.duration =  duration
+    return ani
+}
+

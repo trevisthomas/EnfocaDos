@@ -15,6 +15,7 @@ class CardFrontViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var bodyView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     private var delegate: CardViewControllerDelegate!
     
