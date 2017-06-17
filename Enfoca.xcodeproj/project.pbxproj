@@ -365,6 +365,8 @@
 		0FE015911EF4B20D00780184 /* CustomAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0158D1EF4B19700780184 /* CustomAnimations.swift */; };
 		0FE015931EF5976200780184 /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015921EF5976200780184 /* Randomizer.swift */; };
 		0FE015941EF5976200780184 /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015921EF5976200780184 /* Randomizer.swift */; };
+		0FE015991EF5C9C100780184 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015981EF5C9C100780184 /* Double+.swift */; };
+		0FE0159A1EF5C9C100780184 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015981EF5C9C100780184 /* Double+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -545,6 +547,7 @@
 		0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0FE0158D1EF4B19700780184 /* CustomAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimations.swift; sourceTree = "<group>"; };
 		0FE015921EF5976200780184 /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
+		0FE015981EF5C9C100780184 /* Double+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -915,6 +918,7 @@
 				0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */,
 				0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */,
 				0F911F2B1EE8573500F21855 /* UITextField+.swift */,
+				0FE015981EF5C9C100780184 /* Double+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1394,6 +1398,7 @@
 				0FE015941EF5976200780184 /* Randomizer.swift in Sources */,
 				0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */,
 				0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
+				0FE0159A1EF5C9C100780184 /* Double+.swift in Sources */,
 				0F011ED51EF04CA700939B75 /* MatchingRoundViewController.swift in Sources */,
 				0F911E3C1EE75D4600F21855 /* HomeViewController.swift in Sources */,
 				0F011EAF1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */,
@@ -1566,6 +1571,7 @@
 				0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */,
 				0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */,
 				0FA4A5281EC8EC9000F31F9A /* InternalUser.swift in Sources */,
+				0FE015991EF5C9C100780184 /* Double+.swift in Sources */,
 				0FA4A54D1EC8ECE200F31F9A /* OperationCreateWordPair.swift in Sources */,
 				0FA4A5191EC8EC6E00F31F9A /* Perform+WordPair.swift in Sources */,
 				0FA4A5471EC8ECD200F31F9A /* OperationUpdateWordPair.swift in Sources */,

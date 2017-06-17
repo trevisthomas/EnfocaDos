@@ -174,8 +174,30 @@ class MockWebService : WebService {
         callback(wordPairs, nil)
     }
     
+    
+    var metaId = 0
     func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
-        fatalError()
+        metaId += 1
+        
+        var oldTimedViewCount = 0
+        var oldIncorrectCount = 0
+        var oldCreateDate = Date()
+        if let oldMeta = forWordPair.metaData {
+            oldTimedViewCount = oldMeta.timedViewCount
+            oldIncorrectCount = oldMeta.incorrectCount
+            oldCreateDate = oldMeta.dateCreated
+        }
+        
+        if !correct {
+            oldIncorrectCount += 1
+        }
+        oldTimedViewCount += 1
+        
+        let meta = MetaData(metaId: "meta\(metaId)", pairId: forWordPair.pairId, dateCreated: oldCreateDate, dateUpdated: Date(), incorrectCount: oldIncorrectCount, totalTime: -1, timedViewCount: oldTimedViewCount)
+        
+        forWordPair.metaData = meta
+        
+        callback(forWordPair, nil)
     }
     
 }

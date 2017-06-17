@@ -52,7 +52,7 @@ class MetaData : Hashable {
     
     var scoreAsString : String? {
         if timedViewCount > 0 {
-            return String(format: "%.0f%%", arguments: [score * 100])
+            return score.asPercent
         } else {
             return nil
         }

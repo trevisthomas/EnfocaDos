@@ -122,12 +122,23 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     }
     
     func correct() {
+        scoreCurrentWord(isCorrect: true)
         currentWordPairIndex += 1
     }
     
     func incorrect() {
+        scoreCurrentWord(isCorrect: false)
         incorrectWords.append(quizWords[currentWordPairIndex])
         currentWordPairIndex += 1
+    }
+    
+    private func scoreCurrentWord(isCorrect: Bool) {
+        services.updateScore(forWordPair: quizWords[currentWordPairIndex], correct: isCorrect, callback: { (wp: WordPair?, error: EnfocaError?) in
+            if let error = error {
+                self.delegate.onError(title: "Network error", message: error)
+            }
+            self.quizWords[self.currentWordPairIndex].metaData = wp?.metaData
+        })
     }
     
     func isTimeForMatchingRound() -> Bool {
@@ -141,6 +152,11 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     
     func isRetrySuggested() -> Bool {
         return incorrectWords.count > 0
+    }
+    
+    func getScore() -> String {
+        let score = Double(originalWords.count - incorrectWords.count) / Double(originalWords.count)
+        return score.asPercent!
     }
     
     func retry(shuffle: Bool = true) {

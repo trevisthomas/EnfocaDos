@@ -329,8 +329,55 @@ class QuizOptionsViewModelTests: XCTestCase {
         XCTAssertFalse(sut.isRetrySuggested())
     }
     
+    func testQuizOptions_ShouldCalculatePerfectScore() {
+        let tag = setupTags()
+        
+        getAppDelegate().applicationDefaults.numberOfIncorrectAnswersTillReview = 2
+        
+        sut = QuizOptionsViewModel(tag: tag, delegate: delegate)
+        sut.cardSide = .term
+        sut.startQuiz {
+            //Should NOT be async in mock service!
+        }
+        
+        sut.correct()
+        sut.correct()
+        sut.correct()
+        sut.correct()
+        XCTAssertTrue(sut.isFinished())
+        XCTAssertFalse(sut.isRetrySuggested())
+        
+        for wp in sut.originalWords {
+            XCTAssertEqual(wp.metaData?.incorrectCount, 0)
+            XCTAssertEqual(wp.metaData?.timedViewCount, 1)
+        }
+        
+        XCTAssertEqual(sut.originalWords, mockService.wordPairs)
+        XCTAssertEqual(sut.getScore(), "100%")
+    }
     
-    //TODO! Check which words are being reviewed!
+    func testQuizOptions_ShouldCalculateFiftyPercentScore() {
+        let tag = setupTags()
+        
+        getAppDelegate().applicationDefaults.numberOfIncorrectAnswersTillReview = 2
+        
+        sut = QuizOptionsViewModel(tag: tag, delegate: delegate)
+        sut.cardSide = .term
+        sut.startQuiz {
+            //Should NOT be async in mock service!
+        }
+        
+        sut.correct()
+        sut.correct()
+        sut.incorrect()
+        sut.incorrect()
+        XCTAssertTrue(sut.isFinished())
+        XCTAssertTrue(sut.isRetrySuggested())
+        
+        XCTAssertEqual(sut.originalWords, mockService.wordPairs)
+        XCTAssertEqual(sut.getScore(), "50%")
+    }
+    
 }
 
 class MockQuizOptionsViewControllerDelegate: QuizOptionsViewControllerDelegate {

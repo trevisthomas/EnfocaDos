@@ -39,30 +39,24 @@ class CardRearViewController: UIViewController {
     }
     @IBAction func incorrectButtonAction(_ sender: EnfocaButton) {
         sharedViewModel.incorrect()
-        
-        if sharedViewModel.isTimeForMatchingRound() {
-            showMatchingRound()
-        } else {
-            proceedToNextView()
-        }
-        
-    }
-    
-    private func proceedToNextView() {
-        if sharedViewModel.isFinished() {
-            performSegue(withIdentifier: "QuizResultsSegue", sender: self)
-        } else {
-            performSegue(withIdentifier: "CardFrontWithNewWordSegue", sender: nil)
-        }
-    }
-    
-    private func showMatchingRound() {
-        performSegue(withIdentifier: "MatchingRoundSeque", sender: nil)
+        performSegue(withIdentifier: decideWhichSegueToPerform(), sender: self)
     }
     
     @IBAction func correctButtonAction(_ sender: EnfocaButton) {
         sharedViewModel.correct()
-        proceedToNextView()
+        performSegue(withIdentifier: decideWhichSegueToPerform(), sender: self)
+    }
+    
+    private func decideWhichSegueToPerform() -> String{
+        if sharedViewModel.isTimeForMatchingRound() {
+            return "MatchingRoundSeque"
+        } else {
+            if sharedViewModel.isFinished() {
+                return "QuizResultsSegue"
+            } else {
+                return "CardFrontWithNewWordSegue"
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
