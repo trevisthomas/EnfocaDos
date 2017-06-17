@@ -40,9 +40,7 @@ class CustomAnimations {
         }
     }
     
-    //** TODO This method was copied from the QuizCardAnimator, refactor that class and make this method global!
     class func animateEndFlip(target: UIView, duration: Double, counterClockwise: Bool, callback: @escaping()->() = {}){
-        //        let containerView = storedContext.containerView
         
         CATransaction.begin()
         CATransaction.setCompletionBlock({
@@ -50,11 +48,7 @@ class CustomAnimations {
             target.layer.transform = CATransform3DIdentity
             target.layer.removeAllAnimations()
             
-            //            fromViewController.getBodyView().layer.transform = CATransform3DIdentity
-            //            fromViewController.getBodyView().layer.removeAllAnimations()
-            
             callback()
-            //self.storedContext.completeTransition(true)
         })
         
         var rotateTransform = CATransform3DRotate(target.layer.transform , 0.0 * .pi, 0.0, 1.0, 0.0)
@@ -62,10 +56,6 @@ class CustomAnimations {
         rotateTransform.m34 = 1.0 / -1500;
         
         target.layer.transform = rotateTransform
-        
-        //Hmm
-        //        containerView.addSubview(toViewController.getView())
-        
         
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
         
@@ -95,4 +85,25 @@ class CustomAnimations {
         CATransaction.commit()
         
     }
+    
+    //This seems less useful to be public but at the moment it is used in two places.  
+    // If you refactor the front half of the flip animation and bring that in here then maybe you can make this private.  
+    class func createScaleAnimation(delay: Bool = false, duration: Double) -> CABasicAnimation {
+        let ani = CABasicAnimation(keyPath: "transform.scale")
+        
+        if delay {
+            ani.fromValue = 0.8
+            ani.toValue = 1.0
+        } else {
+            ani.fromValue = 1.0
+            ani.toValue = 0.8
+        }
+        
+        ani.fillMode = kCAFillModeForwards
+        ani.isRemovedOnCompletion = false
+        ani.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        ani.duration =  duration
+        return ani
+    }
+
 }
