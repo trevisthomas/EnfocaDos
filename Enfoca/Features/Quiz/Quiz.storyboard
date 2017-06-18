@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4m-wK-QWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="104"/>
+            <point key="canvasLocation" x="1859" y="27"/>
         </scene>
         <!--Card Front View Controller-->
         <scene sceneID="5hr-3h-k45">
@@ -523,9 +523,10 @@
                         <outlet property="bodyView" destination="WaG-kp-efN" id="Rnc-5k-3hK"/>
                         <outlet property="definitionLabel" destination="41O-AB-x6M" id="02G-jg-wy6"/>
                         <outlet property="headerView" destination="f5y-Mu-LBE" id="6d6-Y2-oT3"/>
-                        <segue destination="imM-i9-s0b" kind="show" identifier="QuizResultsSegue" id="wkj-nQ-MFe"/>
+                        <segue destination="imM-i9-s0b" kind="show" identifier="QuizPerfectScoreResultsSegue" id="wkj-nQ-MFe"/>
                         <segue destination="Dm1-0E-fXf" kind="show" identifier="MatchingRoundSeque" id="7OF-2a-AVh"/>
                         <segue destination="qW3-WU-nJg" kind="show" identifier="CardFrontWithNewWordSegue" id="Exz-4G-xCA"/>
+                        <segue destination="L7x-Wc-mcK" kind="show" identifier="QuizResultsSegue" id="f6d-Db-4cY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lr-11-Wh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -537,10 +538,10 @@
             </objects>
             <point key="canvasLocation" x="2317" y="-763"/>
         </scene>
-        <!--Quiz Results View Controller-->
+        <!--Quiz Perfect Score View Controller-->
         <scene sceneID="vgj-98-Yvd">
             <objects>
-                <viewController id="imM-i9-s0b" customClass="QuizResultsViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="imM-i9-s0b" customClass="QuizPerfectScoreViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6l7-GE-D2u"/>
                         <viewControllerLayoutGuide type="bottom" id="jnT-sE-rCM"/>
@@ -549,20 +550,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUP-MM-fi6">
-                                <rect key="frame" x="8" y="228" width="398" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0%" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f3B-bZ-g9c">
-                                        <rect key="frame" x="20" y="20" width="358" height="168"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srE-8m-j4f">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <subviews>
@@ -572,33 +559,64 @@
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXo-jd-bse">
-                                        <rect key="frame" x="367" y="30" width="39" height="30"/>
-                                        <state key="normal" title="Close">
-                                            <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="abortButtonAction:" destination="ZOI-8A-KLN" eventType="touchUpInside" id="HUE-Jx-Enk"/>
-                                            <action selector="closeButtonAction:" destination="imM-i9-s0b" eventType="touchUpInside" id="W2l-QT-6cn"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="UXo-jd-bse" firstAttribute="centerY" secondItem="am2-Oj-isH" secondAttribute="centerY" id="30M-HE-R8n"/>
                                     <constraint firstItem="am2-Oj-isH" firstAttribute="top" secondItem="srE-8m-j4f" secondAttribute="top" constant="32" id="YsI-5T-mZ8"/>
                                     <constraint firstAttribute="height" constant="100" id="arC-Ts-iod"/>
                                     <constraint firstItem="am2-Oj-isH" firstAttribute="leading" secondItem="srE-8m-j4f" secondAttribute="leading" constant="48" id="b4e-i7-dIg"/>
-                                    <constraint firstAttribute="trailing" secondItem="UXo-jd-bse" secondAttribute="trailing" constant="8" id="vIJ-RP-N8u"/>
                                     <constraint firstAttribute="trailing" secondItem="am2-Oj-isH" secondAttribute="trailing" constant="48" id="yGC-9e-oUz"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWI-t1-rlJ" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                <rect key="frame" x="125" y="591" width="163" height="64"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="Q3d-7B-TEW"/>
+                                    <constraint firstAttribute="height" constant="64" id="qjB-CG-0ku"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="okButtonAction:" destination="qW3-WU-nJg" eventType="touchUpInside" id="7pt-rN-xAW"/>
+                                    <action selector="okButtonAction:" destination="imM-i9-s0b" eventType="touchUpInside" id="v0M-4v-bFf"/>
+                                    <action selector="startQuizAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="mJ0-XB-dBx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ace!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B2T-9v-J3u">
+                                <rect key="frame" x="161" y="220" width="91.333333333333343" height="53.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="46"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hA-yu-uDz">
+                                <rect key="frame" x="144" y="371.66666666666669" width="124" height="30"/>
+                                <state key="normal" title="Show Quiz Details">
+                                    <color key="titleColor" red="0.47003650670000002" green="0.65289556979999996" blue="0.0026309711390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f3B-bZ-g9c">
+                                <rect key="frame" x="158.33333333333334" y="293.66666666666669" width="96.333333333333314" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jnT-sE-rCM" firstAttribute="top" secondItem="BWI-t1-rlJ" secondAttribute="bottom" constant="81" id="HwI-JU-vro"/>
                             <constraint firstItem="srE-8m-j4f" firstAttribute="top" secondItem="SGi-Tp-TUi" secondAttribute="top" id="J8m-6f-UNT"/>
+                            <constraint firstItem="BWI-t1-rlJ" firstAttribute="centerX" secondItem="SGi-Tp-TUi" secondAttribute="centerX" id="Jrd-pP-1Dt"/>
+                            <constraint firstItem="3hA-yu-uDz" firstAttribute="centerX" secondItem="f3B-bZ-g9c" secondAttribute="centerX" id="Ksk-vM-BuB"/>
+                            <constraint firstItem="f3B-bZ-g9c" firstAttribute="top" secondItem="B2T-9v-J3u" secondAttribute="bottom" constant="20" id="RyQ-4d-zPb"/>
+                            <constraint firstItem="B2T-9v-J3u" firstAttribute="centerX" secondItem="srE-8m-j4f" secondAttribute="centerX" id="TMz-x7-6bN"/>
                             <constraint firstAttribute="trailing" secondItem="srE-8m-j4f" secondAttribute="trailing" id="VLB-sM-wYN"/>
+                            <constraint firstItem="f3B-bZ-g9c" firstAttribute="centerX" secondItem="SGi-Tp-TUi" secondAttribute="centerX" id="aiW-I4-r1a"/>
                             <constraint firstItem="srE-8m-j4f" firstAttribute="leading" secondItem="SGi-Tp-TUi" secondAttribute="leading" id="dVi-hW-e8P"/>
+                            <constraint firstItem="B2T-9v-J3u" firstAttribute="top" secondItem="srE-8m-j4f" secondAttribute="bottom" constant="120" id="qxU-ZG-GeP"/>
+                            <constraint firstItem="3hA-yu-uDz" firstAttribute="top" secondItem="f3B-bZ-g9c" secondAttribute="bottom" constant="36" id="rRP-Gv-0Vd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -609,7 +627,160 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6D-4T-kaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3432" y="-763"/>
+            <point key="canvasLocation" x="3431.884057971015" y="-763.04347826086962"/>
+        </scene>
+        <!--Quiz Results View Controller-->
+        <scene sceneID="2OL-hK-9TU">
+            <objects>
+                <viewController id="L7x-Wc-mcK" customClass="QuizResultsViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Luh-5o-EzP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lhe-Gn-ZPG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ds-dN-vg0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdn-PB-Gvu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vd-G3-ZnR">
+                                        <rect key="frame" x="48" y="32" width="318" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4vd-G3-ZnR" secondAttribute="trailing" constant="48" id="7UL-aw-dnD"/>
+                                    <constraint firstAttribute="height" constant="100" id="AR1-2C-sXH"/>
+                                    <constraint firstItem="4vd-G3-ZnR" firstAttribute="top" secondItem="qdn-PB-Gvu" secondAttribute="top" constant="32" id="Xup-Pz-qgX"/>
+                                    <constraint firstItem="4vd-G3-ZnR" firstAttribute="leading" secondItem="qdn-PB-Gvu" secondAttribute="leading" constant="48" id="y4Y-R5-aA6"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-rJ-twc">
+                                <rect key="frame" x="110.33333333333331" y="190" width="193.33333333333337" height="112"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8N5-Ia-Kac">
+                                        <rect key="frame" x="0.0" y="0.0" width="115.66666666666667" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCy-07-m0A">
+                                                <rect key="frame" x="0.0" y="0.0" width="115.66666666666667" height="37.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsd-sr-G2f">
+                                                <rect key="frame" x="0.0" y="37.333333333333343" width="115.66666666666667" height="37.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjI-mi-etG">
+                                                <rect key="frame" x="0.0" y="74.666666666666686" width="115.66666666666667" height="37.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H1t-tc-iqs">
+                                        <rect key="frame" x="125.66666666666666" y="0.0" width="67.666666666666686" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaU-Du-tVG">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.666666666666686" height="37.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57F-a9-KPv">
+                                                <rect key="frame" x="0.0" y="37.333333333333343" width="67.666666666666686" height="37.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-uW-szt">
+                                                <rect key="frame" x="0.0" y="74.666666666666686" width="67.666666666666686" height="37.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TX-oX-aG4" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                <rect key="frame" x="125.66666666666669" y="591" width="163" height="64"/>
+                                <color key="backgroundColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="59v-Y6-N9Q"/>
+                                    <constraint firstAttribute="height" constant="64" id="VrZ-hP-NPl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneAction:" destination="L7x-Wc-mcK" eventType="touchUpInside" id="Da9-lr-cGq"/>
+                                    <action selector="okButtonAction:" destination="qW3-WU-nJg" eventType="touchUpInside" id="5l1-D3-GSa"/>
+                                    <action selector="startQuizAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="abZ-Nq-SxM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-lc-Sms" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                <rect key="frame" x="125.66666666666669" y="511" width="163" height="64"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="Eq6-P2-fbh"/>
+                                    <constraint firstAttribute="height" constant="64" id="ppt-7F-Vf1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Retry">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="okButtonAction:" destination="qW3-WU-nJg" eventType="touchUpInside" id="lPN-ex-XXw"/>
+                                    <action selector="retryAction:" destination="L7x-Wc-mcK" eventType="touchUpInside" id="jP1-ie-YYt"/>
+                                    <action selector="startQuizAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="OZY-6Q-XJn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJZ-Qp-WOP">
+                                <rect key="frame" x="145" y="336" width="124" height="30"/>
+                                <state key="normal" title="Show Quiz Details">
+                                    <color key="titleColor" red="0.47003650670000002" green="0.65289556979999996" blue="0.0026309711390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showDetailedResultsAction:" destination="L7x-Wc-mcK" eventType="touchUpInside" id="DQI-M6-9sY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VJZ-Qp-WOP" firstAttribute="centerX" secondItem="BKX-rJ-twc" secondAttribute="centerX" id="AyK-ak-sEx"/>
+                            <constraint firstItem="BKX-rJ-twc" firstAttribute="top" secondItem="qdn-PB-Gvu" secondAttribute="bottom" constant="90" id="CmA-e6-y2R"/>
+                            <constraint firstItem="VJZ-Qp-WOP" firstAttribute="top" secondItem="BKX-rJ-twc" secondAttribute="bottom" constant="34" id="DLe-Cx-hbU"/>
+                            <constraint firstItem="2TX-oX-aG4" firstAttribute="centerX" secondItem="8Ds-dN-vg0" secondAttribute="centerX" id="OeI-QS-Afp"/>
+                            <constraint firstItem="8bs-lc-Sms" firstAttribute="centerX" secondItem="2TX-oX-aG4" secondAttribute="centerX" id="RPE-Uh-C1W"/>
+                            <constraint firstAttribute="trailing" secondItem="qdn-PB-Gvu" secondAttribute="trailing" id="Wyf-E8-qqK"/>
+                            <constraint firstItem="BKX-rJ-twc" firstAttribute="centerX" secondItem="qdn-PB-Gvu" secondAttribute="centerX" id="dZ0-sv-Tqq"/>
+                            <constraint firstItem="qdn-PB-Gvu" firstAttribute="top" secondItem="8Ds-dN-vg0" secondAttribute="top" id="fJF-Z4-rJV"/>
+                            <constraint firstItem="qdn-PB-Gvu" firstAttribute="leading" secondItem="8Ds-dN-vg0" secondAttribute="leading" id="nMn-Vf-nBM"/>
+                            <constraint firstItem="2TX-oX-aG4" firstAttribute="top" secondItem="8bs-lc-Sms" secondAttribute="bottom" constant="16" id="tfN-do-5Vl"/>
+                            <constraint firstItem="Lhe-Gn-ZPG" firstAttribute="top" secondItem="2TX-oX-aG4" secondAttribute="bottom" constant="81" id="vRL-h2-oeL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="askedLabel" destination="eaU-Du-tVG" id="XYC-Op-TbZ"/>
+                        <outlet property="correctLabel" destination="57F-a9-KPv" id="xUP-tu-akm"/>
+                        <outlet property="headerHightConstrant" destination="AR1-2C-sXH" id="BJG-cI-02k"/>
+                        <outlet property="scoreLabel" destination="dbH-uW-szt" id="Bhe-N2-hxs"/>
+                        <segue destination="6QF-1r-2F4" kind="show" identifier="HomeSegue" id="Owj-22-ncO"/>
+                        <segue destination="qW3-WU-nJg" kind="show" identifier="RetryQuizSegue" id="FaX-4e-20q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jss-Af-K86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3432" y="27"/>
         </scene>
         <!--Home-->
         <scene sceneID="2ua-VY-hyw">
@@ -617,10 +788,11 @@
                 <viewControllerPlaceholder storyboardName="Home" id="6QF-1r-2F4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vlp-lF-D0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4241" y="-763"/>
+            <point key="canvasLocation" x="4179" y="-502"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Exz-4G-xCA"/>
+        <segue reference="FaX-4e-20q"/>
+        <segue reference="Ixi-5y-OaF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,6 +21,7 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     private var currentFrontSide: CardSide!
     private var incorrectWords: [WordPair] = []
     private var numberOfIncorrectAnswersTillReview: Int!
+    private var incorrectWordCountSinceMatchingRound: Int = 0
 
     var tagName: String {
         get {
@@ -101,6 +102,7 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     
     
     func getWordPairsForMatchingRound() -> [WordPair] {
+        incorrectWordCountSinceMatchingRound = 0
         return Array(incorrectWords.suffix(numberOfIncorrectAnswersTillReview))
     
     }
@@ -130,20 +132,22 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
         scoreCurrentWord(isCorrect: false)
         incorrectWords.append(quizWords[currentWordPairIndex])
         currentWordPairIndex += 1
+        
+        incorrectWordCountSinceMatchingRound += 1
     }
     
     private func scoreCurrentWord(isCorrect: Bool) {
-        services.updateScore(forWordPair: quizWords[currentWordPairIndex], correct: isCorrect, callback: { (wp: WordPair?, error: EnfocaError?) in
+        let localWp = quizWords[currentWordPairIndex]
+        services.updateScore(forWordPair: localWp, correct: isCorrect, callback: { (wp: WordPair?, error: EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Network error", message: error)
             }
-            self.quizWords[self.currentWordPairIndex].metaData = wp?.metaData
+            localWp.metaData = wp?.metaData
         })
     }
     
     func isTimeForMatchingRound() -> Bool {
-        guard incorrectWords.count > 0 else { return false }
-        return incorrectWords.count % numberOfIncorrectAnswersTillReview == 0
+        return incorrectWordCountSinceMatchingRound == numberOfIncorrectAnswersTillReview
     }
     
     func isFinished() -> Bool {
@@ -155,19 +159,35 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     }
     
     func getScore() -> String {
-        let score = Double(originalWords.count - incorrectWords.count) / Double(originalWords.count)
+        let score = Double(quizWords.count - incorrectWords.count) / Double(quizWords.count)
         return score.asPercent!
     }
     
     func retry(shuffle: Bool = true) {
         currentWordPairIndex = 0
+        incorrectWordCountSinceMatchingRound = 0
         quizWords.removeAll()
-        quizWords.append(contentsOf: incorrectWords)
-        incorrectWords.removeAll()
         
         if (shuffle) {
-            fatalError()
+            quizWords.append(contentsOf: incorrectWords.shuffled())
+        } else {
+            quizWords.append(contentsOf: incorrectWords)
         }
+        
+        incorrectWords.removeAll()
+    }
+    
+    //This weirdness is because i couldnt provide a default param in the protocol
+    func retry() {
+        retry(shuffle: true)
+    }
+    
+    func getCorrectCount() -> Int {
+        return getWordsAskedCount() - incorrectWords.count
+    }
+    
+    func getWordsAskedCount() -> Int{
+        return quizWords.count
     }
 
 }

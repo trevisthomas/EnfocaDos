@@ -67,7 +67,7 @@ class LocalApplicationDefaults : ApplicationDefaults {
         
         
         //In case of a dirty shut down, i dont want the old data lying around
-//        defaults.removeObject(forKey: dataStoreKey)
+        defaults.removeObject(forKey: dataStoreKey)
 
         
         //Load other default settings

@@ -14,3 +14,9 @@ func invokeLater(callback: @escaping ()->()){
     }
 }
 
+func delay(delayInSeconds: Double, callback: @escaping ()->()) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds, execute: {
+        callback()
+    })
+}
+

@@ -24,4 +24,12 @@ protocol QuizViewModel {
     
     func isTimeForMatchingRound() -> Bool
     func isFinished() -> Bool
+    
+    func getCorrectCount()->Int
+    func getWordsAskedCount()->Int
+    func getScore()->String
+    
+    func retry()
+    
+    func isRetrySuggested() -> Bool
 }

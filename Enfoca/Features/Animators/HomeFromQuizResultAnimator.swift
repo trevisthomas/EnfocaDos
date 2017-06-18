@@ -9,6 +9,10 @@
 
 import UIKit
 
+protocol HomeFromQuizAnimatorTarget {
+    var headerHightConstrant: NSLayoutConstraint! {get set}
+}
+
 public class HomeFromQuizResultAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     private let duration = 1.0
@@ -24,7 +28,7 @@ public class HomeFromQuizResultAnimator: NSObject, UIViewControllerAnimatedTrans
             fatalError()
         }
         
-        guard let fromViewController = transitionContext.viewController(forKey: .from) as? QuizResultsViewController else {
+        guard let fromViewController = transitionContext.viewController(forKey: .from) as? HomeFromQuizAnimatorTarget else {
             fatalError()
         }
         

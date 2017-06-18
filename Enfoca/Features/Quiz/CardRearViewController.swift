@@ -52,10 +52,15 @@ class CardRearViewController: UIViewController {
             return "MatchingRoundSeque"
         } else {
             if sharedViewModel.isFinished() {
-                return "QuizResultsSegue"
+                if sharedViewModel.isRetrySuggested() {
+                    return "QuizResultsSegue"
+                } else {
+                    return "QuizPerfectScoreResultsSegue"
+                }
             } else {
                 return "CardFrontWithNewWordSegue"
             }
+            
         }
     }
     
@@ -64,10 +69,10 @@ class CardRearViewController: UIViewController {
             to.initialize(sharedViewModel: sharedViewModel)
         } else if let to = segue.destination as? CardFrontViewController {
             to.initialize(viewModel: sharedViewModel)
+        } else if let to = segue.destination as? QuizResultsViewController {
+            to.initialize(sharedViewModel: sharedViewModel)
         }
-        
     }
-
 }
 
 extension CardRearViewController: QuizCardAnimatorTarget {
