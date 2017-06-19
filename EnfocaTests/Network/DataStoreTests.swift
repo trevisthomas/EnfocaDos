@@ -15,13 +15,13 @@ class DataStoreTests: XCTestCase {
     var tags : [Tag] = []
     var wordPairs : [WordPair] = []
     var wpAss : [TagAssociation] = []
-    var metaData : [MetaData] = []
+    var metaDataList : [MetaData] = []
     
     override func setUp() {
         super.setUp()
         
         sut = DataStore()
-        sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaData)
+        sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
     }
     
     func testInit(){
@@ -508,8 +508,8 @@ class DataStoreTests: XCTestCase {
         
         let result = sut.fetchQuiz(cardOrder: .easiest, wordCount: 3)
         
-        XCTAssertTrue(result[0].metaData!.score > result[1].metaData!.score)
-        XCTAssertTrue(result[1].metaData!.score > result[2].metaData!.score)
+        XCTAssertTrue(sut.getMetaData(forWordPair: result[0])!.score > sut.getMetaData(forWordPair: result[1])!.score)
+        XCTAssertTrue(sut.getMetaData(forWordPair: result[1])!.score > sut.getMetaData(forWordPair: result[2])!.score)
         
     }
     
@@ -529,8 +529,8 @@ class DataStoreTests: XCTestCase {
         
         let result = sut.fetchQuiz(cardOrder: .hardest, wordCount: 3)
         
-        XCTAssertTrue(result[0].metaData!.score < result[1].metaData!.score)
-        XCTAssertTrue(result[1].metaData!.score < result[2].metaData!.score)
+        XCTAssertTrue(sut.getMetaData(forWordPair: result[0])!.score < sut.getMetaData(forWordPair: result[1])!.score)
+        XCTAssertTrue(sut.getMetaData(forWordPair: result[1])!.score < sut.getMetaData(forWordPair: result[2])!.score)
         
     }
     
@@ -550,9 +550,8 @@ class DataStoreTests: XCTestCase {
         
         let result = sut.fetchQuiz(cardOrder: .latestAdded, wordCount: 3)
         
-        XCTAssertTrue(result[0].metaData!.dateCreated > result[1].metaData!.dateCreated)
-        XCTAssertTrue(result[1].metaData!.dateCreated > result[2].metaData!.dateCreated)
-        
+        XCTAssertTrue(sut.getMetaData(forWordPair: result[0])!.score > sut.getMetaData(forWordPair: result[1])!.score)
+        XCTAssertTrue(sut.getMetaData(forWordPair: result[1])!.score > sut.getMetaData(forWordPair: result[2])!.score)
         
     }
     
@@ -673,7 +672,7 @@ class DataStoreTests: XCTestCase {
         
         XCTAssertEqual(result[0].word, "Clave")
         
-        XCTAssertNil(result[0].metaData)
+        XCTAssertNil(sut.getMetaData(forWordPair: result[0]))
         
         let metaData = MetaData(metaId: "mock", pairId: result[0].pairId, dateCreated: Date(), dateUpdated: nil, incorrectCount: 0, totalTime: 0, timedViewCount: 0)
         
@@ -681,15 +680,19 @@ class DataStoreTests: XCTestCase {
         
         sut.add(metaData: metaData)
         
-        XCTAssertEqual(result[0].metaData?.timedViewCount, 1)
-        XCTAssertEqual(result[0].metaData?.scoreAsString, "100%")
+        let meta = sut.getMetaData(forWordPair: result[0])
+        
+        XCTAssertEqual(meta?.timedViewCount, 1)
+        XCTAssertEqual(meta?.scoreAsString, "100%")
         
         let result2 = sut.fetchQuiz(cardOrder: .easiest, wordCount: 1, forTags: [tags[1]])
         
-        sut.updateScore(metaData: result2[0].metaData!, correct: false)
+        let meta2 = sut.getMetaData(forWordPair: result2[0])
         
-        XCTAssertEqual(result[0].metaData?.timedViewCount, 2)
-        XCTAssertEqual(result[0].metaData?.scoreAsString, "50%")
+        sut.updateScore(metaData: meta2!, correct: false)
+        
+        XCTAssertEqual(meta?.timedViewCount, 2)
+        XCTAssertEqual(meta?.scoreAsString, "50%")
         
         
     }
@@ -716,11 +719,11 @@ extension DataStoreTests{
         let lastWeekPlus1 = Calendar.current.date(byAdding: .day, value: 1, to: lastWeek)!
         let lastWeekPlus2 = Calendar.current.date(byAdding: .day, value: 2, to: lastWeek)!
         
-        wordPairs[0].metaData = MetaData(metaId: "1010", pairId: wordPairs[0].pairId, dateCreated: lastWeek, dateUpdated: today, incorrectCount: 10, totalTime: 10, timedViewCount: 10)
+        metaDataList.append(MetaData(metaId: "1010", pairId: wordPairs[0].pairId, dateCreated: lastWeek, dateUpdated: today, incorrectCount: 10, totalTime: 10, timedViewCount: 10))
         
-        wordPairs[1].metaData = MetaData(metaId: "1011", pairId: wordPairs[1].pairId, dateCreated: lastWeekPlus2, dateUpdated: yesterday, incorrectCount: 0, totalTime: 100, timedViewCount: 11)
+        metaDataList.append(MetaData(metaId: "1011", pairId: wordPairs[1].pairId, dateCreated: lastWeekPlus2, dateUpdated: yesterday, incorrectCount: 0, totalTime: 100, timedViewCount: 11))
         
-        wordPairs[2].metaData = MetaData(metaId: "1012", pairId: wordPairs[2].pairId, dateCreated: lastWeekPlus1, dateUpdated: nil, incorrectCount: 5, totalTime: 50, timedViewCount: 9)
+        metaDataList.append(MetaData(metaId: "1012", pairId: wordPairs[2].pairId, dateCreated: lastWeekPlus1, dateUpdated: nil, incorrectCount: 5, totalTime: 50, timedViewCount: 9))
         
         
         wpAss.append(TagAssociation(associationId: "10", wordPairId: wordPairs[0].pairId, tagId: tags[0].tagId))
@@ -730,7 +733,7 @@ extension DataStoreTests{
         wpAss.append(TagAssociation(associationId: "12", wordPairId: wordPairs[1].pairId, tagId: tags[0].tagId))
         
         
-        sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: [])
+        sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
     }
     
     func mockDataTwo_SomeNilMeta(){
@@ -749,12 +752,9 @@ extension DataStoreTests{
         let lastWeek = Calendar.current.date(byAdding: .day, value: -7, to: today)!
         let lastWeekPlus1 = Calendar.current.date(byAdding: .day, value: 1, to: lastWeek)!
         
-        wordPairs[0].metaData = MetaData(metaId: "1010", pairId: wordPairs[0].pairId, dateCreated: lastWeek, dateUpdated: today, incorrectCount: 10, totalTime: 10, timedViewCount: 10)
+        metaDataList.append(MetaData(metaId: "1010", pairId: wordPairs[0].pairId, dateCreated: lastWeek, dateUpdated: today, incorrectCount: 10, totalTime: 10, timedViewCount: 10))
         
-        wordPairs[1].metaData = MetaData(metaId: "1011", pairId: wordPairs[1].pairId, dateCreated: lastWeekPlus1, dateUpdated: yesterday, incorrectCount: 0, totalTime: 100, timedViewCount: 11)
-        
-        wordPairs[2].metaData = nil
-        
+        metaDataList.append(MetaData(metaId: "1011", pairId: wordPairs[1].pairId, dateCreated: lastWeekPlus1, dateUpdated: yesterday, incorrectCount: 0, totalTime: 100, timedViewCount: 11))
         
         wpAss.append(TagAssociation(associationId: "10", wordPairId: wordPairs[0].pairId, tagId: tags[0].tagId))
         
@@ -765,7 +765,7 @@ extension DataStoreTests{
         wpAss.append(TagAssociation(associationId: "13", wordPairId: wordPairs[2].pairId, tagId: tags[1].tagId))
         
         
-        sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: [])
+        sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
     }
     
     

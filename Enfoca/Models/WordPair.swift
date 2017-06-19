@@ -33,7 +33,6 @@ class WordPair : Hashable {
     private(set) var gender: Gender
     private(set) var example: String?
     private(set) var tags : [Tag] = []
-    var metaData : MetaData?
     
     init (pairId: String, word: String, definition: String, dateCreated: Date = Date(), gender: Gender = .notset, tags : [Tag] = [], example: String? = nil) {
         self.pairId = pairId

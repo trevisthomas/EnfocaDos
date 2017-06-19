@@ -176,18 +176,20 @@ class MockWebService : WebService {
     
     
     var metaId = 0
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
         metaId += 1
+        
+//        fatalError()
         
         invokeLater {
             var oldTimedViewCount = 0
             var oldIncorrectCount = 0
             var oldCreateDate = Date()
-            if let oldMeta = forWordPair.metaData {
-                oldTimedViewCount = oldMeta.timedViewCount
-                oldIncorrectCount = oldMeta.incorrectCount
-                oldCreateDate = oldMeta.dateCreated
-            }
+//            if let oldMeta = forWordPair.metaData {
+//                oldTimedViewCount = oldMeta.timedViewCount
+//                oldIncorrectCount = oldMeta.incorrectCount
+//                oldCreateDate = oldMeta.dateCreated
+//            }
             
             if !correct {
                 oldIncorrectCount += 1
@@ -196,12 +198,13 @@ class MockWebService : WebService {
             
             let meta = MetaData(metaId: "meta\(self.metaId)", pairId: forWordPair.pairId, dateCreated: oldCreateDate, dateUpdated: Date(), incorrectCount: oldIncorrectCount, totalTime: -1, timedViewCount: oldTimedViewCount)
             
-            forWordPair.metaData = meta
-            
-            callback(forWordPair, nil)
+            callback(meta, nil)
         }
     }
     
+    func fetchMetaData(forWordPair: WordPair, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
+        fatalError()
+    }
 }
 
 //class MockApplicationDefaults : ApplicationDefaults {

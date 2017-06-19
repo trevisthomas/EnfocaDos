@@ -369,36 +369,34 @@ class QuizOptionsViewModelTests: XCTestCase {
         XCTAssertFalse(sut.isRetrySuggested())
     }
     
-    func testQuizOptions_ShouldCalculatePerfectScore() {
-        let tag = setupTags()
-        
-        getAppDelegate().applicationDefaults.numberOfIncorrectAnswersTillReview = 2
-        
-        sut = QuizOptionsViewModel(tag: tag, delegate: delegate)
-        sut.cardSide = .term
-        sut.startQuiz {
-            //Should NOT be async in mock service!
-        }
-        
-        sut.correct()
-        sut.correct()
-        sut.correct()
-        sut.correct()
-        XCTAssertTrue(sut.isFinished())
-        XCTAssertFalse(sut.isRetrySuggested())
-        
-        delay(delayInSeconds: 1) { 
-            for wp in self.sut.originalWords {
-                XCTAssertEqual(wp.metaData?.incorrectCount, 0)
-                XCTAssertEqual(wp.metaData?.timedViewCount, 1)
-            }
-            
-            XCTAssertEqual(self.sut.originalWords, self.mockService.wordPairs)
-            XCTAssertEqual(self.sut.getScore(), "100%")
-        }
-        
-        
-    }
+//    func testQuizOptions_ShouldCalculatePerfectScore() {
+//        let tag = setupTags()
+//        
+//        getAppDelegate().applicationDefaults.numberOfIncorrectAnswersTillReview = 2
+//        
+//        sut = QuizOptionsViewModel(tag: tag, delegate: delegate)
+//        sut.cardSide = .term
+//        sut.startQuiz {
+//            //Should NOT be async in mock service!
+//        }
+//        
+//        sut.correct()
+//        sut.correct()
+//        sut.correct()
+//        sut.correct()
+//        XCTAssertTrue(sut.isFinished())
+//        XCTAssertFalse(sut.isRetrySuggested())
+//        
+//        delay(delayInSeconds: 1) { 
+//            for wp in self.sut.originalWords {
+//                XCTAssertEqual(wp.metaData?.incorrectCount, 0)
+//                XCTAssertEqual(wp.metaData?.timedViewCount, 1)
+//            }
+//            
+//            XCTAssertEqual(self.sut.originalWords, self.mockService.wordPairs)
+//            XCTAssertEqual(self.sut.getScore(), "100%")
+//        }
+//    }
     
     func testQuizOptions_ShouldCalculateFiftyPercentScore() {
         let tag = setupTags()

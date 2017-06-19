@@ -12,6 +12,7 @@ import CloudKit
 
 class LocalCloudKitWebService : WebService {
     
+    
     private(set) var enfocaId : NSNumber!
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
@@ -299,12 +300,13 @@ class LocalCloudKitWebService : WebService {
         callback(wordPairs, nil)
     }
     
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(WordPair?, EnfocaError?)->()) {
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(MetaData?, EnfocaError?)->()) {
         
         showNetworkActivityIndicator = true
         
+        let metaData = dataStore.getMetaData(forWordPair: forWordPair)
         
-        if let currentMetaData = forWordPair.metaData {
+        if let currentMetaData = metaData {
             //Update
             self.dataStore.updateScore(metaData: currentMetaData, correct: correct)
             
@@ -312,11 +314,9 @@ class LocalCloudKitWebService : WebService {
                 self.showNetworkActivityIndicator = false
                 
                 if let error = error { callback(nil, error) }
-                guard let _ = metaData else { fatalError() }
-                callback(forWordPair, nil)
+                guard let metaData = metaData else { fatalError() }
+                callback(metaData, nil)
             }
-
-            
         } else {
             //Create
             let newMetaData = MetaData(metaId: "notset", pairId: forWordPair.pairId, dateCreated: Date(), dateUpdated: Date(), incorrectCount: 0, totalTime: 0, timedViewCount: 0)
@@ -328,12 +328,23 @@ class LocalCloudKitWebService : WebService {
                 if let error = error { callback(nil, error) }
                 guard let metaData = metaData else { fatalError() }
                 
-                forWordPair.metaData = metaData
+//                forWordPair.metaData = metaData
                 self.dataStore.add(metaData: metaData)
-                callback(forWordPair, nil)
+                callback(metaData, nil)
             })
         }
         
     }
+    
+    func fetchMetaData(forWordPair wordPair: WordPair, callback: @escaping(MetaData?, EnfocaError?)->()) {
+        guard let meta = dataStore.getMetaData(forWordPair: wordPair) else {
+            //This isn't really an error. Not all words have meta.
+            callback(nil, "Meta Data not found for word pair \(wordPair.pairId)")
+            return
+        }
+        callback(meta, nil)
+    }
+    
+    
     
 }

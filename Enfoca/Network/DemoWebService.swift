@@ -16,7 +16,7 @@ class DemoWebService : WebService {
         fatalError()
     }
     
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
         fatalError()
     }
 
@@ -180,4 +180,9 @@ class DemoWebService : WebService {
     func deleteWordPair(wordPair: WordPair, callback: @escaping(WordPair?, EnfocaError?)->()) {}
     
     func deleteTag(tag: Tag, callback: @escaping(Tag?, EnfocaError?)->()){}
+    
+    func fetchMetaData(forWordPair: WordPair, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
+        fatalError()
+    }
+
 }

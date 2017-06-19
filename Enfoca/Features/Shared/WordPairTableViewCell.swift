@@ -47,8 +47,13 @@ extension WordPairTableViewCell {
         
         self.tagsTextLabel.text = wordPair.tags.tagsToText()
         
-        self.scoreTextLabel.text = wordPair.metaData?.scoreAsString
-        
+        //I'm not thrilled about this, but i wanted to reduce issues by not saving the meta in two places.
+        self.scoreTextLabel.text = nil
+        getAppDelegate().webService.fetchMetaData(forWordPair: wordPair) { (metaData: MetaData?, error) in
+            if let meta = metaData {
+                self.scoreTextLabel.text = meta.scoreAsString
+            }
+        }
     }
     
     func initialize(create: String, order: WordPairOrder) {

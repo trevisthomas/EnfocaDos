@@ -41,5 +41,7 @@ protocol WebService {
      */
     func fetchQuiz(forTag: Tag?, cardOrder: CardOrder, wordCount: Int, callback: @escaping([WordPair]?, EnfocaError?)->())
     
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(WordPair?, EnfocaError?)->())
+    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(MetaData?, EnfocaError?)->())
+    
+    func fetchMetaData(forWordPair: WordPair, callback: @escaping(MetaData?, EnfocaError?)->())
 }

@@ -75,10 +75,12 @@ class MetaData : Hashable {
     }
 
     func correct(){
+        dateUpdated = Date()
         timedViewCount += 1
     }
     
     func incorrect(){
+        dateUpdated = Date()
         timedViewCount += 1
         incorrectCount += 1
     }

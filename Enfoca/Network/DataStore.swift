@@ -71,7 +71,7 @@ class DataStore {
             var dict = acc
             dict[meta.pairId] = meta
             
-            wordPairDictionary[meta.pairId]?.metaData = meta
+//            wordPairDictionary[meta.pairId]?.metaData = meta
             
             return dict
         })
@@ -380,24 +380,24 @@ class DataStore {
         switch (cardOrder) {
         case .easiest:
             sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
-                guard let m1 = wp1.metaData else {
+                guard let m1 = self.getMetaData(forWordPair: wp1) else {
                     return false //If the meta is null then i cant be easy
                 }
-                guard let m2 = wp2.metaData else {
+                guard let m2 = self.getMetaData(forWordPair: wp2) else {
                     return true
                 }
                 return m1.score > m2.score
             }
         case .hardest:
             sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
-                return wp1.metaData?.score ?? 0 < wp2.metaData?.score ?? 0
+                return self.getMetaData(forWordPair: wp1)?.score ?? 0 < self.getMetaData(forWordPair:wp2)?.score ?? 0
             }
         case .latestAdded:
             sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
-                guard let m1 = wp1.metaData else {
+                guard let m1 = self.getMetaData(forWordPair:wp1) else {
                     return true //If the meta is null, then i must be newer?
                 }
-                guard let m2 = wp2.metaData else {
+                guard let m2 = self.getMetaData(forWordPair:wp2) else {
                     return false
                 }
                 return m1.dateCreated > m2.dateCreated
@@ -407,11 +407,11 @@ class DataStore {
                 
                 //Either the oldest updated date, or null, meaning never
                 
-                guard let dateUpdated = wp1.metaData?.dateUpdated
+                guard let dateUpdated = self.getMetaData(forWordPair:wp1)?.dateUpdated
                     else {
                     return true //If the date is null, then i must have never been studied?
                 }
-                guard let dateUpdated2 = wp2.metaData?.dateUpdated else {
+                guard let dateUpdated2 = self.getMetaData(forWordPair:wp2)?.dateUpdated else {
                     return false
                 }
                 
@@ -419,20 +419,20 @@ class DataStore {
             }
         case .leastStudied:
             sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
-                guard let m1 = wp1.metaData else {
+                guard let m1 = self.getMetaData(forWordPair:wp1) else {
                     return true //If my meta is null, then i have never been studied
                 }
-                guard let m2 = wp2.metaData else {
+                guard let m2 = self.getMetaData(forWordPair:wp2) else {
                     return false
                 }
                 return m1.timedViewCount < m2.timedViewCount
             }
         case .slowest:
             sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
-                guard let m1 = wp1.metaData else {
+                guard let m1 = self.getMetaData(forWordPair:wp1) else {
                     return true //If my meta is null, then i have never been studied
                 }
-                guard let m2 = wp2.metaData else {
+                guard let m2 = self.getMetaData(forWordPair:wp2) else {
                     return false
                 }
                 return m1.averageTime < m2.averageTime
@@ -462,13 +462,17 @@ class DataStore {
     
     func add(metaData: MetaData) {
         metaDataDictionary[metaData.pairId] = metaData
-        wordPairDictionary[metaData.pairId]!.metaData = metaData
+//        wordPairDictionary[metaData.pairId]!.metaData = metaData
     }
     
     func allTags() -> [Tag]{
         return tagDictionary.values.sorted(by: { (t1: Tag, t2: Tag) -> Bool in
             t1.name.lowercased() < t2.name.lowercased()
         })
+    }
+    
+    func getMetaData(forWordPair wordPair: WordPair) -> MetaData? {
+        return metaDataDictionary[wordPair.pairId]
     }
     
     public func initialize (json: String) {

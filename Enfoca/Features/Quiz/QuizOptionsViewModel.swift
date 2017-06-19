@@ -138,11 +138,11 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     
     private func scoreCurrentWord(isCorrect: Bool) {
         let localWp = quizWords[currentWordPairIndex]
-        services.updateScore(forWordPair: localWp, correct: isCorrect, callback: { (wp: WordPair?, error: EnfocaError?) in
+        services.updateScore(forWordPair: localWp, correct: isCorrect, callback: { (wp: MetaData?, error: EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Network error", message: error)
             }
-            localWp.metaData = wp?.metaData
+//            localWp.metaData = wp?.metaData
         })
     }
     
