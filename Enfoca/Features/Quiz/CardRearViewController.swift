@@ -49,19 +49,19 @@ class CardRearViewController: UIViewController, HomeFromQuizAnimatorTarget {
     }
     
     private func decideWhichSegueToPerform() -> String{
-        if sharedViewModel.isTimeForMatchingRound() {
-            return "MatchingRoundSeque"
+
+        if sharedViewModel.isFinished() {
+            if sharedViewModel.isRetrySuggested() {
+                return "QuizResultsSegue"
+            } else {
+                return "QuizPerfectScoreResultsSegue"
+            }
         } else {
-            if sharedViewModel.isFinished() {
-                if sharedViewModel.isRetrySuggested() {
-                    return "QuizResultsSegue"
-                } else {
-                    return "QuizPerfectScoreResultsSegue"
-                }
+            if sharedViewModel.isTimeForMatchingRound() {
+                return "MatchingRoundSeque"
             } else {
                 return "CardFrontWithNewWordSegue"
             }
-            
         }
     }
     
