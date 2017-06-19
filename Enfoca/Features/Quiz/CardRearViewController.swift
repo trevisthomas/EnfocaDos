@@ -9,12 +9,13 @@
 import UIKit
 
 
-class CardRearViewController: UIViewController {
+class CardRearViewController: UIViewController, HomeFromQuizAnimatorTarget {
 
     @IBOutlet weak var definitionLabel: UILabel!
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var bodyView: UIView!
+    @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
     
     private var sharedViewModel: QuizViewModel!
     
@@ -28,7 +29,7 @@ class CardRearViewController: UIViewController {
     }
     
     @IBAction func abortButtonAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "QuizResultsSegue", sender: self)
+        performSegue(withIdentifier: "HomeSegue", sender: self)
     }
 
     @IBAction func tappedAction(_ sender: UITapGestureRecognizer) {
@@ -71,7 +72,21 @@ class CardRearViewController: UIViewController {
             to.initialize(viewModel: sharedViewModel)
         } else if let to = segue.destination as? QuizResultsViewController {
             to.initialize(sharedViewModel: sharedViewModel)
+        } else if let to = segue.destination as? HomeViewController {
+            to.transitioningDelegate = self
         }
+    }
+}
+
+extension CardRearViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let _ = presented as? HomeViewController, let _ = source as? CardRearViewController {
+            return HomeFromQuizResultAnimator()
+        }
+        
+        return nil
+        
     }
 }
 

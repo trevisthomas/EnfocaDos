@@ -522,11 +522,13 @@
                     <connections>
                         <outlet property="bodyView" destination="WaG-kp-efN" id="Rnc-5k-3hK"/>
                         <outlet property="definitionLabel" destination="41O-AB-x6M" id="02G-jg-wy6"/>
+                        <outlet property="headerHightConstrant" destination="yH8-yE-nIm" id="ZBR-tJ-4yt"/>
                         <outlet property="headerView" destination="f5y-Mu-LBE" id="6d6-Y2-oT3"/>
                         <segue destination="imM-i9-s0b" kind="show" identifier="QuizPerfectScoreResultsSegue" id="wkj-nQ-MFe"/>
                         <segue destination="Dm1-0E-fXf" kind="show" identifier="MatchingRoundSeque" id="7OF-2a-AVh"/>
                         <segue destination="qW3-WU-nJg" kind="show" identifier="CardFrontWithNewWordSegue" id="Exz-4G-xCA"/>
                         <segue destination="L7x-Wc-mcK" kind="show" identifier="QuizResultsSegue" id="f6d-Db-4cY"/>
+                        <segue destination="6QF-1r-2F4" kind="show" identifier="HomeSegue" id="Qlk-Ng-Knz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lr-11-Wh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -788,11 +790,11 @@
                 <viewControllerPlaceholder storyboardName="Home" id="6QF-1r-2F4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vlp-lF-D0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4179" y="-502"/>
+            <point key="canvasLocation" x="4315" y="-1701"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FaX-4e-20q"/>
-        <segue reference="Ixi-5y-OaF"/>
+        <segue reference="Exz-4G-xCA"/>
+        <segue reference="Qlk-Ng-Knz"/>
     </inferredMetricsTieBreakers>
 </document>
