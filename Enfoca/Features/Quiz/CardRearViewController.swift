@@ -17,6 +17,8 @@ class CardRearViewController: UIViewController, HomeFromQuizAnimatorTarget {
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
     
+    @IBOutlet weak var abortButton: UIButton!
+    
     private var sharedViewModel: QuizViewModel!
     
     override func viewDidLoad() {
@@ -69,6 +71,7 @@ class CardRearViewController: UIViewController, HomeFromQuizAnimatorTarget {
         if let to = segue.destination as? MatchingRoundViewController {
             to.initialize(sharedViewModel: sharedViewModel)
         } else if let to = segue.destination as? CardFrontViewController {
+            to.transitioningDelegate = self
             to.initialize(viewModel: sharedViewModel)
         } else if let to = segue.destination as? QuizResultsViewController {
             to.initialize(sharedViewModel: sharedViewModel)
@@ -85,16 +88,26 @@ extension CardRearViewController: UIViewControllerTransitioningDelegate {
             return HomeFromQuizResultAnimator()
         }
         
+        if let _ = presented as? CardFrontViewController, let _ = source as? CardRearViewController {
+            return ChangeCardAnimator()
+        }
+        
         return nil
         
     }
 }
 
-extension CardRearViewController: QuizCardAnimatorTarget {
-    func getBodyView() -> UIView {
-        return bodyView
-    }
+extension CardRearViewController: ChangeCardAnimatorTarget, QuizCardAnimatorTarget {
     func getView() -> UIView {
         return view
     }
+    
+    func getCardView() -> UIView {
+        return bodyView
+    }
+    
+    func rightNavButton() -> UIView? {
+        return abortButton
+    }
+    
 }

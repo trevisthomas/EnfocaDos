@@ -324,7 +324,7 @@ class LocalCloudKitWebService : WebService {
             dataStore.updateScore(metaData: newMetaData, correct: correct)
             
             Perform.createMetaData(metaDataSource: newMetaData, enfocaId: enfocaId, db: privateDb, callback: { (metaData: MetaData?, error: String?) in
-                
+                self.showNetworkActivityIndicator = false
                 if let error = error { callback(nil, error) }
                 guard let metaData = metaData else { fatalError() }
                 

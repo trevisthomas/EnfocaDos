@@ -67,7 +67,8 @@ class LocalApplicationDefaults : ApplicationDefaults {
         
         
         //In case of a dirty shut down, i dont want the old data lying around
-        defaults.removeObject(forKey: dataStoreKey)
+        //This doesnt work when you kill the app on a real device.
+//        defaults.removeObject(forKey: dataStoreKey)
 
         
         //Load other default settings

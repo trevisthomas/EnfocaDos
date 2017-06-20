@@ -9,8 +9,9 @@
 import UIKit
 
 protocol QuizCardAnimatorTarget {
-    func getBodyView() -> UIView
+    func getCardView() -> UIView
     func getView() -> UIView
+    func rightNavButton() -> UIView?
 }
 
 class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
@@ -52,27 +53,54 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         containerView.addSubview(fromViewController.getView())
         
+        
+        if !counterClockwise {
+            
+            if let navButton = fromViewController.rightNavButton() {
+                CustomAnimations.animateExpandAndPullOut(target: navButton, delay: 0, duration: duration * 0.35, callback: {
+                    
+                    //Cant reset yet
+                })
+            }
+        }
+        
+        
+        
         CATransaction.begin()
         CATransaction.setCompletionBlock({
                 containerView.addSubview(toViewController.getView())
             
-                CustomAnimations.animateEndFlip(target: toViewController.getBodyView(), duration: self.duration * 0.5, counterClockwise: counterClockwise, callback: {
+                if counterClockwise {
+                    if let navButton = toViewController.rightNavButton() {
+                        CustomAnimations.animatePopIn(target: navButton, delay: 0.0, duration: self.duration * 0.35, callback: {
+                            //Cant reset yet
+                        })
+                    }
+                }
+            
+                CustomAnimations.animateEndFlip(target: toViewController.getCardView(), duration: self.duration * 0.5, counterClockwise: counterClockwise, callback: {
                     
-                    fromViewController.getBodyView().layer.transform = CATransform3DIdentity
-                    fromViewController.getBodyView().layer.removeAllAnimations()
+                    fromViewController.getCardView().layer.transform = CATransform3DIdentity
+                    fromViewController.getCardView().layer.removeAllAnimations()
                     
+                    if let navButton = toViewController.rightNavButton() {
+                        navButton.alpha = 1.0
+                    }
+                    if let navButton = fromViewController.rightNavButton() {
+                        navButton.alpha = 1.0
+                    }
                     self.storedContext.completeTransition(true)
                 })
             })
         
-        var fromRotateTransform = CATransform3DRotate(fromViewController.getBodyView().layer.transform, 0.0 * .pi, 0.0, 1.0, 0.0)
+        var fromRotateTransform = CATransform3DRotate(fromViewController.getCardView().layer.transform, 0.0 * .pi, 0.0, 1.0, 0.0)
         
         //Awesome!
         //https://stackoverflow.com/questions/347721/how-do-i-apply-a-perspective-transform-to-a-uiview
         fromRotateTransform.m34 = 1.0 / -1500;
         
         
-        fromViewController.getBodyView().layer.transform = fromRotateTransform
+        fromViewController.getCardView().layer.transform = fromRotateTransform
         
         
         let fromRotateAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
@@ -91,11 +119,11 @@ class QuizCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         fromRotateAnimation.duration =  duration * 0.5
         
-        fromViewController.getBodyView().layer.add(fromRotateAnimation, forKey: nil)
+        fromViewController.getCardView().layer.add(fromRotateAnimation, forKey: nil)
         
         
         let scaleAnimation = CustomAnimations.createScaleAnimation(duration: duration * 0.4)
-        fromViewController.getBodyView().layer.add(scaleAnimation, forKey: nil)
+        fromViewController.getCardView().layer.add(scaleAnimation, forKey: nil)
         
         CATransaction.commit()
     

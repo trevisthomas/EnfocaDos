@@ -369,6 +369,8 @@
 		0FE0159A1EF5C9C100780184 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015981EF5C9C100780184 /* Double+.swift */; };
 		0FE0159C1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0159B1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift */; };
 		0FE0159D1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0159B1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift */; };
+		0FE0159F1EF8594800780184 /* ChangeCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */; };
+		0FE015A01EF8594800780184 /* ChangeCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -551,6 +553,7 @@
 		0FE015921EF5976200780184 /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 		0FE015981EF5C9C100780184 /* Double+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		0FE0159B1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizPerfectScoreViewController.swift; path = Quiz/QuizPerfectScoreViewController.swift; sourceTree = "<group>"; };
+		0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeCardAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1048,6 +1051,7 @@
 				0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */,
 				0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */,
 				0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */,
+				0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -1419,6 +1423,7 @@
 				0F911E471EE75D4600F21855 /* CloudAuthOperation.swift in Sources */,
 				0F911E481EE75D4600F21855 /* ErrorDelegate.swift in Sources */,
 				0F911E491EE75D4600F21855 /* LoadingViewController.swift in Sources */,
+				0FE015A01EF8594800780184 /* ChangeCardAnimator.swift in Sources */,
 				0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */,
 				0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */,
 				0F911E4C1EE75D4600F21855 /* MetaData.swift in Sources */,
@@ -1562,6 +1567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE0159F1EF8594800780184 /* ChangeCardAnimator.swift in Sources */,
 				0F911F2C1EE8573500F21855 /* UITextField+.swift in Sources */,
 				0FA4A4F01EC8E94700F31F9A /* DataStore.swift in Sources */,
 				0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */,

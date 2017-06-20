@@ -58,15 +58,19 @@ class CardFrontViewController: UIViewController {
     }
 }
 
-extension CardFrontViewController: QuizCardAnimatorTarget {
-    func getBodyView() -> UIView {
-        return bodyView
-    }
+extension CardFrontViewController: ChangeCardAnimatorTarget, QuizCardAnimatorTarget {
     func getView() -> UIView {
         return view
     }
+    
+    func getCardView() -> UIView {
+        return bodyView
+    }
+    
+    func rightNavButton() -> UIView? {
+        return nil
+    }
 }
-
 
 //For animated transitions
 extension CardFrontViewController: UIViewControllerTransitioningDelegate {

@@ -330,10 +330,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5B7-De-YVm">
-                                <rect key="frame" x="0.0" y="100" width="414" height="636"/>
+                                <rect key="frame" x="8" y="100" width="398" height="628"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv9-Vm-6wE" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
-                                        <rect key="frame" x="126" y="491" width="163" height="64"/>
+                                        <rect key="frame" x="118" y="483" width="163" height="64"/>
                                         <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="nHu-O8-59q"/>
@@ -349,13 +349,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First, but what if there is a lot more text here than you'd figure" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fcQ-zW-8J7">
-                                        <rect key="frame" x="28" y="109" width="358" height="126"/>
+                                        <rect key="frame" x="28" y="109" width="342" height="168"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB1-qP-yvu">
-                                        <rect key="frame" x="359" y="20" width="27" height="28"/>
+                                        <rect key="frame" x="343" y="20" width="27" height="28"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -372,6 +372,11 @@
                                     <constraint firstItem="fcQ-zW-8J7" firstAttribute="top" secondItem="5B7-De-YVm" secondAttribute="top" constant="109" id="uac-53-sGm"/>
                                     <constraint firstAttribute="leadingMargin" secondItem="fcQ-zW-8J7" secondAttribute="leading" constant="-20" id="uo7-b2-icM"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="6ks-ef-IfN" appends="YES" id="BTy-cG-uhj"/>
                                 </connections>
@@ -381,11 +386,11 @@
                         <constraints>
                             <constraint firstItem="iF2-oU-7CL" firstAttribute="leading" secondItem="4Dp-Pj-bET" secondAttribute="leading" id="6Pb-bn-we8"/>
                             <constraint firstItem="5B7-De-YVm" firstAttribute="top" secondItem="iF2-oU-7CL" secondAttribute="bottom" id="6hN-ld-g6C"/>
-                            <constraint firstItem="xOP-a3-li6" firstAttribute="top" secondItem="5B7-De-YVm" secondAttribute="bottom" id="BVe-8X-mz7"/>
+                            <constraint firstItem="xOP-a3-li6" firstAttribute="top" secondItem="5B7-De-YVm" secondAttribute="bottom" constant="8" id="BVe-8X-mz7"/>
                             <constraint firstAttribute="trailing" secondItem="iF2-oU-7CL" secondAttribute="trailing" id="LuP-0h-jVm"/>
                             <constraint firstItem="iF2-oU-7CL" firstAttribute="top" secondItem="4Dp-Pj-bET" secondAttribute="top" id="VxH-Zg-EHo"/>
-                            <constraint firstAttribute="trailing" secondItem="5B7-De-YVm" secondAttribute="trailing" id="XhX-1A-1Qu"/>
-                            <constraint firstItem="5B7-De-YVm" firstAttribute="leading" secondItem="4Dp-Pj-bET" secondAttribute="leading" id="ltk-BE-edw"/>
+                            <constraint firstAttribute="trailing" secondItem="5B7-De-YVm" secondAttribute="trailing" constant="8" id="XhX-1A-1Qu"/>
+                            <constraint firstItem="5B7-De-YVm" firstAttribute="leading" secondItem="4Dp-Pj-bET" secondAttribute="leading" constant="8" id="ltk-BE-edw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -448,10 +453,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WaG-kp-efN">
-                                <rect key="frame" x="0.0" y="100" width="414" height="636"/>
+                                <rect key="frame" x="8" y="100" width="398" height="628"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bWL-SL-xY6">
-                                        <rect key="frame" x="34" y="491" width="346" height="64"/>
+                                        <rect key="frame" x="26" y="483" width="346" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-2R-lnr" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="64"/>
@@ -488,7 +493,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second, but what if there is a lot more text here than you'd figure" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="41O-AB-x6M">
-                                        <rect key="frame" x="28" y="109" width="358" height="168"/>
+                                        <rect key="frame" x="28" y="109" width="342" height="168"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -503,16 +508,21 @@
                                     <constraint firstItem="41O-AB-x6M" firstAttribute="centerX" secondItem="WaG-kp-efN" secondAttribute="centerX" id="u2A-KU-dfY"/>
                                     <constraint firstAttribute="leadingMargin" secondItem="41O-AB-x6M" secondAttribute="leading" constant="-20" id="u4T-hG-lJ8"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="WaG-kp-efN" firstAttribute="top" secondItem="f5y-Mu-LBE" secondAttribute="bottom" id="2s0-LU-nx4"/>
-                            <constraint firstItem="WaG-kp-efN" firstAttribute="leading" secondItem="KMc-Zr-eUE" secondAttribute="leading" id="YFM-QA-JWw"/>
-                            <constraint firstItem="6NP-0i-yXs" firstAttribute="top" secondItem="WaG-kp-efN" secondAttribute="bottom" id="a95-jS-xz8"/>
+                            <constraint firstItem="WaG-kp-efN" firstAttribute="leading" secondItem="KMc-Zr-eUE" secondAttribute="leading" constant="8" id="YFM-QA-JWw"/>
+                            <constraint firstItem="6NP-0i-yXs" firstAttribute="top" secondItem="WaG-kp-efN" secondAttribute="bottom" constant="8" id="a95-jS-xz8"/>
                             <constraint firstItem="f5y-Mu-LBE" firstAttribute="top" secondItem="KMc-Zr-eUE" secondAttribute="top" id="gDa-PY-56W"/>
                             <constraint firstItem="f5y-Mu-LBE" firstAttribute="leading" secondItem="KMc-Zr-eUE" secondAttribute="leading" id="j9a-FC-fpR"/>
-                            <constraint firstAttribute="trailing" secondItem="WaG-kp-efN" secondAttribute="trailing" id="kUT-sF-56l"/>
+                            <constraint firstAttribute="trailing" secondItem="WaG-kp-efN" secondAttribute="trailing" constant="8" id="kUT-sF-56l"/>
                             <constraint firstAttribute="trailing" secondItem="f5y-Mu-LBE" secondAttribute="trailing" id="q6c-PZ-9ul"/>
                         </constraints>
                         <connections>
@@ -520,6 +530,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="abortButton" destination="btK-eC-8Ih" id="edU-by-Jci"/>
                         <outlet property="bodyView" destination="WaG-kp-efN" id="Rnc-5k-3hK"/>
                         <outlet property="definitionLabel" destination="41O-AB-x6M" id="02G-jg-wy6"/>
                         <outlet property="headerHightConstrant" destination="yH8-yE-nIm" id="ZBR-tJ-4yt"/>
@@ -794,7 +805,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Exz-4G-xCA"/>
+        <segue reference="oQB-FF-xDm"/>
         <segue reference="Qlk-Ng-Knz"/>
     </inferredMetricsTieBreakers>
 </document>
