@@ -15,7 +15,15 @@ class MatchingRoundViewController: UIViewController {
     fileprivate var viewModel: MatchingRoundViewModel!
     fileprivate var incorrectMatchingPair: MatchingPair?
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var mainTopViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    fileprivate var animateCollectionViewCellCreation: Bool = true
+    fileprivate let initialCellDelay = 0.1
+    fileprivate let randomOffset = 0.05
+    fileprivate var currentDelay = 0.15
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +39,31 @@ class MatchingRoundViewController: UIViewController {
     func initialize(sharedViewModel: QuizViewModel){
         self.sharedViewModel = sharedViewModel
     }
+    
+    func dismissCellsAnimated() {
+        for c in self.collectionView.visibleCells {
+            CustomAnimations.animateExpandAndPullOut(target: c, delay: 0.0, duration: 0.25)
+        }
+    }
+    
+    func animateCellsIntoView() {
+        animateCollectionViewCellCreation = false
+        let shuffled = self.collectionView.visibleCells.shuffled()
+        for c in shuffled {
+            c.isHidden = false
+            self.animateIn(cell: c)
+        }
+    }
+    
+    private func animateIn(cell: UIView) {
+        CustomAnimations.animatePopIn(target: cell, delay: currentDelay , duration: 0.25)
+        currentDelay += randomOffset
+    }
+    
+    private func randomDelay() -> Double {
+        return initialCellDelay + (drand48() * randomOffset)
+    }
+
 
     @IBAction func skipAction(_ sender: UIButton) {
         resumeQuiz()
@@ -44,7 +77,25 @@ class MatchingRoundViewController: UIViewController {
         
         guard let to = segue.destination as? CardFrontViewController else { fatalError() }
         
+        to.transitioningDelegate = self
+        
         to.initialize(viewModel: sharedViewModel)
+    }
+    
+}
+
+
+extension MatchingRoundViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let _ = presented as? CardFrontViewController, let _ = source as? MatchingRoundViewController {
+            let animator = MatchingRoundAnimator()
+            animator.presenting = false
+            return animator
+        }
+        
+        return nil
+        
     }
 }
 
@@ -100,6 +151,8 @@ extension MatchingRoundViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MatchingQuizTagCell.identifier, for: indexPath) as? MatchingQuizTagCell else { fatalError() }
         
+        
+        
         let cardSide = sectionToCardSide(section: indexPath.section)
         
         let matchingPair = viewModel.getPair(cardSide: cardSide, atRow: indexPath.row)
@@ -113,8 +166,15 @@ extension MatchingRoundViewController: UICollectionViewDataSource {
             cell.applyMatchingPair(matchingPair: matchingPair)
         }
         
+        if animateCollectionViewCellCreation {
+            cell.isHidden = true
+        }
+        
         return cell
     }
+    
+    
+    
 }
 
 extension MatchingRoundViewController: MatchingRoundViewModelDelegate {
@@ -122,7 +182,7 @@ extension MatchingRoundViewController: MatchingRoundViewModelDelegate {
     func reloadMatchingPairs() {
         collectionView.reloadData()
         collectionView.collectionViewLayout.invalidateLayout()
-        
+
         if viewModel.isDone() {
             self.resumeQuiz()
         }

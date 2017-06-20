@@ -292,12 +292,14 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Jdv-zM-Aqz" id="iU3-OH-ImT"/>
+                        <outlet property="mainTopViewConstraint" destination="v6D-uh-a1o" id="5or-eZ-D8H"/>
+                        <outlet property="titleLabel" destination="HaF-Sg-kko" id="Zpf-uW-V2J"/>
                         <segue destination="qW3-WU-nJg" kind="show" identifier="ResumeQuizSegue" id="AKo-2B-8On"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4m-wK-QWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1859" y="27"/>
+            <point key="canvasLocation" x="1688" y="41"/>
         </scene>
         <!--Card Front View Controller-->
         <scene sceneID="5hr-3h-k45">
@@ -535,6 +537,7 @@
                         <outlet property="definitionLabel" destination="41O-AB-x6M" id="02G-jg-wy6"/>
                         <outlet property="headerHightConstrant" destination="yH8-yE-nIm" id="ZBR-tJ-4yt"/>
                         <outlet property="headerView" destination="f5y-Mu-LBE" id="6d6-Y2-oT3"/>
+                        <outlet property="titleLabel" destination="zuU-Q7-a9i" id="LbM-0l-huC"/>
                         <segue destination="imM-i9-s0b" kind="show" identifier="QuizPerfectScoreResultsSegue" id="wkj-nQ-MFe"/>
                         <segue destination="Dm1-0E-fXf" kind="show" identifier="MatchingRoundSeque" id="7OF-2a-AVh"/>
                         <segue destination="qW3-WU-nJg" kind="show" identifier="CardFrontWithNewWordSegue" id="Exz-4G-xCA"/>
@@ -805,7 +808,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oQB-FF-xDm"/>
+        <segue reference="AKo-2B-8On"/>
         <segue reference="Qlk-Ng-Knz"/>
     </inferredMetricsTieBreakers>
 </document>

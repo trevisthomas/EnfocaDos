@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomAnimations {
-    class func animateExpandAndPullOut(target: UIView, delay: Double, duration: Double, callback: @escaping ()->()) {
+    class func animateExpandAndPullOut(target: UIView, delay: Double, duration: Double, callback: @escaping ()->() = {}) {
         UIView.animate(withDuration: duration * 0.25, delay: delay, options: [.curveEaseInOut], animations: {
             target.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }) { (_:Bool) in
@@ -23,7 +23,7 @@ class CustomAnimations {
         }
     }
     
-    class func animatePopIn(target: UIView, delay: Double, duration: Double, callback: @escaping ()->()) {
+    class func animatePopIn(target: UIView, delay: Double, duration: Double, callback: @escaping ()->() = {}) {
         
         target.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
         target.alpha = 0
@@ -106,4 +106,52 @@ class CustomAnimations {
         return ani
     }
 
+    
+    //Warning! This animation leaves things in a nasty state.  You MUST fix your layer's anchorPoint and position after it has executed or you're going to have problems.  I only expose that nastyness to the user because if you're using this animation as a part of a larger series, you may need control of when you reset things.
+    class func performSwitch(myDuration: Double, cardView: UIView, containerView: UIView, toTheLeft: Bool, forward: Bool, callback: @escaping ()->()) {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            callback()
+        })
+        
+        
+        let moveItAnimation = CABasicAnimation(keyPath: "transform")
+        
+        var transform = cardView.layer.transform
+        transform.m34 = 1.0 / -1500;
+        //        transform = CATransform3DScale(transform, 0.10, 0.10, 1.0)
+        if toTheLeft{
+            transform = CATransform3DRotate(transform, .pi * 0.5, 1.0, 1.0, 1.0)
+        } else {
+            //            transform = CATransform3DRotate(transform, -.pi * 0.5, 0.0, 1.0, 0.0)
+            //            transform = CATransform3DRotate(transform, .pi * 0.5, 1.0, 0.0, 0.0)
+            transform = CATransform3DRotate(transform, .pi * -0.5, 1.0, 1.0, 1.0)
+        }
+        
+        if toTheLeft{
+            cardView.layer.setRotationPoint(rotationPoint: CGPoint(x: -(containerView.frame.width * 4) , y: containerView.frame.height ))
+        } else {
+            cardView.layer.setRotationPoint(rotationPoint: CGPoint(x: containerView.frame.width * 4, y: containerView.frame.height ))
+        }
+        
+        if forward {
+            moveItAnimation.toValue = transform
+        } else {
+            cardView.layer.transform = transform
+            moveItAnimation.toValue = CATransform3DIdentity
+        }
+        
+        moveItAnimation.beginTime = CACurrentMediaTime()
+        moveItAnimation.fillMode = kCAFillModeForwards
+        moveItAnimation.isRemovedOnCompletion = false
+        moveItAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        
+        moveItAnimation.duration =  myDuration
+        
+        cardView.layer.add(moveItAnimation, forKey: nil)
+        
+        CATransaction.commit()
+        
+        
+    }
 }

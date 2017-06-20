@@ -18,14 +18,30 @@ class MatchingQuizTagCell: UICollectionViewCell {
     
     
     private var previousState: MatchingQuizState?
+    private var initialized: Bool = false
+    
+    private var matchingPair: MatchingPair!
+    private var incorrect: Bool = false
     
     private func applyColors(text: UIColor, background: UIColor) {
         self.backgroundColor = background
         self.titleLabel.textColor = text
     }
     
+//    func initialize(){
+//        initialized = true
+//        refresh()
+//    }
     
     func applyMatchingPair(matchingPair: MatchingPair, incorrect: Bool = false) {
+        self.matchingPair = matchingPair
+        self.incorrect = incorrect
+        
+        refresh()
+    }
+    
+    private func refresh() {
+//        guard initialized else { return }
         
         switch matchingPair.state {
         case .disabled:

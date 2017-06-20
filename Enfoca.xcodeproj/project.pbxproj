@@ -371,6 +371,10 @@
 		0FE0159D1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0159B1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift */; };
 		0FE0159F1EF8594800780184 /* ChangeCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */; };
 		0FE015A01EF8594800780184 /* ChangeCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */; };
+		0FE015A21EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */; };
+		0FE015A31EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */; };
+		0FE015A51EF9D46D00780184 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A41EF9D46D00780184 /* CALayer+.swift */; };
+		0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A41EF9D46D00780184 /* CALayer+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -554,6 +558,8 @@
 		0FE015981EF5C9C100780184 /* Double+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		0FE0159B1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizPerfectScoreViewController.swift; path = Quiz/QuizPerfectScoreViewController.swift; sourceTree = "<group>"; };
 		0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeCardAnimator.swift; sourceTree = "<group>"; };
+		0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingRoundAnimator.swift; sourceTree = "<group>"; };
+		0FE015A41EF9D46D00780184 /* CALayer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -926,6 +932,7 @@
 				0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */,
 				0F911F2B1EE8573500F21855 /* UITextField+.swift */,
 				0FE015981EF5C9C100780184 /* Double+.swift */,
+				0FE015A41EF9D46D00780184 /* CALayer+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1052,6 +1059,7 @@
 				0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */,
 				0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */,
 				0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */,
+				0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -1403,6 +1411,7 @@
 				0F911E381EE75D4600F21855 /* WordPairTableViewController.swift in Sources */,
 				0F911E391EE75D4600F21855 /* Tag.swift in Sources */,
 				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
+				0FE015A31EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */,
 				0FE015941EF5976200780184 /* Randomizer.swift in Sources */,
 				0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */,
 				0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
@@ -1442,6 +1451,7 @@
 				0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */,
 				0F911E591EE75D4600F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */,
+				0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */,
 				0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */,
 				0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */,
 				0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */,
@@ -1583,6 +1593,7 @@
 				0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */,
 				0FA4A5281EC8EC9000F31F9A /* InternalUser.swift in Sources */,
 				0FE015991EF5C9C100780184 /* Double+.swift in Sources */,
+				0FE015A21EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */,
 				0FA4A54D1EC8ECE200F31F9A /* OperationCreateWordPair.swift in Sources */,
 				0FA4A5191EC8EC6E00F31F9A /* Perform+WordPair.swift in Sources */,
 				0FA4A5471EC8ECD200F31F9A /* OperationUpdateWordPair.swift in Sources */,
@@ -1591,6 +1602,7 @@
 				0FA4A5061EC8EAF100F31F9A /* EnumCollection.swift in Sources */,
 				0FA4A58D1ECCD8C400F31F9A /* Controller.swift in Sources */,
 				0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */,
+				0FE015A51EF9D46D00780184 /* CALayer+.swift in Sources */,
 				0F011ECE1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */,
 				0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */,
 				0F911E0C1EE08E8300F21855 /* TagCell.swift in Sources */,

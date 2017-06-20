@@ -12,6 +12,7 @@ protocol ChangeCardAnimatorTarget {
     func getCardView() -> UIView
     func getView() -> UIView
     func rightNavButton() -> UIView?
+    func getTitleLabel() -> UIView?
 }
 
 class ChangeCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
@@ -37,7 +38,7 @@ class ChangeCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         if presenting {
 //            present(context: transitionContext, toTheLeft: true)
-            presentAlt(context: transitionContext)
+            present(context: transitionContext)
         } else {
             fatalError() //We're like a shark.
 //            dissmiss(context: transitionContext)
@@ -45,7 +46,7 @@ class ChangeCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
     }
     
-    private func presentAlt(context: UIViewControllerContextTransitioning) {
+    private func present(context: UIViewControllerContextTransitioning) {
         let containerView = context.containerView
         guard let toViewController = context.viewController(forKey: .to) as? ChangeCardAnimatorTarget else {
             fatalError()
@@ -66,8 +67,7 @@ class ChangeCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         //Backup and restore your anchor and position!
         let origFromAnchor = fromCard.layer.anchorPoint
         let origFromPosition = fromCard.layer.position
-        let origToAnchor = toViewController.getCardView().layer.anchorPoint
-        let origToPosition = toViewController.getCardView().layer.position
+        
         
         
         if let navButton = fromViewController.rightNavButton() {
@@ -77,7 +77,7 @@ class ChangeCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             })
         }
         
-        performSwitch2(myDuration: duration * 0.5, cardView: fromCard, containerView: containerView, toTheLeft: true, forward: true) {
+        CustomAnimations.performSwitch(myDuration: duration * 0.5, cardView: fromCard, containerView: containerView, toTheLeft: true, forward: true) {
             
             fromCard.layer.removeAllAnimations()
             
@@ -85,13 +85,17 @@ class ChangeCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             
             let toCard = toViewController.getCardView()
             
-            self.performSwitch2(myDuration: self.duration * 0.5, cardView: toCard, containerView: containerView, toTheLeft: false, forward: false, callback: {
+            let origToAnchor = toCard.layer.anchorPoint
+            let origToPosition = toCard.layer.position
+            
+            CustomAnimations.performSwitch(myDuration: self.duration * 0.5, cardView: toCard, containerView: containerView, toTheLeft: false, forward: false, callback: {
                 
                 toCard.layer.removeAllAnimations()
                 toCard.layer.transform = CATransform3DIdentity
 
                 toCard.layer.anchorPoint = origToAnchor
                 toCard.layer.position = origToPosition
+                
                 fromCard.layer.anchorPoint = origFromAnchor
                 fromCard.layer.position = origFromPosition
                 
@@ -104,76 +108,7 @@ class ChangeCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
     }
     
-    func performSwitch2(myDuration: Double, cardView: UIView, containerView: UIView, toTheLeft: Bool, forward: Bool, callback: @escaping ()->()) {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock({
-            callback()
-        })
-        
-        
-        let moveItAnimation = CABasicAnimation(keyPath: "transform")
-        
-        var transform = cardView.layer.transform
-        transform.m34 = 1.0 / -1500;
-//        transform = CATransform3DScale(transform, 0.10, 0.10, 1.0)
-        if toTheLeft{
-            transform = CATransform3DRotate(transform, .pi * 0.5, 1.0, 1.0, 1.0)
-        } else {
-//            transform = CATransform3DRotate(transform, -.pi * 0.5, 0.0, 1.0, 0.0)
-//            transform = CATransform3DRotate(transform, .pi * 0.5, 1.0, 0.0, 0.0)
-            transform = CATransform3DRotate(transform, .pi * -0.5, 1.0, 1.0, 1.0)
-        }
-        
-        if toTheLeft{
-            cardView.layer.setRotationPoint(rotationPoint: CGPoint(x: -(containerView.frame.width * 4) , y: containerView.frame.height ))
-        } else {
-            cardView.layer.setRotationPoint(rotationPoint: CGPoint(x: containerView.frame.width * 4, y: containerView.frame.height ))
-        }
-        
-        if forward {
-            moveItAnimation.toValue = transform
-        } else {
-            cardView.layer.transform = transform
-            moveItAnimation.toValue = CATransform3DIdentity
-        }
-        
-        moveItAnimation.beginTime = CACurrentMediaTime()
-        moveItAnimation.fillMode = kCAFillModeForwards
-        moveItAnimation.isRemovedOnCompletion = false
-        moveItAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        
-        moveItAnimation.duration =  myDuration
-        
-        cardView.layer.add(moveItAnimation, forKey: nil)
-        
-        CATransaction.commit()
-        
-        
-    }
+    
 
 }
 
-extension CALayer {
-    func setRotationPoint(rotationPoint: CGPoint) {
-        
-        let width = self.frame.width
-        let height = self.frame.height
-        let minX = self.frame.minX
-        let minY = self.frame.minY
-        
-        let anchorPoint = CGPoint(x: (rotationPoint.x-minX)/width,
-                                  y: (rotationPoint.y-minY)/height)
-        
-        self.anchorPoint = anchorPoint;
-        self.position = rotationPoint;
-        
-//        print("From frame: \(self.frame)")
-//        print("From anchorPoint: \(self.anchorPoint)")
-//        print("From position: \(self.position)")
-        
-        
-    }
-    
-    
-    
-}

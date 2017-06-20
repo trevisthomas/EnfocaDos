@@ -70,6 +70,10 @@ extension CardFrontViewController: ChangeCardAnimatorTarget, QuizCardAnimatorTar
     func rightNavButton() -> UIView? {
         return nil
     }
+    
+    func getTitleLabel() -> UIView? {
+        return titleLabel
+    }
 }
 
 //For animated transitions
