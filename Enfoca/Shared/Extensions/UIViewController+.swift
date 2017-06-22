@@ -92,6 +92,18 @@ extension UIViewController {
         return viewController
     }
     
+    func createEditorViewController(inContainerView: UIView) -> EditorViewController {
+        let storyboard = UIStoryboard(name: "Edit", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "EditorViewController") as! EditorViewController
+        
+        //Note, this add is a custom method
+        self.add(asChildViewController: viewController, toContainerView: inContainerView)
+        
+        return viewController
+    }
+    
 }
 
 extension UIViewController {

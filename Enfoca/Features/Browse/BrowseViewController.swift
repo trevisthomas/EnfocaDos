@@ -13,6 +13,7 @@ class BrowseViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var tableViewContainer: UIView!
+    @IBOutlet weak var underSidePlaceHolderForWordEditor: UIView!
     
     @IBOutlet weak var headerBackgroundView: UIView!
     
@@ -39,6 +40,8 @@ class BrowseViewController: UIViewController {
         wordPairTableViewController = createWordPairTableViewController(inContainerView: tableViewContainer)
         
         wordPairTableViewController.initialize(delegate: self, order: controller.wordOrder)
+        
+        let emptyEditorViewController = createEditorViewController(inContainerView: underSidePlaceHolderForWordEditor)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,6 +64,14 @@ class BrowseViewController: UIViewController {
             
         }
         
+    }
+    
+    func getVisibleCells() -> [UITableViewCell] {
+        return wordPairTableViewController.getVisibleCells()
+    }
+    
+    func getTableView() -> UIView {
+        return wordPairTableViewController.getTableView()
     }
 
 }

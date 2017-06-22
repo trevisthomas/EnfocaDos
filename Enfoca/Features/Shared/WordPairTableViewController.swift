@@ -28,6 +28,8 @@ class WordPairTableViewController: UITableViewController {
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 96 //Doesn't matter
+        
+        
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -76,6 +78,13 @@ class WordPairTableViewController: UITableViewController {
         
     }
     
+    func getVisibleCells() -> [UITableViewCell] {
+        return tableView.visibleCells
+    }
+    
+    func getTableView() -> UIView {
+        return tableView
+    }
 
     /*
     // Override to support conditional editing of the table view.

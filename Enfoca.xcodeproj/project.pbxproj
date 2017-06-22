@@ -375,6 +375,8 @@
 		0FE015A31EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */; };
 		0FE015A51EF9D46D00780184 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A41EF9D46D00780184 /* CALayer+.swift */; };
 		0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A41EF9D46D00780184 /* CALayer+.swift */; };
+		0FE015A81EFAF42100780184 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A71EFAF42100780184 /* EditorViewController.swift */; };
+		0FE015A91EFAF42100780184 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A71EFAF42100780184 /* EditorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -560,6 +562,7 @@
 		0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeCardAnimator.swift; sourceTree = "<group>"; };
 		0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingRoundAnimator.swift; sourceTree = "<group>"; };
 		0FE015A41EF9D46D00780184 /* CALayer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
+		0FE015A71EFAF42100780184 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -676,6 +679,7 @@
 			children = (
 				0F911E061EE08DBA00F21855 /* Tag */,
 				0F085B851EDC64DD00FC20A1 /* Edit.storyboard */,
+				0FE015A71EFAF42100780184 /* EditorViewController.swift */,
 				0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */,
 				0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */,
 			);
@@ -1436,6 +1440,7 @@
 				0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */,
 				0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */,
 				0F911E4C1EE75D4600F21855 /* MetaData.swift in Sources */,
+				0FE015A91EFAF42100780184 /* EditorViewController.swift in Sources */,
 				0F911E4D1EE75D4600F21855 /* CardOrder.swift in Sources */,
 				0F911E4E1EE75D4600F21855 /* User.swift in Sources */,
 				0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */,
@@ -1682,6 +1687,7 @@
 				0FA4A5411EC8ECD200F31F9A /* OperationCreateTag.swift in Sources */,
 				0FAD20CE1ECE65B3002EACDA /* TagSelectionViewController.swift in Sources */,
 				0FA4A5441EC8ECD200F31F9A /* OperationFetchTagAssociations.swift in Sources */,
+				0FE015A81EFAF42100780184 /* EditorViewController.swift in Sources */,
 				0F011EB11EEB2AAB00939B75 /* QuizOptionsViewController.swift in Sources */,
 				0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */,
 				0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */,
