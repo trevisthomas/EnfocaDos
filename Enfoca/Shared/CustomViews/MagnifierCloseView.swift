@@ -122,7 +122,7 @@ class MagnifierCloseView: UIView {
                 self.isSearchMode = true
                 self.setNeedsDisplay()
                 
-                self.bounceAnimation()
+                CustomAnimations.bounceAnimation(view: self)
             }
         })
         
@@ -290,7 +290,7 @@ class MagnifierCloseView: UIView {
             
             magnifierLayer.removeFromSuperlayer()
             
-            self.bounceAnimation()
+            CustomAnimations.bounceAnimation(view: self)
         })
         
         magnifierLayer.fillColor = UIColor.clear.cgColor
@@ -360,18 +360,6 @@ class MagnifierCloseView: UIView {
         }
         
         return path
-    }
-    
-    
-    // a function to add a bit of snap. Just a quick bounce of the entire view.
-    private func bounceAnimation() {
-        UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseIn], animations: {
-            self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        }, completion: { (_ :Bool) in
-            UIView.animate(withDuration: 0.33, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [.curveEaseOut], animations: {
-                self.transform = .identity
-            }, completion: { (_ :Bool) in })
-        })
     }
     
     private func springTwistAnimation(){

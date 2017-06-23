@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,36 +50,28 @@
                                     <constraint firstAttribute="trailing" secondItem="GML-ue-jy4" secondAttribute="trailing" constant="48" id="vXt-Ax-Tdm"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-dP-YQ4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.83951276539999997" green="0.66470515730000002" blue="0.47346735000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZ5-GF-viM">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Phh-dP-YQ4" firstAttribute="top" secondItem="0F6-9P-Mgk" secondAttribute="bottom" id="6Vd-EW-Wi7"/>
                             <constraint firstItem="0F6-9P-Mgk" firstAttribute="top" secondItem="drw-49-Ht7" secondAttribute="bottom" constant="-20" id="9Sf-Yd-IPa"/>
-                            <constraint firstItem="oZ5-GF-viM" firstAttribute="leading" secondItem="92Y-hE-SfQ" secondAttribute="leadingMargin" constant="-16" id="MaN-7M-eEJ"/>
+                            <constraint firstItem="oZ5-GF-viM" firstAttribute="leading" secondItem="92Y-hE-SfQ" secondAttribute="leading" id="MaN-7M-eEJ"/>
                             <constraint firstItem="0F6-9P-Mgk" firstAttribute="width" secondItem="92Y-hE-SfQ" secondAttribute="width" id="O0r-J2-5pH"/>
                             <constraint firstItem="nbh-2U-Ib9" firstAttribute="top" secondItem="oZ5-GF-viM" secondAttribute="bottom" id="Obf-mQ-Abn"/>
-                            <constraint firstItem="Phh-dP-YQ4" firstAttribute="leading" secondItem="92Y-hE-SfQ" secondAttribute="leading" id="aZG-Gf-eKa"/>
-                            <constraint firstItem="nbh-2U-Ib9" firstAttribute="top" secondItem="Phh-dP-YQ4" secondAttribute="bottom" id="he7-6r-D4L"/>
-                            <constraint firstAttribute="trailing" secondItem="Phh-dP-YQ4" secondAttribute="trailing" id="q5m-VQ-OyG"/>
                             <constraint firstItem="oZ5-GF-viM" firstAttribute="top" secondItem="0F6-9P-Mgk" secondAttribute="bottom" id="vZf-F7-fw4"/>
                             <constraint firstItem="0F6-9P-Mgk" firstAttribute="leading" secondItem="92Y-hE-SfQ" secondAttribute="leading" id="xZ1-9i-isq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oZ5-GF-viM" secondAttribute="trailing" constant="-16" id="xlO-Ad-QKx"/>
+                            <constraint firstAttribute="trailing" secondItem="oZ5-GF-viM" secondAttribute="trailing" id="xlO-Ad-QKx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="biK-m3-sRK" id="oqN-Uf-oBI"/>
                         <outlet property="headerBackgroundView" destination="0F6-9P-Mgk" id="aHA-Jq-1t9"/>
+                        <outlet property="headerHeightConstraint" destination="Om8-Yr-XT3" id="ID2-Wc-GrI"/>
                         <outlet property="tableViewContainer" destination="oZ5-GF-viM" id="Bey-nB-cRh"/>
                         <outlet property="titleLabel" destination="GML-ue-jy4" id="W6b-eJ-Glm"/>
-                        <outlet property="underSidePlaceHolderForWordEditor" destination="Phh-dP-YQ4" id="UaF-is-2iV"/>
                         <segue destination="rKs-2h-tjs" kind="show" identifier="WordPairEditorViewControllerSegue" id="BGl-Ja-d4P"/>
                     </connections>
                 </viewController>

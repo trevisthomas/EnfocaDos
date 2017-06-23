@@ -10,6 +10,7 @@ import UIKit
 
 class CustomAnimations {
     class func animateExpandAndPullOut(target: UIView, delay: Double, duration: Double, callback: @escaping ()->() = {}) {
+        let originalTransform = target.transform
         UIView.animate(withDuration: duration * 0.25, delay: delay, options: [.curveEaseInOut], animations: {
             target.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }) { (_:Bool) in
@@ -17,7 +18,7 @@ class CustomAnimations {
                 target.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
                 target.alpha = 0
             }, completion: { (_: Bool) in
-                
+                target.transform = originalTransform //Restoring the original transform, but it's invisible! User must restore alpha
                 callback()
             })
         }
@@ -154,4 +155,19 @@ class CustomAnimations {
         
         
     }
+    
+    // a function to add a bit of snap. Just a quick bounce of the entire view.
+    class func bounceAnimation(view: UIView, amount: CGFloat = 0.8, duration: Double = 0.43, callback: @escaping()->() = {}) {
+        UIView.animate(withDuration: duration * 0.25, delay: 0.0, options: [.curveEaseIn], animations: {
+            view.transform = CGAffineTransform(scaleX: amount, y: amount)
+        }, completion: { (_ :Bool) in
+            UIView.animate(withDuration: duration * 0.75, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [.curveEaseOut], animations: {
+                view.transform = .identity
+            }, completion: { (_ :Bool) in
+                callback()})
+        })
+    }
+    
+    
+
 }

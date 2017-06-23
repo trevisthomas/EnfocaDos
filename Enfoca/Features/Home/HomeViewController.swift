@@ -42,11 +42,14 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var magifierCloseView: MagnifierCloseView!
     
-    fileprivate var editWordPairFromCellAnimator = EditWordPairFromCellAnimator()
+    fileprivate var editWordPairAnimator = EnfocaDefaultAnimator()
     fileprivate var wordPairs : [WordPair] = []
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var headerBackgroundView: UIView!
     
     fileprivate let browseViewFromHomeAnimator = BrowseFromHomeAnimator()
     
+    @IBOutlet weak var searchUnderlineView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -231,7 +234,6 @@ class HomeViewController: UIViewController {
         }
 
     }
-    
 }
 
 //For animated transitions
@@ -245,8 +247,8 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
         }
         
         if let _ = presented as? EditWordPairViewController, let _ = source as? HomeViewController {
-            editWordPairFromCellAnimator.presenting = true
-            return editWordPairFromCellAnimator
+            editWordPairAnimator.presenting = true
+            return editWordPairAnimator
         }
         
         if let _ = presented as? QuizOptionsViewController, let _ = source as? HomeViewController {
@@ -267,8 +269,8 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
         }
         
         if let _ = dismissed as? EditWordPairViewController {
-            editWordPairFromCellAnimator.presenting = false
-            return editWordPairFromCellAnimator
+            editWordPairAnimator.presenting = false
+            return editWordPairAnimator
         }
         
         if let _ = dismissed as? QuizOptionsViewController {
@@ -337,14 +339,14 @@ extension HomeViewController: WordPairTableDelegate {
         
         controller.selectedWordPair = nil
         
-        editWordPairFromCellAnimator.sourceCell = cell
+//        editWordPairFromCellAnimator.sourceCell = cell
         
         performSegue(withIdentifier: "EditWordPairControllerSegue", sender: nil)
     }
     
     func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
         
-        editWordPairFromCellAnimator.sourceCell = cell
+//        editWordPairFromCellAnimator.sourceCell = cell
         
         controller.selectedWordPair = wordPair
         
@@ -375,6 +377,7 @@ extension HomeViewController: EditWordPairViewControllerDelegate {
     func getCreateText() -> String {
         return searchOrCreateTextField.text!
     }
+    
 }
 
 extension HomeViewController: QuizViewControllerDelegate {
@@ -383,4 +386,21 @@ extension HomeViewController: QuizViewControllerDelegate {
     }
 }
 
+extension HomeViewController: EnfocaDefaultAnimatorTarget {
+    func getRightNavView() -> UIView? {
+        return nil
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    func getHeaderHeightConstraint() -> NSLayoutConstraint {
+        return headerHeightConstraint
+    }
+    func additionalComponentsToHide() -> [UIView] {
+        return [languageSegmentedControl, magifierCloseView, searchOrCreateTextField, searchUnderlineView]
+    }
+    func getBodyContentView() -> UIView {
+        return searchResultsTableViewContainer
+    }
+}
 

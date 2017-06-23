@@ -97,37 +97,40 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
         
         toViewController.getView().alpha = 0
         
-        let v = UIView()
-        
-        self.sourceCell.isHidden = true
-        v.backgroundColor = self.sourceCell.backgroundColor
-        v.frame = self.sourceFrame
-        
-        containerView.addSubview(v)
-        
-        
-        UIView.animate(withDuration: duration * 0.8, delay: 0.0, options: [.curveEaseInOut], animations: {
-            // For some frustrating reason the toViewController doesnt seem to have been laid out.  The dimentions that i get from it's frame are what I have setup in IB, not the device that i am running on.  I caught this because i was using an iPhone 7 emu and a Plus simuator and this frame comes back as 375, not 414.  Sigh.  Lost an hour on this.
-            v.frame.origin = toViewController.getHeaderBackgroundView().frame.origin
-            v.frame.size.height = toViewController.getHeaderBackgroundView().frame.height
-            v.frame.size.width = containerView.frame.width
+        CustomAnimations.bounceAnimation(view: sourceCell, amount: 1.1, duration: 0.33) {
+            let duration = self.duration - 0.33
             
-            v.backgroundColor = toViewController.getHeaderBackgroundView().backgroundColor
-            toViewController.getView().alpha = 1
+            let v = UIView()
             
-        }) { (_) in
-            toViewController.getHeaderBackgroundView().isHidden = false
-        }
-
-        toViewController.getHeaderBackgroundView().isHidden = true
-        
-        UIView.animate(withDuration: duration * 0.2, delay: duration * 0.8, options: [.curveEaseInOut], animations: {
-            v.alpha = 0.0
-        }) { (_) in
+            self.sourceCell.isHidden = true
+            v.backgroundColor = self.sourceCell.backgroundColor
+            v.frame = self.sourceFrame
             
-            v.removeFromSuperview()
-            self.sourceCell.isHidden = false
-            self.storedContext.completeTransition(true)
+            containerView.addSubview(v)
+            
+            UIView.animate(withDuration: duration * 0.8, delay: 0.0, options: [.curveEaseInOut], animations: {
+                // For some frustrating reason the toViewController doesnt seem to have been laid out.  The dimentions that i get from it's frame are what I have setup in IB, not the device that i am running on.  I caught this because i was using an iPhone 7 emu and a Plus simuator and this frame comes back as 375, not 414.  Sigh.  Lost an hour on this.
+                v.frame.origin = toViewController.getHeaderBackgroundView().frame.origin
+                v.frame.size.height = toViewController.getHeaderBackgroundView().frame.height
+                v.frame.size.width = containerView.frame.width
+                
+                v.backgroundColor = toViewController.getHeaderBackgroundView().backgroundColor
+                toViewController.getView().alpha = 1
+                
+            }) { (_) in
+                toViewController.getHeaderBackgroundView().isHidden = false
+            }
+            
+            toViewController.getHeaderBackgroundView().isHidden = true
+            
+            UIView.animate(withDuration: duration * 0.2, delay: duration * 0.8, options: [.curveEaseInOut], animations: {
+                v.alpha = 0.0
+            }) { (_) in
+                
+                v.removeFromSuperview()
+                self.sourceCell.isHidden = false
+                self.storedContext.completeTransition(true)
+            }
         }
     }
 }

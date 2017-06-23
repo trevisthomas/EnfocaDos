@@ -30,10 +30,9 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uyl-SK-tr2">
                                                 <rect key="frame" x="0.0" y="19" width="375" height="128"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="Uyl-SK-tr2" firstAttribute="top" secondItem="qKg-rF-ni1" secondAttribute="top" constant="165" id="RDq-21-a8P"/>
                                             <constraint firstAttribute="bottom" secondItem="Uyl-SK-tr2" secondAttribute="bottom" constant="2" id="iSg-uC-E9r"/>
@@ -100,10 +99,20 @@
                                             <outletCollection property="gestureRecognizers" destination="fZq-ni-6aq" appends="YES" id="bvw-CV-SRz"/>
                                         </connections>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSP-RR-jts">
+                                        <rect key="frame" x="0.0" y="163" width="375" height="2"/>
+                                        <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="QSg-rn-Gg8"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CSP-RR-jts" secondAttribute="trailing" id="VI5-mT-6qg"/>
+                                    <constraint firstAttribute="bottom" secondItem="CSP-RR-jts" secondAttribute="bottom" id="fjg-iY-dUt"/>
                                     <constraint firstAttribute="height" constant="165" id="j6C-na-lbc"/>
+                                    <constraint firstItem="CSP-RR-jts" firstAttribute="leading" secondItem="gRr-TH-ntc" secondAttribute="leading" id="kkV-yg-bFB"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgK-Ja-kbt">
@@ -154,7 +163,7 @@
                                 <color key="highlightedColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mgK-Ja-kbt" firstAttribute="centerX" secondItem="7Ni-DN-MKS" secondAttribute="centerX" id="1TQ-ap-ToJ"/>
                             <constraint firstItem="xcw-QZ-dyr" firstAttribute="top" secondItem="3KL-V9-SAs" secondAttribute="bottom" constant="56" id="3tM-uc-4AK"/>
@@ -187,6 +196,8 @@
                         <outlet property="browseByTagContainerView" destination="w1e-F6-TjV" id="Lpl-ua-k3W"/>
                         <outlet property="browseLabelLeftConstraint" destination="gKb-Ee-5j4" id="0GB-m1-Xds"/>
                         <outlet property="expandingTableViewHolder" destination="qKg-rF-ni1" id="wWU-vy-dhJ"/>
+                        <outlet property="headerBackgroundView" destination="gRr-TH-ntc" id="Znn-jd-4Jb"/>
+                        <outlet property="headerHeightConstraint" destination="j6C-na-lbc" id="tYd-Rj-Fu8"/>
                         <outlet property="hightConstraintOnGray" destination="If7-LZ-hbA" id="65e-V4-hpx"/>
                         <outlet property="languageSegmentedControl" destination="dwd-qq-5mt" id="uND-xA-cZV"/>
                         <outlet property="languageSelectorLeftConstraint" destination="jKR-t3-B0Q" id="4Wl-oT-rCD"/>
@@ -198,6 +209,7 @@
                         <outlet property="searchOrCreateTextField" destination="VZW-bF-agk" id="edp-Tn-rqB"/>
                         <outlet property="searchResultsTableViewContainer" destination="Uyl-SK-tr2" id="bNB-Y6-I7u"/>
                         <outlet property="searchResultsTableViewContainerLeftConstraint" destination="UOk-r3-N2x" id="LhX-ya-091"/>
+                        <outlet property="searchUnderlineView" destination="CSP-RR-jts" id="Ivf-C0-iQW"/>
                         <outlet property="titleLabel" destination="mgK-Ja-kbt" id="OOw-wf-stW"/>
                         <outlet property="titleTopConstraint" destination="8Nb-aH-2eB" id="oSD-6g-JCW"/>
                         <segue destination="U16-qW-lzJ" kind="show" identifier="BrowseViewControllerSegue" id="hti-2s-lZO"/>

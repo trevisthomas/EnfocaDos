@@ -15,9 +15,12 @@ class BrowseViewController: UIViewController {
     @IBOutlet weak var tableViewContainer: UIView!
     @IBOutlet weak var underSidePlaceHolderForWordEditor: UIView!
     
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerBackgroundView: UIView!
     
-    fileprivate var editWordPairFromCellAnimator = EditWordPairFromCellAnimator()
+//    fileprivate var editWordPairFromCellAnimator = EditWordPairFromCellAnimator()
+    
+    fileprivate var editWordPairAnimator = EnfocaDefaultAnimator()
     
     fileprivate var wordPairTableViewController: WordPairTableViewController!
     
@@ -41,7 +44,7 @@ class BrowseViewController: UIViewController {
         
         wordPairTableViewController.initialize(delegate: self, order: controller.wordOrder)
         
-        let emptyEditorViewController = createEditorViewController(inContainerView: underSidePlaceHolderForWordEditor)
+//        let emptyEditorViewController = createEditorViewController(inContainerView: underSidePlaceHolderForWordEditor)
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,13 +69,7 @@ class BrowseViewController: UIViewController {
         
     }
     
-    func getVisibleCells() -> [UITableViewCell] {
-        return wordPairTableViewController.getVisibleCells()
-    }
     
-    func getTableView() -> UIView {
-        return wordPairTableViewController.getTableView()
-    }
 
 }
 
@@ -91,6 +88,7 @@ extension BrowseViewController: EditWordPairViewControllerDelegate {
     func getWordPairOrder() -> WordPairOrder {
         fatalError()
     }
+    
 }
 
 extension BrowseViewController: BrowseControllerDelegate {
@@ -115,7 +113,9 @@ extension BrowseViewController: WordPairTableDelegate {
 
     func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
         
-        editWordPairFromCellAnimator.sourceCell = cell
+//        editWordPairFromCellAnimator.sourceCell = cell
+        
+        //Tap Bounce?
         
         controller.selectedWordPair = wordPair 
         
@@ -129,8 +129,8 @@ extension BrowseViewController: UIViewControllerTransitioningDelegate {
         print("Presenting \(presenting.description)")
         
         if let _ = presented as? EditWordPairViewController, let _ = source as? BrowseViewController {
-            editWordPairFromCellAnimator.presenting = true
-            return editWordPairFromCellAnimator
+            editWordPairAnimator.presenting = true
+            return editWordPairAnimator
         }
         
         return nil
@@ -141,8 +141,8 @@ extension BrowseViewController: UIViewControllerTransitioningDelegate {
         print("Dismissing \(dismissed.description)")
         
         if let _ = dismissed as? EditWordPairViewController {
-            editWordPairFromCellAnimator.presenting = false
-            return editWordPairFromCellAnimator
+            editWordPairAnimator.presenting = false
+            return editWordPairAnimator
         }
         
         return nil
@@ -156,4 +156,24 @@ extension BrowseViewController: EnfocaHeaderViewAnimationTarget {
     func getHeaderBackgroundView() -> UIView {
         return headerBackgroundView
     }
+}
+
+extension BrowseViewController: EnfocaDefaultAnimatorTarget {
+    
+    func getRightNavView() -> UIView? {
+        return doneButton
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    func getHeaderHeightConstraint() -> NSLayoutConstraint {
+        return headerHeightConstraint
+    }
+    func additionalComponentsToHide() -> [UIView] {
+        return []
+    }
+    func getBodyContentView() -> UIView {
+        return tableViewContainer
+    }
+    
 }

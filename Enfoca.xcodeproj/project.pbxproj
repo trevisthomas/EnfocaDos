@@ -377,6 +377,8 @@
 		0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A41EF9D46D00780184 /* CALayer+.swift */; };
 		0FE015A81EFAF42100780184 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A71EFAF42100780184 /* EditorViewController.swift */; };
 		0FE015A91EFAF42100780184 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A71EFAF42100780184 /* EditorViewController.swift */; };
+		0FE015AB1EFD697F00780184 /* EnfocaDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */; };
+		0FE015AC1EFD697F00780184 /* EnfocaDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -563,6 +565,7 @@
 		0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingRoundAnimator.swift; sourceTree = "<group>"; };
 		0FE015A41EF9D46D00780184 /* CALayer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		0FE015A71EFAF42100780184 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfocaDefaultAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1064,6 +1067,7 @@
 				0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */,
 				0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */,
 				0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */,
+				0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -1466,6 +1470,7 @@
 				0F911E601EE75D4600F21855 /* Gender.swift in Sources */,
 				0F911E611EE75D4600F21855 /* OperationDeleteRecord.swift in Sources */,
 				0F911E621EE75D4600F21855 /* UIViewController+.swift in Sources */,
+				0FE015AC1EFD697F00780184 /* EnfocaDefaultAnimator.swift in Sources */,
 				0F911E631EE75D4600F21855 /* WordPairOrder.swift in Sources */,
 				0F911E641EE75D4600F21855 /* FetchUserRecordOperation.swift in Sources */,
 				0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */,
@@ -1602,6 +1607,7 @@
 				0FA4A54D1EC8ECE200F31F9A /* OperationCreateWordPair.swift in Sources */,
 				0FA4A5191EC8EC6E00F31F9A /* Perform+WordPair.swift in Sources */,
 				0FA4A5471EC8ECD200F31F9A /* OperationUpdateWordPair.swift in Sources */,
+				0FE015AB1EFD697F00780184 /* EnfocaDefaultAnimator.swift in Sources */,
 				0FA4A4F21EC8E94700F31F9A /* LocalCloudKitWebService.swift in Sources */,
 				0FA4A52C1EC8EC9C00F31F9A /* BaseCKOperation.swift in Sources */,
 				0FA4A5061EC8EAF100F31F9A /* EnumCollection.swift in Sources */,

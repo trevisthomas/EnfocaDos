@@ -8,9 +8,30 @@
 
 import UIKit
 
+protocol EditWordPairAnimatorTarget {
+    var view: UIView! {get}
+    
+    func getVisibleCells() -> [UITableViewCell]
+    func getTableView() -> UIView
+    
+    func getRightNavView() -> UIView?
+    func getTitleView() -> UIView
+    func getHeaderHeightConstraint() -> NSLayoutConstraint
+    func additionalComponentsToHide() -> [UIView] //Just return an empty list if you dont have any
+}
+
+protocol EditWordPairAnimatorDestination {
+    var view: UIView! {get}
+    
+    func getRightNavView() -> UIView?
+    func getTitleView() -> UIView
+    func getHeaderHeightConstraint() -> NSLayoutConstraint
+
+}
+
 class EditWordPairFromCellAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    private let duration = 2.7
+    private let duration = 1.2
     private weak var storedContext: UIViewControllerContextTransitioning!
     var presenting: Bool = true
     
@@ -36,13 +57,13 @@ class EditWordPairFromCellAnimator: NSObject, UIViewControllerAnimatedTransition
     private func performPresent() {
         let containerView = storedContext.containerView
         
-        guard let toViewController = storedContext.viewController(forKey: .to) as? EditWordPairViewController else {
+        guard let toViewController = storedContext.viewController(forKey: .to) as? EditWordPairAnimatorDestination else {
             fatalError()
         }
         
         
 //        //NOTE: Eventually from can be other places. Hm
-        guard let fromViewController = storedContext.viewController(forKey: .from) as? BrowseViewController else {
+        guard let fromViewController = storedContext.viewController(forKey: .from) as? EditWordPairAnimatorTarget else {
             fatalError()
         }
         
@@ -54,40 +75,64 @@ class EditWordPairFromCellAnimator: NSObject, UIViewControllerAnimatedTransition
         
         let cells = fromViewController.getVisibleCells()
         
-        animateCells(away: true, visibleCells: cells, duration: duration * 0.5, screenHeight: containerView.frame.height)
+        animateCells(away: true, visibleCells: cells, duration: duration * 0.85, screenHeight: containerView.frame.height)
 
+        CustomAnimations.bounceAnimation(view: sourceCell, amount: 1.05, duration: 0.33)
         
         let oldTableViewBackgroundColor = fromViewController.getTableView().backgroundColor
         
-        UIView.animate(withDuration: duration * 0.2, delay: duration * 0.2, options: [], animations: { 
-            fromViewController.getTableView().backgroundColor = UIColor.clear
-        }) { (_:Bool) in
-            //
-            
+//        UIView.animate(withDuration: duration * 0.1, delay: duration * 0.2, options: [], animations: {
+//            fromViewController.getTableView().backgroundColor = UIColor.clear
+//        }) { (_:Bool) in
+//            //
+//            
+//        }
+        
+        //Header
+        if let rightNavView = fromViewController.getRightNavView() {
+            CustomAnimations.animateExpandAndPullOut(target: rightNavView, delay: 0.1, duration: duration * 0.6)
         }
         
-
-//        
-        UIView.animate(withDuration: duration * 0.5, delay: duration * 0.5, options: [.curveEaseIn], animations: {
-            toViewController.view.alpha = 1
+        CustomAnimations.animateExpandAndPullOut(target: fromViewController.getTitleView(), delay: 0.0, duration: duration * 0.2) {
+            for v in fromViewController.additionalComponentsToHide() {
+                 CustomAnimations.animateExpandAndPullOut(target: v, delay: 0.0, duration: self.duration * 0.6)
+            }
+        }
+        
+        let originalFromHeaderHeight = fromViewController.getHeaderHeightConstraint().constant
+        
+        
+        //Nudging this by 0.5 was a hack to get the animation to not fail when the header isnt moving
+        fromViewController.getHeaderHeightConstraint().constant = toViewController.getHeaderHeightConstraint().constant + 0.5
+        
+        
+        
+        //Second verse
+        UIView.animate(withDuration: duration * 0.15, delay: duration * 0.85, options: [.curveEaseIn], animations: {
+//            toViewController.view.alpha = 1
+            fromViewController.view.layoutIfNeeded()
             
-//            for view in views {
-//                view.alpha = 0
-//            }
         }) { (_: Bool) in
             //
+            toViewController.view.alpha = 1
             
             //Reset everything!
             fromViewController.getTableView().backgroundColor = oldTableViewBackgroundColor
+            
+            fromViewController.getRightNavView()?.alpha = 1
+            fromViewController.getTitleView().alpha = 1
+            
+            fromViewController.getHeaderHeightConstraint().constant = originalFromHeaderHeight
+            
+            for v in fromViewController.additionalComponentsToHide() {
+                v.alpha = 1
+            }
             
             for (v, f) in self.originalViewFrames {
                 v.frame = f
             }
             
             self.storedContext.completeTransition(true)
-//            for view in views {
-//                view.alpha = 1
-//            }
         }
         
     }

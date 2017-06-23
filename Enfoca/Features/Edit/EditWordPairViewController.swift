@@ -18,18 +18,15 @@ protocol EditWordPairViewControllerDelegate {
 class EditWordPairViewController: UIViewController {
     
     fileprivate var controller: EditWordPairController!
-    fileprivate var tagViewController: TagSelectionViewController!
-
-    @IBOutlet weak var tagSummaryLabel: UILabel!
-    @IBOutlet weak var definitionTextField: UITextField!
-    @IBOutlet weak var wordTextField: UITextField!
-    @IBOutlet weak var saveOrCreateButton: EnfocaButton!
-    @IBOutlet weak var lookupButton: EnfocaButton!
-    @IBOutlet weak var deleteButton: EnfocaButton!
+    
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyView: UIView!
     
     var delegate: EditWordPairViewControllerDelegate!
     
-    @IBOutlet weak var tagContainerView: UIView!
+    fileprivate var editorViewController: EditorViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +37,13 @@ class EditWordPairViewController: UIViewController {
             controller = EditWordPairController(delegate: self, wordPair: delegate.sourceWordPair)
         }
         
-        initializeLookAndFeel()
         initializeSubViews()
         
+        initializeLookAndFeel()
+        
         controller.initialize()
+        
+        editorViewController.initialize(delegate: self)
         
         getAppDelegate().addListener(listener: controller)
         refreshButtonState()
@@ -65,18 +65,21 @@ class EditWordPairViewController: UIViewController {
         
         updateFields()
         
+        
         if controller.isEditMode {
-            saveOrCreateButton.setTitle("Save", for: .normal)
-            saveOrCreateButton.isEnabledEnfoca = false
-            deleteButton.isEnabledEnfoca = true
+            editorViewController.saveButton.setTitle("Save", for: .normal)
+            editorViewController.saveButton.isEnabledEnfoca = false
+            editorViewController.deleteButton.isEnabledEnfoca = true
         } else {
-            saveOrCreateButton.setTitle("Create", for: .normal)
-            deleteButton.isEnabledEnfoca = false
+            editorViewController.saveButton.setTitle("Create", for: .normal)
+            editorViewController.deleteButton.isEnabledEnfoca = false
         }
         
-        wordTextField.addTarget(self, action: #selector(wordTextDidChange(_:)), for: [.editingChanged])
+    }
+    
+    private func initializeSubViews(){
         
-        definitionTextField.addTarget(self, action: #selector(definitionTextDidChange(_:)), for: [.editingChanged])
+        editorViewController = createEditorViewController(inContainerView: bodyView)
         
     }
     
@@ -93,10 +96,7 @@ class EditWordPairViewController: UIViewController {
     }
     
     
-    private func initializeSubViews(){
-        tagViewController = createTagSelectionViewController(inContainerView: tagContainerView)
-        
-    }
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tagFilterViewController = segue.destination as? TagFilterViewController {
@@ -106,25 +106,29 @@ class EditWordPairViewController: UIViewController {
     
     fileprivate func updateFields(){
         title = controller.title()
-        tagSummaryLabel.text = controller.tagsAsString()
-        definitionTextField.text = controller.definition
-        wordTextField.text = controller.word
+        
+//        tagSummaryLabel.text = controller.tagsAsString()
+//        definitionTextField.text = controller.definition
+//        wordTextField.text = controller.word
+        
+        editorViewController.refresh()
     }
 
-    @IBAction func deleteButtonAction(_ sender: UIButton) {
-        controller.performDelete()
-    }
-    
-    @IBAction func saveOrCreateButtonAction(_ sender: UIButton) {
-        controller.performSaveOrCreate()
-    }
+//    @IBAction func deleteButtonAction(_ sender: UIButton) {
+//        controller.performDelete()
+//    }
+//    
+//    @IBAction func saveOrCreateButtonAction(_ sender: UIButton) {
+//        controller.performSaveOrCreate()
+//    }
     
     @IBAction func lookupButtonAction(_ sender: UIButton) {
     }
     
     fileprivate func refreshButtonState() {
-        saveOrCreateButton.isEnabledEnfoca = controller.isValidForSaveOrCreate()
+        editorViewController.saveButton.isEnabledEnfoca = controller.isValidForSaveOrCreate()
     }
+    
 }
 
 extension EditWordPairViewController: EditWordPairControllerDelegate {
@@ -133,8 +137,10 @@ extension EditWordPairViewController: EditWordPairControllerDelegate {
     }
 
     func onTagsLoaded(tags: [Tag], selectedTags: [Tag]) {
-        tagViewController.initialize(tags: tags, selectedTags: selectedTags, delegate: self)
+//        tagViewController.initialize(tags: tags, selectedTags: selectedTags, delegate: self)
         
+        
+        editorViewController.refresh()
         refreshButtonState()
         updateFields()
         
@@ -162,30 +168,84 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
             controller.selectedTags = newValue
 //            controller.initialize()
             
-            tagViewController.selectedTags(tags: newValue)
+//            tagViewController.selectedTags(tags: newValue)
+            
+            editorViewController.refresh()
             
             refreshButtonState()
             updateFields()
         }
     }
-    
-    
 }
 
-extension EditWordPairViewController: WordTagSelectionDelegate {
-    func onTagSelected(tag: Tag){
-        controller.addTag(tag: tag)
-        refreshButtonState()
+extension EditWordPairViewController: EditorViewControllerDelegate {
+    var wordText: String {
+        get {
+            return controller.word
+        }
+        set {
+            controller.word = newValue
+            refreshButtonState()
+        }
+    }
+    var definitionText: String {
+        get{
+            return controller.definition
+        }
+        set {
+            controller.definition = newValue
+            refreshButtonState()
+        }
+    }
+    var selectedTagText : String {
+        get {
+            return controller.selectedTags.tagsToText()
+        }
     }
     
-    func onTagDeselected(tag: Tag) {
-        controller.removeTag(tag: tag)
-        refreshButtonState()
+    func performSave() {
+        controller.performSaveOrCreate()
     }
-    
-    func onShowTagEditor() {
-        print("Show the tag editor")
+    func performDelete() {
+        controller.performDelete()
+    }
+    func performTagEdit() {
         performSegue(withIdentifier: "editTags", sender: nil)
+    }
+}
+
+//extension EditWordPairViewController: WordTagSelectionDelegate {
+//    func onTagSelected(tag: Tag){
+//        controller.addTag(tag: tag)
+//        refreshButtonState()
+//    }
+//    
+//    func onTagDeselected(tag: Tag) {
+//        controller.removeTag(tag: tag)
+//        refreshButtonState()
+//    }
+//    
+//    func onShowTagEditor() {
+//        print("Show the tag editor")
+//        performSegue(withIdentifier: "editTags", sender: nil)
+//    }
+//}
+
+extension EditWordPairViewController: EnfocaDefaultAnimatorTarget {
+    func getRightNavView() -> UIView? {
+        return cancelButton
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    func getHeaderHeightConstraint() -> NSLayoutConstraint {
+        return headerHeightConstraint
+    }
+    func additionalComponentsToHide() -> [UIView] {
+        return []
+    }
+    func getBodyContentView() -> UIView {
+        return bodyView
     }
 }
 
