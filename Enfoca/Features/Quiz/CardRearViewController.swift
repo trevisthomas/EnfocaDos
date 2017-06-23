@@ -76,9 +76,13 @@ class CardRearViewController: UIViewController, HomeFromQuizAnimatorTarget {
             to.transitioningDelegate = self
             to.initialize(viewModel: sharedViewModel)
         } else if let to = segue.destination as? QuizResultsViewController {
+            to.transitioningDelegate = self
             to.initialize(sharedViewModel: sharedViewModel)
         } else if let to = segue.destination as? HomeViewController {
             to.transitioningDelegate = self
+        } else if let to = segue.destination as? QuizPerfectScoreViewController {
+            to.transitioningDelegate = self
+            to.initialize(sharedViewModel: sharedViewModel)
         }
     }
 }
@@ -96,6 +100,14 @@ extension CardRearViewController: UIViewControllerTransitioningDelegate {
         
         if let _ = presented as? MatchingRoundViewController, let _ = source as? CardRearViewController {
             return MatchingRoundAnimator()
+        }
+        
+        if let _ = presented as? QuizResultsViewController, let _ = source as? CardRearViewController {
+            return QuizResultsAnimator()
+        }
+        
+        if let _ = presented as? QuizPerfectScoreViewController, let _ = source as? CardRearViewController {
+            return QuizResultsAnimator()
         }
         
         return nil

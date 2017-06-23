@@ -376,6 +376,8 @@
 		0FE015A91EFAF42100780184 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015A71EFAF42100780184 /* EditorViewController.swift */; };
 		0FE015AB1EFD697F00780184 /* EnfocaDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */; };
 		0FE015AC1EFD697F00780184 /* EnfocaDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */; };
+		0FE015B01EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */; };
+		0FE015B11EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -562,6 +564,7 @@
 		0FE015A41EF9D46D00780184 /* CALayer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		0FE015A71EFAF42100780184 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfocaDefaultAnimator.swift; sourceTree = "<group>"; };
+		0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultsAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1063,6 +1066,7 @@
 				0FE0159E1EF8594800780184 /* ChangeCardAnimator.swift */,
 				0FE015A11EF9A56700780184 /* MatchingRoundAnimator.swift */,
 				0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */,
+				0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -1441,6 +1445,7 @@
 				0F911E4C1EE75D4600F21855 /* MetaData.swift in Sources */,
 				0FE015A91EFAF42100780184 /* EditorViewController.swift in Sources */,
 				0F911E4D1EE75D4600F21855 /* CardOrder.swift in Sources */,
+				0FE015B11EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */,
 				0F911E4E1EE75D4600F21855 /* User.swift in Sources */,
 				0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */,
 				0F911E501EE75D4600F21855 /* JsonDateFormatter.swift in Sources */,
@@ -1686,6 +1691,7 @@
 				0FAD20CE1ECE65B3002EACDA /* TagSelectionViewController.swift in Sources */,
 				0FA4A5441EC8ECD200F31F9A /* OperationFetchTagAssociations.swift in Sources */,
 				0FE015A81EFAF42100780184 /* EditorViewController.swift in Sources */,
+				0FE015B01EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */,
 				0F011EB11EEB2AAB00939B75 /* QuizOptionsViewController.swift in Sources */,
 				0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */,
 				0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */,

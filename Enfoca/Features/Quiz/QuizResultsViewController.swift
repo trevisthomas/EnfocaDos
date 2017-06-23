@@ -14,7 +14,10 @@ class QuizResultsViewController: UIViewController, HomeFromQuizAnimatorTarget {
     @IBOutlet weak var askedLabel: UILabel!
     @IBOutlet weak var correctLabel: UILabel!
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
+    @IBOutlet weak var titleLabel: UILabel!
     private var sharedViewModel: QuizViewModel!
+    
+    @IBOutlet weak var contentBodyView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +60,31 @@ extension QuizResultsViewController: UIViewControllerTransitioningDelegate {
             return HomeFromQuizResultAnimator()
         }
         
+        if let _ = presented as? CardFrontViewController, let _ = source as? QuizResultsViewController {
+            let animator = QuizResultsAnimator()
+            animator.presenting = false
+            return animator
+        }
+        
         return nil
         
+    }
+}
+
+extension QuizResultsViewController: EnfocaDefaultAnimatorTarget {
+    func getRightNavView() -> UIView? {
+        return nil
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    func getHeaderHeightConstraint() -> NSLayoutConstraint {
+        return headerHightConstrant
+    }
+    func additionalComponentsToHide() -> [UIView]{
+        return []
+    }
+    func getBodyContentView() -> UIView {
+        return contentBodyView
     }
 }

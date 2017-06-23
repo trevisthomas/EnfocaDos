@@ -12,6 +12,9 @@ class QuizPerfectScoreViewController: UIViewController, HomeFromQuizAnimatorTarg
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var contentBodyView: UIView!
+    fileprivate var sharedViewModel: QuizViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,10 @@ class QuizPerfectScoreViewController: UIViewController, HomeFromQuizAnimatorTarg
             to.transitioningDelegate = self
         }
     }
+    
+    func initialize(sharedViewModel: QuizViewModel){
+        self.sharedViewModel = sharedViewModel
+    }
 }
 
 extension QuizPerfectScoreViewController: UIViewControllerTransitioningDelegate {
@@ -38,6 +45,23 @@ extension QuizPerfectScoreViewController: UIViewControllerTransitioningDelegate 
         return HomeFromQuizResultAnimator()
     }
 }
-    
+
+extension QuizPerfectScoreViewController: EnfocaDefaultAnimatorTarget {
+    func getRightNavView() -> UIView? {
+        return nil
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    func getHeaderHeightConstraint() -> NSLayoutConstraint {
+        return headerHightConstrant
+    }
+    func additionalComponentsToHide() -> [UIView]{
+        return []
+    }
+    func getBodyContentView() -> UIView {
+        return contentBodyView
+    }
+}
 
 
