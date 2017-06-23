@@ -52,7 +52,6 @@
 		0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */; };
 		0F085B8A1EDC66A200FC20A1 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
 		0F085B8D1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */; };
-		0F085B8F1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */; };
 		0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
 		0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F1B05171EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
@@ -130,7 +129,6 @@
 		0F911E631EE75D4600F21855 /* WordPairOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */; };
 		0F911E641EE75D4600F21855 /* FetchUserRecordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */; };
 		0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */; };
-		0F911E661EE75D4600F21855 /* EditWordPairFromCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */; };
 		0F911E671EE75D4600F21855 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EE1EC8E94700F31F9A /* WebService.swift */; };
 		0F911E681EE75D4600F21855 /* OperationFetchMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */; };
 		0F911E691EE75D4600F21855 /* FetchUserRecordId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */; };
@@ -216,7 +214,6 @@
 		0F911EC51EE766D900F21855 /* WordPairOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */; };
 		0F911EC61EE766D900F21855 /* FetchUserRecordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */; };
 		0F911EC71EE766D900F21855 /* BrowseFromHomeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */; };
-		0F911EC81EE766D900F21855 /* EditWordPairFromCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */; };
 		0F911EC91EE766D900F21855 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EE1EC8E94700F31F9A /* WebService.swift */; };
 		0F911ECA1EE766D900F21855 /* OperationFetchMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */; };
 		0F911ECB1EE766D900F21855 /* FetchUserRecordId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */; };
@@ -431,7 +428,6 @@
 		0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordPairViewController.swift; sourceTree = "<group>"; };
 		0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordPairController.swift; sourceTree = "<group>"; };
 		0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairEditorControllerTests.swift; sourceTree = "<group>"; };
-		0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordPairFromCellAnimator.swift; sourceTree = "<group>"; };
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
 		0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0F911E071EE08E8300F21855 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
@@ -1059,7 +1055,6 @@
 			isa = PBXGroup;
 			children = (
 				0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */,
-				0F085B8E1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift */,
 				0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */,
 				0F011ECD1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift */,
 				0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */,
@@ -1474,7 +1469,6 @@
 				0F911E631EE75D4600F21855 /* WordPairOrder.swift in Sources */,
 				0F911E641EE75D4600F21855 /* FetchUserRecordOperation.swift in Sources */,
 				0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */,
-				0F911E661EE75D4600F21855 /* EditWordPairFromCellAnimator.swift in Sources */,
 				0F011EDE1EF06C4000939B75 /* QuizViewModel.swift in Sources */,
 				0F911E671EE75D4600F21855 /* WebService.swift in Sources */,
 				0F911E681EE75D4600F21855 /* OperationFetchMetaData.swift in Sources */,
@@ -1569,7 +1563,6 @@
 				0F911EC51EE766D900F21855 /* WordPairOrder.swift in Sources */,
 				0F911EC61EE766D900F21855 /* FetchUserRecordOperation.swift in Sources */,
 				0F911EC71EE766D900F21855 /* BrowseFromHomeAnimator.swift in Sources */,
-				0F911EC81EE766D900F21855 /* EditWordPairFromCellAnimator.swift in Sources */,
 				0F911EC91EE766D900F21855 /* WebService.swift in Sources */,
 				0F911ECA1EE766D900F21855 /* OperationFetchMetaData.swift in Sources */,
 				0F911ECB1EE766D900F21855 /* FetchUserRecordId.swift in Sources */,
@@ -1683,7 +1676,6 @@
 				0FA4A4E71EC8E91E00F31F9A /* WordPairOrder.swift in Sources */,
 				0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */,
 				0F085B831ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift in Sources */,
-				0F085B8F1EDC787400FC20A1 /* EditWordPairFromCellAnimator.swift in Sources */,
 				0FA4A4F41EC8E94700F31F9A /* WebService.swift in Sources */,
 				0F911F081EE76CFA00F21855 /* OldTag.swift in Sources */,
 				0FA4A5371EC8ECB400F31F9A /* OperationFetchMetaData.swift in Sources */,

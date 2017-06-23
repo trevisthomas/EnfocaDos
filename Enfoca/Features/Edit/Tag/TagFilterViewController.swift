@@ -25,9 +25,11 @@ class TagFilterViewController: UIViewController {
     @IBOutlet weak var searchOrCreateTextField: UITextField!
     var tagFilterDelegate : TagFilterViewControllerDelegate!
     
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchMagnifierView: MagnifierCloseView!
     var viewModel : TagFilterViewModel!
 
+    @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -203,4 +205,24 @@ extension TagFilterViewController: UITableViewDelegate {
         viewModel.tableView(tableView, didDeselectRowAt: indexPath)
     }
 
+}
+
+extension TagFilterViewController: EnfocaDefaultAnimatorTarget {
+    
+    func getRightNavView() -> UIView? {
+        return applyButton
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    func getHeaderHeightConstraint() -> NSLayoutConstraint {
+        return headerHeightConstraint
+    }
+    func additionalComponentsToHide() -> [UIView] {
+        return [editDoneButton, searchOrCreateTextField, tagSummaryLabel]
+    }
+    func getBodyContentView() -> UIView {
+        return tableView
+    }
+    
 }

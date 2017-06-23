@@ -25,6 +25,7 @@ class EditWordPairViewController: UIViewController {
     @IBOutlet weak var bodyView: UIView!
     
     var delegate: EditWordPairViewControllerDelegate!
+    fileprivate let tagEditorAnimator = EnfocaDefaultAnimator()
     
     fileprivate var editorViewController: EditorViewController!
     
@@ -100,6 +101,8 @@ class EditWordPairViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tagFilterViewController = segue.destination as? TagFilterViewController {
+            
+            tagFilterViewController.transitioningDelegate = self
             tagFilterViewController.tagFilterDelegate = self
         }
     }
@@ -214,22 +217,26 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     }
 }
 
-//extension EditWordPairViewController: WordTagSelectionDelegate {
-//    func onTagSelected(tag: Tag){
-//        controller.addTag(tag: tag)
-//        refreshButtonState()
-//    }
-//    
-//    func onTagDeselected(tag: Tag) {
-//        controller.removeTag(tag: tag)
-//        refreshButtonState()
-//    }
-//    
-//    func onShowTagEditor() {
-//        print("Show the tag editor")
-//        performSegue(withIdentifier: "editTags", sender: nil)
-//    }
-//}
+//For animated transitions
+extension EditWordPairViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let _ = presented as? TagFilterViewController, let _ = source as? EditWordPairViewController {
+            return tagEditorAnimator
+        }
+        
+        return nil
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let _ = dismissed as? TagFilterViewController {
+            return tagEditorAnimator
+        }
+        
+        return nil
+    }
+}
 
 extension EditWordPairViewController: EnfocaDefaultAnimatorTarget {
     func getRightNavView() -> UIView? {

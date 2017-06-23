@@ -72,7 +72,7 @@
                         <outlet property="bodyView" destination="Bqi-Es-k0k" id="kL7-QA-Uja"/>
                         <outlet property="cancelButton" destination="eUJ-Av-DbH" id="Vfn-Ps-oIP"/>
                         <outlet property="headerHeightConstraint" destination="ZYV-4Y-x0Q" id="bpE-9g-AYY"/>
-                        <outlet property="titleLabel" destination="btR-8T-6X5" id="9iV-Pr-2Dm"/>
+                        <outlet property="titleLabel" destination="btR-8T-6X5" id="mqx-Fy-PEd"/>
                         <segue destination="XEn-Nx-i62" kind="show" identifier="editTags" id="nYj-BZ-9eo"/>
                     </connections>
                 </viewController>
@@ -143,6 +143,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Selected Tags"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="WlZ-DS-JJt" appends="YES" id="MsV-Nf-Jn8"/>
                                 </connections>
@@ -465,7 +468,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lNh-4m-4Jn" firstAttribute="top" secondItem="eDc-Px-LmS" secondAttribute="bottom" id="10p-bO-eKV"/>
                             <constraint firstItem="dBV-1Q-aiz" firstAttribute="leading" secondItem="eDc-Px-LmS" secondAttribute="leading" constant="8" id="3bA-7b-Ppy"/>
@@ -489,10 +492,12 @@
                     <connections>
                         <outlet property="applyButton" destination="ycJ-9P-nyX" id="gx9-YH-hcj"/>
                         <outlet property="editDoneButton" destination="hCX-ve-AUc" id="Hv5-yD-ZY2"/>
+                        <outlet property="headerHeightConstraint" destination="Aiy-6a-kcq" id="MLR-Df-VZF"/>
                         <outlet property="searchMagnifierView" destination="wF2-1p-Fm6" id="YHy-LS-DKN"/>
                         <outlet property="searchOrCreateTextField" destination="dBV-1Q-aiz" id="k0M-oL-e34"/>
-                        <outlet property="tableView" destination="lNh-4m-4Jn" id="QOt-ol-zFU"/>
+                        <outlet property="tableView" destination="lNh-4m-4Jn" id="IMT-5i-hY1"/>
                         <outlet property="tagSummaryLabel" destination="FCT-Pp-SiW" id="TCc-ZS-vhz"/>
+                        <outlet property="titleLabel" destination="cEH-hC-LUR" id="ncN-ei-bto"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6j-rF-gnh" userLabel="First Responder" sceneMemberID="firstResponder"/>
