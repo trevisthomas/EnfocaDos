@@ -21,7 +21,6 @@ class QuizOptionsViewController: UIViewController {
     var delegate : QuizViewControllerDelegate!
     
     @IBOutlet weak var cardSideSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var wordOrderPicker: UIPickerView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var wordCountLabel: UILabel!
     @IBOutlet var headerBackgroundView: UIView!
@@ -61,17 +60,18 @@ class QuizOptionsViewController: UIViewController {
         cardSideSegmentedControl.selectedSegmentIndex = CardSide.values.index(of: viewModel.cardSide)!
         titleLabel.text = viewModel.tagName
         
-        
-        let selectedRow = CardOrder.values.index(of: viewModel.cardOrder)!
-        wordOrderPicker.selectRow(selectedRow, inComponent: 0, animated: false)
         formatWordCountText()
-        
     }
     
     private func formatWordCountText() {
         wordCountLabel.text = "Word Count: \(viewModel.wordCount!)"
     }
-    
+    @IBAction func backButtonAction(_ sender: Any) {
+        dismiss(animated: true) {
+            //whatever
+        }
+    }
+   
     @IBAction func cancelAction(_ sender: EnfocaButton) {
         dismiss(animated: true) { 
             //whatever
@@ -86,6 +86,19 @@ class QuizOptionsViewController: UIViewController {
     }
     
     @IBAction func startQuizAction(_ sender: EnfocaButton) {
+        
+        switch (sender.titleLabel!.text!) {
+        case "Random":
+            viewModel.cardOrder = CardOrder.random
+        case "Hardest":
+            viewModel.cardOrder = CardOrder.random
+        case "Least Studied":
+            viewModel.cardOrder = CardOrder.leastStudied
+        case "Recently Added":
+            viewModel.cardOrder = CardOrder.latestAdded
+        default: fatalError()
+        }
+        
         print("Quiz: \(viewModel.tagName) Words: \(viewModel.wordCount) Card Order: \(viewModel.cardOrder) Card Side: \(viewModel.cardSide)")
         
         viewModel.startQuiz { 
@@ -131,41 +144,6 @@ extension QuizOptionsViewController: QuizOptionsViewControllerDelegate {
         self.onError(title: title, message: message)
     }
 }
-
-//extension QuizOptionsViewController: CardViewControllerDelegate {
-//    func onError(title: String, message: EnfocaError) {
-//        self.onError(title: title, message: message)
-//    }
-//
-//    
-//    func getRearWord() -> String {
-//        return viewModel.getCurrentRearWord()
-//    }
-//    
-//    func getFrontWord() -> String {
-//        return viewModel.getCurrentFrontWord()
-//    }
-//    
-//    func correct() {
-//        viewModel.correct()
-//    }
-//    
-//    func incorrect() {
-//        viewModel.inCorrect()
-//    }
-//    
-//    func getWordPairsForMatching() -> [WordPair] {
-//        return viewModel.getWordPairsForReviewRound()
-//    }
-//    
-//    func isTimeForMatchingRound() -> Bool {
-//        return viewModel.isTimeForMatchingRound()
-//    }
-//    
-//    func isFinished() -> Bool {
-//        return viewModel.isFinished()
-//    }
-//}
 
 //For animated transitions
 extension QuizOptionsViewController: UIViewControllerTransitioningDelegate {

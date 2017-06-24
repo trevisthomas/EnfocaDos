@@ -31,8 +31,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biK-m3-sRK">
-                                        <rect key="frame" x="330" y="30" width="37" height="30"/>
-                                        <state key="normal" title="Done">
+                                        <rect key="frame" x="8" y="30" width="34" height="30"/>
+                                        <state key="normal" title="Back">
                                             <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -43,8 +43,9 @@
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="GML-ue-jy4" firstAttribute="centerY" secondItem="biK-m3-sRK" secondAttribute="centerY" id="1zL-LQ-AFy"/>
-                                    <constraint firstAttribute="trailing" secondItem="biK-m3-sRK" secondAttribute="trailing" constant="8" id="HFo-Wd-kLX"/>
                                     <constraint firstAttribute="height" constant="64" id="Om8-Yr-XT3"/>
+                                    <constraint firstItem="biK-m3-sRK" firstAttribute="leading" secondItem="0F6-9P-Mgk" secondAttribute="leading" constant="8" id="VHa-A0-bmB"/>
+                                    <constraint firstItem="GML-ue-jy4" firstAttribute="top" secondItem="0F6-9P-Mgk" secondAttribute="top" constant="32" id="WQM-1B-UlV"/>
                                     <constraint firstAttribute="bottom" secondItem="biK-m3-sRK" secondAttribute="bottom" constant="4" id="jHm-Rf-gTj"/>
                                     <constraint firstItem="GML-ue-jy4" firstAttribute="leading" secondItem="0F6-9P-Mgk" secondAttribute="leading" constant="48" id="vPN-9l-Upe"/>
                                     <constraint firstAttribute="trailing" secondItem="GML-ue-jy4" secondAttribute="trailing" constant="48" id="vXt-Ax-Tdm"/>

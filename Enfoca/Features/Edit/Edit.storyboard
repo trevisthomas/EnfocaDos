@@ -27,14 +27,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Editor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btR-8T-6X5">
-                                        <rect key="frame" x="48" y="32" width="274" height="26"/>
+                                        <rect key="frame" x="48" y="32" width="279" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUJ-Av-DbH">
-                                        <rect key="frame" x="322" y="30" width="45" height="30"/>
-                                        <state key="normal" title="cancel">
+                                        <rect key="frame" x="8" y="30" width="34" height="30"/>
+                                        <state key="normal" title="Back">
                                             <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -44,11 +44,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="eUJ-Av-DbH" secondAttribute="trailing" constant="8" id="Ncb-Ga-4W0"/>
                                     <constraint firstItem="btR-8T-6X5" firstAttribute="centerY" secondItem="eUJ-Av-DbH" secondAttribute="centerY" id="Rwl-yb-mxG"/>
+                                    <constraint firstItem="eUJ-Av-DbH" firstAttribute="leading" secondItem="6rF-Gs-n8c" secondAttribute="leading" constant="8" id="X7p-oN-Xrn"/>
                                     <constraint firstAttribute="height" constant="64" id="ZYV-4Y-x0Q"/>
+                                    <constraint firstItem="btR-8T-6X5" firstAttribute="centerX" secondItem="6rF-Gs-n8c" secondAttribute="centerX" id="aJk-FJ-RvW"/>
                                     <constraint firstItem="btR-8T-6X5" firstAttribute="leading" secondItem="6rF-Gs-n8c" secondAttribute="leading" constant="48" id="luL-cv-86y"/>
-                                    <constraint firstItem="eUJ-Av-DbH" firstAttribute="leading" secondItem="btR-8T-6X5" secondAttribute="trailing" id="lzJ-3E-0Ua"/>
                                     <constraint firstItem="btR-8T-6X5" firstAttribute="top" secondItem="6rF-Gs-n8c" secondAttribute="top" constant="32" id="oq3-OT-ydU"/>
                                 </constraints>
                             </view>
@@ -252,9 +252,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycJ-9P-nyX">
-                                        <rect key="frame" x="328" y="18" width="39" height="30"/>
+                                        <rect key="frame" x="8" y="30" width="34" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Close">
+                                        <state key="normal" title="Back">
                                             <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -268,7 +268,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCX-ve-AUc">
-                                        <rect key="frame" x="8" y="18" width="30" height="30"/>
+                                        <rect key="frame" x="337" y="30" width="30" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Edit">
                                             <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -278,7 +278,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag Editor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEH-hC-LUR">
-                                        <rect key="frame" x="140" y="20" width="95" height="26"/>
+                                        <rect key="frame" x="140" y="32" width="95" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -286,15 +286,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hCX-ve-AUc" secondAttribute="trailing" constant="8" id="6SA-3G-LvF"/>
                                     <constraint firstAttribute="height" constant="132" id="Aiy-6a-kcq"/>
                                     <constraint firstItem="FCT-Pp-SiW" firstAttribute="leading" secondItem="eDc-Px-LmS" secondAttribute="leading" constant="8" id="DDe-XB-3gP"/>
                                     <constraint firstAttribute="trailing" secondItem="FCT-Pp-SiW" secondAttribute="trailing" constant="8" id="DqW-vD-M2W"/>
                                     <constraint firstItem="ycJ-9P-nyX" firstAttribute="centerY" secondItem="cEH-hC-LUR" secondAttribute="centerY" id="H7y-19-dRg"/>
+                                    <constraint firstItem="ycJ-9P-nyX" firstAttribute="leading" secondItem="eDc-Px-LmS" secondAttribute="leading" constant="8" id="Vg1-S6-ffN"/>
                                     <constraint firstItem="cEH-hC-LUR" firstAttribute="centerX" secondItem="eDc-Px-LmS" secondAttribute="centerX" id="bPa-XU-2fr"/>
                                     <constraint firstItem="hCX-ve-AUc" firstAttribute="centerY" secondItem="cEH-hC-LUR" secondAttribute="centerY" id="pET-VZ-tGm"/>
-                                    <constraint firstItem="hCX-ve-AUc" firstAttribute="leading" secondItem="eDc-Px-LmS" secondAttribute="leading" constant="8" id="tg9-4i-FKA"/>
-                                    <constraint firstAttribute="trailing" secondItem="ycJ-9P-nyX" secondAttribute="trailing" constant="8" id="trj-hj-R6F"/>
-                                    <constraint firstItem="cEH-hC-LUR" firstAttribute="top" secondItem="eDc-Px-LmS" secondAttribute="top" constant="20" id="v2E-Bb-tY1"/>
+                                    <constraint firstItem="cEH-hC-LUR" firstAttribute="top" secondItem="eDc-Px-LmS" secondAttribute="top" constant="32" id="v2E-Bb-tY1"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-1p-Fm6" customClass="MagnifierCloseView" customModule="Enfoca">
