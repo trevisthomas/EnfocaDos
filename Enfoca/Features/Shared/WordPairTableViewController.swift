@@ -67,15 +67,15 @@ class WordPairTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? WordPairTableViewCell else { fatalError() }
         
-        let cellFrameInSuperView = tableView.convert(cell.frame, to: view.window)
-        
-        if cell.isCreateMode {
-            delegate.onCreate(atRect: cellFrameInSuperView, cell: cell)
-        } else {
-            delegate.onWordPairSelected(wordPair: wordPairs[indexPath.row], atRect: cellFrameInSuperView, cell: cell)
+        CustomAnimations.bounceAnimation(view: cell, amount: 1.05, duration: 0.23) {
+            let cellFrameInSuperView = self.tableView.convert(cell.frame, to: self.view.window)
+            
+            if cell.isCreateMode {
+                self.delegate.onCreate(atRect: cellFrameInSuperView, cell: cell)
+            } else {
+                self.delegate.onWordPairSelected(wordPair: self.wordPairs[indexPath.row], atRect: cellFrameInSuperView, cell: cell)
+            }
         }
-        
-        
     }
     
     func getVisibleCells() -> [UITableViewCell] {
