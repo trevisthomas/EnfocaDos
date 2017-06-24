@@ -97,7 +97,12 @@ class EditWordPairController: Controller {
     }
     
     func tagsAsString() -> String {
-        return selectedTags.tagsToText()
+        
+        if selectedTags.count == 0 {
+            return "tap here to choose tags"
+        } else {
+            return selectedTags.tagsToText()
+        }
     }
     
     func onEvent(event: Event) {

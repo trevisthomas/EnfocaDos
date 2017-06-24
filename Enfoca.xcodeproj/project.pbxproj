@@ -41,6 +41,8 @@
 		0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */; };
 		0F011EE11EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */; };
 		0F011EE31EF0B53C00939B75 /* MatchingRoundViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */; };
+		0F028DD51EFEFC73008200E2 /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */; };
+		0F028DD61EFEFC73008200E2 /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -417,6 +419,7 @@
 		0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewModel.swift; path = Quiz/QuizViewModel.swift; sourceTree = "<group>"; };
 		0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModel.swift; path = Quiz/MatchingRoundViewModel.swift; sourceTree = "<group>"; };
 		0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModelTests.swift; path = Quiz/MatchingRoundViewModelTests.swift; sourceTree = "<group>"; };
+		0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -642,6 +645,7 @@
 				0F911E171EE30AD100F21855 /* EnfocaButton.swift */,
 				0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */,
 				0F011EA91EEAF03500939B75 /* CheckMarkView.swift */,
+				0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1450,6 +1454,7 @@
 				0F911E4F1EE75D4600F21855 /* UiTestWebService.swift in Sources */,
 				0F911E501EE75D4600F21855 /* JsonDateFormatter.swift in Sources */,
 				0F011ECF1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */,
+				0F028DD61EFEFC73008200E2 /* AnimatedTextField.swift in Sources */,
 				0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */,
 				0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */,
@@ -1694,6 +1699,7 @@
 				0FE015B01EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */,
 				0F011EB11EEB2AAB00939B75 /* QuizOptionsViewController.swift in Sources */,
 				0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */,
+				0F028DD51EFEFC73008200E2 /* AnimatedTextField.swift in Sources */,
 				0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

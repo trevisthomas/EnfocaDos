@@ -23,8 +23,8 @@ class EditorViewController: UIViewController {
     
     @IBOutlet weak var selectedTagsLabel: UILabel!
     
-    @IBOutlet weak var wordTextField: UITextField!
-    @IBOutlet weak var definitionTextField: UITextField!
+    @IBOutlet weak var wordTextField: AnimatedTextField!
+    @IBOutlet weak var definitionTextField: AnimatedTextField!
     @IBOutlet weak var saveButton: EnfocaButton!
     @IBOutlet weak var deleteButton: EnfocaButton!
     private var delegate : EditorViewControllerDelegate!
@@ -73,6 +73,10 @@ class EditorViewController: UIViewController {
         wordTextField.text = delegate.wordText
         definitionTextField.text = delegate.definitionText
         selectedTagsLabel.text = delegate.selectedTagText
+        
+        //TODO! Learn how to make the custom text field realize that the text was set without breaking the text attribute.
+        wordTextField.initialize()
+        definitionTextField.initialize()
     }
     
 }

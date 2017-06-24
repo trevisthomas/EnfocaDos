@@ -202,7 +202,7 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     }
     var selectedTagText : String {
         get {
-            return controller.selectedTags.tagsToText()
+            return controller.tagsAsString()
         }
     }
     
