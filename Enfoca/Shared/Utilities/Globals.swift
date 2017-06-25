@@ -20,3 +20,7 @@ func delay(delayInSeconds: Double, callback: @escaping ()->()) {
     })
 }
 
+func urlEncode(_ string: String) -> String{
+    let urlArg = string.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+    return urlArg
+}

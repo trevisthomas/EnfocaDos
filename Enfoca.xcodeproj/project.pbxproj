@@ -43,6 +43,10 @@
 		0F011EE31EF0B53C00939B75 /* MatchingRoundViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */; };
 		0F028DD51EFEFC73008200E2 /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */; };
 		0F028DD61EFEFC73008200E2 /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */; };
+		0F028DD81F000AE5008200E2 /* LookupTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DD71F000AE5008200E2 /* LookupTextViewController.swift */; };
+		0F028DD91F000AE5008200E2 /* LookupTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DD71F000AE5008200E2 /* LookupTextViewController.swift */; };
+		0F028DDB1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */; };
+		0F028DDC1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -420,6 +424,8 @@
 		0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModel.swift; path = Quiz/MatchingRoundViewModel.swift; sourceTree = "<group>"; };
 		0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModelTests.swift; path = Quiz/MatchingRoundViewModelTests.swift; sourceTree = "<group>"; };
 		0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
+		0F028DD71F000AE5008200E2 /* LookupTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTextViewController.swift; sourceTree = "<group>"; };
+		0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTableViewCell.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -688,6 +694,8 @@
 				0FE015A71EFAF42100780184 /* EditorViewController.swift */,
 				0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */,
 				0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */,
+				0F028DD71F000AE5008200E2 /* LookupTextViewController.swift */,
+				0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -1399,6 +1407,7 @@
 				0F911E221EE75D4600F21855 /* Style.swift in Sources */,
 				0F911E231EE75D4600F21855 /* WordPair.swift in Sources */,
 				0F911E241EE75D4600F21855 /* ApplicationDefaults.swift in Sources */,
+				0F028DD91F000AE5008200E2 /* LookupTextViewController.swift in Sources */,
 				0F911E251EE75D4600F21855 /* OperationCreateMetaData.swift in Sources */,
 				0F911E261EE75D4600F21855 /* OperationUpdateTag.swift in Sources */,
 				0F911E271EE75D4600F21855 /* ProgressObserver.swift in Sources */,
@@ -1424,6 +1433,7 @@
 				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
 				0FE015A31EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */,
 				0FE015941EF5976200780184 /* Randomizer.swift in Sources */,
+				0F028DDC1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */,
 				0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */,
 				0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
 				0FE0159A1EF5C9C100780184 /* Double+.swift in Sources */,
@@ -1677,11 +1687,13 @@
 				0FA4A5631ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift in Sources */,
 				0F011EBD1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift in Sources */,
 				0F011ED41EF04CA700939B75 /* MatchingRoundViewController.swift in Sources */,
+				0F028DD81F000AE5008200E2 /* LookupTextViewController.swift in Sources */,
 				0F011EDA1EF059E900939B75 /* Theme.swift in Sources */,
 				0FA4A5651ECBC93700F31F9A /* HomeController.swift in Sources */,
 				0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */,
 				0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */,
 				0FA4A5431EC8ECD200F31F9A /* OperationDeleteRecord.swift in Sources */,
+				0F028DDB1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */,
 				0FA4A50E1EC8EB2500F31F9A /* UIViewController+.swift in Sources */,
 				0FA4A4E71EC8E91E00F31F9A /* WordPairOrder.swift in Sources */,
 				0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */,

@@ -32,7 +32,7 @@ class LocalApplicationDefaults : ApplicationDefaults {
     var cardSide: CardSide = .definition
     var quizWordCount: Int = 8
     var wordPairOrder: WordPairOrder = .wordAsc
-    var numberOfIncorrectAnswersTillReview: Int = 1
+    var numberOfIncorrectAnswersTillReview: Int = 5
     
     var fetchWordPairPageSize: Int {
         get {

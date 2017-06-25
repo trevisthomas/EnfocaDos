@@ -215,6 +215,31 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     func performTagEdit() {
         performSegue(withIdentifier: "editTags", sender: nil)
     }
+    
+    var dateAdded: String {
+        get {
+            return controller.getDateAdded()
+        }
+    }
+    var dateUpdated: String{
+        get {
+           return controller.getDateUpdated()
+        }
+    }
+    var score: String{
+        get {
+            return controller.getScore()
+        }
+    }
+    var count: String{
+        get {
+            return controller.getCount()
+        }
+    }
+
+    func isCreateMode() -> Bool {
+        return delegate.isCreateMode()
+    }
 }
 
 //For animated transitions

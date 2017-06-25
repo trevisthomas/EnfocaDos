@@ -30,6 +30,7 @@ class EditWordPairController: Controller {
     let isEditMode: Bool
     
     private let originalWordPair: WordPair?
+    private var originalMetaData: MetaData?
     
     init(delegate: EditWordPairControllerDelegate, wordPairOrder order: WordPairOrder, text: String) {
         
@@ -53,8 +54,6 @@ class EditWordPairController: Controller {
         selectedTags.append(contentsOf: wordPair.tags)
         word = wordPair.word
         definition = wordPair.definition
-    
-        
     }
     
     func initialize(){
@@ -69,6 +68,16 @@ class EditWordPairController: Controller {
             
             self.delegate.onTagsLoaded(tags: tags, selectedTags: self.selectedTags)
         }
+        
+        if let wp = originalWordPair {
+            services.fetchMetaData(forWordPair: wp, callback: { (metaData: MetaData?, error:EnfocaError?) in
+                if let error = error {
+                    self.delegate.onError(title: "Failed to load meta data", message: error)
+                }
+                self.originalMetaData = metaData
+            })
+        }
+
     }
     
     func title()->String{
@@ -205,6 +214,29 @@ class EditWordPairController: Controller {
         return word.trim().isEmpty || definition.trim().isEmpty
     }
     
+    func getDateAdded() -> String {
+        guard let dateCreated = originalWordPair?.dateCreated else { return "new"}
+        return toDateString(dateCreated)
+    }
+    func getDateUpdated() -> String{
+        guard let dateUpdated = originalMetaData?.dateUpdated else { return "never"}
+        return toDateString(dateUpdated)
+    }
+    func getScore() -> String{
+        guard let score = originalMetaData?.scoreAsString else { return "--%"}
+        return score
+    }
+    func getCount() -> String{
+        guard let metaData = originalMetaData else { return "none"}
+        
+        return "\(metaData.timedViewCount)"
+    }
+    
+    func toDateString(_ date: Date) -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter.string(from: date)
+    }
     
 }
 
