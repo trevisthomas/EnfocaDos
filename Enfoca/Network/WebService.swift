@@ -44,4 +44,6 @@ protocol WebService {
     func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(MetaData?, EnfocaError?)->())
     
     func fetchMetaData(forWordPair: WordPair, callback: @escaping(MetaData?, EnfocaError?)->())
+    
+    func fetchDictionaryList(callback : @escaping([Dictionary]?, EnfocaError?)->())
 }

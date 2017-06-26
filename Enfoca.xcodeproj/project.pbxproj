@@ -36,8 +36,6 @@
 		0F011ED51EF04CA700939B75 /* MatchingRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ED31EF04CA700939B75 /* MatchingRoundViewController.swift */; };
 		0F011EDA1EF059E900939B75 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ED91EF059E900939B75 /* Theme.swift */; };
 		0F011EDB1EF059E900939B75 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011ED91EF059E900939B75 /* Theme.swift */; };
-		0F011EDD1EF06C4000939B75 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */; };
-		0F011EDE1EF06C4000939B75 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */; };
 		0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */; };
 		0F011EE11EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */; };
 		0F011EE31EF0B53C00939B75 /* MatchingRoundViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */; };
@@ -47,6 +45,18 @@
 		0F028DD91F000AE5008200E2 /* LookupTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DD71F000AE5008200E2 /* LookupTextViewController.swift */; };
 		0F028DDB1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */; };
 		0F028DDC1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */; };
+		0F028DDE1F00C42B008200E2 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDD1F00C42B008200E2 /* Dictionary.swift */; };
+		0F028DDF1F00C42B008200E2 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDD1F00C42B008200E2 /* Dictionary.swift */; };
+		0F028DE11F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DE01F00CDE4008200E2 /* FetchUserDictionaryList.swift */; };
+		0F028DE21F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DE01F00CDE4008200E2 /* FetchUserDictionaryList.swift */; };
+		0F028DE51F00D39A008200E2 /* DictionarySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F028DE41F00D39A008200E2 /* DictionarySelection.storyboard */; };
+		0F028DE61F00D39A008200E2 /* DictionarySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F028DE41F00D39A008200E2 /* DictionarySelection.storyboard */; };
+		0F028DE81F00DC3A008200E2 /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DE71F00DC3A008200E2 /* SubjectTableViewCell.swift */; };
+		0F028DE91F00DC3A008200E2 /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DE71F00DC3A008200E2 /* SubjectTableViewCell.swift */; };
+		0F028DEB1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DEA1F00DCBB008200E2 /* DictionarySelectionViewController.swift */; };
+		0F028DEC1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DEA1F00DCBB008200E2 /* DictionarySelectionViewController.swift */; };
+		0F028DEE1F00DD78008200E2 /* DictionarySelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DED1F00DD78008200E2 /* DictionarySelectionViewModel.swift */; };
+		0F028DEF1F00DD78008200E2 /* DictionarySelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DED1F00DD78008200E2 /* DictionarySelectionViewModel.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -420,12 +430,17 @@
 		0F011ED01EF0490E00939B75 /* MatchingQuizTagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingQuizTagCell.swift; path = Quiz/MatchingQuizTagCell.swift; sourceTree = "<group>"; };
 		0F011ED31EF04CA700939B75 /* MatchingRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewController.swift; path = Quiz/MatchingRoundViewController.swift; sourceTree = "<group>"; };
 		0F011ED91EF059E900939B75 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewModel.swift; path = Quiz/QuizViewModel.swift; sourceTree = "<group>"; };
 		0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModel.swift; path = Quiz/MatchingRoundViewModel.swift; sourceTree = "<group>"; };
 		0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModelTests.swift; path = Quiz/MatchingRoundViewModelTests.swift; sourceTree = "<group>"; };
 		0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
 		0F028DD71F000AE5008200E2 /* LookupTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTextViewController.swift; sourceTree = "<group>"; };
 		0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTableViewCell.swift; sourceTree = "<group>"; };
+		0F028DDD1F00C42B008200E2 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		0F028DE01F00CDE4008200E2 /* FetchUserDictionaryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserDictionaryList.swift; sourceTree = "<group>"; };
+		0F028DE41F00D39A008200E2 /* DictionarySelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DictionarySelection.storyboard; path = DictionarySelection/DictionarySelection.storyboard; sourceTree = "<group>"; };
+		0F028DE71F00DC3A008200E2 /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubjectTableViewCell.swift; path = DictionarySelection/SubjectTableViewCell.swift; sourceTree = "<group>"; };
+		0F028DEA1F00DCBB008200E2 /* DictionarySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionarySelectionViewController.swift; path = DictionarySelection/DictionarySelectionViewController.swift; sourceTree = "<group>"; };
+		0F028DED1F00DD78008200E2 /* DictionarySelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionarySelectionViewModel.swift; path = DictionarySelection/DictionarySelectionViewModel.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -622,7 +637,6 @@
 			isa = PBXGroup;
 			children = (
 				0F011EB31EEB2B2300939B75 /* Quiz.storyboard */,
-				0F011EDC1EF06C4000939B75 /* QuizViewModel.swift */,
 				0F011EAD1EEB25FB00939B75 /* QuizOptionsViewModel.swift */,
 				0F011EB01EEB2AAB00939B75 /* QuizOptionsViewController.swift */,
 				0F011EC01EED981100939B75 /* CardFrontViewController.swift */,
@@ -643,6 +657,17 @@
 				0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */,
 			);
 			name = Quiz;
+			sourceTree = "<group>";
+		};
+		0F028DE31F00D2FE008200E2 /* DictionarySelection */ = {
+			isa = PBXGroup;
+			children = (
+				0F028DE41F00D39A008200E2 /* DictionarySelection.storyboard */,
+				0F028DE71F00DC3A008200E2 /* SubjectTableViewCell.swift */,
+				0F028DEA1F00DCBB008200E2 /* DictionarySelectionViewController.swift */,
+				0F028DED1F00DD78008200E2 /* DictionarySelectionViewModel.swift */,
+			);
+			name = DictionarySelection;
 			sourceTree = "<group>";
 		};
 		0F085B671ED54C1E00FC20A1 /* CustomViews */ = {
@@ -859,6 +884,7 @@
 				0F085B6A1ED7488300FC20A1 /* Browse */,
 				0F085B841EDC642300FC20A1 /* Edit */,
 				0FA4A5541EC8F4F400F31F9A /* Home */,
+				0F028DE31F00D2FE008200E2 /* DictionarySelection */,
 				0FA4A4B51EC8A56F00F31F9A /* Loading */,
 				0FAD20CF1ECF5ACC002EACDA /* Shared */,
 			);
@@ -910,6 +936,7 @@
 				0FA4A4DB1EC8E91E00F31F9A /* User.swift */,
 				0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */,
 				0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */,
+				0F028DDD1F00C42B008200E2 /* Dictionary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1000,6 +1027,7 @@
 				0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */,
 				0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */,
 				0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */,
+				0F028DE01F00CDE4008200E2 /* FetchUserDictionaryList.swift */,
 				0FA4A5211EC8EC9000F31F9A /* InternalUser.swift */,
 			);
 			path = Authentication;
@@ -1308,6 +1336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F911E741EE75D4600F21855 /* LaunchScreen.storyboard in Resources */,
+				0F028DE61F00D39A008200E2 /* DictionarySelection.storyboard in Resources */,
 				0F911E751EE75D4600F21855 /* Assets.xcassets in Resources */,
 				0F911E761EE75D4600F21855 /* Browse.storyboard in Resources */,
 				0F911E771EE75D4600F21855 /* WordPairTableStoryboard.storyboard in Resources */,
@@ -1350,6 +1379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F911EFB1EE76CDD00F21855 /* study_item_meta.json in Resources */,
+				0F028DE51F00D39A008200E2 /* DictionarySelection.storyboard in Resources */,
 				0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */,
 				0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */,
 				0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */,
@@ -1400,6 +1430,7 @@
 				0FE015901EF4B20D00780184 /* QuizResultsViewController.swift in Sources */,
 				0FE015911EF4B20D00780184 /* CustomAnimations.swift in Sources */,
 				0F011EC61EED986400939B75 /* EnfocaHeaderViewAnimationTarget.swift in Sources */,
+				0F028DE91F00DC3A008200E2 /* SubjectTableViewCell.swift in Sources */,
 				0F011EC21EED981100939B75 /* CardFrontViewController.swift in Sources */,
 				0F911F321EE915E400F21855 /* ActivityIndicatable.swift in Sources */,
 				0F911F331EE915E400F21855 /* UITextField+.swift in Sources */,
@@ -1408,6 +1439,7 @@
 				0F911E231EE75D4600F21855 /* WordPair.swift in Sources */,
 				0F911E241EE75D4600F21855 /* ApplicationDefaults.swift in Sources */,
 				0F028DD91F000AE5008200E2 /* LookupTextViewController.swift in Sources */,
+				0F028DEC1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */,
 				0F911E251EE75D4600F21855 /* OperationCreateMetaData.swift in Sources */,
 				0F911E261EE75D4600F21855 /* OperationUpdateTag.swift in Sources */,
 				0F911E271EE75D4600F21855 /* ProgressObserver.swift in Sources */,
@@ -1469,12 +1501,15 @@
 				0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */,
 				0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */,
 				0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */,
+				0F028DE21F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */,
 				0F911E561EE75D4600F21855 /* BaseUserOperation.swift in Sources */,
 				0F911E571EE75D4600F21855 /* TagFilterViewModel.swift in Sources */,
+				0F028DEF1F00DD78008200E2 /* DictionarySelectionViewModel.swift in Sources */,
 				0F011EBB1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */,
 				0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */,
 				0F911E591EE75D4600F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */,
+				0F028DDF1F00C42B008200E2 /* Dictionary.swift in Sources */,
 				0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */,
 				0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */,
 				0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */,
@@ -1489,7 +1524,6 @@
 				0F911E631EE75D4600F21855 /* WordPairOrder.swift in Sources */,
 				0F911E641EE75D4600F21855 /* FetchUserRecordOperation.swift in Sources */,
 				0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */,
-				0F011EDE1EF06C4000939B75 /* QuizViewModel.swift in Sources */,
 				0F911E671EE75D4600F21855 /* WebService.swift in Sources */,
 				0F911E681EE75D4600F21855 /* OperationFetchMetaData.swift in Sources */,
 				0F911E691EE75D4600F21855 /* FetchUserRecordId.swift in Sources */,
@@ -1608,6 +1642,7 @@
 				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
 				0F011EAE1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */,
 				0F011ED11EF0490E00939B75 /* MatchingQuizTagCell.swift in Sources */,
+				0F028DE11F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */,
 				0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
@@ -1630,11 +1665,13 @@
 				0F011ECE1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */,
 				0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */,
 				0F911E0C1EE08E8300F21855 /* TagCell.swift in Sources */,
+				0F028DEE1F00DD78008200E2 /* DictionarySelectionViewModel.swift in Sources */,
 				0F911E181EE30AD100F21855 /* EnfocaButton.swift in Sources */,
 				0FD1E20B1ED08E7900D8BD1A /* WordPairTableViewCell.swift in Sources */,
 				0FA4A5181EC8EC6E00F31F9A /* Perform+Tags.swift in Sources */,
 				0FA4A50C1EC8EB2500F31F9A /* Sequence+.swift in Sources */,
 				0FA4A58B1ECCAE9C00F31F9A /* Event.swift in Sources */,
+				0F028DEB1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */,
 				0FD1E2071ED0822900D8BD1A /* WordPairTableViewController.swift in Sources */,
 				0F011EC11EED981100939B75 /* CardFrontViewController.swift in Sources */,
 				0F911F071EE76CFA00F21855 /* OldMetaData.swift in Sources */,
@@ -1643,7 +1680,6 @@
 				0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
-				0F011EDD1EF06C4000939B75 /* QuizViewModel.swift in Sources */,
 				0F911F311EE9053C00F21855 /* ActivityIndicatable.swift in Sources */,
 				0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */,
 				0F911F061EE76CFA00F21855 /* Import.swift in Sources */,
@@ -1659,6 +1695,7 @@
 				0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */,
 				0FE015931EF5976200780184 /* Randomizer.swift in Sources */,
 				0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */,
+				0F028DDE1F00C42B008200E2 /* Dictionary.swift in Sources */,
 				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,
 				0F011ECB1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
@@ -1710,6 +1747,7 @@
 				0FE015A81EFAF42100780184 /* EditorViewController.swift in Sources */,
 				0FE015B01EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */,
 				0F011EB11EEB2AAB00939B75 /* QuizOptionsViewController.swift in Sources */,
+				0F028DE81F00DC3A008200E2 /* SubjectTableViewCell.swift in Sources */,
 				0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */,
 				0F028DD51EFEFC73008200E2 /* AnimatedTextField.swift in Sources */,
 				0FA4A5171EC8EC6E00F31F9A /* Perform.swift in Sources */,

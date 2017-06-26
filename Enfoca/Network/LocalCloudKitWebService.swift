@@ -16,7 +16,7 @@ class LocalCloudKitWebService : WebService {
     private(set) var enfocaId : NSNumber!
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
-    private(set) var userRecordId : CKRecordID!
+    private(set) var userRecordId : CKRecordID!  //Not really using this here.
     private var dataStore: DataStore!
     
     var showNetworkActivityIndicator: Bool {
@@ -28,6 +28,26 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
+    //This will replace initialize
+    func fetchDictionaryList(callback : @escaping([Dictionary]?, EnfocaError?)->()){
+        db = CKContainer.default().publicCloudDatabase
+        privateDb = CKContainer.default().privateCloudDatabase
+        
+        Perform.loadUserDictionaryList(db: db) { (list: [Dictionary]?, error: String?) in
+            if let error = error {
+                callback(nil, error)
+            }
+            
+            guard let _ = list else {
+                callback([], nil)
+                return
+            }
+            callback(list, nil)
+        }
+    }
+    
+    
+    //Once multiple dictionaries are working, this old initialize will be deprecated.
     func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
         db = CKContainer.default().publicCloudDatabase

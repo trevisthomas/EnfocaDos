@@ -8,6 +8,28 @@
 
 import Foundation
 
+protocol QuizViewModel {
+    func getRearWord() -> String
+    func getFrontWord() -> String
+    
+    func correct()
+    func incorrect()
+    
+    func getWordPairsForMatchingRound() -> [WordPair]
+    
+    func isTimeForMatchingRound() -> Bool
+    func isFinished() -> Bool
+    
+    func getCorrectCount()->Int
+    func getWordsAskedCount()->Int
+    func getScore()->String
+    
+    func retry()
+    
+    func isRetrySuggested() -> Bool
+}
+
+
 class QuizOptionsViewModel: Controller, QuizViewModel {
     private let tag: Tag
     private(set) var wordCount: Int!  

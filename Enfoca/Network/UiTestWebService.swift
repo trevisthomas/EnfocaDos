@@ -10,6 +10,8 @@ import UIKit
 
 class UiTestWebService : WebService {
     
+
+    
     private(set) var enfocaId : NSNumber!
     private var dataStore: DataStore!
     
@@ -245,6 +247,10 @@ class UiTestWebService : WebService {
     
     func fetchMetaData(forWordPair: WordPair, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
         callback(dataStore.getMetaData(forWordPair: forWordPair), nil)
+    }
+    
+    func fetchDictionaryList(callback: @escaping ([Dictionary]?, EnfocaError?) -> ()) {
+        callback([], nil) //Hm
     }
 
 }

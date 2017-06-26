@@ -9,6 +9,7 @@
 import UIKit
 
 class DemoWebService : WebService {
+    
     /**
      A null tag is how you ask for words of any tag.
      */
@@ -184,5 +185,10 @@ class DemoWebService : WebService {
     func fetchMetaData(forWordPair: WordPair, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
         fatalError()
     }
+    
+    func fetchDictionaryList(callback: @escaping ([Dictionary]?, EnfocaError?) -> ()) {
+        fatalError()  //Yeah, gonna need to do something about this.
+    }
+
 
 }
