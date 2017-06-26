@@ -11,38 +11,6 @@ import CloudKit
 
 class Perform {
     
-    //This is/will-be the new authentication method
-    class func loadUserDictionaryList(db: CKDatabase, callback : @escaping (_ dictionaryList :  [Dictionary]?,_ error : String?) -> ()){
-        
-        let user : InternalUser = InternalUser()
-        let queue = OperationQueue()
-        let errorHandler = ErrorHandler(queue: queue, callback: callback)
-        
-        let completeOp = BlockOperation {
-            //            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            //            print ("Tags loaded: \(fetchOp.tags)")
-            OperationQueue.main.addOperation{
-                print(user.recordId)
-                callback(user.dictionaryList, nil)
-            }
-        }
-        
-        let fetchUserId = FetchUserRecordId(user: user, db: db, errorDelegate: errorHandler)
-        let cloudAuth = CloudAuthOperation(user: user, db: db, errorDelegate: errorHandler)
-        let fetchUserRecord = FetchUserRecordOperation(user: user, db: db, errorDelegate: errorHandler)
-        
-        let fetchDictionaryList = FetchUserDictionaryList(user: user, db: db, errorDelegate: errorHandler)
-        
-        fetchUserId.addDependency(cloudAuth)
-        fetchUserRecord.addDependency(fetchUserId)
-        fetchDictionaryList.addDependency(fetchUserRecord)
-        
-        completeOp.addDependency(fetchDictionaryList)
-        
-        queue.addOperations([fetchUserId, cloudAuth, fetchUserRecord, fetchDictionaryList, completeOp], waitUntilFinished: false)
-        
-    }
-    
     class func authentcate(db: CKDatabase, callback : @escaping (_ userTuple : (Int, CKRecordID)?,_ error : String?) -> ()){
         
         let user : InternalUser = InternalUser()

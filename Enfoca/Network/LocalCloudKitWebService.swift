@@ -28,22 +28,44 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
-    //This will replace initialize
+    //This needs to be called first to initialize the things.  
+    //It will eventually replace the old init method.
     func fetchDictionaryList(callback : @escaping([Dictionary]?, EnfocaError?)->()){
+        
+        showNetworkActivityIndicator = true
+        
         db = CKContainer.default().publicCloudDatabase
         privateDb = CKContainer.default().privateCloudDatabase
         
-        Perform.loadUserDictionaryList(db: db) { (list: [Dictionary]?, error: String?) in
+        Perform.initialize(db: db) { (tuple:(CKRecordID, [Dictionary])?, error: String?) in
+            self.showNetworkActivityIndicator = false
             if let error = error {
                 callback(nil, error)
             }
             
-            guard let _ = list else {
-                callback([], nil)
-                return
-            }
-            callback(list, nil)
+            guard let tuple = tuple else { fatalError("Something bad happend with initialization") }
+            
+            self.userRecordId = tuple.0
+          
+            callback(tuple.1, nil)
         }
+    }
+    
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String, callback : @escaping(Dictionary?, EnfocaError?)->()) {
+        showNetworkActivityIndicator = true
+        
+        let dictionary = Dictionary(dictionaryId: "not-set", userRef: userRecordId.recordName, enfocaId: -1, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
+        
+        //Remember, this method generates an enfoca id.
+        Perform.createDictionary(db: db, dictionary: dictionary) { (dictionary: Dictionary?, error: String?) in
+            
+            if let error = error { callback(nil, error) }
+            
+            guard let dictionary = dictionary else { fatalError("Unhandled error") }
+            
+            callback(dictionary, nil)
+        }
+        
     }
     
     

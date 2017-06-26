@@ -85,9 +85,14 @@ class CloudKitConverters{
         guard let termTitle = record.value(forKey: "termTitle") as? String else { fatalError() }
         guard let subject = record.value(forKey: "subject") as? String else { fatalError() }
         guard let enfocaId = record.value(forKey: "enfocaId") as? NSNumber else { fatalError() }
+       
+        guard let userRef = record.value(forKey: "userRef") as? CKReference else {
+            fatalError()
+        }
         
+        guard let language = record.value(forKey: "language") as? String else { fatalError() }
         
-        let dict = Dictionary(enfocaId: enfocaId, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject)
+        let dict = Dictionary(dictionaryId: record.recordID.recordName, userRef: userRef.recordID.recordName, enfocaId: enfocaId, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
         
         return dict 
     }

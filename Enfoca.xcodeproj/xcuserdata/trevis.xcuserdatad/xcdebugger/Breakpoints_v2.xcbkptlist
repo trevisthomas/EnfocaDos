@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "520153908.985861"
+            timestampString = "520206159.768452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
+            startingLineNumber = "351"
+            endingLineNumber = "351"
             landmarkName = "updateScore(forWordPair:correct:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -344,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "520153908.985861"
+            timestampString = "520206159.768452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
             landmarkName = "updateScore(forWordPair:correct:callback:)"
             landmarkType = "7">
             <Locations>
@@ -392,11 +392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "520153908.985861"
+            timestampString = "520206159.768452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
             landmarkName = "updateScore(forWordPair:correct:callback:)"
             landmarkType = "7">
             <Locations>
@@ -504,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "520153908.985861"
+            timestampString = "520206159.768452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
             landmarkName = "updateScore(forWordPair:correct:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -520,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "520153908.985861"
+            timestampString = "520206159.768452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
             landmarkName = "updateScore(forWordPair:correct:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -788,16 +788,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "520154189.456404"
+            filePath = "Enfoca/Features/DictionarySelection/NewAppLaunchViewController.swift"
+            timestampString = "520209592.940513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "fetchDictionaryList(callback:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "launch()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
