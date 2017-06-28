@@ -201,15 +201,19 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
 
 extension AnimatedTextField {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let nextTag = textField.tag+1;
+//        let nextTag = textField.tag+1;
+//        
+//        if let loginButton = textField.superview?.viewWithTag(nextTag) as? UIButton!{
+//            loginButton.sendActions(for: UIControlEvents.touchUpInside)
+//        } else if let nextResponder=textField.superview?.viewWithTag(nextTag) as UIResponder!{
+//            nextResponder.becomeFirstResponder()
+//        } else {
+//            textField.resignFirstResponder()
+//        }
+//        return false // We do not want UITextField to insert line-breaks.
+//        return false 
         
-        if let loginButton = textField.superview?.viewWithTag(nextTag) as? UIButton!{
-            loginButton.sendActions(for: UIControlEvents.touchUpInside)
-        } else if let nextResponder=textField.superview?.viewWithTag(nextTag) as UIResponder!{
-            nextResponder.becomeFirstResponder()
-        } else {
-            textField.resignFirstResponder()
-        }
-        return false // We do not want UITextField to insert line-breaks.
+        textField.endEditing(true)
+        return false
     }
 }

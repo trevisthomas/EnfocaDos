@@ -20,6 +20,8 @@ class DictionaryEditorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        hideKeyboardWhenTappedAround()
+        
         reload()
     }
     
