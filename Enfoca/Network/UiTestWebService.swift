@@ -12,6 +12,7 @@ class UiTestWebService : WebService {
     
 
     
+    private(set) var dictionary: Dictionary!
     private(set) var enfocaId : NSNumber!
     private var dataStore: DataStore!
     
@@ -56,7 +57,7 @@ class UiTestWebService : WebService {
 //    }
 
     
-    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func initialize(dictionary: Dictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
         
         //TODO: load from json

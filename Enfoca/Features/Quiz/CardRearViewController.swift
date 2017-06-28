@@ -9,7 +9,7 @@
 import UIKit
 
 
-class CardRearViewController: UIViewController, HomeFromQuizAnimatorTarget {
+class CardRearViewController: UIViewController {
 
     @IBOutlet weak var definitionLabel: UILabel!
     
@@ -132,4 +132,10 @@ extension CardRearViewController: ChangeCardAnimatorTarget, QuizCardAnimatorTarg
         return titleLabel
     }
     
+}
+
+extension CardRearViewController: HomeFromQuizAnimatorTarget {
+    func getHeaderHeight() -> CGFloat {
+        return headerHightConstrant.constant
+    }
 }

@@ -14,6 +14,7 @@ protocol ApplicationDefaults {
     var fetchWordPairPageSize : Int {get}
     func save(includingDataStore json: String?)
     func load() -> String?
+    func clearUserDefauts()
     
     var cardOrder: CardOrder {get set}
     var cardSide: CardSide {get set}
@@ -53,6 +54,11 @@ class LocalApplicationDefaults : ApplicationDefaults {
         if let json = json {
             defaults.setValue(json, forKey: dataStoreKey)
         }
+    }
+    
+    func clearUserDefauts() {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: dataStoreKey)
     }
     
     func load() -> String? {

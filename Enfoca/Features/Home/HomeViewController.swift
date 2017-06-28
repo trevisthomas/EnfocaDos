@@ -202,6 +202,10 @@ class HomeViewController: UIViewController {
             showWordTable()
         }
     }
+    
+    @IBAction func backButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "DictionarySelectionSeque", sender: nil)
+    }
  
     //The animator calls this method to let it know that the transition animation is complete
     func transitionComplete() {

@@ -55,22 +55,22 @@ class LoadingViewController: UIViewController {
         }
         let dataStoreJson = getAppDelegate().applicationDefaults.load()
         
-        service.initialize(json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
-            
-            if let error = error {
-                self.presentFatalAlert(title: "Initialization error", message: error)
-            } else {
-                getAppDelegate().webService = service
-                self.performSegue(withIdentifier: "Home", sender: self)
-                
-                
-            }
-            
-            self.endProgress(ofType: "Initializing", message: "Initialization complete.")
-            
-            //            //DELETE ALL
-            //            Perform.deleteAllRecords(dataStore: getAppDelegate().applicationDefaults.dataStore, enfocaId: service.enfocaId, db: service.db)
-        }
+//        service.initialize(dictionary: <#Dictionary#>, json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
+//            
+//            if let error = error {
+//                self.presentFatalAlert(title: "Initialization error", message: error)
+//            } else {
+//                getAppDelegate().webService = service
+//                self.performSegue(withIdentifier: "Home", sender: self)
+//                
+//                
+//            }
+//            
+//            self.endProgress(ofType: "Initializing", message: "Initialization complete.")
+//            
+//            //            //DELETE ALL
+//            //            Perform.deleteAllRecords(dataStore: getAppDelegate().applicationDefaults.dataStore, enfocaId: service.enfocaId, db: service.db)
+//        }
 
         
         

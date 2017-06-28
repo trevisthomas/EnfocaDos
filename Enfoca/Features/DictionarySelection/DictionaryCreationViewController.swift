@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class DictionaryCreationViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -29,6 +31,14 @@ class DictionaryCreationViewController: UIViewController {
         tableView.separatorStyle = .none
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let to = segue.destination as? DictionaryEditorViewController {
+//            to.transitioningDelegate = self
+            guard let dictionary = sender as? Dictionary else { fatalError() }
+            to.initialize(dictionary: dictionary)
+            
+        }
+    }
 
 }
 extension DictionaryCreationViewController: DictionaryCreationViewModelDelegate {
@@ -45,6 +55,8 @@ extension DictionaryCreationViewController: UITableViewDelegate {
     
 }
 
+
+
 extension DictionaryCreationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dictionaryList.count
@@ -53,9 +65,15 @@ extension DictionaryCreationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SubjectTableViewCell.identifier, for: indexPath) as? SubjectTableViewCell else { fatalError() }
         
-        cell.initialize(dictionary: viewModel.dictionaryList[indexPath.row])
+        cell.initialize(delegate: self, dictionary: viewModel.dictionaryList[indexPath.row])
         
         return cell
     }
     
+}
+
+extension DictionaryCreationViewController: SubjectTableViewCellDelegate {
+    func performSelect(dictionary: Dictionary) {
+        performSegue(withIdentifier: "CreateDictionarySegue", sender: dictionary)
+    }
 }

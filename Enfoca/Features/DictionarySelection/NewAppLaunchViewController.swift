@@ -49,6 +49,7 @@ class NewAppLaunchViewController: UIViewController {
                 //Got some
                 self.performSegue(withIdentifier: "DictionarySelectionSegue", sender: dictionaryList)
                 //TODO!  Check app defaults, if they have them, segue to home!
+                
             } else {
                 //Got none
                 self.performSegue(withIdentifier: "DictionaryCreationSegue", sender: nil)

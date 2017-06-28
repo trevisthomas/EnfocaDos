@@ -12,7 +12,7 @@ import CloudKit
 
 class LocalCloudKitWebService : WebService {
     
-    
+    private(set) var dictionary: Dictionary!
     private(set) var enfocaId : NSNumber!
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
@@ -30,6 +30,7 @@ class LocalCloudKitWebService : WebService {
     
     //This needs to be called first to initialize the things.  
     //It will eventually replace the old init method.
+    //TODO: Rename to pre-initialize?
     func fetchDictionaryList(callback : @escaping([Dictionary]?, EnfocaError?)->()){
         
         showNetworkActivityIndicator = true
@@ -43,7 +44,11 @@ class LocalCloudKitWebService : WebService {
                 callback(nil, error)
             }
             
-            guard let tuple = tuple else { fatalError("Something bad happend with initialization") }
+            guard let tuple = tuple else {
+                callback([], nil)
+                return
+            }
+            
             
             self.userRecordId = tuple.0
           
@@ -68,48 +73,79 @@ class LocalCloudKitWebService : WebService {
         
     }
     
-    
-    //Once multiple dictionaries are working, this old initialize will be deprecated.
-    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func initialize(dictionary: Dictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
-        db = CKContainer.default().publicCloudDatabase
-        privateDb = CKContainer.default().privateCloudDatabase
+        self.enfocaId = dictionary.enfocaId
+        self.dictionary = dictionary
+            
+        let ds = DataStore()
         
-        Perform.authentcate(db: db) { (userTuple : (Int, CKRecordID)?, error: String?) in
-            guard let userTuple = userTuple else {
-                callback(false, error)
-                return
-            }
-            print("EnfocaId: \(userTuple.0)")
-            self.enfocaId = NSNumber(value: userTuple.0)
-            self.userRecordId = userTuple.1
-            
-            let ds = DataStore()
-            
-            if let json = json {
-                ds.initialize(json: json)
-            }
-            
-            if ds.isInitialized {
-                self.dataStore = ds
-                callback(true, nil)
-                return
-            } else {
-                Perform.initializeDataStore(dataStore: ds, enfocaId: self.enfocaId, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
-                    if let error = error {
-                        callback(false, error)
-                    }
-                    guard let dataStore = ds else {
-                        callback(false, "DataStore was nil.  This is a fatal error.")
-                        return;
-                    }
-                    self.dataStore = dataStore
-                    
-                    callback(true, nil)
+        if let json = json {
+            ds.initialize(json: json)
+        }
+        
+        if ds.isInitialized {
+            self.dataStore = ds
+            callback(true, nil)
+            return
+        } else {
+            Perform.initializeDataStore(dataStore: ds, enfocaId: self.enfocaId, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
+                if let error = error {
+                    callback(false, error)
                 }
+                guard let dataStore = ds else {
+                    callback(false, "DataStore was nil.  This is a fatal error.")
+                    return;
+                }
+                self.dataStore = dataStore
+                
+                callback(true, nil)
             }
         }
+        
     }
+    
+    //Once multiple dictionaries are working, this old initialize will be deprecated.
+//    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+//        
+//        db = CKContainer.default().publicCloudDatabase
+//        privateDb = CKContainer.default().privateCloudDatabase
+//        
+//        Perform.authentcate(db: db) { (userTuple : (Int, CKRecordID)?, error: String?) in
+//            guard let userTuple = userTuple else {
+//                callback(false, error)
+//                return
+//            }
+//            print("EnfocaId: \(userTuple.0)")
+//            self.enfocaId = NSNumber(value: userTuple.0)
+//            self.userRecordId = userTuple.1
+//            
+//            let ds = DataStore()
+//            
+//            if let json = json {
+//                ds.initialize(json: json)
+//            }
+//            
+//            if ds.isInitialized {
+//                self.dataStore = ds
+//                callback(true, nil)
+//                return
+//            } else {
+//                Perform.initializeDataStore(dataStore: ds, enfocaId: self.enfocaId, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
+//                    if let error = error {
+//                        callback(false, error)
+//                    }
+//                    guard let dataStore = ds else {
+//                        callback(false, "DataStore was nil.  This is a fatal error.")
+//                        return;
+//                    }
+//                    self.dataStore = dataStore
+//                    
+//                    callback(true, nil)
+//                }
+//            }
+//        }
+//    }
     
     func serialize() -> String? {
         return dataStore.toJson()

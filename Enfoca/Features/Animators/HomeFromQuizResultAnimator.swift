@@ -10,7 +10,7 @@
 import UIKit
 
 protocol HomeFromQuizAnimatorTarget {
-    var headerHightConstrant: NSLayoutConstraint! {get set}
+    func getHeaderHeight() -> CGFloat
 }
 
 public class HomeFromQuizResultAnimator: NSObject, UIViewControllerAnimatedTransitioning {
@@ -56,7 +56,7 @@ public class HomeFromQuizResultAnimator: NSObject, UIViewControllerAnimatedTrans
         
         let origHeightConstraintOnGray = toViewController.hightConstraintOnGray.constant
         
-        toViewController.hightConstraintOnGray.constant = fromViewController.headerHightConstrant.constant
+        toViewController.hightConstraintOnGray.constant = fromViewController.getHeaderHeight()
         
         //Magic happens
         toViewController.view.layoutIfNeeded()

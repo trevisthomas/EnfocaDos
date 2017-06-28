@@ -84,6 +84,13 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
         textFieldDidEndEditing(self)
     }
     
+    override var text: String? {
+        didSet {
+            textFieldDidEndEditing(self)
+        }
+    }
+    
+    
 //    func textFieldValueChanged(_ textField: UITextField) {
 //                textFieldDidEndEditing(self)
 //            }

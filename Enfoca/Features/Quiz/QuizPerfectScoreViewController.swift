@@ -8,8 +8,8 @@
 
 import UIKit
 
-class QuizPerfectScoreViewController: UIViewController, HomeFromQuizAnimatorTarget {
-
+class QuizPerfectScoreViewController: UIViewController {
+    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
@@ -61,6 +61,12 @@ extension QuizPerfectScoreViewController: EnfocaDefaultAnimatorTarget {
     }
     func getBodyContentView() -> UIView {
         return contentBodyView
+    }
+}
+
+extension QuizPerfectScoreViewController: HomeFromQuizAnimatorTarget {
+    func getHeaderHeight() -> CGFloat {
+        return headerHightConstrant.constant
     }
 }
 

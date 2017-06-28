@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuizResultsViewController: UIViewController, HomeFromQuizAnimatorTarget {
+class QuizResultsViewController: UIViewController {
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var askedLabel: UILabel!
@@ -86,5 +86,11 @@ extension QuizResultsViewController: EnfocaDefaultAnimatorTarget {
     }
     func getBodyContentView() -> UIView {
         return contentBodyView
+    }
+}
+
+extension QuizResultsViewController: HomeFromQuizAnimatorTarget {
+    func getHeaderHeight() -> CGFloat {
+        return headerHightConstrant.constant
     }
 }

@@ -21,7 +21,7 @@ class DemoWebService : WebService {
         fatalError()
     }
 
-    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
+    func initialize(dictionary: Dictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
         callback(true, nil)
     }
     
