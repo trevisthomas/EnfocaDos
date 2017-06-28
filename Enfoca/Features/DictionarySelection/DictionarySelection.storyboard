@@ -83,11 +83,11 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zpq-p5-VR6" id="2w9-nj-Mmh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-jP-SAS" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
-                                                            <rect key="frame" x="16" y="8" width="311" height="50"/>
+                                                            <rect key="frame" x="16" y="8" width="350" height="50"/>
                                                             <color key="backgroundColor" red="0.64324307439999995" green="0.80505788330000005" blue="0.46183288099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="Zgt-gd-XBQ"/>
@@ -149,6 +149,7 @@
                         <outlet property="tableView" destination="oo2-Mn-kct" id="e7s-zT-Icx"/>
                         <segue destination="IJz-yU-CSp" kind="show" identifier="EditDictionarySegue" id="nZR-fD-3Hs"/>
                         <segue destination="78n-cW-n0M" kind="show" identifier="LoadDictionarySegue" id="QEm-8v-cQd"/>
+                        <segue destination="CGS-VD-4sj" kind="show" identifier="DictionaryCreationSegue" id="JRL-ud-1m9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnF-j3-z1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,16 +209,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgC-Re-3EB">
-                                        <rect key="frame" x="376" y="30" width="30" height="30"/>
-                                        <state key="normal" title="Edit">
+                                        <rect key="frame" x="8" y="30" width="34" height="30"/>
+                                        <state key="normal" title="Back">
                                             <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="CGS-VD-4sj" eventType="touchUpInside" id="gQw-UW-rxv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="R0G-Gz-fWU" firstAttribute="centerY" secondItem="kgC-Re-3EB" secondAttribute="centerY" id="5Uy-5T-ltm"/>
-                                    <constraint firstItem="kgC-Re-3EB" firstAttribute="trailing" secondItem="KRT-oK-39Y" secondAttribute="trailing" constant="-8" id="GXi-XG-AUg"/>
+                                    <constraint firstItem="kgC-Re-3EB" firstAttribute="leading" secondItem="KRT-oK-39Y" secondAttribute="leading" constant="8" id="GXi-XG-AUg"/>
                                     <constraint firstItem="R0G-Gz-fWU" firstAttribute="centerX" secondItem="KRT-oK-39Y" secondAttribute="centerX" id="Hjy-aE-6k1"/>
                                     <constraint firstItem="R0G-Gz-fWU" firstAttribute="top" secondItem="KRT-oK-39Y" secondAttribute="top" constant="30" id="Izb-G9-E6l"/>
                                     <constraint firstAttribute="height" constant="64" id="fyf-6G-2Wf"/>
@@ -241,11 +245,11 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWB-b5-iS4" id="cYi-Dz-mA4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-hn-12U" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
-                                                            <rect key="frame" x="16" y="8" width="311" height="50"/>
+                                                            <rect key="frame" x="16" y="8" width="350" height="50"/>
                                                             <color key="backgroundColor" red="0.83594208960000005" green="0.65460956100000001" blue="0.25832647089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="dHC-eW-tDu"/>
@@ -300,6 +304,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="kgC-Re-3EB" id="158-Lt-cVQ"/>
                         <outlet property="tableView" destination="dUx-PG-iIa" id="hRK-Jq-kEF"/>
                         <segue destination="IJz-yU-CSp" kind="show" identifier="CreateDictionarySegue" id="MdF-bd-erP"/>
                     </connections>
@@ -433,6 +438,9 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createOrUpdateButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="y09-oq-vvf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -524,7 +532,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nZR-fD-3Hs"/>
-        <segue reference="QEm-8v-cQd"/>
+        <segue reference="Kqj-gi-NaV"/>
+        <segue reference="MdF-bd-erP"/>
+        <segue reference="Yaf-vT-WQV"/>
     </inferredMetricsTieBreakers>
 </document>

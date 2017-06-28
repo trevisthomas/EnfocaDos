@@ -46,4 +46,6 @@ protocol WebService {
     func fetchMetaData(forWordPair: WordPair, callback: @escaping(MetaData?, EnfocaError?)->())
     
     func fetchDictionaryList(callback : @escaping([Dictionary]?, EnfocaError?)->())
+    
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback : @escaping(Dictionary?, EnfocaError?)->())
 }

@@ -13,15 +13,14 @@ class OperationCreateDictionary : BaseOperation {
     private(set) var dictionary : Dictionary?
     private let dictionarySource : Dictionary
     private let db: CKDatabase
-    private let enfocaId: NSNumber
+    private let enfocaIdProvider: EnfocaIdProvider
     private let ckUserRecordId: CKRecordID
     
     
-    init (enfocaId rawEnfocaId: Int, dictionarySource: Dictionary,  db: CKDatabase, errorDelegate : ErrorDelegate) {
+    init (enfocaIdProvider: EnfocaIdProvider, dictionarySource: Dictionary,  db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.dictionarySource = dictionarySource
-//        self.enfocaId = enfocaId
         
-        self.enfocaId = NSNumber(integerLiteral: rawEnfocaId)
+        self.enfocaIdProvider = enfocaIdProvider
         self.db = db
         
         ckUserRecordId = CloudKitConverters.toCKRecordID(fromRecordName: self.dictionarySource.userRef)
@@ -33,9 +32,6 @@ class OperationCreateDictionary : BaseOperation {
     
     override func start() {
         super.start()
-        
-//        let ckRecordId = CloudKitConverters.toCKRecordID(fromRecordName: self.dictionarySource.userRef)
-        
         
         //Hm, should you let this auto delete if the user is removed? Seems like an edge case but...
         let userReference = CKReference(recordID: ckUserRecordId, action: .none)
@@ -49,9 +45,9 @@ class OperationCreateDictionary : BaseOperation {
         if let _ = dictionarySource.language  {
             record.setValue(dictionarySource.language, forKey: "language")
         }
-        //record.setValue(dictionarySource.enfocaId, forKey: "enfocaId")
         
-//        let enfocaId = NSNumber(integerLiteral: self.user.enfocaId)
+        guard let enfocaId = enfocaIdProvider.enfocaId else { fatalError() }
+        
         record.setValue(enfocaId, forKey: "enfocaId")
         
         db.save(record) { (newRecord: CKRecord?, error: Error?) in

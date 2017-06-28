@@ -10,8 +10,6 @@ import UIKit
 
 class UiTestWebService : WebService {
     
-
-    
     private(set) var dictionary: Dictionary!
     private(set) var enfocaId : NSNumber!
     private var dataStore: DataStore!
@@ -252,6 +250,10 @@ class UiTestWebService : WebService {
     
     func fetchDictionaryList(callback: @escaping ([Dictionary]?, EnfocaError?) -> ()) {
         callback([], nil) //Hm
+    }
+    
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback: @escaping (Dictionary?, EnfocaError?) -> ()) {
+        fatalError()
     }
 
 }

@@ -11,18 +11,22 @@ import CloudKit
 
 
 //TODO errors in this class needs some thought
-class FetchIncrementAndSaveSeedIfNecessary : BaseUserOperation {
+class FetchIncrementAndSaveSeedIfNecessary : BaseOperation {
+    
+    private let db : CKDatabase
+    private var enfocaIdProvider: EnfocaIdProvider
+    
+    init (enfocaIdProvider: EnfocaIdProvider, db: CKDatabase, errorDelegate : ErrorDelegate) {
+        self.db = db
+        self.enfocaIdProvider = enfocaIdProvider
+        super.init(errorDelegate: errorDelegate)
+    }
+    
     
     override func start() {
         state = .inProgress
         
         if isCancelled {
-            done()
-            return
-        }
-        
-        if let _ = user.record.value(forKey: "enfocaId") as? Int {
-            //If he has an enfoca id, then incrementing the seed is not necessary
             done()
             return
         }
@@ -46,7 +50,7 @@ class FetchIncrementAndSaveSeedIfNecessary : BaseUserOperation {
                     print(error)
                     fatalError() //Handle error.  Here is where we'd end up if the error record was updated while you were updating it
                 } else {
-                    self.user.newEnfocaId = enfocaId
+                    self.enfocaIdProvider.enfocaId = NSNumber(integerLiteral: enfocaId)
                 }
                 
                 self.done()

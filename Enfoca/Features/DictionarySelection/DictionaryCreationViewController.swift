@@ -13,8 +13,10 @@ import UIKit
 class DictionaryCreationViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var backButton: UIButton!
     
     var viewModel: DictionaryCreationViewModel!
+    private var isBackButtonNeeded: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,12 @@ class DictionaryCreationViewController: UIViewController {
 
     private func initializeLookAndFeel() {
         tableView.separatorStyle = .none
+        
+        backButton.isHidden = !isBackButtonNeeded
+    }
+    
+    func initialize(isBackButtonNeeded: Bool) {
+        self.isBackButtonNeeded = isBackButtonNeeded
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,6 +48,12 @@ class DictionaryCreationViewController: UIViewController {
         }
     }
 
+    @IBAction func backButtonAction(_ source: Any) {
+        dismiss(animated: true) { 
+            //whatever
+        }
+    }
+    
 }
 extension DictionaryCreationViewController: DictionaryCreationViewModelDelegate {
     func refresh() {
@@ -54,8 +68,6 @@ extension DictionaryCreationViewController: DictionaryCreationViewModelDelegate 
 extension DictionaryCreationViewController: UITableViewDelegate {
     
 }
-
-
 
 extension DictionaryCreationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

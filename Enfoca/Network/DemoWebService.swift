@@ -10,6 +10,8 @@ import UIKit
 
 class DemoWebService : WebService {
     
+
+    
     /**
      A null tag is how you ask for words of any tag.
      */
@@ -189,6 +191,9 @@ class DemoWebService : WebService {
     func fetchDictionaryList(callback: @escaping ([Dictionary]?, EnfocaError?) -> ()) {
         fatalError()  //Yeah, gonna need to do something about this.
     }
-
+    
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback: @escaping (Dictionary?, EnfocaError?) -> ()) {
+        fatalError()
+    }
 
 }

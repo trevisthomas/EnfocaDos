@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F00F8491F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F8481F03731500CE86D7 /* EnfocaIdWrapper.swift */; };
+		0F00F84A1F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F8481F03731500CE86D7 /* EnfocaIdWrapper.swift */; };
 		0F011EA61EE9E31100939B75 /* TagEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */; };
 		0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
 		0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
@@ -428,6 +430,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F00F8481F03731500CE86D7 /* EnfocaIdWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnfocaIdWrapper.swift; path = Dictionary/EnfocaIdWrapper.swift; sourceTree = "<group>"; };
 		0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagEditorUITests.swift; sourceTree = "<group>"; };
 		0F011EA91EEAF03500939B75 /* CheckMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkView.swift; sourceTree = "<group>"; };
 		0F011EAD1EEB25FB00939B75 /* QuizOptionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizOptionsViewModel.swift; path = Quiz/QuizOptionsViewModel.swift; sourceTree = "<group>"; };
@@ -547,7 +550,7 @@
 		0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Perform+WordPair.swift"; sourceTree = "<group>"; };
 		0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUserOperation.swift; sourceTree = "<group>"; };
 		0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudAuthOperation.swift; sourceTree = "<group>"; };
-		0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchIncrementAndSaveSeedIfNecessary.swift; sourceTree = "<group>"; };
+		0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchIncrementAndSaveSeedIfNecessary.swift; path = Authentication/FetchIncrementAndSaveSeedIfNecessary.swift; sourceTree = "<group>"; };
 		0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchOrCreateEnfocaId.swift; sourceTree = "<group>"; };
 		0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserRecordId.swift; sourceTree = "<group>"; };
 		0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserRecordOperation.swift; sourceTree = "<group>"; };
@@ -764,6 +767,8 @@
 			children = (
 				0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */,
 				0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */,
+				0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */,
+				0F00F8481F03731500CE86D7 /* EnfocaIdWrapper.swift */,
 			);
 			name = Dictionary;
 			sourceTree = "<group>";
@@ -1059,7 +1064,6 @@
 			children = (
 				0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */,
 				0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */,
-				0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */,
 				0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */,
 				0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */,
 				0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */,
@@ -1552,6 +1556,7 @@
 				0F028DDF1F00C42B008200E2 /* Dictionary.swift in Sources */,
 				0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */,
 				0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */,
+				0F00F84A1F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */,
 				0F35B0481F01BAD2001AC511 /* DictionaryCreationViewController.swift in Sources */,
 				0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */,
 				0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */,
@@ -1722,6 +1727,7 @@
 				0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
+				0F00F8491F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */,
 				0F911F311EE9053C00F21855 /* ActivityIndicatable.swift in Sources */,
 				0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */,
 				0F911F061EE76CFA00F21855 /* Import.swift in Sources */,

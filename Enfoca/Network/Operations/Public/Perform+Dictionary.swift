@@ -48,20 +48,18 @@ extension Perform {
     //Generate an enfocaId, then create the dictionary
     class func createDictionary(db: CKDatabase, dictionary: Dictionary, callback : @escaping (_ dictionary : Dictionary?, _ error : String?) -> ()){
         
-        let user : InternalUser = InternalUser()
-        
-//        user.recordId = CloudKitConverters.toCKRecordID(fromRecordName: dictionary.userRef)
+        let enfocaIdProvider = EnfocaIdProvider()
         
         let queue = OperationQueue()
         let errorHandler = ErrorHandler(queue: queue, callback: callback)
         
-        let fetchIncrementAndSaveSeedIfNecessary = FetchIncrementAndSaveSeedIfNecessary(user: user, db: db, errorDelegate: errorHandler)
+        let fetchIncrementAndSaveSeedIfNecessary = FetchIncrementAndSaveSeedIfNecessary(enfocaIdProvider: enfocaIdProvider, db: db, errorDelegate: errorHandler)
         
-        let operationCreateDictionary = OperationCreateDictionary(enfocaId: user.enfocaId, dictionarySource: dictionary, db: db, errorDelegate: errorHandler)
+        let operationCreateDictionary = OperationCreateDictionary(enfocaIdProvider: enfocaIdProvider, dictionarySource: dictionary, db: db, errorDelegate: errorHandler)
         
         let completeOp = BlockOperation {
             OperationQueue.main.addOperation{
-                print(user.recordId)
+                print("Created Dictionary with EnfocaID \(enfocaIdProvider.enfocaId!)")
                 callback(operationCreateDictionary.dictionary, nil)
             }
         }
@@ -72,35 +70,4 @@ extension Perform {
         queue.addOperations([ fetchIncrementAndSaveSeedIfNecessary, operationCreateDictionary, completeOp], waitUntilFinished: false)
         
     }
-    
-//    class func authentcate(db: CKDatabase, callback : @escaping (_ userTuple : (Int, CKRecordID)?,_ error : String?) -> ()){
-//        
-//        let user : InternalUser = InternalUser()
-//        let queue = OperationQueue()
-//        let errorHandler = ErrorHandler(queue: queue, callback: callback)
-//        
-//        let completeOp = BlockOperation {
-//            //            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//            //            print ("Tags loaded: \(fetchOp.tags)")
-//            OperationQueue.main.addOperation{
-//                print(user.recordId)
-//                callback((user.enfocaId, user.recordId), nil)
-//            }
-//        }
-//        
-//        let fetchUserId = FetchUserRecordId(user: user, db: db, errorDelegate: errorHandler)
-//        let cloudAuth = CloudAuthOperation(user: user, db: db, errorDelegate: errorHandler)
-//        let fetchUserRecord = FetchUserRecordOperation(user: user, db: db, errorDelegate: errorHandler)
-//        let fetchOrCreateEnfocaId = FetchOrCreateEnfocaId(user: user, db: db, errorDelegate: errorHandler)
-//        let fetchIncrementAndSaveSeedIfNecessary = FetchIncrementAndSaveSeedIfNecessary(user: user, db: db, errorDelegate: errorHandler)
-//        
-//        fetchUserId.addDependency(cloudAuth)
-//        fetchUserRecord.addDependency(fetchUserId)
-//        fetchIncrementAndSaveSeedIfNecessary.addDependency(fetchUserRecord)
-//        fetchOrCreateEnfocaId.addDependency(fetchIncrementAndSaveSeedIfNecessary)
-//        completeOp.addDependency(fetchOrCreateEnfocaId)
-//        
-//        queue.addOperations([fetchUserId, cloudAuth, fetchUserRecord, fetchOrCreateEnfocaId, fetchIncrementAndSaveSeedIfNecessary, completeOp], waitUntilFinished: false)
-//        
-//    }
 }
