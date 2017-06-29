@@ -9,7 +9,7 @@
 import UIKit
 
 class DictionaryEditorViewController: UIViewController {
-    fileprivate var dictionary: Dictionary!
+    fileprivate var dictionary: UserDictionary!
     
     @IBOutlet weak var termTextField: AnimatedTextField!
     @IBOutlet weak var definitionTextField: AnimatedTextField!
@@ -37,7 +37,7 @@ class DictionaryEditorViewController: UIViewController {
         }
     }
 
-    func initialize(dictionary: Dictionary) {
+    func initialize(dictionary: UserDictionary) {
         self.dictionary = dictionary
     }
     
@@ -60,7 +60,7 @@ class DictionaryEditorViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? DictionaryLoadingViewController {
-            guard let dictionary = sender as? Dictionary else { fatalError() }
+            guard let dictionary = sender as? UserDictionary else { fatalError() }
             to.initialize(dictionary: dictionary)
         }
     }
@@ -84,7 +84,7 @@ extension DictionaryEditorViewController {
             return
         }
         
-        services().createDictionary(termTitle: termLabel, definitionTitle: definitionLabel, subject: subject, language: "es") { (dictionary: Dictionary?, error: EnfocaError?) in
+        services().createDictionary(termTitle: termLabel, definitionTitle: definitionLabel, subject: subject, language: "es") { (dictionary: UserDictionary?, error: EnfocaError?) in
             if let error = error {
                 self.presentAlert(title: "Failed to create", message: error)
                 return

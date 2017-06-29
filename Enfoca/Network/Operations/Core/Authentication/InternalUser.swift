@@ -17,5 +17,5 @@ class InternalUser {
     var record : CKRecord!
     var isAuthenticated: Bool = false
     
-    var dictionaryList: [Dictionary]?
+    var dictionaryList: [UserDictionary]?
 }

@@ -22,6 +22,8 @@ protocol ApplicationDefaults {
     var numberOfIncorrectAnswersTillReview: Int {get set}
     
     var wordPairOrder: WordPairOrder {get set}
+    var cardTimeout: Int {get set}
+    var cardTimeoutWarning: Int {get set}
 }
 
 class LocalApplicationDefaults : ApplicationDefaults {
@@ -34,6 +36,8 @@ class LocalApplicationDefaults : ApplicationDefaults {
     var quizWordCount: Int = 8
     var wordPairOrder: WordPairOrder = .wordAsc
     var numberOfIncorrectAnswersTillReview: Int = 5
+    var cardTimeout: Int = 5
+    var cardTimeoutWarning: Int = 2
     
     var fetchWordPairPageSize: Int {
         get {

@@ -11,7 +11,7 @@ import CloudKit
 
 extension Perform {
     //This is/will-be the new authentication method
-    class func initialize(db: CKDatabase, callback : @escaping ( (CKRecordID, [Dictionary])?, String?) -> ()){
+    class func initialize(db: CKDatabase, callback : @escaping ( (CKRecordID, [UserDictionary])?, String?) -> ()){
         
         let user : InternalUser = InternalUser()
         let queue = OperationQueue()
@@ -46,7 +46,7 @@ extension Perform {
     }
     
     //Generate an enfocaId, then create the dictionary
-    class func createDictionary(db: CKDatabase, dictionary: Dictionary, callback : @escaping (_ dictionary : Dictionary?, _ error : String?) -> ()){
+    class func createDictionary(db: CKDatabase, dictionary: UserDictionary, callback : @escaping (_ dictionary : UserDictionary?, _ error : String?) -> ()){
         
         let enfocaIdProvider = EnfocaIdProvider()
         

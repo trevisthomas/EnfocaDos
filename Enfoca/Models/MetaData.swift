@@ -74,15 +74,19 @@ class MetaData : Hashable {
         self.timedViewCount = timedViewCount
     }
 
-    func correct(){
+    func correct(elapsedTime: Int){
         dateUpdated = Date()
         timedViewCount += 1
+        
+        totalTime += elapsedTime
     }
     
-    func incorrect(){
+    func incorrect(elapsedTime: Int){
         dateUpdated = Date()
         timedViewCount += 1
         incorrectCount += 1
+        
+        totalTime += elapsedTime
     }
     
     public init (json: String) {

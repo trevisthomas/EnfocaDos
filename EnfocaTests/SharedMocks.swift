@@ -67,9 +67,10 @@ class MockWebService : WebService {
         self.tags = tags
     }
     
-    func initialize(json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
+    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
         self.tags = makeTags()
     }
+    
     
     func serialize() -> String?{
         return nil
@@ -176,7 +177,7 @@ class MockWebService : WebService {
     
     
     var metaId = 0
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
+    func updateScore(forWordPair: WordPair, correct: Bool, elapsedTime: Int, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
         metaId += 1
         
 //        fatalError()
@@ -196,13 +197,21 @@ class MockWebService : WebService {
             }
             oldTimedViewCount += 1
             
-            let meta = MetaData(metaId: "meta\(self.metaId)", pairId: forWordPair.pairId, dateCreated: oldCreateDate, dateUpdated: Date(), incorrectCount: oldIncorrectCount, totalTime: -1, timedViewCount: oldTimedViewCount)
+            let meta = MetaData(metaId: "meta\(self.metaId)", pairId: forWordPair.pairId, dateCreated: oldCreateDate, dateUpdated: Date(), incorrectCount: oldIncorrectCount, totalTime: -1, timedViewCount: oldTimedViewCount + elapsedTime)
             
             callback(meta, nil)
         }
     }
     
     func fetchMetaData(forWordPair: WordPair, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
+        fatalError()
+    }
+    
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback : @escaping(UserDictionary?, EnfocaError?)->()) {
+        fatalError()
+    }
+    
+    func fetchDictionaryList(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
         fatalError()
     }
 }

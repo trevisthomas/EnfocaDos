@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Dictionary {
+class UserDictionary {
     private(set) var definitionTitle: String
     private(set) var termTitle: String
     private(set) var subject: String

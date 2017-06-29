@@ -12,7 +12,7 @@ protocol WebService {
     
     var showNetworkActivityIndicator : Bool {get set}
     
-    func initialize(dictionary: Dictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
+    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
     func serialize() -> String?
     
     func fetchUserTags(callback : @escaping([Tag]?, EnfocaError?)->())
@@ -41,11 +41,11 @@ protocol WebService {
      */
     func fetchQuiz(forTag: Tag?, cardOrder: CardOrder, wordCount: Int, callback: @escaping([WordPair]?, EnfocaError?)->())
     
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(MetaData?, EnfocaError?)->())
+    func updateScore(forWordPair: WordPair, correct: Bool, elapsedTime: Int, callback: @escaping(MetaData?, EnfocaError?)->())
     
     func fetchMetaData(forWordPair: WordPair, callback: @escaping(MetaData?, EnfocaError?)->())
     
-    func fetchDictionaryList(callback : @escaping([Dictionary]?, EnfocaError?)->())
+    func fetchDictionaryList(callback : @escaping([UserDictionary]?, EnfocaError?)->())
     
-    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback : @escaping(Dictionary?, EnfocaError?)->())
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback : @escaping(UserDictionary?, EnfocaError?)->())
 }

@@ -15,7 +15,7 @@ class DictionarySelectionViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     
     
-    fileprivate var dictionaryList: [Dictionary] = []
+    fileprivate var dictionaryList: [UserDictionary] = []
     fileprivate var isEditMode: Bool = false
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class DictionarySelectionViewController: UIViewController {
         tableView.separatorStyle = .none
     }
     
-    func initialize(dictionaryList: [Dictionary]) {
+    func initialize(dictionaryList: [UserDictionary]) {
         self.dictionaryList = dictionaryList
     }
     
@@ -54,11 +54,11 @@ class DictionarySelectionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? DictionaryEditorViewController {
             //            to.transitioningDelegate = self
-            guard let dictionary = sender as? Dictionary else { fatalError() }
+            guard let dictionary = sender as? UserDictionary else { fatalError() }
             to.initialize(dictionary: dictionary)
             
         } else if let to = segue.destination as? DictionaryLoadingViewController  {
-            guard let dictionary = sender as? Dictionary else { fatalError() }
+            guard let dictionary = sender as? UserDictionary else { fatalError() }
             to.initialize(dictionary: dictionary)
         } else if let to = segue.destination as? DictionaryCreationViewController {
             to.initialize(isBackButtonNeeded: true)
@@ -87,7 +87,7 @@ extension DictionarySelectionViewController: UITableViewDataSource {
 }
 
 extension DictionarySelectionViewController: SubjectTableViewCellDelegate {
-    func performSelect(dictionary: Dictionary) {
+    func performSelect(dictionary: UserDictionary) {
         if isEditMode {
             performSegue(withIdentifier: "EditDictionarySegue", sender: dictionary)
         } else {

@@ -8,6 +8,7 @@
 
 import UIKit
 
+//TODO: Get rid of this.  It's not a proper delegate.
 protocol EditorViewControllerDelegate {
     var wordText: String {get set}
     var definitionText: String {get set}
@@ -141,6 +142,8 @@ class EditorViewController: UIViewController {
         countLabel.text = delegate.count
         dateAddedLabel.text = delegate.dateAdded
         dateUpdated.text = delegate.dateUpdated
+        
+        
         
         //TODO! Learn how to make the custom text field realize that the text was set without breaking the text attribute.
         wordTextField.initialize()

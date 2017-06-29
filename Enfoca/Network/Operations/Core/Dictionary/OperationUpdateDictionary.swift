@@ -13,10 +13,10 @@ import CloudKit
 class OperationUpdateDictionary : BaseOperation {
     private let enfocaId : NSNumber
     private let db : CKDatabase
-    private(set) var dictionary : Dictionary?
-    private let updatedDictionary : Dictionary
+    private(set) var dictionary : UserDictionary?
+    private let updatedDictionary : UserDictionary
     
-    init (updatedDictionary: Dictionary, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
+    init (updatedDictionary: UserDictionary, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.enfocaId = enfocaId
         self.db = db
         self.updatedDictionary = updatedDictionary

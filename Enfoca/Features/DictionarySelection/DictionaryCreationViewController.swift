@@ -42,7 +42,7 @@ class DictionaryCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? DictionaryEditorViewController {
 //            to.transitioningDelegate = self
-            guard let dictionary = sender as? Dictionary else { fatalError() }
+            guard let dictionary = sender as? UserDictionary else { fatalError() }
             to.initialize(dictionary: dictionary)
             
         }
@@ -85,7 +85,7 @@ extension DictionaryCreationViewController: UITableViewDataSource {
 }
 
 extension DictionaryCreationViewController: SubjectTableViewCellDelegate {
-    func performSelect(dictionary: Dictionary) {
+    func performSelect(dictionary: UserDictionary) {
         performSegue(withIdentifier: "CreateDictionarySegue", sender: dictionary)
     }
 }

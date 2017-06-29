@@ -12,7 +12,7 @@ import CloudKit
 
 class LocalCloudKitWebService : WebService {
     
-    private(set) var dictionary: Dictionary!
+    private(set) var dictionary: UserDictionary!
     private(set) var enfocaId : NSNumber!
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
@@ -31,14 +31,14 @@ class LocalCloudKitWebService : WebService {
     //This needs to be called first to initialize the things.  
     //It will eventually replace the old init method.
     //TODO: Rename to pre-initialize?
-    func fetchDictionaryList(callback : @escaping([Dictionary]?, EnfocaError?)->()){
+    func fetchDictionaryList(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
         
         showNetworkActivityIndicator = true
         
         db = CKContainer.default().publicCloudDatabase
         privateDb = CKContainer.default().privateCloudDatabase
         
-        Perform.initialize(db: db) { (tuple:(CKRecordID, [Dictionary])?, error: String?) in
+        Perform.initialize(db: db) { (tuple:(CKRecordID, [UserDictionary])?, error: String?) in
             self.showNetworkActivityIndicator = false
             if let error = error {
                 callback(nil, error)
@@ -56,13 +56,13 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
-    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String? = nil, callback : @escaping(Dictionary?, EnfocaError?)->()) {
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String? = nil, callback : @escaping(UserDictionary?, EnfocaError?)->()) {
         showNetworkActivityIndicator = true
         
-        let dictionary = Dictionary(dictionaryId: "not-set", userRef: userRecordId.recordName, enfocaId: -1, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
+        let dictionary = UserDictionary(dictionaryId: "not-set", userRef: userRecordId.recordName, enfocaId: -1, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
         
         //Remember, this method generates an enfoca id.
-        Perform.createDictionary(db: db, dictionary: dictionary) { (dictionary: Dictionary?, error: String?) in
+        Perform.createDictionary(db: db, dictionary: dictionary) { (dictionary: UserDictionary?, error: String?) in
             
             if let error = error { callback(nil, error) }
             
@@ -73,7 +73,7 @@ class LocalCloudKitWebService : WebService {
         
     }
     
-    func initialize(dictionary: Dictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
         self.enfocaId = dictionary.enfocaId
         self.dictionary = dictionary
@@ -331,7 +331,7 @@ class LocalCloudKitWebService : WebService {
         callback(wordPairs, nil)
     }
     
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping(MetaData?, EnfocaError?)->()) {
+    func updateScore(forWordPair: WordPair, correct: Bool, elapsedTime: Int, callback: @escaping(MetaData?, EnfocaError?)->()) {
         
         showNetworkActivityIndicator = true
         
@@ -339,7 +339,7 @@ class LocalCloudKitWebService : WebService {
         
         if let currentMetaData = metaData {
             //Update
-            self.dataStore.updateScore(metaData: currentMetaData, correct: correct)
+            self.dataStore.updateScore(metaData: currentMetaData, correct: correct, elapsedTime: elapsedTime)
             
             Perform.updateMetaData(updatedMetaData: currentMetaData, enfocaId: enfocaId, db: privateDb) { (metaData: MetaData?, error: String?) in
                 self.showNetworkActivityIndicator = false
@@ -352,7 +352,7 @@ class LocalCloudKitWebService : WebService {
             //Create
             let newMetaData = MetaData(metaId: "notset", pairId: forWordPair.pairId, dateCreated: Date(), dateUpdated: Date(), incorrectCount: 0, totalTime: 0, timedViewCount: 0)
             
-            dataStore.updateScore(metaData: newMetaData, correct: correct)
+            dataStore.updateScore(metaData: newMetaData, correct: correct, elapsedTime: elapsedTime)
             
             Perform.createMetaData(metaDataSource: newMetaData, enfocaId: enfocaId, db: privateDb, callback: { (metaData: MetaData?, error: String?) in
                 self.showNetworkActivityIndicator = false

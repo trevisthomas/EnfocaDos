@@ -19,11 +19,11 @@ class DemoWebService : WebService {
         fatalError()
     }
     
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
+    func updateScore(forWordPair: WordPair, correct: Bool, elapsedTime: Int, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
         fatalError()
     }
 
-    func initialize(dictionary: Dictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
+    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
         callback(true, nil)
     }
     
@@ -188,11 +188,11 @@ class DemoWebService : WebService {
         fatalError()
     }
     
-    func fetchDictionaryList(callback: @escaping ([Dictionary]?, EnfocaError?) -> ()) {
+    func fetchDictionaryList(callback: @escaping ([UserDictionary]?, EnfocaError?) -> ()) {
         fatalError()  //Yeah, gonna need to do something about this.
     }
     
-    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback: @escaping (Dictionary?, EnfocaError?) -> ()) {
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback: @escaping (UserDictionary?, EnfocaError?) -> ()) {
         fatalError()
     }
 

@@ -181,6 +181,8 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
     }
 }
 
+
+//This is maddness.  Why is this delegate here? TODO, get rid of this.  These things should just come straignt from the VM/Controller
 extension EditWordPairViewController: EditorViewControllerDelegate {
     var wordText: String {
         get {
@@ -228,6 +230,7 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     }
     var score: String{
         get {
+            print("TotalTime \(controller.getTotalTime())")
             return controller.getScore()
         }
     }

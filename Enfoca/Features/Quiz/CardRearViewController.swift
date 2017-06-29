@@ -25,6 +25,7 @@ class CardRearViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         definitionLabel.text = sharedViewModel.getRearWord()
+        
     }
     
     func initialize(quizViewModel: QuizViewModel){
@@ -85,6 +86,7 @@ class CardRearViewController: UIViewController {
             to.initialize(sharedViewModel: sharedViewModel)
         }
     }
+    
 }
 
 extension CardRearViewController: UIViewControllerTransitioningDelegate {

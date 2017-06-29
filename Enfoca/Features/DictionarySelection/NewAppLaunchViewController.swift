@@ -10,7 +10,7 @@ import UIKit
 
 class NewAppLaunchViewController: UIViewController {
 
-    private(set) var dictionaryList: [Dictionary]?
+    private(set) var dictionaryList: [UserDictionary]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class NewAppLaunchViewController: UIViewController {
             //        let service = DemoWebService()
         }
         
-        service.fetchDictionaryList { (dictionaryList: [Dictionary]?, error: EnfocaError?) in
+        service.fetchDictionaryList { (dictionaryList: [UserDictionary]?, error: EnfocaError?) in
             if let error = error {
                 self.presentFatalAlert(title: "Failed to initialize app", message: error)
             }
@@ -60,7 +60,7 @@ class NewAppLaunchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? DictionarySelectionViewController {
             
-            guard let list = sender as? [Dictionary] else { fatalError() }
+            guard let list = sender as? [UserDictionary] else { fatalError() }
             to.initialize(dictionaryList: list)
         }
     }

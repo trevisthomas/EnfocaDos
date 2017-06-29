@@ -11,7 +11,7 @@ import CloudKit
 
 class FetchUserDictionaryList : BaseUserOperation {
     
-    private var dictionaryList: [Dictionary] = []
+    private var dictionaryList: [UserDictionary] = []
     
     override func start() {
         super.start() //Required for base class state

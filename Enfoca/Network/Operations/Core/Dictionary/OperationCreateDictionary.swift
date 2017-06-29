@@ -10,14 +10,14 @@ import Foundation
 import CloudKit
 
 class OperationCreateDictionary : BaseOperation {
-    private(set) var dictionary : Dictionary?
-    private let dictionarySource : Dictionary
+    private(set) var dictionary : UserDictionary?
+    private let dictionarySource : UserDictionary
     private let db: CKDatabase
     private let enfocaIdProvider: EnfocaIdProvider
     private let ckUserRecordId: CKRecordID
     
     
-    init (enfocaIdProvider: EnfocaIdProvider, dictionarySource: Dictionary,  db: CKDatabase, errorDelegate : ErrorDelegate) {
+    init (enfocaIdProvider: EnfocaIdProvider, dictionarySource: UserDictionary,  db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.dictionarySource = dictionarySource
         
         self.enfocaIdProvider = enfocaIdProvider

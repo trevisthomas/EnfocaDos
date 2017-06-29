@@ -17,7 +17,7 @@ class DictionaryLoadingViewController: UIViewController {
 //    @IBOutlet weak var titleLabel: UILabel!
 //    @IBOutlet weak var messageStackView: UIStackView!
     @IBOutlet weak var headerView: UIView!
-    fileprivate var dictionary: Dictionary!
+    fileprivate var dictionary: UserDictionary!
     
     fileprivate var progressLabels : [String: UILabel] = [:]
     
@@ -27,7 +27,7 @@ class DictionaryLoadingViewController: UIViewController {
         launch()
     }
     
-    func initialize(dictionary: Dictionary) {
+    func initialize(dictionary: UserDictionary) {
         self.dictionary = dictionary
     }
     

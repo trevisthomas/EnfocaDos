@@ -10,7 +10,7 @@ import UIKit
 
 class UiTestWebService : WebService {
     
-    private(set) var dictionary: Dictionary!
+    private(set) var dictionary: UserDictionary!
     private(set) var enfocaId : NSNumber!
     private var dataStore: DataStore!
     
@@ -55,7 +55,7 @@ class UiTestWebService : WebService {
 //    }
 
     
-    func initialize(dictionary: Dictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
         
         //TODO: load from json
@@ -240,7 +240,7 @@ class UiTestWebService : WebService {
         fatalError()
     }
     
-    func updateScore(forWordPair: WordPair, correct: Bool, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
+    func updateScore(forWordPair: WordPair, correct: Bool, elapsedTime: Int, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
         fatalError()
     }
     
@@ -248,11 +248,11 @@ class UiTestWebService : WebService {
         callback(dataStore.getMetaData(forWordPair: forWordPair), nil)
     }
     
-    func fetchDictionaryList(callback: @escaping ([Dictionary]?, EnfocaError?) -> ()) {
+    func fetchDictionaryList(callback: @escaping ([UserDictionary]?, EnfocaError?) -> ()) {
         callback([], nil) //Hm
     }
     
-    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback: @escaping (Dictionary?, EnfocaError?) -> ()) {
+    func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback: @escaping (UserDictionary?, EnfocaError?) -> ()) {
         fatalError()
     }
 

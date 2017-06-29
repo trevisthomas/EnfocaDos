@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SubjectTableViewCellDelegate {
-    func performSelect(dictionary: Dictionary)
+    func performSelect(dictionary: UserDictionary)
 }
 
 class SubjectTableViewCell: UITableViewCell {
@@ -18,8 +18,7 @@ class SubjectTableViewCell: UITableViewCell {
     static let identifier = "SubjectTableViewCell"
 
     @IBOutlet weak var myButton: EnfocaButton!
-    private var dictionary: Dictionary!
-//    fileprivate var selectionMode: Bool!
+    private var dictionary: UserDictionary!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,22 +31,15 @@ class SubjectTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func initialize(delegate: SubjectTableViewCellDelegate, dictionary: Dictionary){
+    func initialize(delegate: SubjectTableViewCellDelegate, dictionary: UserDictionary){
         self.dictionary = dictionary
         self.delegate = delegate
-//        self.selectionMode = selectMode
         
         myButton.setTitle(dictionary.subject, for: .normal)
     }
     
     @IBAction func buttonAction(_ sender: Any) {
         delegate.performSelect(dictionary: dictionary)
-
-//        if selectionMode {
-//            delegate.performSelect(dictionary: dictionary)
-//        } else {
-//            delegate.performCreateOrUpdate(dictionary: dictionary)
-//        }
     }
     
 

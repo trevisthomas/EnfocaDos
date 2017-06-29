@@ -18,21 +18,32 @@ class CardFrontViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     private var sharedViewModel: QuizViewModel!
+    private var timer: Int!
+    private var timerWarning: Int!
+    private var timerActive: Bool = false
     
     fileprivate var animator: QuizCardAnimator = QuizCardAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         termLabel.text = sharedViewModel.getFrontWord()
+        
+        startTheTimer()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.timerLabel.isHidden = true
     }
     
     func initialize(viewModel: QuizViewModel){
         self.sharedViewModel = viewModel
+        
+        timer = sharedViewModel.getCardTimeout()
+        timerWarning = sharedViewModel.getCardTimeoutWarning()
     }
 
-
     @IBAction func okButtonAction(_ sender: EnfocaButton) {
-        
         performFlip()
     }
     
@@ -41,6 +52,8 @@ class CardFrontViewController: UIViewController {
     }
     
     private func performFlip() {
+        stopTheTimer()
+        sharedViewModel.timeTakenForCardInSeconds = sharedViewModel.getCardTimeout() - timer
         performSegue(withIdentifier: "QuizRearViewControllerSegue", sender: self)
     }
     
@@ -49,12 +62,37 @@ class CardFrontViewController: UIViewController {
         
         to.transitioningDelegate = self
         
+        
         to.initialize(quizViewModel: sharedViewModel)
     }
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func startTheTimer() {
+        timerActive = true
+        self.timerLabel.isHidden = true
+        perSecondTimer { () -> (Bool) in
+            self.timer = self.timer - 1
+            
+            if self.timer < self.timerWarning {
+                self.timerLabel.isHidden = false
+                guard let t = self.timer else { fatalError() }
+                self.timerLabel.text = "\(t)"
+            }
+            
+            if self.timer == 0 {
+                self.performFlip()
+            }
+            
+            return (self.timer > 0) && self.timerActive
+        }
+    }
+    
+    private func stopTheTimer() {
+        timerActive = false
     }
 }
 

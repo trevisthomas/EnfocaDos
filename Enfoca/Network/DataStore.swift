@@ -452,11 +452,11 @@ class DataStore {
         
     }
     
-    func updateScore(metaData: MetaData, correct: Bool) {
+    func updateScore(metaData: MetaData, correct: Bool, elapsedTime: Int) {
         if correct {
-            metaData.correct()
+            metaData.correct(elapsedTime: elapsedTime)
         } else {
-            metaData.incorrect()
+            metaData.incorrect(elapsedTime: elapsedTime)
         }
     }
     

@@ -676,8 +676,9 @@ class DataStoreTests: XCTestCase {
         
         let metaData = MetaData(metaId: "mock", pairId: result[0].pairId, dateCreated: Date(), dateUpdated: nil, incorrectCount: 0, totalTime: 0, timedViewCount: 0)
         
-        sut.updateScore(metaData: metaData, correct: true)
+        sut.updateScore(metaData: metaData, correct: true, elapsedTime: 10)
         
+        XCTAssertEqual(metaData.totalTime, 10)
         sut.add(metaData: metaData)
         
         let meta = sut.getMetaData(forWordPair: result[0])
@@ -689,7 +690,9 @@ class DataStoreTests: XCTestCase {
         
         let meta2 = sut.getMetaData(forWordPair: result2[0])
         
-        sut.updateScore(metaData: meta2!, correct: false)
+        sut.updateScore(metaData: meta2!, correct: false, elapsedTime: 20)
+        
+        XCTAssertEqual(metaData.totalTime, 30)
         
         XCTAssertEqual(meta?.timedViewCount, 2)
         XCTAssertEqual(meta?.scoreAsString, "50%")
