@@ -12,7 +12,7 @@ protocol WebService {
     
     var showNetworkActivityIndicator : Bool {get set}
     
-    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
+    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
     func serialize() -> String?
     
     func fetchUserTags(callback : @escaping([Tag]?, EnfocaError?)->())
@@ -45,7 +45,7 @@ protocol WebService {
     
     func fetchMetaData(forWordPair: WordPair, callback: @escaping(MetaData?, EnfocaError?)->())
     
-    func fetchDictionaryList(callback : @escaping([UserDictionary]?, EnfocaError?)->())
+    func initialize(callback : @escaping([UserDictionary]?, EnfocaError?)->())
     
     func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback : @escaping(UserDictionary?, EnfocaError?)->())
 }

@@ -55,16 +55,17 @@ class UiTestWebService : WebService {
 //    }
 
     
-    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
-        
-        //TODO: load from json
-        
-        dataStore = DataStore()
         
         if let json = json {
-            dataStore.initialize(json: json)
+            dataStore = DataStore(json: json)
         } else {
+            
+            guard let dictionary = dictionary else { fatalError() }
+            
+            dataStore = DataStore(dictionary: dictionary)
+            
             //Load it mockly
             var tags: [Tag] = []
             tags.append(Tag(tagId: "\(nextIndex())", name: "Color"))
@@ -248,7 +249,7 @@ class UiTestWebService : WebService {
         callback(dataStore.getMetaData(forWordPair: forWordPair), nil)
     }
     
-    func fetchDictionaryList(callback: @escaping ([UserDictionary]?, EnfocaError?) -> ()) {
+    func initialize(callback: @escaping ([UserDictionary]?, EnfocaError?) -> ()) {
         callback([], nil) //Hm
     }
     

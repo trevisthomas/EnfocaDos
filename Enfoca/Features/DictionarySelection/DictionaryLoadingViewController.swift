@@ -17,7 +17,8 @@ class DictionaryLoadingViewController: UIViewController {
 //    @IBOutlet weak var titleLabel: UILabel!
 //    @IBOutlet weak var messageStackView: UIStackView!
     @IBOutlet weak var headerView: UIView!
-    fileprivate var dictionary: UserDictionary!
+    fileprivate var dictionary: UserDictionary?
+    fileprivate var dataStoreJson: String?
     
     fileprivate var progressLabels : [String: UILabel] = [:]
     
@@ -31,30 +32,15 @@ class DictionaryLoadingViewController: UIViewController {
         self.dictionary = dictionary
     }
     
+    func initialize(json: String) {
+        self.dataStoreJson = json
+    }
+    
     private func launch(){
         
         startProgress(ofType: "Initializing", message: "Loading app defaults")
         
-//        getAppDelegate().applicationDefaults = LocalApplicationDefaults()
-//        
-//        let service: WebService
-//        
-//        //TODO: Use this to decide which services implementation to use
-//        if isTestMode() {
-//            print("We're in test mode")
-//            service = UiTestWebService()
-//        } else {
-//            print("Production")
-//            service = LocalCloudKitWebService()
-//            //        let service = CloudKitWebService()
-//            //        let service = DemoWebService()
-//        }
-        
-        let dataStoreJson = getAppDelegate().applicationDefaults.load()
-        
-        //TODO: The dictionary needs to be saved in AppDefaults!!!
-//
-        getAppDelegate().webService.initialize(dictionary: dictionary, json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
+        getAppDelegate().webService.prepareDataStore(dictionary: dictionary, json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
             
             if let error = error {
                 self.presentFatalAlert(title: "Initialization error", message: error)

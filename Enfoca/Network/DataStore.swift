@@ -14,7 +14,15 @@ class DataStore {
     private(set) var wordPairDictionary : [AnyHashable :  WordPair] = [:]
     private(set) var tagAssociations : [TagAssociation] = []
     private(set) var isInitialized : Bool = false
+    private var userDictionary: UserDictionary!
     
+    init(dictionary: UserDictionary) {
+        self.userDictionary = dictionary
+    }
+    
+    init(){
+        
+    }
     
     var countAssociations : Int {
         return tagAssociations.count
@@ -26,6 +34,22 @@ class DataStore {
     
     var countWordPairs : Int {
         return wordPairDictionary.count
+    }
+    
+    func getSubject() -> String {
+        return userDictionary.subject
+    }
+    
+    func getTermTitle() -> String {
+        return userDictionary.termTitle
+    }
+    
+    func getDefinitionTitle() -> String {
+        return userDictionary.definitionTitle
+    }
+    
+    func getEnfocaId() -> NSNumber {
+        return userDictionary.enfocaId
     }
     
     func initialize(tags: [Tag], wordPairs: [WordPair], tagAssociations: [TagAssociation], metaData : [MetaData], progressObserver: ProgressObserver? = nil){
@@ -462,7 +486,6 @@ class DataStore {
     
     func add(metaData: MetaData) {
         metaDataDictionary[metaData.pairId] = metaData
-//        wordPairDictionary[metaData.pairId]!.metaData = metaData
     }
     
     func allTags() -> [Tag]{
@@ -475,7 +498,7 @@ class DataStore {
         return metaDataDictionary[wordPair.pairId]
     }
     
-    public func initialize (json: String) {
+    init (json: String) {
         guard let jsonData = json.data(using: .utf8) else { fatalError() }
         guard let jsonResult: NSDictionary = try! JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary else {fatalError()}
         
@@ -483,10 +506,12 @@ class DataStore {
         guard let rawTags = jsonResult["tags"] as? NSArray else {fatalError()}
         guard let rawTagAssociations = jsonResult["tagAssociations"] as? NSArray else {fatalError()}
         guard let rawMetaData = jsonResult["metaData"] as? NSArray else {fatalError()}
+        guard let rawUserDictionary = jsonResult["userDictionary"] as? String else {fatalError()}
         
+        
+        userDictionary = UserDictionary(json: rawUserDictionary)
         
         var newWordPairs : [WordPair] = []
-        
         for rawWordPair in rawWordPairs {
             guard rawWordPair is String else { fatalError() }
             newWordPairs.append(WordPair(json: rawWordPair as! String))
@@ -516,6 +541,9 @@ class DataStore {
     
     public func toJson() -> String {
         var representation = [String: AnyObject]()
+        
+        representation["userDictionary"] = userDictionary.toJson() as NSString
+        
         representation["wordPairs"] = Array(wordPairDictionary.values).map({ (wp:WordPair) -> AnyObject in
             return wp.toJson() as AnyObject
         }) as AnyObject?

@@ -85,16 +85,22 @@ class DataStoreJsonTests: XCTestCase {
         metaData.append(MetaData(metaId: "0010", pairId: wordPairs[0].pairId, dateCreated: Date(), dateUpdated: nil, incorrectCount: 1, totalTime: 20, timedViewCount: 1))
         
         
-        let dataStore = DataStore()
+        let dictionary = UserDictionary(termTitle: "Piglatin", definitionTitle: "English", subject: "Igpay Atlinly")
+        
+        
+        let dataStore = DataStore(dictionary: dictionary)
         dataStore.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaData)
         
         let json = dataStore.toJson()
         
         
-        let ds2 = DataStore()
-        ds2.initialize(json: json)
+        let ds2 = DataStore(json: json)
         
         XCTAssertTrue(ds2.isInitialized)
+        
+        XCTAssertEqual(dictionary.termTitle, ds2.getTermTitle())
+        XCTAssertEqual(dictionary.definitionTitle, ds2.getDefinitionTitle())
+        XCTAssertEqual(dictionary.subject, ds2.getSubject())
         
         XCTAssertEqual(ds2.tagDictionary.count, 3)
         XCTAssertEqual(ds2.wordPairDictionary.count, 3)

@@ -47,8 +47,8 @@
 		0F028DD91F000AE5008200E2 /* LookupTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DD71F000AE5008200E2 /* LookupTextViewController.swift */; };
 		0F028DDB1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */; };
 		0F028DDC1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */; };
-		0F028DDE1F00C42B008200E2 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDD1F00C42B008200E2 /* Dictionary.swift */; };
-		0F028DDF1F00C42B008200E2 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDD1F00C42B008200E2 /* Dictionary.swift */; };
+		0F028DDE1F00C42B008200E2 /* UserDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDD1F00C42B008200E2 /* UserDictionary.swift */; };
+		0F028DDF1F00C42B008200E2 /* UserDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DDD1F00C42B008200E2 /* UserDictionary.swift */; };
 		0F028DE11F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DE01F00CDE4008200E2 /* FetchUserDictionaryList.swift */; };
 		0F028DE21F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DE01F00CDE4008200E2 /* FetchUserDictionaryList.swift */; };
 		0F028DE51F00D39A008200E2 /* DictionarySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F028DE41F00D39A008200E2 /* DictionarySelection.storyboard */; };
@@ -71,6 +71,7 @@
 		0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
 		0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1AAA1D1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
+		0F1AAA1F1F05734A00ACC0C3 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */; };
 		0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F1B05171EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F35B03D1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
@@ -454,7 +455,7 @@
 		0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
 		0F028DD71F000AE5008200E2 /* LookupTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTextViewController.swift; sourceTree = "<group>"; };
 		0F028DDA1F0013A1008200E2 /* LookupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTableViewCell.swift; sourceTree = "<group>"; };
-		0F028DDD1F00C42B008200E2 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		0F028DDD1F00C42B008200E2 /* UserDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDictionary.swift; sourceTree = "<group>"; };
 		0F028DE01F00CDE4008200E2 /* FetchUserDictionaryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserDictionaryList.swift; sourceTree = "<group>"; };
 		0F028DE41F00D39A008200E2 /* DictionarySelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DictionarySelection.storyboard; path = DictionarySelection/DictionarySelection.storyboard; sourceTree = "<group>"; };
 		0F028DE71F00DC3A008200E2 /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubjectTableViewCell.swift; path = DictionarySelection/SubjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -474,6 +475,7 @@
 		0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairEditorControllerTests.swift; sourceTree = "<group>"; };
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
 		0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateDictionary.swift; path = Enfoca/Network/Operations/Core/Dictionary/OperationCreateDictionary.swift; sourceTree = SOURCE_ROOT; };
 		0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateDictionary.swift; path = Dictionary/OperationUpdateDictionary.swift; sourceTree = "<group>"; };
@@ -978,7 +980,7 @@
 				0FA4A4DB1EC8E91E00F31F9A /* User.swift */,
 				0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */,
 				0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */,
-				0F028DDD1F00C42B008200E2 /* Dictionary.swift */,
+				0F028DDD1F00C42B008200E2 /* UserDictionary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1184,6 +1186,7 @@
 				0FA4A5731ECC148B00F31F9A /* TagTests.swift */,
 				0FA4A5741ECC148B00F31F9A /* UserTests.swift */,
 				0FA4A5751ECC148B00F31F9A /* WordPairTests.swift */,
+				0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1557,7 +1560,7 @@
 				0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */,
 				0F911E591EE75D4600F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */,
-				0F028DDF1F00C42B008200E2 /* Dictionary.swift in Sources */,
+				0F028DDF1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */,
 				0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */,
 				0F00F84A1F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */,
@@ -1751,7 +1754,7 @@
 				0FE015931EF5976200780184 /* Randomizer.swift in Sources */,
 				0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */,
 				0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */,
-				0F028DDE1F00C42B008200E2 /* Dictionary.swift in Sources */,
+				0F028DDE1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,
 				0F011ECB1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
@@ -1822,6 +1825,7 @@
 			files = (
 				0FA4A57A1ECC148B00F31F9A /* TagTests.swift in Sources */,
 				0FA4A5781ECC148B00F31F9A /* MetaDataTests.swift in Sources */,
+				0F1AAA1F1F05734A00ACC0C3 /* DictionaryTests.swift in Sources */,
 				0FD1E20F1ED1E45600D8BD1A /* String+Tests.swift in Sources */,
 				0FA4A5831ECC151E00F31F9A /* EnfocaErrorTests.swift in Sources */,
 				0F085B731ED7500C00FC20A1 /* BrowseControllerTests.swift in Sources */,

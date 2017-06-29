@@ -12,8 +12,15 @@ import CloudKit
 
 class LocalCloudKitWebService : WebService {
     
-    private(set) var dictionary: UserDictionary!
-    private(set) var enfocaId : NSNumber!
+//    private(set) var dictionary: UserDictionary!
+//    private(set) var enfocaId : NSNumber!
+    
+    var enfocaId: NSNumber {
+        get{
+            return dataStore.getEnfocaId()
+        }
+    }
+    
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
     private(set) var userRecordId : CKRecordID!  //Not really using this here.
@@ -31,7 +38,7 @@ class LocalCloudKitWebService : WebService {
     //This needs to be called first to initialize the things.  
     //It will eventually replace the old init method.
     //TODO: Rename to pre-initialize?
-    func fetchDictionaryList(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
+    func initialize(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
         
         showNetworkActivityIndicator = true
         
@@ -73,33 +80,50 @@ class LocalCloudKitWebService : WebService {
         
     }
     
-    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
-        self.enfocaId = dictionary.enfocaId
-        self.dictionary = dictionary
-            
-        let ds = DataStore()
+        let ds: DataStore
         
         if let json = json {
-            ds.initialize(json: json)
+            ds = DataStore(json: json)
+        } else if let dictionary = dictionary {
+            ds = DataStore(dictionary: dictionary)
+        } else {
+            fatalError() //I need one or the other.
         }
+        
+        
+//        self.enfocaId = dictionary.enfocaId
+//        self.dictionary = dictionary
+        
+//        let ds = DataStore(dictionary: dictionary)
+        
+//        if let json = json {
+//            ds.initialize(json: json)
+//        }
         
         if ds.isInitialized {
             self.dataStore = ds
-            callback(true, nil)
+            
+            invokeLater {
+                callback(true, nil)
+            }
+            
             return
         } else {
-            Perform.initializeDataStore(dataStore: ds, enfocaId: self.enfocaId, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
-                if let error = error {
-                    callback(false, error)
+            Perform.initializeDataStore(dataStore: ds, enfocaId: ds.getEnfocaId(), db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
+                invokeLater {
+                    if let error = error {
+                        callback(false, error)
+                    }
+                    guard let dataStore = ds else {
+                        callback(false, "DataStore was nil.  This is a fatal error.")
+                        return;
+                    }
+                    self.dataStore = dataStore
+                    
+                    callback(true, nil)
                 }
-                guard let dataStore = ds else {
-                    callback(false, "DataStore was nil.  This is a fatal error.")
-                    return;
-                }
-                self.dataStore = dataStore
-                
-                callback(true, nil)
             }
         }
         

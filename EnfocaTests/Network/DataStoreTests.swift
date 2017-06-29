@@ -17,10 +17,14 @@ class DataStoreTests: XCTestCase {
     var wpAss : [TagAssociation] = []
     var metaDataList : [MetaData] = []
     
+    var dictionary: UserDictionary!
+    
     override func setUp() {
         super.setUp()
         
-        sut = DataStore()
+        dictionary = UserDictionary(termTitle: "English", definitionTitle: "Spanish", subject: "My ly-berry")
+        
+        sut = DataStore(dictionary: dictionary)
         sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
     }
     

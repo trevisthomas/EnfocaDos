@@ -236,6 +236,10 @@ class HomeViewController: UIViewController {
             quizViewController.delegate = self
             
         }
+        
+        if let to = segue.destination as? NewAppLaunchViewController {
+            to.initialize(autoload: false)
+        }
 
     }
 }

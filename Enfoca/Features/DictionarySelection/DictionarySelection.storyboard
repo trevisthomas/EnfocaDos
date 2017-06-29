@@ -83,7 +83,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zpq-p5-VR6" id="2w9-nj-Mmh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-jP-SAS" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
@@ -181,6 +181,7 @@
                     <connections>
                         <segue destination="dbu-3x-1aW" kind="show" identifier="DictionarySelectionSegue" id="BHU-ah-l7T"/>
                         <segue destination="CGS-VD-4sj" kind="show" identifier="DictionaryCreationSegue" id="Yaf-vT-WQV"/>
+                        <segue destination="78n-cW-n0M" kind="show" identifier="LoadDictionarySegue" id="Btl-e8-myM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wt-3y-RpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,7 +246,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWB-b5-iS4" id="cYi-Dz-mA4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-hn-12U" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
@@ -532,8 +533,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kqj-gi-NaV"/>
-        <segue reference="MdF-bd-erP"/>
+        <segue reference="Btl-e8-myM"/>
         <segue reference="Yaf-vT-WQV"/>
+        <segue reference="MdF-bd-erP"/>
     </inferredMetricsTieBreakers>
 </document>

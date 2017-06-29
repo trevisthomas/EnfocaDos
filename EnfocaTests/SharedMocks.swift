@@ -69,7 +69,7 @@ class MockWebService : WebService {
         self.tags = tags
     }
     
-    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
+    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
         self.tags = makeTags()
     }
     
@@ -215,7 +215,7 @@ class MockWebService : WebService {
         fatalError()
     }
     
-    func fetchDictionaryList(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
+    func initialize(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
         fatalError()
     }
 }

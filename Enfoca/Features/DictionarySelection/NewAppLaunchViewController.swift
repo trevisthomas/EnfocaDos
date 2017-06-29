@@ -11,6 +11,7 @@ import UIKit
 class NewAppLaunchViewController: UIViewController {
 
     private(set) var dictionaryList: [UserDictionary]?
+    private var autoload: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,9 @@ class NewAppLaunchViewController: UIViewController {
         launch()
     }
 
+    func initialize(autoload: Bool = true) {
+        self.autoload = autoload
+    }
     
     private func launch(){
         
@@ -36,24 +40,35 @@ class NewAppLaunchViewController: UIViewController {
             //        let service = DemoWebService()
         }
         
-        service.fetchDictionaryList { (dictionaryList: [UserDictionary]?, error: EnfocaError?) in
+        
+        service.initialize { (dictionaryList: [UserDictionary]?, error: EnfocaError?) in
             if let error = error {
                 self.presentFatalAlert(title: "Failed to initialize app", message: error)
             }
             
             getAppDelegate().webService = service
             
-            //decide where to go and segue
+            guard let dictionaryList: [UserDictionary] = dictionaryList else { fatalError() }
             
-            if let dictionaryList = dictionaryList, dictionaryList.count > 0 {
-                //Got some
-                self.performSegue(withIdentifier: "DictionarySelectionSegue", sender: dictionaryList)
-                //TODO!  Check app defaults, if they have them, segue to home!
-                
+            
+            if let json = getAppDelegate().applicationDefaults.load(), self.autoload {
+                self.performSegue(withIdentifier: "LoadDictionarySegue", sender: json)
             } else {
-                //Got none
-                self.performSegue(withIdentifier: "DictionaryCreationSegue", sender: nil)
+                self.presentCreateOrLoadView(dictionaryList: dictionaryList)
             }
+        }
+    }
+    
+    private func presentCreateOrLoadView(dictionaryList: [UserDictionary]) {
+        //decide where to go and segue
+        if dictionaryList.count > 0 {
+            //Got some
+            self.performSegue(withIdentifier: "DictionarySelectionSegue", sender: dictionaryList)
+            //TODO!  Check app defaults, if they have them, segue to home!
+            
+        } else {
+            //Got none
+            self.performSegue(withIdentifier: "DictionaryCreationSegue", sender: nil)
         }
     }
     
@@ -62,6 +77,9 @@ class NewAppLaunchViewController: UIViewController {
             
             guard let list = sender as? [UserDictionary] else { fatalError() }
             to.initialize(dictionaryList: list)
+        } else if let to = segue.destination as? DictionaryLoadingViewController {
+            guard let json = sender as? String else { fatalError() }
+            to.initialize(json: json)
         }
     }
 }

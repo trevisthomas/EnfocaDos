@@ -8,6 +8,7 @@
 
 import UIKit
 
+//deprecated
 class LoadingViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     fileprivate var progressLabels : [String: UILabel] = [:]

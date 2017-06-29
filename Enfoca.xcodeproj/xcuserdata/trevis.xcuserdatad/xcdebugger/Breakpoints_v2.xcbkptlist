@@ -260,31 +260,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Enfoca/Core/ApplicationDefaults.swift"
-            timestampString = "520361132.028681"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "save(includingDataStore:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/DataStore.swift"
-            timestampString = "519501596.533893"
+            timestampString = "520467371.948618"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "search(value:useWordField:withTags:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -296,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/DataStore.swift"
-            timestampString = "519501753.015122"
+            timestampString = "520467371.948618"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "464"
-            endingLineNumber = "464"
+            startingLineNumber = "488"
+            endingLineNumber = "488"
             landmarkName = "add(metaData:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -328,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "520321910.598448"
+            timestampString = "520468055.991712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "359"
-            endingLineNumber = "359"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "updateScore(forWordPair:correct:elapsedTime:callback:)"
             landmarkType = "7">
             <Locations>
@@ -568,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Features/DictionarySelection/DictionaryLoadingViewController.swift"
-            timestampString = "520298640.439823"
+            timestampString = "520467371.948618"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "launch()"
             landmarkType = "7">
          </BreakpointContent>
@@ -606,118 +590,6 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "start()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Enfoca/Network/DataStore.swift"
-            timestampString = "520443124.202298"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "475"
-            endingLineNumber = "475"
-            landmarkName = "getMetaData(forWordPair:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Enfoca/Features/DictionarySelection/DictionaryLoadingViewController.swift"
-            timestampString = "520444982.986155"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "launch()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Enfoca.DictionaryLoadingViewController.(launch in _961FB168B71AE06CF5F97A742FF98D00) () -&gt; ()"
-                  moduleName = "Enfoca"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/DictionarySelection/DictionaryLoadingViewController.swift"
-                  timestampString = "520444982.997484"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "688">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Enfoca.DictionaryLoadingViewController.((launch in _961FB168B71AE06CF5F97A742FF98D00) () -&gt; ()).(closure #1)"
-                  moduleName = "Enfoca"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/DictionarySelection/DictionaryLoadingViewController.swift"
-                  timestampString = "520444982.999042"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "58">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "520445078.268727"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "initialize(dictionary:json:progressObserver:callback:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Enfoca/Network/Operations/Public/Perform.swift"
-            timestampString = "520445153.083518"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "initializeDataStore(dataStore:enfocaId:db:privateDb:progressObserver:callback:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Enfoca/Network/Operations/Core/Meta/OperationFetchMetaData.swift"
-            timestampString = "520445168.469358"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "init(enfocaId:db:progressObserver:errorDelegate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

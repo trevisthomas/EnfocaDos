@@ -23,7 +23,8 @@ class DemoWebService : WebService {
         fatalError()
     }
 
-    func initialize(dictionary: UserDictionary, json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
+    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
+        
         callback(true, nil)
     }
     
@@ -188,7 +189,7 @@ class DemoWebService : WebService {
         fatalError()
     }
     
-    func fetchDictionaryList(callback: @escaping ([UserDictionary]?, EnfocaError?) -> ()) {
+    func initialize(callback: @escaping ([UserDictionary]?, EnfocaError?) -> ()) {
         fatalError()  //Yeah, gonna need to do something about this.
     }
     
