@@ -69,6 +69,8 @@
 		0F085B8A1EDC66A200FC20A1 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
 		0F085B8D1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */; };
 		0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
+		0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
+		0F1AAA1D1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F1B05171EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F35B03D1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
@@ -471,6 +473,7 @@
 		0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordPairController.swift; sourceTree = "<group>"; };
 		0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairEditorControllerTests.swift; sourceTree = "<group>"; };
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
+		0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateDictionary.swift; path = Enfoca/Network/Operations/Core/Dictionary/OperationCreateDictionary.swift; sourceTree = SOURCE_ROOT; };
 		0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateDictionary.swift; path = Dictionary/OperationUpdateDictionary.swift; sourceTree = "<group>"; };
@@ -1017,6 +1020,7 @@
 				0F911F2B1EE8573500F21855 /* UITextField+.swift */,
 				0FE015981EF5C9C100780184 /* Double+.swift */,
 				0FE015A41EF9D46D00780184 /* CALayer+.swift */,
+				0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1565,6 +1569,7 @@
 				0F911E5E1EE75D4600F21855 /* CloudKitConverters.swift in Sources */,
 				0F911E601EE75D4600F21855 /* Gender.swift in Sources */,
 				0F911E611EE75D4600F21855 /* OperationDeleteRecord.swift in Sources */,
+				0F1AAA1D1F055F0800ACC0C3 /* Date+.swift in Sources */,
 				0F911E621EE75D4600F21855 /* UIViewController+.swift in Sources */,
 				0FE015AC1EFD697F00780184 /* EnfocaDefaultAnimator.swift in Sources */,
 				0F35B0451F0173CD001AC511 /* Perform+Dictionary.swift in Sources */,
@@ -1745,6 +1750,7 @@
 				0F35B0471F01BAD2001AC511 /* DictionaryCreationViewController.swift in Sources */,
 				0FE015931EF5976200780184 /* Randomizer.swift in Sources */,
 				0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */,
+				0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */,
 				0F028DDE1F00C42B008200E2 /* Dictionary.swift in Sources */,
 				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,

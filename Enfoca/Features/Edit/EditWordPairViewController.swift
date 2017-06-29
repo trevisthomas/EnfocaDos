@@ -166,12 +166,8 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
             return controller.selectedTags
         }
         set {
-            print(newValue)
             //Apply the new selecterd tags
             controller.selectedTags = newValue
-//            controller.initialize()
-            
-//            tagViewController.selectedTags(tags: newValue)
             
             editorViewController.refresh()
             
@@ -230,13 +226,17 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     }
     var score: String{
         get {
-            print("TotalTime \(controller.getTotalTime())")
             return controller.getScore()
         }
     }
     var count: String{
         get {
             return controller.getCount()
+        }
+    }
+    var averageTime: String {
+        get{
+            return controller.getAverageTime()
         }
     }
 

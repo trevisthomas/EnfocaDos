@@ -32,7 +32,7 @@ protocol QuizViewModel {
     
     func getCardTimeoutWarning() -> Int
     
-    var timeTakenForCardInSeconds: Int? {get set}
+    var timeTakenForCardInMiliSeconds: Int? {get set}
     
 }
 
@@ -45,7 +45,7 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     private(set) var quizWords: [WordPair] = []
     private(set) var originalWords: [WordPair]!
     private let delegate: QuizOptionsViewControllerDelegate
-    var timeTakenForCardInSeconds: Int? = nil
+    var timeTakenForCardInMiliSeconds: Int? = nil
     
     private var currentWordPairIndex: Int = 0
     private var currentFrontSide: CardSide!
@@ -156,7 +156,7 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     func correct() {
         scoreCurrentWord(isCorrect: true)
         currentWordPairIndex += 1
-        timeTakenForCardInSeconds = nil
+        timeTakenForCardInMiliSeconds = nil
     }
     
     func incorrect() {
@@ -165,13 +165,13 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
         currentWordPairIndex += 1
         
         incorrectWordCountSinceMatchingRound += 1
-        timeTakenForCardInSeconds = nil
+        timeTakenForCardInMiliSeconds = nil
     }
     
     private func scoreCurrentWord(isCorrect: Bool) {
         let localWp = quizWords[currentWordPairIndex]
         
-        let duration = timeTakenForCardInSeconds ?? 0
+        let duration = timeTakenForCardInMiliSeconds ?? 0
         // This guard breaks a lot of tests and i'm lazy
 //        guard let duration = timeTakenForCardInSeconds else {fatalError()}
         services.updateScore(forWordPair: localWp, correct: isCorrect, elapsedTime: duration, callback: { (wp: MetaData?, error: EnfocaError?) in

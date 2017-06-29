@@ -59,6 +59,9 @@ class DictionarySelectionViewController: UIViewController {
             
         } else if let to = segue.destination as? DictionaryLoadingViewController  {
             guard let dictionary = sender as? UserDictionary else { fatalError() }
+            
+            print("Loading dictionary: \(dictionary.subject) with enfocaId \(dictionary.enfocaId)")
+            
             to.initialize(dictionary: dictionary)
         } else if let to = segue.destination as? DictionaryCreationViewController {
             to.initialize(isBackButtonNeeded: true)

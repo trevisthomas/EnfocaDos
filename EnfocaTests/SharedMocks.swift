@@ -30,6 +30,8 @@ class MockWebService : WebService {
     var createdWordPair: WordPair?
     var updatedWordPair: WordPair?
     
+    var metaDict: [String: MetaData] = [:]
+    
     var showNetworkActivityIndicatorCalledCount = 0
     var showNetworkActivityIndicator: Bool = false {
         didSet{
@@ -204,7 +206,9 @@ class MockWebService : WebService {
     }
     
     func fetchMetaData(forWordPair: WordPair, callback: @escaping (MetaData?, EnfocaError?) -> ()) {
-        fatalError()
+        
+        callback(metaDict[forWordPair.pairId], nil)
+        
     }
     
     func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback : @escaping(UserDictionary?, EnfocaError?)->()) {

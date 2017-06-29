@@ -22,6 +22,9 @@ class CardFrontViewController: UIViewController {
     private var timerWarning: Int!
     private var timerActive: Bool = false
     
+    private var startTime: Double!
+    private var endTime: Double!
+    
     fileprivate var animator: QuizCardAnimator = QuizCardAnimator()
     
     override func viewDidLoad() {
@@ -53,7 +56,9 @@ class CardFrontViewController: UIViewController {
     
     private func performFlip() {
         stopTheTimer()
-        sharedViewModel.timeTakenForCardInSeconds = sharedViewModel.getCardTimeout() - timer
+        let elapsedMiliseconds = Int(endTime - startTime)
+        
+        sharedViewModel.timeTakenForCardInMiliSeconds = elapsedMiliseconds
         performSegue(withIdentifier: "QuizRearViewControllerSegue", sender: self)
     }
     
@@ -74,6 +79,9 @@ class CardFrontViewController: UIViewController {
     private func startTheTimer() {
         timerActive = true
         self.timerLabel.isHidden = true
+        
+        startTime = Date().miliSeconds
+        
         perSecondTimer { () -> (Bool) in
             self.timer = self.timer - 1
             
@@ -92,6 +100,7 @@ class CardFrontViewController: UIViewController {
     }
     
     private func stopTheTimer() {
+        self.endTime = Date().miliSeconds
         timerActive = false
     }
 }

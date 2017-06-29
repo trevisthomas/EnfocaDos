@@ -29,6 +29,18 @@ class EditWordPairControllerTests: XCTestCase {
         XCTAssertTrue(sut.isEditMode)
         XCTAssertEqual(sut.title(), "Edit")
     }
+    
+    func testAvgTime_ShouldCalculateAverage() {
+        let wp = WordPair(pairId: "0010", word: "Enfoca", definition: "Focus" )
+        let meta = MetaData(metaId: "01", pairId: wp.pairId, dateCreated: Date(), dateUpdated: Date(), incorrectCount: 1, totalTime: 90000, timedViewCount: 9)
+        services.metaDict[wp.pairId] = meta
+        
+        sut = EditWordPairController(delegate: delegate, wordPair: wp)
+        
+        sut.initialize()
+
+        XCTAssertEqual(sut.getAverageTime(), "10.0 seconds.")
+    }
 }
 
 private class MockEditWordPairControllerDelegate: EditWordPairControllerDelegate {

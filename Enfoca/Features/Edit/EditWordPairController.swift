@@ -227,9 +227,11 @@ class EditWordPairController: Controller {
         return score
     }
     
-    func getTotalTime()->String {
-        guard let totalTime = originalMetaData?.totalTime else { return "n/a"}
-        return "\(totalTime)"
+    func getAverageTime()->String {
+        guard let meta = originalMetaData else { return "..."}
+        
+        return String(format: "%.1f seconds.", (Double(meta.totalTime)/Double(meta.timedViewCount)) / 1000.0)
+        
     }
     func getCount() -> String{
         guard let metaData = originalMetaData else { return "none"}

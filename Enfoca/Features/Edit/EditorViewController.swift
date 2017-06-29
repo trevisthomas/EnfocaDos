@@ -18,6 +18,7 @@ protocol EditorViewControllerDelegate {
     var dateUpdated: String{get}
     var score: String{get}
     var count: String{get}
+    var averageTime: String{get}
     
     func performSave()
     func performDelete()
@@ -43,7 +44,8 @@ class EditorViewController: UIViewController {
     @IBOutlet weak var accuracyLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var dateAddedLabel: UILabel!
-    @IBOutlet weak var dateUpdated: UILabel!
+    @IBOutlet weak var dateUpdatedLabel: UILabel!
+    @IBOutlet weak var averageTimeLabel: UILabel!
     
     @IBOutlet weak var statisticsWrapperView: UIView!
     
@@ -141,7 +143,8 @@ class EditorViewController: UIViewController {
         accuracyLabel.text = delegate.score
         countLabel.text = delegate.count
         dateAddedLabel.text = delegate.dateAdded
-        dateUpdated.text = delegate.dateUpdated
+        dateUpdatedLabel.text = delegate.dateUpdated
+        averageTimeLabel.text = delegate.averageTime
         
         
         
