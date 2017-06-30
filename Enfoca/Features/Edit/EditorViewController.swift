@@ -67,9 +67,9 @@ class EditorViewController: UIViewController {
         
         definitionTextField.addTarget(self, action: #selector(definitionTextDidChange(_:)), for: [.editingChanged])
         
-        wordTextField.placeholder = getTermTitle()
+        wordTextField.updatePlacelderText(placeholder: getTermTitle())
         
-        definitionTextField.placeholder = getDefinitionTitle()
+        definitionTextField.updatePlacelderText(placeholder: getDefinitionTitle())
         
         
     }
@@ -160,7 +160,9 @@ class EditorViewController: UIViewController {
         showQuizStatsButton.isHidden = delegate.isCreateMode()
     }
     
-    
+    func failedValidation(){
+        CustomAnimations.shakeAnimation(view: wordTextField)
+    }
     
 }
 

@@ -168,6 +168,26 @@ class CustomAnimations {
         })
     }
     
+    class func bounceAnimation(view: UIView){
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.damping = 2.0
+        pulse.fromValue = 1.25
+        pulse.toValue = 1.0
+        pulse.duration = pulse.settlingDuration
+        view.layer.add(pulse, forKey: nil)
+    }
     
+    class func shakeAnimation(view: UIView) {
+        
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.08
+        animation.repeatCount = 4
+        animation.autoreverses = true
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        animation.fromValue = CGPoint(x: view.frame.midX - 10, y: view.frame.midY)
+        animation.toValue = CGPoint(x: view.frame.midX + 10, y: view.frame.midY)
+        view.layer.add(animation, forKey: "position")
+
+    }
 
 }

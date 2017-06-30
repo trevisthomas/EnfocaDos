@@ -72,6 +72,8 @@
 		0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1AAA1D1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1AAA1F1F05734A00ACC0C3 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */; };
+		0F1AAA211F07021200ACC0C3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA201F07021200ACC0C3 /* UIView+.swift */; };
+		0F1AAA221F07021200ACC0C3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA201F07021200ACC0C3 /* UIView+.swift */; };
 		0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F1B05171EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F35B03D1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
@@ -476,6 +478,7 @@
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
 		0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
+		0F1AAA201F07021200ACC0C3 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateDictionary.swift; path = Enfoca/Network/Operations/Core/Dictionary/OperationCreateDictionary.swift; sourceTree = SOURCE_ROOT; };
 		0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateDictionary.swift; path = Dictionary/OperationUpdateDictionary.swift; sourceTree = "<group>"; };
@@ -1023,6 +1026,7 @@
 				0FE015981EF5C9C100780184 /* Double+.swift */,
 				0FE015A41EF9D46D00780184 /* CALayer+.swift */,
 				0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */,
+				0F1AAA201F07021200ACC0C3 /* UIView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1511,6 +1515,7 @@
 				0F911E371EE75D4600F21855 /* Event.swift in Sources */,
 				0F911E381EE75D4600F21855 /* WordPairTableViewController.swift in Sources */,
 				0F911E391EE75D4600F21855 /* Tag.swift in Sources */,
+				0F1AAA221F07021200ACC0C3 /* UIView+.swift in Sources */,
 				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
 				0FE015A31EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */,
 				0FE015941EF5976200780184 /* Randomizer.swift in Sources */,
@@ -1702,6 +1707,7 @@
 				0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
+				0F1AAA211F07021200ACC0C3 /* UIView+.swift in Sources */,
 				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,
 				0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */,
 				0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */,

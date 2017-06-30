@@ -57,6 +57,14 @@ class DictionarySelectionViewController: UIViewController {
         isEditMode = !isEditMode
         initializeLookAndFeel()
         
+//        let cells = tableView.visibleCells
+//        
+//        for cell in cells {
+//            cell.jiggle { () -> (Bool) in
+//                return self.isEditMode
+//            }
+//        }
+        
         
     }
     

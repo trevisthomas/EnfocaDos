@@ -260,13 +260,10 @@ class DataStore {
     private func search(value : String, useWordField: Bool = true, withTags tags : [Tag]? = nil) -> [WordPair]{
         
         let pattern : String
-//        if value.characters.count > 0 && value.characters.count < 2 {
-//        if value.characters.count == 1 {
-//            pattern = "^\(value)"
-//        } else {
-//            pattern = value
-//        }
-        pattern = "\\b\(value)"
+        
+        pattern = value
+
+//        pattern = "\\b\(value)"
         
         let pairFilter : (WordPair) -> Bool
         if useWordField {

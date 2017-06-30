@@ -162,12 +162,15 @@ class HomeViewController: UIViewController {
         let text = textField.text ?? ""
         
         wordPairTableViewController.offerCreation(withText: text)
-        if text.isEmpty {
-            hideWordTable()
-        } else {
-            controller.phrase = text
-            showWordTable()
-        }
+//        if text.isEmpty {
+//            hideWordTable()
+//        } else {
+//            controller.phrase = text
+//            showWordTable()
+//        }
+        
+        controller.phrase = text
+        showWordTable()
         
     }
     

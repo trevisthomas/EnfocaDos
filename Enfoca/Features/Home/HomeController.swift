@@ -66,8 +66,9 @@ class HomeController: Controller {
     }
     
     func search(){
-        
-        services.fetchWordPairs(tagFilter: [], wordPairOrder: wordOrder, pattern: phrase) { (pairs: [WordPair]?, error:EnfocaError?) in
+        let phrase : String = self.phrase ?? ""
+        let regex = "\\b\(phrase)"
+        services.fetchWordPairs(tagFilter: [], wordPairOrder: wordOrder, pattern: regex) { (pairs: [WordPair]?, error:EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)
             }

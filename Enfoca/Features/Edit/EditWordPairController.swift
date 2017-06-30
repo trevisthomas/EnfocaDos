@@ -165,11 +165,25 @@ class EditWordPairController: Controller {
         }
     }
     
-    func performSaveOrCreate() {
+    func performSaveOrCreate(handleFailedValidation: @escaping ()->()) {
+        
+        fetchExatcMatches(callback: { (matchingTerms: [WordPair]) in
+            if matchingTerms.count > 0 {
+                handleFailedValidation()
+                return
+            } else {
+                //Perform WP action
+                self.performWordPairAction()
+            }
+        })
+
+    }
+    
+    private func performWordPairAction() {
         if isEditMode {
             if isTextFieldInvalid() {
-                self.delegate.onError(title: "Update failed", message: "Invalid content in word or definition")
-                return
+                //                self.delegate.onError(title: "Update failed", message: "Invalid content in word or definition")
+                //                return
             }
             
             guard let originalWordPair = originalWordPair else { fatalError() }
@@ -202,11 +216,25 @@ class EditWordPairController: Controller {
                 guard let wordPair = wordPair else { return }
                 
                 self.delegate.dismissViewController()
-                    
+                
                 self.fireEvent(source: self, event: Event(type: .wordPairCreated, data: wordPair))
                 
-
+                
             })
+        }
+    }
+    
+    //Duplicate terms are not allowed. 
+    private func fetchExatcMatches( callback:@escaping([WordPair])->() ) {
+        services.fetchWordPairs(tagFilter: [], wordPairOrder: .wordDesc, pattern: word.trim()) { (wordPairs: [WordPair]?, error: EnfocaError?) in
+            if let error = error {
+                self.delegate.onError(title: "Create failed", message: error)
+                return
+            }
+            
+            guard let matches = wordPairs else { fatalError() }
+            
+            callback(matches)
         }
     }
     

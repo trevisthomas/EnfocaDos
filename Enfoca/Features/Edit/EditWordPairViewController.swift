@@ -205,7 +205,10 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     }
     
     func performSave() {
-        controller.performSaveOrCreate()
+        controller.performSaveOrCreate { 
+            //Validation failed
+            self.editorViewController.failedValidation()
+        }
     }
     func performDelete() {
         controller.performDelete()

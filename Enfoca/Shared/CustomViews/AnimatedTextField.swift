@@ -89,11 +89,24 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
     }
     
     
-    override var placeholder: String? {
-        didSet {
-            placeholderTextBackup = placeholder
-            textFieldDidEndEditing(self)
-        }
+//    override var placeholder: String? {
+//        didSet {
+//            placeholderTextBackup = placeholder
+//            setup()
+//            textFieldDidEndEditing(self)
+//        }
+//    }
+    
+    func updatePlacelderText(placeholder: String?) {
+        
+        label.removeFromSuperview()
+        label = nil
+        
+        
+        placeholderTextBackup = placeholder
+        setup()
+        textFieldDidEndEditing(self)
+
     }
     
 //    func textFieldValueChanged(_ textField: UITextField) {
