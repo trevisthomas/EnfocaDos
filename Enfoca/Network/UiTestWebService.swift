@@ -256,5 +256,23 @@ class UiTestWebService : WebService {
     func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback: @escaping (UserDictionary?, EnfocaError?) -> ()) {
         fatalError()
     }
+    
+    func updateDictionary(oldDictionary : UserDictionary, termTitle: String, definitionTitle: String, subject : String, language: String?, callback :
+        @escaping(UserDictionary?, EnfocaError?)->()){
+        
+        fatalError()
+    }
+    
+    func getSubject() -> String {
+        return dataStore.getSubject()
+    }
+    
+    func getTermTitle() -> String {
+        return dataStore.getTermTitle()
+    }
+    
+    func getDefinitionTitle() -> String {
+        return dataStore.getDefinitionTitle()
+    }
 
 }

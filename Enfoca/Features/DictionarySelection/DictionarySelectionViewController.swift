@@ -30,9 +30,20 @@ class DictionarySelectionViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        initializeLookAndFeel()
+    }
+    
     private func initializeLookAndFeel() {
         tableView.separatorStyle = .none
+        if isEditMode {
+            editButton.setTitle("Done", for: .normal)
+        } else {
+            editButton.setTitle("Edit", for: .normal)
+        }
     }
+    
     
     func initialize(dictionaryList: [UserDictionary]) {
         self.dictionaryList = dictionaryList
@@ -43,12 +54,10 @@ class DictionarySelectionViewController: UIViewController {
     }
     
     @IBAction func editButtonAction(_ sender: Any) {
-        if isEditMode {
-            editButton.setTitle("Edit", for: .normal)
-        } else {
-            editButton.setTitle("Done", for: .normal)
-        }
         isEditMode = !isEditMode
+        initializeLookAndFeel()
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

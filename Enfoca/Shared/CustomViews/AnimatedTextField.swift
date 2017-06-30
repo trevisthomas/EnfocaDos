@@ -47,8 +47,6 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
     
     func setup() {
         
-        
-        
         delegate = self
         
         label = UILabel(frame: CGRect(x: textInset, y: bounds.origin.y, width: bounds.width, height: bounds.height))
@@ -90,6 +88,13 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
         }
     }
     
+    
+    override var placeholder: String? {
+        didSet {
+            placeholderTextBackup = placeholder
+            textFieldDidEndEditing(self)
+        }
+    }
     
 //    func textFieldValueChanged(_ textField: UITextField) {
 //                textFieldDidEndEditing(self)

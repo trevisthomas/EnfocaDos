@@ -67,6 +67,10 @@ class EditorViewController: UIViewController {
         
         definitionTextField.addTarget(self, action: #selector(definitionTextDidChange(_:)), for: [.editingChanged])
         
+        wordTextField.placeholder = getTermTitle()
+        
+        definitionTextField.placeholder = getDefinitionTitle()
+        
         
     }
     

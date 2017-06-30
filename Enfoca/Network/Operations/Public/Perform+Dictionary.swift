@@ -70,4 +70,24 @@ extension Perform {
         queue.addOperations([ fetchIncrementAndSaveSeedIfNecessary, operationCreateDictionary, completeOp], waitUntilFinished: false)
         
     }
+    
+    class func updateDictionary(db: CKDatabase, dictionary: UserDictionary, callback : @escaping (_ dictionary : UserDictionary?, _ error : String?) -> ()){
+        
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        let updateDictionaryOperation = OperationUpdateDictionary(updatedDictionary: dictionary, enfocaId: dictionary.enfocaId, db: db, errorDelegate: errorHandler)
+        
+        let completeOp = BlockOperation {
+            guard let dict = updateDictionaryOperation.dictionary else { fatalError() }
+            
+            OperationQueue.main.addOperation{
+                callback(dict, nil)
+            }
+        }
+        
+        completeOp.addDependency(updateDictionaryOperation)
+        queue.addOperations([updateDictionaryOperation, completeOp], waitUntilFinished: false)
+        
+    }
 }

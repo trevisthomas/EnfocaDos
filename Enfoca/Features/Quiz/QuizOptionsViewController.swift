@@ -60,6 +60,9 @@ class QuizOptionsViewController: UIViewController {
         cardSideSegmentedControl.selectedSegmentIndex = CardSide.values.index(of: viewModel.cardSide)!
         titleLabel.text = viewModel.tagName
         
+        cardSideSegmentedControl.setTitle(getTermTitle(), forSegmentAt: 2)
+        cardSideSegmentedControl.setTitle(getDefinitionTitle(), forSegmentAt: 0)
+        
         formatWordCountText()
     }
     

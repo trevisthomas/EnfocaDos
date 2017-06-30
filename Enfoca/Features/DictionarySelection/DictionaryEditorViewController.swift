@@ -53,7 +53,7 @@ class DictionaryEditorViewController: UIViewController {
         if "Create" == title {
             createDictionary()
         } else if "Update" == title {
-            presentAlert(title: "TODO", message: "Update not implemented yet")
+            updateDictionary()
         }
         
     }
@@ -68,34 +68,57 @@ class DictionaryEditorViewController: UIViewController {
 }
 
 extension DictionaryEditorViewController {
+    fileprivate func updateDictionary() {
+        
+        validateForm {
+            services().updateDictionary(oldDictionary: dictionary, termTitle: termTextField!.text!, definitionTitle: definitionTextField!.text!, subject: subjectTextField!.text!, language: "es", callback: { (dictionary: UserDictionary?, error: EnfocaError?) in
+                if let error = error {
+                    self.presentAlert(title: "Failed to update", message: error)
+                    return
+                }
+                guard let _ = dictionary else { fatalError() }
+
+                self.dismiss(animated: true, completion: {
+                    //Nothing
+                })
+            })
+        }
+    }
+    
     fileprivate func createDictionary() {
-        guard let termLabel = termTextField.getValidNonEmptyString() else {
+        
+        validateForm {
+            services().createDictionary(termTitle: termTextField!.text!, definitionTitle: definitionTextField!.text!, subject: subjectTextField!.text!, language: "es") { (dictionary: UserDictionary?, error: EnfocaError?) in
+                if let error = error {
+                    self.presentAlert(title: "Failed to create", message: error)
+                    return
+                }
+                
+                guard let dictionary = dictionary else { fatalError() }
+                
+                self.performSegue(withIdentifier: "LoadDictionarySegue", sender: dictionary)
+                
+            }
+        }
+    }
+    
+    func validateForm(callback: ()->()) {
+        guard let _ = termTextField.getValidNonEmptyString() else {
             self.presentAlert(title: "Failed to create", message: "Term label can not be empty.")
             return
         }
         
-        guard let definitionLabel = termTextField.getValidNonEmptyString() else {
+        guard let _ = termTextField.getValidNonEmptyString() else {
             self.presentAlert(title: "Failed to create", message: "Definition label can not be empty.")
             return
         }
         
-        guard let subject = subjectTextField.getValidNonEmptyString() else {
+        guard let _ = subjectTextField.getValidNonEmptyString() else {
             self.presentAlert(title: "Failed to create", message: "Subject can not be empty.")
             return
         }
         
-        services().createDictionary(termTitle: termLabel, definitionTitle: definitionLabel, subject: subject, language: "es") { (dictionary: UserDictionary?, error: EnfocaError?) in
-            if let error = error {
-                self.presentAlert(title: "Failed to create", message: error)
-                return
-            }
-            
-            guard let dictionary = dictionary else { fatalError() }
-            
-            self.performSegue(withIdentifier: "LoadDictionarySegue", sender: dictionary)
-            
-        }
-        
+        callback()
     }
     
     private func getValidNonEmptyString(textField: UITextField) -> String? {

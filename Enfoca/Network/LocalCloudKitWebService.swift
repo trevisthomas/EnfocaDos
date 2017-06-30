@@ -190,6 +190,26 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
+    func updateDictionary(oldDictionary : UserDictionary, termTitle: String, definitionTitle: String, subject : String, language: String?, callback :
+        @escaping(UserDictionary?, EnfocaError?)->()) {
+        
+        oldDictionary.applyUpdate(termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
+        
+        Perform.updateDictionary(db: db, dictionary: oldDictionary) { (dictionary: UserDictionary?, error: String?) in
+            
+            if let error = error {
+                callback(nil, error)
+                return
+            }
+            
+            guard let _ = dictionary else { fatalError() }
+            
+            callback(dictionary, nil)
+            
+        }
+        
+    }
+    
     func updateWordPair(oldWordPair : WordPair, word: String, definition: String, gender : Gender, example: String?, tags : [Tag], callback :
         @escaping(WordPair?, EnfocaError?)->()){
         
@@ -400,6 +420,18 @@ class LocalCloudKitWebService : WebService {
         callback(meta, nil)
     }
     
+    
+    func getSubject() -> String {
+        return dataStore.getSubject()
+    }
+    
+    func getTermTitle() -> String {
+        return dataStore.getTermTitle()
+    }
+    
+    func getDefinitionTitle() -> String {
+        return dataStore.getDefinitionTitle()
+    }
     
     
 }

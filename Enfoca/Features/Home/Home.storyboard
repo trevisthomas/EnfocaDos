@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -115,7 +116,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62D-vP-Co8">
-                                        <rect key="frame" x="8" y="30" width="34" height="30"/>
+                                        <rect key="frame" x="8" y="31" width="34" height="30"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -134,8 +135,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgK-Ja-kbt">
-                                <rect key="frame" x="143" y="30" width="89" height="30"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
+                                <rect key="frame" x="53" y="30" width="269" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -192,6 +193,7 @@
                             <constraint firstItem="gRr-TH-ntc" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="-20" id="J9r-X9-zy7"/>
                             <constraint firstItem="3KL-V9-SAs" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="-20" id="JSb-c6-S8d"/>
                             <constraint firstItem="w1e-F6-TjV" firstAttribute="top" secondItem="3KL-V9-SAs" secondAttribute="bottom" constant="106" id="Jgm-1u-ljv"/>
+                            <constraint firstItem="gRr-TH-ntc" firstAttribute="leading" secondItem="mgK-Ja-kbt" secondAttribute="trailing" constant="-322" id="NY0-Cr-TWV"/>
                             <constraint firstItem="6AG-Mb-wUs" firstAttribute="centerY" secondItem="VZW-bF-agk" secondAttribute="centerY" id="O7p-Jc-mRz"/>
                             <constraint firstItem="VZW-bF-agk" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="91" id="Qd0-cL-JkX"/>
                             <constraint firstItem="dwd-qq-5mt" firstAttribute="top" secondItem="PYL-6A-Hq0" secondAttribute="bottom" constant="44" id="SeJ-hD-U3n"/>
@@ -209,6 +211,7 @@
                             <constraint firstItem="Igz-BK-v1t" firstAttribute="leading" secondItem="7Ni-DN-MKS" secondAttribute="leading" id="tXR-Cy-rKG"/>
                             <constraint firstAttribute="leading" secondItem="w1e-F6-TjV" secondAttribute="leading" id="tym-jk-L9G"/>
                             <constraint firstItem="VZW-bF-agk" firstAttribute="leading" secondItem="7Ni-DN-MKS" secondAttribute="leading" constant="8" id="wJe-59-EEt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mgK-Ja-kbt" secondAttribute="trailing" constant="37" id="xof-l0-SDR"/>
                         </constraints>
                     </view>
                     <connections>

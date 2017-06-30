@@ -38,6 +38,14 @@ class UserDictionary {
         isTemporary = true
     }
     
+    func applyUpdate(termTitle: String, definitionTitle: String, subject : String, language: String?) {
+        
+        self.definitionTitle = definitionTitle
+        self.termTitle = termTitle
+        self.language = language
+        self.subject = subject
+    }
+    
     convenience init (json: String) {
         guard let jsonData = json.data(using: .utf8) else { fatalError() }
         guard let jsonResult: NSDictionary = try! JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary else {fatalError()}

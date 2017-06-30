@@ -114,3 +114,16 @@ extension UIViewController {
     }
 }
 
+extension UIViewController {
+    func getSubject() -> String {
+        return getAppDelegate().webService.getSubject()
+    }
+    
+    func getTermTitle() -> String {
+        return getAppDelegate().webService.getTermTitle()
+    }
+    
+    func getDefinitionTitle() -> String {
+        return getAppDelegate().webService.getDefinitionTitle()
+    }
+}

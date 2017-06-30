@@ -32,6 +32,8 @@ class MockWebService : WebService {
     
     var metaDict: [String: MetaData] = [:]
     
+    var dictionary: UserDictionary!
+    
     var showNetworkActivityIndicatorCalledCount = 0
     var showNetworkActivityIndicator: Bool = false {
         didSet{
@@ -71,6 +73,8 @@ class MockWebService : WebService {
     
     func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
         self.tags = makeTags()
+        
+        self.dictionary = dictionary
     }
     
     
@@ -215,8 +219,26 @@ class MockWebService : WebService {
         fatalError()
     }
     
+    func updateDictionary(oldDictionary : UserDictionary, termTitle: String, definitionTitle: String, subject : String, language: String?, callback :
+        @escaping(UserDictionary?, EnfocaError?)->()) {
+        
+        fatalError()
+    }
+    
     func initialize(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
         fatalError()
+    }
+    
+    func getSubject() -> String {
+        return dictionary.subject
+    }
+    
+    func getTermTitle() -> String {
+        return dictionary.termTitle
+    }
+    
+    func getDefinitionTitle() -> String {
+        return dictionary.definitionTitle
     }
 }
 

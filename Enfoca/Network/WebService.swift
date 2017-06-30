@@ -48,4 +48,14 @@ protocol WebService {
     func initialize(callback : @escaping([UserDictionary]?, EnfocaError?)->())
     
     func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback : @escaping(UserDictionary?, EnfocaError?)->())
+    
+    func updateDictionary(oldDictionary : UserDictionary, termTitle: String, definitionTitle: String, subject : String, language: String?, callback :
+        @escaping(UserDictionary?, EnfocaError?)->())
+    
+    func getSubject() -> String
+    
+    func getTermTitle() -> String
+    
+    func getDefinitionTitle() -> String
+    
 }

@@ -197,4 +197,20 @@ class DemoWebService : WebService {
         fatalError()
     }
 
+    func updateDictionary(oldDictionary : UserDictionary, termTitle: String, definitionTitle: String, subject : String, language: String?, callback :
+        @escaping(UserDictionary?, EnfocaError?)->()){
+        
+        fatalError()
+    }
+    func getSubject() -> String {
+        fatalError()
+    }
+    
+    func getTermTitle() -> String {
+        fatalError()
+    }
+    
+    func getDefinitionTitle() -> String {
+        fatalError()
+    }
 }
