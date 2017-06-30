@@ -65,7 +65,7 @@ class DictionarySelectionViewController: UIViewController {
 //            }
 //        }
         
-        
+        tableView.setEditing(isEditMode, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
