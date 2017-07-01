@@ -167,6 +167,12 @@ class EditWordPairController: Controller {
     
     func performSaveOrCreate(handleFailedValidation: @escaping ()->()) {
         
+        //Dont perform this validation on update.  The terms can match then!
+        if isEditMode {
+            self.performWordPairAction()
+            return
+        }
+        
         fetchExatcMatches(callback: { (matchingTerms: [WordPair]) in
             if matchingTerms.count > 0 {
                 handleFailedValidation()

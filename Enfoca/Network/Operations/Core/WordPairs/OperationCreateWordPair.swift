@@ -10,13 +10,13 @@ import Foundation
 import CloudKit
 
 class OperationCreateWordPair : BaseOperation {
-    private let enfocaId : NSNumber
+    private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var wordPair : WordPair?
     private let wordPairSource : WordPair
     
-    init (wordPairSource: WordPair, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (wordPairSource: WordPair, enfocaRef : CKReference, db: CKDatabase, errorDelegate : ErrorDelegate) {
+        self.enfocaRef = enfocaRef
         self.db = db
         self.wordPairSource = wordPairSource
         super.init(errorDelegate: errorDelegate)
@@ -38,7 +38,7 @@ class OperationCreateWordPair : BaseOperation {
             record.setValue(wordPairSource.gender.toString(), forKey: "gender")
         }
         
-        record.setValue(enfocaId, forKey: "enfocaId")
+        record.setValue(enfocaRef, forKey: "enfocaRef")
         
         db.save(record) { (newRecord: CKRecord?, error: Error?) in
             if let error = error {

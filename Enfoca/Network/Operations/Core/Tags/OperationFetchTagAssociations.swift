@@ -10,13 +10,13 @@ import Foundation
 import CloudKit
 
 class OperationFetchTagAssociations : MonitoredBaseOperation {
-    private let enfocaId : NSNumber
+    private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var tagAssociations : [TagAssociation] = []
     private let key : String = "FetchTagAssociations"
     
-    init (enfocaId: NSNumber, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (enfocaRef : CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
+        self.enfocaRef = enfocaRef
         self.db = db
         super.init(progressObserver: progressObserver, errorDelegate: errorDelegate)
     }
@@ -26,7 +26,7 @@ class OperationFetchTagAssociations : MonitoredBaseOperation {
         
         self.progressObserver.startProgress(ofType: self.key, message: "Loading tag associations.")
         
-        let predicate : NSPredicate = NSPredicate(format: "enfocaId == %@", enfocaId)
+        let predicate : NSPredicate = NSPredicate(format: "enfocaRef == %@", enfocaRef)
         
         let query: CKQuery = CKQuery(recordType: "TagAssociation", predicate: predicate)
         

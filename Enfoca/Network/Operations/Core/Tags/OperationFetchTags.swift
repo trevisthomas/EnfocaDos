@@ -11,13 +11,13 @@ import Foundation
 import CloudKit
 
 class OperationFetchTags : MonitoredBaseOperation {
-    private let enfocaId : NSNumber
+    private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var tags : [Tag] = []
     private let key : String = "FetchTags"
     
-    init (enfocaId: NSNumber, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (enfocaRef: CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
+        self.enfocaRef = enfocaRef
         self.db = db
         super.init(progressObserver: progressObserver, errorDelegate: errorDelegate)
     }
@@ -28,7 +28,7 @@ class OperationFetchTags : MonitoredBaseOperation {
         self.progressObserver.startProgress(ofType: self.key, message: "Loading tags")
         
         let sort : NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        let predicate : NSPredicate = NSPredicate(format: "enfocaId == %@", enfocaId)
+        let predicate : NSPredicate = NSPredicate(format: "enfocaRef == %@", enfocaRef)
         
         let query: CKQuery = CKQuery(recordType: "Tag", predicate: predicate)
         query.sortDescriptors = [sort]

@@ -11,13 +11,11 @@ import Foundation
 import CloudKit
 
 class OperationUpdateTag : BaseOperation {
-    private let enfocaId : NSNumber
     private let db : CKDatabase
     private(set) var tag : Tag?
     private let updatedTag : Tag
     
-    init (updatedTag: Tag, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (updatedTag: Tag, db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.db = db
         self.updatedTag = updatedTag
         super.init(errorDelegate: errorDelegate)

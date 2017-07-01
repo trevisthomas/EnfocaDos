@@ -11,13 +11,11 @@ import Foundation
 import CloudKit
 
 class OperationUpdateMetaData : BaseOperation {
-    private let enfocaId : NSNumber
     private let db : CKDatabase
     private(set) var metaData : MetaData?
     private let updatedMetaData : MetaData
     
-    init (updatedMetaData: MetaData, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (updatedMetaData: MetaData, db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.db = db
         self.updatedMetaData = updatedMetaData
         super.init(errorDelegate: errorDelegate)
@@ -55,7 +53,6 @@ class OperationUpdateMetaData : BaseOperation {
             record.setValue(self.updatedMetaData.dateUpdated, forKey: "dateUpdated")
             record.setValue(self.updatedMetaData.dateCreated, forKey: "dateCreated")
             record.setValue(wordPairRef, forKey: "wordRef")
-            record.setValue(self.enfocaId, forKey: "enfocaId")
             
             self.db.save(record) { (newRecord: CKRecord?, error: Error?) in
                 if let error = error {

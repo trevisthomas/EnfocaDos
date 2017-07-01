@@ -48,8 +48,8 @@ class DataStore {
         return userDictionary.definitionTitle
     }
     
-    func getEnfocaId() -> NSNumber {
-        return userDictionary.enfocaId
+    func getUserDictionary() -> UserDictionary {
+        return userDictionary
     }
     
     func initialize(tags: [Tag], wordPairs: [WordPair], tagAssociations: [TagAssociation], metaData : [MetaData], progressObserver: ProgressObserver? = nil){

@@ -13,14 +13,12 @@ class OperationCreateDictionary : BaseOperation {
     private(set) var dictionary : UserDictionary?
     private let dictionarySource : UserDictionary
     private let db: CKDatabase
-    private let enfocaIdProvider: EnfocaIdProvider
     private let ckUserRecordId: CKRecordID
     
     
-    init (enfocaIdProvider: EnfocaIdProvider, dictionarySource: UserDictionary,  db: CKDatabase, errorDelegate : ErrorDelegate) {
+    init (dictionarySource: UserDictionary,  db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.dictionarySource = dictionarySource
         
-        self.enfocaIdProvider = enfocaIdProvider
         self.db = db
         
         ckUserRecordId = CloudKitConverters.toCKRecordID(fromRecordName: self.dictionarySource.userRef)
@@ -37,18 +35,19 @@ class OperationCreateDictionary : BaseOperation {
         let userReference = CKReference(recordID: ckUserRecordId, action: .none)
         
         let record : CKRecord = CKRecord(recordType: "Dictionary")
+        
+        let enfocaRef = CKReference(recordID: record.recordID, action: .none)
+        
         record.setValue(dictionarySource.definitionTitle, forKey: "definitionTitle")
         record.setValue(dictionarySource.termTitle, forKey: "termTitle")
         record.setValue(dictionarySource.subject, forKey: "subject")
         record.setValue(userReference, forKey: "userRef")
+        record.setValue(0, forKey: "count")
+        record.setValue(enfocaRef, forKey: "enfocaRef")
         
         if let _ = dictionarySource.language  {
             record.setValue(dictionarySource.language, forKey: "language")
         }
-        
-        guard let enfocaId = enfocaIdProvider.enfocaId else { fatalError() }
-        
-        record.setValue(enfocaId, forKey: "enfocaId")
         
         db.save(record) { (newRecord: CKRecord?, error: Error?) in
             if let error = error {

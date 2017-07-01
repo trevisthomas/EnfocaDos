@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F00F8491F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F8481F03731500CE86D7 /* EnfocaIdWrapper.swift */; };
-		0F00F84A1F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00F8481F03731500CE86D7 /* EnfocaIdWrapper.swift */; };
 		0F011EA61EE9E31100939B75 /* TagEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */; };
 		0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
 		0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
@@ -154,7 +152,6 @@
 		0F911E561EE75D4600F21855 /* BaseUserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */; };
 		0F911E571EE75D4600F21855 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */; };
 		0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
-		0F911E591EE75D4600F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */; };
 		0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */; };
 		0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
 		0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
@@ -239,7 +236,6 @@
 		0F911EB81EE766D900F21855 /* BaseUserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */; };
 		0F911EB91EE766D900F21855 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */; };
 		0F911EBA1EE766D900F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
-		0F911EBB1EE766D900F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */; };
 		0F911EBC1EE766D900F21855 /* OperationFetchTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */; };
 		0F911EBD1EE766D900F21855 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
 		0F911EBE1EE766D900F21855 /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
@@ -340,7 +336,6 @@
 		0FA4A5191EC8EC6E00F31F9A /* Perform+WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */; };
 		0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */; };
 		0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */; };
-		0FA4A5241EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */; };
 		0FA4A5251EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */; };
 		0FA4A5261EC8EC9000F31F9A /* FetchUserRecordId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */; };
 		0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */; };
@@ -435,7 +430,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F00F8481F03731500CE86D7 /* EnfocaIdWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnfocaIdWrapper.swift; path = Dictionary/EnfocaIdWrapper.swift; sourceTree = "<group>"; };
 		0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagEditorUITests.swift; sourceTree = "<group>"; };
 		0F011EA91EEAF03500939B75 /* CheckMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkView.swift; sourceTree = "<group>"; };
 		0F011EAD1EEB25FB00939B75 /* QuizOptionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizOptionsViewModel.swift; path = Quiz/QuizOptionsViewModel.swift; sourceTree = "<group>"; };
@@ -558,7 +552,6 @@
 		0FA4A5151EC8EC6E00F31F9A /* Perform+WordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Perform+WordPair.swift"; sourceTree = "<group>"; };
 		0FA4A51B1EC8EC9000F31F9A /* BaseUserOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUserOperation.swift; sourceTree = "<group>"; };
 		0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudAuthOperation.swift; sourceTree = "<group>"; };
-		0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchIncrementAndSaveSeedIfNecessary.swift; path = Authentication/FetchIncrementAndSaveSeedIfNecessary.swift; sourceTree = "<group>"; };
 		0FA4A51E1EC8EC9000F31F9A /* FetchOrCreateEnfocaId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchOrCreateEnfocaId.swift; sourceTree = "<group>"; };
 		0FA4A51F1EC8EC9000F31F9A /* FetchUserRecordId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserRecordId.swift; sourceTree = "<group>"; };
 		0FA4A5201EC8EC9000F31F9A /* FetchUserRecordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserRecordOperation.swift; sourceTree = "<group>"; };
@@ -775,8 +768,6 @@
 			children = (
 				0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */,
 				0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */,
-				0FA4A51D1EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift */,
-				0F00F8481F03731500CE86D7 /* EnfocaIdWrapper.swift */,
 			);
 			name = Dictionary;
 			sourceTree = "<group>";
@@ -1563,12 +1554,10 @@
 				0F911E571EE75D4600F21855 /* TagFilterViewModel.swift in Sources */,
 				0F011EBB1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */,
 				0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */,
-				0F911E591EE75D4600F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */,
 				0F028DDF1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */,
 				0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */,
-				0F00F84A1F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */,
 				0F35B0481F01BAD2001AC511 /* DictionaryCreationViewController.swift in Sources */,
 				0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */,
 				0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */,
@@ -1666,7 +1655,6 @@
 				0F911EB81EE766D900F21855 /* BaseUserOperation.swift in Sources */,
 				0F911EB91EE766D900F21855 /* TagFilterViewModel.swift in Sources */,
 				0F911EBA1EE766D900F21855 /* TagFilterViewController.swift in Sources */,
-				0F911EBB1EE766D900F21855 /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0F911EBC1EE766D900F21855 /* OperationFetchTags.swift in Sources */,
 				0F911EBD1EE766D900F21855 /* EditWordPairController.swift in Sources */,
 				0F911EBE1EE766D900F21855 /* HomeFromLoadingAnimator.swift in Sources */,
@@ -1741,7 +1729,6 @@
 				0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
-				0F00F8491F03731500CE86D7 /* EnfocaIdWrapper.swift in Sources */,
 				0F911F311EE9053C00F21855 /* ActivityIndicatable.swift in Sources */,
 				0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */,
 				0F911F061EE76CFA00F21855 /* Import.swift in Sources */,
@@ -1783,7 +1770,6 @@
 				0F011EC91EEDB4AF00939B75 /* QuizResultsViewController.swift in Sources */,
 				0F911E0E1EE08E8300F21855 /* TagFilterViewController.swift in Sources */,
 				0FE0159C1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift in Sources */,
-				0FA4A5241EC8EC9000F31F9A /* FetchIncrementAndSaveSeedIfNecessary.swift in Sources */,
 				0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */,
 				0F35B0531F0315B4001AC511 /* DictionaryLoadingViewController.swift in Sources */,
 				0F085B8A1EDC66A200FC20A1 /* EditWordPairController.swift in Sources */,

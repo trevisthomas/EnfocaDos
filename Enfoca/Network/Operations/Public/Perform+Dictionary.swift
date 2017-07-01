@@ -45,29 +45,23 @@ extension Perform {
         
     }
     
-    //Generate an enfocaId, then create the dictionary
     class func createDictionary(db: CKDatabase, dictionary: UserDictionary, callback : @escaping (_ dictionary : UserDictionary?, _ error : String?) -> ()){
-        
-        let enfocaIdProvider = EnfocaIdProvider()
         
         let queue = OperationQueue()
         let errorHandler = ErrorHandler(queue: queue, callback: callback)
         
-        let fetchIncrementAndSaveSeedIfNecessary = FetchIncrementAndSaveSeedIfNecessary(enfocaIdProvider: enfocaIdProvider, db: db, errorDelegate: errorHandler)
-        
-        let operationCreateDictionary = OperationCreateDictionary(enfocaIdProvider: enfocaIdProvider, dictionarySource: dictionary, db: db, errorDelegate: errorHandler)
+        let operationCreateDictionary = OperationCreateDictionary(dictionarySource: dictionary, db: db, errorDelegate: errorHandler)
         
         let completeOp = BlockOperation {
             OperationQueue.main.addOperation{
-                print("Created Dictionary with EnfocaID \(enfocaIdProvider.enfocaId!)")
+                print("Created Dictionary with EnfocaRef \(operationCreateDictionary.dictionary!.enfocaRef)")
                 callback(operationCreateDictionary.dictionary, nil)
             }
         }
         
-        operationCreateDictionary.addDependency(fetchIncrementAndSaveSeedIfNecessary)
         completeOp.addDependency(operationCreateDictionary)
         
-        queue.addOperations([ fetchIncrementAndSaveSeedIfNecessary, operationCreateDictionary, completeOp], waitUntilFinished: false)
+        queue.addOperations([ operationCreateDictionary, completeOp], waitUntilFinished: false)
         
     }
     
@@ -76,7 +70,7 @@ extension Perform {
         let queue = OperationQueue()
         let errorHandler = ErrorHandler(queue: queue, callback: callback)
         
-        let updateDictionaryOperation = OperationUpdateDictionary(updatedDictionary: dictionary, enfocaId: dictionary.enfocaId, db: db, errorDelegate: errorHandler)
+        let updateDictionaryOperation = OperationUpdateDictionary(updatedDictionary: dictionary, db: db, errorDelegate: errorHandler)
         
         let completeOp = BlockOperation {
             guard let dict = updateDictionaryOperation.dictionary else { fatalError() }

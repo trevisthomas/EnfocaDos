@@ -275,4 +275,7 @@ class UiTestWebService : WebService {
         return dataStore.getDefinitionTitle()
     }
 
+    func deleteDictionary(dictionary: UserDictionary, callback: @escaping(UserDictionary?, EnfocaError?)->()) {
+        fatalError()
+    }
 }

@@ -11,13 +11,11 @@ import Foundation
 import CloudKit
 
 class OperationUpdateWordPair : BaseOperation {
-    private let enfocaId : NSNumber
     private let db : CKDatabase
     private(set) var wordPair : WordPair?
     private let tempWordPair : WordPair
     
-    init (updatedWordPair: WordPair, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (updatedWordPair: WordPair, db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.db = db
         self.tempWordPair = updatedWordPair
         super.init(errorDelegate: errorDelegate)

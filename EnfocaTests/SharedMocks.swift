@@ -240,6 +240,10 @@ class MockWebService : WebService {
     func getDefinitionTitle() -> String {
         return dictionary.definitionTitle
     }
+    
+    func deleteDictionary(dictionary: UserDictionary, callback: @escaping(UserDictionary?, EnfocaError?)->()) {
+        fatalError()
+    }
 }
 
 //class MockApplicationDefaults : ApplicationDefaults {

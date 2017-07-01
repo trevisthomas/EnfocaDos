@@ -36,6 +36,8 @@ protocol WebService {
     
     func deleteTag(tag: Tag, callback: @escaping(Tag?, EnfocaError?)->())
     
+    func deleteDictionary(dictionary: UserDictionary, callback: @escaping(UserDictionary?, EnfocaError?)->())
+    
     /**
      A null tag is how you ask for words of any tag.
      */

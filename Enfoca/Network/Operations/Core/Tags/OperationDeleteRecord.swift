@@ -11,14 +11,11 @@ import Foundation
 import CloudKit
 
 class OperationDeleteRecord: BaseOperation {
-    private let enfocaId : NSNumber
     private let db : CKDatabase
     private(set) var recordName: String
     private(set) var deletedRecordName: String?
     
-    
-    init (recordName: String, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (recordName: String, db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.db = db
         self.recordName = recordName
         super.init(errorDelegate: errorDelegate)

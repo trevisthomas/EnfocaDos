@@ -11,15 +11,15 @@ import Foundation
 import CloudKit
 
 class OperationCreateTagAssociation: BaseOperation {
-    private let enfocaId : NSNumber
+    private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var tagId : String
     private(set) var wordPairId : String
     private(set) var tagAssociation: TagAssociation?
     
     
-    init (tagId: String, wordPairId: String, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (tagId: String, wordPairId: String, enfocaRef: CKReference, db: CKDatabase, errorDelegate : ErrorDelegate) {
+        self.enfocaRef = enfocaRef
         self.db = db
         self.wordPairId = wordPairId
         self.tagId = tagId
@@ -39,7 +39,7 @@ class OperationCreateTagAssociation: BaseOperation {
         
         record.setValue(wpRef, forKey: "wordRef")
         record.setValue(tagRef, forKey: "tagRef")
-        record.setValue(enfocaId, forKey: "enfocaId")
+        record.setValue(enfocaRef, forKey: "enfocaRef")
         
         db.save(record) { (newRecord: CKRecord?, error: Error?) in
             if let error = error {

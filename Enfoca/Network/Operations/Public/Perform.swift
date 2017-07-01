@@ -11,18 +11,18 @@ import CloudKit
 
 class Perform {
     
-    class func initializeDataStore(dataStore: DataStore, enfocaId: NSNumber, db: CKDatabase, privateDb: CKDatabase, progressObserver: ProgressObserver, callback : @escaping (DataStore?, EnfocaError?)->()){
+    class func initializeDataStore(dataStore: DataStore, enfocaRef: CKReference, db: CKDatabase, privateDb: CKDatabase, progressObserver: ProgressObserver, callback : @escaping (DataStore?, EnfocaError?)->()){
         
         let queue = OperationQueue()
         let errorHandler = ErrorHandler(queue: queue, callback: callback)
         
         
         
-        let fetchTagAssociations = OperationFetchTagAssociations(enfocaId: enfocaId, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
-        let fetchTags = OperationFetchTags(enfocaId: enfocaId, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
-        let fetchWordPairs = OperationFetchWordPairs(enfocaId: enfocaId, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchTagAssociations = OperationFetchTagAssociations(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchTags = OperationFetchTags(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchWordPairs = OperationFetchWordPairs(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
         
-        let fetchMetaData = OperationFetchMetaData(enfocaId: enfocaId, db: privateDb, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchMetaData = OperationFetchMetaData(enfocaRef: enfocaRef, db: privateDb, progressObserver: progressObserver, errorDelegate: errorHandler)
         
         let completeOp = BlockOperation {
             print("Initializing data store")

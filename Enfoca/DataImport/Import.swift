@@ -17,7 +17,8 @@ class Import {
     var metaDict: [String: OldMetaData] = [:]
     var tagAssociations : [OldTagAssociation] = []
     let dateformatter = DateFormatter()
-    let enfocaId : NSNumber
+    let enfocaId : NSNumber!
+    let enfocaRef: CKReference!
     
     
     let metaResource = "study_item_meta"
@@ -30,9 +31,19 @@ class Import {
 //    let studyItemResource = "small_study_item"
 //    let tagAssociationResource = "small_tag_associations"
     
+    
+    //DEPRECATED!
     init(enfocaId id: Int){
         dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         enfocaId = NSNumber(value: id)
+        enfocaRef = nil
+    }
+    
+    init(enfocaRef: String) {
+        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        enfocaId = nil
+        let recordId = CloudKitConverters.toCKRecordID(fromRecordName: enfocaRef)
+        self.enfocaRef = CKReference(recordID: recordId, action: .none)
     }
     
     func process(){
@@ -152,7 +163,7 @@ class Import {
         
         
         for oldTag in tagDict.values{
-            let tagOp = OperationCreateTag(tagName: oldTag.tagName, enfocaId: enfocaId, db: db, errorDelegate: errorHandler)
+            let tagOp = OperationCreateTag(tagName: oldTag.tagName, enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
             queue.addOperations([tagOp], waitUntilFinished: true)
             oldTag.newTag = tagOp.tag
             print("Created Tag: \(String(describing: tagOp.tag?.name))")
@@ -160,7 +171,7 @@ class Import {
         
         
         for oldWordPair in wordPairDict.values{
-            let wordPairOp = OperationCreateWordPair(wordPairSource: toRealWordPair(oldWordPair: oldWordPair), enfocaId: enfocaId, db: db, errorDelegate: errorHandler)
+            let wordPairOp = OperationCreateWordPair(wordPairSource: toRealWordPair(oldWordPair: oldWordPair), enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
             queue.addOperations([wordPairOp], waitUntilFinished: true)
             oldWordPair.newWordPair = wordPairOp.wordPair
             
@@ -172,7 +183,7 @@ class Import {
             
             if let wp = wordPairDict[ass.studyItemId]?.newWordPair {
                 
-                let assOp = OperationCreateTagAssociation(tagId: tag.tagId, wordPairId: wp.pairId, enfocaId: enfocaId, db: db, errorDelegate: errorHandler)
+                let assOp = OperationCreateTagAssociation(tagId: tag.tagId, wordPairId: wp.pairId, enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
                 
                 queue.addOperations([assOp], waitUntilFinished: true)
                 
@@ -184,7 +195,7 @@ class Import {
         }
         
         for oldMeta in metaDict.values {
-            let metaOp = OperationCreateMetaData(metaDataSource: toRealMetaData(oldMetaData: oldMeta), enfocaId: enfocaId, db: privateDb, errorDelegate: errorHandler)
+            let metaOp = OperationCreateMetaData(metaDataSource: toRealMetaData(oldMetaData: oldMeta), enfocaRef: enfocaRef, db: privateDb, errorDelegate: errorHandler)
             queue.addOperations([metaOp], waitUntilFinished: true)
             print("Created Meta: \(String(describing: metaOp.metaData?.metaId))")
             

@@ -10,13 +10,13 @@ import Foundation
 import CloudKit
 
 class OperationCreateTag : BaseOperation {
-    private let enfocaId : NSNumber
+    private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var tag : Tag?
     private let tagName : String
     
-    init (tagName: String, enfocaId: NSNumber, db: CKDatabase, errorDelegate : ErrorDelegate) {
-        self.enfocaId = enfocaId
+    init (tagName: String, enfocaRef: CKReference, db: CKDatabase, errorDelegate : ErrorDelegate) {
+        self.enfocaRef = enfocaRef
         self.db = db
         self.tagName = tagName
         super.init(errorDelegate: errorDelegate)
@@ -27,7 +27,7 @@ class OperationCreateTag : BaseOperation {
         
         let record : CKRecord = CKRecord(recordType: "Tag")
         record.setValue(tagName, forKey: "name")
-        record.setValue(enfocaId, forKey: "enfocaId")
+        record.setValue(enfocaRef, forKey: "enfocaRef")
         
         db.save(record) { (newRecord: CKRecord?, error: Error?) in
             if let error = error {

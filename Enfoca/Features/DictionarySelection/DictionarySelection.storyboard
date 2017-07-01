@@ -410,12 +410,49 @@
                                         <rect key="frame" x="173" y="388" width="68" height="30"/>
                                         <state key="normal" title="Language"/>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pPt-VP-q2p">
+                                        <rect key="frame" x="36" y="592" width="342" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBZ-q6-vwa" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="163" height="50"/>
+                                                <color key="backgroundColor" red="0.64324307439999995" green="0.80505788330000005" blue="0.46183288099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="163" id="7X7-il-E92"/>
+                                                    <constraint firstAttribute="height" constant="50" id="ZCA-3x-Ohi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                <state key="normal" title="Create">
+                                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createOrUpdateButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="y09-oq-vvf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-h6-8tF" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="163" height="50"/>
+                                                <color key="backgroundColor" red="0.6497478485" green="0.24873846769999999" blue="0.1759074628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="MbE-cW-1Ga"/>
+                                                    <constraint firstAttribute="width" constant="163" id="a3V-PD-viq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                <state key="normal" title="Delete">
+                                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createOrUpdateButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="vYq-FC-QIw"/>
+                                                    <action selector="deleteButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="GH3-2w-3if"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="44O-Ha-znd" firstAttribute="top" secondItem="b7z-hU-NRQ" secondAttribute="bottom" constant="30" id="8hf-TL-bmE"/>
                                     <constraint firstItem="44O-Ha-znd" firstAttribute="leading" secondItem="vPt-FK-zoz" secondAttribute="leading" constant="8" id="GaH-pL-Akg"/>
                                     <constraint firstItem="ChO-ak-v9k" firstAttribute="leading" secondItem="vPt-FK-zoz" secondAttribute="leading" constant="30" id="ICB-OY-YDn"/>
+                                    <constraint firstItem="pPt-VP-q2p" firstAttribute="centerX" secondItem="vPt-FK-zoz" secondAttribute="centerX" id="IU7-FF-gf9"/>
                                     <constraint firstAttribute="trailing" secondItem="44O-Ha-znd" secondAttribute="trailing" constant="8" id="Kzw-Uj-CpH"/>
                                     <constraint firstItem="TaQ-49-HrU" firstAttribute="top" secondItem="fpz-Yq-76V" secondAttribute="bottom" constant="29" id="MED-31-PEu"/>
                                     <constraint firstAttribute="trailing" secondItem="b7z-hU-NRQ" secondAttribute="trailing" constant="8" id="Od2-nX-JEm"/>
@@ -423,34 +460,18 @@
                                     <constraint firstItem="b7z-hU-NRQ" firstAttribute="leading" secondItem="vPt-FK-zoz" secondAttribute="leading" constant="8" id="csd-QU-ClH"/>
                                     <constraint firstAttribute="trailing" secondItem="ChO-ak-v9k" secondAttribute="trailing" constant="30" id="eMP-iP-N3h"/>
                                     <constraint firstItem="fpz-Yq-76V" firstAttribute="top" secondItem="44O-Ha-znd" secondAttribute="bottom" constant="30" id="hPM-ax-GFM"/>
+                                    <constraint firstAttribute="bottom" secondItem="pPt-VP-q2p" secondAttribute="bottom" constant="32" id="jd9-hw-0Pw"/>
                                     <constraint firstAttribute="trailing" secondItem="fpz-Yq-76V" secondAttribute="trailing" constant="8" id="lhI-ye-tc3"/>
                                     <constraint firstItem="TaQ-49-HrU" firstAttribute="centerX" secondItem="vPt-FK-zoz" secondAttribute="centerX" id="ngT-Uc-vnq"/>
                                     <constraint firstItem="fpz-Yq-76V" firstAttribute="leading" secondItem="vPt-FK-zoz" secondAttribute="leading" constant="8" id="ovX-Po-wvk"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBZ-q6-vwa" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
-                                <rect key="frame" x="126" y="666" width="163" height="50"/>
-                                <color key="backgroundColor" red="0.64324307439999995" green="0.80505788330000005" blue="0.46183288099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="163" id="7X7-il-E92"/>
-                                    <constraint firstAttribute="height" constant="50" id="ZCA-3x-Ohi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="Create">
-                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="createOrUpdateButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="y09-oq-vvf"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v3m-me-4d8" firstAttribute="top" secondItem="cfs-6K-H7A" secondAttribute="top" id="2Dp-9p-Odn"/>
                             <constraint firstItem="vPt-FK-zoz" firstAttribute="leading" secondItem="cfs-6K-H7A" secondAttribute="leading" id="G92-Ru-JRX"/>
                             <constraint firstItem="wSp-Y3-hdd" firstAttribute="top" secondItem="vPt-FK-zoz" secondAttribute="bottom" id="IfV-d0-Wye"/>
-                            <constraint firstItem="eBZ-q6-vwa" firstAttribute="centerX" secondItem="vPt-FK-zoz" secondAttribute="centerX" id="MEC-nU-bwc"/>
-                            <constraint firstItem="eBZ-q6-vwa" firstAttribute="top" secondItem="vPt-FK-zoz" secondAttribute="bottom" constant="-70" id="MZh-pu-PZ3"/>
                             <constraint firstAttribute="trailing" secondItem="vPt-FK-zoz" secondAttribute="trailing" id="Rq0-rF-D7F"/>
                             <constraint firstItem="v3m-me-4d8" firstAttribute="leading" secondItem="cfs-6K-H7A" secondAttribute="leading" id="atK-tX-Yeh"/>
                             <constraint firstAttribute="trailing" secondItem="v3m-me-4d8" secondAttribute="trailing" id="f8V-90-Fka"/>
@@ -462,9 +483,11 @@
                         <outlet property="backButton" destination="hW9-tx-ViV" id="059-Jv-zzG"/>
                         <outlet property="createButton" destination="eBZ-q6-vwa" id="iVc-Bi-R0E"/>
                         <outlet property="definitionTextField" destination="fpz-Yq-76V" id="IEC-bV-8Yh"/>
+                        <outlet property="deleteButton" destination="bcv-h6-8tF" id="gLH-Yi-mhu"/>
                         <outlet property="subjectTextField" destination="b7z-hU-NRQ" id="b5L-gY-NqH"/>
                         <outlet property="termTextField" destination="44O-Ha-znd" id="dpV-hJ-sdh"/>
                         <segue destination="78n-cW-n0M" kind="show" identifier="LoadDictionarySegue" id="Kqj-gi-NaV"/>
+                        <segue destination="TN6-Bh-ZUY" kind="show" identifier="LaunchAppSegue" id="U47-08-OY6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYC-cW-NuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -533,7 +556,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QEm-8v-cQd"/>
+        <segue reference="Kqj-gi-NaV"/>
         <segue reference="nZR-fD-3Hs"/>
         <segue reference="JRL-ud-1m9"/>
     </inferredMetricsTieBreakers>

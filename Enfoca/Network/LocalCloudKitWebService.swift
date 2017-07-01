@@ -11,20 +11,18 @@ import CloudKit
 
 
 class LocalCloudKitWebService : WebService {
-    
-//    private(set) var dictionary: UserDictionary!
-//    private(set) var enfocaId : NSNumber!
-    
-    var enfocaId: NSNumber {
-        get{
-            return dataStore.getEnfocaId()
-        }
-    }
+
+    private var enfocaRef: CKReference!
     
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
     private(set) var userRecordId : CKRecordID!  //Not really using this here.
-    private var dataStore: DataStore!
+    private var dataStore: DataStore! {
+        didSet{
+            let recordId = CloudKitConverters.toCKRecordID(fromRecordName: dataStore.getUserDictionary().enfocaRef)
+            enfocaRef = CKReference(recordID: recordId, action: .none)
+        }
+    }
     
     var showNetworkActivityIndicator: Bool {
         get {
@@ -66,7 +64,7 @@ class LocalCloudKitWebService : WebService {
     func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String? = nil, callback : @escaping(UserDictionary?, EnfocaError?)->()) {
         showNetworkActivityIndicator = true
         
-        let dictionary = UserDictionary(dictionaryId: "not-set", userRef: userRecordId.recordName, enfocaId: -1, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
+        let dictionary = UserDictionary(dictionaryId: "not-set", userRef: userRecordId.recordName, enfocaRef: "not-set-generated-by-this-method", termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
         
         //Remember, this method generates an enfoca id.
         Perform.createDictionary(db: db, dictionary: dictionary) { (dictionary: UserDictionary?, error: String?) in
@@ -111,7 +109,11 @@ class LocalCloudKitWebService : WebService {
             
             return
         } else {
-            Perform.initializeDataStore(dataStore: ds, enfocaId: ds.getEnfocaId(), db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
+            
+            let recordId = CloudKitConverters.toCKRecordID(fromRecordName: ds.getUserDictionary().enfocaRef)
+            let tempRef = CKReference(recordID: recordId, action: .none)
+            
+            Perform.initializeDataStore(dataStore: ds, enfocaRef: tempRef, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
                 invokeLater {
                     if let error = error {
                         callback(false, error)
@@ -160,7 +162,7 @@ class LocalCloudKitWebService : WebService {
         
         let newWordPair = WordPair(pairId: "", word: word, definition: definition, dateCreated: Date(), gender: gender, tags: tags, example: example)
         
-        Perform.createWordPair(wordPair: newWordPair, enfocaId: enfocaId, db: db) { (wordPair:WordPair?, error:String?) in
+        Perform.createWordPair(wordPair: newWordPair, enfocaRef: enfocaRef, db: db) { (wordPair:WordPair?, error:String?) in
             
             if let error = error {
                 callback(nil, error)
@@ -172,7 +174,7 @@ class LocalCloudKitWebService : WebService {
             
             //Create any tag associations for this new word.
             for tag in tags {
-                Perform.createTagAssociation(tagId: tag.tagId, wordPairId: wordPair.pairId, enfocaId: self.enfocaId, db: self.db, callback: { (tagAss:TagAssociation?, error:String?) in
+                Perform.createTagAssociation(tagId: tag.tagId, wordPairId: wordPair.pairId, enfocaRef: self.enfocaRef, db: self.db, callback: { (tagAss:TagAssociation?, error:String?) in
                     
                     if let error = error {
                         callback(nil, error)
@@ -226,7 +228,7 @@ class LocalCloudKitWebService : WebService {
             }
         }
         
-        Perform.updateWordPair(wordPair: tuple.0, enfocaId: enfocaId, db: db) { (wp:WordPair?, error:String?) in
+        Perform.updateWordPair(wordPair: tuple.0, db: db) { (wp:WordPair?, error:String?) in
             
             if let error = error {
                 callback(nil, error)
@@ -235,7 +237,7 @@ class LocalCloudKitWebService : WebService {
         }
         
         for tag in tuple.1 {
-            Perform.createTagAssociation(tagId: tag.tagId, wordPairId: oldWordPair.pairId, enfocaId: self.enfocaId, db: self.db, callback: { (tagAss:TagAssociation?, error:String?) in
+            Perform.createTagAssociation(tagId: tag.tagId, wordPairId: oldWordPair.pairId, enfocaRef: self.enfocaRef, db: self.db, callback: { (tagAss:TagAssociation?, error:String?) in
                 
                 if let error = error { callback(nil, error) }
                 
@@ -246,7 +248,7 @@ class LocalCloudKitWebService : WebService {
         }
         
         for tagAss in tuple.2 {
-            Perform.deleteTagAssociation(tagAssociation: tagAss, enfocaId: self.enfocaId, db: self.db, callback: { (recordId: String?, error: String?) in
+            Perform.deleteTagAssociation(tagAssociation: tagAss, db: self.db, callback: { (recordId: String?, error: String?) in
                 if let error = error { callback(nil, error) }
                 notifyOnOpsCompleted()
             })
@@ -258,7 +260,7 @@ class LocalCloudKitWebService : WebService {
     
     func createTag(tagValue: String, callback: @escaping(Tag?, EnfocaError?)->()){
         
-        Perform.createTag(tagName: tagValue, enfocaId: enfocaId, db: db) { (tag:Tag?, error: String?) in
+        Perform.createTag(tagName: tagValue, enfocaRef: enfocaRef, db: db) { (tag:Tag?, error: String?) in
             
             if let error = error {
                 callback(nil, error)
@@ -277,7 +279,7 @@ class LocalCloudKitWebService : WebService {
         showNetworkActivityIndicator = true
         let newTag = dataStore.applyUpdate(oldTag: oldTag, name: newTagName)
         
-        Perform.updateTag(updatedTag: newTag, enfocaId: enfocaId, db: db) { (tag:Tag?, error:String?) in
+        Perform.updateTag(updatedTag: newTag, db: db) { (tag:Tag?, error:String?) in
             self.showNetworkActivityIndicator = false
             
             if let error = error { callback(nil, error) }
@@ -305,7 +307,7 @@ class LocalCloudKitWebService : WebService {
             }
         }
         
-        Perform.deleteWordPair(wordPair: wordPair, enfocaId: enfocaId, db: db) { (recordId: String?, error: String?) in
+        Perform.deleteWordPair(wordPair: wordPair, db: db) { (recordId: String?, error: String?) in
             
             if let error = error {
                 callback(nil, error)
@@ -316,13 +318,29 @@ class LocalCloudKitWebService : WebService {
         }
         
         for associaion in associations {
-            Perform.deleteTagAssociation(tagAssociation: associaion, enfocaId: enfocaId, db: db) { (recordId:String?, error:String?) in
+            Perform.deleteTagAssociation(tagAssociation: associaion, db: db) { (recordId:String?, error:String?) in
                 if let error = error {
                     callback(nil, error)
                     self.showNetworkActivityIndicator = false
                 }
                 notifyOnOpsCompleted()
             }
+        }
+    }
+    
+    func deleteDictionary(dictionary: UserDictionary, callback: @escaping(UserDictionary?, EnfocaError?)->()) {
+        
+        showNetworkActivityIndicator = true
+        
+        Perform.deleteDictionary(dictionary: dictionary, db: db) { (dictionaryId: String?, error: String?) in
+            self.showNetworkActivityIndicator = false
+            if let error = error {
+                callback(nil, error)
+            }
+            guard let _ = dictionaryId else { fatalError() }
+            
+            callback(dictionary, nil)
+
         }
     }
     
@@ -342,7 +360,7 @@ class LocalCloudKitWebService : WebService {
             }
         }
         
-        Perform.deleteTag(tag: tag, enfocaId: enfocaId, db: db) { (recordId: String?, error: String?) in
+        Perform.deleteTag(tag: tag, db: db) { (recordId: String?, error: String?) in
             
             if let error = error {
                 callback(nil, error)
@@ -353,7 +371,7 @@ class LocalCloudKitWebService : WebService {
         }
         
         for associaion in associations {
-            Perform.deleteTagAssociation(tagAssociation: associaion, enfocaId: enfocaId, db: db) { (recordId:String?, error:String?) in
+            Perform.deleteTagAssociation(tagAssociation: associaion, db: db) { (recordId:String?, error:String?) in
                 if let error = error {
                     callback(nil, error)
                     self.showNetworkActivityIndicator = false
@@ -385,7 +403,7 @@ class LocalCloudKitWebService : WebService {
             //Update
             self.dataStore.updateScore(metaData: currentMetaData, correct: correct, elapsedTime: elapsedTime)
             
-            Perform.updateMetaData(updatedMetaData: currentMetaData, enfocaId: enfocaId, db: privateDb) { (metaData: MetaData?, error: String?) in
+            Perform.updateMetaData(updatedMetaData: currentMetaData, db: privateDb) { (metaData: MetaData?, error: String?) in
                 self.showNetworkActivityIndicator = false
                 
                 if let error = error { callback(nil, error) }
@@ -398,7 +416,7 @@ class LocalCloudKitWebService : WebService {
             
             dataStore.updateScore(metaData: newMetaData, correct: correct, elapsedTime: elapsedTime)
             
-            Perform.createMetaData(metaDataSource: newMetaData, enfocaId: enfocaId, db: privateDb, callback: { (metaData: MetaData?, error: String?) in
+            Perform.createMetaData(metaDataSource: newMetaData, enfocaRef: enfocaRef, db: privateDb, callback: { (metaData: MetaData?, error: String?) in
                 self.showNetworkActivityIndicator = false
                 if let error = error { callback(nil, error) }
                 guard let metaData = metaData else { fatalError() }

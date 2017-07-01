@@ -213,4 +213,8 @@ class DemoWebService : WebService {
     func getDefinitionTitle() -> String {
         fatalError()
     }
+    
+    func deleteDictionary(dictionary: UserDictionary, callback: @escaping(UserDictionary?, EnfocaError?)->()) {
+        fatalError()
+    }
 }
