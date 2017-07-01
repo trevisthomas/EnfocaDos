@@ -26,13 +26,13 @@ class DataImportViewController: UIViewController {
         guard let button = sender as? UIButton else { fatalError() }
         
         
-        guard let enfocaId = Int(enfocaIdTextField.text!) else { fatalError() }
+        guard let enfocaRef = enfocaIdTextField.text else { fatalError() }
         
         button.isEnabled = false
         
         button.titleLabel?.text = "Importing!"
         
-        let importer = Import(enfocaId: enfocaId)
+        let importer = Import(enfocaRef: enfocaRef)
         
         importer.process()
     }

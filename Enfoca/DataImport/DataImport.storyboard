@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Pqi-S8-Fpn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Pqi-S8-Fpn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,8 +37,8 @@
                                     <action selector="performImport:" destination="Pqi-S8-Fpn" eventType="touchUpInside" id="1ay-pi-JF7"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enfoca Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-Ik-gU1">
-                                <rect key="frame" x="147" y="160" width="81.5" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enfoca Reference" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-Ik-gU1">
+                                <rect key="frame" x="57" y="160" width="266" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -47,8 +48,10 @@
                         <constraints>
                             <constraint firstItem="jrN-cT-doF" firstAttribute="top" secondItem="GRg-Ik-gU1" secondAttribute="bottom" constant="28.5" id="0tH-g2-qT6"/>
                             <constraint firstItem="jrN-cT-doF" firstAttribute="centerY" secondItem="glO-DH-S3r" secondAttribute="centerY" id="CIs-ks-NoQ"/>
+                            <constraint firstItem="GRg-Ik-gU1" firstAttribute="leading" secondItem="glO-DH-S3r" secondAttribute="leadingMargin" constant="41" id="dPi-Lw-hoc"/>
                             <constraint firstItem="jrN-cT-doF" firstAttribute="centerX" secondItem="glO-DH-S3r" secondAttribute="centerX" id="lPJ-EV-arm"/>
-                            <constraint firstItem="GRg-Ik-gU1" firstAttribute="centerX" secondItem="glO-DH-S3r" secondAttribute="centerX" id="uGI-t2-bkB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GRg-Ik-gU1" secondAttribute="trailing" constant="36" id="s3L-5r-uIf"/>
+                            <constraint firstItem="GRg-Ik-gU1" firstAttribute="centerX" secondItem="glO-DH-S3r" secondAttribute="centerX" constant="2.5" id="uGI-t2-bkB"/>
                         </constraints>
                     </view>
                     <connections>

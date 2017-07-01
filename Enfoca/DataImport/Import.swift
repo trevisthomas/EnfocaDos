@@ -21,15 +21,15 @@ class Import {
     let enfocaRef: CKReference!
     
     
-    let metaResource = "study_item_meta"
-    let tagResource = "tag"
-    let studyItemResource = "study_item"
-    let tagAssociationResource = "tag_associations"
+//    let metaResource = "study_item_meta"
+//    let tagResource = "tag"
+//    let studyItemResource = "study_item"
+//    let tagAssociationResource = "tag_associations"
     
-//    let metaResource = "small_study_item_meta"
-//    let tagResource = "small_tag"
-//    let studyItemResource = "small_study_item"
-//    let tagAssociationResource = "small_tag_associations"
+    let metaResource = "small_study_item_meta"
+    let tagResource = "small_tag"
+    let studyItemResource = "small_study_item"
+    let tagAssociationResource = "small_tag_associations"
     
     
     //DEPRECATED!
