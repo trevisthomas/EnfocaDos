@@ -44,11 +44,23 @@ class WordPair : Hashable {
         self.example = example
     }
     
+    func applyUpdate(source: WordPair) {
+        self.word = source.word
+        self.definition = source.definition
+        self.gender = source.gender
+        self.example = source.example
+        //Tags?
+    }
+    
     func addTag(_ tag : Tag) {
         tags.append(tag)
         tags.sort { (t1:Tag, t2:Tag) -> Bool in
             return t1.name.lowercased() < t2.name.lowercased()
         }
+    }
+    
+    func clearTags(){
+        tags.removeAll()
     }
     
     func remove(tag: Tag) -> Tag? {

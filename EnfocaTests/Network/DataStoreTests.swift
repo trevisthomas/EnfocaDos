@@ -704,6 +704,87 @@ class DataStoreTests: XCTestCase {
         
     }
     
+    func testReload_ReloadedWordAndItsTagsAndItsAssesShouldBeGood() {
+        mockDataOne()
+        
+        //Asserting the initial state
+        let origWp = sut.findWordPair(withId: "100")!
+        XCTAssertEqual(origWp.tags.count, 2)
+        XCTAssertEqual(origWp.tags.tagsToText(), "Adjective, Noun")
+        
+        
+        //Make a new tag and change the values of the wp
+        
+        let updatedWP = WordPair(pairId: "100", word: "Azul-changed", definition: "Blue")
+        
+        let newTag = Tag(tagId: "4", name: "NewTag")
+        let newAss = TagAssociation(associationId: "13", wordPairId: updatedWP.pairId, tagId: newTag.tagId)
+        
+        tags.append(newTag)
+        
+        var updatedAsses : [TagAssociation] = []
+        for ass in wpAss {
+            if ass.wordPairId == updatedWP.pairId {
+                updatedAsses.append(ass)
+            }
+        }
+        
+        updatedAsses.append(newAss)
+        
+        sut.reload(wordPair: updatedWP, withTagAssociations: updatedAsses, updatedTagList: tags)
+        
+        guard let wp : WordPair = sut.findWordPair(withId: "100") else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertEqual(wp.tags.count, 3)
+        XCTAssertEqual(wp.tags.tagsToText(), "Adjective, NewTag, Noun")
+    }
+    
+   
+    func testReload_TagShouldBeChangedOnAllTaggedWords() {
+        mockDataOne()
+        
+        //Asserting the initial state
+        let origWp = sut.findWordPair(withId: "100")!
+        XCTAssertEqual(origWp.tags.count, 2)
+        XCTAssertEqual(origWp.tags.tagsToText(), "Adjective, Noun")
+        
+        
+        //Make a new tag and change the values of the wp
+        
+        let updatedWP = origWp //Not even bothering to change the word.
+        
+        let newTag = Tag(tagId: "1", name: "NewNoun")
+//        let newAss = TagAssociation(associationId: "13", wordPairId: updatedWP.pairId, tagId: newTag.tagId)
+//        
+        XCTAssertEqual(tags[0].tagId, "1") //Just making sure that the first tag in the list is the one that i am changing
+        tags.remove(at: 0)
+        tags.append(newTag)
+        
+        var updatedAsses : [TagAssociation] = []
+        for ass in wpAss {
+            if ass.wordPairId == updatedWP.pairId {
+                updatedAsses.append(ass)
+            }
+        }
+        
+//        updatedAsses.append(newAss)
+        
+        sut.reload(wordPair: updatedWP, withTagAssociations: updatedAsses, updatedTagList: tags)
+        
+        guard let wp : WordPair = sut.findWordPair(withId: "100") else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertEqual(wp.tags.count, 2) //Tag count should still be two
+        XCTAssertEqual(wp.tags.tagsToText(), "Adjective, NewNoun")
+        
+        // NOTE!  The tag is updated in the tags list, but not on every word that contains the tag.  The other words still have the old tag.
+        //XCTAssertEqual(wordPairs[1].tags.tagsToText(), "NewNoun")
+    }
 
 }
 

@@ -16,6 +16,10 @@ class OperationFetchTags : MonitoredBaseOperation {
     private(set) var tags : [Tag] = []
     private let key : String = "FetchTags"
     
+    convenience init(enfocaRef: CKReference, db: CKDatabase, errorDelegate: ErrorDelegate) {
+        self.init(enfocaRef: enfocaRef, db: db, progressObserver: DefaultProgressObserver(), errorDelegate: errorDelegate)
+    }
+    
     init (enfocaRef: CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
         self.enfocaRef = enfocaRef
         self.db = db
@@ -63,4 +67,16 @@ class OperationFetchTags : MonitoredBaseOperation {
         db.add(operation)
     }
     
+}
+
+class DefaultProgressObserver : ProgressObserver {
+    func startProgress(ofType key : String, message: String) {
+        
+    }
+    func updateProgress(ofType key : String, message: String) {
+        
+    }
+    func endProgress(ofType key : String, message: String) {
+        
+    }
 }

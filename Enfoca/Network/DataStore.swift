@@ -201,6 +201,43 @@ class DataStore {
         return deletedAssociations
     }
     
+    //Deprecated i think.  This was created during the weekend of cloudkit subscrption hell
+    func applyUpdate(wordPair: WordPair) {
+        wordPairDictionary[wordPair.pairId]?.applyUpdate(source: wordPair)
+    }
+    
+    func reload(wordPair: WordPair, withTagAssociations: [TagAssociation], updatedTagList: [Tag]) {
+        
+        //Replace tag list with updated tag list
+        self.tagDictionary.removeAll()
+        self.tagDictionary = updatedTagList.reduce([AnyHashable : Tag]()) { (acc, tag) in
+            var dict = acc // This shit show is because the seed dictionary isnt mutable
+            dict[tag.tagId] = tag
+            return dict
+        }
+        
+        //Remove this word's asses from the ass dict
+        
+        tagAssociations = tagAssociations.filter { (tagAss: TagAssociation) -> Bool in
+            let keep = tagAss.wordPairId != wordPair.pairId
+            return keep
+        }
+        //remove invalid asses from the ass dict  --- I'm worried that this will be slow so i'm not doing it yet. This means that if a tag is deleted that there could be invalid associations in the list.  Do some tests to figure out if this is an issue, and then decide if you should handle them on a case by case basis or here.
+        
+        //Add new asses to ass list
+        tagAssociations.append(contentsOf: withTagAssociations)
+        
+        //load tags onto WP object
+        wordPair.clearTags()
+        for ass in withTagAssociations {
+            guard let t = tagDictionary[ass.tagId] else { fatalError() }
+            wordPair.addTag(t)
+        }
+        
+        //replace WP object
+        wordPairDictionary[wordPair.pairId] = wordPair
+    }
+    
     func applyUpdate(oldWordPair : WordPair, word: String, definition: String, gender : Gender, example: String?, tags : [Tag]) -> (WordPair, [Tag], [TagAssociation]) {
         
         //Notice that i am creating the new WP with the old tags! This is because the tag changes happen afterward

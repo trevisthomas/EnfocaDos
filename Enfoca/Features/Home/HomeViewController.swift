@@ -66,6 +66,10 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        controller.reloadTags()
+        controller.search()
+    }
     
     private func initializeLookAndFeel(){
         
@@ -216,7 +220,8 @@ class HomeViewController: UIViewController {
  
     //The animator calls this method to let it know that the transition animation is complete
     func transitionComplete() {
-        controller.reloadTags()
+        //I moved the call to reload data to viewWillAppear as i was working on 'conch'
+        //controller.reloadTags()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

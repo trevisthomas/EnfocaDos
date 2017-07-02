@@ -29,7 +29,7 @@ class EditWordPairController: Controller {
     var definition: String = ""
     let isEditMode: Bool
     
-    private let originalWordPair: WordPair?
+    private var originalWordPair: WordPair?
     private var originalMetaData: MetaData?
     
     init(delegate: EditWordPairControllerDelegate, wordPairOrder order: WordPairOrder, text: String) {
@@ -48,12 +48,18 @@ class EditWordPairController: Controller {
     
     init(delegate: EditWordPairControllerDelegate, wordPair: WordPair) {
         self.delegate = delegate
-        self.originalWordPair = wordPair
-        
         isEditMode = true
-        selectedTags.append(contentsOf: wordPair.tags)
-        word = wordPair.word
-        definition = wordPair.definition
+        loadOriginalWordPair(sourceWordPair: wordPair)
+        
+    }
+    
+    private func loadOriginalWordPair(sourceWordPair: WordPair) {
+        self.originalWordPair = sourceWordPair
+        selectedTags.removeAll()
+        selectedTags.append(contentsOf: sourceWordPair.tags)
+        word = sourceWordPair.word
+        definition = sourceWordPair.definition
+
     }
     
     func initialize(){
@@ -70,6 +76,21 @@ class EditWordPairController: Controller {
         }
         
         if let wp = originalWordPair {
+            //TODO: Check synch state and decide what to really do.
+            
+            services.reloadWordPair(sourceWordPair: wp, callback: { (reloadedWp: WordPair?, error: EnfocaError?) in
+                if let error = error {
+                    self.delegate.onError(title: "Failed to reload word pair", message: error)
+                    
+                }
+                
+                guard let reloadedWp = reloadedWp else { fatalError() }
+                self.loadOriginalWordPair(sourceWordPair: reloadedWp)
+                
+                self.delegate.onUpdate()
+            })
+            
+            
             services.fetchMetaData(forWordPair: wp, callback: { (metaData: MetaData?, error:EnfocaError?) in
                 if let error = error {
                     self.delegate.onError(title: "Failed to load meta data", message: error)

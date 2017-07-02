@@ -9,6 +9,10 @@
 import UIKit
 
 class DemoWebService : WebService {
+    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
+        fatalError()
+    }
+
     
 
     
@@ -215,6 +219,10 @@ class DemoWebService : WebService {
     }
     
     func deleteDictionary(dictionary: UserDictionary, callback: @escaping(UserDictionary?, EnfocaError?)->()) {
+        fatalError()
+    }
+    
+    func remoteWordPairUpdate(pairId: String, callback: @escaping (WordPair)->()) {
         fatalError()
     }
 }

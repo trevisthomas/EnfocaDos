@@ -94,7 +94,8 @@ extension DictionaryLoadingViewController: UIViewControllerTransitioningDelegate
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         guard let _ = presented as? HomeViewController, let _ = source as? DictionaryLoadingViewController else {
-            fatalError()
+//            fatalError()
+            return nil
         }
         
         return HomeFromQuizResultAnimator()

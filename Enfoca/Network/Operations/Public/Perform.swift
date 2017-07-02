@@ -115,6 +115,32 @@ class Perform {
         queue.addOperations(operations, waitUntilFinished: true)
         
     }
+    
+    class func loadOrCreateConch(enfocaRef: CKReference, db: CKDatabase, callback : @escaping ((String, Bool)?, EnfocaError?)->()){
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        
+        
+        let loadOrCreateConch = OperationLoadOrCreateConch(enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
+        
+        let completeOp = BlockOperation {
+            guard let conch = loadOrCreateConch.conch else { fatalError("Failed to create or load conch") }
+            if loadOrCreateConch.isNew {
+                print("Created conch \(conch)")
+            } else {
+                print("Loaded conch \(conch)")
+            }
+            
+            OperationQueue.main.addOperation{
+                callback((conch, loadOrCreateConch.isNew), nil)
+            }
+        }
+        
+        completeOp.addDependency(loadOrCreateConch)
+        
+        queue.addOperations([loadOrCreateConch, completeOp], waitUntilFinished: false)
+    }
 }
 
 class ErrorHandler<T> : ErrorDelegate {

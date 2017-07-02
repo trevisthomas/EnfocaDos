@@ -16,11 +16,11 @@ class UserDictionary {
     private(set) var userRef: String
     private(set) var language: String?
     private(set) var enfocaRef: String
-    
     private(set) var isTemporary: Bool = false
     
-
-    init(dictionaryId: String, userRef: String, enfocaRef: String, termTitle: String, definitionTitle: String, subject: String, language: String? = nil) {
+    var conch: String!
+    
+    init(dictionaryId: String, userRef: String, enfocaRef: String, termTitle: String, definitionTitle: String, subject: String, language: String? = nil, conch: String? = nil) {
         self.definitionTitle = definitionTitle
         self.termTitle = termTitle
         self.subject = subject
@@ -28,12 +28,13 @@ class UserDictionary {
         self.dictionaryId = dictionaryId
         self.userRef = userRef
         self.language = language
+        self.conch = conch
         
         isTemporary = false
     }
     
     convenience init(termTitle: String, definitionTitle: String, subject: String, language: String? = nil) {
-        self.init(dictionaryId: "not-set", userRef: "not-set", enfocaRef: "not-set", termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
+        self.init(dictionaryId: "not-set", userRef: "not-set", enfocaRef: "not-set", termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language, conch: nil)
         
         isTemporary = true
     }
@@ -54,12 +55,15 @@ class UserDictionary {
         guard let userRef = jsonResult["userRef"] as? String else {fatalError()}
         guard let enfocaRef = jsonResult["enfocaRef"] as? String else {fatalError()}
         guard let termTitle = jsonResult["termTitle"] as? String else {fatalError()}
+        guard let conch = jsonResult["conch"] as? String else {fatalError()}
+        
         guard let definitionTitle = jsonResult["definitionTitle"] as? String else {fatalError()}
         guard let subject = jsonResult["subject"] as? String else {fatalError()}
         let language = jsonResult["language"] as? String
         
         
-        self.init(dictionaryId: id, userRef: userRef, enfocaRef: enfocaRef, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
+        
+        self.init(dictionaryId: id, userRef: userRef, enfocaRef: enfocaRef, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language, conch: conch)
         
     }
     
@@ -74,6 +78,7 @@ class UserDictionary {
         representation["dictionaryId"] = dictionaryId as AnyObject?
         representation["userRef"] = userRef as AnyObject?
         representation["language"] = language as AnyObject?
+        representation["conch"] = conch as AnyObject?
         
         
         guard let data = try? JSONSerialization.data(withJSONObject: representation, options: []) else { fatalError() }

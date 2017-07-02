@@ -96,4 +96,9 @@ class CloudKitConverters{
         
         return dict 
     }
+    
+    class func toConch(record: CKRecord) -> String {
+        guard let c = record.value(forKey: "conch") as? String else { fatalError() }
+        return c
+    }
 }

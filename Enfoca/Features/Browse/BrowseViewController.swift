@@ -33,9 +33,13 @@ class BrowseViewController: UIViewController {
         
         initializeSubViews()
         
-        controller.loadWordPairs()
+//        controller.loadWordPairs()
         
         getAppDelegate().addListener(listener: controller)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        controller.loadWordPairs()
     }
     
     private func initializeSubViews() {

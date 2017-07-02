@@ -166,4 +166,41 @@ extension Perform{
         queue.addOperations([updateMetaData, completeOp], waitUntilFinished: false)
     }
     
+    //Reload all tags from DB
+    class func reloadTags(db: CKDatabase, enfocaRef: CKReference, callback : @escaping([Tag]?, _ error: String?)->()) {
+        
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        let fetchTags = OperationFetchTags(enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
+        
+        let completeOp = BlockOperation {
+            OperationQueue.main.addOperation{
+                
+                callback(fetchTags.tags, nil)
+            }
+        }
+        
+        completeOp.addDependency(fetchTags)
+        queue.addOperations([fetchTags, completeOp], waitUntilFinished: false)
+        
+    }
+    
+    class func reloadWordPair(db: CKDatabase, enfocaRef: CKReference, sourceWordPair: WordPair, callback : @escaping((WordPair, [TagAssociation])?, _ error: String?)->()) {
+        
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        let reloadWordPair = OperationReloadWordPair(enfocaRef: enfocaRef, db: db, sourceWordPair: sourceWordPair, errorDelegate: errorHandler)
+        
+        let completeOp = BlockOperation {
+            OperationQueue.main.addOperation{
+                
+                callback((reloadWordPair.wordPair, reloadWordPair.tagAssociations), nil)
+            }
+        }
+        
+        completeOp.addDependency(reloadWordPair)
+        queue.addOperations([reloadWordPair, completeOp], waitUntilFinished: false)
+    }
 }

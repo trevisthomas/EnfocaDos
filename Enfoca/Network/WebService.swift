@@ -60,4 +60,8 @@ protocol WebService {
     
     func getDefinitionTitle() -> String
     
+    //Maybe deprecated.  This was while i was messing with those horible subscriptions
+    func remoteWordPairUpdate(pairId: String, callback: @escaping (WordPair)->())
+    
+    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping (WordPair?, EnfocaError?)->())
 }

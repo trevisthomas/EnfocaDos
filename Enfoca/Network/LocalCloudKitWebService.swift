@@ -14,6 +14,7 @@ class LocalCloudKitWebService : WebService {
 
     private var enfocaRef: CKReference!
     
+    private var subscriptionForWordPair: CKSubscription?
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
     private(set) var userRecordId : CKRecordID!  //Not really using this here.
@@ -39,6 +40,7 @@ class LocalCloudKitWebService : WebService {
     func initialize(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
         
         showNetworkActivityIndicator = true
+        
         
         db = CKContainer.default().publicCloudDatabase
         privateDb = CKContainer.default().privateCloudDatabase
@@ -66,7 +68,7 @@ class LocalCloudKitWebService : WebService {
         
         let dictionary = UserDictionary(dictionaryId: "not-set", userRef: userRecordId.recordName, enfocaRef: "not-set-generated-by-this-method", termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
         
-        //Remember, this method generates an enfoca id.
+        //Remember, this method generates an enfoca id. Well it used to.  I guess it's a ref now
         Perform.createDictionary(db: db, dictionary: dictionary) { (dictionary: UserDictionary?, error: String?) in
             
             if let error = error { callback(nil, error) }
@@ -80,6 +82,8 @@ class LocalCloudKitWebService : WebService {
     
     func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
+        showNetworkActivityIndicator = true
+        
         let ds: DataStore
         
         if let json = json {
@@ -90,20 +94,13 @@ class LocalCloudKitWebService : WebService {
             fatalError() //I need one or the other.
         }
         
-        
-//        self.enfocaId = dictionary.enfocaId
-//        self.dictionary = dictionary
-        
-//        let ds = DataStore(dictionary: dictionary)
-        
-//        if let json = json {
-//            ds.initialize(json: json)
-//        }
-        
         if ds.isInitialized {
             self.dataStore = ds
+            ConchLocalStorage.save(ds.getUserDictionary().conch)
             
             invokeLater {
+                //                self.initializeCloudKitSubscriptions(callback: callback)
+                self.showNetworkActivityIndicator = false
                 callback(true, nil)
             }
             
@@ -113,23 +110,46 @@ class LocalCloudKitWebService : WebService {
             let recordId = CloudKitConverters.toCKRecordID(fromRecordName: ds.getUserDictionary().enfocaRef)
             let tempRef = CKReference(recordID: recordId, action: .none)
             
-            Perform.initializeDataStore(dataStore: ds, enfocaRef: tempRef, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
-                invokeLater {
-                    if let error = error {
-                        callback(false, error)
-                    }
-                    guard let dataStore = ds else {
-                        callback(false, "DataStore was nil.  This is a fatal error.")
-                        return;
-                    }
-                    self.dataStore = dataStore
-                    
-                    callback(true, nil)
+            
+            Perform.loadOrCreateConch(enfocaRef: tempRef, db: self.db, callback: { (tuple:(String, Bool)?, error: EnfocaError?) in
+                if let error = error {
+                    callback(false, error)
+                    return
                 }
-            }
+                
+                guard let tuple = tuple else { fatalError() }
+                
+                let conch = tuple.0
+                //Turns out that i dont care if it's new.  I'm doing a fresh load, that means i'm in synch.
+//                let isNew = tuple.1
+                
+                ds.getUserDictionary().conch = conch
+                
+                ConchLocalStorage.save(conch)
+                
+                Perform.initializeDataStore(dataStore: ds, enfocaRef: tempRef, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
+                    invokeLater {
+                        if let error = error {
+                            callback(false, error)
+                        }
+                        guard let dataStore = ds else {
+                            callback(false, "DataStore was nil.  This is a fatal error.")
+                            return;
+                        }
+                        self.dataStore = dataStore
+                        
+                        //                    self.initializeCloudKitSubscriptions(callback: callback)
+                        self.showNetworkActivityIndicator = false
+                        callback(true, nil)
+                    }
+                }
+            })
+            
         }
+
         
     }
+    
     
     func serialize() -> String? {
         return dataStore.toJson()
@@ -451,5 +471,133 @@ class LocalCloudKitWebService : WebService {
         return dataStore.getDefinitionTitle()
     }
     
+    private func initializeCloudKitSubscriptions(callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
+        
+//        callback(true, nil)
+        
+        performCloudKitSubscription(forRecord: "WordPair", db: db, callback: callback)
+//        performCloudKitSubscription(forRecord: "Tag", db: db, callback: callback)
+//        performCloudKitSubscription(forRecord: "TagAssociation", db: db, callback: callback)
+//        performCloudKitSubscription(forRecord: "MetaData", db: privateDb, callback: callback)
+    }
+    
+    private func performCloudKitSubscription(forRecord type: String, db: CKDatabase, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
+        
+        showNetworkActivityIndicator = true
+        
+        let predicate : NSPredicate = NSPredicate(format: "enfocaRef == %@", enfocaRef)
+        
+        let subscription = CKQuerySubscription(recordType: type, predicate: predicate, subscriptionID: type, options: [.firesOnRecordCreation, .firesOnRecordDeletion, .firesOnRecordUpdate])
+        
+        
+        //I dont want badges or notifications, so i'm not messing with CKNotificationInfo
+        //Hm, not working without it?.
+        
+        let info = CKNotificationInfo()
+        info.alertBody = "\(type) CRUD"
+        info.shouldBadge = false
+        
+        //https://stackoverflow.com/questions/32081039/how-to-test-that-silent-notifications-are-working-in-ios
+//        let info = CKNotificationInfo()
+//        info.shouldSendContentAvailable = true
+        
+        subscription.notificationInfo = info
+        
+        
+        
+        db.save(subscription) { (subscription: CKSubscription?, error: Error?) in
+//            if let error = error {
+//                //TODO: Handle error better?
+//                callback(false, "Error while establishing \(type) record subscription. Error\(error)")
+//                return
+//            }
+            
+//            guard let subscription = subscription else {
+//                
+////                if error.domain == "CKErrorDomain" && error.code == 15 {
+////                    NSLog("Already set, ignoring dupe")
+////                }
+//                
+////                callback(false, "Error while establishing \(type) record subscription. Error\(error)")
+//                
+//                callback(true, nil)
+//                return
+//            }
+            
+//            self.subscriptionForWordPair = subscription
+            
+            
+            
+            //TODO Figure out how to detect if the error is due to duplicate
+            invokeLater {
+                self.showNetworkActivityIndicator = false
+                callback(true, nil)
+            }
+            
+        }
+        
+        
+    }
+    
+    func remoteWordPairUpdate(pairId: String, callback: @escaping (WordPair)->()) {
+        
+        let recordId = CKRecordID(recordName: pairId)
+        
+        db.fetch(withRecordID: recordId) { (record: CKRecord?, error: Error?) in
+            guard let record = record else { return }
+            
+            //Make sure that this record is in the current dictionary!
+            
+            let wp = CloudKitConverters.toWordPair(from: record)
+            
+            invokeLater {
+                self.dataStore.applyUpdate(wordPair: wp)
+                callback(wp)
+            }
+            
+        }
+    }
+    
+    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping (WordPair?, EnfocaError?)->()) {
+        
+        showNetworkActivityIndicator = true
+        
+        Perform.reloadTags(db: db, enfocaRef: enfocaRef) { (tags: [Tag]?, error: String?) in
+            if let error = error { callback(nil, error) }
+            
+            guard let tags = tags else { fatalError() }
+            
+            Perform.reloadWordPair(db: self.db, enfocaRef: self.enfocaRef, sourceWordPair: sourceWordPair) { (tuple: (WordPair, [TagAssociation])?, error:String?) in
+                
+                if let error = error { callback(nil, error) }
+                
+                guard let tuple = tuple else { fatalError() }
+                
+                let wp = tuple.0
+                let tagAsses = tuple.1
+                
+                self.dataStore.reload(wordPair: wp, withTagAssociations: tagAsses, updatedTagList: tags)
+//                self.dataStore.applyUpdate(wordPair: wp)
+                //TODO: Handle the asses too.  //But also dont forget to refresh the tags.
+                
+                self.showNetworkActivityIndicator = false
+                
+                callback(wp, nil)
+                
+            }
+            
+        }
+        
+        
+        
+    }
+    
+//    func fetchChanges() {
+////        db.fetchAllSubscriptions(completionHandler: <#T##([CKSubscription]?, Error?) -> Void#>)
+//        var sub = CKSubscription
+//        CKFetchDatabaseChangesOperation(previousServerChangeToken: <#T##CKServerChangeToken?#>)
+//        
+//        CKFetchRecordZoneChangesOperation(
+//    }
     
 }

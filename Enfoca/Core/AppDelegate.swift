@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CloudKit
+import UserNotifications
 
 struct WeakReference<T>
 {
@@ -29,6 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.statusBarStyle = .lightContent
         
+        UNUserNotificationCenter.current().requestAuthorization(options:
+            [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
+                // Handle Error
+                
+//                fatalError() //For the moment.
+        })
+        
+        application.registerForRemoteNotifications()
         return true
     }
 
@@ -57,11 +67,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         saveDefaults()
     }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        
+//        let notification = CKNotification(fromRemoteNotificationDictionary: userInfo)
+        let notification = CKQueryNotification(fromRemoteNotificationDictionary: userInfo)
+        
+        let recordType = notification.subscriptionID
+        
+        let alertBody = notification.alertBody ?? ""
+        let reason = notification.queryNotificationReason
+        
+        
+        
+        if notification.notificationType == .query {
+            guard let recordId = notification.recordID else { return }
+//            print()
+            let msg = "\(recordType!) and the alert body \(alertBody) recordId: \(recordId)"
+            print(msg)
+            
+            
+//            presentAlert(title: "Notificaiton Test", message: msg, completion: { 
+//                //
+//                completionHandler(.newData) //WTF is this for?
+//            })
+            
+        
+            if recordType == "WordPair" && reason == .recordUpdated {
+                
+                
+                webService.remoteWordPairUpdate(pairId: recordId.recordName, callback: { (wordPair: WordPair) in
+                    let event = Event(type: .wordPairUpdated, data: wordPair)
+                    self.fireEvent(source: self, event: event)
+                    
+                    completionHandler(.newData)
+                })
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        //Not really needed for CK notifications, because i dont care about the token.
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        presentAlert(title: "Notification error", message: error.localizedDescription) { 
+            //
+        }
+    }
 
     private func saveDefaults(){
         applicationDefaults.save(includingDataStore: webService.serialize())
     }
-
+    
 }
 
 extension AppDelegate {
@@ -97,6 +156,20 @@ extension AppDelegate {
             
         }
     }
+    
+    func presentAlert(title : String, message : String?, completion: @escaping ()->()){
+        invokeLater {
+            
+            let topWindow = UIWindow(frame: UIScreen.main.bounds)
+            topWindow.rootViewController = UIViewController()
+            topWindow.windowLevel = UIWindowLevelAlert + 1
+            
+            topWindow.makeKeyAndVisible()
+            topWindow.rootViewController?.presentAlert(title: title, message: message, completion: completion)
+            
+//            self.window?.rootViewController?.presentAlert(title: title, message: message, completion: completion)
+        }
+    }
 }
 
 
@@ -112,4 +185,6 @@ func isTestMode() -> Bool{
     }
 //    return true
 }
+
+
 
