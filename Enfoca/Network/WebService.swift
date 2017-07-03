@@ -19,10 +19,6 @@ protocol WebService {
     
     func fetchWordPairs(tagFilter: [Tag], wordPairOrder: WordPairOrder, pattern : String?, callback : @escaping([WordPair]?,EnfocaError?)->())
     
-    func fetchNextWordPairs(callback : @escaping([WordPair]?,EnfocaError?)->())
-
-    func wordPairCount(tagFilter: [Tag], pattern : String?, callback : @escaping(Int?, EnfocaError?)->())
-    
     func createWordPair(word: String, definition: String, tags : [Tag], gender : Gender, example: String?, callback : @escaping(WordPair?, EnfocaError?)->());
     
     func updateWordPair(oldWordPair : WordPair, word: String, definition: String, gender : Gender, example: String?, tags : [Tag], callback :
@@ -63,5 +59,11 @@ protocol WebService {
     //Maybe deprecated.  This was while i was messing with those horible subscriptions
     func remoteWordPairUpdate(pairId: String, callback: @escaping (WordPair)->())
     
-    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping (WordPair?, EnfocaError?)->())
+    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping ((WordPair, MetaData?)?, EnfocaError?)->())
+    
+    func isDataStoreSynchronized(callback: @escaping (Bool)->())
+    
+    func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->())
+    
+    func getCurrentDictionary() -> UserDictionary
 }

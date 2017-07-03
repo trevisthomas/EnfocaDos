@@ -141,6 +141,26 @@ class Perform {
         
         queue.addOperations([loadOrCreateConch, completeOp], waitUntilFinished: false)
     }
+    
+    class func resetConch(enfocaRef: CKReference, db: CKDatabase, callback : @escaping (String?, EnfocaError?)->()){
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        let updateConch = OperationResetConch(enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
+        
+        let completeOp = BlockOperation {
+            guard let conch = updateConch.conch else { fatalError("failed to reset conch") }
+            print("New conch \(conch)")
+            
+            OperationQueue.main.addOperation{
+                callback(conch, nil)
+            }
+        }
+        
+        completeOp.addDependency(updateConch)
+        
+        queue.addOperations([updateConch, completeOp], waitUntilFinished: false)
+    }
 }
 
 class ErrorHandler<T> : ErrorDelegate {

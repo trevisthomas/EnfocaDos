@@ -13,7 +13,7 @@
         <!--Dictionary Selection View Controller-->
         <scene sceneID="heS-bw-o0n">
             <objects>
-                <viewController id="dbu-3x-1aW" customClass="DictionarySelectionViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dbu-3x-1aW" customClass="DictionarySelectionViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hWS-N1-mxB"/>
                         <viewControllerLayoutGuide type="bottom" id="Z69-Rp-Tb1"/>
@@ -54,7 +54,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szs-dI-i9L">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAH-VV-lfs" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAH-VV-lfs" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                         <rect key="frame" x="126" y="587" width="163" height="50"/>
                                         <color key="backgroundColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -79,14 +79,14 @@
                                         <rect key="frame" x="16" y="117" width="382" height="462"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SubjectTableViewCell" rowHeight="64" id="zpq-p5-VR6" customClass="SubjectTableViewCell" customModule="Enfoca" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SubjectTableViewCell" rowHeight="64" id="zpq-p5-VR6" customClass="SubjectTableViewCell" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zpq-p5-VR6" id="2w9-nj-Mmh">
                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-jP-SAS" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-jP-SAS" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                             <rect key="frame" x="16" y="8" width="350" height="50"/>
                                                             <color key="backgroundColor" red="0.64324307439999995" green="0.80505788330000005" blue="0.46183288099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
@@ -159,7 +159,7 @@
         <!--New App Launch View Controller-->
         <scene sceneID="qNo-Kq-lHi">
             <objects>
-                <viewController id="TN6-Bh-ZUY" customClass="NewAppLaunchViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TN6-Bh-ZUY" customClass="NewAppLaunchViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="POY-bM-4wd"/>
                         <viewControllerLayoutGuide type="bottom" id="f5V-wI-liX"/>
@@ -191,7 +191,7 @@
         <!--Dictionary Creation View Controller-->
         <scene sceneID="9QS-82-VX5">
             <objects>
-                <viewController id="CGS-VD-4sj" customClass="DictionaryCreationViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CGS-VD-4sj" customClass="DictionaryCreationViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nfD-cy-Jan"/>
                         <viewControllerLayoutGuide type="bottom" id="WwQ-3j-XPX"/>
@@ -242,14 +242,14 @@
                                         <rect key="frame" x="16" y="117" width="382" height="549"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SubjectTableViewCell" rowHeight="64" id="mWB-b5-iS4" customClass="SubjectTableViewCell" customModule="Enfoca" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SubjectTableViewCell" rowHeight="64" id="mWB-b5-iS4" customClass="SubjectTableViewCell" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWB-b5-iS4" id="cYi-Dz-mA4">
                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-hn-12U" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-hn-12U" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                             <rect key="frame" x="16" y="8" width="350" height="50"/>
                                                             <color key="backgroundColor" red="0.83594208960000005" green="0.65460956100000001" blue="0.25832647089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
@@ -317,7 +317,7 @@
         <!--Dictionary Editor View Controller-->
         <scene sceneID="xZj-B6-lUF">
             <objects>
-                <viewController id="IJz-yU-CSp" customClass="DictionaryEditorViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IJz-yU-CSp" customClass="DictionaryEditorViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5oe-Zp-L0P"/>
                         <viewControllerLayoutGuide type="bottom" id="wSp-Y3-hdd"/>
@@ -413,7 +413,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pPt-VP-q2p">
                                         <rect key="frame" x="36" y="592" width="342" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBZ-q6-vwa" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBZ-q6-vwa" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="50"/>
                                                 <color key="backgroundColor" red="0.64324307439999995" green="0.80505788330000005" blue="0.46183288099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -428,7 +428,7 @@
                                                     <action selector="createOrUpdateButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="y09-oq-vvf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-h6-8tF" customClass="EnfocaButton" customModule="Enfoca" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-h6-8tF" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="179" y="0.0" width="163" height="50"/>
                                                 <color key="backgroundColor" red="0.6497478485" green="0.24873846769999999" blue="0.1759074628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -497,7 +497,7 @@
         <!--Dictionary Loading View Controller-->
         <scene sceneID="ykG-Nv-B80">
             <objects>
-                <viewController id="78n-cW-n0M" customClass="DictionaryLoadingViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DictionaryLoadingViewController" id="78n-cW-n0M" customClass="DictionaryLoadingViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ujy-em-Zc6"/>
                         <viewControllerLayoutGuide type="bottom" id="SMU-xN-FDc"/>

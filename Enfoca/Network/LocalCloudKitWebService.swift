@@ -18,6 +18,7 @@ class LocalCloudKitWebService : WebService {
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
     private(set) var userRecordId : CKRecordID!  //Not really using this here.
+    private var isDataStoreSynchronized: Bool = true
     private var dataStore: DataStore! {
         didSet{
             let recordId = CloudKitConverters.toCKRecordID(fromRecordName: dataStore.getUserDictionary().enfocaRef)
@@ -83,6 +84,8 @@ class LocalCloudKitWebService : WebService {
     func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
         showNetworkActivityIndicator = true
+        
+        isDataStoreSynchronized = true
         
         let ds: DataStore
         
@@ -165,20 +168,9 @@ class LocalCloudKitWebService : WebService {
         
     }
     
-    func fetchNextWordPairs(callback : @escaping([WordPair]?,EnfocaError?)->()){
-        //Deprecated.
-    }
-    
-    func wordPairCount(tagFilter: [Tag], pattern : String?, callback : @escaping(Int?, EnfocaError?)->()) {
-        //Deprecated  
-        fatalError()
-        
-//        callback(dataStore.wordPairDictionary.count, nil)
-        
-        //Git rid of this method after fixing model.
-    }
-    
     func createWordPair(word: String, definition: String, tags : [Tag], gender : Gender, example: String?, callback : @escaping(WordPair?, EnfocaError?)->()){
+        
+        resetConchIfOutOfSynch()
         
         let newWordPair = WordPair(pairId: "", word: word, definition: definition, dateCreated: Date(), gender: gender, tags: tags, example: example)
         
@@ -235,6 +227,8 @@ class LocalCloudKitWebService : WebService {
     func updateWordPair(oldWordPair : WordPair, word: String, definition: String, gender : Gender, example: String?, tags : [Tag], callback :
         @escaping(WordPair?, EnfocaError?)->()){
         
+        resetConchIfOutOfSynch()
+        
         let tuple = dataStore.applyUpdate(oldWordPair: oldWordPair, word: word, definition: definition, gender: gender, example: example, tags: tags)
         
         //The numer of oprations that will be executed
@@ -279,9 +273,11 @@ class LocalCloudKitWebService : WebService {
     }
     
     func createTag(tagValue: String, callback: @escaping(Tag?, EnfocaError?)->()){
+        resetConchIfOutOfSynch()
         
+        showNetworkActivityIndicator = true
         Perform.createTag(tagName: tagValue, enfocaRef: enfocaRef, db: db) { (tag:Tag?, error: String?) in
-            
+            self.showNetworkActivityIndicator = false
             if let error = error {
                 callback(nil, error)
             }
@@ -296,6 +292,8 @@ class LocalCloudKitWebService : WebService {
     }
     
     func updateTag(oldTag : Tag, newTagName: String, callback: @escaping(Tag?, EnfocaError?)->()) {
+        
+        resetConchIfOutOfSynch()
         showNetworkActivityIndicator = true
         let newTag = dataStore.applyUpdate(oldTag: oldTag, name: newTagName)
         
@@ -313,6 +311,7 @@ class LocalCloudKitWebService : WebService {
     func deleteWordPair(wordPair: WordPair, callback: @escaping(WordPair?, EnfocaError?)->()) {
         
         showNetworkActivityIndicator = true
+        resetConchIfOutOfSynch()
         let associations = dataStore.remove(wordPair: wordPair)
         
         //The numer of oprations that will be executed
@@ -366,6 +365,8 @@ class LocalCloudKitWebService : WebService {
     
     func deleteTag(tag: Tag, callback: @escaping(Tag?, EnfocaError?)->()){
         showNetworkActivityIndicator = true
+        
+        resetConchIfOutOfSynch()
         let associations = dataStore.remove(tag: tag)
         
         //The numer of oprations that will be executed
@@ -450,11 +451,7 @@ class LocalCloudKitWebService : WebService {
     }
     
     func fetchMetaData(forWordPair wordPair: WordPair, callback: @escaping(MetaData?, EnfocaError?)->()) {
-        guard let meta = dataStore.getMetaData(forWordPair: wordPair) else {
-            //This isn't really an error. Not all words have meta.
-            callback(nil, "Meta Data not found for word pair \(wordPair.pairId)")
-            return
-        }
+        let meta = dataStore.getMetaData(forWordPair: wordPair)
         callback(meta, nil)
     }
     
@@ -558,7 +555,22 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
-    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping (WordPair?, EnfocaError?)->()) {
+    
+    //NOTE: Be aware that reloading the tags like this is a blunt tool which can leave the datastore out of synch with the DB.  The thought was that if i make the list in synch early that i can prevent an out of synch client from being able to tag a word with a tag that has been deleted.  
+    
+    //TODO: Seriously consider deleting orphaned tags, or something.
+    func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->()) {
+        Perform.reloadTags(db: db, enfocaRef: enfocaRef) { (tags: [Tag]?, error: String?) in
+            if let error = error { callback(nil, error) }
+            invokeLater {
+                guard let tags = tags else { fatalError() }
+                self.dataStore.reload(updatedTagList: tags)
+                callback(self.dataStore.allTags(), nil)
+            }
+        }
+    }
+    
+    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping ((WordPair, MetaData?)?, EnfocaError?)->()) {
         
         showNetworkActivityIndicator = true
         
@@ -582,14 +594,62 @@ class LocalCloudKitWebService : WebService {
                 
                 self.showNetworkActivityIndicator = false
                 
-                callback(wp, nil)
+                //Should probably, maybe really reload meta.
+                let meta = self.dataStore.getMetaData(forWordPair: wp)
+                callback((wp, meta), nil)
                 
             }
             
         }
+    }
+    
+    private func resetConchIfOutOfSynch() {
+        isDataStoreSynchronized { (inSynch: Bool) in
+            Perform.resetConch(enfocaRef: self.enfocaRef, db: self.db, callback: { (newConch: String?, error: EnfocaError?) in
+                
+                if let error = error {
+                    print(error) //This happened in dev because i didnt grant non-creators to write
+                    //Retry?
+                }
+                
+                
+                guard let conch = newConch else { fatalError() }
+                if inSynch {
+                    //If we were in synch prior to updating the conch, we store this new conch to continue being in synch,
+                    //If we were not in synch, we let our conch go stale but we continue to update the server
+                    
+                    invokeLater {
+                        self.dataStore.getUserDictionary().conch = conch
+                    }
+                }
+            })
+        }
+    }
+    
+    func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
         
+        if !isDataStoreSynchronized {
+            //If the DS it out of sync, there is no point in checking the DB.  You need to reload.
+            callback(false)
+            return
+        }
         
-        
+        Perform.loadOrCreateConch(enfocaRef: enfocaRef, db: db) { (tuple : (String, Bool)?, error: EnfocaError?) in
+            
+            guard let tuple = tuple else { fatalError() }
+//            let localConch = ConchLocalStorage.load()
+            let localConch = self.dataStore.getUserDictionary().conch
+            let serverConch = tuple.0
+            
+            self.isDataStoreSynchronized = localConch == serverConch
+            invokeLater {
+                callback(self.isDataStoreSynchronized)
+            }
+        }
+    }
+    
+    func getCurrentDictionary() -> UserDictionary {
+        return dataStore.getUserDictionary()
     }
     
 //    func fetchChanges() {

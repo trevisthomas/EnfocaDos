@@ -79,6 +79,14 @@ class HomeController: Controller {
         }
     }
     
+    func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
+        services.isDataStoreSynchronized(callback: callback)
+    }
+    
+    func getCurrentDictionary() -> UserDictionary {
+        return services.getCurrentDictionary()
+    }
+    
     func onEvent(event: Event) {
         switch(event.type) {
         case .tagCreated, .tagDeleted, .tagUpdate:

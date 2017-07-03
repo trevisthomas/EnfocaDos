@@ -9,9 +9,7 @@
 import UIKit
 
 class DemoWebService : WebService {
-    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
-        fatalError()
-    }
+    
 
     
 
@@ -107,10 +105,6 @@ class DemoWebService : WebService {
     }
     
     
-    internal func wordPairCount(tagFilter: [Tag], pattern: String?, callback: @escaping (Int?, EnfocaError?) -> ()) {
-        callback(list.count, nil)
-    }
-    
     internal func fetchWordPairs(tagFilter: [Tag], wordPairOrder: WordPairOrder, pattern: String? = nil, callback: @escaping([WordPair]?,EnfocaError?)->()) {
         
         delay(1) {
@@ -129,11 +123,7 @@ class DemoWebService : WebService {
         }
     }
     
-    func fetchNextWordPairs(callback : @escaping([WordPair]?,EnfocaError?)->()) {
-            
-    }
     
-
     private class func makeWordPairWithTag(word: String, definition: String, tags : [Tag]) -> WordPair{
         let wp = WordPair( pairId: "1-0-0-1\(nextIndex())", word: word, definition: definition, dateCreated: Date(), tags : tags)
         return wp
@@ -225,4 +215,21 @@ class DemoWebService : WebService {
     func remoteWordPairUpdate(pairId: String, callback: @escaping (WordPair)->()) {
         fatalError()
     }
+    
+    func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
+        fatalError()
+    }
+    
+    func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->()) {
+        fatalError()
+    }
+    
+    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping ((WordPair, MetaData?)?, EnfocaError?)->()) {
+        fatalError()
+    }
+    
+    func getCurrentDictionary() -> UserDictionary {
+        fatalError()
+    }
 }
+

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol EditWordPairControllerDelegate {
-    func onTagsLoaded(tags: [Tag], selectedTags: [Tag])
+    func onTagsLoaded()
     func onError(title: String, message: EnfocaError)
     func onUpdate()
     func dismissViewController()
@@ -64,33 +64,25 @@ class EditWordPairController: Controller {
     
     func initialize(){
         
+        services.isDataStoreSynchronized { (isSynched: Bool) in
+            if isSynched {
+                self.performInitialize()
+            } else {
+                self.performRefreshInitialize()
+            }
+        }
+    }
+    
+    func performInitialize() {
         services.fetchUserTags { (tags: [Tag]?, error: EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)
             }
-            guard let tags = tags else {
-                return
-            }
-            
-            self.delegate.onTagsLoaded(tags: tags, selectedTags: self.selectedTags)
+            guard let _ = tags else { return }
+            self.delegate.onTagsLoaded()
         }
         
         if let wp = originalWordPair {
-            //TODO: Check synch state and decide what to really do.
-            
-            services.reloadWordPair(sourceWordPair: wp, callback: { (reloadedWp: WordPair?, error: EnfocaError?) in
-                if let error = error {
-                    self.delegate.onError(title: "Failed to reload word pair", message: error)
-                    
-                }
-                
-                guard let reloadedWp = reloadedWp else { fatalError() }
-                self.loadOriginalWordPair(sourceWordPair: reloadedWp)
-                
-                self.delegate.onUpdate()
-            })
-            
-            
             services.fetchMetaData(forWordPair: wp, callback: { (metaData: MetaData?, error:EnfocaError?) in
                 if let error = error {
                     self.delegate.onError(title: "Failed to load meta data", message: error)
@@ -99,6 +91,35 @@ class EditWordPairController: Controller {
             })
         }
 
+    }
+    
+    func performRefreshInitialize() {
+        
+        services.reloadTags { (tags:[Tag]?, error:EnfocaError?) in
+            if let error = error {
+                self.delegate.onError(title: "Error fetching tags", message: error)
+            }
+            guard let _ = tags else { return }
+            
+            self.delegate.onTagsLoaded()
+            
+            if let wp = self.originalWordPair {
+                self.services.reloadWordPair(sourceWordPair: wp, callback: { (tuple: (WordPair, MetaData?)?, error: EnfocaError?) in
+                    if let error = error {
+                        self.delegate.onError(title: "Failed to reload word pair", message: error)
+                        
+                    }
+                    
+                    guard let tuple = tuple else { fatalError() }
+                    let reloadedWp = tuple.0
+                    self.originalMetaData = tuple.1
+                    
+                    self.loadOriginalWordPair(sourceWordPair: reloadedWp)
+                    
+                    self.delegate.onUpdate()
+                })
+            }
+        }
     }
     
     func title()->String{

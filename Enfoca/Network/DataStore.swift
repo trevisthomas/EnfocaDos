@@ -205,19 +205,22 @@ class DataStore {
     func applyUpdate(wordPair: WordPair) {
         wordPairDictionary[wordPair.pairId]?.applyUpdate(source: wordPair)
     }
-    
-    func reload(wordPair: WordPair, withTagAssociations: [TagAssociation], updatedTagList: [Tag]) {
-        
-        //Replace tag list with updated tag list
+    //func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->())
+    func reload(updatedTagList: [Tag]) {
         self.tagDictionary.removeAll()
         self.tagDictionary = updatedTagList.reduce([AnyHashable : Tag]()) { (acc, tag) in
             var dict = acc // This shit show is because the seed dictionary isnt mutable
             dict[tag.tagId] = tag
             return dict
         }
+    }
+    
+    func reload(wordPair: WordPair, withTagAssociations: [TagAssociation], updatedTagList: [Tag]) {
+        
+        //Replace tag list with updated tag list
+        reload(updatedTagList: updatedTagList)
         
         //Remove this word's asses from the ass dict
-        
         tagAssociations = tagAssociations.filter { (tagAss: TagAssociation) -> Bool in
             let keep = tagAss.wordPairId != wordPair.pairId
             return keep

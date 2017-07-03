@@ -51,6 +51,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var searchUnderlineView: UIView!
     
+    private static var synchRequestDenied = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,6 +71,29 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         controller.reloadTags()
         controller.search()
+        
+        if HomeViewController.synchRequestDenied == false {
+            controller.isDataStoreSynchronized { (isInSynch: Bool) in
+                if !isInSynch {
+                    self.presentDataOutOfSynchAlert()
+                }
+            }
+        }
+    }
+    
+    private func presentDataOutOfSynchAlert(){
+        let dialog = UIAlertController(title: "Refresh Needed", message: "Data is out of synch, would you like to reload now?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        dialog.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            let dictionary = self.controller.getCurrentDictionary()
+            self.performSegue(withIdentifier: "DictionaryLoadingSeque", sender: dictionary)
+        }))
+        
+        dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            HomeViewController.synchRequestDenied = true
+        }))
+        
+        present(dialog, animated: true, completion: nil)
     }
     
     private func initializeLookAndFeel(){
@@ -251,6 +276,11 @@ class HomeViewController: UIViewController {
         
         if let to = segue.destination as? NewAppLaunchViewController {
             to.initialize(autoload: false)
+        }
+        
+        if let to = segue.destination as? DictionaryLoadingViewController {
+            guard let dictionary = sender as? UserDictionary else { fatalError() }
+            to.initialize(dictionary: dictionary)
         }
 
     }

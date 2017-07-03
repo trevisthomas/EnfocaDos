@@ -11,6 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--DictionaryLoadingViewController-->
+        <scene sceneID="dA0-7z-kyD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DictionarySelection" referencedIdentifier="DictionaryLoadingViewController" id="nmb-tk-l9c" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqX-Uk-9Pv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-754" y="407"/>
+        </scene>
         <!--DictionarySelection-->
         <scene sceneID="9Vf-iX-B3e">
             <objects>
@@ -238,6 +246,7 @@
                         <segue destination="seo-qB-PAl" kind="show" identifier="EditWordPairControllerSegue" id="car-vL-6vY"/>
                         <segue destination="9eU-n4-C5g" kind="show" identifier="QuizViewControllerSegue" id="Vst-SI-0fi"/>
                         <segue destination="Jed-ek-EHi" kind="show" identifier="DictionarySelectionSeque" id="6XE-hn-gxj"/>
+                        <segue destination="nmb-tk-l9c" kind="show" identifier="DictionaryLoadingSeque" id="aA5-k3-kio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-PW-uCx" userLabel="First Responder" sceneMemberID="firstResponder"/>

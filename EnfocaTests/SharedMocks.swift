@@ -249,8 +249,20 @@ class MockWebService : WebService {
         fatalError()
     }
     
-    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping (WordPair?, EnfocaError?)->()) {
+    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping ((WordPair, MetaData?)?, EnfocaError?)->()) {
         fatalError()
+    }
+    
+    func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
+        fatalError()
+    }
+    
+    func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->()) {
+        fatalError()
+    }
+    
+    func getCurrentDictionary() -> UserDictionary {
+         fatalError()
     }
 }
 

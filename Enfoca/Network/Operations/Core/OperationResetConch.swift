@@ -58,12 +58,12 @@ class OperationResetConch : BaseOperation {
                     self.handleError(error)
                 }
                 
-                guard let _ = updatedRecord else {
+                guard let updatedRecord = updatedRecord else {
                     //This shouldnt happen, but there is nothing that the user can do about it if it does... 
                     fatalError()
                 }
                 //DO NOT store the new conch locally.  The whole point here is that you are out of synch, but are being allowed to make data changes on a case by case basis.  To get out of that state, you need to reload the DB, reloading will update your local conch.
-                //self.conch = CloudKitConverters.toConch(record: updatedRecord)
+                self.conch = CloudKitConverters.toConch(record: updatedRecord)
                 self.done()
             }
         }

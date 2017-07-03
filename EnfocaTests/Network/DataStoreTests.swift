@@ -337,11 +337,11 @@ class DataStoreTests: XCTestCase {
     func testSearch_ByWord(){
         mockDataOne()
         
-        var result = sut.search(forWordsLike : "a")
+        var result = sut.search(forWordsLike : "\\ba")
         
         XCTAssertEqual(result.count, 2)
         
-        result = sut.search(forWordsLike : "A")
+        result = sut.search(forWordsLike : "\\bA")
         
         XCTAssertEqual(result.count, 2)
     }

@@ -44,7 +44,7 @@ class EditWordPairControllerTests: XCTestCase {
 }
 
 private class MockEditWordPairControllerDelegate: EditWordPairControllerDelegate {
-    func onTagsLoaded(tags: [Tag], selectedTags: [Tag]) {
+    func onTagsLoaded() {
         
     }
     

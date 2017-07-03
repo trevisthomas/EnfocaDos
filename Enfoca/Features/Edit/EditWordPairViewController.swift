@@ -139,10 +139,7 @@ extension EditWordPairViewController: EditWordPairControllerDelegate {
         self.presentAlert(title: title, message: message)
     }
 
-    func onTagsLoaded(tags: [Tag], selectedTags: [Tag]) {
-//        tagViewController.initialize(tags: tags, selectedTags: selectedTags, delegate: self)
-        
-        
+    func onTagsLoaded() {
         editorViewController.refresh()
         refreshButtonState()
         updateFields()

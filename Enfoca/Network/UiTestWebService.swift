@@ -9,11 +9,6 @@
 import UIKit
 
 class UiTestWebService : WebService {
-    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping (WordPair?, EnfocaError?) -> ()) {
-        fatalError()
-    }
-
-    
     private(set) var dictionary: UserDictionary!
     private(set) var enfocaId : NSNumber!
     private var dataStore: DataStore!
@@ -137,19 +132,6 @@ class UiTestWebService : WebService {
         }
         
         
-    }
-    
-    func fetchNextWordPairs(callback : @escaping([WordPair]?,EnfocaError?)->()){
-        //Deprecated.
-    }
-    
-    func wordPairCount(tagFilter: [Tag], pattern : String?, callback : @escaping(Int?, EnfocaError?)->()) {
-        //Deprecated
-        fatalError()
-        
-        //        callback(dataStore.wordPairDictionary.count, nil)
-        
-        //Git rid of this method after fixing model.
     }
     
     func createWordPair(word: String, definition: String, tags : [Tag], gender : Gender, example: String?, callback : @escaping(WordPair?, EnfocaError?)->()){
@@ -283,7 +265,24 @@ class UiTestWebService : WebService {
         fatalError()
     }
     
+    
     func remoteWordPairUpdate(pairId: String, callback: @escaping (WordPair)->()) {
+        fatalError()
+    }
+    
+    func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
+        fatalError()
+    }
+    
+    func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->()) {
+        fatalError()
+    }
+    
+    func reloadWordPair(sourceWordPair: WordPair, callback: @escaping ((WordPair, MetaData?)?, EnfocaError?)->()) {
+        fatalError()
+    }
+    
+    func getCurrentDictionary() -> UserDictionary {
         fatalError()
     }
 }
