@@ -132,6 +132,11 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     
     
     func getWordPairsForMatchingRound() -> [WordPair] {
+        //How to sort when i dont have meta?  See WordPairTableViewCell
+//        incorrectWords.sorted { (wp1: WordPair, wp2, WordPair) -> Bool in
+//            return 
+//        }
+        
         incorrectWordCountSinceMatchingRound = 0
         return Array(incorrectWords.suffix(numberOfIncorrectAnswersTillReview))
     
@@ -182,6 +187,7 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
         })
     }
     
+    //Deprecated
     func isTimeForMatchingRound() -> Bool {
         return incorrectWordCountSinceMatchingRound == numberOfIncorrectAnswersTillReview
     }

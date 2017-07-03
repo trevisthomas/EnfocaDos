@@ -61,11 +61,7 @@ class CardRearViewController: UIViewController {
                 return "QuizPerfectScoreResultsSegue"
             }
         } else {
-            if sharedViewModel.isTimeForMatchingRound() {
-                return "MatchingRoundSeque"
-            } else {
-                return "CardFrontWithNewWordSegue"
-            }
+            return "CardFrontWithNewWordSegue"
         }
     }
     

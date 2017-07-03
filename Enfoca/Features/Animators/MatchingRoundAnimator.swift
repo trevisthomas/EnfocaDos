@@ -49,7 +49,9 @@ class MatchingRoundAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         toViewController.view.alpha = 0
         
-        CustomAnimations.animateExpandAndPullOut(target: fromViewController.rightNavButton()!, delay: 0.0, duration: duration * 0.33)
+        if let rightButton = fromViewController.rightNavButton() {
+            CustomAnimations.animateExpandAndPullOut(target: rightButton, delay: 0.0, duration: duration * 0.33)
+        }
         
         CustomAnimations.animateExpandAndPullOut(target: fromViewController.getTitleLabel()!, delay: duration * 0.17, duration: duration * 0.33)
         

@@ -70,7 +70,10 @@ class MatchingRoundViewController: UIViewController {
     }
     
     fileprivate func resumeQuiz(){
+        sharedViewModel.retry()
         performSegue(withIdentifier: "ResumeQuizSegue", sender: nil)
+
+//        performSegue(withIdentifier: "ResumeQuizSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -33,18 +33,15 @@ class QuizResultsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? HomeViewController {
             to.transitioningDelegate = self
-        } else if let to = segue.destination as? CardFrontViewController {
+        } else if let to = segue.destination as? MatchingRoundViewController {
             to.transitioningDelegate = self
-            to.initialize(viewModel: sharedViewModel)
+            to.initialize(sharedViewModel: sharedViewModel)
         }
-        
-        
     }
     @IBAction func showDetailedResultsAction(_ sender: Any) {
     }
     @IBAction func retryAction(_ sender: Any) {
-        sharedViewModel.retry()
-        performSegue(withIdentifier: "RetryQuizSegue", sender: nil)
+        performSegue(withIdentifier: "MatchingReviewSegue", sender: nil)
     }
     @IBAction func doneAction(_ sender: Any) {
         performSegue(withIdentifier: "HomeSegue", sender: nil)
@@ -66,12 +63,16 @@ extension QuizResultsViewController: UIViewControllerTransitioningDelegate {
             return animator
         }
         
-        return nil
+        if let _ = presented as? MatchingRoundViewController, let _ = source as? QuizResultsViewController {
+            return MatchingRoundAnimator()
+        }
+        
+        fatalError() //Becaue something is wrong
         
     }
 }
 
-extension QuizResultsViewController: EnfocaDefaultAnimatorTarget {
+extension QuizResultsViewController: EnfocaDefaultAnimatorTarget, ChangeCardAnimatorTarget {
     func getRightNavView() -> UIView? {
         return nil
     }
@@ -86,6 +87,19 @@ extension QuizResultsViewController: EnfocaDefaultAnimatorTarget {
     }
     func getBodyContentView() -> UIView {
         return contentBodyView
+    }
+    
+    func getCardView() -> UIView {
+        return contentBodyView
+    }
+    func getView() -> UIView {
+        return view
+    }
+    func rightNavButton() -> UIView? {
+        return nil
+    }
+    func getTitleLabel() -> UIView? {
+        return titleLabel
     }
 }
 
