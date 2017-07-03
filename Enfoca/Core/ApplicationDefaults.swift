@@ -33,11 +33,11 @@ class LocalApplicationDefaults : ApplicationDefaults {
     var reverseWordPair : Bool = false
     var cardOrder: CardOrder = .latestAdded
     var cardSide: CardSide = .definition
-    var quizWordCount: Int = 8
+    var quizWordCount: Int = 10
     var wordPairOrder: WordPairOrder = .wordAsc
     var numberOfIncorrectAnswersTillReview: Int = 5
-    var cardTimeout: Int = 5
-    var cardTimeoutWarning: Int = 2
+    var cardTimeout: Int = 30
+    var cardTimeoutWarning: Int = 5
     
     var fetchWordPairPageSize: Int {
         get {

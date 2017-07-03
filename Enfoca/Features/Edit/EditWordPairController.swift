@@ -88,6 +88,8 @@ class EditWordPairController: Controller {
                     self.delegate.onError(title: "Failed to load meta data", message: error)
                 }
                 self.originalMetaData = metaData
+                self.delegate.onUpdate()
+//                self.delegate.onTagsLoaded()
             })
         }
 

@@ -116,13 +116,12 @@ class Perform {
         
     }
     
-    class func loadOrCreateConch(enfocaRef: CKReference, db: CKDatabase, callback : @escaping ((String, Bool)?, EnfocaError?)->()){
+    class func loadOrCreateConch(enfocaRef: CKReference, db: CKDatabase, allowCreation: Bool, callback : @escaping ((String, Bool)?, EnfocaError?)->()){
         let queue = OperationQueue()
         let errorHandler = ErrorHandler(queue: queue, callback: callback)
         
         
-        
-        let loadOrCreateConch = OperationLoadOrCreateConch(enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
+        let loadOrCreateConch = OperationLoadOrCreateConch(enfocaRef: enfocaRef, db: db, allowCreation: allowCreation, errorDelegate: errorHandler)
         
         let completeOp = BlockOperation {
             guard let conch = loadOrCreateConch.conch else { fatalError("Failed to create or load conch") }

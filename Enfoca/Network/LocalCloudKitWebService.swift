@@ -99,7 +99,6 @@ class LocalCloudKitWebService : WebService {
         
         if ds.isInitialized {
             self.dataStore = ds
-            ConchLocalStorage.save(ds.getUserDictionary().conch)
             
             invokeLater {
                 //                self.initializeCloudKitSubscriptions(callback: callback)
@@ -114,7 +113,7 @@ class LocalCloudKitWebService : WebService {
             let tempRef = CKReference(recordID: recordId, action: .none)
             
             
-            Perform.loadOrCreateConch(enfocaRef: tempRef, db: self.db, callback: { (tuple:(String, Bool)?, error: EnfocaError?) in
+            Perform.loadOrCreateConch(enfocaRef: tempRef, db: self.db, allowCreation: true, callback: { (tuple:(String, Bool)?, error: EnfocaError?) in
                 if let error = error {
                     callback(false, error)
                     return
@@ -127,8 +126,6 @@ class LocalCloudKitWebService : WebService {
 //                let isNew = tuple.1
                 
                 ds.getUserDictionary().conch = conch
-                
-                ConchLocalStorage.save(conch)
                 
                 Perform.initializeDataStore(dataStore: ds, enfocaRef: tempRef, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
                     invokeLater {
@@ -634,7 +631,7 @@ class LocalCloudKitWebService : WebService {
             return
         }
         
-        Perform.loadOrCreateConch(enfocaRef: enfocaRef, db: db) { (tuple : (String, Bool)?, error: EnfocaError?) in
+        Perform.loadOrCreateConch(enfocaRef: enfocaRef, db: db, allowCreation: false) { (tuple : (String, Bool)?, error: EnfocaError?) in
             
             guard let tuple = tuple else { fatalError() }
 //            let localConch = ConchLocalStorage.load()

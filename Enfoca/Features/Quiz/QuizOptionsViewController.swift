@@ -94,7 +94,7 @@ class QuizOptionsViewController: UIViewController {
         case "Random":
             viewModel.cardOrder = CardOrder.random
         case "Hardest":
-            viewModel.cardOrder = CardOrder.random
+            viewModel.cardOrder = CardOrder.hardest
         case "Least Studied":
             viewModel.cardOrder = CardOrder.leastStudied
         case "Recently Added":

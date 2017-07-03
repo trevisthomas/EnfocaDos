@@ -21,38 +21,63 @@ class Import {
     let enfocaRef: CKReference!
     
     
-//    let metaResource = "study_item_meta"
-//    let tagResource = "tag"
-//    let studyItemResource = "study_item"
-//    let tagAssociationResource = "tag_associations"
+    let metaResource = "study_item_meta"
+    let tagResource = "tag"
+    let studyItemResource = "study_item"
+    let tagAssociationResource = "tag_associations"
     
-    let metaResource = "small_study_item_meta"
-    let tagResource = "small_tag"
-    let studyItemResource = "small_study_item"
-    let tagAssociationResource = "small_tag_associations"
+//    let metaResource = "small_study_item_meta"
+//    let tagResource = "small_tag"
+//    let studyItemResource = "small_study_item"
+//    let tagAssociationResource = "small_tag_associations"
     
     
     //DEPRECATED!
-    init(enfocaId id: Int){
+    init(enfocaId id: Int, textView: UITextView?){
         dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         enfocaId = NSNumber(value: id)
         enfocaRef = nil
+        self.textView = textView
     }
     
-    init(enfocaRef: String) {
+    init(enfocaRef: String, textView: UITextView?) {
         dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         enfocaId = nil
         let recordId = CloudKitConverters.toCKRecordID(fromRecordName: enfocaRef)
         self.enfocaRef = CKReference(recordID: recordId, action: .none)
+        self.textView = textView
+    }
+    
+//    var extLogger : (String)->()
+    
+    var textView: UITextView?
+
+    func logger(_ message: String) {
+        print(message)
+        
+        invokeLater {
+            self.textView?.text.append(message)
+            self.textView?.text.append("\n")
+            
+            guard let textView = self.textView else { return }
+            let bottom = textView.contentSize.height - textView.bounds.size.height
+            textView.setContentOffset(CGPoint(x: 0, y: bottom), animated: true)
+        }
+        
+        
+        
+//        extLogger(message)
     }
     
     func process(){
+        
         loadMeta()
         loadWordPairs()
         loadTags()
         loadTagAssociations()
-        print("Saving to cloud kit")
+        logger("Saving to cloud kit")
         saveDataToCloudKit()
+        logger("Done")
     }
     
     func loadMeta(){
@@ -82,7 +107,7 @@ class Import {
             metaDict[id] = oldMeta
             
         }
-        print("Loaded \(metaDict.count) meta data rows.")
+        logger("Loaded \(metaDict.count) meta data rows.")
         
     }
 
@@ -105,7 +130,7 @@ class Import {
                 }
             }
         }
-        print("Loaded \(tagDict.count) tags.")
+        logger("Loaded \(tagDict.count) tags.")
     }
     
     func loadWordPairs(){
@@ -128,7 +153,7 @@ class Import {
             
             wordPairDict[oldWordPair.studyItemId] = oldWordPair
         }
-        print("Loaded \(wordPairDict.count) word pairs.")
+        logger("Loaded \(wordPairDict.count) word pairs.")
     }
     
     func loadTagAssociations(){
@@ -148,7 +173,7 @@ class Import {
             tagAssociations.append(tagAss)
             
         }
-        print("Loaded \(tagAssociations.count) tag associations.")
+        logger("Loaded \(tagAssociations.count) tag associations.")
         
     }
     
@@ -166,7 +191,8 @@ class Import {
             let tagOp = OperationCreateTag(tagName: oldTag.tagName, enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
             queue.addOperations([tagOp], waitUntilFinished: true)
             oldTag.newTag = tagOp.tag
-            print("Created Tag: \(String(describing: tagOp.tag?.name))")
+            logger("Created Tag: \(String(describing: tagOp.tag!.name))")
+            
         }
         
         
@@ -175,7 +201,7 @@ class Import {
             queue.addOperations([wordPairOp], waitUntilFinished: true)
             oldWordPair.newWordPair = wordPairOp.wordPair
             
-            print("Created word pair: \(String(describing: wordPairOp.wordPair?.word))")
+            logger("Created word pair: \(String(describing: wordPairOp.wordPair!.word))")
         }
         
         for ass in tagAssociations {
@@ -187,17 +213,17 @@ class Import {
                 
                 queue.addOperations([assOp], waitUntilFinished: true)
                 
-                print("created association \(wp.word) tagged \(tag.name)")
+                logger("created association \(wp.word) tagged \(tag.name)")
 
             } else {
-                print("Failed to find: \(ass.studyItemId)")
+                logger("Failed to find: \(ass.studyItemId)")
             }
         }
         
         for oldMeta in metaDict.values {
             let metaOp = OperationCreateMetaData(metaDataSource: toRealMetaData(oldMetaData: oldMeta), enfocaRef: enfocaRef, db: privateDb, errorDelegate: errorHandler)
             queue.addOperations([metaOp], waitUntilFinished: true)
-            print("Created Meta: \(String(describing: metaOp.metaData?.metaId))")
+            logger("Created Meta: \(String(describing: metaOp.metaData!.metaId))")
             
         }
     }
@@ -220,7 +246,12 @@ class Import {
 class ImportErrorHandler : ErrorDelegate {
     func onError(message: String) {
         print(message)
-        fatalError()
+        
+        
+        getAppDelegate().presentAlert(title: "Import error", message: message) { 
+            //
+        }
+//        fatalError()
     }
 }
 

@@ -145,6 +145,10 @@
 		0F45F3E81F09576A00D45594 /* OperationReloadWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E61F09576A00D45594 /* OperationReloadWordPair.swift */; };
 		0F45F3EA1F098DEF00D45594 /* OperationResetConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E91F098DEF00D45594 /* OperationResetConch.swift */; };
 		0F45F3EB1F098DEF00D45594 /* OperationResetConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E91F098DEF00D45594 /* OperationResetConch.swift */; };
+		0F45F3EC1F0A9DE700D45594 /* OperationLoadOrCreateConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA551F09423800ACC0C3 /* OperationLoadOrCreateConch.swift */; };
+		0F45F3ED1F0A9DE700D45594 /* OperationResetConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E91F098DEF00D45594 /* OperationResetConch.swift */; };
+		0F45F3EE1F0A9DE700D45594 /* OperationReloadWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E61F09576A00D45594 /* OperationReloadWordPair.swift */; };
+		0F45F3EF1F0A9DE700D45594 /* ConchLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E31F094C9700D45594 /* ConchLocalStorage.swift */; };
 		0F911E0C1EE08E8300F21855 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E071EE08E8300F21855 /* TagCell.swift */; };
 		0F911E0E1EE08E8300F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
 		0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */; };
@@ -1669,6 +1673,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F45F3EC1F0A9DE700D45594 /* OperationLoadOrCreateConch.swift in Sources */,
+				0F45F3ED1F0A9DE700D45594 /* OperationResetConch.swift in Sources */,
+				0F45F3EE1F0A9DE700D45594 /* OperationReloadWordPair.swift in Sources */,
+				0F45F3EF1F0A9DE700D45594 /* ConchLocalStorage.swift in Sources */,
 				0F1AAA421F08044B00ACC0C3 /* ActivityIndicatable.swift in Sources */,
 				0F1AAA431F08044B00ACC0C3 /* EditorViewController.swift in Sources */,
 				0F1AAA441F08044B00ACC0C3 /* LookupTextViewController.swift in Sources */,

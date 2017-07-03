@@ -47,6 +47,9 @@ class MetaData : Hashable {
     
     //The precentage of times the word was guessd correctly
     var score : Double {
+        if timedViewCount == 0 {
+            return 0.0
+        }
         return Double(timedViewCount - incorrectCount) / Double(timedViewCount)
     }
     

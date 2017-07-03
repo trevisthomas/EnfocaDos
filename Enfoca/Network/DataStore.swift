@@ -451,7 +451,15 @@ class DataStore {
             }
         case .hardest:
             sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in
-                return self.getMetaData(forWordPair: wp1)?.score ?? 0 < self.getMetaData(forWordPair:wp2)?.score ?? 0
+                //Trevis, there was a frustrating defect that turned out to be due to the fact that there were meta data's for words that had never been studied.  I modified the score method to just return a zero score in that instance to fix this.  The unit test wasnt catching it.
+                guard let m1 = self.getMetaData(forWordPair: wp1) else {
+                    return true //If the meta is null then i am assumed hardest
+                }
+                guard let m2 = self.getMetaData(forWordPair: wp2) else {
+                    return false
+                }
+                
+                return m1.score < m2.score
             }
         case .latestAdded:
             sortFunc = { (wp1: WordPair, wp2: WordPair) -> Bool in

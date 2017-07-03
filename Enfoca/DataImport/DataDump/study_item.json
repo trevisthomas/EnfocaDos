@@ -12,7 +12,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-10-04 13:59:59",
 		"word" : "comal",
-		"definition" : "griddle",
+		"definition" : "griddle for tortillas",
 		"example" : []
 	},
 	{
@@ -53,7 +53,7 @@
 		"createDate" : "2017-01-14 00:04:46",
 		"word" : "ampolleta",
 		"definition" : "vial",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "00810567-bb0f-4147-b7d2-3e9540656a9f",
@@ -141,7 +141,7 @@
 		"createDate" : "2016-06-12 17:57:33",
 		"word" : "conocí",
 		"definition" : "i knew someone",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "0156a3ca-de6d-4cba-956c-ac57ea0ddd71",
@@ -205,6 +205,14 @@
 		"createDate" : "2016-01-16 20:39:54",
 		"word" : "víspera de navidad",
 		"definition" : "christmas eve",
+		"example" : []
+	},
+	{
+		"studyItemId" : "01c48b15-171d-496a-8df8-ea0a16489604",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-29 17:38:56",
+		"word" : "internamente",
+		"definition" : "internally; (de persona) inside; deep down",
 		"example" : []
 	},
 	{
@@ -272,6 +280,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0237a7c4-9efd-4583-8c75-e3c9a2b6c4e7",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-23 23:45:38",
+		"word" : "de tal forma",
+		"definition" : "in such a way",
+		"example" : []
+	},
+	{
 		"studyItemId" : "0246d1bb-e3ff-4f2a-a9f4-82b59f5b590b",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-09-29 00:00:17",
@@ -301,7 +317,7 @@
 		"createDate" : "2015-01-18 10:27:06",
 		"word" : "cuarto",
 		"definition" : "1/4, a room, 15 minutes, fourth",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "028ef484-9440-47e6-9130-b13e91333691",
@@ -373,7 +389,7 @@
 		"createDate" : "2016-04-24 17:56:15",
 		"word" : "loro",
 		"definition" : "parrot",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "03282c1f-9279-4714-a983-109cf12a197f",
@@ -381,7 +397,7 @@
 		"createDate" : "2015-01-20 00:49:56",
 		"word" : "sano, a",
 		"definition" : "healthy,  intact",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "035dec5c-d58e-4b5c-8852-6c7bef46083b",
@@ -413,6 +429,14 @@
 		"createDate" : "2015-02-14 13:46:38",
 		"word" : "mierda",
 		"definition" : "shit",
+		"example" : []
+	},
+	{
+		"studyItemId" : "03dc255d-bcb2-435e-be96-ea4f759098df",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-05 23:26:40",
+		"word" : "overol",
+		"definition" : "overalls",
 		"example" : []
 	},
 	{
@@ -576,6 +600,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "04c0141a-d932-4495-889e-7f7300fe1345",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-22 23:37:58",
+		"word" : "armazón",
+		"definition" : "frame, chassis",
+		"example" : []
+	},
+	{
 		"studyItemId" : "04c3260d-7ef6-4f2e-9961-1bad06668cc3",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:50:09",
@@ -677,6 +709,14 @@
 		"createDate" : "2016-03-06 18:46:31",
 		"word" : "subjetivo",
 		"definition" : "subjective",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0544fc37-3ab9-4a30-9dc3-4f59281b4cef",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-07 23:44:21",
+		"word" : "distraer",
+		"definition" : "to distract",
 		"example" : []
 	},
 	{
@@ -824,6 +864,22 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0695743d-9d6e-4a9f-b936-45b8c9cd93ba",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 21:40:18",
+		"word" : "carpa",
+		"definition" : "tent",
+		"example" : []
+	},
+	{
+		"studyItemId" : "06a3833e-1fa4-4794-869c-bda350f28412",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 18:54:52",
+		"word" : "chillido",
+		"definition" : "shriek, screech",
+		"example" : []
+	},
+	{
 		"studyItemId" : "06a616b9-6ae9-4106-9371-4357fc3e05c5",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-16 22:07:57",
@@ -845,7 +901,7 @@
 		"createDate" : "2016-06-12 18:03:31",
 		"word" : "sabíamos",
 		"definition" : "we used to know something",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "06d61808-dd1d-4941-b354-adcbe1fef176",
@@ -992,6 +1048,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0886044b-2f18-4061-90d9-f7059219de98",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:05:54",
+		"word" : "descorazonado",
+		"definition" : "heartbroken",
+		"example" : []
+	},
+	{
 		"studyItemId" : "08956386-00b5-4a5d-9514-958a9d1ac39b",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-22 00:42:53",
@@ -1109,7 +1173,7 @@
 		"createDate" : "2016-06-04 16:29:52",
 		"word" : "sabe",
 		"definition" : "he knows, knows how",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "09a247b0-d0ff-41e0-8b8a-a5c915c80f23",
@@ -1157,6 +1221,14 @@
 		"createDate" : "2015-04-11 17:50:27",
 		"word" : "quemar",
 		"definition" : "to burn, to set fire to",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0a11b018-c89b-496c-a589-789d8595de9e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:54:19",
+		"word" : "astilla",
+		"definition" : "splinter",
 		"example" : []
 	},
 	{
@@ -1336,6 +1408,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0b69f2dd-16b7-4213-a7f2-bc6eb6ff128d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 18:49:42",
+		"word" : "frigorífico",
+		"definition" : "fridge",
+		"example" : []
+	},
+	{
 		"studyItemId" : "0b741fb5-c4dc-454c-a320-1dde1a58ae70",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:49:48",
@@ -1424,6 +1504,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0c1e4892-306e-4894-91c1-0d615fbb550e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:25:31",
+		"word" : "codiciado, a",
+		"definition" : "coveted",
+		"example" : []
+	},
+	{
 		"studyItemId" : "0c2705fc-e679-4dbf-85b5-6e902deee37d",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-12-13 01:04:48",
@@ -1461,7 +1549,7 @@
 		"createDate" : "2015-01-23 00:37:35",
 		"word" : "pasillo",
 		"definition" : "hallway, asile",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "0c6b56f3-e751-40fe-8183-88d9b5d2e7da",
@@ -1504,6 +1592,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0cbdcbb7-a511-4c5a-964f-0bc85b3bc1c5",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:23:43",
+		"word" : "tuberías",
+		"definition" : "pipes, plumbing",
+		"example" : []
+	},
+	{
 		"studyItemId" : "0cc2730b-264e-4fe0-9651-90d59c7498cc",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-23 13:43:34",
@@ -1520,11 +1616,35 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0d05087b-b47f-402a-a143-614f5422c954",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-28 00:48:16",
+		"word" : "brillar",
+		"definition" : "to shine",
+		"example" : []
+	},
+	{
 		"studyItemId" : "0d0c4d5b-e87b-4fda-96e6-599effded3a7",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-24 13:54:09",
 		"word" : "puñado",
 		"definition" : "handful",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0d24f9db-86c3-445f-9900-02f6503e4c66",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-07 23:57:57",
+		"word" : "riel",
+		"definition" : "rail",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0d2ec214-2cc8-4893-b252-0e6a88687613",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-20 19:11:16",
+		"word" : "opuesto",
+		"definition" : "opposite",
 		"example" : []
 	},
 	{
@@ -1580,7 +1700,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-12-01 01:13:03",
 		"word" : "botana",
-		"definition" : "snack",
+		"definition" : "snack; outgoing person",
 		"example" : []
 	},
 	{
@@ -1715,8 +1835,8 @@
 		"studyItemId" : "0e61b17c-7707-44c7-bfb6-2af761134245",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:49:52",
-		"word" : "rincones",
-		"definition" : "corners",
+		"word" : "rincon",
+		"definition" : "corner",
 		"example" : []
 	},
 	{
@@ -1784,11 +1904,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0f2704b6-12c5-497e-901a-6f5c9a02f573",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-06 19:03:34",
+		"word" : "cañas de pescar",
+		"definition" : "fishing rods",
+		"example" : []
+	},
+	{
 		"studyItemId" : "0f297185-3e4e-4f98-b189-69e2af2afa5d",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-03-06 01:49:23",
 		"word" : "lecciones",
 		"definition" : "lessons",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0f31c278-96a2-4c6d-805f-7c61703bf735",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 00:22:54",
+		"word" : "a fin de",
+		"definition" : "in order to",
 		"example" : []
 	},
 	{
@@ -1800,11 +1936,35 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "0f643719-8cd5-4376-ad0e-b7056f63fbdb",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-04 01:27:29",
+		"word" : "estremecer",
+		"definition" : "to shake",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0f723ced-5949-4d7e-8689-3003e67c653d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-03 20:19:27",
+		"word" : "capataz",
+		"definition" : "foreman",
+		"example" : []
+	},
+	{
 		"studyItemId" : "0f734a94-0489-427d-b386-e809564b0a08",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-15 19:46:08",
 		"word" : "lanzar",
 		"definition" : "to launch, to hurl",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0f735be2-4dfe-4f16-b6f3-211eb9bc3522",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-04 01:34:05",
+		"word" : "vena",
+		"definition" : "vein",
 		"example" : []
 	},
 	{
@@ -1836,7 +1996,15 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-16 23:56:23",
 		"word" : "rayo",
-		"definition" : "beam, lightning",
+		"definition" : "ray, beam, bolt of lightning",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0f8a4d6a-75f7-4aba-8cb0-b27f3f6d0c00",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-02 23:36:26",
+		"word" : "cerco de alambre",
+		"definition" : "wire fence",
 		"example" : []
 	},
 	{
@@ -1893,6 +2061,14 @@
 		"createDate" : "2015-03-03 01:37:04",
 		"word" : "secuestrar",
 		"definition" : "to kidnap",
+		"example" : []
+	},
+	{
+		"studyItemId" : "0fc9fddb-fdb7-4efb-bd9c-ed7f22309579",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 19:59:48",
+		"word" : "oprimir",
+		"definition" : "to press, oppress",
 		"example" : []
 	},
 	{
@@ -2021,7 +2197,7 @@
 		"createDate" : "2015-01-20 00:49:59",
 		"word" : "charla",
 		"definition" : "chat",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "10ce86cb-2d25-44e9-978a-f00601e9fa58",
@@ -2053,6 +2229,14 @@
 		"createDate" : "2016-10-14 00:06:07",
 		"word" : "impaciente",
 		"definition" : "impatient",
+		"example" : []
+	},
+	{
+		"studyItemId" : "118cd8e0-56ab-434f-991d-11facc41bba9",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-27 19:49:13",
+		"word" : "erguido",
+		"definition" : "upright",
 		"example" : []
 	},
 	{
@@ -2101,7 +2285,7 @@
 		"createDate" : "2015-05-17 17:45:13",
 		"word" : "dirigir",
 		"definition" : "to direct; to address; to manage; to lead",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "11f9717a-df3f-4fce-bead-da7bd7f3c3ef",
@@ -2142,6 +2326,14 @@
 		"word" : "guasa",
 		"definition" : "humor",
 		"example" : "¿Qué ves? -le preguntó con guasa\n\"What do you see?\" he said with humor"
+	},
+	{
+		"studyItemId" : "12311d50-47c3-42bb-a2ed-718fa82e9808",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-07-01 00:03:13",
+		"word" : "grasienta",
+		"definition" : "greasy",
+		"example" : []
 	},
 	{
 		"studyItemId" : "123d387b-6c03-4599-aef4-1dd5e55aae39",
@@ -2216,6 +2408,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "12f13267-119a-4569-9cd6-dc6f5ff75c4e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-07 18:27:58",
+		"word" : "apresurar",
+		"definition" : "to hurry",
+		"example" : []
+	},
+	{
 		"studyItemId" : "132e6e4f-e165-4305-b4e7-1506296f9dcd",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-06-19 19:11:10",
@@ -2285,6 +2485,14 @@
 		"createDate" : "2015-02-08 14:11:30",
 		"word" : "cuidar",
 		"definition" : "to take care of, to look after",
+		"example" : []
+	},
+	{
+		"studyItemId" : "1424e769-87fd-41d0-a924-6fde4dc71a49",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 20:04:39",
+		"word" : "a mano",
+		"definition" : "by hand",
 		"example" : []
 	},
 	{
@@ -2405,6 +2613,14 @@
 		"createDate" : "2015-09-26 20:43:14",
 		"word" : "sorteo",
 		"definition" : "raffle",
+		"example" : []
+	},
+	{
+		"studyItemId" : "14fb15c6-8c66-458c-a46c-3207e875c0dd",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:29:18",
+		"word" : "hipotecarias",
+		"definition" : "mortgage",
 		"example" : []
 	},
 	{
@@ -2541,7 +2757,7 @@
 		"createDate" : "2016-06-19 18:22:26",
 		"word" : "puede",
 		"definition" : "he, you are able",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "1619fc59-2272-452f-a2d3-71722635456b",
@@ -2581,7 +2797,7 @@
 		"createDate" : "2015-02-13 00:12:44",
 		"word" : "a propósito",
 		"definition" : "by the way",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "16d1b083-ca00-4b6f-b0d2-ef70d03485f0",
@@ -2644,7 +2860,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-10 00:28:32",
 		"word" : "atender",
-		"definition" : "to pay attention to",
+		"definition" : "to pay attention to, to look after, to attend to",
 		"example" : []
 	},
 	{
@@ -2757,6 +2973,22 @@
 		"createDate" : "2015-02-06 00:53:39",
 		"word" : "justo",
 		"definition" : "fair, just",
+		"example" : []
+	},
+	{
+		"studyItemId" : "18176133-59a8-40c5-8214-551ba90bd645",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 19:27:10",
+		"word" : "recodo",
+		"definition" : "bend",
+		"example" : []
+	},
+	{
+		"studyItemId" : "1827ad83-cce0-4551-82a9-b31d12a9cdae",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-10 19:23:48",
+		"word" : "rastro",
+		"definition" : "trace, sign",
 		"example" : []
 	},
 	{
@@ -2952,6 +3184,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "194dd150-c4bb-4ee4-98bb-f585e3a4544d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-18 19:39:20",
+		"word" : "relampaguear",
+		"definition" : "to flash",
+		"example" : []
+	},
+	{
 		"studyItemId" : "195fe969-cac1-4552-9c89-1fbd39521324",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-07 00:16:19",
@@ -2965,6 +3205,14 @@
 		"createDate" : "2015-01-20 00:49:56",
 		"word" : "lugar",
 		"definition" : "place",
+		"example" : []
+	},
+	{
+		"studyItemId" : "19748226-ee3b-4eb4-be10-42ada4dc3a3e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-24 19:03:49",
+		"word" : "modo",
+		"definition" : "way",
 		"example" : []
 	},
 	{
@@ -3067,7 +3315,7 @@
 		"studyItemId" : "1a31a899-78d7-435a-b0f8-f47107ac2dc7",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-01-18 21:16:25",
-		"word" : "ancho",
+		"word" : "ancho-delete",
 		"definition" : "wide",
 		"example" : []
 	},
@@ -3136,6 +3384,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "1a913f73-0203-4f9e-8d32-547aab67570e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:59:49",
+		"word" : "comisuras",
+		"definition" : "corners of the mouth",
+		"example" : []
+	},
+	{
 		"studyItemId" : "1ab83cf6-6254-4750-b8da-59dda008e980",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2017-01-26 01:57:58",
@@ -3149,6 +3405,14 @@
 		"createDate" : "2016-03-01 00:58:15",
 		"word" : "subterráneo",
 		"definition" : "underground",
+		"example" : []
+	},
+	{
+		"studyItemId" : "1ac48415-d4df-480a-91d8-31e81eca9edc",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:29:48",
+		"word" : "asador",
+		"definition" : "roaster, barbecue",
 		"example" : []
 	},
 	{
@@ -3309,7 +3573,7 @@
 		"createDate" : "2015-11-29 15:35:03",
 		"word" : "querida",
 		"definition" : "dear; mistress, lover",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "1c2e3291-5468-4e50-bdab-78f5ed973e75",
@@ -3376,6 +3640,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "1d6c39c1-5e3e-4242-8393-70f00d1d346e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:36:03",
+		"word" : "retirarse",
+		"definition" : "to retire; to hangup",
+		"example" : []
+	},
+	{
 		"studyItemId" : "1d719c86-9aac-4768-908c-f830813b6b41",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-10-31 19:53:39",
@@ -3429,7 +3701,7 @@
 		"createDate" : "2016-06-12 18:01:41",
 		"word" : "sabemos",
 		"definition" : "we know something",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "1df8aa8d-183c-4273-afdd-6ee1dcddc111",
@@ -3453,7 +3725,7 @@
 		"createDate" : "2016-03-12 21:43:26",
 		"word" : "cargamento",
 		"definition" : "cargo, load",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "1e180e3f-2f53-4ec5-aa5b-bbdde9fd9331",
@@ -3613,6 +3885,14 @@
 		"createDate" : "2016-03-30 22:45:27",
 		"word" : "tarado",
 		"definition" : "idiot",
+		"example" : []
+	},
+	{
+		"studyItemId" : "1f155172-b947-4e78-8ba8-f007ba98d437",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-10 19:33:03",
+		"word" : "casita",
+		"definition" : "little house",
 		"example" : []
 	},
 	{
@@ -3808,6 +4088,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "205ea3bc-4aee-44a6-9558-31bcb5733746",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:03:57",
+		"word" : "aldea",
+		"definition" : "village",
+		"example" : []
+	},
+	{
 		"studyItemId" : "206cf472-6eb6-4f60-a1be-3c0ae3f90f7a",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-12-24 13:55:10",
@@ -3917,7 +4205,7 @@
 		"createDate" : "2016-07-17 18:49:28",
 		"word" : "perezoso, a",
 		"definition" : "lazy",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "21050c5b-4e29-43a7-9ad0-8716a873f3e2",
@@ -3996,7 +4284,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-28 00:50:18",
 		"word" : "anterior",
-		"definition" : "previous, former",
+		"definition" : "previous, former, front",
 		"example" : []
 	},
 	{
@@ -4013,6 +4301,14 @@
 		"createDate" : "2015-04-07 00:15:43",
 		"word" : "demostrar",
 		"definition" : "to demonstrate, to prove",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2220e4f1-9c65-422c-8ba0-1d339690b96b",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:53:50",
+		"word" : "español mocho",
+		"definition" : "broken spanish",
 		"example" : []
 	},
 	{
@@ -4528,6 +4824,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "2551a269-d686-4bea-bca8-8bc4e5247fdd",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-29 00:54:23",
+		"word" : "decepción",
+		"definition" : "disapointment",
+		"example" : []
+	},
+	{
 		"studyItemId" : "2551bd08-f0e6-4135-bf42-d70ccaa4e59c",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-09-02 00:48:52",
@@ -4664,6 +4968,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "26bfd8f6-99c4-4240-a48a-20d21e4cae9c",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-06 06:26:03",
+		"word" : "gota",
+		"definition" : "a drop",
+		"example" : []
+	},
+	{
 		"studyItemId" : "26c55beb-e913-4755-82e9-85dff3f7688e",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-06-30 00:46:04",
@@ -4717,6 +5029,14 @@
 		"createDate" : "2016-06-04 16:25:03",
 		"word" : "miraron",
 		"definition" : "they watched",
+		"example" : []
+	},
+	{
+		"studyItemId" : "27657e70-5d54-417e-b9ff-a7b0edd3c59d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-02 23:42:23",
+		"word" : "alambrada",
+		"definition" : "chicken wire",
 		"example" : []
 	},
 	{
@@ -4781,7 +5101,15 @@
 		"createDate" : "2015-02-22 22:13:51",
 		"word" : "pudo",
 		"definition" : "he was able to",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "27b74ece-7ef6-4646-8a33-70c2c9ff7c59",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-10 19:36:06",
+		"word" : "blanca de cal",
+		"definition" : "white-washed",
+		"example" : []
 	},
 	{
 		"studyItemId" : "27b9b7dd-023a-4cc2-b57a-7910d152e628",
@@ -4992,6 +5320,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "299bc87d-353d-444a-950f-15a558bf3589",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:05:00",
+		"word" : "juntar",
+		"definition" : "to put together, to collect",
+		"example" : []
+	},
+	{
 		"studyItemId" : "29a4c37c-2d3c-4f05-a10d-6d54ae20ad8f",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-04-22 23:10:49",
@@ -5013,6 +5349,14 @@
 		"createDate" : "2015-01-18 10:27:11",
 		"word" : "propio",
 		"definition" : "ones own",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2a1807fa-31fc-45c3-af9d-9b3cce33dcc5",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:19:44",
+		"word" : "las faldas  de las montañas",
+		"definition" : "foothills",
 		"example" : []
 	},
 	{
@@ -5056,6 +5400,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "2ae3f86f-767d-4dd8-b611-753158284fda",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:16:16",
+		"word" : "desgranar",
+		"definition" : "to shell",
+		"example" : []
+	},
+	{
 		"studyItemId" : "2af1d94a-5d5c-43a1-ad88-946f161226a5",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-11-29 22:27:02",
@@ -5088,12 +5440,20 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "2b38a2bf-0d1b-4a89-8b15-7abe01ee56e3",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:06:34",
+		"word" : "caperuza",
+		"definition" : "cap",
+		"example" : []
+	},
+	{
 		"studyItemId" : "2b3bbb8c-c499-4ac3-8456-e578701bc0b3",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-10-11 00:27:18",
 		"word" : "afligir",
 		"definition" : "to upset, to afflict",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "2b3c074b-e56f-460d-b29c-422996f86e17",
@@ -5109,6 +5469,14 @@
 		"createDate" : "2015-07-15 00:12:08",
 		"word" : "caja",
 		"definition" : "box",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2b4c0689-5c5c-4256-b9ac-631b8d08f301",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-22 23:19:11",
+		"word" : "caramba",
+		"definition" : "damn, wow",
 		"example" : []
 	},
 	{
@@ -5152,11 +5520,35 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "2ba50a79-3672-4da2-8f65-eb07390d3f69",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-01 04:29:35",
+		"word" : "fianza",
+		"definition" : "bail",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2bbf9e2b-088e-4a9b-bb75-55d8c33e6adf",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:47:09",
+		"word" : "sellar",
+		"definition" : "to seal",
+		"example" : []
+	},
+	{
 		"studyItemId" : "2c00eaab-3ee8-467e-8724-530456004eb0",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-06-19 18:40:03",
 		"word" : "jugamos",
 		"definition" : "we play",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2c18d6f6-0615-4363-89e1-c27f70a1fbb8",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-06 19:02:11",
+		"word" : "pimentero",
+		"definition" : "pepper plant, pepper shaker",
 		"example" : []
 	},
 	{
@@ -5229,6 +5621,14 @@
 		"createDate" : "2015-05-23 18:53:26",
 		"word" : "ejercicios",
 		"definition" : "excercises",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2cb6be77-6233-43e1-a272-9d7f2120694f",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:08:07",
+		"word" : "cal",
+		"definition" : "lime (mineral)",
 		"example" : []
 	},
 	{
@@ -5336,6 +5736,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "2db3e5f4-e04e-4342-8b14-d169531ec0e0",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:57:31",
+		"word" : "calificaciones",
+		"definition" : "report card",
+		"example" : []
+	},
+	{
 		"studyItemId" : "2dc7e4f4-b4e1-49a7-af01-dd0b340dcc0c",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-14 21:37:14",
@@ -5357,6 +5765,14 @@
 		"createDate" : "2015-03-07 18:23:33",
 		"word" : "hoja",
 		"definition" : "leaf",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2dfb7e99-2e40-440e-85f1-25c13f03c3de",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-23 22:37:22",
+		"word" : "resuelto",
+		"definition" : "resolute, determined",
 		"example" : []
 	},
 	{
@@ -5445,7 +5861,7 @@
 		"createDate" : "2016-06-10 23:44:32",
 		"word" : "quería",
 		"definition" : "I/he used to want",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "2e949276-ed8d-4553-a035-f01741bf06bd",
@@ -5485,6 +5901,14 @@
 		"createDate" : "2016-04-03 14:45:40",
 		"word" : "pararse de puntillas",
 		"definition" : "to stand on tiptoes",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2ef6f19f-476e-4c4b-af65-9bee79083be9",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 22:53:53",
+		"word" : "víbora",
+		"definition" : "viper",
 		"example" : []
 	},
 	{
@@ -5557,6 +5981,14 @@
 		"createDate" : "2016-03-15 00:49:23",
 		"word" : "atascado",
 		"definition" : "stuck",
+		"example" : []
+	},
+	{
+		"studyItemId" : "2fac9c51-9399-4455-8525-e29e57ee1c34",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 19:50:27",
+		"word" : "cerciorarse",
+		"definition" : "to make sure",
 		"example" : []
 	},
 	{
@@ -5685,7 +6117,7 @@
 		"createDate" : "2016-04-03 15:20:48",
 		"word" : "repartir",
 		"definition" : "to distribute; to deliver",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "30b99810-d344-41e4-b8d0-861a31b68e11",
@@ -5728,12 +6160,20 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "313f5be7-e794-4dfd-8aef-9d37dcb9d7c2",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-22 23:29:42",
+		"word" : "forma",
+		"definition" : "form, way",
+		"example" : []
+	},
+	{
 		"studyItemId" : "316ab5cb-6c18-4b7b-9cb8-db8acd3401e8",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:50:01",
 		"word" : "hasta",
 		"definition" : "until",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "316bee22-0c90-40d6-b273-cf8a32ff41d4",
@@ -5781,7 +6221,7 @@
 		"createDate" : "2015-01-20 00:49:47",
 		"word" : "adelanto",
 		"definition" : "an advance, advancement, progress",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "31e9f3dc-6aac-443b-abe6-ec9f2aaf4d24",
@@ -5861,6 +6301,14 @@
 		"createDate" : "2015-02-21 19:31:25",
 		"word" : "concepto",
 		"definition" : "concept",
+		"example" : []
+	},
+	{
+		"studyItemId" : "32d55749-dfbb-46de-b2d8-86d7656ea0f6",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:23:31",
+		"word" : "enrevesado, a",
+		"definition" : "confusing",
 		"example" : []
 	},
 	{
@@ -5965,7 +6413,7 @@
 		"createDate" : "2015-01-20 00:49:55",
 		"word" : "pareja",
 		"definition" : "couple, partner",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "33b910ba-c03e-4b7e-bd42-f8dc132914c2",
@@ -5981,6 +6429,14 @@
 		"createDate" : "2015-03-21 15:40:53",
 		"word" : "fase",
 		"definition" : "phase",
+		"example" : []
+	},
+	{
+		"studyItemId" : "33ca52c3-c4da-4876-8906-38fa0d86b9e6",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-08 22:58:34",
+		"word" : "chiquito",
+		"definition" : "tiny",
 		"example" : []
 	},
 	{
@@ -6256,6 +6712,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "35e97fa7-9413-4d0c-8cbf-571558658459",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-16 22:33:27",
+		"word" : "enterrar",
+		"definition" : "to bury",
+		"example" : []
+	},
+	{
 		"studyItemId" : "362b3b88-898e-4620-af57-59f5ed53043e",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-05 18:59:43",
@@ -6317,6 +6781,14 @@
 		"createDate" : "2015-01-18 10:27:05",
 		"word" : "grueso",
 		"definition" : "thick",
+		"example" : []
+	},
+	{
+		"studyItemId" : "367af416-1229-4e19-b02e-d41e8d395bb1",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:08:52",
+		"word" : "pajizo",
+		"definition" : "made of straw; thatched",
 		"example" : []
 	},
 	{
@@ -6480,6 +6952,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "379c0abc-dbdd-414a-b45d-6c2776dac7a1",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-07 18:38:35",
+		"word" : "parar junto a",
+		"definition" : "to stop next to",
+		"example" : []
+	},
+	{
 		"studyItemId" : "37af1cc1-dcb3-485e-9434-b6f9d003f0d6",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-10-14 00:04:50",
@@ -6501,7 +6981,15 @@
 		"createDate" : "2016-06-19 18:22:56",
 		"word" : "pueden",
 		"definition" : "they are able to",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "37c38af3-ab48-44ac-b67a-600c6db46a1a",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:28:14",
+		"word" : "reja",
+		"definition" : "railing",
+		"example" : []
 	},
 	{
 		"studyItemId" : "37e3dad2-179e-4f6b-b83a-0fa1e00615ca",
@@ -6749,7 +7237,7 @@
 		"createDate" : "2017-01-13 23:50:42",
 		"word" : "complementar",
 		"definition" : "to complement, to supplement",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "3a124a92-7262-4d9a-9c32-dbc508e53ef9",
@@ -6773,7 +7261,7 @@
 		"createDate" : "2016-06-12 18:02:15",
 		"word" : "supiste",
 		"definition" : "you (inf) knew something",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "3a347c51-4107-4ab9-a9f1-e7e9e23f5ae7",
@@ -6789,7 +7277,7 @@
 		"createDate" : "2016-06-12 17:56:15",
 		"word" : "conoces",
 		"definition" : "you (inf) know someone",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "3a520d31-ff50-450b-9eec-db08429f3acc",
@@ -6805,6 +7293,14 @@
 		"createDate" : "2016-03-11 03:04:16",
 		"word" : "protegido",
 		"definition" : "protected",
+		"example" : []
+	},
+	{
+		"studyItemId" : "3a5499ba-cdb9-4c89-a138-b9ce821ac866",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-11 15:10:23",
+		"word" : "matriz",
+		"definition" : "womb",
 		"example" : []
 	},
 	{
@@ -6829,6 +7325,14 @@
 		"createDate" : "2015-06-01 00:46:50",
 		"word" : "iglesia",
 		"definition" : "church",
+		"example" : []
+	},
+	{
+		"studyItemId" : "3ae5b12d-6b08-483a-a030-d83f81efa74b",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:11:30",
+		"word" : "juanete",
+		"definition" : "bunion",
 		"example" : []
 	},
 	{
@@ -6877,7 +7381,15 @@
 		"createDate" : "2017-01-28 00:34:47",
 		"word" : "duende",
 		"definition" : "elf, leprechaun",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "3b460189-6fe6-45aa-882b-6776941ed424",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:03:54",
+		"word" : "huesuda",
+		"definition" : "bony",
+		"example" : []
 	},
 	{
 		"studyItemId" : "3b4d880c-33c6-4c7d-9d29-1da20e5627a1",
@@ -6900,7 +7412,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-04 19:21:00",
 		"word" : "extraño",
-		"definition" : "stranger",
+		"definition" : "stranger, foreign",
 		"example" : []
 	},
 	{
@@ -6909,6 +7421,14 @@
 		"createDate" : "2015-03-09 23:39:23",
 		"word" : "crudo, a",
 		"definition" : "raw, crude",
+		"example" : []
+	},
+	{
+		"studyItemId" : "3b6b1927-2aa6-4f11-b7d4-30623b907d1e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-12 18:16:48",
+		"word" : "roída",
+		"definition" : "eaten away",
 		"example" : []
 	},
 	{
@@ -6941,6 +7461,14 @@
 		"createDate" : "2015-03-14 22:04:51",
 		"word" : "cuatro",
 		"definition" : "4",
+		"example" : []
+	},
+	{
+		"studyItemId" : "3bfebc77-aabe-4edc-b290-bc8931ac124f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-07 19:05:26",
+		"word" : "agotado",
+		"definition" : "exhausted",
 		"example" : []
 	},
 	{
@@ -6992,6 +7520,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "3c77ac80-6ccb-4c89-ab5b-14eaa10eddb4",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 20:05:17",
+		"word" : "amarrado, a",
+		"definition" : "stingy",
+		"example" : []
+	},
+	{
 		"studyItemId" : "3c808faf-1117-4e8f-82b6-f4be36b71f6d",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-04-03 14:46:44",
@@ -7029,6 +7565,14 @@
 		"createDate" : "2016-07-02 16:50:21",
 		"word" : "valla",
 		"definition" : "fence",
+		"example" : []
+	},
+	{
+		"studyItemId" : "3ccfb3cc-2304-4e41-954b-6400b53a262b",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-29 00:45:06",
+		"word" : "llanura",
+		"definition" : "prairie, plain",
 		"example" : []
 	},
 	{
@@ -7528,6 +8072,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "40adcd99-98a3-4e2b-b7a0-a53cafb1e2db",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 01:00:35",
+		"word" : "caseta",
+		"definition" : "hut",
+		"example" : []
+	},
+	{
 		"studyItemId" : "40b1d921-8303-46a0-af1a-6280d0e83f82",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-31 20:02:12",
@@ -7581,7 +8133,15 @@
 		"createDate" : "2016-11-15 01:51:03",
 		"word" : "aguinaldo",
 		"definition" : "bonus (christmas bonus)",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "41252247-8451-46e9-aac8-d633fe2aadd9",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 19:15:17",
+		"word" : "rendido",
+		"definition" : "exhausted",
+		"example" : []
 	},
 	{
 		"studyItemId" : "416a4291-8d5f-4fd7-b0f4-b1e4f207bd95",
@@ -7645,6 +8205,14 @@
 		"createDate" : "2015-02-10 01:18:54",
 		"word" : "orgulloso, a",
 		"definition" : "proud",
+		"example" : []
+	},
+	{
+		"studyItemId" : "420b2ea9-7047-4d02-b45c-20537ca5c3c8",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-23 23:45:31",
+		"word" : "ardor",
+		"definition" : "burning",
 		"example" : []
 	},
 	{
@@ -7872,6 +8440,22 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "4401ab4e-cb2a-425c-92dd-0ea20c25e52c",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-17 19:58:11",
+		"word" : "encargarse",
+		"definition" : "to assume responsibility",
+		"example" : []
+	},
+	{
+		"studyItemId" : "4443f2d0-6154-4c12-aa61-cf21abcd0e1f",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 20:00:46",
+		"word" : "elástico",
+		"definition" : "rubber band",
+		"example" : []
+	},
+	{
 		"studyItemId" : "44506312-3b4e-4b4a-accc-2d138fe2d66c",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-07 13:35:06",
@@ -7976,6 +8560,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "458788e6-61b6-471a-a1b8-f56f1e38146c",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:50:33",
+		"word" : "desperdicio",
+		"definition" : "waste, scraps",
+		"example" : []
+	},
+	{
 		"studyItemId" : "45a6f44d-54a9-443d-92da-f28925afa2d2",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-05 21:52:55",
@@ -8013,6 +8605,14 @@
 		"createDate" : "2015-01-29 16:39:48",
 		"word" : "marrón",
 		"definition" : "brown",
+		"example" : []
+	},
+	{
+		"studyItemId" : "461443df-198a-42cb-b5a6-a64771026b49",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-07 19:01:14",
+		"word" : "moribundo",
+		"definition" : "dying",
 		"example" : []
 	},
 	{
@@ -8056,6 +8656,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "4651d4fa-a1d2-47e6-9f00-9b79816d24c7",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:49:45",
+		"word" : "cazar",
+		"definition" : "to hunt, to catch",
+		"example" : []
+	},
+	{
 		"studyItemId" : "46535959-3d9b-4e68-ac53-01da8f3c5f8e",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-02 00:22:32",
@@ -8068,7 +8676,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:49:48",
 		"word" : "nacer",
-		"definition" : "to be born",
+		"definition" : "to be born, to grow, to sprout",
 		"example" : []
 	},
 	{
@@ -8141,6 +8749,14 @@
 		"createDate" : "2015-04-30 23:39:41",
 		"word" : "esteticista",
 		"definition" : "beautician",
+		"example" : []
+	},
+	{
+		"studyItemId" : "46b3ac4e-b742-45c2-94bf-56f1ecf03e0d",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 19:55:01",
+		"word" : "pedregoso",
+		"definition" : "stony",
 		"example" : []
 	},
 	{
@@ -8296,6 +8912,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "4865d771-4718-400a-8dae-05f2e3fa2016",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-31 00:04:06",
+		"word" : "rechinar",
+		"definition" : "to creek, to screech, to clank",
+		"example" : []
+	},
+	{
 		"studyItemId" : "486fcd83-ea1e-486f-acd7-c6e7d9336ffe",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-05-09 23:51:06",
@@ -8349,6 +8973,14 @@
 		"createDate" : "2015-11-14 19:05:57",
 		"word" : "prodigio",
 		"definition" : "miracle, prodigy",
+		"example" : []
+	},
+	{
+		"studyItemId" : "48c480b2-921e-40de-a762-01d6d1c68498",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-03 19:44:11",
+		"word" : "anochecer",
+		"definition" : "dusk, twilight",
 		"example" : []
 	},
 	{
@@ -8536,6 +9168,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "4a6d0a52-b18e-4f59-89c7-0502069072ae",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:30:28",
+		"word" : "encoger",
+		"definition" : "to shrink",
+		"example" : []
+	},
+	{
 		"studyItemId" : "4a6f3a02-87b9-4421-892a-d2fbc13b3b81",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-22 00:21:09",
@@ -8608,6 +9248,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "4aea1974-8dbd-4fce-9eca-b6d09cc4087a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-03 19:58:19",
+		"word" : "pagar",
+		"definition" : "to pay",
+		"example" : []
+	},
+	{
 		"studyItemId" : "4aeeef0a-a329-4d00-a318-deea6a224b8f",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-05-06 00:17:59",
@@ -8669,7 +9317,7 @@
 		"createDate" : "2017-02-12 23:17:35",
 		"word" : "Archivo",
 		"definition" : "file (computer)",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "4bec0c4d-cc12-4c04-b898-ab88e1b5c3f9",
@@ -8685,6 +9333,14 @@
 		"createDate" : "2015-03-08 23:38:17",
 		"word" : "apodo",
 		"definition" : "nickname",
+		"example" : []
+	},
+	{
+		"studyItemId" : "4c2b32fc-5e53-4298-a7ad-120ad4dada60",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:24:27",
+		"word" : "comodidad",
+		"definition" : "comfort, amenity",
 		"example" : []
 	},
 	{
@@ -8728,6 +9384,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "4c9b76e2-18aa-420b-823c-5a44062e813e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:45:21",
+		"word" : "papel encerado",
+		"definition" : "waxed paper",
+		"example" : []
+	},
+	{
 		"studyItemId" : "4c9d9157-d17f-42cb-8e63-b39990ac24e6",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-09-18 23:28:48",
@@ -8749,7 +9413,7 @@
 		"createDate" : "2015-11-09 00:50:30",
 		"word" : "derramar",
 		"definition" : "to spill, to shed",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "4cb89aad-4e73-4c9a-af8e-867faa350b6c",
@@ -8952,6 +9616,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "4eb2ead0-4765-43f5-835f-291959bc667b",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 21:59:37",
+		"word" : "alfiler",
+		"definition" : "a pin",
+		"example" : []
+	},
+	{
 		"studyItemId" : "4ebdc8a0-5d40-4dfe-bacb-e0db20076a07",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-09-14 16:14:56",
@@ -8981,6 +9653,14 @@
 		"createDate" : "2015-02-08 14:07:35",
 		"word" : "entrenar",
 		"definition" : "to train, to coach",
+		"example" : []
+	},
+	{
+		"studyItemId" : "4eebf4f5-9737-4951-ace6-67968bf684aa",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-06 18:49:18",
+		"word" : "pececillo",
+		"definition" : "minnow",
 		"example" : []
 	},
 	{
@@ -9016,11 +9696,35 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "4f475acf-ffd7-4da1-8341-f1218fb40d58",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:18:08",
+		"word" : "don",
+		"definition" : "mr., gentleman; gift",
+		"example" : []
+	},
+	{
 		"studyItemId" : "4f575811-0078-4cbf-96e3-24fb59d3baeb",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-12-22 01:25:00",
 		"word" : "descompostura",
 		"definition" : "break down (of a machine)",
+		"example" : []
+	},
+	{
+		"studyItemId" : "4f7927cc-d383-4dc0-970a-b06d43bccd1f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:40:46",
+		"word" : "estuve a punto",
+		"definition" : "i was about to",
+		"example" : []
+	},
+	{
+		"studyItemId" : "4f79b823-4f4d-4013-8559-177c3ebe00ab",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-05 23:12:09",
+		"word" : "pisar",
+		"definition" : "to step on",
 		"example" : []
 	},
 	{
@@ -9085,6 +9789,14 @@
 		"createDate" : "2016-01-24 19:50:10",
 		"word" : "rendición",
 		"definition" : "surrender",
+		"example" : []
+	},
+	{
+		"studyItemId" : "50016213-a1f8-4a59-8ce0-50e2045d584e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:13:55",
+		"word" : "aparcero",
+		"definition" : "sharecropper",
 		"example" : []
 	},
 	{
@@ -9181,6 +9893,14 @@
 		"createDate" : "2015-09-05 18:02:54",
 		"word" : "apuntar",
 		"definition" : "to point out, to aim at",
+		"example" : []
+	},
+	{
+		"studyItemId" : "507b499a-27ab-4afd-9918-96395f540245",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-31 00:02:58",
+		"word" : "silbato",
+		"definition" : "a whistle",
 		"example" : []
 	},
 	{
@@ -9400,12 +10120,20 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "51c4da4c-9d19-483c-81d9-e0dc288fcefd",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:21:52",
+		"word" : "los lentes bifocales",
+		"definition" : "bifocales",
+		"example" : []
+	},
+	{
 		"studyItemId" : "51cae07e-b7be-4c14-86be-3ded92a103a5",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-11-24 00:59:49",
 		"word" : "frenar",
 		"definition" : "to brake",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "51fc2cc1-c82e-41ff-982e-2acd28b759fe",
@@ -9532,7 +10260,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-12-20 20:03:47",
 		"word" : "pesado",
-		"definition" : "boring",
+		"definition" : "boring, tiresome, a pain (noun), much more.",
 		"example" : []
 	},
 	{
@@ -9568,6 +10296,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "53c211ea-8465-4e7b-ae3f-50c1e8a6c0f8",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:05:00",
+		"word" : "vacilante",
+		"definition" : "hesitant",
+		"example" : []
+	},
+	{
 		"studyItemId" : "53e164b7-6688-49c0-832b-3719f28ae7ef",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-06-20 18:57:32",
@@ -9597,6 +10333,14 @@
 		"createDate" : "2017-01-14 00:01:28",
 		"word" : "compartimento",
 		"definition" : "compartment",
+		"example" : []
+	},
+	{
+		"studyItemId" : "54a0f299-0380-45e2-bc80-bfad08463391",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:06:03",
+		"word" : "muchedumbre",
+		"definition" : "crowd",
 		"example" : []
 	},
 	{
@@ -9661,6 +10405,14 @@
 		"createDate" : "2015-05-16 18:13:29",
 		"word" : "llamar a la puerta",
 		"definition" : "knock on the door",
+		"example" : []
+	},
+	{
+		"studyItemId" : "551a2db3-89f8-4cb5-ac6d-e32de866d952",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-10 19:20:08",
+		"word" : "embarrado",
+		"definition" : "muddy",
 		"example" : []
 	},
 	{
@@ -9781,7 +10533,7 @@
 		"createDate" : "2017-01-15 17:44:09",
 		"word" : "marginado, a",
 		"definition" : "marginalized, outcast",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "5631f143-7d55-4666-b3dc-18537921fbfa",
@@ -9924,7 +10676,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-03-28 15:19:35",
 		"word" : "mancha",
-		"definition" : "stain",
+		"definition" : "stain, mark, spot, blot",
 		"example" : []
 	},
 	{
@@ -10036,7 +10788,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-05-07 23:31:12",
 		"word" : "sin embargo",
-		"definition" : "nevertheless, however",
+		"definition" : "even though, however, never the less",
 		"example" : []
 	},
 	{
@@ -10197,7 +10949,7 @@
 		"createDate" : "2015-08-08 22:17:50",
 		"word" : "basar",
 		"definition" : "to base on",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "59c5d9f9-e529-4e71-aac7-9675f850e2a8",
@@ -10296,6 +11048,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "5aa6cc34-6b62-4ae8-bd6f-3f366d93b357",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:18:00",
+		"word" : "mazorca de maíz",
+		"definition" : "corn cob",
+		"example" : []
+	},
+	{
 		"studyItemId" : "5ad3e68c-2b15-4184-86aa-c5832d99f470",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-05-03 23:45:52",
@@ -10333,6 +11093,14 @@
 		"createDate" : "2015-05-14 23:55:23",
 		"word" : "loba",
 		"definition" : "she-wolf",
+		"example" : []
+	},
+	{
+		"studyItemId" : "5b148c7d-cbc4-4aaa-bc9a-adae96d4a26a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-23 23:41:53",
+		"word" : "chorro",
+		"definition" : "jet, blast",
 		"example" : []
 	},
 	{
@@ -10405,7 +11173,7 @@
 		"createDate" : "2016-06-19 18:22:09",
 		"word" : "puedes",
 		"definition" : "you (inf) are able to",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "5bb821c3-d487-417e-b391-3107ac6cdb06",
@@ -10440,11 +11208,35 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "5c0e2044-fd4a-40b1-b46d-ab3791b241bc",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 19:32:37",
+		"word" : "encaminarse",
+		"definition" : "to head towards",
+		"example" : []
+	},
+	{
+		"studyItemId" : "5c0edc80-349b-4a9e-83e8-86c05d255135",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-16 23:05:10",
+		"word" : "despojar",
+		"definition" : "to strip, to rob, to dispose",
+		"example" : []
+	},
+	{
 		"studyItemId" : "5c1201d0-06d9-476c-98e4-81f0e4cb2a8e",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-21 00:37:36",
 		"word" : "esculturas",
 		"definition" : "sculptures",
+		"example" : []
+	},
+	{
+		"studyItemId" : "5c2b4b37-2e7f-4510-ad79-fbabfcd669cb",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-15 01:01:23",
+		"word" : "aplicar",
+		"definition" : "to apply",
 		"example" : []
 	},
 	{
@@ -10488,6 +11280,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "5cc428c3-87cc-420c-8ee4-6e0756697eb9",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-15 00:39:31",
+		"word" : "sobre si",
+		"definition" : "about whether",
+		"example" : []
+	},
+	{
 		"studyItemId" : "5ccff79d-55bc-4c07-bb3c-df8b0bc0ce37",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-06-08 23:47:11",
@@ -10509,6 +11309,14 @@
 		"createDate" : "2016-03-01 01:22:04",
 		"word" : "abono",
 		"definition" : "fertilizer",
+		"example" : []
+	},
+	{
+		"studyItemId" : "5d02d46a-d2ec-4fab-9c40-469159b6cc37",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-16 23:14:23",
+		"word" : "alinear",
+		"definition" : "to line up",
 		"example" : []
 	},
 	{
@@ -10597,7 +11405,7 @@
 		"createDate" : "2015-01-29 21:33:32",
 		"word" : "periódico",
 		"definition" : "newspaper",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "5df95ab7-6b62-4ae7-853b-059c78d8f9b1",
@@ -10637,6 +11445,14 @@
 		"createDate" : "2016-02-25 00:13:13",
 		"word" : "cálida",
 		"definition" : "warm",
+		"example" : []
+	},
+	{
+		"studyItemId" : "5e18e8c2-d2e9-49e5-90b6-3a6d574b2ef0",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:26:20",
+		"word" : "colibrí",
+		"definition" : "hummingbird",
 		"example" : []
 	},
 	{
@@ -10725,6 +11541,14 @@
 		"createDate" : "2015-04-07 00:08:11",
 		"word" : "tiroteo",
 		"definition" : "shooting",
+		"example" : []
+	},
+	{
+		"studyItemId" : "5f5c7a4b-46a6-454d-8592-0b7eb284da6a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-04 23:07:55",
+		"word" : "traducir",
+		"definition" : "to translate",
 		"example" : []
 	},
 	{
@@ -10840,6 +11664,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "608b13a6-e79b-4847-94f9-376f4dbfbf9f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:25:24",
+		"word" : "perteneciente",
+		"definition" : "belonging to, pertaining to",
+		"example" : []
+	},
+	{
 		"studyItemId" : "608d2872-1e66-4926-a23c-0cc1f6829905",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2017-01-31 23:42:14",
@@ -10861,7 +11693,7 @@
 		"createDate" : "2016-06-19 19:09:20",
 		"word" : "sirve",
 		"definition" : "she serves",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "60c8ba1a-b284-40f2-8099-b81f1c92f4ac",
@@ -10912,6 +11744,22 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "6136a5e8-b9dd-4de1-bf73-14d72d442500",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-04 01:28:19",
+		"word" : "boquiabierto",
+		"definition" : "open-mouthed, speechless",
+		"example" : []
+	},
+	{
+		"studyItemId" : "613b4f6f-336d-497c-8af1-66a6933fd369",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:21:16",
+		"word" : "prender",
+		"definition" : "to catch",
+		"example" : []
+	},
+	{
 		"studyItemId" : "61474e98-10e1-43f5-8069-d92f24c7c739",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-11-21 19:02:28",
@@ -10956,7 +11804,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 17:17:41",
 		"word" : "andar",
-		"definition" : "to walk, to travel by (en), to operate",
+		"definition" : "to work, to go, to travel",
 		"example" : []
 	},
 	{
@@ -10973,7 +11821,7 @@
 		"createDate" : "2017-01-06 12:07:10",
 		"word" : "dispositivo",
 		"definition" : "device, electronic device",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "622b1ec0-30f0-48af-89db-940ec050ff1c",
@@ -11005,6 +11853,14 @@
 		"createDate" : "2015-01-20 00:49:56",
 		"word" : "mientras",
 		"definition" : "during, while",
+		"example" : []
+	},
+	{
+		"studyItemId" : "629c8a22-d1df-426e-a589-917ccfdb497a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-27 20:03:44",
+		"word" : "acarrear",
+		"definition" : "to carry",
 		"example" : []
 	},
 	{
@@ -11053,7 +11909,7 @@
 		"createDate" : "2015-06-01 00:50:40",
 		"word" : "supimos",
 		"definition" : "we knew, we knew how",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "63409376-8f7f-403e-b550-c9b8e3544569",
@@ -11096,6 +11952,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "638fc636-56e2-464a-86cc-470b9d722735",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:49:16",
+		"word" : "acceder",
+		"definition" : "to agree",
+		"example" : []
+	},
+	{
 		"studyItemId" : "63ce77b4-423d-4781-8b35-bf37b2b044bc",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-11-01 19:35:52",
@@ -11125,6 +11989,14 @@
 		"createDate" : "2016-01-12 01:57:42",
 		"word" : "ibuprofen",
 		"definition" : "ibuprofeno",
+		"example" : []
+	},
+	{
+		"studyItemId" : "6403300b-be19-4e97-863f-afba530315f0",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:06:51",
+		"word" : "báculo",
+		"definition" : "cane",
 		"example" : []
 	},
 	{
@@ -11189,6 +12061,14 @@
 		"createDate" : "2015-08-08 22:37:13",
 		"word" : "plato de segunda mesa",
 		"definition" : "sloppy seconds",
+		"example" : []
+	},
+	{
+		"studyItemId" : "648c3c00-ac2c-4f06-8335-63c63a09fde2",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:13:56",
+		"word" : "chapulín",
+		"definition" : "grasshopper, locust",
 		"example" : []
 	},
 	{
@@ -11261,6 +12141,14 @@
 		"createDate" : "2016-02-25 00:14:34",
 		"word" : "a qué se refería",
 		"definition" : "what she meant",
+		"example" : []
+	},
+	{
+		"studyItemId" : "6549d2d9-f4b9-47a1-ad1c-c026ebc6d510",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-24 18:45:55",
+		"word" : "borde",
+		"definition" : "edge",
 		"example" : []
 	},
 	{
@@ -11413,7 +12301,7 @@
 		"createDate" : "2016-06-19 18:22:44",
 		"word" : "podemos",
 		"definition" : "we are able",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "6658887a-a015-4ebc-9416-f38bef63212c",
@@ -11485,7 +12373,7 @@
 		"createDate" : "2015-02-22 20:47:25",
 		"word" : "trajiste",
 		"definition" : "you (infomal) did bring",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "66ba9409-5238-4678-a328-50b12b0cdbd1",
@@ -11533,6 +12421,14 @@
 		"createDate" : "2016-03-15 00:12:20",
 		"word" : "descalzo",
 		"definition" : "barefoot",
+		"example" : []
+	},
+	{
+		"studyItemId" : "66fa7653-252b-4973-95a0-2d3470651a31",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-12 18:13:17",
+		"word" : "gastado",
+		"definition" : "run down",
 		"example" : []
 	},
 	{
@@ -11589,7 +12485,7 @@
 		"createDate" : "2015-05-15 00:01:56",
 		"word" : "rodear",
 		"definition" : "to surround, to go around",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "6789a430-5358-4f96-a07a-3b0058cd5a90",
@@ -11613,6 +12509,14 @@
 		"createDate" : "2015-07-13 01:23:27",
 		"word" : "litera",
 		"definition" : "bunk bed",
+		"example" : []
+	},
+	{
+		"studyItemId" : "67af1987-0e9c-4ffb-b8f3-8815c638d815",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-20 18:59:36",
+		"word" : "por si acaso",
+		"definition" : "just in case",
 		"example" : []
 	},
 	{
@@ -11792,6 +12696,22 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "68f1c48d-dbc2-4115-be43-bfe5a0c85fb9",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-12 18:14:42",
+		"word" : "comején",
+		"definition" : "termite",
+		"example" : []
+	},
+	{
+		"studyItemId" : "68f93092-f3b4-4b1f-92b0-6ce859b61ed8",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 21:13:25",
+		"word" : "encerar",
+		"definition" : "to wax, to polish",
+		"example" : []
+	},
+	{
 		"studyItemId" : "690622bf-10e6-427e-ac2c-fe6279d4bd00",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-07-11 23:42:32",
@@ -11845,7 +12765,7 @@
 		"createDate" : "2015-02-06 00:58:51",
 		"word" : "pegar",
 		"definition" : "to stick; to hit",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "6937085e-e88f-4391-83a4-1f2917a197ac",
@@ -11917,6 +12837,14 @@
 		"createDate" : "2017-01-31 23:27:19",
 		"word" : "cementerio",
 		"definition" : "cemetery",
+		"example" : []
+	},
+	{
+		"studyItemId" : "699dae10-f59e-42a1-8612-5c0f5d73dd35",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-14 01:35:48",
+		"word" : "ligeramente",
+		"definition" : "slightly",
 		"example" : []
 	},
 	{
@@ -12112,6 +13040,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "6ad68263-4bde-41f0-8763-eabe8729e577",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-07-01 00:16:32",
+		"word" : "dar con",
+		"definition" : "to find",
+		"example" : []
+	},
+	{
 		"studyItemId" : "6b0ed61d-56ab-4430-99fa-7aa9791baccf",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-03-01 20:41:18",
@@ -12157,6 +13093,14 @@
 		"createDate" : "2015-05-14 23:39:16",
 		"word" : "la odio",
 		"definition" : "i hate her",
+		"example" : []
+	},
+	{
+		"studyItemId" : "6b660a18-e996-4bcf-934f-9bd1a71cd9da",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-31 00:34:31",
+		"word" : "burro",
+		"definition" : "donkey",
 		"example" : []
 	},
 	{
@@ -12293,7 +13237,7 @@
 		"createDate" : "2016-02-24 14:04:04",
 		"word" : "bocina",
 		"definition" : "loudspeaker",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "6c518a67-f39b-4cd1-9522-4efa188f7316",
@@ -12461,7 +13405,7 @@
 		"createDate" : "2016-02-21 15:10:30",
 		"word" : "superar",
 		"definition" : "to surpass, to exceed",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "6d483d44-9f3c-4874-bc25-f1f166b90c61",
@@ -12477,6 +13421,14 @@
 		"createDate" : "2017-02-01 00:54:07",
 		"word" : "policiaca",
 		"definition" : "to do with police",
+		"example" : []
+	},
+	{
+		"studyItemId" : "6d7224e8-dcb5-43bc-a0b1-67df5c784a94",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 20:02:44",
+		"word" : "alcachofa",
+		"definition" : "artichoke",
 		"example" : []
 	},
 	{
@@ -12648,6 +13600,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "6e8d909a-897a-4db8-8d76-8158f0036b2e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:56:18",
+		"word" : "enroscar",
+		"definition" : "to roll up",
+		"example" : []
+	},
+	{
 		"studyItemId" : "6e8eff13-891c-4be8-89ec-0e348f5be443",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-05-03 23:50:47",
@@ -12733,7 +13693,7 @@
 		"createDate" : "2015-05-17 23:43:54",
 		"word" : "supe",
 		"definition" : "i knew, knew how",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "6ef3cfee-3cab-4dd1-8bbb-6b8466230f8e",
@@ -12912,6 +13872,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "702ed823-a53c-49b0-aadd-e124dc018b4d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-04 23:37:23",
+		"word" : "a través de",
+		"definition" : "through",
+		"example" : []
+	},
+	{
 		"studyItemId" : "7031870d-6fd5-472b-a6bb-c567c0e160ca",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-12-11 20:05:58",
@@ -12941,6 +13909,14 @@
 		"createDate" : "2015-04-21 00:18:52",
 		"word" : "híjole",
 		"definition" : "wow",
+		"example" : []
+	},
+	{
+		"studyItemId" : "70437df2-4e70-40a7-b32b-1c5876ccca28",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:56:53",
+		"word" : "condado",
+		"definition" : "county",
 		"example" : []
 	},
 	{
@@ -13000,6 +13976,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "70e36724-d2f1-46a0-b012-9121484de73e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 22:03:14",
+		"word" : "aliviarse",
+		"definition" : "to heal, to get better",
+		"example" : []
+	},
+	{
 		"studyItemId" : "70e514c9-113c-4949-a7b5-75325a29c15b",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-03-07 13:51:31",
@@ -13045,7 +14029,7 @@
 		"createDate" : "2015-04-28 01:15:50",
 		"word" : "juicio",
 		"definition" : "trial, judgement",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "710dd95f-d163-4487-a8b7-307f9376830f",
@@ -13136,6 +14120,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "71c0cd49-2bed-4b4c-b0b0-5b17a762e52d",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-04 23:01:40",
+		"word" : "adivinanza",
+		"definition" : "riddle",
+		"example" : []
+	},
+	{
 		"studyItemId" : "71c439cc-9e11-4f9e-8a2f-b4eb398cfa36",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-01-23 20:14:11",
@@ -13160,6 +14152,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "7205b403-d894-485d-a47a-3ce8000885dd",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:06:16",
+		"word" : "mantón",
+		"definition" : "shawl",
+		"example" : []
+	},
+	{
 		"studyItemId" : "720b0deb-2dda-495b-a26e-6195ac3c326c",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-05-30 19:44:38",
@@ -13180,8 +14180,8 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-10-04 13:51:52",
 		"word" : "fijarse",
-		"definition" : "to concentrate, notice",
-		"example" : ""
+		"definition" : "to concentrate; to notice; to pay attention",
+		"example" : []
 	},
 	{
 		"studyItemId" : "72714be0-2068-4784-b035-117105bd1ea1",
@@ -13261,6 +14261,14 @@
 		"createDate" : "2016-01-23 20:18:32",
 		"word" : "avellana",
 		"definition" : "hazelnut",
+		"example" : []
+	},
+	{
+		"studyItemId" : "72ef8bd0-ea9b-4780-9a79-9eee01e78804",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-16 22:58:34",
+		"word" : "costal",
+		"definition" : "sack",
 		"example" : []
 	},
 	{
@@ -13397,7 +14405,7 @@
 		"createDate" : "2015-01-20 00:50:03",
 		"word" : "posponer",
 		"definition" : "to postpone",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "7428c37e-05ee-4158-b760-2ddfe57c9a6f",
@@ -13421,6 +14429,14 @@
 		"createDate" : "2015-02-28 22:36:29",
 		"word" : "tienen",
 		"definition" : "they have",
+		"example" : []
+	},
+	{
+		"studyItemId" : "743edaa0-0d84-4d48-9e24-0652e2800e35",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-07 23:47:01",
+		"word" : "púa",
+		"definition" : "sharp point, barb",
 		"example" : []
 	},
 	{
@@ -13517,7 +14533,7 @@
 		"createDate" : "2017-01-31 23:52:03",
 		"word" : "pingüino",
 		"definition" : "penguin",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "752b1689-2b19-466f-ab2c-3cad398b969b",
@@ -13576,11 +14592,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "75b2c9bc-84bd-41ae-a229-03d3c9c8d1d7",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:49:48",
+		"word" : "desecho",
+		"definition" : "waste, garbage",
+		"example" : []
+	},
+	{
 		"studyItemId" : "75b3cf38-b3b0-4263-9391-c0376350dda6",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-11-20 00:52:17",
 		"word" : "banquete",
 		"definition" : "banquet",
+		"example" : []
+	},
+	{
+		"studyItemId" : "75b587b7-f3bf-4e7d-8c46-f386adb4a357",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:15:15",
+		"word" : "pegamento",
+		"definition" : "glue",
 		"example" : []
 	},
 	{
@@ -13688,6 +14720,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "7685add4-4674-4d41-a1ef-cde9d897ebf1",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 19:42:47",
+		"word" : "capullo",
+		"definition" : "bud (plant), jerk (vulgar in spain)",
+		"example" : []
+	},
+	{
 		"studyItemId" : "76938b53-c47c-4e22-8fce-711f5c9d70d7",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-12-09 21:15:03",
@@ -13784,14 +14824,6 @@
 		"example" : []
 	},
 	{
-		"studyItemId" : "7757ad4b-af03-43cb-b5ce-83cc7e9a551d",
-		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
-		"createDate" : "2015-01-20 00:49:57",
-		"word" : "tal vez",
-		"definition" : "maybe",
-		"example" : []
-	},
-	{
 		"studyItemId" : "7757e3d5-ea2b-44dc-8cff-59b4ef685b2b",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-31 01:15:48",
@@ -13832,6 +14864,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "77b82dc7-a27c-48ab-b4f7-ae145fbe0081",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 19:01:24",
+		"word" : "hilito",
+		"definition" : "a thread",
+		"example" : []
+	},
+	{
 		"studyItemId" : "77e145bb-a27a-46a9-9310-11f76f530e3b",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-25 00:48:16",
@@ -13853,6 +14893,14 @@
 		"createDate" : "2015-05-17 23:42:44",
 		"word" : "de inmediato",
 		"definition" : "immediately",
+		"example" : []
+	},
+	{
+		"studyItemId" : "78641989-2453-437c-8f77-c0831e818e00",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-19 00:01:19",
+		"word" : "al terminar",
+		"definition" : "at the end of",
 		"example" : []
 	},
 	{
@@ -13933,7 +14981,7 @@
 		"createDate" : "2016-06-12 18:02:35",
 		"word" : "supieron",
 		"definition" : "they knew  how",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "7938a410-d7eb-49f8-856b-4e998d307744",
@@ -13965,6 +15013,14 @@
 		"createDate" : "2015-12-15 01:28:21",
 		"word" : "quimioterapia",
 		"definition" : "chemotherapy",
+		"example" : []
+	},
+	{
+		"studyItemId" : "79683673-af19-4a34-a367-7fef3fbe2931",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-17 19:51:32",
+		"word" : "encomendar",
+		"definition" : "to entrust",
 		"example" : []
 	},
 	{
@@ -14005,6 +15061,22 @@
 		"createDate" : "2015-03-21 00:09:19",
 		"word" : "travesura",
 		"definition" : "mischief, prank",
+		"example" : []
+	},
+	{
+		"studyItemId" : "79ac2739-b60d-4f3c-b371-48e6c599cac2",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-07-01 00:09:02",
+		"word" : "encendido",
+		"definition" : "on, lit, burning",
+		"example" : []
+	},
+	{
+		"studyItemId" : "79be89d1-57d3-41fe-a5f8-3a704391525e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 19:11:40",
+		"word" : "alarido",
+		"definition" : "shriek",
 		"example" : []
 	},
 	{
@@ -14077,6 +15149,14 @@
 		"createDate" : "2016-04-09 20:57:07",
 		"word" : "rabillo del ojo",
 		"definition" : "córner of the eye",
+		"example" : []
+	},
+	{
+		"studyItemId" : "7a833f9e-6216-4859-8fc2-dfcf48f5b1ca",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:55:34",
+		"word" : "chirriar",
+		"definition" : "to squeal",
 		"example" : []
 	},
 	{
@@ -14256,6 +15336,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "7c553b6b-d4a3-42c2-86ec-44e6bbfade33",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:10:06",
+		"word" : "de ida y vuelta",
+		"definition" : "round trip",
+		"example" : []
+	},
+	{
 		"studyItemId" : "7c73f01d-e961-44e4-8478-1dd555915939",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-04-10 21:38:46",
@@ -14269,7 +15357,7 @@
 		"createDate" : "2016-06-12 18:21:00",
 		"word" : "asteroide",
 		"definition" : "asteroid",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "7c845169-a909-4c76-be99-2a1aea0da0e0",
@@ -14421,6 +15509,22 @@
 		"createDate" : "2015-03-07 13:48:30",
 		"word" : "regazo",
 		"definition" : "lap",
+		"example" : []
+	},
+	{
+		"studyItemId" : "7d9bfa45-7f64-4699-818a-599185f80688",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-17 20:04:19",
+		"word" : "dudar",
+		"definition" : "to doubt, to hesitate",
+		"example" : []
+	},
+	{
+		"studyItemId" : "7dbfd933-76b0-4aab-9970-ff9b81d2b47a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-20 04:48:25",
+		"word" : "hija",
+		"definition" : "daughter",
 		"example" : []
 	},
 	{
@@ -14644,7 +15748,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-15 23:43:41",
 		"word" : "despegar",
-		"definition" : "to take off",
+		"definition" : "to take off, to unstick",
 		"example" : []
 	},
 	{
@@ -14653,6 +15757,14 @@
 		"createDate" : "2016-01-06 00:56:54",
 		"word" : "prenda interior",
 		"definition" : "under garment",
+		"example" : []
+	},
+	{
+		"studyItemId" : "7ff572cc-d526-4496-9366-4f5f3f6a1fcb",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-04 23:05:36",
+		"word" : "aleta",
+		"definition" : "fin, wing, fender, blade",
 		"example" : []
 	},
 	{
@@ -14669,6 +15781,14 @@
 		"createDate" : "2015-02-07 13:37:54",
 		"word" : "pillo",
 		"definition" : "rascal",
+		"example" : []
+	},
+	{
+		"studyItemId" : "8020c361-e782-449a-9702-4295c413e207",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 18:39:19",
+		"word" : "lorito",
+		"definition" : "little parrot",
 		"example" : []
 	},
 	{
@@ -14709,7 +15829,15 @@
 		"createDate" : "2015-02-20 20:54:36",
 		"word" : "envió",
 		"definition" : "you (formal) sent",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "80681a2c-470b-4c42-b9ce-b804ad8cc861",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:12:25",
+		"word" : "escala",
+		"definition" : "layover",
+		"example" : []
 	},
 	{
 		"studyItemId" : "8076d0af-9eed-4615-9936-f33d4120b925",
@@ -14725,7 +15853,7 @@
 		"createDate" : "2017-01-12 00:53:33",
 		"word" : "esperado, a",
 		"definition" : "expected, awaited",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "80a14051-dac3-4189-b572-455175a05053",
@@ -14784,6 +15912,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "80ea6913-ae00-42e8-abbb-4132fb2e1cb1",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:25:13",
+		"word" : "pájaro carpintero",
+		"definition" : "woodpecker",
+		"example" : []
+	},
+	{
 		"studyItemId" : "80fb19c6-12dd-45b3-bb19-89ed6654321e",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:50:03",
@@ -14821,6 +15957,14 @@
 		"createDate" : "2015-11-22 18:24:48",
 		"word" : "roja",
 		"definition" : "red",
+		"example" : []
+	},
+	{
+		"studyItemId" : "8145652f-7c6c-4f42-be0e-1373a80ef331",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:17:25",
+		"word" : "infracción de tránsito",
+		"definition" : "traffic violation",
 		"example" : []
 	},
 	{
@@ -14944,6 +16088,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "825a3dc7-0e4c-42b0-9bb0-e5567e28fcad",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-07-01 00:18:21",
+		"word" : "mohoso",
+		"definition" : "moldy; rusty",
+		"example" : []
+	},
+	{
 		"studyItemId" : "825f6784-87b9-4dc4-be55-7f3f12711ee8",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-01-30 19:04:25",
@@ -15037,7 +16189,7 @@
 		"createDate" : "2015-03-29 19:38:13",
 		"word" : "viendo",
 		"definition" : "seeing",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "8334c1d5-5764-4c69-b263-c926b73ffb6d",
@@ -15184,6 +16336,22 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "845fc62b-cc56-4921-8b3c-8cea6a96226a",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:57:22",
+		"word" : "hora pico",
+		"definition" : "rush hour",
+		"example" : []
+	},
+	{
+		"studyItemId" : "848487e7-a659-45b1-8abb-fff990e9723f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-16 23:20:24",
+		"word" : "desdoblar",
+		"definition" : "unfold",
+		"example" : []
+	},
+	{
 		"studyItemId" : "848ba85a-3d1b-4d7e-8c1f-6e2fe1c55d97",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-24 02:09:29",
@@ -15205,6 +16373,14 @@
 		"createDate" : "2016-12-03 18:17:56",
 		"word" : "subestimado, a",
 		"definition" : "underestimated",
+		"example" : []
+	},
+	{
+		"studyItemId" : "84b18e95-2767-4277-bb90-0a7b6610d385",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-24 18:55:14",
+		"word" : "espiar",
+		"definition" : "to spy on",
 		"example" : []
 	},
 	{
@@ -15264,6 +16440,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "852bc6de-03b6-4298-91bb-25d28888dcfe",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 18:57:10",
+		"word" : "alterar",
+		"definition" : "to alter, to agitate",
+		"example" : []
+	},
+	{
 		"studyItemId" : "852c2b75-5d38-4df0-8baa-2e33fbce4518",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-16 23:31:02",
@@ -15317,6 +16501,14 @@
 		"createDate" : "2015-12-05 20:31:19",
 		"word" : "puede verse como",
 		"definition" : "can be seen as",
+		"example" : []
+	},
+	{
+		"studyItemId" : "858cf4cf-a213-4f96-838d-a88d11ac0a4f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 20:37:23",
+		"word" : "cosechado",
+		"definition" : "harvested",
 		"example" : []
 	},
 	{
@@ -15520,6 +16712,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "872dc490-95eb-4096-96bf-df596dec233a",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:04:18",
+		"word" : "tartamudear",
+		"definition" : "to stutter",
+		"example" : []
+	},
+	{
 		"studyItemId" : "8756acff-622f-42e7-8de1-76cdea7a4307",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-06-24 23:17:05",
@@ -15581,7 +16781,7 @@
 		"createDate" : "2015-01-20 00:49:48",
 		"word" : "desgracia",
 		"definition" : "Misfortune, tragedy",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "87c788e2-fb6f-4a26-9059-f33d6530c980",
@@ -16061,7 +17261,7 @@
 		"createDate" : "2015-03-02 01:03:01",
 		"word" : "asunto",
 		"definition" : "issue; matter; subject",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "8bea0df5-35d5-4439-9448-255cbf061084",
@@ -16101,6 +17301,14 @@
 		"createDate" : "2016-08-08 23:50:24",
 		"word" : "pajita",
 		"definition" : "straw",
+		"example" : []
+	},
+	{
+		"studyItemId" : "8c641581-309d-4573-be8b-e35f5f3349c8",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 20:21:44",
+		"word" : "delantera",
+		"definition" : "lead, forward edge; boobs (slang)",
 		"example" : []
 	},
 	{
@@ -16144,11 +17352,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "8ce7ccf7-ebb3-4204-9b67-7ed1ab849cd8",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 20:01:55",
+		"word" : "glorieta",
+		"definition" : "roundabout; town square",
+		"example" : []
+	},
+	{
 		"studyItemId" : "8cea1ad0-3ae9-4952-a522-869b18c0f630",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-07-02 02:44:38",
 		"word" : "peca",
 		"definition" : "freckle",
+		"example" : []
+	},
+	{
+		"studyItemId" : "8d08661f-e215-4b41-90f3-67739a79b71b",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:16:45",
+		"word" : "recibo",
+		"definition" : "receipt",
 		"example" : []
 	},
 	{
@@ -16352,6 +17576,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "8e8d13b5-27a9-424e-909a-87609e16b33a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-29 17:13:02",
+		"word" : "renacer",
+		"definition" : "to be reborn",
+		"example" : []
+	},
+	{
 		"studyItemId" : "8e8d6e38-45d8-4ef9-9a58-22d44e168730",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-06-09 00:01:47",
@@ -16424,6 +17656,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "8efff57e-6814-4664-888e-17edf26fe527",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-21 00:55:32",
+		"word" : "zozobra",
+		"definition" : "anxiety, sinking",
+		"example" : []
+	},
+	{
 		"studyItemId" : "8f044023-d5f4-4773-bc33-567c2ac1392a",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-01-30 18:37:18",
@@ -16480,11 +17720,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "8f617847-8dd4-444f-a96e-0f9c536a8b19",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 00:35:37",
+		"word" : "madera de desecho",
+		"definition" : "scrap wood",
+		"example" : []
+	},
+	{
 		"studyItemId" : "8f64a186-93d6-45d6-a104-34af2fca2066",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-08-08 22:20:17",
 		"word" : "riesgo",
 		"definition" : "risk",
+		"example" : []
+	},
+	{
+		"studyItemId" : "8f96c361-d0cb-4921-879a-acd29abe451d",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:07:05",
+		"word" : "posada",
+		"definition" : "inn, lodging",
 		"example" : []
 	},
 	{
@@ -16581,7 +17837,7 @@
 		"createDate" : "2016-06-04 16:17:06",
 		"word" : "entras",
 		"definition" : "you (informal) enter",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "905d8d02-5a62-414e-ae12-8f3611412a8a",
@@ -16661,6 +17917,14 @@
 		"createDate" : "2015-01-20 00:50:08",
 		"word" : "yeso",
 		"definition" : "plaster",
+		"example" : []
+	},
+	{
+		"studyItemId" : "911a4b85-af9b-474f-b46f-e23ed82ab8b8",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-24 18:33:27",
+		"word" : "novedad",
+		"definition" : "news, novelty",
 		"example" : []
 	},
 	{
@@ -16744,6 +18008,22 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "919e0763-4750-4297-8b3e-a55b41bd8e7c",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:10:54",
+		"word" : "áspero",
+		"definition" : "rough, surly",
+		"example" : []
+	},
+	{
+		"studyItemId" : "91a0e3b4-195f-4a84-882e-3e79b1d12ebe",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 00:13:13",
+		"word" : "tendedero",
+		"definition" : "clothesline",
+		"example" : []
+	},
+	{
 		"studyItemId" : "91a27a11-cb0e-4d31-918c-38fc84f7a740",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-13 19:24:34",
@@ -16781,7 +18061,7 @@
 		"createDate" : "2016-06-12 17:56:42",
 		"word" : "conociste",
 		"definition" : "you (inf) knew someone",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "91fc9c92-491c-4873-b53f-c92d9b0bb26d",
@@ -16805,6 +18085,14 @@
 		"createDate" : "2016-10-17 22:10:23",
 		"word" : "envenenar",
 		"definition" : "to poison",
+		"example" : []
+	},
+	{
+		"studyItemId" : "92366d67-9779-479a-8921-09cd7dfd4390",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 18:54:46",
+		"word" : "blandir",
+		"definition" : "brandish, to wave",
 		"example" : []
 	},
 	{
@@ -16904,6 +18192,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "9321b83e-22b0-4ae9-84a5-5feecb2e19fc",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-23 23:20:57",
+		"word" : "adelantar",
+		"definition" : "to overtake, to advance, to move forward",
+		"example" : []
+	},
+	{
 		"studyItemId" : "93236cfe-0f22-4c7d-9b2a-e3c95b1c9f17",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-08-20 00:47:23",
@@ -16941,6 +18237,14 @@
 		"createDate" : "2016-02-15 23:18:49",
 		"word" : "cojer",
 		"definition" : "to grab, to take",
+		"example" : []
+	},
+	{
+		"studyItemId" : "935c9337-d9be-436a-9020-bb7f77f21fa4",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-27 19:54:31",
+		"word" : "mentar",
+		"definition" : "to mention",
 		"example" : []
 	},
 	{
@@ -17141,7 +18445,7 @@
 		"createDate" : "2015-08-31 05:42:47",
 		"word" : "ganas",
 		"definition" : "urge, desire",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "95c5a920-17c7-4ebe-82cc-b9c04c59723b",
@@ -17157,7 +18461,7 @@
 		"createDate" : "2017-01-21 18:47:07",
 		"word" : "evasión",
 		"definition" : "Escape, evasion",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "95d9960a-8e87-4a52-89e1-aafbf8529bb4",
@@ -17309,7 +18613,7 @@
 		"createDate" : "2016-01-30 18:43:57",
 		"word" : "sencillo",
 		"definition" : "simple; also means a single (record)",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "9682cbed-6f4f-4b58-80f3-6907f87de09b",
@@ -17317,6 +18621,14 @@
 		"createDate" : "2015-02-03 01:19:57",
 		"word" : "dañar",
 		"definition" : "to damage",
+		"example" : []
+	},
+	{
+		"studyItemId" : "969767d8-a984-4c6b-a0e8-e3f7f1f46f87",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:20:43",
+		"word" : "¡que padre!",
+		"definition" : "cool!",
 		"example" : []
 	},
 	{
@@ -17438,6 +18750,14 @@
 		"word" : "sonarse la nariz",
 		"definition" : "to blow one\"s nose",
 		"example" : "¿Tienes un pañuelo? Tengo que sonarme la nariz.\nDo you have a tissue? I need to blow my nose."
+	},
+	{
+		"studyItemId" : "97512bf7-2717-4154-b73a-7f6cc47bc11d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 18:37:10",
+		"word" : "emberrincharse",
+		"definition" : "to throw a tantrum",
+		"example" : []
 	},
 	{
 		"studyItemId" : "9751f6b9-019d-4471-8770-95f4bfec0da8",
@@ -17597,7 +18917,7 @@
 		"createDate" : "2016-06-12 17:58:32",
 		"word" : "conocía",
 		"definition" : "i/he used to know someone",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "98e86acd-b6c8-4771-ad72-9c9e739126d7",
@@ -17637,7 +18957,7 @@
 		"createDate" : "2016-05-22 18:18:42",
 		"word" : "espacio",
 		"definition" : "space",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "992948a7-bc29-4621-851c-30636233bcc3",
@@ -17757,7 +19077,7 @@
 		"createDate" : "2016-07-10 19:16:02",
 		"word" : "estándares",
 		"definition" : "standards",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "99f0af63-6558-4b2f-8b2b-332f4856bec4",
@@ -17912,6 +19232,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "9b1210f1-957a-4937-9058-255e9c5deedc",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:24:31",
+		"word" : "voluntad",
+		"definition" : "will, desire, intention",
+		"example" : []
+	},
+	{
 		"studyItemId" : "9b1357d1-3ae7-4fd1-8b26-a282510b585f",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-06 23:13:16",
@@ -17928,12 +19256,20 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "9b1db5ee-3959-47c2-8e3e-fe662eb06032",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 20:02:37",
+		"word" : "hincarse",
+		"definition" : "to kneel down",
+		"example" : []
+	},
+	{
 		"studyItemId" : "9b2dc863-89b7-4c09-8c18-25a254a0fa5a",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-04-03 14:55:46",
 		"word" : "abalanzarse",
 		"definition" : "to rush. to spring, to leap on",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "9b2f527d-ae76-4df7-8a3f-dcfefe57043d",
@@ -17976,6 +19312,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "9b9eb225-2644-4ad1-96ee-12ba68a8b976",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-04 01:31:28",
+		"word" : "jeans entallado",
+		"definition" : "skinny jeans",
+		"example" : []
+	},
+	{
 		"studyItemId" : "9ba92f27-0233-4336-bece-3fa8b5f79646",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-12-05 19:55:38",
@@ -17989,6 +19333,14 @@
 		"createDate" : "2015-01-18 10:27:05",
 		"word" : "acabar de",
 		"definition" : "just accomplished ...",
+		"example" : []
+	},
+	{
+		"studyItemId" : "9bc4406c-d3e3-4f83-8d70-2da8d5bf4b74",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 18:46:39",
+		"word" : "aficionarse",
+		"definition" : "to become interested",
 		"example" : []
 	},
 	{
@@ -18181,7 +19533,7 @@
 		"createDate" : "2015-02-04 16:21:08",
 		"word" : "ocultar",
 		"definition" : "to hide, to conceal",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "9d9323d1-ecfe-4c64-a258-aab9caa14954",
@@ -18237,6 +19589,14 @@
 		"createDate" : "2016-02-07 18:00:20",
 		"word" : "escusado",
 		"definition" : "toilet",
+		"example" : []
+	},
+	{
+		"studyItemId" : "9deec48a-dadb-4041-962b-6ecb5c545933",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:12:18",
+		"word" : "estiércol",
+		"definition" : "manure, dung",
 		"example" : []
 	},
 	{
@@ -18301,6 +19661,14 @@
 		"createDate" : "2017-01-28 00:32:43",
 		"word" : "varita mágica",
 		"definition" : "magic wand",
+		"example" : []
+	},
+	{
+		"studyItemId" : "9eaddd1c-20ca-4425-a2ef-c18c49d7bd4f",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:51:32",
+		"word" : "repuestos de auto",
+		"definition" : "auto parts",
 		"example" : []
 	},
 	{
@@ -18392,6 +19760,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "a029ba4d-bd03-42c2-a8f6-f10d4552d835",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-15 00:54:45",
+		"word" : "enrevesado",
+		"definition" : "complex, convoluted",
+		"example" : []
+	},
+	{
 		"studyItemId" : "a02f38c6-6f14-42e6-b329-9fc031162c15",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-07 18:05:31",
@@ -18461,7 +19837,7 @@
 		"createDate" : "2017-01-28 00:41:11",
 		"word" : "astrología",
 		"definition" : "astrology",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "a0ab96c1-1c04-4615-918b-3d748cd38513",
@@ -18560,11 +19936,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "a21b0f69-b2ee-4315-9cb5-b4f1d6799dbb",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-07 18:17:18",
+		"word" : "llovizna",
+		"definition" : "drizzle",
+		"example" : []
+	},
+	{
 		"studyItemId" : "a240cec5-7062-4495-a5c8-bcf6350a9c64",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-05-08 23:54:30",
 		"word" : "broncas",
 		"definition" : "quarrel, ruckus, uproar",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a295e421-ab9b-405a-97fe-fd14624d8066",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:27:26",
+		"word" : "descuido, a",
+		"definition" : "careless",
 		"example" : []
 	},
 	{
@@ -18604,7 +19996,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-03-27 01:19:51",
 		"word" : "bote",
-		"definition" : "boat",
+		"definition" : "boat; container",
 		"example" : []
 	},
 	{
@@ -18613,6 +20005,14 @@
 		"createDate" : "2015-08-08 22:23:18",
 		"word" : "palabrería",
 		"definition" : "hot air, empty promise",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a3024f60-c300-4168-ae17-f78758670a1a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-02 23:38:58",
+		"word" : "cerca",
+		"definition" : "fence",
 		"example" : []
 	},
 	{
@@ -18637,6 +20037,14 @@
 		"createDate" : "2015-10-20 00:27:58",
 		"word" : "vínculo",
 		"definition" : "link, tie",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a3496dfc-cea3-4641-8a8b-75d66fa5217f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-18 23:58:57",
+		"word" : "reforzar",
+		"definition" : "to reinforce",
 		"example" : []
 	},
 	{
@@ -18741,6 +20149,14 @@
 		"createDate" : "2015-03-19 22:58:25",
 		"word" : "incansable",
 		"definition" : "untiring",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a3e1748e-f69c-4abe-85a1-7d9a14c13ca5",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 00:42:36",
+		"word" : "madera de desperdicio",
+		"definition" : "scrap wood (2)",
 		"example" : []
 	},
 	{
@@ -18888,11 +20304,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "a4fee466-8128-468e-9ec6-84cd847fb327",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-10 19:33:31",
+		"word" : "alargado",
+		"definition" : "long, extended",
+		"example" : []
+	},
+	{
 		"studyItemId" : "a4fff24f-b875-4f06-b072-bcb7284d45db",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-04-25 01:02:24",
 		"word" : "harto, a",
 		"definition" : "to be fed up",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a50db69d-c225-4a1c-b39e-c209a64131fb",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:02:51",
+		"word" : "retortijones",
+		"definition" : "stomach cramps",
 		"example" : []
 	},
 	{
@@ -18917,7 +20349,15 @@
 		"createDate" : "2016-03-20 19:17:21",
 		"word" : "tironear",
 		"definition" : "to tug (at)",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "a563873c-0b07-4b3b-859d-5c4efd732e30",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:58:56",
+		"word" : "balde",
+		"definition" : "bucket",
+		"example" : []
 	},
 	{
 		"studyItemId" : "a58696c6-73e2-44e2-9a36-5fdab2dbe83e",
@@ -18949,6 +20389,14 @@
 		"createDate" : "2016-05-08 18:40:29",
 		"word" : "sumo",
 		"definition" : "supreme",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a5d2305a-4115-412b-8606-ebafa550d3a1",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-06 00:05:44",
+		"word" : "te veo al rato",
+		"definition" : "i\"ll see you in a while",
 		"example" : []
 	},
 	{
@@ -19232,6 +20680,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "a8337bb8-fec6-400e-9efd-8b719ad34609",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:18:15",
+		"word" : "desea me suerte",
+		"definition" : "wish me luck",
+		"example" : []
+	},
+	{
 		"studyItemId" : "a83d070b-96fb-43e6-8837-2c321d496e62",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-08-23 21:02:58",
@@ -19288,6 +20744,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "a8b2149f-d49e-4bf7-b7e2-3c90186e5e59",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:23:00",
+		"word" : "pasantía",
+		"definition" : "internship",
+		"example" : []
+	},
+	{
 		"studyItemId" : "a8c15180-a0ab-4fb6-ae10-9dd667fed5db",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-06-30 00:09:53",
@@ -19333,6 +20797,14 @@
 		"createDate" : "2016-02-25 23:07:47",
 		"word" : "zapatear",
 		"definition" : "to stamp one\"s feet, to tap-dance",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a8d2aba9-b1b5-4682-994d-4e73a01fe60e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:19:27",
+		"word" : "cautivar",
+		"definition" : "to captivate",
 		"example" : []
 	},
 	{
@@ -19440,11 +20912,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "a95b8dba-1f2f-4f7c-af13-e7ef5d05f6e8",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:45:55",
+		"word" : "tina",
+		"definition" : "washtub",
+		"example" : []
+	},
+	{
 		"studyItemId" : "a965a52c-cd87-46c1-b104-7920695d8780",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-09-26 19:56:54",
 		"word" : "partido",
 		"definition" : "game",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a97843bb-5c42-4167-91f2-15bf2c93004f",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:46:39",
+		"word" : "arpillera",
+		"definition" : "burlap, sackcloth",
 		"example" : []
 	},
 	{
@@ -19469,6 +20957,14 @@
 		"createDate" : "2015-09-02 00:55:30",
 		"word" : "recta",
 		"definition" : "straight line",
+		"example" : []
+	},
+	{
+		"studyItemId" : "a9cfa893-0e33-4de6-8e09-82553ba6e94e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-08 23:43:55",
+		"word" : "maletero",
+		"definition" : "trunk; porter",
 		"example" : []
 	},
 	{
@@ -19592,6 +21088,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "ab2ebece-402d-41ca-85ba-a7b1339cb1b6",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-19 23:17:04",
+		"word" : "gatear",
+		"definition" : "to crawl",
+		"example" : []
+	},
+	{
 		"studyItemId" : "ab43193a-ff82-4d1f-ac43-81d45765fcbc",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:49:57",
@@ -19637,7 +21141,7 @@
 		"createDate" : "2016-02-27 00:34:40",
 		"word" : "en cambio",
 		"definition" : "instead",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "ab9d0962-cac4-44d8-a620-7efb80b946dc",
@@ -19661,7 +21165,7 @@
 		"createDate" : "2015-11-01 19:10:20",
 		"word" : "devolver",
 		"definition" : "to refund, give back",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "abc7c8dd-236b-4f08-8ee0-0f50dd090d25",
@@ -19728,6 +21232,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "ac620416-2746-48e4-9543-77b1d91ecf1f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-08 00:06:14",
+		"word" : "conforme",
+		"definition" : "happy, satisfied",
+		"example" : []
+	},
+	{
 		"studyItemId" : "ac6417b7-05fe-4c19-b398-cd45d3520ee4",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-27 00:45:35",
@@ -19741,14 +21253,6 @@
 		"createDate" : "2016-05-03 23:48:30",
 		"word" : "diente de león",
 		"definition" : "dandelion",
-		"example" : []
-	},
-	{
-		"studyItemId" : "ac6ba26a-8f52-4b6e-aaf4-f0a83ceaa66d",
-		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
-		"createDate" : "2015-01-25 21:48:00",
-		"word" : "encontrar",
-		"definition" : "to find",
 		"example" : []
 	},
 	{
@@ -19880,6 +21384,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "ad35b45f-7a20-41fe-be25-15282f555294",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 18:38:26",
+		"word" : "chillar",
+		"definition" : "scream, screech",
+		"example" : []
+	},
+	{
 		"studyItemId" : "ad50179f-f38a-4e85-8219-bf784ce98778",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-30 01:17:48",
@@ -19920,6 +21432,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "ad7a123f-f750-410d-b32b-17246e72f2c8",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:55:10",
+		"word" : "hedor",
+		"definition" : "bad odor",
+		"example" : []
+	},
+	{
 		"studyItemId" : "ad822753-ee48-4ccf-8a57-6ef11b23fb9d",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-07 20:39:32",
@@ -19933,6 +21453,14 @@
 		"createDate" : "2016-02-10 12:06:36",
 		"word" : "entrega",
 		"definition" : "delivery",
+		"example" : []
+	},
+	{
+		"studyItemId" : "ad96b66d-9760-42f7-88b8-70b56d388d2e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-29 00:52:56",
+		"word" : "seguridad",
+		"definition" : "safety; certainty",
 		"example" : []
 	},
 	{
@@ -19981,6 +21509,14 @@
 		"createDate" : "2015-04-30 23:43:37",
 		"word" : "demonstrar",
 		"definition" : "to prove; demonstrate",
+		"example" : []
+	},
+	{
+		"studyItemId" : "ae56a0f9-bfda-43ae-b6e8-6de03a87132e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-31 00:19:42",
+		"word" : "paleta",
+		"definition" : "popsicle",
 		"example" : []
 	},
 	{
@@ -20152,6 +21688,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "afd68fca-6ddd-4c91-9791-fe1108545ef6",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-12 18:06:13",
+		"word" : "dirigirse",
+		"definition" : "to walk towards; to address",
+		"example" : []
+	},
+	{
 		"studyItemId" : "afdf44fb-a9a5-45b0-a521-cb48e6e7870a",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-12-13 00:32:13",
@@ -20264,6 +21808,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "b0a478d5-8c27-49ec-9584-929b422ba9cd",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:22:23",
+		"word" : "morenito, a",
+		"definition" : "tanned",
+		"example" : []
+	},
+	{
 		"studyItemId" : "b0ab883f-dc75-4775-b51c-0d690f839d30",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-11 16:39:22",
@@ -20308,7 +21860,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-06-19 12:22:39",
 		"word" : "fingir",
-		"definition" : "to pretend",
+		"definition" : "to feign, to pretend",
 		"example" : []
 	},
 	{
@@ -20397,6 +21949,14 @@
 		"createDate" : "2015-06-20 18:47:11",
 		"word" : "amarillo",
 		"definition" : "yellow",
+		"example" : []
+	},
+	{
+		"studyItemId" : "b1a30c51-f60e-46df-a746-16bafed1e75c",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:46:17",
+		"word" : "autoabastecimiento",
+		"definition" : "self-sufficiency",
 		"example" : []
 	},
 	{
@@ -20624,6 +22184,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "b34f9d9c-3a64-47b3-94b6-9d23647c04a6",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-24 18:52:09",
+		"word" : "avergonzarse",
+		"definition" : "to be ashamed, to be embarrassed",
+		"example" : []
+	},
+	{
 		"studyItemId" : "b37e4d84-c519-438c-b732-608005034873",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-12-24 13:57:48",
@@ -20653,7 +22221,7 @@
 		"createDate" : "2015-09-19 18:08:24",
 		"word" : "pena",
 		"definition" : "penalty; pitty, shame",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "b39c13d6-9de5-4c17-8584-8bbc49c9c12e",
@@ -20748,7 +22316,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-03-20 11:31:37",
 		"word" : "soler",
-		"definition" : "to usually do",
+		"definition" : "to usually do, to used to",
 		"example" : []
 	},
 	{
@@ -20853,7 +22421,7 @@
 		"createDate" : "2016-06-19 18:33:53",
 		"word" : "almuerza",
 		"definition" : "he lunches",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "b50fc43a-c73d-477f-ac33-3a88fbff0154",
@@ -20877,6 +22445,14 @@
 		"createDate" : "2015-04-17 00:02:24",
 		"word" : "retirado",
 		"definition" : "retired",
+		"example" : []
+	},
+	{
+		"studyItemId" : "b57375fb-18ab-486e-8daa-20a883ef7953",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:24:27",
+		"word" : "remolque",
+		"definition" : "recreational vehicle - r.v.",
 		"example" : []
 	},
 	{
@@ -20904,6 +22480,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "b5cceaef-aeb0-4f13-9cd1-21c84a622d1a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-17 19:54:11",
+		"word" : "ceder",
+		"definition" : "to transfer, to give in",
+		"example" : []
+	},
+	{
 		"studyItemId" : "b5cf4e43-fe3f-43cd-9972-b96b16ed79ef",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-06 18:17:38",
@@ -20917,6 +22501,22 @@
 		"createDate" : "2015-03-24 23:20:27",
 		"word" : "zanahoria",
 		"definition" : "carrot",
+		"example" : []
+	},
+	{
+		"studyItemId" : "b5fbe152-15d0-4d1d-a3dc-cb391858cebb",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-04 22:51:52",
+		"word" : "agrícola",
+		"definition" : "agricultural",
+		"example" : []
+	},
+	{
+		"studyItemId" : "b6140919-00d9-4d1f-a609-ee4afd734ff2",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-27 19:35:57",
+		"word" : "enclavado",
+		"definition" : "deep set, buried, nestled",
 		"example" : []
 	},
 	{
@@ -21149,7 +22749,7 @@
 		"createDate" : "2016-07-10 19:17:57",
 		"word" : "alejarse",
 		"definition" : "To move away, to separate",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "b7fa2350-62fc-4fce-a44c-dcd321fb3f94",
@@ -21197,7 +22797,7 @@
 		"createDate" : "2017-01-15 17:47:36",
 		"word" : "confuso, a",
 		"definition" : "confused, confusing",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "b868d84f-ea71-4146-b85b-6930f5537d7a",
@@ -21221,6 +22821,14 @@
 		"createDate" : "2017-01-26 01:36:54",
 		"word" : "pasajeros",
 		"definition" : "passengers",
+		"example" : []
+	},
+	{
+		"studyItemId" : "b88316f8-1528-4ce0-a50e-5831d2c81184",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 18:47:35",
+		"word" : "agudo",
+		"definition" : "sharp, high-pitched (sound)",
 		"example" : []
 	},
 	{
@@ -21341,7 +22949,7 @@
 		"createDate" : "2016-01-30 18:51:15",
 		"word" : "prueba",
 		"definition" : "proof, test",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "b9a5e230-b0db-42c4-b4f5-c9d1715e8acb",
@@ -21381,6 +22989,14 @@
 		"createDate" : "2016-03-01 01:42:53",
 		"word" : "me he hecho...",
 		"definition" : "i have made myself...(a sandwich)",
+		"example" : []
+	},
+	{
+		"studyItemId" : "b9dc30ce-64d2-4871-a12a-881b4521524c",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-20 18:15:29",
+		"word" : "disgustar",
+		"definition" : "to upset",
 		"example" : []
 	},
 	{
@@ -21453,7 +23069,7 @@
 		"createDate" : "2016-01-16 20:41:31",
 		"word" : "hervido, a",
 		"definition" : "boiled",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "ba42132e-88c4-41a1-accf-1a578677b66f",
@@ -21512,6 +23128,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "baa64a99-9777-42f0-904c-9898a0f97e42",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-17 19:47:16",
+		"word" : "ángulo",
+		"definition" : "angle, corner, nook",
+		"example" : []
+	},
+	{
 		"studyItemId" : "bab2c381-ad28-4468-9a44-53b701749900",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-07 02:55:57",
@@ -21536,11 +23160,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "bacf1a0c-bfc8-4194-9b45-2b4819ec48f6",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 21:45:48",
+		"word" : "cobrar vida",
+		"definition" : "to come to life",
+		"example" : []
+	},
+	{
 		"studyItemId" : "bad3bd41-a169-4936-90e0-0e11f2b063c5",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-12-03 01:15:21",
 		"word" : "aprobar",
 		"definition" : "to pass (a test)",
+		"example" : []
+	},
+	{
+		"studyItemId" : "bb16eeef-64a2-470f-a7bd-184511f86f06",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-04 22:53:30",
+		"word" : "arroyuelo",
+		"definition" : "small stream",
 		"example" : []
 	},
 	{
@@ -21608,6 +23248,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "bb8adbeb-2f3e-4e46-a6b4-84ecbe7e4315",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:26:53",
+		"word" : "ramalazo",
+		"definition" : "gust of wind",
+		"example" : []
+	},
+	{
 		"studyItemId" : "bb9997d7-61d5-4723-84ba-f3c6506aed29",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-05-05 00:18:49",
@@ -21637,6 +23285,14 @@
 		"createDate" : "2015-02-13 00:04:42",
 		"word" : "tapar",
 		"definition" : "to cover",
+		"example" : []
+	},
+	{
+		"studyItemId" : "bbbb0bb3-9023-4dc3-a7d6-1d6fbf26a70d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-12 23:33:54",
+		"word" : "reemplazar",
+		"definition" : "to replace",
 		"example" : []
 	},
 	{
@@ -21677,7 +23333,7 @@
 		"createDate" : "2017-02-11 13:56:58",
 		"word" : "puesto que",
 		"definition" : "since, because",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "bc63a84f-e0d3-4a9e-87d2-0afbec27df8f",
@@ -21709,7 +23365,7 @@
 		"createDate" : "2015-12-09 21:40:53",
 		"word" : "fiarse",
 		"definition" : "to trust, to rely on",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "bc8d4967-dbd4-4b89-a6cc-4f0a92d8b0c0",
@@ -21792,6 +23448,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "bcf3d10a-ffc9-44fe-be66-53cc5ee4b86e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 18:49:18",
+		"word" : "sobras",
+		"definition" : "leftovers",
+		"example" : []
+	},
+	{
 		"studyItemId" : "bcf743eb-0e2b-44ba-a0f9-94ff7b94fd38",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-28 00:53:07",
@@ -21813,6 +23477,14 @@
 		"createDate" : "2015-02-03 00:59:55",
 		"word" : "muñeca",
 		"definition" : "wrist, doll",
+		"example" : []
+	},
+	{
+		"studyItemId" : "bd42026d-2bed-40f3-924c-086a3e93d6bb",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 22:54:59",
+		"word" : "arrojar",
+		"definition" : "to throw",
 		"example" : []
 	},
 	{
@@ -21892,7 +23564,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-07 13:36:51",
 		"word" : "arrastrar",
-		"definition" : "to drag",
+		"definition" : "to drag, to sweep, to brush",
 		"example" : []
 	},
 	{
@@ -21976,11 +23648,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "be8f1f31-fc09-4f42-83db-a091ad5d6290",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 19:22:11",
+		"word" : "orillar",
+		"definition" : "to avoid, to skirt, to get around",
+		"example" : []
+	},
+	{
 		"studyItemId" : "be9445de-ab31-4963-9061-5befb98b313f",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-12-01 01:12:14",
 		"word" : "fila",
 		"definition" : "line (next in line)",
+		"example" : []
+	},
+	{
+		"studyItemId" : "beb5712a-a464-4504-94f6-0dcc5ed8ca9f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:29:00",
+		"word" : "choza",
+		"definition" : "hut, cabin, cottage, shack, hovel",
 		"example" : []
 	},
 	{
@@ -22061,7 +23749,7 @@
 		"createDate" : "2015-01-20 00:50:09",
 		"word" : "dejando",
 		"definition" : "leaving",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "bf241ffa-be52-4f26-916a-56032c82ff83",
@@ -22101,6 +23789,14 @@
 		"createDate" : "2015-05-07 23:25:18",
 		"word" : "frente",
 		"definition" : "forehead, front",
+		"example" : []
+	},
+	{
+		"studyItemId" : "bf8a4dd3-0dbb-48af-9e8f-535b5f7584e2",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:00:13",
+		"word" : "gimotear",
+		"definition" : "to whine",
 		"example" : []
 	},
 	{
@@ -22160,6 +23856,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "c01aa599-9e9d-4db8-b068-692558fdbdeb",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-21 00:50:13",
+		"word" : "resplandecer",
+		"definition" : "to shine",
+		"example" : []
+	},
+	{
 		"studyItemId" : "c04a4e50-19f4-4547-b019-a0912786f4a1",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-12-30 15:37:21",
@@ -22197,6 +23901,14 @@
 		"createDate" : "2015-02-06 00:55:43",
 		"word" : "cohete",
 		"definition" : "rocket",
+		"example" : []
+	},
+	{
+		"studyItemId" : "c0b05e18-6a7d-43eb-ac49-e6954c9d1d34",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-03 00:20:31",
+		"word" : "amontonar",
+		"definition" : "to pile up",
 		"example" : []
 	},
 	{
@@ -22285,7 +23997,15 @@
 		"createDate" : "2015-01-20 00:49:52",
 		"word" : "dejar",
 		"definition" : "to leave, to quit, to allow, to abandon",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "c1a7b589-1de2-40f1-9262-1c7b1719bb0e",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-23 23:26:42",
+		"word" : "entumecer",
+		"definition" : "to numb",
+		"example" : []
 	},
 	{
 		"studyItemId" : "c1b71467-35ba-4baa-8b05-faf62bc37588",
@@ -22293,6 +24013,14 @@
 		"createDate" : "2015-01-27 01:25:14",
 		"word" : "sangrar",
 		"definition" : "to bleed",
+		"example" : []
+	},
+	{
+		"studyItemId" : "c1d3010f-a830-45e4-b356-e83d683398fd",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-16 22:43:23",
+		"word" : "túmulo",
+		"definition" : "tumb",
 		"example" : []
 	},
 	{
@@ -22468,7 +24196,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:50:06",
 		"word" : "conseguir",
-		"definition" : "to get",
+		"definition" : "to get, to obtain",
 		"example" : []
 	},
 	{
@@ -22525,7 +24253,7 @@
 		"createDate" : "2017-01-18 00:14:29",
 		"word" : "dolorosa",
 		"definition" : "painful",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "c3f2261d-d6d1-4605-bf9d-24fc9f4360cd",
@@ -22612,7 +24340,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-30 22:51:16",
 		"word" : "destartalado",
-		"definition" : "ramshackle",
+		"definition" : "ramshackle, dilapidated, untidy",
 		"example" : []
 	},
 	{
@@ -22640,11 +24368,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "c4b41254-4ce3-49d4-9ac0-35fae234a291",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-23 23:49:46",
+		"word" : "enderezar",
+		"definition" : "to straighten",
+		"example" : []
+	},
+	{
 		"studyItemId" : "c4ba87e1-4c5a-40d2-9577-0af9aa7432d9",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-11-03 01:42:34",
 		"word" : "revisar",
 		"definition" : "to review, to revise",
+		"example" : []
+	},
+	{
+		"studyItemId" : "c4c3bca8-3417-4daf-882e-41d01008b946",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:08:59",
+		"word" : "por adelanto",
+		"definition" : "in advance",
 		"example" : []
 	},
 	{
@@ -22792,6 +24536,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "c5f16adf-c89d-49ca-bdb6-d04273b30161",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:17:42",
+		"word" : "mirada",
+		"definition" : "look, glance",
+		"example" : []
+	},
+	{
 		"studyItemId" : "c60a364d-2f57-4cc6-97de-82cc796b916d",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-11-16 00:44:51",
@@ -22864,6 +24616,22 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "c6963a0f-f591-4229-a8e6-e2bc17da6507",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-11 19:12:54",
+		"word" : "cristal",
+		"definition" : "glass, window",
+		"example" : []
+	},
+	{
+		"studyItemId" : "c6980c78-da52-47a3-b8a2-3e0194c99d76",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-07 18:23:43",
+		"word" : "tener ganas",
+		"definition" : "to feel like",
+		"example" : []
+	},
+	{
 		"studyItemId" : "c6987295-61e1-4b7e-9d43-e3c090d01264",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-29 21:51:15",
@@ -22925,7 +24693,7 @@
 		"createDate" : "2016-06-12 18:03:08",
 		"word" : "sabía",
 		"definition" : "i/he used to know something",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "c6ef6c31-751f-4366-9afa-d098381b7bee",
@@ -22941,6 +24709,14 @@
 		"createDate" : "2015-02-15 15:42:01",
 		"word" : "He decidido",
 		"definition" : "I have decided",
+		"example" : []
+	},
+	{
+		"studyItemId" : "c71f67f8-1a2d-4e15-bb12-95fa61c1db90",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-29 00:43:26",
+		"word" : "cegar",
+		"definition" : "to blind",
 		"example" : []
 	},
 	{
@@ -23048,6 +24824,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "c7de4a12-0b1b-48d5-afaa-1039d922f818",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-20 18:14:18",
+		"word" : "golpeteo",
+		"definition" : "drumming, tapping",
+		"example" : []
+	},
+	{
 		"studyItemId" : "c813be05-930f-4983-ba53-699ac8e7922c",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-06-07 19:49:30",
@@ -23072,6 +24856,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "c828fd78-f4c0-46d8-aebe-c279a7599d0c",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:23:45",
+		"word" : "ansiado",
+		"definition" : "long-awaited",
+		"example" : []
+	},
+	{
 		"studyItemId" : "c832b9fa-e5fd-483f-bbae-a4bb4c28b863",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-05-03 23:50:24",
@@ -23085,6 +24877,14 @@
 		"createDate" : "2016-07-09 19:30:34",
 		"word" : "contrario",
 		"definition" : "opposite (contrary)",
+		"example" : []
+	},
+	{
+		"studyItemId" : "c83b7426-16ed-4d32-aee6-3bbba9ed4e7a",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-24 18:42:27",
+		"word" : "encarnado",
+		"definition" : "ingrown, red",
 		"example" : []
 	},
 	{
@@ -23152,6 +24952,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "c8cd5db8-2fb4-4875-9f93-2d17c529875f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-22 23:20:04",
+		"word" : "replicar",
+		"definition" : "to reply",
+		"example" : []
+	},
+	{
 		"studyItemId" : "c8d82eea-6e04-42b2-9b7c-dc404048f6bb",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-21 14:54:36",
@@ -23181,7 +24989,7 @@
 		"createDate" : "2015-02-21 19:40:03",
 		"word" : "delantero, a",
 		"definition" : "lead; front, forward",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "c916b4a0-9d6b-4664-8278-d869c2ad8bbb",
@@ -23232,12 +25040,20 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "c959fe2b-5be6-46d2-88b6-4269528265d3",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-19 20:34:12",
+		"word" : "chatarra",
+		"definition" : "scrap, junk",
+		"example" : []
+	},
+	{
 		"studyItemId" : "c98a2d7c-893a-4c85-abf9-0578614fefbf",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-11-15 00:59:15",
 		"word" : "azafata",
 		"definition" : "stewardess",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "c9a94496-a6a4-4689-8a44-be743d137ff6",
@@ -23360,6 +25176,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "ca35bc0c-3dfe-44df-9670-3fe2c40f5b34",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:09:30",
+		"word" : "requemado",
+		"definition" : "burnt, scorched",
+		"example" : []
+	},
+	{
 		"studyItemId" : "ca3664b7-889f-421c-8f39-abccc6bf4e83",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-04-24 14:46:44",
@@ -23381,6 +25205,14 @@
 		"createDate" : "2015-01-20 00:49:49",
 		"word" : "odio",
 		"definition" : "hate",
+		"example" : []
+	},
+	{
+		"studyItemId" : "ca725252-23b9-4f6b-a6b1-e7feb923448e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:27:36",
+		"word" : "hielera",
+		"definition" : "cooler",
 		"example" : []
 	},
 	{
@@ -23413,6 +25245,14 @@
 		"createDate" : "2016-03-13 04:50:42",
 		"word" : "tambalear",
 		"definition" : "to stagger",
+		"example" : []
+	},
+	{
+		"studyItemId" : "ca9ce4c4-cc7c-4fc8-8629-751c4f1c2d4b",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-05 23:07:40",
+		"word" : "lodoso",
+		"definition" : "muddy",
 		"example" : []
 	},
 	{
@@ -23480,12 +25320,20 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "caed7b24-76b1-43c9-8ecd-b38aafff68ac",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:11:05",
+		"word" : "esmalte",
+		"definition" : "nail polish",
+		"example" : []
+	},
+	{
 		"studyItemId" : "caf175b5-5796-4d5c-b09d-f78432f0d247",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-10-11 00:23:49",
 		"word" : "porfiar",
 		"definition" : "to argue, to barter, to bargain",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "caf410ff-9b92-40ec-9ea1-ed3c37b26a01",
@@ -23493,6 +25341,14 @@
 		"createDate" : "2015-01-20 00:50:01",
 		"word" : "jubliarse",
 		"definition" : "to retire",
+		"example" : []
+	},
+	{
+		"studyItemId" : "cb16ec83-1b25-4413-9d28-43d457533448",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 19:56:43",
+		"word" : "jalar",
+		"definition" : "to pull",
 		"example" : []
 	},
 	{
@@ -23760,6 +25616,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "cdd28444-15fa-4e03-bec8-45e1a99319b6",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:57:59",
+		"word" : "grapadora",
+		"definition" : "stapler",
+		"example" : []
+	},
+	{
 		"studyItemId" : "cddc2bc8-bb71-4837-865f-b17f80abe639",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-06 00:15:47",
@@ -23805,6 +25669,14 @@
 		"createDate" : "2016-03-05 18:50:00",
 		"word" : "puñetazo",
 		"definition" : "a punch, hit",
+		"example" : []
+	},
+	{
+		"studyItemId" : "ce7741fd-6759-4b4e-a5ce-ac98e0d17c57",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:07:49",
+		"word" : "querubín",
+		"definition" : "cherub",
 		"example" : []
 	},
 	{
@@ -23904,6 +25776,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "cfac3d32-9476-4cc0-a9c8-89961fe81b93",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:44:50",
+		"word" : "encinta",
+		"definition" : "pregnant",
+		"example" : []
+	},
+	{
 		"studyItemId" : "cfb423ce-fbc8-4472-9496-b5a4d3d0d390",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-05-16 18:15:16",
@@ -23941,7 +25821,7 @@
 		"createDate" : "2016-07-01 22:27:09",
 		"word" : "el pay",
 		"definition" : "pie",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "d008537c-b03e-4a8b-a885-3fb75d2e13e5",
@@ -24120,11 +26000,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "d131b5d0-49a2-4ae7-aa7d-ee0c1f98a418",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 19:33:06",
+		"word" : "encaminar",
+		"definition" : "to direct, to guide, to aim",
+		"example" : []
+	},
+	{
 		"studyItemId" : "d1480b92-283e-4f37-9e4e-85021090b9b5",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-01-18 21:17:23",
 		"word" : "reponer",
 		"definition" : "to replace",
+		"example" : []
+	},
+	{
+		"studyItemId" : "d150de7a-ed83-4715-9433-f899ed26e568",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:30:46",
+		"word" : "encogerse de hombros",
+		"definition" : "to shrug",
 		"example" : []
 	},
 	{
@@ -24228,7 +26124,7 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-04-30 20:03:07",
 		"word" : "entablar",
-		"definition" : "to initiate",
+		"definition" : "to initiate; to put down floorboards",
 		"example" : []
 	},
 	{
@@ -24277,6 +26173,22 @@
 		"createDate" : "2015-12-01 01:22:07",
 		"word" : "derribar",
 		"definition" : "to demolish, to bring down, (shoot down)",
+		"example" : []
+	},
+	{
+		"studyItemId" : "d268fa60-196c-4d63-a0f5-7f7e9ded6ae5",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-06 19:04:47",
+		"word" : "entusiasmado",
+		"definition" : "excited",
+		"example" : []
+	},
+	{
+		"studyItemId" : "d26c5e34-a514-47c1-924c-9552b766ffe1",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 19:23:02",
+		"word" : "orillarse",
+		"definition" : "to pull over, to move to one side",
 		"example" : []
 	},
 	{
@@ -24360,6 +26272,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "d34b9ab0-bafc-42c6-998b-ee50aa1a5087",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-28 00:44:21",
+		"word" : "hucha",
+		"definition" : "cash box, piggy bank",
+		"example" : []
+	},
+	{
 		"studyItemId" : "d361be75-38d4-4cb1-8e15-35fcae212bec",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-04-06 23:04:42",
@@ -24376,11 +26296,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "d388e4dc-f2a1-4e97-9146-405a5a69db8e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:59:38",
+		"word" : "listón",
+		"definition" : "ribbon",
+		"example" : []
+	},
+	{
 		"studyItemId" : "d38c1db5-cb83-458a-b9ec-210fa1a39060",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-04 18:07:14",
 		"word" : "soñar",
 		"definition" : "to dream",
+		"example" : []
+	},
+	{
+		"studyItemId" : "d3aa54b4-b8bb-4aa3-ac4a-b731b543806e",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:56:44",
+		"word" : "cosquillas",
+		"definition" : "tickles",
 		"example" : []
 	},
 	{
@@ -24421,6 +26357,14 @@
 		"createDate" : "2015-03-08 23:28:28",
 		"word" : "revelar",
 		"definition" : "to reveal",
+		"example" : []
+	},
+	{
+		"studyItemId" : "d417a84b-f561-4b55-bdf5-9074581c7bda",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-05 23:36:35",
+		"word" : "plantilla",
+		"definition" : "insole",
 		"example" : []
 	},
 	{
@@ -24565,6 +26509,14 @@
 		"createDate" : "2016-01-23 20:21:24",
 		"word" : "turco",
 		"definition" : "turkish",
+		"example" : []
+	},
+	{
+		"studyItemId" : "d56b7288-fd10-4a5b-b4d7-8d727ab12fb7",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 20:53:04",
+		"word" : "por lo tanto",
+		"definition" : "therefore",
 		"example" : []
 	},
 	{
@@ -24752,6 +26704,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "d6e7299d-44f5-41a0-8fed-ecbd043d9405",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-24 18:38:34",
+		"word" : "pétalo",
+		"definition" : "flower petal",
+		"example" : []
+	},
+	{
 		"studyItemId" : "d6f31bfb-af4f-48c6-9dc5-369e48724db2",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-10-04 14:02:44",
@@ -24813,6 +26773,14 @@
 		"createDate" : "2015-02-02 08:09:41",
 		"word" : "me di cuenta",
 		"definition" : "i realized",
+		"example" : []
+	},
+	{
+		"studyItemId" : "d775dc0e-7198-458f-abd9-2a20aa50c016",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 20:07:41",
+		"word" : "forrar",
+		"definition" : "to cover, to line with fabric",
 		"example" : []
 	},
 	{
@@ -24902,6 +26870,14 @@
 		"word" : "crezco",
 		"definition" : "i grow",
 		"example" : "Crecer"
+	},
+	{
+		"studyItemId" : "d8197332-9f3c-43c3-a9df-eec38e388b52",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-22 23:56:34",
+		"word" : "compañía",
+		"definition" : "company",
+		"example" : []
 	},
 	{
 		"studyItemId" : "d8247c5d-5cd0-4f46-9ce2-6cfde5ebce38",
@@ -25000,6 +26976,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "d8a58594-01f5-457c-9de9-65f78b4b5211",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:53:49",
+		"word" : "pandero",
+		"definition" : "tambourine",
+		"example" : []
+	},
+	{
 		"studyItemId" : "d8af7189-764e-40e7-89b0-4ff0901d821c",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-18 10:27:05",
@@ -25048,6 +27032,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "d8df9f65-ded7-483c-a027-e3de59be5002",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-07-01 00:10:18",
+		"word" : "cegador",
+		"definition" : "blinding",
+		"example" : []
+	},
+	{
 		"studyItemId" : "d8e20e51-5f3f-45aa-bf11-4b2dfb2ac6c7",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-25 22:56:59",
@@ -25085,6 +27077,14 @@
 		"createDate" : "2015-10-31 19:45:06",
 		"word" : "trasnochar",
 		"definition" : "to go to bed very late",
+		"example" : []
+	},
+	{
+		"studyItemId" : "d91c2893-170a-4c38-bc11-e327fa120fd7",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-29 00:48:55",
+		"word" : "yermo, a",
+		"definition" : "barren, uninhabited",
 		"example" : []
 	},
 	{
@@ -25276,7 +27276,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-10-21 01:18:00",
 		"word" : "obligar",
-		"definition" : "to force",
+		"definition" : "to force, to oblige",
 		"example" : "El policía me obligó a detenerme aunque no manejaba sobre el límite de velocidad.\nThe police officer forced me to stop even though I wasn\"t speeding."
 	},
 	{
@@ -25320,11 +27320,27 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "dae7c17e-362a-429b-9967-fd5e5be374b0",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 19:17:36",
+		"word" : "a rastras",
+		"definition" : "dragged",
+		"example" : []
+	},
+	{
 		"studyItemId" : "dafaa1eb-21fc-43ab-9ffe-c493f4b91003",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-03-06 23:04:40",
 		"word" : "fundillo",
 		"definition" : "butt",
+		"example" : []
+	},
+	{
+		"studyItemId" : "db26289c-4f05-49ae-ae4b-82f2e904d5b2",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:54:35",
+		"word" : "colcha",
+		"definition" : "quilt",
 		"example" : []
 	},
 	{
@@ -25384,6 +27400,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "dbc080a2-c8b4-4b2d-885c-70dc94dbe985",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-27 19:48:48",
+		"word" : "pararse",
+		"definition" : "to stop, to stand up",
+		"example" : []
+	},
+	{
 		"studyItemId" : "dbcbd308-18fd-4071-928a-4087613a7825",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:50:04",
@@ -25405,6 +27429,14 @@
 		"createDate" : "2015-01-24 00:08:41",
 		"word" : "cepillo",
 		"definition" : "a brush",
+		"example" : []
+	},
+	{
+		"studyItemId" : "dbe7c91b-c501-432a-ab0c-8ff01a8a9618",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:01:17",
+		"word" : "trabarse",
+		"definition" : "to get tangled or jammed",
 		"example" : []
 	},
 	{
@@ -25512,6 +27544,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "dcb2e657-cee6-4de7-8d7b-b6cbb72a336d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-19 00:11:12",
+		"word" : "coser",
+		"definition" : "to sow",
+		"example" : []
+	},
+	{
 		"studyItemId" : "dcf80580-d67c-4ae6-b64a-7761f5b7baed",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-08 23:01:59",
@@ -25581,7 +27621,7 @@
 		"createDate" : "2016-03-26 15:41:11",
 		"word" : "salvia",
 		"definition" : "sage (herb)",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "ddb91bf5-0c23-4092-86e1-ed06d290fac7",
@@ -25696,6 +27736,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "de896ec9-a960-4bdb-9b01-654264a5edc6",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:30:36",
+		"word" : "carbón",
+		"definition" : "charcoal",
+		"example" : []
+	},
+	{
 		"studyItemId" : "de8e3430-2c78-4a56-b8d3-eac8b4a85af0",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-07-10 19:20:08",
@@ -25709,6 +27757,14 @@
 		"createDate" : "2015-01-20 00:49:55",
 		"word" : "criar",
 		"definition" : "to raise, to bring up",
+		"example" : []
+	},
+	{
+		"studyItemId" : "de9a3476-b0ba-4fd4-81ab-44ffab12ae68",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:51:04",
+		"word" : "crepúsculo",
+		"definition" : "twilight",
 		"example" : []
 	},
 	{
@@ -25784,6 +27840,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "df814743-db82-4319-8002-31a94c548df7",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-08 00:10:03",
+		"word" : "cachucha",
+		"definition" : "cap",
+		"example" : []
+	},
+	{
 		"studyItemId" : "df868831-f142-4848-8172-889bb141be31",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-28 21:10:15",
@@ -25797,6 +27861,22 @@
 		"createDate" : "2015-04-22 00:22:44",
 		"word" : "lirio",
 		"definition" : "lily",
+		"example" : []
+	},
+	{
+		"studyItemId" : "dfb2a762-2a22-43d9-a3a2-e54e349fc551",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:31:19",
+		"word" : "fideo",
+		"definition" : "noodle",
+		"example" : []
+	},
+	{
+		"studyItemId" : "dfc25501-b9b0-4d73-bc41-4bbc34829577",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-20 04:47:47",
+		"word" : "hijo",
+		"definition" : "son",
 		"example" : []
 	},
 	{
@@ -25845,6 +27925,22 @@
 		"createDate" : "2015-05-30 20:18:06",
 		"word" : "aperitivo",
 		"definition" : "appetizer",
+		"example" : []
+	},
+	{
+		"studyItemId" : "e041e441-f54c-4f38-a1bf-a7cb0f63bda4",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:57:54",
+		"word" : "calentura",
+		"definition" : "fever",
+		"example" : []
+	},
+	{
+		"studyItemId" : "e04d0f0b-cf83-423b-9979-16c21ebbbf7f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 18:57:11",
+		"word" : "trapo",
+		"definition" : "rag",
 		"example" : []
 	},
 	{
@@ -25973,7 +28069,15 @@
 		"createDate" : "2015-02-22 20:56:53",
 		"word" : "traje",
 		"definition" : "i did bring",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "e13cae9d-735d-4a56-9f9e-8d784c3d394b",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 00:01:17",
+		"word" : "cosechar",
+		"definition" : "to harvest, to pick",
+		"example" : []
 	},
 	{
 		"studyItemId" : "e13f9a01-e122-40f1-85b1-f8452ac85de3",
@@ -26000,6 +28104,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "e167c7b5-ddad-40f7-95d9-60e53a58ef46",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:47:37",
+		"word" : "alimaña",
+		"definition" : "pest",
+		"example" : []
+	},
+	{
 		"studyItemId" : "e16ca974-6a22-4fbd-b647-a78b03433ec7",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-29 21:22:25",
@@ -26013,7 +28125,7 @@
 		"createDate" : "2016-06-12 17:54:48",
 		"word" : "conozco",
 		"definition" : "i know someone",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "e18277ff-71e4-4a0d-beea-c569135ed500",
@@ -26085,6 +28197,14 @@
 		"createDate" : "2015-06-09 00:06:50",
 		"word" : "cinciente",
 		"definition" : "self-aware",
+		"example" : []
+	},
+	{
+		"studyItemId" : "e2607008-606c-47bb-ba1e-13a328180d34",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-10 19:30:42",
+		"word" : "consentir",
+		"definition" : "to allow; to consent",
 		"example" : []
 	},
 	{
@@ -26184,6 +28304,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "e35d8fe2-48b8-47c5-b4f8-a3942016fae5",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-24 18:28:46",
+		"word" : "desasosegar",
+		"definition" : "to disturb, to make uneasy",
+		"example" : []
+	},
+	{
 		"studyItemId" : "e3666503-02a6-49e4-8c51-0bd6c4acd892",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2017-02-04 20:45:47",
@@ -26205,6 +28333,14 @@
 		"createDate" : "2015-01-20 00:50:01",
 		"word" : "proyecto",
 		"definition" : "project",
+		"example" : []
+	},
+	{
+		"studyItemId" : "e37a41b1-e8d4-4efd-918d-a57a6e6950f6",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-31 00:37:44",
+		"word" : "fruncir",
+		"definition" : "to furrow",
 		"example" : []
 	},
 	{
@@ -26272,11 +28408,35 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "e3d556a7-e39a-4c33-961e-5d1fe97e9ede",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:07:08",
+		"word" : "alargada",
+		"definition" : "long",
+		"example" : []
+	},
+	{
+		"studyItemId" : "e3e8d384-f6b9-4242-936d-be838e11bbd4",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 17:14:54",
+		"word" : "bizquear",
+		"definition" : "to squint",
+		"example" : []
+	},
+	{
 		"studyItemId" : "e4162da7-7b33-4953-a7d0-30ff09aedb29",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:50:01",
 		"word" : "callado, a",
 		"definition" : "quiet",
+		"example" : []
+	},
+	{
+		"studyItemId" : "e418eed2-2843-4954-83fc-b8a77244f8bd",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-16 23:13:12",
+		"word" : "vivienda",
+		"definition" : "housing, house",
 		"example" : []
 	},
 	{
@@ -26288,12 +28448,20 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "e423ac95-6b15-421c-b4f0-1d01aaaddb2d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-31 00:17:37",
+		"word" : "locura",
+		"definition" : "madness",
+		"example" : []
+	},
+	{
 		"studyItemId" : "e45f2468-18fc-4f98-9325-b04478361149",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-11-09 00:34:17",
 		"word" : "género",
 		"definition" : "kind, type, gender",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "e4636498-282e-4979-9cc5-7d04554b5383",
@@ -26360,6 +28528,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "e49db5b7-35df-4b33-8d83-bbbc49efcefe",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-27 19:37:08",
+		"word" : "loma",
+		"definition" : "hill",
+		"example" : []
+	},
+	{
 		"studyItemId" : "e4c8816a-efd2-41cd-a011-672b7bec832e",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-14 23:48:22",
@@ -26389,6 +28565,14 @@
 		"createDate" : "2016-01-30 18:45:11",
 		"word" : "vigente",
 		"definition" : "valid",
+		"example" : []
+	},
+	{
+		"studyItemId" : "e53b05b6-f6f7-4ad7-a143-c10f57c56cb9",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:07:28",
+		"word" : "lozano",
+		"definition" : "lush",
 		"example" : []
 	},
 	{
@@ -26517,7 +28701,7 @@
 		"createDate" : "2015-05-30 19:30:14",
 		"word" : "hondo",
 		"definition" : "deep",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "e68b5a76-c5ed-45d3-9e91-f8f447de1857",
@@ -26592,6 +28776,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "e70688e4-7f85-4779-9f36-f875416b675d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-21 19:54:26",
+		"word" : "surco",
+		"definition" : "furrow, track, rut",
+		"example" : []
+	},
+	{
 		"studyItemId" : "e706bfc0-0101-468e-af40-dcb43ee7ea9d",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:49:56",
@@ -26656,6 +28848,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "e7c860ce-4912-4868-98d4-cac68e539024",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-12 18:12:36",
+		"word" : "establo",
+		"definition" : "stable, barn",
+		"example" : []
+	},
+	{
 		"studyItemId" : "e7dcec65-7cb6-4191-beaf-7d6e2670edec",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-12-31 00:25:50",
@@ -26709,7 +28909,7 @@
 		"createDate" : "2016-06-19 18:28:58",
 		"word" : "miente",
 		"definition" : "you (formal) lie",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "e87c11a5-9c34-41a9-9c5d-c9d242a0159d",
@@ -26848,6 +29048,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "e975480a-a498-4cd9-919a-99a91101b89b",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-18 19:35:56",
+		"word" : "mirar de traves",
+		"definition" : "to squint",
+		"example" : []
+	},
+	{
 		"studyItemId" : "e99303b2-be1e-44bb-a1fe-ab2452cf0f1d",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-25 00:13:39",
@@ -26973,6 +29181,22 @@
 		"createDate" : "2015-09-05 18:12:25",
 		"word" : "reclutar",
 		"definition" : "to recruit",
+		"example" : []
+	},
+	{
+		"studyItemId" : "eb132858-e812-4c4e-add1-19264ebbd3b3",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:30:47",
+		"word" : "ensartar",
+		"definition" : "to string",
+		"example" : []
+	},
+	{
+		"studyItemId" : "eb132983-1b65-4be7-b78b-fb6900c42c7a",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-06 23:08:12",
+		"word" : "hotel de lujo",
+		"definition" : "luxury hotel",
 		"example" : []
 	},
 	{
@@ -27205,7 +29429,7 @@
 		"createDate" : "2016-06-19 18:21:51",
 		"word" : "puedo",
 		"definition" : "I can",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "ecbf2fbb-6e8f-4ccb-8cc6-71816bf40ad3",
@@ -27248,6 +29472,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "ed1cae39-dd0e-4b25-84e9-bdd5c16379b9",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-27 19:38:30",
+		"word" : "pelón",
+		"definition" : "bald",
+		"example" : []
+	},
+	{
 		"studyItemId" : "ed1deff3-1a7c-46af-b98b-2bcef68db0ff",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:49:53",
@@ -27261,6 +29493,14 @@
 		"createDate" : "2015-02-03 23:36:53",
 		"word" : "tener",
 		"definition" : "to have",
+		"example" : []
+	},
+	{
+		"studyItemId" : "ed34e0a9-fefe-4e20-a64b-55378ee81b0d",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-13 18:53:31",
+		"word" : "aletear",
+		"definition" : "to flap it\"s wings",
 		"example" : []
 	},
 	{
@@ -27301,6 +29541,14 @@
 		"createDate" : "2015-05-06 00:13:18",
 		"word" : "vorágine",
 		"definition" : "whirlpool; vortex; confusion",
+		"example" : []
+	},
+	{
+		"studyItemId" : "ed964e09-42ee-49b7-9a6a-924bc8b3a186",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-29 23:06:11",
+		"word" : "sosegado",
+		"definition" : "peaceful, calm",
 		"example" : []
 	},
 	{
@@ -27472,6 +29720,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "eeb3ca59-5af0-453f-8135-a967482f4d1f",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-14 18:51:02",
+		"word" : "saeta",
+		"definition" : "dart, arrow",
+		"example" : []
+	},
+	{
 		"studyItemId" : "eeef2a19-17ed-4cc6-b32f-4183ce0134fb",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-09-18 23:21:15",
@@ -27557,7 +29813,7 @@
 		"createDate" : "2016-03-29 00:06:56",
 		"word" : "buque",
 		"definition" : "ship",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "ef6d31db-cf20-485f-a255-b9f70cfe2453",
@@ -27581,14 +29837,6 @@
 		"createDate" : "2015-05-05 00:46:15",
 		"word" : "monedero",
 		"definition" : "change purse",
-		"example" : ""
-	},
-	{
-		"studyItemId" : "efb07e30-94ef-498a-b466-d4d1a6e31401",
-		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
-		"createDate" : "2015-12-05 20:59:07",
-		"word" : "ventajas",
-		"definition" : "advantage",
 		"example" : []
 	},
 	{
@@ -27704,6 +29952,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "f0ac5842-9db9-4605-90ac-6912f9552345",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-03 19:49:25",
+		"word" : "arrimar",
+		"definition" : "to move closer",
+		"example" : []
+	},
+	{
 		"studyItemId" : "f0b0ad49-3814-4acc-a9e6-992ef42c2e25",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-02-14 00:53:01",
@@ -27725,6 +29981,14 @@
 		"createDate" : "2015-12-13 00:58:24",
 		"word" : "impoluto",
 		"definition" : "spotless, pure, unblemished",
+		"example" : []
+	},
+	{
+		"studyItemId" : "f0ccbc1e-49d4-42ab-a4e5-c70ccbb03b18",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-07 18:45:37",
+		"word" : "desbordar",
+		"definition" : "to overflow, to exceed",
 		"example" : []
 	},
 	{
@@ -27757,6 +30021,14 @@
 		"createDate" : "2015-01-30 22:53:24",
 		"word" : "peinarse",
 		"definition" : "to comb one\"s hair",
+		"example" : []
+	},
+	{
+		"studyItemId" : "f12d5a96-9f43-44af-ab09-18265abc73e7",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:03:35",
+		"word" : "cacariza",
+		"definition" : "pockmarked",
 		"example" : []
 	},
 	{
@@ -27885,7 +30157,15 @@
 		"createDate" : "2015-12-09 21:16:41",
 		"word" : "ahorrar",
 		"definition" : "to save",
-		"example" : ""
+		"example" : []
+	},
+	{
+		"studyItemId" : "f202d483-d8f3-4c5f-afd5-7432574c0848",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-06 18:46:18",
+		"word" : "murmullo",
+		"definition" : "murmur, whispering, rustling",
+		"example" : []
 	},
 	{
 		"studyItemId" : "f237824b-14a3-4f76-ae5d-d4551cb205e1",
@@ -27917,7 +30197,7 @@
 		"createDate" : "2015-01-25 21:06:20",
 		"word" : "poseer",
 		"definition" : "to posess",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "f2660a8a-57a1-4904-bbf1-9fdf24d95a4a",
@@ -27949,6 +30229,14 @@
 		"createDate" : "2016-07-10 19:21:37",
 		"word" : "deparar",
 		"definition" : "to bring, to provide",
+		"example" : []
+	},
+	{
+		"studyItemId" : "f2c4c203-f773-4647-b720-2550161fd6e4",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-04 22:50:32",
+		"word" : "cántaro",
+		"definition" : "jug, pitcher",
 		"example" : []
 	},
 	{
@@ -28021,6 +30309,14 @@
 		"createDate" : "2015-01-29 01:31:36",
 		"word" : "cuyo, a",
 		"definition" : "whose",
+		"example" : []
+	},
+	{
+		"studyItemId" : "f3930581-29bc-4f2f-b6d4-bdc99169e575",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-04 19:54:37",
+		"word" : "papeleo",
+		"definition" : "paperwork, red tape",
 		"example" : []
 	},
 	{
@@ -28117,7 +30413,7 @@
 		"createDate" : "2015-11-14 19:04:38",
 		"word" : "palanca",
 		"definition" : "lever, influence; joy stick",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "f4e54987-74fc-4a48-8642-3c3c38a41f18",
@@ -28192,6 +30488,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "f532319f-0ad6-45ae-b92e-6fab2591b153",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-16 22:35:14",
+		"word" : "bote de basura",
+		"definition" : "garbage can",
+		"example" : []
+	},
+	{
 		"studyItemId" : "f5665ed0-c4e6-4397-838c-5aa0fc60889a",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-01-20 00:50:02",
@@ -28206,6 +30510,14 @@
 		"word" : "salvo",
 		"definition" : "except",
 		"example" : "Nunca nos vamos de vacaciones, salvo a la casa de mis abuelos. \nWe never go on vacation, except to my grandparent\"s house."
+	},
+	{
+		"studyItemId" : "f5778a18-6461-454b-8ae0-f8ea62518809",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-06-23 23:48:43",
+		"word" : "rendija",
+		"definition" : "crack",
+		"example" : []
 	},
 	{
 		"studyItemId" : "f584e7b0-753c-4f97-860d-1eb8ebd378c5",
@@ -28436,7 +30748,7 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-04-05 22:54:21",
 		"word" : "arrancar",
-		"definition" : "to start (car, computer)",
+		"definition" : "to turn on; to remove by force; to provoke",
 		"example" : "Arrancó la computadora y jugó videojuegos.\nHe started up the computer and played videogames."
 	},
 	{
@@ -28528,6 +30840,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "f85f7bc9-055f-43e5-9106-c94d3554cd98",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-05-28 20:42:56",
+		"word" : "ordenar",
+		"definition" : "to order",
+		"example" : []
+	},
+	{
 		"studyItemId" : "f8638f0c-6edf-49c2-8c9e-a7632e7220c8",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2015-05-09 20:23:07",
@@ -28573,7 +30893,7 @@
 		"createDate" : "2017-01-12 00:25:51",
 		"word" : "tintinear",
 		"definition" : "to jingle",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "f8b01b11-12cc-42cf-b35e-485eed3e91b7",
@@ -28589,6 +30909,14 @@
 		"createDate" : "2015-11-21 19:20:11",
 		"word" : "corroborar",
 		"definition" : "to confirm",
+		"example" : []
+	},
+	{
+		"studyItemId" : "f8cd4369-32ce-4c49-99f3-bcffe134c9f7",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-29 18:05:31",
+		"word" : "presentimiento",
+		"definition" : "premonition",
 		"example" : []
 	},
 	{
@@ -28716,8 +31044,8 @@
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-02-15 23:44:33",
 		"word" : "rumbo",
-		"definition" : "course, direction",
-		"example" : ""
+		"definition" : "course, direction, heading",
+		"example" : []
 	},
 	{
 		"studyItemId" : "f9942afd-dbbb-45fb-b575-804c466e5456",
@@ -28816,6 +31144,14 @@
 		"example" : []
 	},
 	{
+		"studyItemId" : "fa58a68a-5d4b-4e0e-b656-712dddbe6f93",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-03-05 20:26:59",
+		"word" : "chupamirto",
+		"definition" : "hummingbird",
+		"example" : []
+	},
+	{
 		"studyItemId" : "fa5a9d0f-961b-48aa-8461-5d9b82706325",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"createDate" : "2016-12-13 00:33:31",
@@ -28829,6 +31165,14 @@
 		"createDate" : "2016-04-09 20:52:02",
 		"word" : "camorrista",
 		"definition" : "troublemaker",
+		"example" : []
+	},
+	{
+		"studyItemId" : "fa7ed683-bb62-44e9-94cf-56ef2f17a1ab",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
+		"createDate" : "2017-04-30 19:57:00",
+		"word" : "pliegue",
+		"definition" : "Fold of skin",
 		"example" : []
 	},
 	{
@@ -29109,7 +31453,7 @@
 		"createDate" : "2016-06-04 16:22:17",
 		"word" : "aprende",
 		"definition" : "he learns",
-		"example" : ""
+		"example" : []
 	},
 	{
 		"studyItemId" : "fcf60715-df29-4fde-8647-46b07eea33dc",

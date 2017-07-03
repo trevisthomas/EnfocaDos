@@ -549,6 +549,18 @@ class DataStoreTests: XCTestCase {
         
     }
     
+    func testQuiz_HardestShouldUnTested(){
+        mockDataThree_UnscoredMeta()
+        
+        let result = sut.fetchQuiz(cardOrder: .hardest, wordCount: 3)
+        
+        XCTAssertEqual(result[0], wordPairs[1])
+        XCTAssertEqual(result[1], wordPairs[0])
+        XCTAssertEqual(result[2], wordPairs[2])
+        
+        
+    }
+    
     func testQuiz_LatestShouldBeLater(){
         mockDataOne()
         
@@ -855,7 +867,41 @@ extension DataStoreTests{
         
         sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
     }
-    
+
+    func mockDataThree_UnscoredMeta(){
+        tags.append(Tag(tagId: "1", name: "Noun"))
+        tags.append(Tag(tagId: "2", name: "Verb"))
+        tags.append(Tag(tagId: "3", name: "Adjective"))
+        
+        wordPairs.append(WordPair(pairId: "100", word: "Azul", definition: "Blue"))
+        wordPairs.append(WordPair(pairId: "101", word: "Amarillo", definition: "Yellow"))
+        wordPairs.append(WordPair(pairId: "102", word: "Clave", definition: "Nail"))
+        
+        let today = Date()
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today)!
+        //        let twoDaysAgo = Calendar.current.date(byAdding: .day, value: -2, to: today)!
+        
+        let lastWeek = Calendar.current.date(byAdding: .day, value: -7, to: today)!
+        let lastWeekPlus1 = Calendar.current.date(byAdding: .day, value: 1, to: lastWeek)!
+        let lastWeekPlus2 = Calendar.current.date(byAdding: .day, value: 2, to: lastWeek)!
+        
+        metaDataList.append(MetaData(metaId: "1010", pairId: wordPairs[0].pairId, dateCreated: lastWeek, dateUpdated: today, incorrectCount: 4, totalTime: 10, timedViewCount: 10))
+        
+        metaDataList.append(MetaData(metaId: "1011", pairId: wordPairs[1].pairId, dateCreated: lastWeekPlus2, dateUpdated: nil, incorrectCount: 0, totalTime: 0, timedViewCount: 0))
+        
+        metaDataList.append(MetaData(metaId: "1012", pairId: wordPairs[2].pairId, dateCreated: lastWeekPlus1, dateUpdated: yesterday, incorrectCount: 1, totalTime: 50, timedViewCount: 10))
+        
+        
+        wpAss.append(TagAssociation(associationId: "10", wordPairId: wordPairs[0].pairId, tagId: tags[0].tagId))
+        
+        wpAss.append(TagAssociation(associationId: "11", wordPairId: wordPairs[0].pairId, tagId: tags[2].tagId))
+        
+        wpAss.append(TagAssociation(associationId: "12", wordPairId: wordPairs[1].pairId, tagId: tags[0].tagId))
+        
+        
+        sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
+    }
+
     
 }
 

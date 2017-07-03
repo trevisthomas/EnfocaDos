@@ -43,19 +43,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F4z-Qh-F6R">
+                                <rect key="frame" x="16" y="509" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YKE-Lh-DXr"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jrN-cT-doF" firstAttribute="top" secondItem="GRg-Ik-gU1" secondAttribute="bottom" constant="28.5" id="0tH-g2-qT6"/>
                             <constraint firstItem="jrN-cT-doF" firstAttribute="centerY" secondItem="glO-DH-S3r" secondAttribute="centerY" id="CIs-ks-NoQ"/>
+                            <constraint firstItem="z3s-lE-CYM" firstAttribute="top" secondItem="F4z-Qh-F6R" secondAttribute="bottom" constant="30" id="CSn-Xf-FcT"/>
                             <constraint firstItem="GRg-Ik-gU1" firstAttribute="leading" secondItem="glO-DH-S3r" secondAttribute="leadingMargin" constant="41" id="dPi-Lw-hoc"/>
+                            <constraint firstItem="F4z-Qh-F6R" firstAttribute="trailing" secondItem="glO-DH-S3r" secondAttribute="trailingMargin" id="l5r-ID-pTt"/>
                             <constraint firstItem="jrN-cT-doF" firstAttribute="centerX" secondItem="glO-DH-S3r" secondAttribute="centerX" id="lPJ-EV-arm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GRg-Ik-gU1" secondAttribute="trailing" constant="36" id="s3L-5r-uIf"/>
                             <constraint firstItem="GRg-Ik-gU1" firstAttribute="centerX" secondItem="glO-DH-S3r" secondAttribute="centerX" constant="2.5" id="uGI-t2-bkB"/>
+                            <constraint firstItem="F4z-Qh-F6R" firstAttribute="leading" secondItem="glO-DH-S3r" secondAttribute="leadingMargin" id="ykV-YD-GBO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="enfocaIdTextField" destination="GRg-Ik-gU1" id="zIJ-5b-unQ"/>
+                        <outlet property="textView" destination="F4z-Qh-F6R" id="kfR-DW-f1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FL-Qn-AK1" userLabel="First Responder" sceneMemberID="firstResponder"/>

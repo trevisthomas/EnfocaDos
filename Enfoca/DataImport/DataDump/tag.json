@@ -5,6 +5,11 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
 	},
 	{
+		"tagId" : "0fd045cf-d6a3-401e-92b5-17a1d77e171f",
+		"tagName" : "Bajo la alambrada",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
 		"tagId" : "17b654f8-2dc4-4b46-b9d9-7ae6a7eafc7e",
 		"tagName" : "food",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
@@ -23,6 +28,11 @@
 		"tagId" : "2d6004ac-22c2-4404-836f-cba7c6e2dcc9",
 		"tagName" : "sport",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "334e2241-718c-421a-8ecf-4d67b62662bb",
+		"tagName" : "Cajas de Cartón",
+		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd"
 	},
 	{
 		"tagId" : "389cb200-1f51-43f4-be51-dd2ae10c95bc",
@@ -85,6 +95,16 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
 	},
 	{
+		"tagId" : "750c4856-0b8f-41dc-ba3e-6bec0f97ba6a",
+		"tagName" : "El Arbol de Oro",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "83a2e457-c135-4104-948f-266ae834d48c",
+		"tagName" : "Bomba Estéreo - Amanecer",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
 		"tagId" : "842249ec-15b4-4139-b69c-5ec7cfde333d",
 		"tagName" : "instrument",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
@@ -117,6 +137,11 @@
 	{
 		"tagId" : "aa993a68-ca0b-490b-8495-c583f52b479c",
 		"tagName" : "Nosotros No",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
+	},
+	{
+		"tagId" : "b1945515-28d9-48df-b23b-beffc1422471",
+		"tagName" : "Spanish is Fun CH 20",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd"
 	},
 	{

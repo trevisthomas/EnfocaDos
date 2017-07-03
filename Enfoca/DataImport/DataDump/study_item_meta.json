@@ -280,6 +280,20 @@
 		"timedViewCount" : 23
 	},
 	{
+		"studyItemMetaId" : "02765c9c-459e-4a6c-b05d-45c1a2ee6f3c",
+		"createDate" : "2017-06-15 01:01:56",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "5cc428c3-87cc-420c-8ee4-6e0756697eb9",
+		"incorrectCount" : 7,
+		"viewCount" : 13,
+		"lastUpdate" : "2017-06-28 00:23:50",
+		"difficulty" : 0.5384615384615384,
+		"confidence" : 0,
+		"totalTime" : 91562,
+		"averageTime" : 7043,
+		"timedViewCount" : 13
+	},
+	{
 		"studyItemMetaId" : "0292896e-617d-4122-8a93-22a7e8897818",
 		"createDate" : "2015-02-08 22:06:24",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -376,6 +390,20 @@
 		"totalTime" : 508355,
 		"averageTime" : 14951,
 		"timedViewCount" : 34
+	},
+	{
+		"studyItemMetaId" : "033dccf0-0eb0-4eeb-b6ab-257711720370",
+		"createDate" : "2017-06-15 00:03:43",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e3e8d384-f6b9-4242-936d-be838e11bbd4",
+		"incorrectCount" : 8,
+		"viewCount" : 12,
+		"lastUpdate" : "2017-06-24 18:12:13",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 110569,
+		"averageTime" : 9214,
+		"timedViewCount" : 12
 	},
 	{
 		"studyItemMetaId" : "03445de6-cd2f-463b-a71b-2ecfe30897b9",
@@ -546,6 +574,20 @@
 		"timedViewCount" : 17
 	},
 	{
+		"studyItemMetaId" : "06a30e42-b82b-487a-b6e9-06673b366275",
+		"createDate" : "2017-06-11 18:42:27",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ca35bc0c-3dfe-44df-9670-3fe2c40f5b34",
+		"incorrectCount" : 4,
+		"viewCount" : 7,
+		"lastUpdate" : "2017-06-23 23:09:10",
+		"difficulty" : 0.5714285714285714,
+		"confidence" : 0,
+		"totalTime" : 97383,
+		"averageTime" : 13911,
+		"timedViewCount" : 7
+	},
+	{
 		"studyItemMetaId" : "06d07e44-9c54-40c1-ab47-9be814594c5b",
 		"createDate" : "2015-02-16 00:04:42",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -616,6 +658,20 @@
 		"timedViewCount" : 4
 	},
 	{
+		"studyItemMetaId" : "086f6688-7e95-4a34-b2cc-55a9127592c2",
+		"createDate" : "2017-06-10 19:59:10",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c6980c78-da52-47a3-b8a2-3e0194c99d76",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-11 18:35:57",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 35343,
+		"averageTime" : 17671,
+		"timedViewCount" : 2
+	},
+	{
 		"studyItemMetaId" : "086fa74a-7537-4a09-aff4-b805b65aa585",
 		"createDate" : "2015-02-05 00:54:05",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -684,6 +740,20 @@
 		"totalTime" : 73283,
 		"averageTime" : 3857,
 		"timedViewCount" : 19
+	},
+	{
+		"studyItemMetaId" : "09362a5a-afbb-4953-91e8-faf39697827f",
+		"createDate" : "2017-05-04 23:04:21",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "93da3cd1-deba-4316-9843-14528802ca20",
+		"incorrectCount" : 4,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-05-26 00:37:40",
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 80496,
+		"averageTime" : 20124,
+		"timedViewCount" : 4
 	},
 	{
 		"studyItemMetaId" : "09447a9f-ae25-42f8-a741-bf7c16267bbf",
@@ -826,6 +896,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "0b966585-e955-4c97-ad65-2467de6178b2",
+		"createDate" : "2017-06-15 01:02:15",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0d72ca1b-c5f8-4aef-ad4a-3a517f85fda2",
+		"incorrectCount" : 13,
+		"viewCount" : 19,
+		"lastUpdate" : "2017-06-24 18:07:40",
+		"difficulty" : 0.6842105263157895,
+		"confidence" : 0,
+		"totalTime" : 259265,
+		"averageTime" : 13645,
+		"timedViewCount" : 19
+	},
+	{
 		"studyItemMetaId" : "0bd7f564-d058-4fc8-8e55-00f78f8cea23",
 		"createDate" : "2016-03-04 01:15:44",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -910,18 +994,32 @@
 		"timedViewCount" : 18
 	},
 	{
+		"studyItemMetaId" : "0ce1847d-3e9a-4167-9dfe-64d733727848",
+		"createDate" : "2017-06-15 01:02:00",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "9b1210f1-957a-4937-9058-255e9c5deedc",
+		"incorrectCount" : 15,
+		"viewCount" : 23,
+		"lastUpdate" : "2017-06-28 00:19:38",
+		"difficulty" : 0.6521739130434783,
+		"confidence" : 0,
+		"totalTime" : 388177,
+		"averageTime" : 16877,
+		"timedViewCount" : 23
+	},
+	{
 		"studyItemMetaId" : "0cece5f3-3c7d-41b4-b5ac-0275c310b677",
 		"createDate" : "2015-12-05 20:11:51",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "b4158390-fbfc-4a60-a69f-bf1b3258bfee",
-		"incorrectCount" : 25,
-		"viewCount" : 39,
-		"lastUpdate" : "2016-06-20 11:56:04",
-		"difficulty" : 0.6410256410256411,
+		"incorrectCount" : 29,
+		"viewCount" : 44,
+		"lastUpdate" : "2017-06-04 18:50:17",
+		"difficulty" : 0.6590909090909091,
 		"confidence" : 0,
-		"totalTime" : 375656,
-		"averageTime" : 9632,
-		"timedViewCount" : 39
+		"totalTime" : 462678,
+		"averageTime" : 10515,
+		"timedViewCount" : 44
 	},
 	{
 		"studyItemMetaId" : "0d04bb91-46c3-4e89-9228-e5d43a7e2389",
@@ -952,6 +1050,20 @@
 		"timedViewCount" : 40
 	},
 	{
+		"studyItemMetaId" : "0d78c001-2b16-4b64-a753-e481ab2a6896",
+		"createDate" : "2017-06-03 06:21:50",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "4300d943-72da-4538-af3a-136dfc16011d",
+		"incorrectCount" : 1,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-09 23:49:14",
+		"difficulty" : 0.25,
+		"confidence" : 0,
+		"totalTime" : 39215,
+		"averageTime" : 9803,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "0d8a9721-7f73-47c4-950d-b4e71d28ef5d",
 		"createDate" : "2016-03-25 18:38:42",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -963,6 +1075,20 @@
 		"confidence" : 0,
 		"totalTime" : 61674,
 		"averageTime" : 12334,
+		"timedViewCount" : 5
+	},
+	{
+		"studyItemMetaId" : "0d996581-5ab6-4492-a254-cc186063bbab",
+		"createDate" : "2017-05-28 19:40:42",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "dbc080a2-c8b4-4b2d-885c-70dc94dbe985",
+		"incorrectCount" : 3,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-06-09 23:49:20",
+		"difficulty" : 0.6,
+		"confidence" : 0,
+		"totalTime" : 70768,
+		"averageTime" : 14153,
 		"timedViewCount" : 5
 	},
 	{
@@ -1132,6 +1258,20 @@
 		"totalTime" : 306242,
 		"averageTime" : 12249,
 		"timedViewCount" : 25
+	},
+	{
+		"studyItemMetaId" : "0ff89cf5-3362-40e1-9404-c3983d9e8f75",
+		"createDate" : "2017-06-24 17:55:48",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0237a7c4-9efd-4583-8c75-e3c9a2b6c4e7",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-24 18:07:06",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 52556,
+		"averageTime" : 13139,
+		"timedViewCount" : 4
 	},
 	{
 		"studyItemMetaId" : "1057babd-0bd1-4649-a68f-32149a7ae617",
@@ -1470,6 +1610,34 @@
 		"timedViewCount" : 39
 	},
 	{
+		"studyItemMetaId" : "13eb7f72-7368-4f53-9f77-c453849ae06f",
+		"createDate" : "2017-06-11 19:16:00",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "3ae5b12d-6b08-483a-a030-d83f81efa74b",
+		"incorrectCount" : 15,
+		"viewCount" : 22,
+		"lastUpdate" : "2017-06-28 00:26:02",
+		"difficulty" : 0.6818181818181818,
+		"confidence" : 0,
+		"totalTime" : 339291,
+		"averageTime" : 15422,
+		"timedViewCount" : 22
+	},
+	{
+		"studyItemMetaId" : "13f375bd-ed5b-4fb2-9219-83efe518712f",
+		"createDate" : "2017-06-11 19:16:06",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b01d4589-fac3-416c-9fb1-2bb88013d2a7",
+		"incorrectCount" : 6,
+		"viewCount" : 10,
+		"lastUpdate" : "2017-07-01 18:59:34",
+		"difficulty" : 0.6,
+		"confidence" : 0,
+		"totalTime" : 143290,
+		"averageTime" : 14329,
+		"timedViewCount" : 10
+	},
+	{
 		"studyItemMetaId" : "13fbd0fa-456b-4b77-b8d1-aff19cb8a670",
 		"createDate" : "2016-02-02 01:02:48",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -1554,6 +1722,20 @@
 		"timedViewCount" : 25
 	},
 	{
+		"studyItemMetaId" : "14849b01-4a3e-494c-9210-84ac9ebe298d",
+		"createDate" : "2017-06-29 22:49:52",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "2551a269-d686-4bea-bca8-8bc4e5247fdd",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-29 22:55:56",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 25801,
+		"averageTime" : 8600,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "1486f47a-24f3-45e3-8e6f-cfecd93ebced",
 		"createDate" : "2015-02-08 22:05:24",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -1566,6 +1748,20 @@
 		"totalTime" : 224907,
 		"averageTime" : 11837,
 		"timedViewCount" : 19
+	},
+	{
+		"studyItemMetaId" : "148e483f-36a7-47b6-966c-14a29943a664",
+		"createDate" : "2017-06-21 00:41:55",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e975480a-a498-4cd9-919a-99a91101b89b",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-22 22:47:28",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 46111,
+		"averageTime" : 15370,
+		"timedViewCount" : 3
 	},
 	{
 		"studyItemMetaId" : "151627ff-3df4-4641-abe5-d6a8ee4c7bc0",
@@ -1708,6 +1904,20 @@
 		"timedViewCount" : 4
 	},
 	{
+		"studyItemMetaId" : "174277a3-3a58-49e8-8e53-2ef096aeb7af",
+		"createDate" : "2017-06-10 19:59:02",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "33ca52c3-c4da-4876-8906-38fa0d86b9e6",
+		"incorrectCount" : 4,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-06-12 23:03:52",
+		"difficulty" : 0.8,
+		"confidence" : 0,
+		"totalTime" : 74738,
+		"averageTime" : 14947,
+		"timedViewCount" : 5
+	},
+	{
 		"studyItemMetaId" : "17571c33-9d06-4a0c-a87b-e41068b1d609",
 		"createDate" : "2016-02-14 21:57:26",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -1734,6 +1944,20 @@
 		"totalTime" : 289473,
 		"averageTime" : 8040,
 		"timedViewCount" : 36
+	},
+	{
+		"studyItemMetaId" : "177df849-adfd-45ca-b738-73e23fdadd75",
+		"createDate" : "2017-06-03 06:21:35",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "a3024f60-c300-4168-ae17-f78758670a1a",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-03 19:20:05",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 12587,
+		"averageTime" : 6293,
+		"timedViewCount" : 2
 	},
 	{
 		"studyItemMetaId" : "1791bb31-2866-4f28-9e62-caab295aac24",
@@ -1852,14 +2076,14 @@
 		"createDate" : "2017-01-22 19:26:44",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "8b2181ae-ae61-4892-924b-b80ca267a45e",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:53:37",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 11059,
+		"averageTime" : 11059,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "18e7eb96-9842-401c-8629-8ff25ae8d84f",
@@ -2044,6 +2268,20 @@
 		"timedViewCount" : 53
 	},
 	{
+		"studyItemMetaId" : "1b5ea0b6-e0c6-405d-bb47-2a42a14cc8fd",
+		"createDate" : "2017-07-03 00:14:00",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c4b41254-4ce3-49d4-9ac0-35fae234a291",
+		"incorrectCount" : 0,
+		"viewCount" : 0,
+		"lastUpdate" : [],
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 0,
+		"averageTime" : 0,
+		"timedViewCount" : 0
+	},
+	{
 		"studyItemMetaId" : "1b7cb530-e357-4b30-8042-778e4c7eaea9",
 		"createDate" : "2016-06-14 11:58:27",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -2147,13 +2385,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "2cd2503a-9d67-4e4a-b5f5-d4741bcbe07e",
 		"incorrectCount" : 6,
-		"viewCount" : 34,
-		"lastUpdate" : "2016-06-02 23:44:02",
-		"difficulty" : 0.17647058823529413,
+		"viewCount" : 35,
+		"lastUpdate" : "2017-06-07 23:28:03",
+		"difficulty" : 0.17142857142857143,
 		"confidence" : 0,
-		"totalTime" : 191382,
-		"averageTime" : 10072,
-		"timedViewCount" : 19
+		"totalTime" : 194215,
+		"averageTime" : 9710,
+		"timedViewCount" : 20
 	},
 	{
 		"studyItemMetaId" : "1c609c00-3b68-4bca-8ebe-79c82e553164",
@@ -2196,6 +2434,20 @@
 		"totalTime" : 84616,
 		"averageTime" : 4700,
 		"timedViewCount" : 18
+	},
+	{
+		"studyItemMetaId" : "1d2f296e-a4fc-4f87-bb70-882de91da452",
+		"createDate" : "2017-06-08 00:12:36",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "078eeea3-435c-4151-9f56-a2a2c34037fc",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-08 22:28:15",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 19305,
+		"averageTime" : 9652,
+		"timedViewCount" : 2
 	},
 	{
 		"studyItemMetaId" : "1d414ec0-e31c-4906-a8e4-b4d2a08fb31e",
@@ -2422,6 +2674,20 @@
 		"timedViewCount" : 2
 	},
 	{
+		"studyItemMetaId" : "1ff8105e-5f9d-47db-adb1-3c26ec78a9c1",
+		"createDate" : "2017-06-24 17:55:52",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "19d7fada-32a2-457d-906d-5c1a89721bcb",
+		"incorrectCount" : 11,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-07-01 19:01:03",
+		"difficulty" : 0.6875,
+		"confidence" : 0,
+		"totalTime" : 188324,
+		"averageTime" : 11770,
+		"timedViewCount" : 16
+	},
+	{
 		"studyItemMetaId" : "201522e3-c11f-4c5b-9f84-19884b645c54",
 		"createDate" : "2015-10-10 18:03:35",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -2462,6 +2728,20 @@
 		"totalTime" : 132677,
 		"averageTime" : 16584,
 		"timedViewCount" : 8
+	},
+	{
+		"studyItemMetaId" : "20c04a01-2f02-480d-8c31-2ea7e9c125cb",
+		"createDate" : "2017-06-17 20:07:33",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "1fb8a8ae-1d57-4bef-bc0f-87314b79d92d",
+		"incorrectCount" : 0,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-23 23:06:17",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 19840,
+		"averageTime" : 4960,
+		"timedViewCount" : 4
 	},
 	{
 		"studyItemMetaId" : "20c2c79c-aa0e-4e90-aee6-b26161f29bc7",
@@ -2524,14 +2804,14 @@
 		"createDate" : "2016-07-01 23:09:39",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "d3aec823-920d-45f6-a1e8-a22947a94e46",
-		"incorrectCount" : 2,
-		"viewCount" : 3,
-		"lastUpdate" : "2016-07-01 23:21:00",
-		"difficulty" : 0.6666666666666666,
+		"incorrectCount" : 3,
+		"viewCount" : 7,
+		"lastUpdate" : "2017-06-28 00:23:56",
+		"difficulty" : 0.42857142857142855,
 		"confidence" : 0,
-		"totalTime" : 11726,
-		"averageTime" : 3908,
-		"timedViewCount" : 3
+		"totalTime" : 50716,
+		"averageTime" : 7245,
+		"timedViewCount" : 7
 	},
 	{
 		"studyItemMetaId" : "21a81192-d42a-46be-84e7-0c42f37e0dd6",
@@ -2539,13 +2819,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "755d399d-a6af-45b0-8d73-0234d9a3a4aa",
 		"incorrectCount" : 4,
-		"viewCount" : 11,
-		"lastUpdate" : "2016-03-19 18:06:29",
-		"difficulty" : 0.36363636363636365,
+		"viewCount" : 12,
+		"lastUpdate" : "2017-07-01 18:58:03",
+		"difficulty" : 0.3333333333333333,
 		"confidence" : 0,
-		"totalTime" : 82643,
-		"averageTime" : 7513,
-		"timedViewCount" : 11
+		"totalTime" : 88143,
+		"averageTime" : 7345,
+		"timedViewCount" : 12
 	},
 	{
 		"studyItemMetaId" : "2208c051-f966-4cc3-b860-2b140cbdaad0",
@@ -2720,14 +3000,14 @@
 		"createDate" : "2017-01-12 01:08:59",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "9bb20924-d2d4-4a65-acb7-f84e1d3ca698",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:54:17",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 2018,
+		"averageTime" : 2018,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "235919ca-27dc-4fbc-82ea-ba1bd6b88a9d",
@@ -2784,6 +3064,20 @@
 		"totalTime" : 248924,
 		"averageTime" : 9956,
 		"timedViewCount" : 25
+	},
+	{
+		"studyItemMetaId" : "24a37c46-333d-4770-82f2-04350709b9aa",
+		"createDate" : "2017-05-28 20:01:51",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "29014ddb-4a80-44c0-a0d2-1d63cefac69e",
+		"incorrectCount" : 0,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-29 17:59:44",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 5495,
+		"averageTime" : 5495,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "250a8218-882a-4f9a-93c9-78b8804e7422",
@@ -2856,6 +3150,20 @@
 		"timedViewCount" : 14
 	},
 	{
+		"studyItemMetaId" : "25f9a187-d365-4cc0-9d28-ea2ba75d96a7",
+		"createDate" : "2017-06-08 00:12:28",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "743edaa0-0d84-4d48-9e24-0652e2800e35",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-08 22:34:51",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 9055,
+		"averageTime" : 3018,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "25fb4c63-8aac-4810-ac2e-fca02a180814",
 		"createDate" : "2015-04-05 21:05:03",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -2898,6 +3206,34 @@
 		"timedViewCount" : 30
 	},
 	{
+		"studyItemMetaId" : "2637bc27-9891-4109-a4ab-04c0187ecc97",
+		"createDate" : "2017-05-28 20:46:22",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "9deec48a-dadb-4041-962b-6ecb5c545933",
+		"incorrectCount" : 13,
+		"viewCount" : 19,
+		"lastUpdate" : "2017-06-10 19:49:52",
+		"difficulty" : 0.6842105263157895,
+		"confidence" : 0,
+		"totalTime" : 231185,
+		"averageTime" : 12167,
+		"timedViewCount" : 19
+	},
+	{
+		"studyItemMetaId" : "26574316-12f6-4edc-b372-e1697ca9ccec",
+		"createDate" : "2017-05-28 20:46:11",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "608b13a6-e79b-4847-94f9-376f4dbfbf9f",
+		"incorrectCount" : 11,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-06-11 18:40:16",
+		"difficulty" : 0.6875,
+		"confidence" : 0,
+		"totalTime" : 200250,
+		"averageTime" : 12515,
+		"timedViewCount" : 16
+	},
+	{
 		"studyItemMetaId" : "2677b1d8-ae26-4450-b5ab-32843c67f9c8",
 		"createDate" : "2015-02-15 01:02:15",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -2924,6 +3260,20 @@
 		"totalTime" : 30837,
 		"averageTime" : 10279,
 		"timedViewCount" : 3
+	},
+	{
+		"studyItemMetaId" : "269b1649-2991-43b3-a69f-6b411ea7e05d",
+		"createDate" : "2017-05-28 20:46:02",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "4f7927cc-d383-4dc0-970a-b06d43bccd1f",
+		"incorrectCount" : 6,
+		"viewCount" : 9,
+		"lastUpdate" : "2017-06-04 18:44:06",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 120818,
+		"averageTime" : 13424,
+		"timedViewCount" : 9
 	},
 	{
 		"studyItemMetaId" : "26aa2671-dfbc-4920-9994-74bba7038d7b",
@@ -3253,13 +3603,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "107ac1c1-0b18-4136-a350-1f104e771308",
 		"incorrectCount" : 8,
-		"viewCount" : 25,
-		"lastUpdate" : "2016-05-14 17:34:05",
-		"difficulty" : 0.32,
+		"viewCount" : 27,
+		"lastUpdate" : "2017-06-07 23:28:18",
+		"difficulty" : 0.2962962962962963,
 		"confidence" : 0,
-		"totalTime" : 149896,
-		"averageTime" : 5995,
-		"timedViewCount" : 25
+		"totalTime" : 168573,
+		"averageTime" : 6243,
+		"timedViewCount" : 27
 	},
 	{
 		"studyItemMetaId" : "29912f26-697e-4d52-9bed-5b7c98665aa6",
@@ -3416,6 +3766,20 @@
 		"timedViewCount" : 4
 	},
 	{
+		"studyItemMetaId" : "2bd49323-be1f-4374-90f0-56f9c01841c0",
+		"createDate" : "2017-06-15 01:02:30",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "cc877bb4-8b82-499e-9b11-677cd84c0ea7",
+		"incorrectCount" : 3,
+		"viewCount" : 10,
+		"lastUpdate" : "2017-07-01 18:58:58",
+		"difficulty" : 0.3,
+		"confidence" : 0,
+		"totalTime" : 40288,
+		"averageTime" : 4028,
+		"timedViewCount" : 10
+	},
+	{
 		"studyItemMetaId" : "2c266c13-cdf8-4ac4-b029-32f65a18dd9a",
 		"createDate" : "2015-02-12 01:34:44",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -3472,6 +3836,20 @@
 		"timedViewCount" : 16
 	},
 	{
+		"studyItemMetaId" : "2c9d7934-6a8e-4d01-80ea-ef7423332f72",
+		"createDate" : "2017-06-25 20:44:07",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "911a4b85-af9b-474f-b46f-e23ed82ab8b8",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-07-01 19:00:21",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 24977,
+		"averageTime" : 6244,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "2c9ea9dd-0e13-4aca-8ad6-0a14b91906d4",
 		"createDate" : "2015-03-08 00:23:44",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -3498,6 +3876,20 @@
 		"totalTime" : 452751,
 		"averageTime" : 8706,
 		"timedViewCount" : 52
+	},
+	{
+		"studyItemMetaId" : "2d8541e9-7def-481b-ad1f-29ca4b45532a",
+		"createDate" : "2017-06-29 22:49:55",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ad96b66d-9760-42f7-88b8-70b56d388d2e",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-29 22:54:47",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 39754,
+		"averageTime" : 19877,
+		"timedViewCount" : 2
 	},
 	{
 		"studyItemMetaId" : "2d9c691e-2757-4d9a-b437-3ad53bf80572",
@@ -3752,6 +4144,34 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "30e4de8f-3c0a-4a38-9ba8-75aec14f565a",
+		"createDate" : "2017-06-17 20:07:19",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b5cceaef-aeb0-4f13-9cd1-21c84a622d1a",
+		"incorrectCount" : 9,
+		"viewCount" : 13,
+		"lastUpdate" : "2017-06-29 00:33:10",
+		"difficulty" : 0.6923076923076923,
+		"confidence" : 0,
+		"totalTime" : 126717,
+		"averageTime" : 9747,
+		"timedViewCount" : 13
+	},
+	{
+		"studyItemMetaId" : "30fb30c4-fc02-4de1-8e73-31d5b39e003b",
+		"createDate" : "2017-06-04 19:51:43",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "81f52293-b86b-4c00-9912-47287a1777bb",
+		"incorrectCount" : 2,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-06-09 23:46:39",
+		"difficulty" : 0.4,
+		"confidence" : 0,
+		"totalTime" : 45838,
+		"averageTime" : 9167,
+		"timedViewCount" : 5
+	},
+	{
 		"studyItemMetaId" : "30fbdb68-1296-4ea7-be33-7295e47b3cb7",
 		"createDate" : "2015-02-16 17:09:27",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -3806,6 +4226,20 @@
 		"totalTime" : 67997,
 		"averageTime" : 4249,
 		"timedViewCount" : 16
+	},
+	{
+		"studyItemMetaId" : "31e78870-c2e8-405c-bbf3-f8a8265b7dcb",
+		"createDate" : "2017-06-15 01:02:03",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "613b4f6f-336d-497c-8af1-66a6933fd369",
+		"incorrectCount" : 12,
+		"viewCount" : 18,
+		"lastUpdate" : "2017-06-23 23:08:00",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 249927,
+		"averageTime" : 13884,
+		"timedViewCount" : 18
 	},
 	{
 		"studyItemMetaId" : "3218262e-1bd9-493c-9e56-928c8a2fc363",
@@ -4004,6 +4438,34 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "33e25a67-b3f8-4f74-89c4-af85eb126b8d",
+		"createDate" : "2017-07-03 00:13:21",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "d8df9f65-ded7-483c-a027-e3de59be5002",
+		"incorrectCount" : 0,
+		"viewCount" : 0,
+		"lastUpdate" : [],
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 0,
+		"averageTime" : 0,
+		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "33eaba8a-84ff-4623-916e-62e30ef27523",
+		"createDate" : "2017-06-23 22:49:51",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c01aa599-9e9d-4db8-b068-692558fdbdeb",
+		"incorrectCount" : 17,
+		"viewCount" : 23,
+		"lastUpdate" : "2017-07-03 00:06:53",
+		"difficulty" : 0.7391304347826086,
+		"confidence" : 0,
+		"totalTime" : 301543,
+		"averageTime" : 13110,
+		"timedViewCount" : 23
+	},
+	{
 		"studyItemMetaId" : "3407141b-c8bc-480b-ad6c-e16809b5246e",
 		"createDate" : "2015-02-07 18:46:15",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -4032,6 +4494,20 @@
 		"timedViewCount" : 35
 	},
 	{
+		"studyItemMetaId" : "3467f36f-3c2b-4f1d-8b9a-897804f583af",
+		"createDate" : "2017-06-15 00:03:47",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "50016213-a1f8-4a59-8ce0-50e2045d584e",
+		"incorrectCount" : 24,
+		"viewCount" : 35,
+		"lastUpdate" : "2017-06-28 00:24:53",
+		"difficulty" : 0.6857142857142857,
+		"confidence" : 0,
+		"totalTime" : 486003,
+		"averageTime" : 13885,
+		"timedViewCount" : 35
+	},
+	{
 		"studyItemMetaId" : "347cbc1d-b605-40a1-8e3e-5cd394c2cc99",
 		"createDate" : "2016-05-04 23:21:33",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -4044,6 +4520,20 @@
 		"totalTime" : 51640,
 		"averageTime" : 10328,
 		"timedViewCount" : 5
+	},
+	{
+		"studyItemMetaId" : "34c48b56-e0b6-41fb-b428-48c52c0490e4",
+		"createDate" : "2017-06-17 19:32:45",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ca228611-3f0b-4055-b409-049af6ffd450",
+		"incorrectCount" : 9,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-07-01 19:00:26",
+		"difficulty" : 0.6428571428571429,
+		"confidence" : 0,
+		"totalTime" : 211349,
+		"averageTime" : 15096,
+		"timedViewCount" : 14
 	},
 	{
 		"studyItemMetaId" : "34eb577a-a329-41c4-850e-81ff317157fc",
@@ -4158,6 +4648,20 @@
 		"timedViewCount" : 8
 	},
 	{
+		"studyItemMetaId" : "3626d88f-471a-496d-b0b8-e2ee2d510ae9",
+		"createDate" : "2017-06-04 19:51:16",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0695743d-9d6e-4a9f-b936-45b8c9cd93ba",
+		"incorrectCount" : 4,
+		"viewCount" : 7,
+		"lastUpdate" : "2017-06-07 23:34:42",
+		"difficulty" : 0.5714285714285714,
+		"confidence" : 0,
+		"totalTime" : 67366,
+		"averageTime" : 9623,
+		"timedViewCount" : 7
+	},
+	{
 		"studyItemMetaId" : "368a997a-b340-4101-8453-f9f73e4240ad",
 		"createDate" : "2015-03-22 23:52:19",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -4184,6 +4688,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "374614f9-62f8-453c-b402-bed280b4e28b",
+		"createDate" : "2017-05-28 19:41:00",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "6b189628-4dc0-4387-b3cd-69dbef2e21f4",
+		"incorrectCount" : 5,
+		"viewCount" : 9,
+		"lastUpdate" : "2017-06-07 23:28:00",
+		"difficulty" : 0.5555555555555556,
+		"confidence" : 0,
+		"totalTime" : 98488,
+		"averageTime" : 10943,
+		"timedViewCount" : 9
 	},
 	{
 		"studyItemMetaId" : "375a0312-707e-41b0-befb-1ac56e388c6d",
@@ -4316,14 +4834,14 @@
 		"createDate" : "2017-01-22 19:56:35",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "69c4d913-640c-4ee1-815f-0f3ed200c2b7",
-		"incorrectCount" : 14,
-		"viewCount" : 15,
-		"lastUpdate" : "2017-01-24 00:01:19",
-		"difficulty" : 0.9333333333333333,
+		"incorrectCount" : 15,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-05-13 20:54:58",
+		"difficulty" : 0.9375,
 		"confidence" : 0,
-		"totalTime" : 131836,
-		"averageTime" : 8789,
-		"timedViewCount" : 15
+		"totalTime" : 133199,
+		"averageTime" : 8324,
+		"timedViewCount" : 16
 	},
 	{
 		"studyItemMetaId" : "39824d26-4d87-4312-a9c2-a5ea0cc2aa89",
@@ -4480,6 +4998,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "3aac818d-2e1e-4b21-9374-aa727c9adf26",
+		"createDate" : "2017-06-11 19:15:56",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c6963a0f-f591-4229-a8e6-e2bc17da6507",
+		"incorrectCount" : 1,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-23 23:08:07",
+		"difficulty" : 0.3333333333333333,
+		"confidence" : 0,
+		"totalTime" : 24285,
+		"averageTime" : 8095,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "3ac908e8-cd42-4330-8eef-123bcf98bf7d",
 		"createDate" : "2015-02-08 22:03:19",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -4534,6 +5066,20 @@
 		"totalTime" : 290384,
 		"averageTime" : 10370,
 		"timedViewCount" : 28
+	},
+	{
+		"studyItemMetaId" : "3b5f14fe-ba11-43ed-bfe4-4b761d33aaa5",
+		"createDate" : "2017-06-03 06:21:45",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c48ba2a0-5443-45f0-8875-7dbeacd5a1c5",
+		"incorrectCount" : 4,
+		"viewCount" : 8,
+		"lastUpdate" : "2017-06-07 23:29:14",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 77768,
+		"averageTime" : 9721,
+		"timedViewCount" : 8
 	},
 	{
 		"studyItemMetaId" : "3bd64520-cc3e-4cc6-b4e6-5dd89cddbd00",
@@ -4694,14 +5240,14 @@
 		"createDate" : "2015-11-14 18:34:37",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "d5c93aac-08a2-4714-8ef8-721bcc72fc9a",
-		"incorrectCount" : 57,
-		"viewCount" : 88,
-		"lastUpdate" : "2016-07-07 00:06:14",
-		"difficulty" : 0.6477272727272727,
+		"incorrectCount" : 60,
+		"viewCount" : 91,
+		"lastUpdate" : "2017-05-26 00:38:29",
+		"difficulty" : 0.6593406593406593,
 		"confidence" : 0,
-		"totalTime" : 1116525,
-		"averageTime" : 12687,
-		"timedViewCount" : 88
+		"totalTime" : 1185604,
+		"averageTime" : 13028,
+		"timedViewCount" : 91
 	},
 	{
 		"studyItemMetaId" : "3e9234b7-c486-45fe-aedc-98ead7681224",
@@ -4760,6 +5306,20 @@
 		"timedViewCount" : 32
 	},
 	{
+		"studyItemMetaId" : "3f1b700c-8ba8-49fb-a3cd-1d0400482ea5",
+		"createDate" : "2017-06-04 19:50:31",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "1d6c39c1-5e3e-4242-8393-70f00d1d346e",
+		"incorrectCount" : 8,
+		"viewCount" : 12,
+		"lastUpdate" : "2017-06-10 19:55:56",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 62675,
+		"averageTime" : 5222,
+		"timedViewCount" : 12
+	},
+	{
 		"studyItemMetaId" : "3f712fb3-4bb6-4842-b7f5-863bbddce35b",
 		"createDate" : "2015-03-07 01:45:31",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -4802,6 +5362,20 @@
 		"timedViewCount" : 19
 	},
 	{
+		"studyItemMetaId" : "4004da78-916c-455a-bd72-5f8b9e63681d",
+		"createDate" : "2017-06-15 00:03:38",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "699dae10-f59e-42a1-8612-5c0f5d73dd35",
+		"incorrectCount" : 5,
+		"viewCount" : 8,
+		"lastUpdate" : "2017-06-22 22:58:30",
+		"difficulty" : 0.625,
+		"confidence" : 0,
+		"totalTime" : 69405,
+		"averageTime" : 8675,
+		"timedViewCount" : 8
+	},
+	{
 		"studyItemMetaId" : "4015d329-c3b2-457c-9c7a-0752f1032833",
 		"createDate" : "2016-06-19 18:23:01",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -4842,6 +5416,20 @@
 		"totalTime" : 240053,
 		"averageTime" : 9232,
 		"timedViewCount" : 26
+	},
+	{
+		"studyItemMetaId" : "40921e7a-a6c9-4359-9a96-fe0b1e26792f",
+		"createDate" : "2017-06-29 00:16:41",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "2446c404-14e4-4e66-b8eb-43889c278837",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-29 00:21:15",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 33961,
+		"averageTime" : 11320,
+		"timedViewCount" : 3
 	},
 	{
 		"studyItemMetaId" : "40bc33e8-58e4-4642-a11c-f9786f41b11b",
@@ -4975,13 +5563,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "95cec169-2e01-4799-b6fb-4bf7ad868ef1",
 		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
-		"difficulty" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:54:05",
+		"difficulty" : 0,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 3927,
+		"averageTime" : 3927,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "41f70155-0172-4352-91a7-5705f045ea31",
@@ -5080,6 +5668,20 @@
 		"totalTime" : 419151,
 		"averageTime" : 13098,
 		"timedViewCount" : 32
+	},
+	{
+		"studyItemMetaId" : "43a91df4-94c5-4d54-87e6-04e150102731",
+		"createDate" : "2017-05-28 20:46:29",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "1ff7e885-ff94-4daf-9bdd-f76c54a0af4c",
+		"incorrectCount" : 1,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-07 23:31:38",
+		"difficulty" : 0.3333333333333333,
+		"confidence" : 0,
+		"totalTime" : 13622,
+		"averageTime" : 4540,
+		"timedViewCount" : 3
 	},
 	{
 		"studyItemMetaId" : "43aaf568-f080-432a-81c9-f8d22fc16b2e",
@@ -5292,6 +5894,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "45cd058d-236a-4203-9a21-2f47197b538f",
+		"createDate" : "2017-06-15 01:02:20",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "719d9bdc-6a4b-4492-a654-6460d4ebe565",
+		"incorrectCount" : 0,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-07-01 18:56:11",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 7471,
+		"averageTime" : 2490,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "460f0458-07c3-4ba8-b327-dc27f6544ebf",
 		"createDate" : "2015-01-30 22:53:07",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -5488,6 +6104,20 @@
 		"timedViewCount" : 5
 	},
 	{
+		"studyItemMetaId" : "47ef1780-55a8-416b-868e-19b2d4ded18d",
+		"createDate" : "2017-06-21 00:41:59",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b80d5081-6e6a-46cd-8635-d99d38dd7d1a",
+		"incorrectCount" : 4,
+		"viewCount" : 6,
+		"lastUpdate" : "2017-06-22 22:52:52",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 48528,
+		"averageTime" : 8088,
+		"timedViewCount" : 6
+	},
+	{
 		"studyItemMetaId" : "488f5e8d-1821-4f34-844f-f0b0d74ee7ee",
 		"createDate" : "2016-04-08 00:21:05",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -5656,6 +6286,48 @@
 		"timedViewCount" : 19
 	},
 	{
+		"studyItemMetaId" : "4a1e7a44-4473-4dfb-aa62-8a058f37b0e9",
+		"createDate" : "2017-06-11 18:42:35",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "623e5f07-9d53-4d15-8a9a-fec98129bd05",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-11 18:46:39",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 14354,
+		"averageTime" : 7177,
+		"timedViewCount" : 2
+	},
+	{
+		"studyItemMetaId" : "4a3384eb-8489-48f5-af25-de92fd6c4ba4",
+		"createDate" : "2017-06-29 00:16:44",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "7497df7b-1dc8-4765-ab33-a80cedcccbb6",
+		"incorrectCount" : 0,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-06-29 00:17:03",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 4417,
+		"averageTime" : 4417,
+		"timedViewCount" : 1
+	},
+	{
+		"studyItemMetaId" : "4a9f9d9d-0734-42a1-9372-33f5c9cc0e19",
+		"createDate" : "2017-06-17 20:07:14",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "7d9bfa45-7f64-4699-818a-599185f80688",
+		"incorrectCount" : 1,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-06-22 22:52:46",
+		"difficulty" : 0.2,
+		"confidence" : 0,
+		"totalTime" : 41815,
+		"averageTime" : 8363,
+		"timedViewCount" : 5
+	},
+	{
 		"studyItemMetaId" : "4a9fb89c-39d9-4370-bace-7e778d371ae5",
 		"createDate" : "2015-03-16 23:30:17",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -5710,6 +6382,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "4b2cfc6d-d0a6-478c-9d31-f2c3429cdfff",
+		"createDate" : "2017-06-29 22:50:00",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "3ccfb3cc-2304-4e41-954b-6400b53a262b",
+		"incorrectCount" : 6,
+		"viewCount" : 9,
+		"lastUpdate" : "2017-07-03 00:02:37",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 72970,
+		"averageTime" : 8107,
+		"timedViewCount" : 9
 	},
 	{
 		"studyItemMetaId" : "4b9d2f82-b89a-4a72-9a51-b8dc0fa9f5aa",
@@ -5964,6 +6650,20 @@
 		"timedViewCount" : 17
 	},
 	{
+		"studyItemMetaId" : "4e9288a1-94c1-466b-bbd8-4abfb9bc2300",
+		"createDate" : "2017-06-11 18:42:19",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "1f155172-b947-4e78-8ba8-f007ba98d437",
+		"incorrectCount" : 0,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-06-14 00:55:04",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 7761,
+		"averageTime" : 7761,
+		"timedViewCount" : 1
+	},
+	{
 		"studyItemMetaId" : "4eb34515-0b3a-4987-852d-ef0d75872488",
 		"createDate" : "2016-01-06 00:54:10",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6010,14 +6710,14 @@
 		"createDate" : "2016-03-13 19:47:55",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "9d12c427-5036-4132-bcd3-a2a716801c4a",
-		"incorrectCount" : 25,
-		"viewCount" : 40,
-		"lastUpdate" : "2016-05-16 23:19:12",
-		"difficulty" : 0.625,
+		"incorrectCount" : 27,
+		"viewCount" : 43,
+		"lastUpdate" : "2017-05-26 00:39:36",
+		"difficulty" : 0.627906976744186,
 		"confidence" : 0,
-		"totalTime" : 348385,
-		"averageTime" : 8709,
-		"timedViewCount" : 40
+		"totalTime" : 391324,
+		"averageTime" : 9100,
+		"timedViewCount" : 43
 	},
 	{
 		"studyItemMetaId" : "4fc8ddee-c9aa-40cd-b30f-80553c4b7831",
@@ -6060,6 +6760,20 @@
 		"totalTime" : 77880,
 		"averageTime" : 12980,
 		"timedViewCount" : 6
+	},
+	{
+		"studyItemMetaId" : "503696b3-198f-44a4-8822-ef2d59778bd9",
+		"createDate" : "2017-05-31 02:02:43",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "f4e54987-74fc-4a48-8642-3c3c38a41f18",
+		"incorrectCount" : 22,
+		"viewCount" : 33,
+		"lastUpdate" : "2017-06-12 23:04:46",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 271480,
+		"averageTime" : 8226,
+		"timedViewCount" : 33
 	},
 	{
 		"studyItemMetaId" : "504f934d-7151-4641-b228-e337e9ded7bf",
@@ -6132,6 +6846,20 @@
 		"timedViewCount" : 26
 	},
 	{
+		"studyItemMetaId" : "509d9393-9e32-4f39-ab8d-5ccbe87eec5d",
+		"createDate" : "2017-06-08 00:12:16",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "df814743-db82-4319-8002-31a94c548df7",
+		"incorrectCount" : 12,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-06-12 23:04:30",
+		"difficulty" : 0.75,
+		"confidence" : 0,
+		"totalTime" : 164841,
+		"averageTime" : 10302,
+		"timedViewCount" : 16
+	},
+	{
 		"studyItemMetaId" : "518d2266-2c77-46b7-851b-c9e9e2fdc999",
 		"createDate" : "2015-04-03 21:04:48",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6164,14 +6892,14 @@
 		"createDate" : "2015-12-08 01:44:53",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "1a7cc9c3-c45a-455a-b3a9-246eb6a4957b",
-		"incorrectCount" : 20,
-		"viewCount" : 32,
-		"lastUpdate" : "2016-05-20 00:32:40",
-		"difficulty" : 0.625,
+		"incorrectCount" : 22,
+		"viewCount" : 35,
+		"lastUpdate" : "2017-05-26 00:39:58",
+		"difficulty" : 0.6285714285714286,
 		"confidence" : 0,
-		"totalTime" : 352208,
-		"averageTime" : 11006,
-		"timedViewCount" : 32
+		"totalTime" : 384818,
+		"averageTime" : 10994,
+		"timedViewCount" : 35
 	},
 	{
 		"studyItemMetaId" : "51e8aa17-14c3-4adf-9acf-4fd447c8f1f0",
@@ -6200,6 +6928,34 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "5210f805-47b8-4fbd-ada4-3cac97af1ce4",
+		"createDate" : "2017-05-28 20:46:32",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b0d22d1d-bbfc-41a6-a7f4-62cd328a9ba3",
+		"incorrectCount" : 3,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-06-09 23:49:09",
+		"difficulty" : 0.6,
+		"confidence" : 0,
+		"totalTime" : 71494,
+		"averageTime" : 14298,
+		"timedViewCount" : 5
+	},
+	{
+		"studyItemMetaId" : "521694b8-50da-4dbf-a49b-310e2b97bcef",
+		"createDate" : "2017-05-31 02:03:05",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "704e7986-024e-4f25-8cb4-35506808c285",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-01 23:35:06",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 32234,
+		"averageTime" : 16117,
+		"timedViewCount" : 2
 	},
 	{
 		"studyItemMetaId" : "52268b58-ab56-488f-bf26-e2fd46d12251",
@@ -6300,6 +7056,20 @@
 		"timedViewCount" : 18
 	},
 	{
+		"studyItemMetaId" : "52dfe57c-a759-4557-828a-64b5d95ef431",
+		"createDate" : "2017-06-21 00:41:51",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "194dd150-c4bb-4ee4-98bb-f585e3a4544d",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-22 22:53:07",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 67450,
+		"averageTime" : 16862,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "5382e7ff-0ad8-4ea2-9de1-39a4fb0d53ee",
 		"createDate" : "2015-03-30 22:24:46",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6342,6 +7112,20 @@
 		"timedViewCount" : 30
 	},
 	{
+		"studyItemMetaId" : "53d9d713-89d4-4263-974a-01f35dcb3180",
+		"createDate" : "2017-06-15 01:01:51",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "5c2b4b37-2e7f-4510-ad79-fbabfcd669cb",
+		"incorrectCount" : 0,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-21 00:27:43",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 6611,
+		"averageTime" : 3305,
+		"timedViewCount" : 2
+	},
+	{
 		"studyItemMetaId" : "53e8092d-a719-41dd-87b9-703d128a404a",
 		"createDate" : "2015-04-29 01:51:04",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6356,6 +7140,20 @@
 		"timedViewCount" : 33
 	},
 	{
+		"studyItemMetaId" : "54048d2e-fd24-4cac-a15c-42c656c93e88",
+		"createDate" : "2017-06-08 00:12:24",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0d24f9db-86c3-445f-9900-02f6503e4c66",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-08 22:28:52",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 14600,
+		"averageTime" : 7300,
+		"timedViewCount" : 2
+	},
+	{
 		"studyItemMetaId" : "5414b34b-4d82-4aa7-9270-bc7b144df30a",
 		"createDate" : "2015-11-29 22:23:33",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6368,6 +7166,20 @@
 		"totalTime" : 253720,
 		"averageTime" : 7462,
 		"timedViewCount" : 34
+	},
+	{
+		"studyItemMetaId" : "54cf37c9-ef70-49f7-858b-990a216d603e",
+		"createDate" : "2017-05-28 19:40:30",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "629c8a22-d1df-426e-a589-917ccfdb497a",
+		"incorrectCount" : 9,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-06-11 18:35:04",
+		"difficulty" : 0.6428571428571429,
+		"confidence" : 0,
+		"totalTime" : 182264,
+		"averageTime" : 13018,
+		"timedViewCount" : 14
 	},
 	{
 		"studyItemMetaId" : "54ed6990-f424-4b65-ad63-68e1f99fe282",
@@ -6416,14 +7228,14 @@
 		"createDate" : "2015-04-01 00:05:26",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "202a5ae2-3952-42a4-b94c-aca345a3e085",
-		"incorrectCount" : 33,
-		"viewCount" : 61,
-		"lastUpdate" : "2016-04-10 17:52:17",
-		"difficulty" : 0.5409836065573771,
+		"incorrectCount" : 34,
+		"viewCount" : 64,
+		"lastUpdate" : "2017-05-28 19:44:49",
+		"difficulty" : 0.53125,
 		"confidence" : 0,
-		"totalTime" : 965078,
-		"averageTime" : 15820,
-		"timedViewCount" : 61
+		"totalTime" : 996279,
+		"averageTime" : 15566,
+		"timedViewCount" : 64
 	},
 	{
 		"studyItemMetaId" : "5555a7ef-36e0-4ad2-953e-31085aac07a5",
@@ -6458,14 +7270,14 @@
 		"createDate" : "2015-11-14 19:25:04",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "e66735a6-6117-4d00-afde-a381c9a5c93d",
-		"incorrectCount" : 9,
-		"viewCount" : 15,
-		"lastUpdate" : "2016-03-27 00:03:18",
-		"difficulty" : 0.6,
+		"incorrectCount" : 11,
+		"viewCount" : 18,
+		"lastUpdate" : "2017-05-26 00:40:30",
+		"difficulty" : 0.6111111111111112,
 		"confidence" : 0,
-		"totalTime" : 162891,
-		"averageTime" : 10859,
-		"timedViewCount" : 15
+		"totalTime" : 181401,
+		"averageTime" : 10077,
+		"timedViewCount" : 18
 	},
 	{
 		"studyItemMetaId" : "56ce8b13-9968-4c3b-9b7c-35c1dfbc9c57",
@@ -6734,6 +7546,20 @@
 		"timedViewCount" : 22
 	},
 	{
+		"studyItemMetaId" : "5a1e6cd7-feea-4144-ad03-fbe7886ae01c",
+		"createDate" : "2017-06-15 01:02:11",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "4f475acf-ffd7-4da1-8341-f1218fb40d58",
+		"incorrectCount" : 2,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-07-01 18:57:47",
+		"difficulty" : 0.4,
+		"confidence" : 0,
+		"totalTime" : 54712,
+		"averageTime" : 10942,
+		"timedViewCount" : 5
+	},
+	{
 		"studyItemMetaId" : "5a3c2eb7-87c7-4803-8168-2cb48865cee9",
 		"createDate" : "2016-03-06 19:43:51",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6762,6 +7588,20 @@
 		"timedViewCount" : 32
 	},
 	{
+		"studyItemMetaId" : "5a807761-b895-4612-8684-7f4766034930",
+		"createDate" : "2017-05-05 23:23:20",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "fee7dbb0-eaa4-4cc8-b774-0927bbd9bd1d",
+		"incorrectCount" : 4,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-05-26 00:37:29",
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 89840,
+		"averageTime" : 22460,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "5a84f773-cd36-4b94-95da-e5e47f3f39d5",
 		"createDate" : "2015-03-22 23:51:06",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6776,6 +7616,20 @@
 		"timedViewCount" : 24
 	},
 	{
+		"studyItemMetaId" : "5a98752c-1c3a-4558-a7ec-efbb7ba0bbe3",
+		"createDate" : "2017-06-21 00:42:18",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0a2d1735-5a14-431a-bce9-faeaf0bc2335",
+		"incorrectCount" : 9,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-06-28 00:25:43",
+		"difficulty" : 0.6428571428571429,
+		"confidence" : 0,
+		"totalTime" : 170748,
+		"averageTime" : 12196,
+		"timedViewCount" : 14
+	},
+	{
 		"studyItemMetaId" : "5b082130-07b2-414a-8e92-a6e71ee9012f",
 		"createDate" : "2015-02-16 17:11:44",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6787,6 +7641,20 @@
 		"confidence" : 0,
 		"totalTime" : 65051,
 		"averageTime" : 3613,
+		"timedViewCount" : 18
+	},
+	{
+		"studyItemMetaId" : "5b1de615-3695-4dd3-8ba0-e10ac5dac55a",
+		"createDate" : "2017-05-28 20:46:19",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "2ae3f86f-767d-4dd8-b611-753158284fda",
+		"incorrectCount" : 12,
+		"viewCount" : 18,
+		"lastUpdate" : "2017-06-11 18:32:34",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 217982,
+		"averageTime" : 12110,
 		"timedViewCount" : 18
 	},
 	{
@@ -6944,6 +7812,20 @@
 		"timedViewCount" : 17
 	},
 	{
+		"studyItemMetaId" : "5cd056fc-2129-42c6-b2f9-cdbd1707f33b",
+		"createDate" : "2017-04-30 21:11:13",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "a76562b1-93c5-42c6-bf6d-d44fc8c60e76",
+		"incorrectCount" : 3,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-05-26 00:38:13",
+		"difficulty" : 0.75,
+		"confidence" : 0,
+		"totalTime" : 44761,
+		"averageTime" : 11190,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "5cd5e519-8ce1-4f95-9221-178ceb92a738",
 		"createDate" : "2016-01-23 19:48:14",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -6970,6 +7852,20 @@
 		"totalTime" : 454800,
 		"averageTime" : 16242,
 		"timedViewCount" : 28
+	},
+	{
+		"studyItemMetaId" : "5d51c15d-9ef8-473a-9a24-77d89cb659e1",
+		"createDate" : "2017-05-31 02:02:39",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "afd68fca-6ddd-4c91-9791-fe1108545ef6",
+		"incorrectCount" : 6,
+		"viewCount" : 9,
+		"lastUpdate" : "2017-06-28 00:27:13",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 115835,
+		"averageTime" : 12870,
+		"timedViewCount" : 9
 	},
 	{
 		"studyItemMetaId" : "5d69ab67-d6ab-4e3e-91f3-776a26f7738c",
@@ -7054,6 +7950,20 @@
 		"totalTime" : 353260,
 		"averageTime" : 9547,
 		"timedViewCount" : 37
+	},
+	{
+		"studyItemMetaId" : "5eac3a02-3e88-46bf-845b-46688eb432ea",
+		"createDate" : "2017-06-04 19:51:31",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "12ea71e7-720d-4a49-a280-7fe3ba2b8e1e",
+		"incorrectCount" : 4,
+		"viewCount" : 6,
+		"lastUpdate" : "2017-06-07 00:38:11",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 107193,
+		"averageTime" : 17865,
+		"timedViewCount" : 6
 	},
 	{
 		"studyItemMetaId" : "5ee5b5e5-0107-4625-a5fe-62e98860f482",
@@ -7158,14 +8068,14 @@
 		"createDate" : "2015-03-16 23:31:41",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "bde5532c-62ab-4b0a-8043-1b37bdc2dcb7",
-		"incorrectCount" : 24,
-		"viewCount" : 43,
-		"lastUpdate" : "2016-03-17 12:29:50",
-		"difficulty" : 0.5581395348837209,
+		"incorrectCount" : 29,
+		"viewCount" : 54,
+		"lastUpdate" : "2017-07-01 18:57:22",
+		"difficulty" : 0.5370370370370371,
 		"confidence" : 0,
-		"totalTime" : 565677,
-		"averageTime" : 13155,
-		"timedViewCount" : 43
+		"totalTime" : 683855,
+		"averageTime" : 12663,
+		"timedViewCount" : 54
 	},
 	{
 		"studyItemMetaId" : "5fae6f24-219d-4edb-8eb7-a6ec19fc2b7c",
@@ -7406,6 +8316,20 @@
 		"timedViewCount" : 1
 	},
 	{
+		"studyItemMetaId" : "627ebb8e-5145-4e4b-8998-f5f540fa9827",
+		"createDate" : "2017-06-11 18:42:40",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "fd3c6c95-3aad-46db-a8bd-6359b3f01154",
+		"incorrectCount" : 39,
+		"viewCount" : 54,
+		"lastUpdate" : "2017-07-03 00:08:23",
+		"difficulty" : 0.7222222222222222,
+		"confidence" : 0,
+		"totalTime" : 625782,
+		"averageTime" : 11588,
+		"timedViewCount" : 54
+	},
+	{
 		"studyItemMetaId" : "630e76be-969b-48c7-8339-2d429fafa30f",
 		"createDate" : "2015-02-08 22:06:49",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -7448,6 +8372,34 @@
 		"timedViewCount" : 66
 	},
 	{
+		"studyItemMetaId" : "6344f712-33d9-4423-85e5-10b7274e98f5",
+		"createDate" : "2017-05-28 20:02:19",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "bef849d5-6d84-4270-aed2-5d99578900e5",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-05-29 18:04:28",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 25901,
+		"averageTime" : 12950,
+		"timedViewCount" : 2
+	},
+	{
+		"studyItemMetaId" : "63677723-1d29-4d03-a418-ba46bc19387e",
+		"createDate" : "2017-06-11 19:16:10",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "3d930464-4c1a-4285-9455-cbf5137d56e2",
+		"incorrectCount" : 1,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-21 00:35:51",
+		"difficulty" : 0.3333333333333333,
+		"confidence" : 0,
+		"totalTime" : 20111,
+		"averageTime" : 6703,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "6397cc03-c7bf-4167-9e4e-33cf2dfa1317",
 		"createDate" : "2015-10-14 23:40:34",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -7460,6 +8412,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "6422b04e-0c63-446d-9f8d-bb3584f82837",
+		"createDate" : "2017-06-07 23:23:32",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "76ff261d-9aba-425e-a970-cb2366cb7b7b",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-07 23:25:55",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 24825,
+		"averageTime" : 12412,
+		"timedViewCount" : 2
 	},
 	{
 		"studyItemMetaId" : "64642b59-f241-419c-9257-8cc046cd6a28",
@@ -7480,14 +8446,14 @@
 		"createDate" : "2015-01-18 10:27:12",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "72e4b8e2-b0a8-4744-a45e-9e7f69a6178e",
-		"incorrectCount" : 12,
-		"viewCount" : 36,
-		"lastUpdate" : "2016-08-05 23:49:49",
-		"difficulty" : 0.3333333333333333,
+		"incorrectCount" : 13,
+		"viewCount" : 38,
+		"lastUpdate" : "2017-07-01 19:00:17",
+		"difficulty" : 0.34210526315789475,
 		"confidence" : 0,
-		"totalTime" : 162138,
-		"averageTime" : 7720,
-		"timedViewCount" : 21
+		"totalTime" : 175390,
+		"averageTime" : 7625,
+		"timedViewCount" : 23
 	},
 	{
 		"studyItemMetaId" : "649f9151-17b9-4265-a396-24abfc4c6013",
@@ -7620,14 +8586,14 @@
 		"createDate" : "2016-03-17 22:47:15",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "f79b2092-5282-4920-bea0-69e198ba2484",
-		"incorrectCount" : 10,
-		"viewCount" : 16,
-		"lastUpdate" : "2016-05-15 16:26:02",
-		"difficulty" : 0.625,
+		"incorrectCount" : 12,
+		"viewCount" : 19,
+		"lastUpdate" : "2017-05-26 00:39:28",
+		"difficulty" : 0.631578947368421,
 		"confidence" : 0,
-		"totalTime" : 205076,
-		"averageTime" : 12817,
-		"timedViewCount" : 16
+		"totalTime" : 267650,
+		"averageTime" : 14086,
+		"timedViewCount" : 19
 	},
 	{
 		"studyItemMetaId" : "65e2e405-b742-4d8a-b4ec-799becea77cd",
@@ -7840,6 +8806,20 @@
 		"timedViewCount" : 2
 	},
 	{
+		"studyItemMetaId" : "6970b822-bfb5-4349-a2eb-e86885158245",
+		"createDate" : "2017-06-23 22:50:01",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "710dd95f-d163-4487-a8b7-307f9376830f",
+		"incorrectCount" : 26,
+		"viewCount" : 35,
+		"lastUpdate" : "2017-07-03 00:06:48",
+		"difficulty" : 0.7428571428571429,
+		"confidence" : 0,
+		"totalTime" : 494585,
+		"averageTime" : 14131,
+		"timedViewCount" : 35
+	},
+	{
 		"studyItemMetaId" : "698d3d9b-a9fa-4aa2-8eff-e9e660b8f90d",
 		"createDate" : "2015-03-12 22:36:43",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -7852,6 +8832,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "6994ebce-9b2d-4bf0-a42e-1825c3658e7c",
+		"createDate" : "2017-06-25 20:44:13",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "2c57af41-1a81-438d-b97f-5876435ecac7",
+		"incorrectCount" : 32,
+		"viewCount" : 40,
+		"lastUpdate" : "2017-07-03 00:09:18",
+		"difficulty" : 0.8,
+		"confidence" : 0,
+		"totalTime" : 442351,
+		"averageTime" : 11058,
+		"timedViewCount" : 40
 	},
 	{
 		"studyItemMetaId" : "6995e356-6322-47fe-bc2b-651b2b5ea0a7",
@@ -7928,14 +8922,14 @@
 		"createDate" : "2015-09-26 20:27:10",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "587482b5-5865-426e-9bb0-d31f25d51cea",
-		"incorrectCount" : 17,
-		"viewCount" : 27,
-		"lastUpdate" : "2016-05-18 23:41:41",
-		"difficulty" : 0.6296296296296297,
+		"incorrectCount" : 21,
+		"viewCount" : 33,
+		"lastUpdate" : "2017-07-01 19:01:15",
+		"difficulty" : 0.6363636363636364,
 		"confidence" : 0,
-		"totalTime" : 516388,
-		"averageTime" : 19125,
-		"timedViewCount" : 27
+		"totalTime" : 572559,
+		"averageTime" : 17350,
+		"timedViewCount" : 33
 	},
 	{
 		"studyItemMetaId" : "6c287851-a11a-47af-925c-f139d665ed4f",
@@ -7964,6 +8958,34 @@
 		"totalTime" : 88660,
 		"averageTime" : 11082,
 		"timedViewCount" : 8
+	},
+	{
+		"studyItemMetaId" : "6c4fae7a-ec76-4efa-abb1-60fb4989336e",
+		"createDate" : "2017-06-11 18:42:45",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ac402c28-3708-454b-bd25-2182ed7d37af",
+		"incorrectCount" : 9,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-06-22 22:59:40",
+		"difficulty" : 0.6428571428571429,
+		"confidence" : 0,
+		"totalTime" : 116148,
+		"averageTime" : 8296,
+		"timedViewCount" : 14
+	},
+	{
+		"studyItemMetaId" : "6c752588-34b4-4bc7-840e-0e2ab9a9c249",
+		"createDate" : "2017-05-28 20:46:00",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "f85f7bc9-055f-43e5-9106-c94d3554cd98",
+		"incorrectCount" : 0,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-29 17:59:05",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 13449,
+		"averageTime" : 13449,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "6c924d0f-38d8-4385-ae7d-3b25fb8d45e8",
@@ -8106,6 +9128,20 @@
 		"timedViewCount" : 22
 	},
 	{
+		"studyItemMetaId" : "6dcb3b03-7c8f-4dc2-a1df-d4200e72779b",
+		"createDate" : "2017-06-17 20:07:22",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "79683673-af19-4a34-a367-7fef3fbe2931",
+		"incorrectCount" : 36,
+		"viewCount" : 47,
+		"lastUpdate" : "2017-07-03 00:08:51",
+		"difficulty" : 0.7659574468085106,
+		"confidence" : 0,
+		"totalTime" : 597136,
+		"averageTime" : 12705,
+		"timedViewCount" : 47
+	},
+	{
 		"studyItemMetaId" : "6decd0ef-ebb0-4249-bfad-d6e4e7f32422",
 		"createDate" : "2015-03-01 21:54:40",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -8190,6 +9226,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "6ef76849-970c-4a1d-8a6f-537b317d6f19",
+		"createDate" : "2017-05-31 02:02:29",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e423ac95-6b15-421c-b4f0-1d01aaaddb2d",
+		"incorrectCount" : 3,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-06-03 19:17:43",
+		"difficulty" : 0.6,
+		"confidence" : 0,
+		"totalTime" : 36027,
+		"averageTime" : 7205,
+		"timedViewCount" : 5
+	},
+	{
 		"studyItemMetaId" : "6f2b9330-2b44-41e3-833a-e67f3416fd2f",
 		"createDate" : "2016-07-10 19:23:01",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -8258,6 +9308,20 @@
 		"totalTime" : 307370,
 		"averageTime" : 10245,
 		"timedViewCount" : 30
+	},
+	{
+		"studyItemMetaId" : "6fb838ba-6b91-410e-954b-c81f8c4187d9",
+		"createDate" : "2017-06-03 06:21:39",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "27657e70-5d54-417e-b9ff-a7b0edd3c59d",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-04 18:37:57",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 32049,
+		"averageTime" : 8012,
+		"timedViewCount" : 4
 	},
 	{
 		"studyItemMetaId" : "6fc81f5f-acf0-4a6a-a200-1bb4d307d944",
@@ -8405,13 +9469,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "c1944fbb-17ae-4dcd-b586-c535cd3411ff",
 		"incorrectCount" : 13,
-		"viewCount" : 27,
-		"lastUpdate" : "2016-04-10 17:53:12",
-		"difficulty" : 0.48148148148148145,
+		"viewCount" : 29,
+		"lastUpdate" : "2017-07-01 18:59:23",
+		"difficulty" : 0.4482758620689655,
 		"confidence" : 0,
-		"totalTime" : 377358,
-		"averageTime" : 13976,
-		"timedViewCount" : 27
+		"totalTime" : 392567,
+		"averageTime" : 13536,
+		"timedViewCount" : 29
 	},
 	{
 		"studyItemMetaId" : "7168bfb1-cbf9-42c1-ba64-7c2868437006",
@@ -8446,14 +9510,28 @@
 		"createDate" : "2016-03-11 03:11:29",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "9c384d3d-c2b9-408f-b2c7-2cd188ddeaac",
-		"incorrectCount" : 10,
-		"viewCount" : 16,
-		"lastUpdate" : "2016-04-13 03:55:53",
-		"difficulty" : 0.625,
+		"incorrectCount" : 13,
+		"viewCount" : 19,
+		"lastUpdate" : "2017-05-26 00:39:51",
+		"difficulty" : 0.6842105263157895,
 		"confidence" : 0,
-		"totalTime" : 130236,
-		"averageTime" : 8139,
-		"timedViewCount" : 16
+		"totalTime" : 182257,
+		"averageTime" : 9592,
+		"timedViewCount" : 19
+	},
+	{
+		"studyItemMetaId" : "7200dd09-ff4c-44d4-a915-f1a8d896429d",
+		"createDate" : "2017-06-25 20:44:09",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b01ac2c6-3f9b-47f5-8a01-82c17c35d449",
+		"incorrectCount" : 7,
+		"viewCount" : 11,
+		"lastUpdate" : "2017-07-01 19:00:38",
+		"difficulty" : 0.6363636363636364,
+		"confidence" : 0,
+		"totalTime" : 110085,
+		"averageTime" : 10007,
+		"timedViewCount" : 11
 	},
 	{
 		"studyItemMetaId" : "7217ed3c-4b7e-4871-b01b-5619a9fe3b8d",
@@ -8502,14 +9580,14 @@
 		"createDate" : "2017-01-08 14:50:36",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "270d95f2-1e18-4067-8953-f04780a9a2c2",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:54:27",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 5386,
+		"averageTime" : 5386,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "7269a159-ced7-4877-961a-01c617d9299b",
@@ -8523,6 +9601,20 @@
 		"confidence" : 0,
 		"totalTime" : 9296,
 		"averageTime" : 4648,
+		"timedViewCount" : 2
+	},
+	{
+		"studyItemMetaId" : "7278340a-d5e2-4f7f-bd13-fb4f60fa1d5b",
+		"createDate" : "2017-05-31 02:02:26",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ae56a0f9-bfda-43ae-b6e8-6de03a87132e",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-01 23:36:15",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 11089,
+		"averageTime" : 5544,
 		"timedViewCount" : 2
 	},
 	{
@@ -8580,6 +9672,20 @@
 		"totalTime" : 40985,
 		"averageTime" : 10246,
 		"timedViewCount" : 4
+	},
+	{
+		"studyItemMetaId" : "73482fe4-f80e-4313-bdf6-d8926da5bd2e",
+		"createDate" : "2017-06-04 19:51:01",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "f0ac5842-9db9-4605-90ac-6912f9552345",
+		"incorrectCount" : 5,
+		"viewCount" : 8,
+		"lastUpdate" : "2017-06-09 23:49:06",
+		"difficulty" : 0.625,
+		"confidence" : 0,
+		"totalTime" : 107743,
+		"averageTime" : 13467,
+		"timedViewCount" : 8
 	},
 	{
 		"studyItemMetaId" : "7378bb40-338a-436c-99cb-8fed62826c02",
@@ -8778,6 +9884,20 @@
 		"timedViewCount" : 73
 	},
 	{
+		"studyItemMetaId" : "75de7c13-05ee-42aa-82b9-e97504cdd99b",
+		"createDate" : "2017-06-03 06:21:42",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0f8a4d6a-75f7-4aba-8cb0-b27f3f6d0c00",
+		"incorrectCount" : 8,
+		"viewCount" : 12,
+		"lastUpdate" : "2017-06-11 18:38:43",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 165834,
+		"averageTime" : 13819,
+		"timedViewCount" : 12
+	},
+	{
 		"studyItemMetaId" : "75f4483e-7343-49aa-a543-99151f0c55d9",
 		"createDate" : "2015-01-30 01:20:56",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -8946,18 +10066,46 @@
 		"timedViewCount" : 38
 	},
 	{
+		"studyItemMetaId" : "78c7d607-6dc6-404b-999d-f71c1013bd21",
+		"createDate" : "2017-06-04 19:50:50",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0f723ced-5949-4d7e-8689-3003e67c653d",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-07 00:48:39",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 63474,
+		"averageTime" : 15868,
+		"timedViewCount" : 4
+	},
+	{
+		"studyItemMetaId" : "78d5cef6-5318-42d0-91e3-76b1eb4510d8",
+		"createDate" : "2017-05-28 19:40:55",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b6140919-00d9-4d1f-a609-ee4afd734ff2",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-05-28 19:47:37",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 44348,
+		"averageTime" : 14782,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "78dda15c-8975-47e6-9c83-f14cbb398e99",
 		"createDate" : "2015-09-27 19:07:09",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "bdb1ef41-a182-4fe0-b46a-c679dcdad463",
-		"incorrectCount" : 11,
-		"viewCount" : 17,
-		"lastUpdate" : "2016-08-29 23:07:17",
-		"difficulty" : 0.6470588235294118,
+		"incorrectCount" : 12,
+		"viewCount" : 20,
+		"lastUpdate" : "2017-05-28 19:44:30",
+		"difficulty" : 0.6,
 		"confidence" : 0,
-		"totalTime" : 270188,
-		"averageTime" : 15893,
-		"timedViewCount" : 17
+		"totalTime" : 286904,
+		"averageTime" : 14345,
+		"timedViewCount" : 20
 	},
 	{
 		"studyItemMetaId" : "78e6af33-367b-4796-a235-2345e360991a",
@@ -8974,6 +10122,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "79207101-bdc2-4c7e-b912-628e71c8e0e0",
+		"createDate" : "2017-06-17 20:07:24",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "baa64a99-9777-42f0-904c-9898a0f97e42",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-24 18:12:08",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 35578,
+		"averageTime" : 8894,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "7956043f-f882-49d0-b00b-9e780bef16df",
 		"createDate" : "2016-06-19 18:27:53",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -8986,6 +10148,20 @@
 		"totalTime" : 103282,
 		"averageTime" : 14754,
 		"timedViewCount" : 7
+	},
+	{
+		"studyItemMetaId" : "7960170a-1835-4954-bc22-741dd785d635",
+		"createDate" : "2017-06-11 18:42:42",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "95ae346d-e521-46b2-960d-0a53c1a2e155",
+		"incorrectCount" : 3,
+		"viewCount" : 6,
+		"lastUpdate" : "2017-06-24 18:12:26",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 68813,
+		"averageTime" : 11468,
+		"timedViewCount" : 6
 	},
 	{
 		"studyItemMetaId" : "79870aea-cc16-4b28-9d6c-96c324fc0406",
@@ -9002,6 +10178,20 @@
 		"timedViewCount" : 2
 	},
 	{
+		"studyItemMetaId" : "79ead981-586e-48fb-8e68-71d9482bb601",
+		"createDate" : "2017-06-23 22:50:13",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "62908fa0-8e01-472b-910b-bbe86771b106",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-23 22:54:34",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 32747,
+		"averageTime" : 16373,
+		"timedViewCount" : 2
+	},
+	{
 		"studyItemMetaId" : "79fd5529-5c7a-4162-a001-19d708740cc7",
 		"createDate" : "2015-03-19 23:53:10",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -9014,6 +10204,20 @@
 		"totalTime" : 251921,
 		"averageTime" : 7872,
 		"timedViewCount" : 32
+	},
+	{
+		"studyItemMetaId" : "7a0080d8-9eda-46e8-b4ed-1a681985286f",
+		"createDate" : "2017-06-11 18:42:13",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "27b74ece-7ef6-4646-8a33-70c2c9ff7c59",
+		"incorrectCount" : 6,
+		"viewCount" : 10,
+		"lastUpdate" : "2017-06-24 18:12:29",
+		"difficulty" : 0.6,
+		"confidence" : 0,
+		"totalTime" : 68814,
+		"averageTime" : 6881,
+		"timedViewCount" : 10
 	},
 	{
 		"studyItemMetaId" : "7a0f75f5-0cd1-4571-9503-48c338506132",
@@ -9090,14 +10294,28 @@
 		"createDate" : "2015-06-24 00:13:19",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "3ec78635-25a9-4bd3-8487-50352327c5af",
-		"incorrectCount" : 43,
-		"viewCount" : 72,
-		"lastUpdate" : "2016-04-08 12:26:56",
-		"difficulty" : 0.5972222222222222,
+		"incorrectCount" : 44,
+		"viewCount" : 74,
+		"lastUpdate" : "2017-05-26 00:37:00",
+		"difficulty" : 0.5945945945945946,
 		"confidence" : 0,
-		"totalTime" : 678655,
+		"totalTime" : 697503,
 		"averageTime" : 9425,
-		"timedViewCount" : 72
+		"timedViewCount" : 74
+	},
+	{
+		"studyItemMetaId" : "7af10751-262f-458e-bfbf-d4b540da38fe",
+		"createDate" : "2017-06-29 00:16:38",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "d34b9ab0-bafc-42c6-998b-ee50aa1a5087",
+		"incorrectCount" : 5,
+		"viewCount" : 8,
+		"lastUpdate" : "2017-07-01 19:01:07",
+		"difficulty" : 0.625,
+		"confidence" : 0,
+		"totalTime" : 88420,
+		"averageTime" : 11052,
+		"timedViewCount" : 8
 	},
 	{
 		"studyItemMetaId" : "7b251d3c-001e-40b2-b7b2-49581594707c",
@@ -9366,6 +10584,20 @@
 		"timedViewCount" : 16
 	},
 	{
+		"studyItemMetaId" : "7dafd311-5c04-4407-a7b3-44bb0c561731",
+		"createDate" : "2017-05-31 02:02:23",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "6b660a18-e996-4bcf-934f-9bd1a71cd9da",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-09 23:49:11",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 42732,
+		"averageTime" : 10683,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "7e151423-6ba5-4b91-a205-b4fce2f5b6ac",
 		"createDate" : "2017-01-22 18:47:54",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -9398,28 +10630,28 @@
 		"createDate" : "2017-01-22 19:26:32",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "8fb7e1ff-e104-4a9c-8e65-8c95b0176d58",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:53:50",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 1576,
+		"averageTime" : 1576,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "7ebd62c1-a6dd-4bfd-800b-58f867e0188c",
 		"createDate" : "2016-02-28 21:08:30",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "016be481-1bc9-475d-b721-945e41a798ae",
-		"incorrectCount" : 20,
-		"viewCount" : 32,
-		"lastUpdate" : "2016-05-14 17:19:15",
-		"difficulty" : 0.625,
+		"incorrectCount" : 22,
+		"viewCount" : 37,
+		"lastUpdate" : "2017-06-04 18:45:00",
+		"difficulty" : 0.5945945945945946,
 		"confidence" : 0,
-		"totalTime" : 286055,
-		"averageTime" : 8939,
-		"timedViewCount" : 32
+		"totalTime" : 316584,
+		"averageTime" : 8556,
+		"timedViewCount" : 37
 	},
 	{
 		"studyItemMetaId" : "7f249677-c4a8-4684-b705-9b1474b4de34",
@@ -9434,6 +10666,20 @@
 		"totalTime" : 684656,
 		"averageTime" : 7206,
 		"timedViewCount" : 95
+	},
+	{
+		"studyItemMetaId" : "7f536a2e-8eeb-4af6-a9ae-e1ba05398d3c",
+		"createDate" : "2017-07-03 00:13:51",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ed964e09-42ee-49b7-9a6a-924bc8b3a186",
+		"incorrectCount" : 0,
+		"viewCount" : 0,
+		"lastUpdate" : [],
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 0,
+		"averageTime" : 0,
+		"timedViewCount" : 0
 	},
 	{
 		"studyItemMetaId" : "7f865ef1-e8ce-4bb4-9044-0ca288312cca",
@@ -9532,6 +10778,20 @@
 		"totalTime" : 548342,
 		"averageTime" : 10346,
 		"timedViewCount" : 53
+	},
+	{
+		"studyItemMetaId" : "80fbcea2-ada3-49ac-be57-9a7e61a2c5da",
+		"createDate" : "2017-07-03 00:12:46",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "825a3dc7-0e4c-42b0-9bb0-e5567e28fcad",
+		"incorrectCount" : 0,
+		"viewCount" : 0,
+		"lastUpdate" : [],
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 0,
+		"averageTime" : 0,
+		"timedViewCount" : 0
 	},
 	{
 		"studyItemMetaId" : "8105a774-b5c8-484a-853f-67c449924bcd",
@@ -9730,6 +10990,34 @@
 		"timedViewCount" : 32
 	},
 	{
+		"studyItemMetaId" : "83f2362b-6add-49e0-aee0-26a4dc863f86",
+		"createDate" : "2017-05-28 20:46:16",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "5aa6cc34-6b62-4ae8-bd6f-3f366d93b357",
+		"incorrectCount" : 10,
+		"viewCount" : 15,
+		"lastUpdate" : "2017-06-11 18:38:56",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 161003,
+		"averageTime" : 10733,
+		"timedViewCount" : 15
+	},
+	{
+		"studyItemMetaId" : "83f6e4cd-5ce3-4ba0-9680-ecf077a297e1",
+		"createDate" : "2017-06-24 17:55:43",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "f5778a18-6461-454b-8ae0-f8ea62518809",
+		"incorrectCount" : 4,
+		"viewCount" : 6,
+		"lastUpdate" : "2017-06-25 20:39:04",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 60330,
+		"averageTime" : 10055,
+		"timedViewCount" : 6
+	},
+	{
 		"studyItemMetaId" : "843343ea-d349-4249-a6ca-c8dd3a92fce9",
 		"createDate" : "2015-09-05 18:15:05",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -9832,14 +11120,14 @@
 		"createDate" : "2016-03-17 23:55:13",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "da7ef802-9578-4c9a-b99d-17774b23c14e",
-		"incorrectCount" : 10,
-		"viewCount" : 16,
-		"lastUpdate" : "2016-04-10 17:37:05",
-		"difficulty" : 0.625,
+		"incorrectCount" : 16,
+		"viewCount" : 25,
+		"lastUpdate" : "2017-06-24 18:11:20",
+		"difficulty" : 0.64,
 		"confidence" : 0,
-		"totalTime" : 255118,
-		"averageTime" : 15944,
-		"timedViewCount" : 16
+		"totalTime" : 340326,
+		"averageTime" : 13613,
+		"timedViewCount" : 25
 	},
 	{
 		"studyItemMetaId" : "850a48a5-7814-4108-a479-08fbc5c640bb",
@@ -9889,13 +11177,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "12c15615-4ca2-488c-b4bc-a1970021a82a",
 		"incorrectCount" : 35,
-		"viewCount" : 56,
-		"lastUpdate" : "2016-05-26 06:49:44",
-		"difficulty" : 0.625,
+		"viewCount" : 57,
+		"lastUpdate" : "2017-05-26 00:26:10",
+		"difficulty" : 0.6140350877192983,
 		"confidence" : 0,
-		"totalTime" : 365836,
-		"averageTime" : 6532,
-		"timedViewCount" : 56
+		"totalTime" : 371687,
+		"averageTime" : 6520,
+		"timedViewCount" : 57
 	},
 	{
 		"studyItemMetaId" : "861f71f7-c9d2-4c3c-9339-3ee5cfe66b80",
@@ -9944,14 +11232,14 @@
 		"createDate" : "2015-10-31 20:45:27",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "61a8d3b7-fe78-46f8-83d0-1e64def26c52",
-		"incorrectCount" : 10,
-		"viewCount" : 16,
-		"lastUpdate" : "2016-08-10 23:52:15",
-		"difficulty" : 0.625,
+		"incorrectCount" : 19,
+		"viewCount" : 29,
+		"lastUpdate" : "2017-06-18 19:26:51",
+		"difficulty" : 0.6551724137931034,
 		"confidence" : 0,
-		"totalTime" : 245231,
-		"averageTime" : 15326,
-		"timedViewCount" : 16
+		"totalTime" : 389444,
+		"averageTime" : 13429,
+		"timedViewCount" : 29
 	},
 	{
 		"studyItemMetaId" : "869eb3da-5933-4182-9a88-8c687b6517da",
@@ -10001,13 +11289,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "6185a0a8-9898-4049-855a-1e5bedd1aa55",
 		"incorrectCount" : 30,
-		"viewCount" : 48,
-		"lastUpdate" : "2016-07-06 23:52:09",
-		"difficulty" : 0.625,
+		"viewCount" : 49,
+		"lastUpdate" : "2017-06-18 19:26:10",
+		"difficulty" : 0.6122448979591837,
 		"confidence" : 0,
-		"totalTime" : 547417,
-		"averageTime" : 11404,
-		"timedViewCount" : 48
+		"totalTime" : 555347,
+		"averageTime" : 11333,
+		"timedViewCount" : 49
 	},
 	{
 		"studyItemMetaId" : "87802f93-10ad-4213-a6b7-6c4431d9eb87",
@@ -10036,6 +11324,20 @@
 		"totalTime" : 105537,
 		"averageTime" : 4059,
 		"timedViewCount" : 26
+	},
+	{
+		"studyItemMetaId" : "87d00fb1-425e-43cf-8ac0-9e57af22e763",
+		"createDate" : "2017-05-31 02:02:58",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "d9eb661b-f572-4ee0-a311-1a9f5cae79ec",
+		"incorrectCount" : 15,
+		"viewCount" : 22,
+		"lastUpdate" : "2017-06-10 19:50:28",
+		"difficulty" : 0.6818181818181818,
+		"confidence" : 0,
+		"totalTime" : 260844,
+		"averageTime" : 11856,
+		"timedViewCount" : 22
 	},
 	{
 		"studyItemMetaId" : "87d500e0-085c-4850-870c-1bb382754e34",
@@ -10094,6 +11396,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "88727a7c-3831-441a-9510-d9fc94d1b862",
+		"createDate" : "2017-06-23 22:50:07",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "8b87a752-2b3a-47ca-bec3-a40358300055",
+		"incorrectCount" : 8,
+		"viewCount" : 13,
+		"lastUpdate" : "2017-07-01 18:58:13",
+		"difficulty" : 0.6153846153846154,
+		"confidence" : 0,
+		"totalTime" : 167820,
+		"averageTime" : 12909,
+		"timedViewCount" : 13
+	},
+	{
 		"studyItemMetaId" : "887a8748-b2db-406c-b9a6-03d6446ca355",
 		"createDate" : "2016-04-10 19:05:23",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -10108,6 +11424,20 @@
 		"timedViewCount" : 1
 	},
 	{
+		"studyItemMetaId" : "889ce64a-45da-4ded-80fd-bfcc369d5f7c",
+		"createDate" : "2017-06-11 18:42:25",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "551a2db3-89f8-4cb5-ac6d-e32de866d952",
+		"incorrectCount" : 11,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-06-21 00:36:58",
+		"difficulty" : 0.6875,
+		"confidence" : 0,
+		"totalTime" : 219871,
+		"averageTime" : 13741,
+		"timedViewCount" : 16
+	},
+	{
 		"studyItemMetaId" : "88eb2916-b901-4630-ac0e-c678106d5dc0",
 		"createDate" : "2015-06-24 00:17:16",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -10120,6 +11450,20 @@
 		"totalTime" : 39221,
 		"averageTime" : 13073,
 		"timedViewCount" : 3
+	},
+	{
+		"studyItemMetaId" : "88f8e698-5384-471c-b167-5bddc666a0e6",
+		"createDate" : "2017-06-25 20:44:16",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "880a1d8b-6073-4ab3-8114-14c2f6799087",
+		"incorrectCount" : 12,
+		"viewCount" : 17,
+		"lastUpdate" : "2017-07-01 18:54:18",
+		"difficulty" : 0.7058823529411765,
+		"confidence" : 0,
+		"totalTime" : 232142,
+		"averageTime" : 13655,
+		"timedViewCount" : 17
 	},
 	{
 		"studyItemMetaId" : "88fd656a-6e51-46eb-8c10-5eceaad2e2f7",
@@ -10304,6 +11648,20 @@
 		"timedViewCount" : 34
 	},
 	{
+		"studyItemMetaId" : "8c317ba5-ce8e-406d-99af-98ae5e12bc6c",
+		"createDate" : "2017-05-28 20:46:05",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "eb132858-e812-4c4e-add1-19264ebbd3b3",
+		"incorrectCount" : 26,
+		"viewCount" : 38,
+		"lastUpdate" : "2017-06-11 18:32:38",
+		"difficulty" : 0.6842105263157895,
+		"confidence" : 0,
+		"totalTime" : 383903,
+		"averageTime" : 10102,
+		"timedViewCount" : 38
+	},
+	{
 		"studyItemMetaId" : "8c5e7815-a69e-46ee-a59b-043b74c46f39",
 		"createDate" : "2015-03-12 22:35:36",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -10472,6 +11830,20 @@
 		"timedViewCount" : 14
 	},
 	{
+		"studyItemMetaId" : "8e59fd5e-f184-4909-b92f-7c8a21ba8fd3",
+		"createDate" : "2017-06-15 01:02:34",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c35534f4-e651-4b19-a378-c67a33cd1142",
+		"incorrectCount" : 7,
+		"viewCount" : 11,
+		"lastUpdate" : "2017-06-22 22:59:50",
+		"difficulty" : 0.6363636363636364,
+		"confidence" : 0,
+		"totalTime" : 126328,
+		"averageTime" : 11484,
+		"timedViewCount" : 11
+	},
+	{
 		"studyItemMetaId" : "8e79bad3-7d9f-47c2-b8e2-3df676ecf074",
 		"createDate" : "2015-11-14 18:49:56",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -10484,6 +11856,20 @@
 		"totalTime" : 212875,
 		"averageTime" : 11203,
 		"timedViewCount" : 19
+	},
+	{
+		"studyItemMetaId" : "8ed577d9-cd7a-4e72-96bc-3f90bd60806a",
+		"createDate" : "2017-06-29 22:50:06",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "8e77f928-b0fa-451a-8cb2-c36da3b56ede",
+		"incorrectCount" : 0,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-06-29 22:50:51",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 21061,
+		"averageTime" : 21061,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "8eea1c81-bc01-4d40-a695-f93d6283fe3e",
@@ -10602,14 +11988,14 @@
 		"createDate" : "2015-10-28 23:45:08",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "97744f3e-1be2-4011-8a58-28394b0710df",
-		"incorrectCount" : 6,
-		"viewCount" : 10,
-		"lastUpdate" : "2016-03-19 18:13:03",
-		"difficulty" : 0.6,
+		"incorrectCount" : 8,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-07-01 18:59:47",
+		"difficulty" : 0.5714285714285714,
 		"confidence" : 0,
-		"totalTime" : 110747,
-		"averageTime" : 11074,
-		"timedViewCount" : 10
+		"totalTime" : 144561,
+		"averageTime" : 10325,
+		"timedViewCount" : 14
 	},
 	{
 		"studyItemMetaId" : "90a01572-0fe5-4fbe-93e7-c21de99d6bd5",
@@ -10679,6 +12065,20 @@
 		"confidence" : 0,
 		"totalTime" : 178816,
 		"averageTime" : 8128,
+		"timedViewCount" : 22
+	},
+	{
+		"studyItemMetaId" : "914a0500-6f96-4083-85df-9bc29ba0cd72",
+		"createDate" : "2017-05-28 19:40:38",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "118cd8e0-56ab-434f-991d-11facc41bba9",
+		"incorrectCount" : 15,
+		"viewCount" : 22,
+		"lastUpdate" : "2017-06-11 18:38:46",
+		"difficulty" : 0.6818181818181818,
+		"confidence" : 0,
+		"totalTime" : 297026,
+		"averageTime" : 13501,
 		"timedViewCount" : 22
 	},
 	{
@@ -10820,6 +12220,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "93135b91-b9b1-48ae-a225-0468076bee26",
+		"createDate" : "2017-06-11 18:42:49",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "7cc079df-755f-4edc-a567-2a9099309d31",
+		"incorrectCount" : 4,
+		"viewCount" : 12,
+		"lastUpdate" : "2017-07-01 18:58:05",
+		"difficulty" : 0.3333333333333333,
+		"confidence" : 0,
+		"totalTime" : 35217,
+		"averageTime" : 2934,
+		"timedViewCount" : 12
 	},
 	{
 		"studyItemMetaId" : "933b6c28-d059-42bb-8b7d-de8aaedcdf67",
@@ -11004,6 +12418,20 @@
 		"timedViewCount" : 55
 	},
 	{
+		"studyItemMetaId" : "95ec79f3-8fd7-4ad5-a633-f7ceffaad014",
+		"createDate" : "2017-06-25 20:43:51",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "84b18e95-2767-4277-bb90-0a7b6610d385",
+		"incorrectCount" : 1,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-07-01 18:57:31",
+		"difficulty" : 0.3333333333333333,
+		"confidence" : 0,
+		"totalTime" : 19849,
+		"averageTime" : 6616,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "96163e65-514a-4332-9818-30b9e8e86283",
 		"createDate" : "2016-03-11 03:06:29",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -11064,14 +12492,14 @@
 		"createDate" : "2015-04-12 01:32:45",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "2239f961-1dae-4f1b-861a-ba82d42ca7e7",
-		"incorrectCount" : 72,
-		"viewCount" : 122,
-		"lastUpdate" : "2016-04-08 12:29:35",
-		"difficulty" : 0.5901639344262295,
+		"incorrectCount" : 74,
+		"viewCount" : 126,
+		"lastUpdate" : "2017-06-07 23:33:40",
+		"difficulty" : 0.5873015873015873,
 		"confidence" : 0,
-		"totalTime" : 1664540,
-		"averageTime" : 13643,
-		"timedViewCount" : 122
+		"totalTime" : 1702123,
+		"averageTime" : 13508,
+		"timedViewCount" : 126
 	},
 	{
 		"studyItemMetaId" : "9753c302-faa4-4eab-ac9e-76c5ad096e6b",
@@ -11116,18 +12544,32 @@
 		"timedViewCount" : 3
 	},
 	{
+		"studyItemMetaId" : "98e4b067-2a9d-45b1-b94d-4e3a4fbd6d6c",
+		"createDate" : "2017-06-15 01:01:54",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "a029ba4d-bd03-42c2-a8f6-f10d4552d835",
+		"incorrectCount" : 12,
+		"viewCount" : 19,
+		"lastUpdate" : "2017-06-28 00:24:09",
+		"difficulty" : 0.631578947368421,
+		"confidence" : 0,
+		"totalTime" : 282784,
+		"averageTime" : 14883,
+		"timedViewCount" : 19
+	},
+	{
 		"studyItemMetaId" : "98e56307-b072-43dc-9e1e-fd3ee34f22b9",
 		"createDate" : "2016-10-21 00:11:19",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "c87efb16-3f53-442e-94dd-297ff5c3f93b",
-		"incorrectCount" : 5,
-		"viewCount" : 5,
-		"lastUpdate" : "2017-01-07 19:58:58",
+		"incorrectCount" : 6,
+		"viewCount" : 6,
+		"lastUpdate" : "2017-05-13 20:54:52",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 128326,
-		"averageTime" : 25665,
-		"timedViewCount" : 5
+		"totalTime" : 137491,
+		"averageTime" : 22915,
+		"timedViewCount" : 6
 	},
 	{
 		"studyItemMetaId" : "98f7840a-e7ed-470e-813f-684e5867ca48",
@@ -11176,14 +12618,14 @@
 		"createDate" : "2016-03-25 18:51:05",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "9ce32d23-0ef8-400a-9c1e-9d86d35a602b",
-		"incorrectCount" : 3,
-		"viewCount" : 5,
-		"lastUpdate" : "2016-03-27 13:41:21",
-		"difficulty" : 0.6,
+		"incorrectCount" : 5,
+		"viewCount" : 8,
+		"lastUpdate" : "2017-05-26 00:40:28",
+		"difficulty" : 0.625,
 		"confidence" : 0,
-		"totalTime" : 35922,
-		"averageTime" : 7184,
-		"timedViewCount" : 5
+		"totalTime" : 64018,
+		"averageTime" : 8002,
+		"timedViewCount" : 8
 	},
 	{
 		"studyItemMetaId" : "9943f996-cd08-4ff6-aaae-cff7c642d70b",
@@ -11204,14 +12646,14 @@
 		"createDate" : "2017-01-22 19:25:35",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "20e5909b-453c-47e9-ae38-b7e93ca4886d",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:54:09",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 1487,
+		"averageTime" : 1487,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "99b41967-c6d0-447a-9878-8b61db0c93df",
@@ -11282,6 +12724,34 @@
 		"totalTime" : 91719,
 		"averageTime" : 5095,
 		"timedViewCount" : 18
+	},
+	{
+		"studyItemMetaId" : "9a7cdc8a-ce12-4179-8c42-52794721739f",
+		"createDate" : "2017-06-04 19:50:47",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "299bc87d-353d-444a-950f-15a558bf3589",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-07 23:28:44",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 27022,
+		"averageTime" : 6755,
+		"timedViewCount" : 4
+	},
+	{
+		"studyItemMetaId" : "9a8baf3c-d9c6-4817-8823-e6ead5d4e950",
+		"createDate" : "2017-05-28 20:46:08",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "beb5712a-a464-4504-94f6-0dcc5ed8ca9f",
+		"incorrectCount" : 5,
+		"viewCount" : 8,
+		"lastUpdate" : "2017-06-04 18:45:13",
+		"difficulty" : 0.625,
+		"confidence" : 0,
+		"totalTime" : 112546,
+		"averageTime" : 14068,
+		"timedViewCount" : 8
 	},
 	{
 		"studyItemMetaId" : "9a9822e5-49d5-4a05-a02c-ce8a9ed57ffc",
@@ -11438,6 +12908,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "9b813002-85b1-46e9-95b1-a07d60f07925",
+		"createDate" : "2017-06-11 18:42:21",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e2607008-606c-47bb-ba1e-13a328180d34",
+		"incorrectCount" : 20,
+		"viewCount" : 28,
+		"lastUpdate" : "2017-06-29 00:29:44",
+		"difficulty" : 0.7142857142857143,
+		"confidence" : 0,
+		"totalTime" : 351864,
+		"averageTime" : 12566,
+		"timedViewCount" : 28
+	},
+	{
 		"studyItemMetaId" : "9ba23655-6d58-48e3-9eb6-049da04fc3f2",
 		"createDate" : "2016-04-05 00:27:09",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -11499,13 +12983,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "2ba0a508-3df7-43c2-9bfe-ec115faab041",
 		"incorrectCount" : 3,
-		"viewCount" : 5,
-		"lastUpdate" : "2016-04-01 23:59:32",
-		"difficulty" : 0.6,
+		"viewCount" : 6,
+		"lastUpdate" : "2017-05-26 00:27:46",
+		"difficulty" : 0.5,
 		"confidence" : 0,
-		"totalTime" : 72370,
-		"averageTime" : 14474,
-		"timedViewCount" : 5
+		"totalTime" : 75157,
+		"averageTime" : 12526,
+		"timedViewCount" : 6
 	},
 	{
 		"studyItemMetaId" : "9d2e9ddc-8ae7-43fc-ad0f-f311b1723ffa",
@@ -11568,14 +13052,14 @@
 		"createDate" : "2015-01-18 10:27:04",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "b9f2927a-6f5b-416e-b665-9e0dedbe649b",
-		"incorrectCount" : 22,
-		"viewCount" : 49,
-		"lastUpdate" : "2016-07-06 23:58:24",
-		"difficulty" : 0.4489795918367347,
+		"incorrectCount" : 23,
+		"viewCount" : 52,
+		"lastUpdate" : "2017-05-28 19:44:53",
+		"difficulty" : 0.4423076923076923,
 		"confidence" : 0,
-		"totalTime" : 476404,
-		"averageTime" : 12875,
-		"timedViewCount" : 37
+		"totalTime" : 495029,
+		"averageTime" : 12375,
+		"timedViewCount" : 40
 	},
 	{
 		"studyItemMetaId" : "9e351b21-93f6-40e0-97ec-b66bc760b853",
@@ -11611,13 +13095,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "8ed5156f-95f7-4cc0-b898-9586d2187a2a",
 		"incorrectCount" : 14,
-		"viewCount" : 15,
-		"lastUpdate" : "2017-01-07 19:59:30",
-		"difficulty" : 0.9333333333333333,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-05-13 20:55:09",
+		"difficulty" : 0.875,
 		"confidence" : 0,
-		"totalTime" : 127242,
-		"averageTime" : 8482,
-		"timedViewCount" : 15
+		"totalTime" : 131608,
+		"averageTime" : 8225,
+		"timedViewCount" : 16
 	},
 	{
 		"studyItemMetaId" : "9e5fc97e-2c16-49e0-87c6-9260f53e839e",
@@ -11816,6 +13300,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "a011eb92-f2dc-4451-8534-8f44cd779b81",
+		"createDate" : "2017-06-04 19:50:34",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "d150de7a-ed83-4715-9433-f899ed26e568",
+		"incorrectCount" : 8,
+		"viewCount" : 12,
+		"lastUpdate" : "2017-06-10 19:55:53",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 192420,
+		"averageTime" : 16035,
+		"timedViewCount" : 12
+	},
+	{
 		"studyItemMetaId" : "a06d1041-5c5d-4259-b347-c0aef108d1e8",
 		"createDate" : "2015-04-13 01:09:52",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -11872,6 +13370,20 @@
 		"timedViewCount" : 19
 	},
 	{
+		"studyItemMetaId" : "a0def6f2-ad2a-411d-8e01-73064cecabf6",
+		"createDate" : "2017-06-04 19:51:07",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "48c480b2-921e-40de-a762-01d6d1c68498",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-07 00:38:54",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 32785,
+		"averageTime" : 8196,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "a0f551ad-3824-4c87-ade4-d9a06ea12fdc",
 		"createDate" : "2015-05-13 23:06:32",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -11884,6 +13396,20 @@
 		"totalTime" : 282007,
 		"averageTime" : 10071,
 		"timedViewCount" : 28
+	},
+	{
+		"studyItemMetaId" : "a1a27ed5-8d7e-48d0-bab6-6a8b1002fb62",
+		"createDate" : "2017-06-04 19:51:40",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "4b23caa7-1c8e-4d9c-85f2-b732d91ff5d8",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-07 00:37:28",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 49465,
+		"averageTime" : 12366,
+		"timedViewCount" : 4
 	},
 	{
 		"studyItemMetaId" : "a1a72f28-311d-431e-ad70-6878e5e1bb13",
@@ -11942,6 +13468,20 @@
 		"timedViewCount" : 37
 	},
 	{
+		"studyItemMetaId" : "a210fff5-1da6-49ff-b9ea-085da9af88f2",
+		"createDate" : "2017-06-21 00:42:03",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "8346319f-0dc1-46bd-9fac-0c4e0caec7be",
+		"incorrectCount" : 7,
+		"viewCount" : 11,
+		"lastUpdate" : "2017-06-24 18:07:34",
+		"difficulty" : 0.6363636363636364,
+		"confidence" : 0,
+		"totalTime" : 156242,
+		"averageTime" : 14203,
+		"timedViewCount" : 11
+	},
+	{
 		"studyItemMetaId" : "a2458ca8-083b-4d94-9929-0d374ce2a59a",
 		"createDate" : "2015-04-05 21:11:40",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -11975,13 +13515,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "22c547e4-f00f-4e4e-adc1-79f9d142f260",
 		"incorrectCount" : 20,
-		"viewCount" : 37,
-		"lastUpdate" : "2016-03-26 23:54:39",
-		"difficulty" : 0.5405405405405406,
+		"viewCount" : 38,
+		"lastUpdate" : "2017-06-04 18:39:49",
+		"difficulty" : 0.5263157894736842,
 		"confidence" : 0,
-		"totalTime" : 380979,
-		"averageTime" : 10296,
-		"timedViewCount" : 37
+		"totalTime" : 384430,
+		"averageTime" : 10116,
+		"timedViewCount" : 38
 	},
 	{
 		"studyItemMetaId" : "a2c98581-8b56-4acb-9c80-2ca973161eef",
@@ -12110,6 +13650,20 @@
 		"timedViewCount" : 43
 	},
 	{
+		"studyItemMetaId" : "a443d539-4c3f-4177-a2b3-6481e83f6249",
+		"createDate" : "2017-06-04 19:51:12",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "5b148c7d-cbc4-4aaa-bc9a-adae96d4a26a",
+		"incorrectCount" : 3,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-06-07 00:38:42",
+		"difficulty" : 0.6,
+		"confidence" : 0,
+		"totalTime" : 72370,
+		"averageTime" : 14474,
+		"timedViewCount" : 5
+	},
+	{
 		"studyItemMetaId" : "a4a7cde4-64e7-4314-9edf-c70f1f66d6b1",
 		"createDate" : "2015-05-17 20:26:31",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -12128,14 +13682,14 @@
 		"createDate" : "2017-01-22 19:26:29",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "ee3c04f9-caf3-4b85-8412-0b5259380d71",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:53:56",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 4709,
+		"averageTime" : 4709,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "a4cb2edd-e94a-4ba2-b3be-c82eedd41ed3",
@@ -12222,6 +13776,20 @@
 		"timedViewCount" : 14
 	},
 	{
+		"studyItemMetaId" : "a5ec5fc3-e4fa-407a-97a2-2c3131694349",
+		"createDate" : "2017-06-11 18:42:23",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "1827ad83-cce0-4551-82a9-b31d12a9cdae",
+		"incorrectCount" : 21,
+		"viewCount" : 30,
+		"lastUpdate" : "2017-06-29 00:30:47",
+		"difficulty" : 0.7,
+		"confidence" : 0,
+		"totalTime" : 338166,
+		"averageTime" : 11272,
+		"timedViewCount" : 30
+	},
+	{
 		"studyItemMetaId" : "a5ec6e07-bb5f-4374-a6a0-43bdd57957f6",
 		"createDate" : "2015-04-05 21:13:48",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -12278,6 +13846,20 @@
 		"timedViewCount" : 42
 	},
 	{
+		"studyItemMetaId" : "a66a205e-bd65-4d03-aa87-c0dedfcc760d",
+		"createDate" : "2017-05-28 20:46:13",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c828fd78-f4c0-46d8-aebe-c279a7599d0c",
+		"incorrectCount" : 11,
+		"viewCount" : 17,
+		"lastUpdate" : "2017-06-11 18:35:46",
+		"difficulty" : 0.6470588235294118,
+		"confidence" : 0,
+		"totalTime" : 250276,
+		"averageTime" : 14722,
+		"timedViewCount" : 17
+	},
+	{
 		"studyItemMetaId" : "a67716bc-2d1e-4454-9ff3-bc99a86d93b0",
 		"createDate" : "2015-02-12 01:41:42",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -12304,6 +13886,20 @@
 		"totalTime" : 44486,
 		"averageTime" : 14828,
 		"timedViewCount" : 3
+	},
+	{
+		"studyItemMetaId" : "a6c58886-73bf-4b38-a4af-c9b7ebef3257",
+		"createDate" : "2017-06-25 20:43:59",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "d6e7299d-44f5-41a0-8fed-ecbd043d9405",
+		"incorrectCount" : 4,
+		"viewCount" : 7,
+		"lastUpdate" : "2017-06-28 00:22:58",
+		"difficulty" : 0.5714285714285714,
+		"confidence" : 0,
+		"totalTime" : 64657,
+		"averageTime" : 9236,
+		"timedViewCount" : 7
 	},
 	{
 		"studyItemMetaId" : "a6cbbc27-60fd-46e8-8e8b-e8dda7de744c",
@@ -12416,6 +14012,20 @@
 		"totalTime" : 812444,
 		"averageTime" : 12499,
 		"timedViewCount" : 65
+	},
+	{
+		"studyItemMetaId" : "a772fbbd-5d76-4aa6-a775-9774afe703a6",
+		"createDate" : "2017-06-04 19:50:54",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "4aea1974-8dbd-4fce-9eca-b6d09cc4087a",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-07 00:44:30",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 16107,
+		"averageTime" : 5369,
+		"timedViewCount" : 3
 	},
 	{
 		"studyItemMetaId" : "a7a3f2d0-96e7-41f5-b757-d678640595a3",
@@ -12688,14 +14298,14 @@
 		"createDate" : "2017-01-22 19:27:15",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "01cfb011-5dcf-4aab-b5c3-eddc7b15b828",
-		"incorrectCount" : 6,
-		"viewCount" : 7,
-		"lastUpdate" : "2017-02-02 23:44:36",
-		"difficulty" : 0.8571428571428571,
+		"incorrectCount" : 28,
+		"viewCount" : 39,
+		"lastUpdate" : "2017-07-01 18:50:09",
+		"difficulty" : 0.717948717948718,
 		"confidence" : 0,
-		"totalTime" : 87671,
-		"averageTime" : 12524,
-		"timedViewCount" : 7
+		"totalTime" : 463860,
+		"averageTime" : 11893,
+		"timedViewCount" : 39
 	},
 	{
 		"studyItemMetaId" : "a9a48432-60c8-49ab-828f-9d29e973f547",
@@ -12740,6 +14350,20 @@
 		"timedViewCount" : 23
 	},
 	{
+		"studyItemMetaId" : "a9c862fd-1a77-4967-b0fe-ff568fb2160b",
+		"createDate" : "2017-06-08 00:12:45",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "2332d13d-a5ac-4bf5-bdbc-9a695a4e6d2a",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-08 22:27:42",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 24232,
+		"averageTime" : 12116,
+		"timedViewCount" : 2
+	},
+	{
 		"studyItemMetaId" : "a9f193fa-6c59-4cce-9453-608e8795bd83",
 		"createDate" : "2015-05-26 23:20:59",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -12752,6 +14376,20 @@
 		"totalTime" : 6029,
 		"averageTime" : 6029,
 		"timedViewCount" : 1
+	},
+	{
+		"studyItemMetaId" : "a9f3e688-75fa-4077-a04d-2c78b65cd281",
+		"createDate" : "2017-06-11 18:42:17",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "a4fee466-8128-468e-9ec6-84cd847fb327",
+		"incorrectCount" : 23,
+		"viewCount" : 33,
+		"lastUpdate" : "2017-06-25 20:36:43",
+		"difficulty" : 0.696969696969697,
+		"confidence" : 0,
+		"totalTime" : 501590,
+		"averageTime" : 15199,
+		"timedViewCount" : 33
 	},
 	{
 		"studyItemMetaId" : "aa0d799a-8211-4053-9535-d6c3c85290b6",
@@ -12992,6 +14630,20 @@
 		"timedViewCount" : 18
 	},
 	{
+		"studyItemMetaId" : "ad625cea-2693-4427-b5e1-2396a68724a5",
+		"createDate" : "2017-06-25 20:44:05",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e35d8fe2-48b8-47c5-b4f8-a3942016fae5",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-25 20:53:33",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 49923,
+		"averageTime" : 16641,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "ae12197e-a04d-4d9a-aa60-3ee7dc287663",
 		"createDate" : "2015-04-13 01:10:06",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -13032,6 +14684,20 @@
 		"totalTime" : 124313,
 		"averageTime" : 8287,
 		"timedViewCount" : 15
+	},
+	{
+		"studyItemMetaId" : "ae55d67f-7435-4b08-b2bb-84b0c2389370",
+		"createDate" : "2017-07-03 00:13:43",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "12311d50-47c3-42bb-a2ed-718fa82e9808",
+		"incorrectCount" : 0,
+		"viewCount" : 0,
+		"lastUpdate" : [],
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 0,
+		"averageTime" : 0,
+		"timedViewCount" : 0
 	},
 	{
 		"studyItemMetaId" : "ae78aae2-b95a-4a8b-baf2-27cc970df9fd",
@@ -13174,6 +14840,20 @@
 		"timedViewCount" : 15
 	},
 	{
+		"studyItemMetaId" : "b0992c65-762d-47b5-925a-86c592ba7b9f",
+		"createDate" : "2017-06-04 19:51:21",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b7f6371f-c24c-45f6-98bd-239a43f699e3",
+		"incorrectCount" : 4,
+		"viewCount" : 6,
+		"lastUpdate" : "2017-06-07 00:38:29",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 99532,
+		"averageTime" : 16588,
+		"timedViewCount" : 6
+	},
+	{
 		"studyItemMetaId" : "b0ad6b3c-d7b1-4243-8a0d-470706aa69a4",
 		"createDate" : "2016-03-25 18:42:18",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -13202,6 +14882,20 @@
 		"timedViewCount" : 20
 	},
 	{
+		"studyItemMetaId" : "b129fe4a-51de-4b73-af7c-80211573926c",
+		"createDate" : "2017-07-03 00:13:09",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "6ad68263-4bde-41f0-8763-eabe8729e577",
+		"incorrectCount" : 0,
+		"viewCount" : 0,
+		"lastUpdate" : [],
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 0,
+		"averageTime" : 0,
+		"timedViewCount" : 0
+	},
+	{
 		"studyItemMetaId" : "b15a560e-52a2-4954-a9b8-6d0b7ebaabd8",
 		"createDate" : "2016-06-14 11:59:09",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -13214,6 +14908,20 @@
 		"totalTime" : 164119,
 		"averageTime" : 12624,
 		"timedViewCount" : 13
+	},
+	{
+		"studyItemMetaId" : "b17b6a79-d65d-432a-bdc3-e74245516f88",
+		"createDate" : "2017-06-11 18:42:31",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "367af416-1229-4e19-b02e-d41e8d395bb1",
+		"incorrectCount" : 13,
+		"viewCount" : 19,
+		"lastUpdate" : "2017-06-29 00:30:51",
+		"difficulty" : 0.6842105263157895,
+		"confidence" : 0,
+		"totalTime" : 175264,
+		"averageTime" : 9224,
+		"timedViewCount" : 19
 	},
 	{
 		"studyItemMetaId" : "b191ddc3-de0b-4611-a58e-0a889d164fe4",
@@ -13305,13 +15013,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "58bfd210-b4ba-4b4f-9173-a0e97986d1e5",
 		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
-		"difficulty" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:54:00",
+		"difficulty" : 0,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 2428,
+		"averageTime" : 2428,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "b2e6e138-5827-40f0-b34e-96909c53236d",
@@ -13388,14 +15096,14 @@
 		"createDate" : "2016-08-08 23:37:33",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "23986cd0-d92a-4182-8ad0-9a66389c863a",
-		"incorrectCount" : 7,
-		"viewCount" : 9,
-		"lastUpdate" : "2017-01-07 19:50:40",
-		"difficulty" : 0.7777777777777778,
+		"incorrectCount" : 9,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-06-11 18:35:19",
+		"difficulty" : 0.6428571428571429,
 		"confidence" : 0,
-		"totalTime" : 77529,
-		"averageTime" : 8614,
-		"timedViewCount" : 9
+		"totalTime" : 128424,
+		"averageTime" : 9173,
+		"timedViewCount" : 14
 	},
 	{
 		"studyItemMetaId" : "b3fc574e-6bd1-4062-980b-6a35e8a1181f",
@@ -13438,6 +15146,20 @@
 		"totalTime" : 163848,
 		"averageTime" : 5649,
 		"timedViewCount" : 29
+	},
+	{
+		"studyItemMetaId" : "b48b8da6-cbc2-4068-b740-83482a5a95b3",
+		"createDate" : "2017-05-28 19:40:46",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ed1cae39-dd0e-4b25-84e9-bdd5c16379b9",
+		"incorrectCount" : 3,
+		"viewCount" : 6,
+		"lastUpdate" : "2017-06-07 23:33:45",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 53753,
+		"averageTime" : 8958,
+		"timedViewCount" : 6
 	},
 	{
 		"studyItemMetaId" : "b497cf9a-c9dd-4635-9442-b55a86afc001",
@@ -13578,6 +15300,20 @@
 		"totalTime" : 61738,
 		"averageTime" : 3249,
 		"timedViewCount" : 19
+	},
+	{
+		"studyItemMetaId" : "b5f37aae-b2fd-4d7c-98a9-331a82c5a171",
+		"createDate" : "2017-06-17 20:07:30",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0c1e4892-306e-4894-91c1-0d615fbb550e",
+		"incorrectCount" : 21,
+		"viewCount" : 30,
+		"lastUpdate" : "2017-06-29 00:33:03",
+		"difficulty" : 0.7,
+		"confidence" : 0,
+		"totalTime" : 286524,
+		"averageTime" : 9550,
+		"timedViewCount" : 30
 	},
 	{
 		"studyItemMetaId" : "b5fe25d3-d49b-49b7-9777-473e1cdd1274",
@@ -14042,6 +15778,20 @@
 		"timedViewCount" : 40
 	},
 	{
+		"studyItemMetaId" : "bad1b7ba-4967-4b44-a082-494d355bc039",
+		"createDate" : "2017-06-17 20:07:16",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "4401ab4e-cb2a-425c-92dd-0ea20c25e52c",
+		"incorrectCount" : 7,
+		"viewCount" : 10,
+		"lastUpdate" : "2017-06-25 20:42:45",
+		"difficulty" : 0.7,
+		"confidence" : 0,
+		"totalTime" : 98706,
+		"averageTime" : 9870,
+		"timedViewCount" : 10
+	},
+	{
 		"studyItemMetaId" : "bad1fdcf-0141-4e59-9d5c-47df79f446f0",
 		"createDate" : "2015-01-24 00:09:41",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -14075,13 +15825,27 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "fe0089c9-2428-40ac-8416-1fd83cc233c4",
 		"incorrectCount" : 23,
-		"viewCount" : 43,
-		"lastUpdate" : "2016-03-19 18:05:38",
-		"difficulty" : 0.5348837209302325,
+		"viewCount" : 44,
+		"lastUpdate" : "2017-06-09 23:46:35",
+		"difficulty" : 0.5227272727272727,
 		"confidence" : 0,
-		"totalTime" : 575318,
-		"averageTime" : 13379,
-		"timedViewCount" : 43
+		"totalTime" : 577821,
+		"averageTime" : 13132,
+		"timedViewCount" : 44
+	},
+	{
+		"studyItemMetaId" : "bb0e4ca5-15c7-4337-a5f3-aa81c37c26f8",
+		"createDate" : "2017-07-03 00:14:19",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "46b3ac4e-b742-45c2-94bf-56f1ecf03e0d",
+		"incorrectCount" : 0,
+		"viewCount" : 0,
+		"lastUpdate" : [],
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 0,
+		"averageTime" : 0,
+		"timedViewCount" : 0
 	},
 	{
 		"studyItemMetaId" : "bb109870-44cd-47f3-a214-7438ad808438",
@@ -14144,14 +15908,14 @@
 		"createDate" : "2015-11-09 00:20:37",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "0fad698f-e83a-4068-9ca3-48aeb9ab3ad3",
-		"incorrectCount" : 5,
-		"viewCount" : 9,
-		"lastUpdate" : "2016-03-24 00:03:40",
-		"difficulty" : 0.5555555555555556,
+		"incorrectCount" : 6,
+		"viewCount" : 13,
+		"lastUpdate" : "2017-06-24 18:05:40",
+		"difficulty" : 0.46153846153846156,
 		"confidence" : 0,
-		"totalTime" : 93993,
-		"averageTime" : 10443,
-		"timedViewCount" : 9
+		"totalTime" : 130883,
+		"averageTime" : 10067,
+		"timedViewCount" : 13
 	},
 	{
 		"studyItemMetaId" : "bc054b0a-a3c8-416b-9f54-6acad44910fc",
@@ -14368,14 +16132,14 @@
 		"createDate" : "2015-02-08 22:05:37",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "57b79d63-84a5-49c5-bed9-94fcfc0eb887",
-		"incorrectCount" : 69,
-		"viewCount" : 125,
-		"lastUpdate" : "2016-07-07 00:06:21",
-		"difficulty" : 0.552,
+		"incorrectCount" : 72,
+		"viewCount" : 130,
+		"lastUpdate" : "2017-06-07 23:33:33",
+		"difficulty" : 0.5538461538461539,
 		"confidence" : 0,
-		"totalTime" : 792923,
-		"averageTime" : 10165,
-		"timedViewCount" : 78
+		"totalTime" : 879648,
+		"averageTime" : 10598,
+		"timedViewCount" : 83
 	},
 	{
 		"studyItemMetaId" : "bf1dd953-6380-4e0b-a3e9-5a9c3645a294",
@@ -14404,6 +16168,20 @@
 		"totalTime" : 46602,
 		"averageTime" : 2912,
 		"timedViewCount" : 16
+	},
+	{
+		"studyItemMetaId" : "bffa4af9-e2b7-4443-84f9-46357afde54c",
+		"createDate" : "2017-05-31 02:02:36",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "507b499a-27ab-4afd-9918-96395f540245",
+		"incorrectCount" : 15,
+		"viewCount" : 22,
+		"lastUpdate" : "2017-06-09 23:47:19",
+		"difficulty" : 0.6818181818181818,
+		"confidence" : 0,
+		"totalTime" : 221249,
+		"averageTime" : 10056,
+		"timedViewCount" : 22
 	},
 	{
 		"studyItemMetaId" : "c0167697-2c3a-4fa4-958c-db46bdfe70cc",
@@ -14756,6 +16534,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "c44313cc-453c-4ce5-ae3d-ed1336002b82",
+		"createDate" : "2017-06-11 19:16:14",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b4b9d828-9355-4e33-9ad5-1748f915f0da",
+		"incorrectCount" : 3,
+		"viewCount" : 8,
+		"lastUpdate" : "2017-06-28 00:23:57",
+		"difficulty" : 0.375,
+		"confidence" : 0,
+		"totalTime" : 42860,
+		"averageTime" : 5357,
+		"timedViewCount" : 8
+	},
+	{
 		"studyItemMetaId" : "c475d79c-575f-4a1a-b077-53241a33feb8",
 		"createDate" : "2015-06-14 23:14:54",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -14788,14 +16580,14 @@
 		"createDate" : "2015-11-09 00:37:47",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "60c1a2b2-be74-465b-95b7-094e6906cf03",
-		"incorrectCount" : 37,
-		"viewCount" : 60,
-		"lastUpdate" : "2016-07-10 18:05:40",
-		"difficulty" : 0.6166666666666667,
+		"incorrectCount" : 38,
+		"viewCount" : 62,
+		"lastUpdate" : "2017-06-04 18:44:58",
+		"difficulty" : 0.6129032258064516,
 		"confidence" : 0,
-		"totalTime" : 703298,
-		"averageTime" : 11721,
-		"timedViewCount" : 60
+		"totalTime" : 713824,
+		"averageTime" : 11513,
+		"timedViewCount" : 62
 	},
 	{
 		"studyItemMetaId" : "c50e5d88-3b79-4957-a1bd-a483408e106a",
@@ -14826,6 +16618,20 @@
 		"timedViewCount" : 2
 	},
 	{
+		"studyItemMetaId" : "c5553c40-92ae-4a06-82c3-d4323db67375",
+		"createDate" : "2017-06-29 22:49:57",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "d91c2893-170a-4c38-bc11-e327fa120fd7",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-29 22:55:41",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 13735,
+		"averageTime" : 4578,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "c60d694a-8320-4774-b5bc-92baaa6c3628",
 		"createDate" : "2015-01-23 00:49:26",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -14838,6 +16644,20 @@
 		"totalTime" : 60441,
 		"averageTime" : 3777,
 		"timedViewCount" : 16
+	},
+	{
+		"studyItemMetaId" : "c65c6680-9983-487a-98ce-f729521d36b1",
+		"createDate" : "2017-06-08 00:12:40",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "970b8eeb-a533-4607-963a-cc9ea4fef231",
+		"incorrectCount" : 19,
+		"viewCount" : 23,
+		"lastUpdate" : "2017-06-12 23:03:37",
+		"difficulty" : 0.8260869565217391,
+		"confidence" : 0,
+		"totalTime" : 300296,
+		"averageTime" : 13056,
+		"timedViewCount" : 23
 	},
 	{
 		"studyItemMetaId" : "c683013b-3ca3-4520-ad81-2f65c33ae638",
@@ -14952,6 +16772,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "c78abe3b-c390-489d-b222-779f70a6c949",
+		"createDate" : "2017-06-25 20:44:01",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c83b7426-16ed-4d32-aee6-3bbba9ed4e7a",
+		"incorrectCount" : 24,
+		"viewCount" : 31,
+		"lastUpdate" : "2017-07-03 00:03:54",
+		"difficulty" : 0.7741935483870968,
+		"confidence" : 0,
+		"totalTime" : 326754,
+		"averageTime" : 10540,
+		"timedViewCount" : 31
+	},
+	{
 		"studyItemMetaId" : "c7a51cb2-48e3-4f6f-9418-ba8aab6a205a",
 		"createDate" : "2015-04-05 21:10:58",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -14964,6 +16798,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "c7abaef8-1b3a-4a8a-a6c2-6a737cdbfcca",
+		"createDate" : "2017-06-23 22:49:52",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "8efff57e-6814-4664-888e-17edf26fe527",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-23 22:59:06",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 45249,
+		"averageTime" : 15083,
+		"timedViewCount" : 3
 	},
 	{
 		"studyItemMetaId" : "c7cce9bd-be9b-4e4a-8b66-d8c89df81bff",
@@ -15118,6 +16966,20 @@
 		"totalTime" : 24259,
 		"averageTime" : 6064,
 		"timedViewCount" : 4
+	},
+	{
+		"studyItemMetaId" : "c9495175-b59b-4a5c-b981-a5bb1f24ffa5",
+		"createDate" : "2017-05-31 02:02:21",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e37a41b1-e8d4-4efd-918d-a57a6e6950f6",
+		"incorrectCount" : 11,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-06-11 18:40:08",
+		"difficulty" : 0.6875,
+		"confidence" : 0,
+		"totalTime" : 111590,
+		"averageTime" : 6974,
+		"timedViewCount" : 16
 	},
 	{
 		"studyItemMetaId" : "c950ea83-e91c-4ed9-b039-d9a27be50487",
@@ -15330,6 +17192,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "ccbd6f51-d017-412c-b343-855896c24d5c",
+		"createDate" : "2017-06-28 00:43:51",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "6d9b3661-ebc4-4fe7-bc20-ba530ca74253",
+		"incorrectCount" : 1,
+		"viewCount" : 2,
+		"lastUpdate" : "2017-06-29 00:20:08",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 29260,
+		"averageTime" : 14630,
+		"timedViewCount" : 2
+	},
+	{
 		"studyItemMetaId" : "ccd72342-28ad-4bbf-bd94-5157ea187b03",
 		"createDate" : "2017-01-22 19:29:54",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -15386,6 +17262,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "cd598ebe-0557-4258-ad04-7826a0781ee1",
+		"createDate" : "2017-05-28 19:40:51",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e49db5b7-35df-4b33-8d83-bbbc49efcefe",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-07 23:34:27",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 32334,
+		"averageTime" : 8083,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "cd7e7121-536c-40b8-84a8-f44954a7ebd0",
 		"createDate" : "2016-06-14 11:58:24",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -15428,18 +17318,32 @@
 		"timedViewCount" : 16
 	},
 	{
+		"studyItemMetaId" : "cdc4f1a6-3435-4c47-8f52-b96c2d1774c5",
+		"createDate" : "2017-06-04 19:51:25",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "000d8ed7-46c0-4865-8542-44b25ff33e15",
+		"incorrectCount" : 7,
+		"viewCount" : 11,
+		"lastUpdate" : "2017-06-10 19:51:27",
+		"difficulty" : 0.6363636363636364,
+		"confidence" : 0,
+		"totalTime" : 105171,
+		"averageTime" : 9561,
+		"timedViewCount" : 11
+	},
+	{
 		"studyItemMetaId" : "cddccb72-7f9c-4ff2-a6cc-bed06a246db1",
 		"createDate" : "2016-12-31 19:38:45",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "96ed51e6-60f3-44d2-a545-b0ae9c07b2f3",
-		"incorrectCount" : 14,
-		"viewCount" : 15,
-		"lastUpdate" : "2017-01-07 19:59:12",
-		"difficulty" : 0.9333333333333333,
+		"incorrectCount" : 15,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-05-13 20:55:04",
+		"difficulty" : 0.9375,
 		"confidence" : 0,
-		"totalTime" : 152491,
-		"averageTime" : 10166,
-		"timedViewCount" : 15
+		"totalTime" : 156815,
+		"averageTime" : 9800,
+		"timedViewCount" : 16
 	},
 	{
 		"studyItemMetaId" : "cde7d933-70e8-4b29-a8d1-e19c85b8d71d",
@@ -15582,6 +17486,20 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "cfc6132e-afea-4210-90d8-40aa1f858dd8",
+		"createDate" : "2017-06-08 00:12:20",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "ac620416-2746-48e4-9543-77b1d91ecf1f",
+		"incorrectCount" : 12,
+		"viewCount" : 16,
+		"lastUpdate" : "2017-06-12 23:04:16",
+		"difficulty" : 0.75,
+		"confidence" : 0,
+		"totalTime" : 176254,
+		"averageTime" : 11015,
+		"timedViewCount" : 16
+	},
+	{
 		"studyItemMetaId" : "cff7fe1f-3c4c-4ac9-9b15-006cfc57b2b6",
 		"createDate" : "2016-03-27 20:29:45",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -15594,6 +17512,34 @@
 		"totalTime" : 29075,
 		"averageTime" : 7268,
 		"timedViewCount" : 4
+	},
+	{
+		"studyItemMetaId" : "d03931f3-cf7c-420f-bb9e-a53a2334b300",
+		"createDate" : "2017-06-25 20:43:48",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "19748226-ee3b-4eb4-be10-42ada4dc3a3e",
+		"incorrectCount" : 0,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-06-28 00:13:09",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 23567,
+		"averageTime" : 23567,
+		"timedViewCount" : 1
+	},
+	{
+		"studyItemMetaId" : "d0460f62-7700-48ec-b13a-92f96c92d7bc",
+		"createDate" : "2017-06-11 18:42:38",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c2c6ad06-52b0-476b-8ceb-e9befd9b79d8",
+		"incorrectCount" : 38,
+		"viewCount" : 51,
+		"lastUpdate" : "2017-07-03 00:09:26",
+		"difficulty" : 0.7450980392156863,
+		"confidence" : 0,
+		"totalTime" : 591426,
+		"averageTime" : 11596,
+		"timedViewCount" : 51
 	},
 	{
 		"studyItemMetaId" : "d070fec5-31ea-4ef4-beba-ac152562bbbb",
@@ -15650,6 +17596,20 @@
 		"totalTime" : 150715,
 		"averageTime" : 10047,
 		"timedViewCount" : 15
+	},
+	{
+		"studyItemMetaId" : "d16dd18a-3579-4c0e-8e2c-1907ff5370a5",
+		"createDate" : "2017-06-29 00:16:36",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "f238b2c4-522c-4694-9b20-4263b2a001cd",
+		"incorrectCount" : 10,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-07-03 00:07:19",
+		"difficulty" : 0.7142857142857143,
+		"confidence" : 0,
+		"totalTime" : 145455,
+		"averageTime" : 10389,
+		"timedViewCount" : 14
 	},
 	{
 		"studyItemMetaId" : "d1bc69d3-082b-4beb-ba44-085cf8ea0b88",
@@ -15876,6 +17836,20 @@
 		"timedViewCount" : 94
 	},
 	{
+		"studyItemMetaId" : "d37f9eca-20fb-4fec-8130-937e8d16bbdf",
+		"createDate" : "2017-06-29 22:50:03",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c71f67f8-1a2d-4e15-bb12-95fa61c1db90",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-07-01 19:00:58",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 19856,
+		"averageTime" : 4964,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "d3c5336a-3534-4f59-9679-05793180b12f",
 		"createDate" : "2016-03-11 03:12:43",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -16002,6 +17976,20 @@
 		"timedViewCount" : 16
 	},
 	{
+		"studyItemMetaId" : "d529b140-d73c-4373-aec1-0a02e12e9c92",
+		"createDate" : "2017-05-03 00:26:53",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e8498996-c7c4-4719-a4a9-43b8e1352e7d",
+		"incorrectCount" : 4,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-05-26 00:38:07",
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 60077,
+		"averageTime" : 15019,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "d53ef9e6-dc60-468c-906f-2ae873dbf686",
 		"createDate" : "2016-06-05 21:50:54",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -16105,13 +18093,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "80ac89a7-3423-4020-ae54-421b66f8b1de",
 		"incorrectCount" : 18,
-		"viewCount" : 51,
-		"lastUpdate" : "2016-05-16 23:42:08",
-		"difficulty" : 0.35294117647058826,
+		"viewCount" : 53,
+		"lastUpdate" : "2017-06-28 00:18:48",
+		"difficulty" : 0.33962264150943394,
 		"confidence" : 0,
-		"totalTime" : 90931,
-		"averageTime" : 5683,
-		"timedViewCount" : 16
+		"totalTime" : 100016,
+		"averageTime" : 5556,
+		"timedViewCount" : 18
 	},
 	{
 		"studyItemMetaId" : "d676281e-0b3c-4dd1-9b83-3b6cfb92af83",
@@ -16310,6 +18298,20 @@
 		"timedViewCount" : 10
 	},
 	{
+		"studyItemMetaId" : "d871a4c8-391a-4e65-8ad0-4c156120be91",
+		"createDate" : "2017-06-08 00:12:32",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0544fc37-3ab9-4a30-9dc3-4f59281b4cef",
+		"incorrectCount" : 10,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-06-12 23:04:42",
+		"difficulty" : 0.7142857142857143,
+		"confidence" : 0,
+		"totalTime" : 150190,
+		"averageTime" : 10727,
+		"timedViewCount" : 14
+	},
+	{
 		"studyItemMetaId" : "d8b4564d-676f-40e4-9022-49bc57a61385",
 		"createDate" : "2015-03-16 23:33:17",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -16370,14 +18372,14 @@
 		"createDate" : "2015-09-29 00:43:18",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "a183da59-10c1-42cc-b1d8-3ab3142a2b85",
-		"incorrectCount" : 12,
-		"viewCount" : 20,
-		"lastUpdate" : "2016-05-18 23:51:16",
-		"difficulty" : 0.6,
+		"incorrectCount" : 13,
+		"viewCount" : 22,
+		"lastUpdate" : "2017-05-26 00:36:57",
+		"difficulty" : 0.5909090909090909,
 		"confidence" : 0,
-		"totalTime" : 284462,
-		"averageTime" : 14223,
-		"timedViewCount" : 20
+		"totalTime" : 335030,
+		"averageTime" : 15228,
+		"timedViewCount" : 22
 	},
 	{
 		"studyItemMetaId" : "d8ede991-ed35-4657-baa1-d6a3f808ab25",
@@ -16426,14 +18428,14 @@
 		"createDate" : "2017-01-22 19:25:29",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "5b0e1c83-c74a-47b0-a72b-e914abd8df3e",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:54:13",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 2464,
+		"averageTime" : 2464,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "d9708820-fabb-4d58-b10a-cc45de5108b0",
@@ -16506,6 +18508,20 @@
 		"timedViewCount" : 1
 	},
 	{
+		"studyItemMetaId" : "da045f51-3d30-4c46-bef4-14d18419829f",
+		"createDate" : "2017-05-04 23:03:20",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0799871c-532d-48aa-b8ee-4b78006d1905",
+		"incorrectCount" : 4,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-05-26 00:37:55",
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 44618,
+		"averageTime" : 11154,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "da26c35f-61e9-4c17-9e93-4e17d0589964",
 		"createDate" : "2016-06-05 21:50:50",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -16534,18 +18550,46 @@
 		"timedViewCount" : 11
 	},
 	{
+		"studyItemMetaId" : "dac48baa-f7ed-4606-ae52-97738a83bdae",
+		"createDate" : "2017-06-25 20:43:56",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "6549d2d9-f4b9-47a1-ad1c-c026ebc6d510",
+		"incorrectCount" : 1,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-07-01 18:59:18",
+		"difficulty" : 0.3333333333333333,
+		"confidence" : 0,
+		"totalTime" : 23687,
+		"averageTime" : 7895,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "dacdb4cb-bbd5-4826-b4d5-7de2ee17f705",
 		"createDate" : "2015-03-16 23:30:11",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "dcf80580-d67c-4ae6-b64a-7761f5b7baed",
 		"incorrectCount" : 19,
-		"viewCount" : 38,
-		"lastUpdate" : "2016-07-06 23:47:24",
-		"difficulty" : 0.5,
+		"viewCount" : 39,
+		"lastUpdate" : "2017-06-07 23:29:22",
+		"difficulty" : 0.48717948717948717,
 		"confidence" : 0,
-		"totalTime" : 319460,
-		"averageTime" : 8406,
-		"timedViewCount" : 38
+		"totalTime" : 325257,
+		"averageTime" : 8339,
+		"timedViewCount" : 39
+	},
+	{
+		"studyItemMetaId" : "dae307da-9df3-430a-a7b1-06173b0ed1c5",
+		"createDate" : "2017-06-04 19:51:35",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "36531acd-ac12-43ac-86d5-fba44b39572e",
+		"incorrectCount" : 6,
+		"viewCount" : 9,
+		"lastUpdate" : "2017-06-07 23:20:43",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 97276,
+		"averageTime" : 10808,
+		"timedViewCount" : 9
 	},
 	{
 		"studyItemMetaId" : "db275420-3c7c-4962-ba7d-547fcd144648",
@@ -16590,6 +18634,20 @@
 		"timedViewCount" : 5
 	},
 	{
+		"studyItemMetaId" : "db6f5529-fa87-45a2-9a34-eab5d5880ad0",
+		"createDate" : "2017-06-15 01:02:24",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "172ec8e4-134d-4c9c-8d05-01ce03145251",
+		"incorrectCount" : 2,
+		"viewCount" : 4,
+		"lastUpdate" : "2017-06-22 22:57:51",
+		"difficulty" : 0.5,
+		"confidence" : 0,
+		"totalTime" : 32459,
+		"averageTime" : 8114,
+		"timedViewCount" : 4
+	},
+	{
 		"studyItemMetaId" : "db829bed-dd8a-4e5e-8e62-600e68b8d9fb",
 		"createDate" : "2015-02-21 18:47:34",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -16630,6 +18688,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "dc81869c-0248-4859-9cb1-8580f30749e7",
+		"createDate" : "2017-05-28 20:46:24",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "e38bab95-1f92-4092-8f79-076dfdd5d521",
+		"incorrectCount" : 33,
+		"viewCount" : 45,
+		"lastUpdate" : "2017-06-12 23:03:59",
+		"difficulty" : 0.7333333333333333,
+		"confidence" : 0,
+		"totalTime" : 569434,
+		"averageTime" : 12654,
+		"timedViewCount" : 45
 	},
 	{
 		"studyItemMetaId" : "dcfa3ff2-c7c5-4ccd-8ce2-72cf5d18fdbb",
@@ -16674,6 +18746,20 @@
 		"timedViewCount" : 13
 	},
 	{
+		"studyItemMetaId" : "ddd8c204-8419-47f5-992c-db184c625887",
+		"createDate" : "2017-05-28 20:46:36",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "2108c9c3-17da-4d64-9fff-19f8d75e7153",
+		"incorrectCount" : 13,
+		"viewCount" : 20,
+		"lastUpdate" : "2017-06-11 18:35:49",
+		"difficulty" : 0.65,
+		"confidence" : 0,
+		"totalTime" : 175128,
+		"averageTime" : 8756,
+		"timedViewCount" : 20
+	},
+	{
 		"studyItemMetaId" : "dde4f2e1-4b18-4e53-9d9b-d297b2bfa366",
 		"createDate" : "2015-02-20 00:53:36",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -16700,6 +18786,20 @@
 		"totalTime" : 415225,
 		"averageTime" : 10926,
 		"timedViewCount" : 38
+	},
+	{
+		"studyItemMetaId" : "de121db7-f173-40da-ae9e-b0655b987007",
+		"createDate" : "2017-06-04 19:50:27",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "4651d4fa-a1d2-47e6-9f00-9b79816d24c7",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-07 00:47:56",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 25086,
+		"averageTime" : 8362,
+		"timedViewCount" : 3
 	},
 	{
 		"studyItemMetaId" : "de12833b-b8e0-4a1b-b382-748a5f8b6cae",
@@ -16763,13 +18863,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "5012b04e-fc13-42b9-a378-9a89a3a695ed",
 		"incorrectCount" : 29,
-		"viewCount" : 54,
-		"lastUpdate" : "2016-04-23 23:45:56",
-		"difficulty" : 0.5370370370370371,
+		"viewCount" : 56,
+		"lastUpdate" : "2017-06-09 23:47:12",
+		"difficulty" : 0.5178571428571429,
 		"confidence" : 0,
-		"totalTime" : 428749,
-		"averageTime" : 7939,
-		"timedViewCount" : 54
+		"totalTime" : 438979,
+		"averageTime" : 7838,
+		"timedViewCount" : 56
 	},
 	{
 		"studyItemMetaId" : "de9dfa75-7f5c-432c-8142-b73188610880",
@@ -16832,14 +18932,14 @@
 		"createDate" : "2017-01-22 19:26:39",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "c84c31c2-5057-46b2-9c3a-aa8423d1e441",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:53:42",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 2676,
+		"averageTime" : 2676,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "df1379a9-42a1-4c70-9f3d-300d989bccb4",
@@ -17150,6 +19250,20 @@
 		"timedViewCount" : 21
 	},
 	{
+		"studyItemMetaId" : "e21fbdfc-07e6-4193-ae60-62f2d7e63077",
+		"createDate" : "2017-05-31 02:02:33",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "4865d771-4718-400a-8dae-05f2e3fa2016",
+		"incorrectCount" : 14,
+		"viewCount" : 21,
+		"lastUpdate" : "2017-06-12 23:04:34",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 243350,
+		"averageTime" : 11588,
+		"timedViewCount" : 21
+	},
+	{
 		"studyItemMetaId" : "e2229701-2c8d-4d56-9705-c5ec4fd402c3",
 		"createDate" : "2015-04-29 01:51:17",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -17246,6 +19360,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "e3c15f45-6859-4176-bf8a-e76e32d6f07b",
+		"createDate" : "2017-05-28 20:10:18",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "a7ed5cbd-7f54-4053-9ad1-64815e43c7c9",
+		"incorrectCount" : 1,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-09 23:46:29",
+		"difficulty" : 0.3333333333333333,
+		"confidence" : 0,
+		"totalTime" : 13763,
+		"averageTime" : 4587,
+		"timedViewCount" : 3
 	},
 	{
 		"studyItemMetaId" : "e3c53e9f-90dc-487b-be10-bf025b3d40cc",
@@ -17542,18 +19670,32 @@
 		"timedViewCount" : 0
 	},
 	{
+		"studyItemMetaId" : "e66b6123-5400-4132-ad89-7e1ff3f03a24",
+		"createDate" : "2017-06-29 00:16:33",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "0d05087b-b47f-402a-a143-614f5422c954",
+		"incorrectCount" : 0,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-06-29 00:17:44",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 6706,
+		"averageTime" : 6706,
+		"timedViewCount" : 1
+	},
+	{
 		"studyItemMetaId" : "e6719923-eecb-44cd-8dc8-671f68eb0094",
 		"createDate" : "2015-12-16 01:09:14",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "c585a07b-973f-405e-9025-3c1960279a35",
-		"incorrectCount" : 31,
-		"viewCount" : 50,
-		"lastUpdate" : "2016-07-06 23:52:16",
-		"difficulty" : 0.62,
+		"incorrectCount" : 32,
+		"viewCount" : 52,
+		"lastUpdate" : "2017-05-26 00:35:32",
+		"difficulty" : 0.6153846153846154,
 		"confidence" : 0,
-		"totalTime" : 561166,
-		"averageTime" : 11223,
-		"timedViewCount" : 50
+		"totalTime" : 591126,
+		"averageTime" : 11367,
+		"timedViewCount" : 52
 	},
 	{
 		"studyItemMetaId" : "e67c1447-e834-4d28-9c71-06cb9689742d",
@@ -17658,28 +19800,28 @@
 		"createDate" : "2015-01-18 10:27:04",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "b0531bb9-da4c-4998-80a7-6dbd86d786a4",
-		"incorrectCount" : 8,
-		"viewCount" : 35,
-		"lastUpdate" : "2016-05-26 23:19:55",
-		"difficulty" : 0.22857142857142856,
+		"incorrectCount" : 11,
+		"viewCount" : 40,
+		"lastUpdate" : "2017-06-28 00:25:33",
+		"difficulty" : 0.275,
 		"confidence" : 0,
-		"totalTime" : 173591,
-		"averageTime" : 7547,
-		"timedViewCount" : 23
+		"totalTime" : 214766,
+		"averageTime" : 7670,
+		"timedViewCount" : 28
 	},
 	{
 		"studyItemMetaId" : "e7b4390f-bdff-4843-856a-66a81001aacc",
 		"createDate" : "2015-01-18 10:27:12",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "9ac589ec-7433-4367-8e84-6121675fbd10",
-		"incorrectCount" : 11,
-		"viewCount" : 35,
-		"lastUpdate" : "2016-03-20 17:21:28",
-		"difficulty" : 0.3142857142857143,
+		"incorrectCount" : 13,
+		"viewCount" : 38,
+		"lastUpdate" : "2017-06-24 18:12:41",
+		"difficulty" : 0.34210526315789475,
 		"confidence" : 0,
-		"totalTime" : 174887,
-		"averageTime" : 8744,
-		"timedViewCount" : 20
+		"totalTime" : 226821,
+		"averageTime" : 9861,
+		"timedViewCount" : 23
 	},
 	{
 		"studyItemMetaId" : "e7d9b7c9-a020-44f4-8486-3975421a5f0f",
@@ -18032,6 +20174,20 @@
 		"timedViewCount" : 48
 	},
 	{
+		"studyItemMetaId" : "eae75048-8b4f-489a-8726-d286a4e838b0",
+		"createDate" : "2017-06-21 00:42:33",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "6de524b3-5a9c-4e4b-acff-738271db2bd2",
+		"incorrectCount" : 3,
+		"viewCount" : 5,
+		"lastUpdate" : "2017-06-24 18:12:17",
+		"difficulty" : 0.6,
+		"confidence" : 0,
+		"totalTime" : 43096,
+		"averageTime" : 8619,
+		"timedViewCount" : 5
+	},
+	{
 		"studyItemMetaId" : "eb1a534e-f4c9-4f93-9da9-068c2abd5adc",
 		"createDate" : "2015-03-26 00:37:49",
 		"ownerId" : "3e284731-cfde-11e4-bbaf-14dae9f4dacd",
@@ -18116,18 +20272,32 @@
 		"timedViewCount" : 3
 	},
 	{
+		"studyItemMetaId" : "ec48fb8a-913a-47ab-8116-b7fcb08e8cbf",
+		"createDate" : "2017-06-15 01:02:08",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "a8d2aba9-b1b5-4682-994d-4e73a01fe60e",
+		"incorrectCount" : 11,
+		"viewCount" : 17,
+		"lastUpdate" : "2017-06-28 00:19:07",
+		"difficulty" : 0.6470588235294118,
+		"confidence" : 0,
+		"totalTime" : 126239,
+		"averageTime" : 7425,
+		"timedViewCount" : 17
+	},
+	{
 		"studyItemMetaId" : "ec5a844a-c00d-4d38-ab9d-fd42fd092734",
 		"createDate" : "2016-07-10 19:20:51",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "19fd0ec0-76bf-4ab1-aaf2-7f14dc7c5f83",
-		"incorrectCount" : 2,
-		"viewCount" : 3,
-		"lastUpdate" : "2016-08-06 00:04:27",
-		"difficulty" : 0.6666666666666666,
+		"incorrectCount" : 4,
+		"viewCount" : 8,
+		"lastUpdate" : "2017-06-07 23:33:11",
+		"difficulty" : 0.5,
 		"confidence" : 0,
-		"totalTime" : 47210,
-		"averageTime" : 15736,
-		"timedViewCount" : 3
+		"totalTime" : 106362,
+		"averageTime" : 13295,
+		"timedViewCount" : 8
 	},
 	{
 		"studyItemMetaId" : "ec67425c-16f3-498f-9b8c-ad245fc5b09d",
@@ -18156,6 +20326,20 @@
 		"totalTime" : 0,
 		"averageTime" : 0,
 		"timedViewCount" : 0
+	},
+	{
+		"studyItemMetaId" : "ec8bbe45-e57d-4615-9480-b57f218c0470",
+		"createDate" : "2017-06-29 22:50:13",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c9b926fc-2a85-4407-8517-fd6e2bcb7708",
+		"incorrectCount" : 0,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-06-29 22:50:29",
+		"difficulty" : 0,
+		"confidence" : 0,
+		"totalTime" : 2202,
+		"averageTime" : 2202,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "ec972ed3-de71-4db0-9ee7-b8206ca02573",
@@ -18746,6 +20930,20 @@
 		"timedViewCount" : 8
 	},
 	{
+		"studyItemMetaId" : "f49685ba-470f-473b-868b-c712f368512b",
+		"createDate" : "2017-05-28 19:40:34",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "935c9337-d9be-436a-9020-bb7f77f21fa4",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-05-28 19:48:01",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 23423,
+		"averageTime" : 7807,
+		"timedViewCount" : 3
+	},
+	{
 		"studyItemMetaId" : "f4bfbb68-466f-4206-9ab5-e6f704d952a6",
 		"createDate" : "2016-04-05 00:01:50",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -18764,14 +20962,14 @@
 		"createDate" : "2017-01-22 19:26:35",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "f069e2dd-c991-4850-84e1-8c0fc22e7899",
-		"incorrectCount" : 0,
-		"viewCount" : 0,
-		"lastUpdate" : [],
+		"incorrectCount" : 1,
+		"viewCount" : 1,
+		"lastUpdate" : "2017-05-13 20:53:47",
 		"difficulty" : 1,
 		"confidence" : 0,
-		"totalTime" : 0,
-		"averageTime" : 0,
-		"timedViewCount" : 0
+		"totalTime" : 2299,
+		"averageTime" : 2299,
+		"timedViewCount" : 1
 	},
 	{
 		"studyItemMetaId" : "f56d44d3-6950-46d2-89f8-2543d8649a9c",
@@ -18786,6 +20984,20 @@
 		"totalTime" : 273618,
 		"averageTime" : 8550,
 		"timedViewCount" : 32
+	},
+	{
+		"studyItemMetaId" : "f5ef3fc8-9f60-48f2-91c8-93246f42bcdb",
+		"createDate" : "2017-06-04 19:50:42",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "c5f16adf-c89d-49ca-bdb6-d04273b30161",
+		"incorrectCount" : 2,
+		"viewCount" : 3,
+		"lastUpdate" : "2017-06-07 00:45:16",
+		"difficulty" : 0.6666666666666666,
+		"confidence" : 0,
+		"totalTime" : 43446,
+		"averageTime" : 14482,
+		"timedViewCount" : 3
 	},
 	{
 		"studyItemMetaId" : "f60327b9-96bb-47a1-9afa-c43277e78222",
@@ -18918,14 +21130,14 @@
 		"createDate" : "2016-03-13 19:37:14",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "e61833ab-4070-4004-bdbc-23ecfd68a7f0",
-		"incorrectCount" : 26,
-		"viewCount" : 41,
-		"lastUpdate" : "2016-06-20 05:44:25",
-		"difficulty" : 0.6341463414634146,
+		"incorrectCount" : 29,
+		"viewCount" : 44,
+		"lastUpdate" : "2017-05-26 00:39:12",
+		"difficulty" : 0.6590909090909091,
 		"confidence" : 0,
-		"totalTime" : 399092,
-		"averageTime" : 9733,
-		"timedViewCount" : 41
+		"totalTime" : 462206,
+		"averageTime" : 10504,
+		"timedViewCount" : 44
 	},
 	{
 		"studyItemMetaId" : "f7c26189-9f68-488b-961b-7fd9aa67fbee",
@@ -19306,6 +21518,20 @@
 		"timedViewCount" : 20
 	},
 	{
+		"studyItemMetaId" : "fb04ec12-9ca9-4cb6-877a-f8f94e377b0f",
+		"createDate" : "2017-07-03 00:13:31",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "79ac2739-b60d-4f3c-b371-48e6c599cac2",
+		"incorrectCount" : 0,
+		"viewCount" : 0,
+		"lastUpdate" : [],
+		"difficulty" : 1,
+		"confidence" : 0,
+		"totalTime" : 0,
+		"averageTime" : 0,
+		"timedViewCount" : 0
+	},
+	{
 		"studyItemMetaId" : "fb48f28e-84a9-449f-b4f1-04c6e502cb0d",
 		"createDate" : "2016-02-20 00:32:25",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -19376,6 +21602,34 @@
 		"timedViewCount" : 4
 	},
 	{
+		"studyItemMetaId" : "fbac6b10-bbef-408c-96ba-978ebcc340f6",
+		"createDate" : "2017-06-17 20:07:26",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "638fc636-56e2-464a-86cc-470b9d722735",
+		"incorrectCount" : 9,
+		"viewCount" : 14,
+		"lastUpdate" : "2017-06-28 00:27:52",
+		"difficulty" : 0.6428571428571429,
+		"confidence" : 0,
+		"totalTime" : 133230,
+		"averageTime" : 9516,
+		"timedViewCount" : 14
+	},
+	{
+		"studyItemMetaId" : "fbdd6e74-d449-4134-8f4f-540b77e5506a",
+		"createDate" : "2017-06-11 19:16:04",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "919e0763-4750-4297-8b3e-a55b41bd8e7c",
+		"incorrectCount" : 13,
+		"viewCount" : 19,
+		"lastUpdate" : "2017-06-25 20:36:04",
+		"difficulty" : 0.6842105263157895,
+		"confidence" : 0,
+		"totalTime" : 278319,
+		"averageTime" : 14648,
+		"timedViewCount" : 19
+	},
+	{
 		"studyItemMetaId" : "fc11f3f3-58d5-4847-8bb0-158e86577d16",
 		"createDate" : "2015-06-24 00:16:03",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
@@ -19388,6 +21642,20 @@
 		"totalTime" : 63558,
 		"averageTime" : 4237,
 		"timedViewCount" : 15
+	},
+	{
+		"studyItemMetaId" : "fc476639-35da-401e-bd6a-da67e725243a",
+		"createDate" : "2017-06-25 20:43:54",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "b34f9d9c-3a64-47b3-94b6-9d23647c04a6",
+		"incorrectCount" : 16,
+		"viewCount" : 21,
+		"lastUpdate" : "2017-07-03 00:07:52",
+		"difficulty" : 0.7619047619047619,
+		"confidence" : 0,
+		"totalTime" : 210693,
+		"averageTime" : 10033,
+		"timedViewCount" : 21
 	},
 	{
 		"studyItemMetaId" : "fcaa0d5f-8b30-4663-8412-2e53ff29bde6",
@@ -19409,13 +21677,13 @@
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "7fa589f4-0b20-4060-9e65-cd50c4d1436e",
 		"incorrectCount" : 23,
-		"viewCount" : 57,
-		"lastUpdate" : "2016-05-14 17:36:46",
-		"difficulty" : 0.40350877192982454,
+		"viewCount" : 59,
+		"lastUpdate" : "2017-06-07 23:31:52",
+		"difficulty" : 0.3898305084745763,
 		"confidence" : 0,
-		"totalTime" : 423718,
-		"averageTime" : 9415,
-		"timedViewCount" : 45
+		"totalTime" : 430483,
+		"averageTime" : 9159,
+		"timedViewCount" : 47
 	},
 	{
 		"studyItemMetaId" : "fcf0d0e9-d75f-4e89-8fe9-8cab2e3e1989",
@@ -19478,14 +21746,14 @@
 		"createDate" : "2015-10-10 17:46:10",
 		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
 		"studyItemId" : "6935eb38-a3ed-49d6-b4dd-f90f0ee7b2ce",
-		"incorrectCount" : 12,
-		"viewCount" : 21,
-		"lastUpdate" : "2016-08-10 23:52:04",
-		"difficulty" : 0.5714285714285714,
+		"incorrectCount" : 14,
+		"viewCount" : 24,
+		"lastUpdate" : "2017-05-26 00:40:36",
+		"difficulty" : 0.5833333333333334,
 		"confidence" : 0,
-		"totalTime" : 190622,
-		"averageTime" : 9077,
-		"timedViewCount" : 21
+		"totalTime" : 223352,
+		"averageTime" : 9306,
+		"timedViewCount" : 24
 	},
 	{
 		"studyItemMetaId" : "fdd13085-5e5d-475b-b748-cf497e348f6a",
@@ -19556,6 +21824,20 @@
 		"totalTime" : 105959,
 		"averageTime" : 9632,
 		"timedViewCount" : 11
+	},
+	{
+		"studyItemMetaId" : "fee5728f-eca7-4b77-8ebe-6637eec76a4a",
+		"createDate" : "2017-06-11 18:42:33",
+		"ownerId" : "32e7b927-cfde-11e4-bbaf-14dae9f4dacd",
+		"studyItemId" : "205ea3bc-4aee-44a6-9558-31bcb5733746",
+		"incorrectCount" : 18,
+		"viewCount" : 26,
+		"lastUpdate" : "2017-06-25 20:36:37",
+		"difficulty" : 0.6923076923076923,
+		"confidence" : 0,
+		"totalTime" : 319248,
+		"averageTime" : 12278,
+		"timedViewCount" : 26
 	},
 	{
 		"studyItemMetaId" : "fee7f7f4-f219-4147-9b9f-b4ecec14a4c0",

@@ -145,7 +145,7 @@ extension EditWordPairViewController: EditWordPairControllerDelegate {
         updateFields()
         
     }
-    
+    //Deprecate?
     func onUpdate() {
         updateFields()
     }

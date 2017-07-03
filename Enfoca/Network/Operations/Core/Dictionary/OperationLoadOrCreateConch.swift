@@ -13,8 +13,10 @@ class OperationLoadOrCreateConch : BaseOperation {
     private(set) var conch : String?
     private(set) var isNew: Bool = false
     private let enfocaRef: CKReference
+    private let allowCreation: Bool
     
-    init (enfocaRef: CKReference, db: CKDatabase, errorDelegate : ErrorDelegate) {
+    init (enfocaRef: CKReference, db: CKDatabase, allowCreation: Bool, errorDelegate : ErrorDelegate) {
+        self.allowCreation = allowCreation
         self.db = db
         self.enfocaRef = enfocaRef
         super.init(errorDelegate: errorDelegate)
@@ -49,6 +51,12 @@ class OperationLoadOrCreateConch : BaseOperation {
                 self.conch = CloudKitConverters.toConch(record: record)
                 self.done()
             } else {
+                if self.allowCreation == false {
+                    self.conch = nil
+                    self.handleError(message: "Synchronization conch already exists.")
+                    self.done()
+                }
+                
                 let newRecord = CKRecord(recordType: "Synch")
                 
                 let uuid = UUID().uuidString
