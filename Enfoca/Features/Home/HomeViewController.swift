@@ -73,7 +73,7 @@ class HomeViewController: UIViewController {
         controller.search()
         
         //I found that when creating a new Dictionary that the conch record might not return.  I think that it was a threading thing, but I'm putting in an explicit delay.
-        delay(delayInSeconds: 5) { 
+        delay(delayInSeconds: 1) {
             if HomeViewController.synchRequestDenied == false {
                 self.controller.isDataStoreSynchronized { (isInSynch: Bool) in
                     if !isInSynch {
@@ -95,7 +95,8 @@ class HomeViewController: UIViewController {
         dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
             HomeViewController.synchRequestDenied = true
         }))
-        
+
+        getAppDelegate().applicationDefaults.removeDictionary(services().getCurrentDictionary())
         present(dialog, animated: true, completion: nil)
     }
     

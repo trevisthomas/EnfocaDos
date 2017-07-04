@@ -16,6 +16,7 @@ protocol ApplicationDefaults {
     func load() -> String?
     func loadDataStore(forDictionaryId dictionaryId: String) -> String? 
     func clearUserDefauts()
+    func removeDictionary(_ dictionary: UserDictionary)
     
     var cardOrder: CardOrder {get set}
     var cardSide: CardSide {get set}
@@ -62,9 +63,17 @@ class LocalApplicationDefaults : ApplicationDefaults {
         }
     }
     
+    //Does not delete cached dictionaries, just which one was active
     func clearUserDefauts() {
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: dataStoreKey)
+    }
+    
+    //This is how you remove a cached dictionary
+    func removeDictionary(_ dictionary: UserDictionary) {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: dataStoreKey)
+        defaults.removeObject(forKey: dictionary.dictionaryId)
     }
     
     func load() -> String? {

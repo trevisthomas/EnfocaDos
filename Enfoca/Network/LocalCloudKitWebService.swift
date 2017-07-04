@@ -617,6 +617,7 @@ class LocalCloudKitWebService : WebService {
                     
                     invokeLater {
                         self.dataStore.getUserDictionary().conch = conch
+//                        getAppDelegate().saveDefaults() //Hm kinda heavy no?
                     }
                 }
             })
