@@ -25,6 +25,10 @@ class DictionaryLoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        launch()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         launch()
     }
     
@@ -38,17 +42,24 @@ class DictionaryLoadingViewController: UIViewController {
     
     private func launch(){
         
-        startProgress(ofType: "Initializing", message: "Loading app defaults")
+//        startProgress(ofType: "Initializing", message: "Loading app defaults")
+        
+        if let dictionary = dictionary {
+            if let json = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) {
+                dataStoreJson = json
+            }
+        }
         
         getAppDelegate().webService.prepareDataStore(dictionary: dictionary, json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
             
             if let error = error {
                 self.presentFatalAlert(title: "Initialization error", message: error)
             } else {
-                self.performSegue(withIdentifier: "HomeSegue", sender: self)
+                self.endProgress(ofType: "Initializing", message: "Initialization complete.")
+                invokeLater {
+                    self.performSegue(withIdentifier: "HomeSegue", sender: self)
+                }
             }
-            
-            self.endProgress(ofType: "Initializing", message: "Initialization complete.")
 
         }
         

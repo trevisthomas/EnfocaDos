@@ -80,6 +80,14 @@ class DictionarySelectionViewController: UIViewController {
             print("Loading dictionary: \(dictionary.subject) with enfocaRef \(dictionary.enfocaRef)")
             
             to.initialize(dictionary: dictionary)
+            
+//            if let json = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) {
+//                to.initialize(json: json)
+//            } else {
+//                 to.initialize(dictionary: dictionary)
+//            }
+            
+            
         } else if let to = segue.destination as? DictionaryCreationViewController {
             to.initialize(isBackButtonNeeded: true)
         }

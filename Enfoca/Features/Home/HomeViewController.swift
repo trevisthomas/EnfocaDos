@@ -82,7 +82,6 @@ class HomeViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     private func presentDataOutOfSynchAlert(){
@@ -244,6 +243,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
+        getAppDelegate().saveDefaults()
         performSegue(withIdentifier: "DictionarySelectionSeque", sender: nil)
     }
  

@@ -631,6 +631,8 @@ class LocalCloudKitWebService : WebService {
             return
         }
         
+        guard let enfocaRef = enfocaRef else { return } //If someone tries to sync before loading, this happens.
+        
         Perform.loadOrCreateConch(enfocaRef: enfocaRef, db: db, allowCreation: false) { (tuple : (String, Bool)?, error: EnfocaError?) in
             
             guard let tuple = tuple else { fatalError() }

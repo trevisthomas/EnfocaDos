@@ -12,8 +12,9 @@ protocol ApplicationDefaults {
     var reverseWordPair : Bool {get set}
     var selectedTags : [Tag] {get set}
     var fetchWordPairPageSize : Int {get}
-    func save(includingDataStore json: String?)
+    func save(dictionary: UserDictionary, includingDataStore json: String?)
     func load() -> String?
+    func loadDataStore(forDictionaryId dictionaryId: String) -> String? 
     func clearUserDefauts()
     
     var cardOrder: CardOrder {get set}
@@ -28,7 +29,7 @@ protocol ApplicationDefaults {
 
 class LocalApplicationDefaults : ApplicationDefaults {
     
-    let dataStoreKey : String = "DataStoreKey"
+    let dataStoreKey : String = "ActiveDictionaryKey"
     var selectedTags : [Tag] = []
     var reverseWordPair : Bool = false
     var cardOrder: CardOrder = .latestAdded
@@ -45,7 +46,7 @@ class LocalApplicationDefaults : ApplicationDefaults {
         }
     }
     
-    func save(includingDataStore json: String?){
+    func save(dictionary: UserDictionary, includingDataStore json: String?){
         if isTestMode() {
             print("Not saving user defaults.  We're in test mode")
             return
@@ -56,7 +57,8 @@ class LocalApplicationDefaults : ApplicationDefaults {
         let defaults = UserDefaults.standard
         
         if let json = json {
-            defaults.setValue(json, forKey: dataStoreKey)
+            defaults.setValue(json, forKey: dictionary.dictionaryId)
+            defaults.setValue(dictionary.dictionaryId, forKey: dataStoreKey)
         }
     }
     
@@ -72,18 +74,32 @@ class LocalApplicationDefaults : ApplicationDefaults {
             return nil
         }
         
-        let defaults = UserDefaults.standard
-        let json = defaults.value(forKey: dataStoreKey) as? String
         
+        var json: String? = nil
+        let defaults = UserDefaults.standard
+        if let dictionaryId = defaults.value(forKey: dataStoreKey) as? String {
+            json = loadDataStore(forDictionaryId: dictionaryId)
+        }
         
         //In case of a dirty shut down, i dont want the old data lying around
         //This doesnt work when you kill the app on a real device.
-        defaults.removeObject(forKey: dataStoreKey)
+//        defaults.removeObject(forKey: dataStoreKey)
 
         
         //Load other default settings
         
         return json
+    }
+    
+    func loadDataStore(forDictionaryId dictionaryId: String) -> String? {
+        
+        if isTestMode() {
+            print("Not loading user defaults.  We're in test mode")
+            return nil
+        }
+        
+        let defaults = UserDefaults.standard
+        return defaults.value(forKey: dictionaryId) as? String
     }
     
 }

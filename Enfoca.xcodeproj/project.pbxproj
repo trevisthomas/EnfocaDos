@@ -197,7 +197,6 @@
 		0F911E461EE75D4600F21855 /* OperationCreateTagAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */; };
 		0F911E471EE75D4600F21855 /* CloudAuthOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */; };
 		0F911E481EE75D4600F21855 /* ErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */; };
-		0F911E491EE75D4600F21855 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */; };
 		0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */; };
 		0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */; };
 		0F911E4C1EE75D4600F21855 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */; };
@@ -238,7 +237,6 @@
 		0F911E761EE75D4600F21855 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F911E771EE75D4600F21855 /* WordPairTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */; };
 		0F911E781EE75D4600F21855 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B851EDC64DD00FC20A1 /* Edit.storyboard */; };
-		0F911E791EE75D4600F21855 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */; };
 		0F911E7A1EE75D4600F21855 /* TagSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */; };
 		0F911E7B1EE75D4600F21855 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A5551EC8F51B00F31F9A /* Home.storyboard */; };
 		0F911E831EE766D900F21855 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */; };
@@ -281,7 +279,6 @@
 		0F911EA81EE766D900F21855 /* OperationCreateTagAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53B1EC8ECD200F31F9A /* OperationCreateTagAssociation.swift */; };
 		0F911EA91EE766D900F21855 /* CloudAuthOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A51C1EC8EC9000F31F9A /* CloudAuthOperation.swift */; };
 		0F911EAA1EE766D900F21855 /* ErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5121EC8EC6E00F31F9A /* ErrorDelegate.swift */; };
-		0F911EAB1EE766D900F21855 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */; };
 		0F911EAC1EE766D900F21855 /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6F1ED74C7B00FC20A1 /* BrowseController.swift */; };
 		0F911EAD1EE766D900F21855 /* CardSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */; };
 		0F911EAE1EE766D900F21855 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D81EC8E91E00F31F9A /* MetaData.swift */; };
@@ -322,7 +319,6 @@
 		0F911ED81EE766D900F21855 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F911ED91EE766D900F21855 /* WordPairTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */; };
 		0F911EDA1EE766D900F21855 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B851EDC64DD00FC20A1 /* Edit.storyboard */; };
-		0F911EDB1EE766D900F21855 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */; };
 		0F911EDC1EE766D900F21855 /* TagSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */; };
 		0F911EE91EE769D400F21855 /* DataImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911EE61EE768CA00F21855 /* DataImportViewController.swift */; };
 		0F911EEA1EE76B6700F21855 /* DataImport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F911EE41EE7689C00F21855 /* DataImport.storyboard */; };
@@ -366,8 +362,6 @@
 		0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */; };
 		0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */; };
 		0FA4A4AF1EC89DEF00F31F9A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */; };
-		0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */; };
-		0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */; };
 		0FA4A4DE1EC8E91E00F31F9A /* CardOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D41EC8E91E00F31F9A /* CardOrder.swift */; };
 		0FA4A4DF1EC8E91E00F31F9A /* CardSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D51EC8E91E00F31F9A /* CardSide.swift */; };
 		0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D61EC8E91E00F31F9A /* Gender.swift */; };
@@ -583,8 +577,6 @@
 		0FA4A4961EC89C0D00F31F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FA4A49D1EC89C0D00F31F9A /* EnfocaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnfocaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
-		0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		0FA4A4BE1EC8C98000F31F9A /* Enfoca.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Enfoca.entitlements; sourceTree = "<group>"; };
 		0FA4A4C71EC8CBA100F31F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FA4A4CC1EC8CCC000F31F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -988,19 +980,9 @@
 				0F085B841EDC642300FC20A1 /* Edit */,
 				0FA4A5541EC8F4F400F31F9A /* Home */,
 				0F028DE31F00D2FE008200E2 /* DictionarySelection */,
-				0FA4A4B51EC8A56F00F31F9A /* Loading */,
 				0FAD20CF1ECF5ACC002EACDA /* Shared */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		0FA4A4B51EC8A56F00F31F9A /* Loading */ = {
-			isa = PBXGroup;
-			children = (
-				0FA4A4B61EC8A69000F31F9A /* Loading.storyboard */,
-				0FA4A4B81EC8ADF400F31F9A /* LoadingViewController.swift */,
-			);
-			path = Loading;
 			sourceTree = "<group>";
 		};
 		0FA4A4BA1EC8B02300F31F9A /* Shared */ = {
@@ -1456,7 +1438,6 @@
 				0F911E771EE75D4600F21855 /* WordPairTableStoryboard.storyboard in Resources */,
 				0F911E781EE75D4600F21855 /* Edit.storyboard in Resources */,
 				0F011EB51EEB2B2300939B75 /* Quiz.storyboard in Resources */,
-				0F911E791EE75D4600F21855 /* Loading.storyboard in Resources */,
 				0F911E7A1EE75D4600F21855 /* TagSelection.storyboard in Resources */,
 				0F911E7B1EE75D4600F21855 /* Home.storyboard in Resources */,
 			);
@@ -1485,7 +1466,6 @@
 				0F911ED91EE766D900F21855 /* WordPairTableStoryboard.storyboard in Resources */,
 				0F911F281EE78A2100F21855 /* Home.storyboard in Resources */,
 				0F911EDA1EE766D900F21855 /* Edit.storyboard in Resources */,
-				0F911EDB1EE766D900F21855 /* Loading.storyboard in Resources */,
 				0F911EDC1EE766D900F21855 /* TagSelection.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1510,7 +1490,6 @@
 				0F911EFD1EE76CDD00F21855 /* tag_associations.json in Resources */,
 				0F911EFF1EE76CDD00F21855 /* test_ass.json in Resources */,
 				0F911EFE1EE76CDD00F21855 /* tag.json in Resources */,
-				0FA4A4B71EC8A69000F31F9A /* Loading.storyboard in Resources */,
 				0FAD20CC1ECE6231002EACDA /* TagSelection.storyboard in Resources */,
 				0FA4A5561EC8F51B00F31F9A /* Home.storyboard in Resources */,
 				0F911F001EE76CDD00F21855 /* test.json in Resources */,
@@ -1608,7 +1587,6 @@
 				0F911E461EE75D4600F21855 /* OperationCreateTagAssociation.swift in Sources */,
 				0F911E471EE75D4600F21855 /* CloudAuthOperation.swift in Sources */,
 				0F911E481EE75D4600F21855 /* ErrorDelegate.swift in Sources */,
-				0F911E491EE75D4600F21855 /* LoadingViewController.swift in Sources */,
 				0FE015A01EF8594800780184 /* ChangeCardAnimator.swift in Sources */,
 				0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */,
 				0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */,
@@ -1768,7 +1746,6 @@
 				0F911EA81EE766D900F21855 /* OperationCreateTagAssociation.swift in Sources */,
 				0F911EA91EE766D900F21855 /* CloudAuthOperation.swift in Sources */,
 				0F911EAA1EE766D900F21855 /* ErrorDelegate.swift in Sources */,
-				0F911EAB1EE766D900F21855 /* LoadingViewController.swift in Sources */,
 				0F911EAC1EE766D900F21855 /* BrowseController.swift in Sources */,
 				0F911EAD1EE766D900F21855 /* CardSide.swift in Sources */,
 				0F911EAE1EE766D900F21855 /* MetaData.swift in Sources */,
@@ -1883,7 +1860,6 @@
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,
 				0F011ECB1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
 				0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */,
-				0FA4A4B91EC8ADF400F31F9A /* LoadingViewController.swift in Sources */,
 				0F085B701ED74C7B00FC20A1 /* BrowseController.swift in Sources */,
 				0FA4A4DF1EC8E91E00F31F9A /* CardSide.swift in Sources */,
 				0FA4A4E21EC8E91E00F31F9A /* MetaData.swift in Sources */,
