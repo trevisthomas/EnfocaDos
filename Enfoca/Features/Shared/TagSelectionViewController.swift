@@ -52,10 +52,12 @@ class TagSelectionViewController: UIViewController {
  */
 extension TagSelectionViewController {
     
-    func initialize(tags: [Tag], browseDelegate: BrowseTagSelectionDelegate){
+    func initialize(tags: [Tag], browseDelegate: BrowseTagSelectionDelegate, animated: Bool = false){
         self.browseDelegate = browseDelegate
         
-        turnOnAnimation()
+        if animated {
+            turnOnAnimation()
+        }
         
         self.tags = []
         self.tags.append(contentsOf: tags)
@@ -67,8 +69,10 @@ extension TagSelectionViewController {
         
     }
     
-    func initialize(tags: [Tag], quizDelegate: QuizTagSelectionDelegate){
-        turnOnAnimation()
+    func initialize(tags: [Tag], quizDelegate: QuizTagSelectionDelegate, animated: Bool = false){
+        if animated {
+            turnOnAnimation()
+        }
         self.quizDelegate = quizDelegate
         
         self.tags = []
@@ -81,8 +85,10 @@ extension TagSelectionViewController {
         
     }
     
-    func initialize(tags: [Tag], selectedTags: [Tag], delegate: WordTagSelectionDelegate ) {
-        turnOnAnimation()
+    func initialize(tags: [Tag], selectedTags: [Tag], delegate: WordTagSelectionDelegate, animated: Bool = false ) {
+        if animated {
+            turnOnAnimation()
+        }
         
         self.wordTagSelectionDelegate = delegate
         
