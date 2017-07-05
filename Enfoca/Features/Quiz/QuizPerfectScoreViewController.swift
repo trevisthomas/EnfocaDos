@@ -25,7 +25,7 @@ class QuizPerfectScoreViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let to = segue.destination as? HomeViewController {
+        if let to = segue.destination as? ModularHomeViewController {
             to.transitioningDelegate = self
         }
     }
@@ -38,7 +38,7 @@ class QuizPerfectScoreViewController: UIViewController {
 extension QuizPerfectScoreViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        guard let _ = presented as? HomeViewController, let _ = source as? QuizPerfectScoreViewController else {
+        guard let _ = presented as? ModularHomeViewController, let _ = source as? QuizPerfectScoreViewController else {
             fatalError()
         }
         

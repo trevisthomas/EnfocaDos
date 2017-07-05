@@ -16,57 +16,42 @@ class ModularHomeViewController: UIViewController {
     
     @IBOutlet weak var searchOrCreateTextField: UITextField!
     
-    fileprivate var controller: HomeController!
+    
     
     @IBOutlet weak var overlayHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var overlayBottomConstraint: NSLayoutConstraint!
+
+    @IBOutlet weak var expandingTableViewHolder: UIView!
+    @IBOutlet weak var searchResultsTableViewContainer: UIView!
+    @IBOutlet weak var overlayViewContainer: UIView!
     
+    @IBOutlet weak var searchResultsTableViewContainerLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchOrCreateLeftConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var magifierCloseView: MagnifierCloseView!
+    
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+
+    @IBOutlet weak var searchUnderlineView: UIView!
+
+    fileprivate var controller: HomeController!
     fileprivate var originalHeightConstraintConstant: CGFloat!
     fileprivate var retractedHeightConstraintConstant: CGFloat!
     
     fileprivate var originalBottomConstraintConstant: CGFloat!
     fileprivate var retractedBottomConstraintConstant: CGFloat!
     
-    @IBOutlet weak var tagContainerView: UIView!
-    
-    @IBOutlet weak var expandingTableViewHolder: UIView!
-    @IBOutlet weak var searchResultsTableViewContainer: UIView!
-    
-    @IBOutlet weak var overlayViewContainer: UIView!
-    
-//    fileprivate var tagViewController: TagSelectionViewController!
-//    fileprivate var quizByTagViewControler: TagSelectionViewController!
     fileprivate var wordPairTableViewController: WordPairTableViewController!
     fileprivate var overlayViewController: HomeOverlayViewController!
-    
-    private var originalOverlayFrame: CGRect!
-    private var retractedOverlayFrame: CGRect!
-    
-    
-    @IBOutlet weak var hightConstraintOnGray: NSLayoutConstraint!
-    
-    @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var searchResultsTableViewContainerLeftConstraint: NSLayoutConstraint!
-    @IBOutlet weak var searchOrCreateLeftConstraint: NSLayoutConstraint!
-    @IBOutlet weak var languageSelectorLeftConstraint: NSLayoutConstraint!
-    
-    private var originalHeightConstraintOnGray: CGFloat!
-    private var expandedHeightConstraintOnGray: CGFloat!
-    
-    @IBOutlet weak var browseLabelLeftConstraint: NSLayoutConstraint!
-    @IBOutlet weak var quizLabelLeftConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var magifierCloseView: MagnifierCloseView!
-    
-    
-    fileprivate var wordPairs : [WordPair] = []
-    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var headerBackgroundView: UIView!
     
     fileprivate var editWordPairAnimator = EnfocaDefaultAnimator()
     fileprivate let browseViewFromHomeAnimator = BrowseFromHomeAnimator()
     
-    @IBOutlet weak var searchUnderlineView: UIView!
+    private var originalHeightConstraintOnGray: CGFloat!
+    private var expandedHeightConstraintOnGray: CGFloat!
+    private var originalOverlayFrame: CGRect!
+    private var retractedOverlayFrame: CGRect!
+
     
     private static var synchRequestDenied = false
 

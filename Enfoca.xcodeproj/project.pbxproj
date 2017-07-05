@@ -70,6 +70,8 @@
 		0F0BAFBC1F0CD124005251AE /* ModularHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFBA1F0CD124005251AE /* ModularHomeViewController.swift */; };
 		0F0BAFBE1F0CD612005251AE /* HomeOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */; };
 		0F0BAFBF1F0CD612005251AE /* HomeOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */; };
+		0F0BAFC11F0D778A005251AE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFC01F0D778A005251AE /* HomeController.swift */; };
+		0F0BAFC21F0D778A005251AE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFC01F0D778A005251AE /* HomeController.swift */; };
 		0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
 		0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1AAA1D1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
@@ -188,7 +190,6 @@
 		0F911E391EE75D4600F21855 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D91EC8E91E00F31F9A /* Tag.swift */; };
 		0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */; };
 		0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
-		0F911E3C1EE75D4600F21855 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */; };
 		0F911E3D1EE75D4600F21855 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */; };
 		0F911E3E1EE75D4600F21855 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */; };
 		0F911E3F1EE75D4600F21855 /* MonitoredBaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */; };
@@ -216,8 +217,6 @@
 		0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
 		0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */; };
 		0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
-		0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
-		0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5641ECBC93700F31F9A /* HomeController.swift */; };
 		0F911E5E1EE75D4600F21855 /* CloudKitConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */; };
 		0F911E601EE75D4600F21855 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D61EC8E91E00F31F9A /* Gender.swift */; };
 		0F911E611EE75D4600F21855 /* OperationDeleteRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */; };
@@ -270,7 +269,6 @@
 		0F911E9B1EE766D900F21855 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D91EC8E91E00F31F9A /* Tag.swift */; };
 		0F911E9C1EE766D900F21855 /* DemoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EB1EC8E94700F31F9A /* DemoWebService.swift */; };
 		0F911E9D1EE766D900F21855 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
-		0F911E9E1EE766D900F21855 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */; };
 		0F911E9F1EE766D900F21855 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */; };
 		0F911EA01EE766D900F21855 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */; };
 		0F911EA11EE766D900F21855 /* MonitoredBaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52F1EC8ECA500F31F9A /* MonitoredBaseOperation.swift */; };
@@ -298,8 +296,6 @@
 		0F911EBA1EE766D900F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
 		0F911EBC1EE766D900F21855 /* OperationFetchTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53E1EC8ECD200F31F9A /* OperationFetchTags.swift */; };
 		0F911EBD1EE766D900F21855 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
-		0F911EBE1EE766D900F21855 /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
-		0F911EBF1EE766D900F21855 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5641ECBC93700F31F9A /* HomeController.swift */; };
 		0F911EC01EE766D900F21855 /* CloudKitConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A52B1EC8EC9C00F31F9A /* CloudKitConverters.swift */; };
 		0F911EC21EE766D900F21855 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4D61EC8E91E00F31F9A /* Gender.swift */; };
 		0F911EC31EE766D900F21855 /* OperationDeleteRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A53C1EC8ECD200F31F9A /* OperationDeleteRecord.swift */; };
@@ -416,10 +412,7 @@
 		0FA4A5511EC8EE5B00F31F9A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5501EC8EE5B00F31F9A /* Globals.swift */; };
 		0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */; };
 		0FA4A5561EC8F51B00F31F9A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4A5551EC8F51B00F31F9A /* Home.storyboard */; };
-		0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */; };
 		0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5591EC96A7800F31F9A /* Style.swift */; };
-		0FA4A5631ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */; };
-		0FA4A5651ECBC93700F31F9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5641ECBC93700F31F9A /* HomeController.swift */; };
 		0FA4A5671ECBCB7D00F31F9A /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */; };
 		0FA4A56B1ECC05B200F31F9A /* HomeControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A56A1ECC05B200F31F9A /* HomeControllerTests.swift */; };
 		0FA4A5761ECC148B00F31F9A /* CardOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A56F1ECC148B00F31F9A /* CardOrderTests.swift */; };
@@ -528,6 +521,7 @@
 		0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairEditorControllerTests.swift; sourceTree = "<group>"; };
 		0F0BAFBA1F0CD124005251AE /* ModularHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularHomeViewController.swift; sourceTree = "<group>"; };
 		0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeOverlayViewController.swift; sourceTree = "<group>"; };
+		0F0BAFC01F0D778A005251AE /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
 		0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
@@ -636,10 +630,7 @@
 		0FA4A5501EC8EE5B00F31F9A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0FA4A5521EC8F0DB00F31F9A /* ApplicationDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDefaults.swift; sourceTree = "<group>"; };
 		0FA4A5551EC8F51B00F31F9A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0FA4A5591EC96A7800F31F9A /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFromLoadingAnimator.swift; sourceTree = "<group>"; };
-		0FA4A5641ECBC93700F31F9A /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FA4A56A1ECC05B200F31F9A /* HomeControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeControllerTests.swift; sourceTree = "<group>"; };
 		0FA4A56F1ECC148B00F31F9A /* CardOrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardOrderTests.swift; sourceTree = "<group>"; };
@@ -1165,11 +1156,10 @@
 		0FA4A5541EC8F4F400F31F9A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0F0BAFC01F0D778A005251AE /* HomeController.swift */,
 				0FA4A5551EC8F51B00F31F9A /* Home.storyboard */,
 				0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */,
 				0F0BAFBA1F0CD124005251AE /* ModularHomeViewController.swift */,
-				0FA4A5641ECBC93700F31F9A /* HomeController.swift */,
-				0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1196,7 +1186,6 @@
 			isa = PBXGroup;
 			children = (
 				0F085B821ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift */,
-				0FA4A5621ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift */,
 				0F011ECD1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift */,
 				0F011EBC1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift */,
 				0F011ECA1EEDD0E000939B75 /* QuizCardAnimator.swift */,
@@ -1579,7 +1568,6 @@
 				0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
 				0FE0159A1EF5C9C100780184 /* Double+.swift in Sources */,
 				0F011ED51EF04CA700939B75 /* MatchingRoundViewController.swift in Sources */,
-				0F911E3C1EE75D4600F21855 /* HomeViewController.swift in Sources */,
 				0F35B0541F0315B4001AC511 /* DictionaryLoadingViewController.swift in Sources */,
 				0F011EAF1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */,
 				0F911E3D1EE75D4600F21855 /* UIColor+.swift in Sources */,
@@ -1623,9 +1611,8 @@
 				0F028DDF1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */,
 				0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */,
+				0F0BAFC21F0D778A005251AE /* HomeController.swift in Sources */,
 				0F35B0481F01BAD2001AC511 /* DictionaryCreationViewController.swift in Sources */,
-				0F911E5C1EE75D4600F21855 /* HomeFromLoadingAnimator.swift in Sources */,
-				0F911E5D1EE75D4600F21855 /* HomeController.swift in Sources */,
 				0F011EDB1EF059E900939B75 /* Theme.swift in Sources */,
 				0FE0159D1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift in Sources */,
 				0F911E5E1EE75D4600F21855 /* CloudKitConverters.swift in Sources */,
@@ -1743,7 +1730,6 @@
 				0F911E9B1EE766D900F21855 /* Tag.swift in Sources */,
 				0F911E9C1EE766D900F21855 /* DemoWebService.swift in Sources */,
 				0F911E9D1EE766D900F21855 /* BrowseViewController.swift in Sources */,
-				0F911E9E1EE766D900F21855 /* HomeViewController.swift in Sources */,
 				0F911E9F1EE766D900F21855 /* UIColor+.swift in Sources */,
 				0F911EA01EE766D900F21855 /* TagCollectionViewCell.swift in Sources */,
 				0F911EA11EE766D900F21855 /* MonitoredBaseOperation.swift in Sources */,
@@ -1771,8 +1757,6 @@
 				0F911EBA1EE766D900F21855 /* TagFilterViewController.swift in Sources */,
 				0F911EBC1EE766D900F21855 /* OperationFetchTags.swift in Sources */,
 				0F911EBD1EE766D900F21855 /* EditWordPairController.swift in Sources */,
-				0F911EBE1EE766D900F21855 /* HomeFromLoadingAnimator.swift in Sources */,
-				0F911EBF1EE766D900F21855 /* HomeController.swift in Sources */,
 				0F911EC01EE766D900F21855 /* CloudKitConverters.swift in Sources */,
 				0F911EC21EE766D900F21855 /* Gender.swift in Sources */,
 				0F911EC31EE766D900F21855 /* OperationDeleteRecord.swift in Sources */,
@@ -1849,7 +1833,6 @@
 				0F911F311EE9053C00F21855 /* ActivityIndicatable.swift in Sources */,
 				0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */,
 				0F911F061EE76CFA00F21855 /* Import.swift in Sources */,
-				0FA4A5581EC8F59E00F31F9A /* HomeViewController.swift in Sources */,
 				0FD1E2111ED1EF2C00D8BD1A /* UIColor+.swift in Sources */,
 				0FA4A5671ECBCB7D00F31F9A /* TagCollectionViewCell.swift in Sources */,
 				0FE0158E1EF4B19700780184 /* CustomAnimations.swift in Sources */,
@@ -1881,6 +1864,7 @@
 				0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */,
 				0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */,
 				0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */,
+				0F0BAFC11F0D778A005251AE /* HomeController.swift in Sources */,
 				0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */,
 				0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */,
 				0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */,
@@ -1892,12 +1876,10 @@
 				0FA4A5451EC8ECD200F31F9A /* OperationFetchTags.swift in Sources */,
 				0F35B0531F0315B4001AC511 /* DictionaryLoadingViewController.swift in Sources */,
 				0F085B8A1EDC66A200FC20A1 /* EditWordPairController.swift in Sources */,
-				0FA4A5631ECB55BC00F31F9A /* HomeFromLoadingAnimator.swift in Sources */,
 				0F011EBD1EED142900939B75 /* EnfocaHeaderViewAnimationTarget.swift in Sources */,
 				0F011ED41EF04CA700939B75 /* MatchingRoundViewController.swift in Sources */,
 				0F028DD81F000AE5008200E2 /* LookupTextViewController.swift in Sources */,
 				0F011EDA1EF059E900939B75 /* Theme.swift in Sources */,
-				0FA4A5651ECBC93700F31F9A /* HomeController.swift in Sources */,
 				0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */,
 				0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */,
 				0FA4A5431EC8ECD200F31F9A /* OperationDeleteRecord.swift in Sources */,

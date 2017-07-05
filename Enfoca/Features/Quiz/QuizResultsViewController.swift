@@ -31,7 +31,7 @@ class QuizResultsViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let to = segue.destination as? HomeViewController {
+        if let to = segue.destination as? ModularHomeViewController {
             to.transitioningDelegate = self
         } else if let to = segue.destination as? MatchingRoundViewController {
             to.transitioningDelegate = self
@@ -53,7 +53,7 @@ class QuizResultsViewController: UIViewController {
 extension QuizResultsViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        if let _ = presented as? HomeViewController, let _ = source as? QuizResultsViewController {
+        if let _ = presented as? ModularHomeViewController, let _ = source as? QuizResultsViewController {
             return HomeFromQuizResultAnimator()
         }
         

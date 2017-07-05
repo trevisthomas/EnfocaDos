@@ -75,7 +75,7 @@ class CardRearViewController: UIViewController {
         } else if let to = segue.destination as? QuizResultsViewController {
             to.transitioningDelegate = self
             to.initialize(sharedViewModel: sharedViewModel)
-        } else if let to = segue.destination as? HomeViewController {
+        } else if let to = segue.destination as? ModularHomeViewController {
             to.transitioningDelegate = self
         } else if let to = segue.destination as? QuizPerfectScoreViewController {
             to.transitioningDelegate = self
@@ -88,7 +88,7 @@ class CardRearViewController: UIViewController {
 extension CardRearViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        if let _ = presented as? HomeViewController, let _ = source as? CardRearViewController {
+        if let _ = presented as? ModularHomeViewController, let _ = source as? CardRearViewController {
             return HomeFromQuizResultAnimator()
         }
         

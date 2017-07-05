@@ -8,26 +8,14 @@
 
 import UIKit
 
-protocol QuizTagSelectionDelegate {
-    func quizWordsWithTag(forTag: Tag, atRect: CGRect, cell: UICollectionViewCell)
-}
 
 protocol BrowseTagSelectionDelegate {
     func browseWordsWithTag(withTag: Tag, atRect: CGRect, cell: UICollectionViewCell)
 }
 
-protocol WordTagSelectionDelegate {
-    func onTagSelected(tag: Tag)
-    func onTagDeselected(tag: Tag)
-    func onShowTagEditor()
-}
-
 class TagSelectionViewController: UIViewController {
     
-    fileprivate var quizDelegate: QuizTagSelectionDelegate?
     fileprivate var browseDelegate: BrowseTagSelectionDelegate?
-    fileprivate var wordTagSelectionDelegate: WordTagSelectionDelegate?
-    
     fileprivate let backgroundColor: UIColor = UIColor(hexString: "#DDDEE0")
     fileprivate let selectedBackgroundColor: UIColor = UIColor(hexString: "#A9D3AA")
     
@@ -85,41 +73,6 @@ extension TagSelectionViewController {
         
     }
     
-    func initialize(tags: [Tag], quizDelegate: QuizTagSelectionDelegate, animated: Bool = false){
-        if animated {
-            turnOnAnimation()
-        }
-        self.quizDelegate = quizDelegate
-        
-        self.tags = []
-        self.tags.append(contentsOf: tags)
-        collectionView.reloadData()
-        
-        invokeLater {
-            self.turnOffAnimation()
-        }
-        
-    }
-    
-    func initialize(tags: [Tag], selectedTags: [Tag], delegate: WordTagSelectionDelegate, animated: Bool = false ) {
-        if animated {
-            turnOnAnimation()
-        }
-        
-        self.wordTagSelectionDelegate = delegate
-        
-        self.tags = []
-        self.tags.append(editMarkerTag)
-        self.tags.append(contentsOf: tags)
-        
-        collectionView.reloadData() //Woah, do i have to do this first?
-        self.selectedTags(tags: selectedTags)
-        
-        invokeLater {
-            self.turnOffAnimation()
-        }
-    }
-    
     func turnOnAnimation() {
         animateCollectionViewCellCreation = true
     }
@@ -173,8 +126,6 @@ extension TagSelectionViewController : UICollectionViewDataSource {
         
         cell.seed(tag: tag)
         
-        setCellColorIfNeeded(cell)
-
         if animateCollectionViewCellCreation {
             let origFram = cell.frame
             
@@ -203,49 +154,12 @@ extension TagSelectionViewController : UICollectionViewDelegate {
         let tag = tags[indexPath.row]
         let cell = collectionView.cellForItem(at: indexPath)!
         
-        if(tag == editMarkerTag){
-            guard let wordTagSelectionDelegate = wordTagSelectionDelegate else { abort() }
-            wordTagSelectionDelegate.onShowTagEditor()
-            collectionView.deselectItem(at: indexPath, animated: false)
-            return
-        }
-        
         let attributes = collectionView.layoutAttributesForItem(at: indexPath)
         let cellRect = attributes!.frame
         let cellFrameInSuperView = collectionView.convert(cellRect, to: view.window)
         
         
-        setCellColorIfNeeded(cell)
-        
-        quizDelegate?.quizWordsWithTag(forTag: tag, atRect: cellFrameInSuperView, cell: cell)
         browseDelegate?.browseWordsWithTag(withTag: tag, atRect: cellFrameInSuperView, cell: cell)
         
-        wordTagSelectionDelegate?.onTagSelected(tag: tag)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
-        //If we're not driving a wordTagSelectionDelegate then deselect has no meaning
-        guard let _ = wordTagSelectionDelegate else {
-            return
-        }
-        
-        let tag = tags[indexPath.row]
-        
-        let cell = collectionView.cellForItem(at: indexPath)!
-        setCellColorIfNeeded(cell)
-        
-        wordTagSelectionDelegate?.onTagDeselected(tag: tag)
-    }
-    
-    func setCellColorIfNeeded(_ cell: UICollectionViewCell) {
-        if let _ = wordTagSelectionDelegate {
-            if cell.isSelected {
-                cell.backgroundColor = selectedBackgroundColor
-            } else {
-                cell.backgroundColor = backgroundColor
-            }
-        }
-    }
-    
 }
