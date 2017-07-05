@@ -29,6 +29,11 @@ class MagnifierCloseView: UIView {
     private var isInitialized: Bool?
     
     func initialize() {
+        
+        if let _ = isInitialized {
+            return
+        }
+        
         isInitialized = false
         
         self.animateInitialState()

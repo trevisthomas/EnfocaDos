@@ -92,6 +92,18 @@ extension UIViewController {
         return viewController
     }
     
+    func createHomeOverlayViewController(inContainerView: UIView) -> HomeOverlayViewController {
+        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "HomeOverlayViewController") as! HomeOverlayViewController
+        
+        //Note, this add is a custom method
+        self.add(asChildViewController: viewController, toContainerView: inContainerView)
+        
+        return viewController
+    }
+    
     func createEditorViewController(inContainerView: UIView) -> EditorViewController {
         let storyboard = UIStoryboard(name: "Edit", bundle: Bundle.main)
         

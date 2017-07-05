@@ -168,14 +168,14 @@ class CustomAnimations {
         })
     }
     
-    class func bounceAnimation(view: UIView){
-        let pulse = CASpringAnimation(keyPath: "transform.scale")
-        pulse.damping = 2.0
-        pulse.fromValue = 1.25
-        pulse.toValue = 1.0
-        pulse.duration = pulse.settlingDuration
-        view.layer.add(pulse, forKey: nil)
-    }
+//    class func bounceAnimation(view: UIView){
+//        let pulse = CASpringAnimation(keyPath: "transform.scale")
+//        pulse.damping = 2.0
+//        pulse.fromValue = 1.25
+//        pulse.toValue = 1.0
+//        pulse.duration = pulse.settlingDuration
+//        view.layer.add(pulse, forKey: nil)
+//    }
     
     class func shakeAnimation(view: UIView) {
         

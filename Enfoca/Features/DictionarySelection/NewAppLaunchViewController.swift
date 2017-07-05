@@ -44,6 +44,7 @@ class NewAppLaunchViewController: UIViewController {
         service.initialize { (dictionaryList: [UserDictionary]?, error: EnfocaError?) in
             if let error = error {
                 self.presentFatalAlert(title: "Failed to initialize app", message: error)
+                return
             }
             
             getAppDelegate().webService = service

@@ -43,6 +43,22 @@ class TagSelectionViewController: UIViewController {
         super.viewDidLoad()
         
         collectionView.allowsMultipleSelection = true
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: 100, height: 100)
+        
+        var size : CGFloat = 100.0
+        let perRow: CGFloat = 3.0
+        //
+        
+        size = (collectionView.frame.width - layout.sectionInset.left - layout.sectionInset.right - (layout.minimumInteritemSpacing * perRow)) / perRow
+        
+        //Clamp to 120 max.
+        if size > 120 {
+            size = 120
+        }
+
+        layout.itemSize = CGSize(width: size, height: size)
     }
     
 }
@@ -164,7 +180,7 @@ extension TagSelectionViewController : UICollectionViewDataSource {
             
             cell.frame = CGRect(x: origFram.origin.x + collectionView.frame.width, y: origFram.origin.y, width: origFram.width, height: origFram.height)
             
-            UIView.animate(withDuration: 0.80, delay: 0.2 * (Double(indexPath.row)), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [], animations: {
+            UIView.animate(withDuration: 0.33, delay: 0.1 * (Double(indexPath.row)), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [], animations: {
                 cell.frame = origFram
             }) { (_: Bool) in
                 //

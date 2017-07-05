@@ -24,7 +24,7 @@ public class HomeFromQuizResultAnimator: NSObject, UIViewControllerAnimatedTrans
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
-        guard let toViewController = transitionContext.viewController(forKey: .to) as? HomeViewController else {
+        guard let toViewController = transitionContext.viewController(forKey: .to) as? ModularHomeViewController else {
             fatalError()
         }
         
@@ -34,34 +34,28 @@ public class HomeFromQuizResultAnimator: NSObject, UIViewControllerAnimatedTrans
         
         containerView.addSubview(toViewController.view)
         
-        toViewController.oldTitleLabel.alpha = 0
         toViewController.titleLabel.alpha = 0
         
         
         let toViewWidth = toViewController.view.frame.width
         
-        let origLanguageConstant = toViewController.languageSelectorLeftConstraint.constant
-        toViewController.languageSelectorLeftConstraint.constant = toViewController.languageSelectorLeftConstraint.constant - toViewWidth
+        let origLanguageConstant = toViewController.segmentedControlLeftConstraint.constant
+        toViewController.segmentedControlLeftConstraint.constant = toViewController.segmentedControlLeftConstraint.constant - toViewWidth
         
         let origSearchConstant = toViewController.searchOrCreateLeftConstraint.constant
         toViewController.searchOrCreateLeftConstraint.constant = origSearchConstant + toViewWidth
         let origSearchTableConstant = toViewController.searchResultsTableViewContainerLeftConstraint.constant
         toViewController.searchResultsTableViewContainerLeftConstraint.constant = origSearchTableConstant + toViewWidth
         
-        let origQuizLabelConstant = toViewController.quizLabelLeftConstraint.constant
-        let origBrowseLabelConstant = toViewController.browseLabelLeftConstraint.constant
         
-        toViewController.quizLabelLeftConstraint.constant = origQuizLabelConstant - toViewWidth
-        toViewController.browseLabelLeftConstraint.constant = origBrowseLabelConstant - toViewWidth
+        let origHeightConstraintOnGray = toViewController.headerHeightConstraint.constant
         
-        let origHeightConstraintOnGray = toViewController.hightConstraintOnGray.constant
-        
-        toViewController.hightConstraintOnGray.constant = fromViewController.getHeaderHeight()
+        toViewController.headerHeightConstraint.constant = fromViewController.getHeaderHeight()
         
         //Magic happens
         toViewController.view.layoutIfNeeded()
         
-        toViewController.hightConstraintOnGray.constant = origHeightConstraintOnGray
+        toViewController.headerHeightConstraint.constant = origHeightConstraintOnGray
         
         let setupDuration = self.duration * 0.20
         
@@ -75,19 +69,19 @@ public class HomeFromQuizResultAnimator: NSObject, UIViewControllerAnimatedTrans
             
             toViewController.view.layoutIfNeeded()
             
-            toViewController.languageSelectorLeftConstraint.constant = origLanguageConstant
+            toViewController.segmentedControlLeftConstraint.constant = origLanguageConstant
             toViewController.searchOrCreateLeftConstraint.constant = origSearchConstant
             toViewController.searchResultsTableViewContainerLeftConstraint.constant = origSearchTableConstant
-            toViewController.quizLabelLeftConstraint.constant = origQuizLabelConstant
-            toViewController.browseLabelLeftConstraint.constant = origBrowseLabelConstant
-            
+//            toViewController.quizLabelLeftConstraint.constant = origQuizLabelConstant
+//            toViewController.browseLabelLeftConstraint.constant = origBrowseLabelConstant
+//            
             UIView.animate(withDuration: remainingDuration, delay: 0, options: [.curveEaseInOut], animations: {
                 
                 toViewController.view.layoutIfNeeded()
                 
             }) { _ in
                 transitionContext.completeTransition(true)
-                toViewController.transitionComplete()
+//                toViewController.transitionComplete()
             }
             
             UIView.animate(withDuration: remainingDuration * 0.33 , delay: 0, options: [.curveEaseInOut], animations: {

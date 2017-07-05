@@ -19,14 +19,13 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
-        guard let toViewController = transitionContext.viewController(forKey: .to) as? HomeViewController else {
+        guard let toViewController = transitionContext.viewController(forKey: .to) as? ModularHomeViewController else {
             fatalError()
         }
         
         
         containerView.addSubview(toViewController.view)
         
-        toViewController.oldTitleLabel.alpha = 1
         toViewController.titleLabel.alpha = 0
         
         
@@ -62,11 +61,11 @@ public class HomeFromLoadingAnimator: NSObject, UIViewControllerAnimatedTransiti
             
         }) { _ in
             transitionContext.completeTransition(true)
-            toViewController.transitionComplete()
+//            toViewController.transitionComplete()
         }
         
         UIView.animate(withDuration: duration * 0.33, delay: 0, options: [.curveEaseInOut], animations: {
-            toViewController.oldTitleLabel.alpha = 0
+            
         }) { _ in
             //Wow.  Is this the best TODO: Consider alternative
             toViewController.magifierCloseView.initialize()

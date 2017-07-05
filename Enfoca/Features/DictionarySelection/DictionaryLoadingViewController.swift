@@ -104,12 +104,13 @@ extension DictionaryLoadingViewController : ProgressObserver {
 extension DictionaryLoadingViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        guard let _ = presented as? HomeViewController, let _ = source as? DictionaryLoadingViewController else {
+        guard let _ = presented as? ModularHomeViewController, let _ = source as? DictionaryLoadingViewController else {
 //            fatalError()
             return nil
         }
         
         return HomeFromQuizResultAnimator()
+        
     }
 }
 

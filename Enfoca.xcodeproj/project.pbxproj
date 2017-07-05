@@ -66,6 +66,10 @@
 		0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */; };
 		0F085B8A1EDC66A200FC20A1 /* EditWordPairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */; };
 		0F085B8D1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */; };
+		0F0BAFBB1F0CD124005251AE /* ModularHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFBA1F0CD124005251AE /* ModularHomeViewController.swift */; };
+		0F0BAFBC1F0CD124005251AE /* ModularHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFBA1F0CD124005251AE /* ModularHomeViewController.swift */; };
+		0F0BAFBE1F0CD612005251AE /* HomeOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */; };
+		0F0BAFBF1F0CD612005251AE /* HomeOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */; };
 		0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
 		0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1AAA1D1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
@@ -522,6 +526,8 @@
 		0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordPairViewController.swift; sourceTree = "<group>"; };
 		0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordPairController.swift; sourceTree = "<group>"; };
 		0F085B8C1EDC685B00FC20A1 /* WordPairEditorControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairEditorControllerTests.swift; sourceTree = "<group>"; };
+		0F0BAFBA1F0CD124005251AE /* ModularHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularHomeViewController.swift; sourceTree = "<group>"; };
+		0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeOverlayViewController.swift; sourceTree = "<group>"; };
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
 		0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
@@ -1160,6 +1166,8 @@
 			isa = PBXGroup;
 			children = (
 				0FA4A5551EC8F51B00F31F9A /* Home.storyboard */,
+				0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */,
+				0F0BAFBA1F0CD124005251AE /* ModularHomeViewController.swift */,
 				0FA4A5641ECBC93700F31F9A /* HomeController.swift */,
 				0FA4A5571EC8F59E00F31F9A /* HomeViewController.swift */,
 			);
@@ -1528,6 +1536,7 @@
 				0F011EC61EED986400939B75 /* EnfocaHeaderViewAnimationTarget.swift in Sources */,
 				0F028DE91F00DC3A008200E2 /* SubjectTableViewCell.swift in Sources */,
 				0F011EC21EED981100939B75 /* CardFrontViewController.swift in Sources */,
+				0F0BAFBF1F0CD612005251AE /* HomeOverlayViewController.swift in Sources */,
 				0F911F321EE915E400F21855 /* ActivityIndicatable.swift in Sources */,
 				0F911F331EE915E400F21855 /* UITextField+.swift in Sources */,
 				0F911E211EE75D4600F21855 /* DataStore.swift in Sources */,
@@ -1579,6 +1588,7 @@
 				0F911E3F1EE75D4600F21855 /* MonitoredBaseOperation.swift in Sources */,
 				0F45F3EB1F098DEF00D45594 /* OperationResetConch.swift in Sources */,
 				0F911E401EE75D4600F21855 /* EnfocaError.swift in Sources */,
+				0F0BAFBC1F0CD124005251AE /* ModularHomeViewController.swift in Sources */,
 				0F911E411EE75D4600F21855 /* String+.swift in Sources */,
 				0F911E421EE75D4600F21855 /* OperationFetchWordPairs.swift in Sources */,
 				0F911E431EE75D4600F21855 /* MagnifierCloseView.swift in Sources */,
@@ -1867,12 +1877,14 @@
 				0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */,
 				0F911E1C1EE5B20600F21855 /* UiTestWebService.swift in Sources */,
 				0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */,
+				0F0BAFBB1F0CD124005251AE /* ModularHomeViewController.swift in Sources */,
 				0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */,
 				0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */,
 				0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */,
 				0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */,
 				0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */,
 				0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */,
+				0F0BAFBE1F0CD612005251AE /* HomeOverlayViewController.swift in Sources */,
 				0F011EBA1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */,
 				0F011EC91EEDB4AF00939B75 /* QuizResultsViewController.swift in Sources */,
 				0F911E0E1EE08E8300F21855 /* TagFilterViewController.swift in Sources */,

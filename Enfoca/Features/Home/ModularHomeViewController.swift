@@ -1,32 +1,47 @@
 //
-//  HomeViewController.swift
+//  ModularHomeViewController.swift
 //  Enfoca
 //
-//  Created by Trevis Thomas on 5/14/17.
+//  Created by Trevis Thomas on 7/5/17.
 //  Copyright © 2017 Trevis Thomas. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
-    @IBOutlet weak var oldTitleLabel: UILabel!
+class ModularHomeViewController: UIViewController {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var searchOrCreateTextField: UITextField!
+    
     fileprivate var controller: HomeController!
     
-    @IBOutlet weak var quizByTagContainerView: UIView!
-    @IBOutlet weak var browseByTagContainerView: UIView!
+    @IBOutlet weak var overlayHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var overlayBottomConstraint: NSLayoutConstraint!
     
+    fileprivate var originalHeightConstraintConstant: CGFloat!
+    fileprivate var retractedHeightConstraintConstant: CGFloat!
+    
+    fileprivate var originalBottomConstraintConstant: CGFloat!
+    fileprivate var retractedBottomConstraintConstant: CGFloat!
+    
+    @IBOutlet weak var tagContainerView: UIView!
     
     @IBOutlet weak var expandingTableViewHolder: UIView!
     @IBOutlet weak var searchResultsTableViewContainer: UIView!
     
-    fileprivate var browseByTagViewController: TagSelectionViewController!
-    fileprivate var quizByTagViewControler: TagSelectionViewController!
+    @IBOutlet weak var overlayViewContainer: UIView!
+    
+//    fileprivate var tagViewController: TagSelectionViewController!
+//    fileprivate var quizByTagViewControler: TagSelectionViewController!
     fileprivate var wordPairTableViewController: WordPairTableViewController!
+    fileprivate var overlayViewController: HomeOverlayViewController!
+    
+    private var originalOverlayFrame: CGRect!
+    private var retractedOverlayFrame: CGRect!
+    
     
     @IBOutlet weak var hightConstraintOnGray: NSLayoutConstraint!
     
@@ -34,6 +49,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchResultsTableViewContainerLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchOrCreateLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var languageSelectorLeftConstraint: NSLayoutConstraint!
+    
     private var originalHeightConstraintOnGray: CGFloat!
     private var expandedHeightConstraintOnGray: CGFloat!
     
@@ -42,16 +58,24 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var magifierCloseView: MagnifierCloseView!
     
-    fileprivate var editWordPairAnimator = EnfocaDefaultAnimator()
+    
     fileprivate var wordPairs : [WordPair] = []
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerBackgroundView: UIView!
     
+    fileprivate var editWordPairAnimator = EnfocaDefaultAnimator()
     fileprivate let browseViewFromHomeAnimator = BrowseFromHomeAnimator()
     
     @IBOutlet weak var searchUnderlineView: UIView!
     
     private static var synchRequestDenied = false
+
+    //I'm proxying a constraint from my sub view
+    var segmentedControlLeftConstraint: NSLayoutConstraint {
+        get {
+            return overlayViewController.segmentedControlLeftConstraint
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +89,6 @@ class HomeViewController: UIViewController {
         
         controller.initialize()
         getAppDelegate().addListener(listener: controller)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,7 +97,7 @@ class HomeViewController: UIViewController {
         
         //I found that when creating a new Dictionary that the conch record might not return.  I think that it was a threading thing, but I'm putting in an explicit delay.
         delay(delayInSeconds: 1) {
-            if HomeViewController.synchRequestDenied == false {
+            if ModularHomeViewController.synchRequestDenied == false {
                 self.controller.isDataStoreSynchronized { (isInSynch: Bool) in
                     if !isInSynch {
                         self.presentDataOutOfSynchAlert()
@@ -98,17 +121,21 @@ class HomeViewController: UIViewController {
         }))
         
         dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-            HomeViewController.synchRequestDenied = true
+            ModularHomeViewController.synchRequestDenied = true
         }))
-
+        
         getAppDelegate().applicationDefaults.removeDictionary(services().getCurrentDictionary())
         present(dialog, animated: true, completion: nil)
     }
     
     private func initializeLookAndFeel(){
         
-        originalHeightConstraintOnGray = hightConstraintOnGray.constant
-        expandedHeightConstraintOnGray = view.frame.height + originalHeightConstraintOnGray - expandingTableViewHolder.frame.height
+        originalHeightConstraintConstant = overlayHeightConstraint.constant
+        retractedHeightConstraintConstant = view.frame.height + originalHeightConstraintConstant
+        
+        originalBottomConstraintConstant = overlayBottomConstraint.constant
+        retractedBottomConstraintConstant =  -(view.frame.height + originalBottomConstraintConstant)
+        
         
         searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidChange(_:)), for: [.editingChanged])
         
@@ -131,67 +158,15 @@ class HomeViewController: UIViewController {
     }
     
     private func initializeSubViews() {
-        browseByTagViewController = createTagSelectionViewController(inContainerView: browseByTagContainerView)
-        
-//        quizByTagViewControler = createTagSelectionViewController(inContainerView: quizByTagContainerView)
-        
         wordPairTableViewController = createWordPairTableViewController(inContainerView: searchResultsTableViewContainer)
         
         wordPairTableViewController.initialize(delegate: self, order: controller.wordOrder)
         
-        browseByTagViewController.animateCollectionViewCellCreation = true
-//        quizByTagViewControler.animateCollectionViewCellCreation = true
+        overlayViewController = createHomeOverlayViewController(inContainerView: overlayViewContainer)
         
+        overlayViewController.initialize(delegate: self)
     }
-    
-    private func isWordTableContracted() -> Bool{
-        return hightConstraintOnGray.constant == originalHeightConstraintOnGray
-    }
-    
-    private func isWordTableExpanded() -> Bool{
-        return hightConstraintOnGray.constant == expandedHeightConstraintOnGray
-    }
-    
-    private func showWordTable(){
-        guard isWordTableContracted() else {
-//            print("already expanded")
-            return
-        }
-        
-        controller.phrase = ""
-        controller.search()
-        hightConstraintOnGray.constant = expandedHeightConstraintOnGray
 
-        magifierCloseView.toggle()
-        UIView.animate(withDuration: 1.2, delay: 0.2, options: [.curveEaseInOut], animations: { 
-            self.view.layoutIfNeeded()
-        }) { ( _ ) in
-            //Nada
-        }
-        
-    }
-    
-    private func hideWordTable(){
-        wordPairTableViewController.offerCreation(withText: "")
-        
-        guard isWordTableExpanded() else {
-//            print("already contracted")
-            return
-        }
-        
-        dismissKeyboard()
-        
-        hightConstraintOnGray.constant = originalHeightConstraintOnGray
-        
-        magifierCloseView.toggle()
-        UIView.animate(withDuration: 0.6, delay: 0.2, options: [.curveEaseInOut], animations: {
-            self.view.layoutIfNeeded()
-        }) { ( _ ) in
-            self.wordPairTableViewController.clearWordPairs()
-        }
-
-    }
-    
     func searchOrCreateTextDidBegin(_ textField: UITextField) {
         showWordTable()
     }
@@ -200,12 +175,12 @@ class HomeViewController: UIViewController {
         let text = textField.text ?? ""
         
         wordPairTableViewController.offerCreation(withText: text)
-//        if text.isEmpty {
-//            hideWordTable()
-//        } else {
-//            controller.phrase = text
-//            showWordTable()
-//        }
+        //        if text.isEmpty {
+        //            hideWordTable()
+        //        } else {
+        //            controller.phrase = text
+        //            showWordTable()
+        //        }
         
         controller.phrase = text
         showWordTable()
@@ -214,6 +189,84 @@ class HomeViewController: UIViewController {
     
     func searchOrCreateTextEditingDidEnd(_ textField: UITextField) {
         dismissKeyboard()
+    }
+    
+    private func showWordTable(){
+        
+        if isRetracted() {
+            return
+        }
+        
+        controller.phrase = ""
+        controller.search()
+        magifierCloseView.toggle()
+        
+        CustomAnimations.animateExpandAndPullOut(target: self.backButton, delay: 0.0, duration: 0.3)
+        
+        toggle {
+        }
+        
+    }
+    
+    private func hideWordTable(){
+        wordPairTableViewController.offerCreation(withText: "")
+        
+        if isExpanded() {
+            return
+        }
+        
+        dismissKeyboard()
+        
+        magifierCloseView.toggle()
+        
+        toggle {
+            self.wordPairTableViewController.clearWordPairs()
+            CustomAnimations.animatePopIn(target: self.backButton, delay: 0.0, duration: 0.3)
+        }
+    }
+    
+    fileprivate func toggle(callback: @escaping ()->()) {
+        if isExpanded() {
+            overlayHeightConstraint.constant = retractedHeightConstraintConstant
+            overlayBottomConstraint.constant = retractedBottomConstraintConstant
+            UIView.animate(withDuration: 0.6, delay: 0.2, options: [.curveEaseInOut], animations: {
+                self.view.layoutIfNeeded()
+            }) { ( _ ) in
+                callback()
+            }
+        } else {
+            
+            
+            overlayHeightConstraint.constant = originalHeightConstraintConstant
+            overlayBottomConstraint.constant = originalBottomConstraintConstant
+            UIView.animate(withDuration: 1.2, delay: 0.2, options: [.curveEaseInOut], animations: {
+                self.view.layoutIfNeeded()
+            }) { ( _ ) in
+                callback()
+            }
+        }
+    }
+    
+    fileprivate func isExpanded()->Bool {
+        return overlayHeightConstraint.constant == originalHeightConstraintConstant
+//        return overlayViewContainer.frame == originalOverlayFrame
+    }
+    
+    fileprivate func isRetracted()->Bool {
+        return overlayHeightConstraint.constant == retractedHeightConstraintConstant
+//        return overlayViewContainer.frame == retractedOverlayFrame
+    }
+    
+
+    
+    @IBAction func tappedMagnifierCloseAction(_ sender: Any) {
+        //The way this works is anoying.  TODO: Change the MagnifierCloseView so that you can just pass it a boolean. Toggle is anoying
+        if !self.magifierCloseView.isSearchMode! {
+            self.searchOrCreateTextField.text = "" //Causes it to close. No!
+            hideWordTable()
+        } else {
+            showWordTable()
+        }
     }
     
     @IBAction func languageSegmentedControlChanged(_ sender: UISegmentedControl) {
@@ -238,25 +291,9 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @IBAction func tappedMagnifierCloseAction(_ sender: Any) {
-        //The way this works is anoying.  TODO: Change the MagnifierCloseView so that you can just pass it a boolean. Toggle is anoying
-        if !self.magifierCloseView.isSearchMode! {
-            self.searchOrCreateTextField.text = "" //Causes it to close. No!
-            hideWordTable()
-        } else {
-            showWordTable()
-        }
-    }
-    
     @IBAction func backButtonAction(_ sender: Any) {
         getAppDelegate().saveDefaults()
         performSegue(withIdentifier: "DictionarySelectionSeque", sender: nil)
-    }
- 
-    //The animator calls this method to let it know that the transition animation is complete
-    func transitionComplete() {
-        //I moved the call to reload data to viewWillAppear as i was working on 'conch'
-        //controller.reloadTags()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -292,26 +329,26 @@ class HomeViewController: UIViewController {
             guard let dictionary = sender as? UserDictionary else { fatalError() }
             to.initialize(dictionary: dictionary)
         }
-
+        
     }
 }
 
 //For animated transitions
-extension HomeViewController: UIViewControllerTransitioningDelegate {
+extension ModularHomeViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         print("Presenting \(presenting.description)")
         
-        if let _ = presented as? BrowseViewController, let _ = source as? HomeViewController {
+        if let _ = presented as? BrowseViewController, let _ = source as? ModularHomeViewController {
             browseViewFromHomeAnimator.presenting = true
             return browseViewFromHomeAnimator
         }
         
-        if let _ = presented as? EditWordPairViewController, let _ = source as? HomeViewController {
+        if let _ = presented as? EditWordPairViewController, let _ = source as? ModularHomeViewController {
             editWordPairAnimator.presenting = true
             return editWordPairAnimator
         }
         
-        if let _ = presented as? QuizOptionsViewController, let _ = source as? HomeViewController {
+        if let _ = presented as? QuizOptionsViewController, let _ = source as? ModularHomeViewController {
             browseViewFromHomeAnimator.presenting = true
             return browseViewFromHomeAnimator
         }
@@ -342,11 +379,14 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     }
 }
 
-extension HomeViewController: HomeControllerDelegate {
+
+extension ModularHomeViewController: HomeControllerDelegate {
     func onTagsLoaded(tags: [Tag]) {
         
-        browseByTagViewController.initialize(tags: tags, browseDelegate: self)
-//        quizByTagViewControler.initialize(tags: tags, quizDelegate: self)
+        overlayViewController.onTagsLoaded(tags: tags)
+        
+//        browseByTagViewController.initialize(tags: tags, browseDelegate: self)
+        //        quizByTagViewControler.initialize(tags: tags, quizDelegate: self)
     }
     
     func onSearchResults(words: [WordPair]) {
@@ -369,61 +409,26 @@ extension HomeViewController: HomeControllerDelegate {
     }
 }
 
-extension HomeViewController: BrowseTagSelectionDelegate {
-    func browseWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
-        print("Browse words tagged: \(tag.name)")
-        
-        browseViewFromHomeAnimator.sourceFrame = atRect
-        browseViewFromHomeAnimator.sourceCell = cell
-        
-        performSegue(withIdentifier: "BrowseViewControllerSegue", sender: tag)
-    }
-}
 
-extension HomeViewController: QuizTagSelectionDelegate {
-    func quizWordsWithTag(forTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
-        print("Quiz words tagged: \(tag.name)")
-        
-        controller.selectedQuizTag = tag
-        browseViewFromHomeAnimator.sourceFrame = atRect
-        browseViewFromHomeAnimator.sourceCell = cell
-        
-        
-        performSegue(withIdentifier: "QuizViewControllerSegue", sender: tag)
-        
-    }
-}
-
-extension HomeViewController: WordPairTableDelegate {
+extension ModularHomeViewController: WordPairTableDelegate {
     func onCreate(atRect: CGRect, cell: UITableViewCell) {
         
         controller.selectedWordPair = nil
-        
-//        editWordPairFromCellAnimator.sourceCell = cell
-        
         performSegue(withIdentifier: "EditWordPairControllerSegue", sender: nil)
     }
     
     func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
-        
-//        editWordPairFromCellAnimator.sourceCell = cell
-        
         controller.selectedWordPair = wordPair
         
         performSegue(withIdentifier: "EditWordPairControllerSegue", sender: wordPair)
     }
-    
-//    func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
-//        print("Selected \(wordPair.word)")
-//        print("at Rect \(atRect)")
-//    }
 }
 
-extension HomeViewController: EditWordPairViewControllerDelegate {
+extension ModularHomeViewController: EditWordPairViewControllerDelegate {
     func getWordPairOrder() -> WordPairOrder {
         return controller.wordOrder
     }
-
+    
     var sourceWordPair: WordPair {
         get {
             return controller.selectedWordPair!
@@ -440,13 +445,13 @@ extension HomeViewController: EditWordPairViewControllerDelegate {
     
 }
 
-extension HomeViewController: QuizViewControllerDelegate {
+extension ModularHomeViewController: QuizViewControllerDelegate {
     func tagSelectedForQuiz() -> Tag {
         return controller.selectedQuizTag!
     }
 }
 
-extension HomeViewController: EnfocaDefaultAnimatorTarget {
+extension ModularHomeViewController: EnfocaDefaultAnimatorTarget {
     func getRightNavView() -> UIView? {
         return nil
     }
@@ -463,4 +468,29 @@ extension HomeViewController: EnfocaDefaultAnimatorTarget {
         return searchResultsTableViewContainer
     }
 }
+
+extension ModularHomeViewController: HomeOverlayViewControllerDelegate {
+    func browseWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
+        print("Browse words tagged: \(tag.name)")
+
+        browseViewFromHomeAnimator.sourceFrame = atRect
+        browseViewFromHomeAnimator.sourceCell = cell
+
+        performSegue(withIdentifier: "BrowseViewControllerSegue", sender: tag)
+    }
+    
+    func quizWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
+        print("Quiz words tagged: \(tag.name)")
+        
+        controller.selectedQuizTag = tag
+        browseViewFromHomeAnimator.sourceFrame = atRect
+        browseViewFromHomeAnimator.sourceCell = cell
+        
+        
+        performSegue(withIdentifier: "QuizViewControllerSegue", sender: tag)
+        
+    }
+}
+
+
 

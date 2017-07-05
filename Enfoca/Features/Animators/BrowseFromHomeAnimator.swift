@@ -35,7 +35,7 @@ public class BrowseFromHomeAnimator: NSObject, UIViewControllerAnimatedTransitio
     private func performDismiss() {
         let containerView = storedContext.containerView
         
-        guard let toViewController = storedContext.viewController(forKey: .to) as? HomeViewController else {
+        guard let toViewController = storedContext.viewController(forKey: .to) as? EnfocaDefaultAnimatorTarget else {
             fatalError()
         }
         
