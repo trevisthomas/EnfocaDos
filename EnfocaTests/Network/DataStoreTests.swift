@@ -346,6 +346,50 @@ class DataStoreTests: XCTestCase {
         XCTAssertEqual(result.count, 2)
     }
     
+    func testSearchStartsWith_ShouldMatch() {
+        mockDataOne()
+        
+        sut.add(wordPair: WordPair(pairId: "--1--1", word: "nice phrase", definition: "pero en espanol"))
+        
+        var result = sut.searchWordsStartWith(phrase: "a", order: .wordDesc, withTags: nil)
+        
+        XCTAssertEqual(result.count, 2)
+        
+        result = sut.searchWordsStartWith(phrase: "A", order: .wordDesc, withTags: nil)
+        
+        XCTAssertEqual(result.count, 2)
+
+        result = sut.searchWordsStartWith(phrase: "phrase", order: .wordDesc, withTags: nil)
+        
+        XCTAssertEqual(result.count, 1)
+    }
+    
+    func testSearchExact_ShouldMatch() {
+        mockDataOne()
+        
+        sut.add(wordPair: WordPair(pairId: "--1--1", word: "nice phrase", definition: "pero en espanol"))
+        
+        var result = sut.searchExactMatch(phrase: "a", order: .wordDesc, withTags: nil)
+        
+        XCTAssertEqual(result.count, 0)
+        
+        result = sut.searchExactMatch(phrase: "A", order: .wordDesc, withTags: nil)
+        
+        XCTAssertEqual(result.count, 0)
+        
+        result = sut.searchExactMatch(phrase: "nice", order: .wordDesc, withTags: nil)
+        
+        XCTAssertEqual(result.count, 0)
+        
+        result = sut.searchExactMatch(phrase: "nice phrase", order: .wordDesc, withTags: nil)
+        
+        XCTAssertEqual(result.count, 1)
+        
+        result = sut.searchExactMatch(phrase: " nice phrase ", order: .wordDesc, withTags: nil)
+        
+        XCTAssertEqual(result.count, 1)
+    }
+    
     
     func testSearch_WordContains(){
         mockDataOne()
@@ -796,6 +840,17 @@ class DataStoreTests: XCTestCase {
         
         // NOTE!  The tag is updated in the tags list, but not on every word that contains the tag.  The other words still have the old tag.
         //XCTAssertEqual(wordPairs[1].tags.tagsToText(), "NewNoun")
+    }
+    
+    func testDataStoreCounts(){
+        mockDataOne()
+        
+        let dict = sut.getUserDictionary(refreshCounts: true)
+        
+        XCTAssertEqual(dict.countWordPairs, 3)
+        XCTAssertEqual(dict.countAssociations, 3)
+        XCTAssertEqual(dict.countTags, 3)
+        XCTAssertEqual(dict.countMeta, 3)
     }
 
 }

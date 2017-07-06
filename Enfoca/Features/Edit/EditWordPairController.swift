@@ -64,7 +64,9 @@ class EditWordPairController: Controller {
     
     func initialize(){
         
-        services.isDataStoreSynchronized { (isSynched: Bool) in
+        services.isDataStoreSynchronized { (isSynched: Bool?, error: String?) in
+            guard let isSynched = isSynched else { fatalError("Fatal error while attempting to check conch state.") }
+            
             if isSynched {
                 self.performInitialize()
             } else {

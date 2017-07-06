@@ -43,10 +43,16 @@ class OperationUpdateDictionary : BaseOperation {
                     fatalError() //?
                 }
             }
-            
+            //Note: Conch's dont live in dictionaries in the DB
             record.setValue(self.updatedDictionary.definitionTitle, forKey: "definitionTitle")
             record.setValue(self.updatedDictionary.termTitle, forKey: "termTitle")
             record.setValue(self.updatedDictionary.subject, forKey: "subject")
+            
+            record.setValue(self.updatedDictionary.countWordPairs, forKey: "countWordPairs")
+            record.setValue(self.updatedDictionary.countTags, forKey: "countTags")
+            record.setValue(self.updatedDictionary.countAssociations, forKey: "countAssociations")
+            record.setValue(self.updatedDictionary.countMeta, forKey: "countMeta")
+            
             if let _ = self.updatedDictionary.language  {
                 record.setValue(self.updatedDictionary.language, forKey: "language")
             }

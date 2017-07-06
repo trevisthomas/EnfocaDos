@@ -145,8 +145,6 @@
 		0F35B0511F02D1F6001AC511 /* DictionaryEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B04F1F02D1F6001AC511 /* DictionaryEditorViewController.swift */; };
 		0F35B0531F0315B4001AC511 /* DictionaryLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B0521F0315B4001AC511 /* DictionaryLoadingViewController.swift */; };
 		0F35B0541F0315B4001AC511 /* DictionaryLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B0521F0315B4001AC511 /* DictionaryLoadingViewController.swift */; };
-		0F45F3E41F094C9700D45594 /* ConchLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E31F094C9700D45594 /* ConchLocalStorage.swift */; };
-		0F45F3E51F094C9700D45594 /* ConchLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E31F094C9700D45594 /* ConchLocalStorage.swift */; };
 		0F45F3E71F09576A00D45594 /* OperationReloadWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E61F09576A00D45594 /* OperationReloadWordPair.swift */; };
 		0F45F3E81F09576A00D45594 /* OperationReloadWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E61F09576A00D45594 /* OperationReloadWordPair.swift */; };
 		0F45F3EA1F098DEF00D45594 /* OperationResetConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E91F098DEF00D45594 /* OperationResetConch.swift */; };
@@ -154,7 +152,6 @@
 		0F45F3EC1F0A9DE700D45594 /* OperationLoadOrCreateConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA551F09423800ACC0C3 /* OperationLoadOrCreateConch.swift */; };
 		0F45F3ED1F0A9DE700D45594 /* OperationResetConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E91F098DEF00D45594 /* OperationResetConch.swift */; };
 		0F45F3EE1F0A9DE700D45594 /* OperationReloadWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E61F09576A00D45594 /* OperationReloadWordPair.swift */; };
-		0F45F3EF1F0A9DE700D45594 /* ConchLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E31F094C9700D45594 /* ConchLocalStorage.swift */; };
 		0F911E0C1EE08E8300F21855 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E071EE08E8300F21855 /* TagCell.swift */; };
 		0F911E0E1EE08E8300F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
 		0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */; };
@@ -536,7 +533,6 @@
 		0F35B04C1F01BFA6001AC511 /* NewAppLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAppLaunchViewController.swift; path = DictionarySelection/NewAppLaunchViewController.swift; sourceTree = "<group>"; };
 		0F35B04F1F02D1F6001AC511 /* DictionaryEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryEditorViewController.swift; path = DictionarySelection/DictionaryEditorViewController.swift; sourceTree = "<group>"; };
 		0F35B0521F0315B4001AC511 /* DictionaryLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryLoadingViewController.swift; path = DictionarySelection/DictionaryLoadingViewController.swift; sourceTree = "<group>"; };
-		0F45F3E31F094C9700D45594 /* ConchLocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConchLocalStorage.swift; sourceTree = "<group>"; };
 		0F45F3E61F09576A00D45594 /* OperationReloadWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationReloadWordPair.swift; sourceTree = "<group>"; };
 		0F45F3E91F098DEF00D45594 /* OperationResetConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResetConch.swift; sourceTree = "<group>"; };
 		0F911E071EE08E8300F21855 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
@@ -1032,7 +1028,6 @@
 				0FA4A4EC1EC8E94700F31F9A /* LocalCloudKitWebService.swift */,
 				0FA4A4ED1EC8E94700F31F9A /* ProgressObserver.swift */,
 				0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */,
-				0F45F3E31F094C9700D45594 /* ConchLocalStorage.swift */,
 				0FA4A4EE1EC8E94700F31F9A /* WebService.swift */,
 			);
 			path = Network;
@@ -1630,7 +1625,6 @@
 				0F911E691EE75D4600F21855 /* FetchUserRecordId.swift in Sources */,
 				0F911E6A1EE75D4600F21855 /* TagFilterViewModelDelegate.swift in Sources */,
 				0F911E6B1EE75D4600F21855 /* TagAssociation.swift in Sources */,
-				0F45F3E51F094C9700D45594 /* ConchLocalStorage.swift in Sources */,
 				0F911E6C1EE75D4600F21855 /* OperationCreateTag.swift in Sources */,
 				0F911E6D1EE75D4600F21855 /* TagSelectionViewController.swift in Sources */,
 				0F911E6E1EE75D4600F21855 /* OperationFetchTagAssociations.swift in Sources */,
@@ -1651,7 +1645,6 @@
 				0F45F3EC1F0A9DE700D45594 /* OperationLoadOrCreateConch.swift in Sources */,
 				0F45F3ED1F0A9DE700D45594 /* OperationResetConch.swift in Sources */,
 				0F45F3EE1F0A9DE700D45594 /* OperationReloadWordPair.swift in Sources */,
-				0F45F3EF1F0A9DE700D45594 /* ConchLocalStorage.swift in Sources */,
 				0F1AAA421F08044B00ACC0C3 /* ActivityIndicatable.swift in Sources */,
 				0F1AAA431F08044B00ACC0C3 /* EditorViewController.swift in Sources */,
 				0F1AAA441F08044B00ACC0C3 /* LookupTextViewController.swift in Sources */,
@@ -1790,7 +1783,6 @@
 				0F011EAE1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */,
 				0F011ED11EF0490E00939B75 /* MatchingQuizTagCell.swift in Sources */,
 				0F028DE11F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */,
-				0F45F3E41F094C9700D45594 /* ConchLocalStorage.swift in Sources */,
 				0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,

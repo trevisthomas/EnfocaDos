@@ -14,6 +14,7 @@ class OperationCreateDictionary : BaseOperation {
     private let dictionarySource : UserDictionary
     private let db: CKDatabase
     private let ckUserRecordId: CKRecordID
+    private var enfocaCkRef: CKReference!
     
     
     init (dictionarySource: UserDictionary,  db: CKDatabase, errorDelegate : ErrorDelegate) {
@@ -36,14 +37,20 @@ class OperationCreateDictionary : BaseOperation {
         
         let record : CKRecord = CKRecord(recordType: "Dictionary")
         
-        let enfocaRef = CKReference(recordID: record.recordID, action: .none)
+        enfocaCkRef = CKReference(recordID: record.recordID, action: .none)
         
         record.setValue(dictionarySource.definitionTitle, forKey: "definitionTitle")
         record.setValue(dictionarySource.termTitle, forKey: "termTitle")
         record.setValue(dictionarySource.subject, forKey: "subject")
+        
         record.setValue(userReference, forKey: "userRef")
-        record.setValue(0, forKey: "count")
-        record.setValue(enfocaRef, forKey: "enfocaRef")
+        
+        record.setValue(0, forKey: "countWordPairs")
+        record.setValue(0, forKey: "countTags")
+        record.setValue(0, forKey: "countAssociations")
+        record.setValue(0, forKey: "countMeta")
+        
+        record.setValue(enfocaCkRef, forKey: "enfocaRef")
         
         if let _ = dictionarySource.language  {
             record.setValue(dictionarySource.language, forKey: "language")
@@ -60,7 +67,36 @@ class OperationCreateDictionary : BaseOperation {
             }
             
             self.dictionary = CloudKitConverters.toDictionary(from: newRecord)
+            
             self.done()
+//            self.createConch(callback: { (conch: String) in
+//                self.dictionary?.conch = conch
+//                self.done()
+//            })
         }
     }
+    
+// I backed off on this idea
+//    func createConch(callback: @escaping (String)->()) {
+//        let newRecord = CKRecord(recordType: "Synch")
+//        
+//        let uuid = UUID().uuidString
+//        newRecord.setValue(enfocaCkRef, forKey: "enfocaRef")
+//        newRecord.setValue(uuid, forKey: "conch")
+//        
+//        
+//        self.db.save(newRecord) { (newRecord: CKRecord?, error: Error?) in
+//            if let error = error {
+//                self.handleError(error)
+//            }
+//            
+//            guard let newRecord = newRecord else {
+//                self.handleError(message: "conch was nil")
+//                return
+//            }
+//            
+//            let conch = CloudKitConverters.toConch(record: newRecord)
+//            callback(conch)
+//        }
+//    }
 }

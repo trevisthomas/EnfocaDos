@@ -80,7 +80,20 @@ class HomeController: Controller {
     }
     
     func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
-        services.isDataStoreSynchronized(callback: callback)
+        
+        services.isDataStoreSynchronized { (inSynch: Bool?, error: String?) in
+            guard let inSynch = inSynch else {
+                //retry
+                delay(delayInSeconds: 5, callback: { 
+                    self.isDataStoreSynchronized(callback: callback)
+                })
+                return
+            }
+            
+            callback(inSynch)
+            
+        }
+        
     }
     
     func getCurrentDictionary() -> UserDictionary {

@@ -53,7 +53,7 @@ class OperationLoadOrCreateConch : BaseOperation {
             } else {
                 if self.allowCreation == false {
                     self.conch = nil
-                    self.handleError(message: "Synchronization conch already exists.")
+                    self.handleError(message: "Synchronization conch does not exist, but allowCreation is set to false.")
                     self.done()
                 }
                 

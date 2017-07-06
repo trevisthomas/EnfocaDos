@@ -1,4 +1,4 @@
-ar//
+//
 //  DataStore.swift
 //  Enfoca
 //
@@ -48,7 +48,10 @@ class DataStore {
         return userDictionary.definitionTitle
     }
     
-    func getUserDictionary() -> UserDictionary {
+    func getUserDictionary(refreshCounts: Bool = false) -> UserDictionary {
+        if refreshCounts {
+            userDictionary.applyCountUpdate(countWordPairs: wordPairDictionary.count, countAssociations: tagAssociations.count, countTags: tagDictionary.count, countMeta: metaDataDictionary.count)
+        }
         return userDictionary
     }
     
@@ -346,8 +349,21 @@ class DataStore {
                 return wordPairDictionary.values.filter(pairFilter)
             }
         }
-
+    }
+    
+    func searchWordsStartWith(phrase: String, order wordPairOrder: WordPairOrder, withTags tagFilter : [Tag]? = nil) -> [WordPair] {
         
+        let regex = "\\b\(phrase)"
+        
+        return search(wordPairMatching : regex, order: wordPairOrder, withTags: tagFilter)
+        
+    }
+    
+    func searchExactMatch(phrase: String, order wordPairOrder: WordPairOrder, withTags tagFilter : [Tag]? = nil) -> [WordPair] {
+        
+        let regex = "^\(phrase.trim())$"
+        
+        return search(wordPairMatching : regex, order: wordPairOrder, withTags: tagFilter)
     }
     
     func search(forWordsLike : String, withTags tags : [Tag]? = nil) -> [WordPair]{

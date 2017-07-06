@@ -61,9 +61,11 @@ protocol WebService {
     
     func reloadWordPair(sourceWordPair: WordPair, callback: @escaping ((WordPair, MetaData?)?, EnfocaError?)->())
     
-    func isDataStoreSynchronized(callback: @escaping (Bool)->())
+    func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->())
     
     func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->())
     
     func getCurrentDictionary() -> UserDictionary
+    
+    func updateDictionaryCounts(callback : @escaping(UserDictionary?, EnfocaError?)->())
 }

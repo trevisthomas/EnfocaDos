@@ -92,7 +92,32 @@ class CloudKitConverters{
         
         guard let language = record.value(forKey: "language") as? String else { fatalError() }
         
-        let dict = UserDictionary(dictionaryId: record.recordID.recordName, userRef: userRef.recordID.recordName, enfocaRef: enfocaCkRef.recordID.recordName, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
+        var countWordPairs: Int = 0
+        var countAssociations: Int = 0
+        var countTags: Int = 0
+        var countMeta: Int = 0
+
+        if let count = record.value(forKey: "countWordPairs") as? Int {
+            countWordPairs = count
+        }
+        
+        if let count = record.value(forKey: "countAssociations") as? Int {
+            countAssociations = count
+        }
+        
+        if let count = record.value(forKey: "countTags") as? Int {
+            countTags = count
+        }
+        
+        if let count = record.value(forKey: "countMeta") as? Int {
+            countMeta = count
+        }
+        
+        let dict = UserDictionary(dictionaryId: record.recordID.recordName, userRef: userRef.recordID.recordName, enfocaRef: enfocaCkRef.recordID.recordName, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language, conch: nil, countWordPairs: countWordPairs, countTags: countTags, countAssociations: countAssociations, countMeta: countMeta)
+        
+        
+        
+
         
         return dict 
     }

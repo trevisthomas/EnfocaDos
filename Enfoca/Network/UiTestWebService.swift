@@ -270,7 +270,7 @@ class UiTestWebService : WebService {
         fatalError()
     }
     
-    func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
+    func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->()) {
         fatalError()
     }
     
@@ -283,6 +283,10 @@ class UiTestWebService : WebService {
     }
     
     func getCurrentDictionary() -> UserDictionary {
+        fatalError()
+    }
+    
+    func updateDictionaryCounts(callback : @escaping(UserDictionary?, EnfocaError?)->()) {
         fatalError()
     }
 }

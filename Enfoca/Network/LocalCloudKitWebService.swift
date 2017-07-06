@@ -118,15 +118,15 @@ class LocalCloudKitWebService : WebService {
                     callback(false, error)
                     return
                 }
-                
+            
                 guard let tuple = tuple else { fatalError() }
                 
                 let conch = tuple.0
-                //Turns out that i dont care if it's new.  I'm doing a fresh load, that means i'm in synch.
+//                Turns out that i dont care if it's new.  I'm doing a fresh load, that means i'm in synch.
 //                let isNew = tuple.1
                 
                 ds.getUserDictionary().conch = conch
-                
+            
                 Perform.initializeDataStore(dataStore: ds, enfocaRef: tempRef, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
                     invokeLater {
                         if let error = error {
@@ -181,6 +181,8 @@ class LocalCloudKitWebService : WebService {
             
             self.dataStore.add(wordPair: wordPair)
             
+            self.updateDictionaryCounts()
+            
             //Create any tag associations for this new word.
             for tag in tags {
                 Perform.createTagAssociation(tagId: tag.tagId, wordPairId: wordPair.pairId, enfocaRef: self.enfocaRef, db: self.db, callback: { (tagAss:TagAssociation?, error:String?) in
@@ -207,6 +209,25 @@ class LocalCloudKitWebService : WebService {
         oldDictionary.applyUpdate(termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
         
         Perform.updateDictionary(db: db, dictionary: oldDictionary) { (dictionary: UserDictionary?, error: String?) in
+            
+            if let error = error {
+                callback(nil, error)
+                return
+            }
+            
+            guard let _ = dictionary else { fatalError() }
+            
+            callback(dictionary, nil)
+            
+        }
+    }
+    
+    func updateDictionaryCounts(callback :
+        @escaping(UserDictionary?, EnfocaError?)->() = { _,_ in }) {
+        
+        let currentDict = dataStore.getUserDictionary(refreshCounts: true)
+        
+        Perform.updateDictionary(db: db, dictionary: currentDict) { (dictionary: UserDictionary?, error: String?) in
             
             if let error = error {
                 callback(nil, error)
@@ -255,6 +276,8 @@ class LocalCloudKitWebService : WebService {
                 guard let assocation = tagAss else { fatalError() }
                 self.dataStore.add(tagAssociation: assocation)
                 notifyOnOpsCompleted()
+                
+                self.updateDictionaryCounts()
             })
         }
         
@@ -282,6 +305,9 @@ class LocalCloudKitWebService : WebService {
             guard let tag = tag else { fatalError() }
             
             self.dataStore.add(tag: tag)
+            
+            self.updateDictionaryCounts()
+            
             callback(tag, nil)
         }
         
@@ -310,6 +336,8 @@ class LocalCloudKitWebService : WebService {
         showNetworkActivityIndicator = true
         resetConchIfOutOfSynch()
         let associations = dataStore.remove(wordPair: wordPair)
+        
+        self.updateDictionaryCounts()
         
         //The numer of oprations that will be executed
         var opsRemaining = 1 + associations.count
@@ -365,6 +393,8 @@ class LocalCloudKitWebService : WebService {
         
         resetConchIfOutOfSynch()
         let associations = dataStore.remove(tag: tag)
+        
+        self.updateDictionaryCounts()
         
         //The numer of oprations that will be executed
         var opsRemaining = 1 + associations.count
@@ -441,6 +471,8 @@ class LocalCloudKitWebService : WebService {
                 
 //                forWordPair.metaData = metaData
                 self.dataStore.add(metaData: metaData)
+                
+                self.updateDictionaryCounts()
                 callback(metaData, nil)
             })
         }
@@ -601,7 +633,10 @@ class LocalCloudKitWebService : WebService {
     }
     
     private func resetConchIfOutOfSynch() {
-        isDataStoreSynchronized { (inSynch: Bool) in
+        isDataStoreSynchronized { (inSynch: Bool?, error: String?) in
+        
+            guard let inSynch = inSynch else { fatalError("Conch was nil.  Fatal error.") }
+            
             Perform.resetConch(enfocaRef: self.enfocaRef, db: self.db, callback: { (newConch: String?, error: EnfocaError?) in
                 
                 if let error = error {
@@ -624,11 +659,11 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
-    func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
+    func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->()) {
         
         if !isDataStoreSynchronized {
             //If the DS it out of sync, there is no point in checking the DB.  You need to reload.
-            callback(false)
+            callback(false, nil)
             return
         }
         
@@ -636,14 +671,24 @@ class LocalCloudKitWebService : WebService {
         
         Perform.loadOrCreateConch(enfocaRef: enfocaRef, db: db, allowCreation: false) { (tuple : (String, Bool)?, error: EnfocaError?) in
             
-            guard let tuple = tuple else { fatalError() }
-//            let localConch = ConchLocalStorage.load()
+            if let error = error {
+                callback(nil, error)
+                return
+            }
+            
+            guard let tuple = tuple else {
+                invokeLater {
+                    callback(nil, "Conch was nil")
+                }
+                return
+            }
+
             let localConch = self.dataStore.getUserDictionary().conch
             let serverConch = tuple.0
             
             self.isDataStoreSynchronized = localConch == serverConch
             invokeLater {
-                callback(self.isDataStoreSynchronized)
+                callback(self.isDataStoreSynchronized, nil)
             }
         }
     }
@@ -651,13 +696,4 @@ class LocalCloudKitWebService : WebService {
     func getCurrentDictionary() -> UserDictionary {
         return dataStore.getUserDictionary()
     }
-    
-//    func fetchChanges() {
-////        db.fetchAllSubscriptions(completionHandler: <#T##([CKSubscription]?, Error?) -> Void#>)
-//        var sub = CKSubscription
-//        CKFetchDatabaseChangesOperation(previousServerChangeToken: <#T##CKServerChangeToken?#>)
-//        
-//        CKFetchRecordZoneChangesOperation(
-//    }
-    
 }
