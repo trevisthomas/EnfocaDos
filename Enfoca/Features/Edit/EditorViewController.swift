@@ -24,7 +24,8 @@ protocol EditorViewControllerDelegate {
     func performDelete()
     func performTagEdit()
     
-    func isCreateMode() ->Bool 
+    func isCreateMode() ->Bool
+    func applyTag(_ tag: Tag)
 }
 
 class EditorViewController: UIViewController {
@@ -49,12 +50,20 @@ class EditorViewController: UIViewController {
     
     @IBOutlet weak var statisticsWrapperView: UIView!
     
+    @IBOutlet weak var mostRecientlyUsedButton: UIButton!
+    
     private var delegate : EditorViewControllerDelegate!
+    private var mostRecientTag: Tag!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeLookAndFeel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        wordTextField.initialize()
+        definitionTextField.initialize()
     }
     
     func initialize(delegate: EditorViewControllerDelegate) {
@@ -71,7 +80,13 @@ class EditorViewController: UIViewController {
         
         definitionTextField.updatePlacelderText(placeholder: getDefinitionTitle())
         
-        
+        if let tag = HomeOverlayViewController.mostRecentTag {
+            mostRecientTag = tag
+            mostRecientlyUsedButton.setTitle("Last: \(tag.name)", for: .normal)
+            mostRecientlyUsedButton.isHidden = false
+        } else {
+            mostRecientlyUsedButton.isHidden = true
+        }
     }
     
     func definitionTextDidChange(_ textField: UITextField) {
@@ -111,6 +126,10 @@ class EditorViewController: UIViewController {
     
     @IBAction func lookupDefinitionAction(_ sender: Any) {
         performSegue(withIdentifier: "LookupDefinitionSegue", sender: CardSide.definition)
+    }
+    
+    @IBAction func applyMruTag(_ sender: Any) {
+        delegate.applyTag(mostRecientTag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

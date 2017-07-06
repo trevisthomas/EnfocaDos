@@ -63,7 +63,7 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
         label.textColor = placeHolderColor
         label.alpha = placeHolderAlpha
         self.addSubview(label)
-        placeholder = nil
+//        placeholder = nil
         
         self.layer.borderWidth = 0.5
         self.layer.borderColor = borderDefaultColor.cgColor
@@ -115,7 +115,6 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
 //    
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("End")
         borderColorToDefault()
         
         guard let t = self.text else {
@@ -132,7 +131,6 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("Begin")
         showAsLabel()
         highligtBorderColor()
         
@@ -140,7 +138,6 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
     
     
     func showAsPlaceholder() {
-        print("as showAsPlaceholder")
         guard inLabelMode == true else {
             return //In progress, or already in label
         }
@@ -182,7 +179,7 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
     }
     
     func showAsLabel() {
-        print("as label")
+        placeholder = nil
         guard inLabelMode == false else {
             return //In progress, or already in label
         }

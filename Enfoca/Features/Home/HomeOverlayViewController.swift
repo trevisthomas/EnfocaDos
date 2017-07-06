@@ -21,9 +21,10 @@ class HomeOverlayViewController: UIViewController {
     
     fileprivate var delegate : HomeOverlayViewControllerDelegate!
     
+    static var mostRecentTag : Tag?
+    
     
     fileprivate var tagViewController: TagSelectionViewController!
-//    fileprivate var homeController: HomeController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,27 +60,16 @@ extension HomeOverlayViewController {
     func onTagsLoaded(tags: [Tag]) {
         tagViewController.initialize(tags: tags, browseDelegate: self)
     }
-    
-    
-        
-    
 }
 
 extension HomeOverlayViewController: BrowseTagSelectionDelegate {
     func browseWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
-//        print("Browse words tagged: \(tag.name)")
         
-        
+        HomeOverlayViewController.mostRecentTag = tag
         if browseQuizSegmentedControl.selectedSegmentIndex == 0 {
             delegate.quizWordsWithTag(withTag: tag, atRect: atRect, cell: cell)
         } else {
             delegate.browseWordsWithTag(withTag: tag, atRect: atRect, cell: cell)
         }
-        
-
-//        browseViewFromHomeAnimator.sourceFrame = atRect
-//        browseViewFromHomeAnimator.sourceCell = cell
-//
-//        performSegue(withIdentifier: "BrowseViewControllerSegue", sender: tag)
     }
 }

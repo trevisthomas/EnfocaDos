@@ -148,6 +148,7 @@ extension EditWordPairViewController: EditWordPairControllerDelegate {
     //Deprecate?
     func onUpdate() {
         updateFields()
+        refreshButtonState()
     }
     
     func dismissViewController() {
@@ -242,6 +243,10 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
 
     func isCreateMode() -> Bool {
         return delegate.isCreateMode()
+    }
+    
+    func applyTag(_ tag: Tag) {
+        controller.applyTag(tag)
     }
 }
 

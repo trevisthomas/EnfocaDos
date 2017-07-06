@@ -276,7 +276,8 @@ class EditWordPairController: Controller {
     
     //Duplicate terms are not allowed. 
     private func fetchExatcMatches( callback:@escaping([WordPair])->() ) {
-        services.fetchWordPairs(tagFilter: [], wordPairOrder: .wordDesc, pattern: word.trim()) { (wordPairs: [WordPair]?, error: EnfocaError?) in
+        let pattern = "^\(word.trim())$"
+        services.fetchWordPairs(tagFilter: [], wordPairOrder: .wordDesc, pattern: pattern) { (wordPairs: [WordPair]?, error: EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Create failed", message: error)
                 return
@@ -315,6 +316,14 @@ class EditWordPairController: Controller {
         guard let metaData = originalMetaData else { return "none"}
         
         return "\(metaData.timedViewCount)"
+    }
+    
+    func applyTag(_ tag: Tag) {
+        if !selectedTags.contains(tag) {
+            selectedTags.append(tag)
+            delegate.onUpdate()
+        }
+        
     }
     
     func toDateString(_ date: Date) -> String{

@@ -316,6 +316,13 @@
                                     <action selector="toggleQuizStatistics:" destination="XwP-Ag-Ici" eventType="touchUpInside" id="qK9-4X-sc8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnq-4v-kAP">
+                                <rect key="frame" x="155.5" y="212" width="63" height="30"/>
+                                <state key="normal" title="MRU Tag"/>
+                                <connections>
+                                    <action selector="applyMruTag:" destination="XwP-Ag-Ici" eventType="touchUpInside" id="PxP-Ll-9C2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -327,8 +334,10 @@
                             <constraint firstItem="X8E-hv-37X" firstAttribute="top" secondItem="dw0-yd-CLX" secondAttribute="bottom" constant="4" id="DNJ-a0-sQH"/>
                             <constraint firstItem="2qF-GU-hgX" firstAttribute="top" secondItem="B5O-zF-f2f" secondAttribute="bottom" constant="30" id="FV3-I6-r2C"/>
                             <constraint firstAttribute="trailing" secondItem="orA-H3-Ad0" secondAttribute="trailing" constant="8" id="HIO-qC-iFk"/>
+                            <constraint firstItem="Dnq-4v-kAP" firstAttribute="centerX" secondItem="7MK-xE-4zg" secondAttribute="centerX" id="Tgw-a9-VnY"/>
                             <constraint firstItem="orA-H3-Ad0" firstAttribute="centerY" secondItem="X8E-hv-37X" secondAttribute="centerY" id="X6b-oE-K2s"/>
                             <constraint firstItem="MHW-fA-vlO" firstAttribute="leading" secondItem="7MK-xE-4zg" secondAttribute="leading" constant="8" id="ZAo-Hm-hK4"/>
+                            <constraint firstItem="Dnq-4v-kAP" firstAttribute="top" secondItem="X8E-hv-37X" secondAttribute="bottom" constant="13" id="Zlm-uA-Pkc"/>
                             <constraint firstItem="Bcd-g3-b76" firstAttribute="leading" secondItem="2qF-GU-hgX" secondAttribute="trailing" constant="8" id="dxy-ny-k08"/>
                             <constraint firstItem="Bcd-g3-b76" firstAttribute="centerY" secondItem="2qF-GU-hgX" secondAttribute="centerY" id="ePn-tG-W6u"/>
                             <constraint firstItem="ilH-Kn-NcC" firstAttribute="centerX" secondItem="7MK-xE-4zg" secondAttribute="centerX" constant="-90" id="fRp-6w-NdI"/>
@@ -367,6 +376,7 @@
                         <outlet property="deleteButton" destination="PjM-aa-NkI" id="Jkr-2f-xNa"/>
                         <outlet property="lookupDefinitionButton" destination="orA-H3-Ad0" id="eut-di-lXJ"/>
                         <outlet property="lookupWordButton" destination="Bcd-g3-b76" id="Ow0-Ic-TCo"/>
+                        <outlet property="mostRecientlyUsedButton" destination="Dnq-4v-kAP" id="Au4-Xu-xf0"/>
                         <outlet property="saveButton" destination="ilH-Kn-NcC" id="GK3-8H-pur"/>
                         <outlet property="selectedTagsLabel" destination="MHW-fA-vlO" id="cZA-Fm-q1N"/>
                         <outlet property="showQuizStatsButton" destination="7LZ-Vg-7uY" id="YA1-iH-wvt"/>

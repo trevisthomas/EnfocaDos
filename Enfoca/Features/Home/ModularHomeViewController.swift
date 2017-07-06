@@ -234,12 +234,10 @@ class ModularHomeViewController: UIViewController {
     
     fileprivate func isExpanded()->Bool {
         return overlayHeightConstraint.constant == originalHeightConstraintConstant
-//        return overlayViewContainer.frame == originalOverlayFrame
     }
     
     fileprivate func isRetracted()->Bool {
         return overlayHeightConstraint.constant == retractedHeightConstraintConstant
-//        return overlayViewContainer.frame == retractedOverlayFrame
     }
     
 
@@ -367,11 +365,7 @@ extension ModularHomeViewController: UIViewControllerTransitioningDelegate {
 
 extension ModularHomeViewController: HomeControllerDelegate {
     func onTagsLoaded(tags: [Tag]) {
-        
         overlayViewController.onTagsLoaded(tags: tags)
-        
-//        browseByTagViewController.initialize(tags: tags, browseDelegate: self)
-        //        quizByTagViewControler.initialize(tags: tags, quizDelegate: self)
     }
     
     func onSearchResults(words: [WordPair]) {
