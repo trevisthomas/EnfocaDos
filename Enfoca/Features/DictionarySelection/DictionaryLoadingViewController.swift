@@ -49,30 +49,44 @@ class DictionaryLoadingViewController: UIViewController {
         if let dictionary = dictionary {
             if let json = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) {
                 
-                //conch check
-                let oldDict = DataStore.extractDictionary(fromJson: json)
-                
-                getAppDelegate().webService.isDataStoreSynchronized(dictionary: oldDict, callback: { (isSynched:Bool?, error: String?) in
-                    
-                    if isSynched ?? false {
-                        self.dataStoreJson = json
-                    } else {
-                        self.dataStoreJson = nil
-                    }
-                    self.prepareDataStore()
-                })
+                conchPreCheckPrepareDataStore(json: json)
+//                //conch check
+//                let oldDict = DataStore.extractDictionary(fromJson: json)
+//                
+//                getAppDelegate().webService.isDataStoreSynchronized(dictionary: oldDict, callback: { (isSynched:Bool?, error: String?) in
+//                    
+//                    if isSynched ?? false {
+//                        self.dataStoreJson = json
+//                    } else {
+//                        self.dataStoreJson = nil
+//                    }
+//                    self.prepareDataStore()
+//                })
             } else {
                 // user selected a dictionary that wasnt in their local disk cache
                 self.prepareDataStore()
             }
         } else {
             // no dictionary was selected by the user, we're doing a json auto init
-            guard let _ = dataStoreJson else { fatalError() }
-            self.prepareDataStore()
+            guard let json = dataStoreJson else { fatalError() }
+            conchPreCheckPrepareDataStore(json: json)
         }
+    }
+    
+    private func conchPreCheckPrepareDataStore(json: String) {
+        let oldDict = DataStore.extractDictionary(fromJson: json)
         
-        
-        
+        getAppDelegate().webService.isDataStoreSynchronized(dictionary: oldDict, callback: { (isSynched:Bool?, error: String?) in
+            
+            if isSynched ?? false {
+                self.dataStoreJson = json
+            } else {
+                self.dataStoreJson = nil
+                self.dictionary = oldDict
+            }
+            self.prepareDataStore()
+        })
+
     }
     
     private func prepareDataStore(){
