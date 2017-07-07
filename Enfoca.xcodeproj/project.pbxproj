@@ -1179,8 +1179,8 @@
 		0FA4A5541EC8F4F400F31F9A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0F0BAFC01F0D778A005251AE /* HomeController.swift */,
 				0FA4A5551EC8F51B00F31F9A /* Home.storyboard */,
+				0F0BAFC01F0D778A005251AE /* HomeController.swift */,
 				0F0BAFBD1F0CD612005251AE /* HomeOverlayViewController.swift */,
 				0F0BAFBA1F0CD124005251AE /* ModularHomeViewController.swift */,
 			);
