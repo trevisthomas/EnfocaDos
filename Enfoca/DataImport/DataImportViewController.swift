@@ -32,9 +32,11 @@ class DataImportViewController: UIViewController {
 //        enfocaIdTextField.text = "38A06181-422E-4EE7-BB20-84B8C4D0D6F1"
 //        enfocaIdTextField.text = "1F88677A-7A19-4F58-BAA4-A3F08FF6185D"
         
-        enfocaIdTextField.text = "601FE89B-5976-41A2-A91D-2F3F5CF1E19A"
+//        enfocaIdTextField.text = "601FE89B-5976-41A2-A91D-2F3F5CF1E19A"
         
 //        enfocaIdTextField.text = "525C904F-FE2C-4ED4-8048-B17D63CFF7BB" -- GOT IT!
+        
+        enfocaIdTextField.text = "68599FF0-185A-4424-BF81-71CE6A81381E" //Planend final prod import of my data and scores as trevisthomas@gmail.com
         textView.text = nil
     }
 

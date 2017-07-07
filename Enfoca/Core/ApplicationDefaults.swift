@@ -14,7 +14,8 @@ protocol ApplicationDefaults {
     var fetchWordPairPageSize : Int {get}
     func save(dictionary: UserDictionary, includingDataStore json: String?)
     func load() -> String?
-    func loadDataStore(forDictionaryId dictionaryId: String) -> String? 
+    func loadDataStore(forDictionaryId dictionaryId: String) -> String?
+    
     func clearUserDefauts()
     func removeDictionary(_ dictionary: UserDictionary)
     
@@ -109,8 +110,13 @@ class LocalApplicationDefaults : ApplicationDefaults {
         
         let defaults = UserDefaults.standard
         let json = defaults.value(forKey: dictionaryId) as? String
-        defaults.removeObject(forKey: dictionaryId) //Delete the local cache, it is resaved after successful parse
         return json
+    }
+    
+    func deleteDataStoreFromCache(forDictionaryId dictionaryId: String) {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: dictionaryId)
+        
     }
     
 }

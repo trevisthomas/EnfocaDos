@@ -51,12 +51,16 @@ class NewAppLaunchViewController: UIViewController {
             
             guard let dictionaryList: [UserDictionary] = dictionaryList else { fatalError() }
             
-            
-            if let json = getAppDelegate().applicationDefaults.load(), self.autoload {
-                self.performSegue(withIdentifier: "LoadDictionarySegue", sender: json)
+            if self.autoload {
+                if let json = getAppDelegate().applicationDefaults.load() {
+                    self.performSegue(withIdentifier: "LoadDictionarySegue", sender: json)
+                } else {
+                    self.presentCreateOrLoadView(dictionaryList: dictionaryList)
+                }
             } else {
                 self.presentCreateOrLoadView(dictionaryList: dictionaryList)
             }
+            
         }
     }
     

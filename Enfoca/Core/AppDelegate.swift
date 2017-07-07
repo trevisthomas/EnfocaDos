@@ -31,12 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.statusBarStyle = .lightContent
         
-        UNUserNotificationCenter.current().requestAuthorization(options:
-            [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
-                // Handle Error
-                
-//                fatalError() //For the moment.
-        })
+//        UNUserNotificationCenter.current().requestAuthorization(options:
+//            [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
+//                // Handle Error
+//                
+////                fatalError() //For the moment.
+//        })
         
         application.registerForRemoteNotifications()
         return true

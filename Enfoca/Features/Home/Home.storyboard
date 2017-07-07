@@ -67,9 +67,9 @@
                                             <constraint firstAttribute="height" constant="50" id="xPR-KL-gVq"/>
                                         </constraints>
                                     </view>
-                                    <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntg-4K-50P">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntg-4K-50P">
                                         <rect key="frame" x="6" y="62" width="363" height="54"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.34599548278273473" green="0.36561761401766857" blue="0.38917676445578231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="Xf3-Dj-lXF"/>
                                         </constraints>
@@ -111,7 +111,7 @@
                                 </connections>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or Create" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBS-ce-c80">
-                                <rect key="frame" x="8" y="65" width="308" height="50"/>
+                                <rect key="frame" x="10" y="65" width="306" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -161,7 +161,7 @@
                             <constraint firstItem="njc-U6-Dtt" firstAttribute="top" secondItem="ZpS-NT-za4" secondAttribute="bottom" id="YY2-4f-LlB"/>
                             <constraint firstAttribute="trailing" secondItem="6Ls-bg-rgX" secondAttribute="trailing" constant="8" id="Zc1-3g-bGo"/>
                             <constraint firstItem="aOa-mO-l14" firstAttribute="leading" secondItem="tWQ-4z-oNf" secondAttribute="leading" id="ex7-PN-zIP"/>
-                            <constraint firstItem="JBS-ce-c80" firstAttribute="leading" secondItem="tWQ-4z-oNf" secondAttribute="leading" constant="8" id="ffE-6i-sWh"/>
+                            <constraint firstItem="JBS-ce-c80" firstAttribute="leading" secondItem="tWQ-4z-oNf" secondAttribute="leading" constant="10" id="ffE-6i-sWh"/>
                             <constraint firstAttribute="trailing" secondItem="xaL-FF-bnM" secondAttribute="trailing" id="hEy-kQ-kPg"/>
                             <constraint firstItem="ntg-4K-50P" firstAttribute="bottom" secondItem="JBS-ce-c80" secondAttribute="bottom" constant="1" id="j5k-af-b7f"/>
                             <constraint firstItem="njc-U6-Dtt" firstAttribute="top" secondItem="xaL-FF-bnM" secondAttribute="bottom" id="l1k-pJ-chr"/>

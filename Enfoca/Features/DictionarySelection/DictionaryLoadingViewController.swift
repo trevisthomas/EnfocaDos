@@ -90,6 +90,15 @@ class DictionaryLoadingViewController: UIViewController {
     }
     
     private func prepareDataStore(){
+        
+        //Delete the dictionary from cache prior to load
+        if let d = dictionary {
+            getAppDelegate().applicationDefaults.removeDictionary(d)
+        } else if let j = dataStoreJson {
+            let d = DataStore.extractDictionary(fromJson: j)
+            getAppDelegate().applicationDefaults.removeDictionary(d)
+        }
+        
         getAppDelegate().webService.prepareDataStore(dictionary: dictionary, json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
             
             if let error = error {
