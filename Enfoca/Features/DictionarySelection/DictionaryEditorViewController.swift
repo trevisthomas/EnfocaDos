@@ -15,7 +15,6 @@ class DictionaryEditorViewController: UIViewController {
     @IBOutlet weak var definitionTextField: AnimatedTextField!
     @IBOutlet weak var subjectTextField: AnimatedTextField!
     @IBOutlet weak var createButton: EnfocaButton!
-    @IBOutlet weak var deleteButton: EnfocaButton!
     @IBOutlet weak var backButton: UIButton!
 
     override func viewDidLoad() {
@@ -32,7 +31,6 @@ class DictionaryEditorViewController: UIViewController {
         subjectTextField.text = dictionary.subject
         
         if dictionary.isTemporary {
-            deleteButton.removeFromSuperview() 
             createButton.setTitle("Create", for: .normal)
         } else {
             createButton.setTitle("Update", for: .normal)
@@ -58,20 +56,6 @@ class DictionaryEditorViewController: UIViewController {
             updateDictionary()
         }
         
-    }
-    
-    @IBAction func deleteButtonAction(_ source: UIButton) {
-        services().deleteDictionary(dictionary: dictionary) { (dictionary:UserDictionary?, error:EnfocaError?) in
-            
-            if let error = error {
-                self.presentAlert(title: "Failed to update", message: error)
-                return
-            }
-            
-            guard let _ = dictionary else { fatalError() }
-            //This was the easiest way to reload the list.  
-            self.performSegue(withIdentifier: "LaunchAppSegue", sender: nil)
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

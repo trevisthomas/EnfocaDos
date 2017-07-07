@@ -698,6 +698,11 @@ class LocalCloudKitWebService : WebService {
     }
     
     func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->()) {
+        
+        if self.dataStore == nil {
+            return
+        }
+        
         isDataStoreSynchronized(dictionary: self.dataStore.getUserDictionary(), callback: callback)
     }
     

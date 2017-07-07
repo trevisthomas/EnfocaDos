@@ -39,6 +39,44 @@ extension UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func presentOkCancelAlert(title : String, message : String?, callback: @escaping (Bool)->()){
+        let dialog = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        dialog.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            callback(true)
+        }))
+        
+        dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            callback(false)
+        }))
+        
+        present(dialog, animated: true, completion: nil)
+    }
+    
+    func presentActivityAlert(title: String?, message: String?) -> UIAlertController{
+        
+        //UIActivityViewController might be an option.
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        //create an activity indicator
+        let indicator = UIActivityIndicatorView(frame: alert.view.bounds)
+        indicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        //add the activity indicator as a subview of the alert controller's view
+        alert.view.addSubview(indicator)
+        indicator.isUserInteractionEnabled = false // required otherwise if there buttons in the UIAlertController you will not be able to press them
+        
+        indicator.activityIndicatorViewStyle = .whiteLarge
+        indicator.color = UIColor.black
+        indicator.startAnimating()
+        
+        present(alert, animated: true, completion: nil)
+        
+        return alert
+        
+    }
+    
+    
     func services() -> WebService {
         return (UIApplication.shared.delegate as! AppDelegate).webService
     }

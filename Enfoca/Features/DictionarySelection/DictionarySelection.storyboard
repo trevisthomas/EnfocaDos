@@ -83,7 +83,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zpq-p5-VR6" id="2w9-nj-Mmh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-jP-SAS" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
@@ -246,7 +246,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWB-b5-iS4" id="cYi-Dz-mA4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-hn-12U" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
@@ -411,7 +411,7 @@
                                         <state key="normal" title="Language"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pPt-VP-q2p">
-                                        <rect key="frame" x="36" y="592" width="342" height="50"/>
+                                        <rect key="frame" x="125.66666666666669" y="592" width="163" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBZ-q6-vwa" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="50"/>
@@ -426,22 +426,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="createOrUpdateButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="y09-oq-vvf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-h6-8tF" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
-                                                <rect key="frame" x="179" y="0.0" width="163" height="50"/>
-                                                <color key="backgroundColor" red="0.6497478485" green="0.24873846769999999" blue="0.1759074628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="MbE-cW-1Ga"/>
-                                                    <constraint firstAttribute="width" constant="163" id="a3V-PD-viq"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                                <state key="normal" title="Delete">
-                                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="createOrUpdateButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="vYq-FC-QIw"/>
-                                                    <action selector="deleteButtonAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="GH3-2w-3if"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -483,7 +467,6 @@
                         <outlet property="backButton" destination="hW9-tx-ViV" id="059-Jv-zzG"/>
                         <outlet property="createButton" destination="eBZ-q6-vwa" id="iVc-Bi-R0E"/>
                         <outlet property="definitionTextField" destination="fpz-Yq-76V" id="IEC-bV-8Yh"/>
-                        <outlet property="deleteButton" destination="bcv-h6-8tF" id="gLH-Yi-mhu"/>
                         <outlet property="subjectTextField" destination="b7z-hU-NRQ" id="b5L-gY-NqH"/>
                         <outlet property="termTextField" destination="44O-Ha-znd" id="dpV-hJ-sdh"/>
                         <segue destination="78n-cW-n0M" kind="show" identifier="LoadDictionarySegue" id="Kqj-gi-NaV"/>

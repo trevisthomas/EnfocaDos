@@ -54,17 +54,12 @@ class DictionarySelectionViewController: UIViewController {
     }
     
     @IBAction func editButtonAction(_ sender: Any) {
+        toggleEditMode()
+    }
+    
+    func toggleEditMode(){
         isEditMode = !isEditMode
         initializeLookAndFeel()
-        
-//        let cells = tableView.visibleCells
-//        
-//        for cell in cells {
-//            cell.jiggle { () -> (Bool) in
-//                return self.isEditMode
-//            }
-//        }
-        
         tableView.setEditing(isEditMode, animated: true)
     }
     
@@ -92,12 +87,70 @@ class DictionarySelectionViewController: UIViewController {
             to.initialize(isBackButtonNeeded: true)
         }
     }
-}
+    
+    func maybePerformDelete(dictionary: UserDictionary, callback: @escaping (_ deleted: Bool)->()){
+        presentOkCancelAlert(title: "Delete Confirmation", message: "Are you sure that you want to delete \(dictionary.subject) and \(dictionary.countWordPairs) cards?") { (yes:Bool) in
+            if yes {
+                let alert = self.presentActivityAlert(title: "Deleting \(dictionary.subject)", message: "Please   wait...")
+                
+//                delay(delayInSeconds: 10) {
+//                    
+//                    alert.dismiss(animated: true, completion: nil)
+//                    callback(true)
+//                }
+                
+                self.performDelete(dictionary: dictionary, callback: { (_: Bool) in
+                    alert.dismiss(animated: true, completion: nil)
+                    callback(true)
 
-
-extension DictionarySelectionViewController: UITableViewDelegate {
+                })
+            } else {
+                callback(false)
+            }
+        }
+    }
+    
+    func performDelete(dictionary: UserDictionary, callback: @escaping (_ deleted: Bool)->()) {
+        services().deleteDictionary(dictionary: dictionary) { (dictionary:UserDictionary?, error:EnfocaError?) in
+            
+            if let error = error {
+                self.presentAlert(title: "Failed to update", message: error)
+                
+                callback(false)
+                return
+            }
+            
+            guard let _ = dictionary else { fatalError() }
+            callback(true)
+        }
+    }
+    
+    
     
 }
+
+extension DictionarySelectionViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            let dict = dictionaryList[indexPath.row]
+            maybePerformDelete(dictionary: dict, callback: { (deleted: Bool) in
+                if deleted {
+                    self.dictionaryList.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .left)
+                    self.toggleEditMode()
+                } else {
+                    self.toggleEditMode()
+//                    tableView.isEditing = false;
+                }
+                
+            })
+        default: fatalError()
+        }
+    }
+    
+}
+
 
 extension DictionarySelectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
