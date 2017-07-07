@@ -20,9 +20,21 @@ class DataImportViewController: UIViewController {
 //        enfocaIdTextField.text = "15584C98-24BC-4F31-AA75-1FEC0C1DEDBB" //Test - bad delete
 //        enfocaIdTextField.text = "ACA750CB-DB60-473F-9488-0D170F42250E" //Demo - garbage
         
-        enfocaIdTextField.text = "EA5BA3EC-B3DE-4BDE-955D-6875A1A64CC0" //Test
+//        enfocaIdTextField.text = "EA5BA3EC-B3DE-4BDE-955D-6875A1A64CC0" //Test
         
         
+//        enfocaIdTextField.text = "E04FD3FD-6F3D-48C4-8FC8-B1AFF262925C" // First prod! - deadloc delete
+        
+//        enfocaIdTextField.text = "54E044A6-DC95-4B16-B1E9-B6F45A744C4F"
+        
+//        enfocaIdTextField.text = "460AC85F-A561-45A7-A0F2-D1FD73347FC7"
+        
+//        enfocaIdTextField.text = "38A06181-422E-4EE7-BB20-84B8C4D0D6F1"
+//        enfocaIdTextField.text = "1F88677A-7A19-4F58-BAA4-A3F08FF6185D"
+        
+        enfocaIdTextField.text = "601FE89B-5976-41A2-A91D-2F3F5CF1E19A"
+        
+//        enfocaIdTextField.text = "525C904F-FE2C-4ED4-8048-B17D63CFF7BB" -- GOT IT!
         textView.text = nil
     }
 
@@ -47,14 +59,6 @@ class DataImportViewController: UIViewController {
         importer.process()
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -30,7 +30,7 @@ class Import {
 //    let tagResource = "small_tag"
 //    let studyItemResource = "small_study_item"
 //    let tagAssociationResource = "small_tag_associations"
-    
+//
     
     //DEPRECATED!
     init(enfocaId id: Int, textView: UITextView?){
@@ -52,22 +52,22 @@ class Import {
     
     var textView: UITextView?
 
-    func logger(_ message: String) {
-        print(message)
-        
-        invokeLater {
-            self.textView?.text.append(message)
-            self.textView?.text.append("\n")
-            
-            guard let textView = self.textView else { return }
-            let bottom = textView.contentSize.height - textView.bounds.size.height
-            textView.setContentOffset(CGPoint(x: 0, y: bottom), animated: true)
-        }
-        
-        
-        
-//        extLogger(message)
-    }
+//    func logger(_ message: String) {
+//        print(message)
+//        
+////        invokeLater {
+////            self.textView?.text.append(message)
+////            self.textView?.text.append("\n")
+////            
+////            guard let textView = self.textView else { return }
+////            let bottom = textView.contentSize.height - textView.bounds.size.height
+////            textView.setContentOffset(CGPoint(x: 0, y: bottom), animated: true)
+////        }
+//        
+//        
+//        
+////        extLogger(message)
+//    }
     
     func process(){
         
@@ -75,9 +75,9 @@ class Import {
         loadWordPairs()
         loadTags()
         loadTagAssociations()
-        logger("Saving to cloud kit")
+        print("Saving to cloud kit")
         saveDataToCloudKit()
-        logger("Done")
+        print("Done")
     }
     
     func loadMeta(){
@@ -107,7 +107,7 @@ class Import {
             metaDict[id] = oldMeta
             
         }
-        logger("Loaded \(metaDict.count) meta data rows.")
+        print("Loaded \(metaDict.count) meta data rows.")
         
     }
 
@@ -130,7 +130,7 @@ class Import {
                 }
             }
         }
-        logger("Loaded \(tagDict.count) tags.")
+        print("Loaded \(tagDict.count) tags.")
     }
     
     func loadWordPairs(){
@@ -153,7 +153,7 @@ class Import {
             
             wordPairDict[oldWordPair.studyItemId] = oldWordPair
         }
-        logger("Loaded \(wordPairDict.count) word pairs.")
+        print("Loaded \(wordPairDict.count) word pairs.")
     }
     
     func loadTagAssociations(){
@@ -173,7 +173,7 @@ class Import {
             tagAssociations.append(tagAss)
             
         }
-        logger("Loaded \(tagAssociations.count) tag associations.")
+        print("Loaded \(tagAssociations.count) tag associations.")
         
     }
     
@@ -181,52 +181,185 @@ class Import {
         let db = CKContainer.default().publicCloudDatabase
         let privateDb = CKContainer.default().privateCloudDatabase
         
-        let errorHandler = ImportErrorHandler()
         
-        let queue = OperationQueue()
+        saveTags(db: db)
+
+        saveWordPairs(db: db)
         
+        saveAssociations(db: db)
         
+        saveMeta(db: privateDb)
+        
+    }
+    
+    private func saveTags(db: CKDatabase) {
+        
+        var recordsToUpload : [CKRecord] = []
+        var recordsToUploadDict: [CKRecordID: OldTag] = [:]
         
         for oldTag in tagDict.values{
-            let tagOp = OperationCreateTag(tagName: oldTag.tagName, enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
-            queue.addOperations([tagOp], waitUntilFinished: true)
-            oldTag.newTag = tagOp.tag
-            logger("Created Tag: \(String(describing: tagOp.tag!.name))")
+            let tag = CreateTag.create(tagName: oldTag.tagName, enfocaRef: enfocaRef)
+            recordsToUpload.append(tag)
+            recordsToUploadDict[tag.recordID] = oldTag
             
         }
         
         
-        for oldWordPair in wordPairDict.values{
-            let wordPairOp = OperationCreateWordPair(wordPairSource: toRealWordPair(oldWordPair: oldWordPair), enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
-            queue.addOperations([wordPairOp], waitUntilFinished: true)
-            oldWordPair.newWordPair = wordPairOp.wordPair
+        let uploadOperation = CKModifyRecordsOperation(recordsToSave: recordsToUpload, recordIDsToDelete: nil)
+        
+        uploadOperation.isAtomic = false
+        uploadOperation.database = db
+        
+        uploadOperation.perRecordCompletionBlock = { (record: CKRecord, error: Error?) -> Void in
+            let newTag = CloudKitConverters.toTag(from: record)
             
-            logger("Created word pair: \(String(describing: wordPairOp.wordPair!.word))")
+            recordsToUploadDict[record.recordID]!.newTag = newTag
+            
+            print("Created tag: \(newTag.name)")
         }
+        
+        // Assign a completion handler
+        uploadOperation.modifyRecordsCompletionBlock = { (savedRecords: [CKRecord]?, deletedRecords: [CKRecordID]?, operationError: Error?) -> Void in
+            if let error = operationError {
+                // Handle the error
+                print(error.localizedDescription)
+                fatalError(error.localizedDescription)
+            }
+            if let records = savedRecords {
+                print("Created: \(records.count) word pairs.")
+            }
+        }
+        
+        OperationQueue().addOperations([uploadOperation], waitUntilFinished: true)
+
+    }
+    
+    private func saveMeta(db: CKDatabase) {
+        
+        var recordsToUploadTemp : [CKRecord] = []
+        for oldMeta in metaDict.values {
+            
+            let meta = CreateMetaData.create(metaDataSource: toRealMetaData(oldMetaData: oldMeta), enfocaRef: enfocaRef)
+            
+            recordsToUploadTemp.append(meta)
+        }
+        
+        for recordsToUpload in recordsToUploadTemp.chunks(400) {
+            let uploadOperation = CKModifyRecordsOperation(recordsToSave: recordsToUpload, recordIDsToDelete: nil)
+            
+            uploadOperation.isAtomic = false
+            uploadOperation.database = db
+            
+            uploadOperation.perRecordCompletionBlock = { (record: CKRecord, error: Error?) -> Void in
+                let meta = CloudKitConverters.toMetaData(from: record)
+                
+                print("Created meta : \(meta.metaId)")
+            }
+            
+            // Assign a completion handler
+            uploadOperation.modifyRecordsCompletionBlock = { (savedRecords: [CKRecord]?, deletedRecords: [CKRecordID]?, operationError: Error?) -> Void in
+                if let error = operationError {
+                    // Handle the error
+                    print(error.localizedDescription)
+                    fatalError(error.localizedDescription)
+                }
+                if let records = savedRecords {
+                    print("Created: \(records.count) meta data records.")
+                }
+            }
+            
+            OperationQueue().addOperations([uploadOperation], waitUntilFinished: true)
+    
+        }
+        
+    }
+    
+    private func saveAssociations(db: CKDatabase) {
+        var recordsToUploadTemp : [CKRecord] = []
         
         for ass in tagAssociations {
             let tag = tagDict[ass.tagId]!.newTag!
             
             if let wp = wordPairDict[ass.studyItemId]?.newWordPair {
                 
-                let assOp = OperationCreateTagAssociation(tagId: tag.tagId, wordPairId: wp.pairId, enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
+                let ass = CreateTagAssociation.create(tagId: tag.tagId, wordPairId: wp.pairId, enfocaRef: enfocaRef)
+                recordsToUploadTemp.append(ass)
+//
+//                print("created association \(wp.word) tagged \(tag.name)")
                 
-                queue.addOperations([assOp], waitUntilFinished: true)
-                
-                logger("created association \(wp.word) tagged \(tag.name)")
-
             } else {
-                logger("Failed to find: \(ass.studyItemId)")
+                print("Failed to find: \(ass.studyItemId)")
             }
         }
         
-        for oldMeta in metaDict.values {
-            let metaOp = OperationCreateMetaData(metaDataSource: toRealMetaData(oldMetaData: oldMeta), enfocaRef: enfocaRef, db: privateDb, errorDelegate: errorHandler)
-            queue.addOperations([metaOp], waitUntilFinished: true)
-            logger("Created Meta: \(String(describing: metaOp.metaData!.metaId))")
+        for recordsToUpload in recordsToUploadTemp.chunks(400) {
+            let uploadOperation = CKModifyRecordsOperation(recordsToSave: recordsToUpload, recordIDsToDelete: nil)
             
+            uploadOperation.isAtomic = false
+            uploadOperation.database = db
+            
+            uploadOperation.perRecordCompletionBlock = { (record: CKRecord, error: Error?) -> Void in
+                let a = CloudKitConverters.toTagAssociation(from: record)
+                
+                print("Created association : \(a.associationId)")
+            }
+            
+            // Assign a completion handler
+            uploadOperation.modifyRecordsCompletionBlock = { (savedRecords: [CKRecord]?, deletedRecords: [CKRecordID]?, operationError: Error?) -> Void in
+                if let error = operationError {
+                    // Handle the error
+                    print(error.localizedDescription)
+                    fatalError(error.localizedDescription)
+                }
+                if let records = savedRecords {
+                    print("Created: \(records.count) associations.")
+                }
+            }
+            
+            OperationQueue().addOperations([uploadOperation], waitUntilFinished: true)
         }
     }
+    private func saveWordPairs(db: CKDatabase) {
+        var recordsToUploadTemp : [CKRecord] = []
+        var recordsToUploadDict: [CKRecordID: OldWordPair] = [:]
+        for oldWordPair in wordPairDict.values {
+            let r = CreateWordPair.create(wordPairSource: toRealWordPair(oldWordPair: oldWordPair), enfocaRef: enfocaRef)
+            
+            recordsToUploadTemp.append(r)
+            recordsToUploadDict[r.recordID] = oldWordPair
+            
+        }
+        
+        for recordsToUpload in recordsToUploadTemp.chunks(400) {
+            let uploadOperation = CKModifyRecordsOperation(recordsToSave: recordsToUpload, recordIDsToDelete: nil)
+            
+            uploadOperation.isAtomic = false
+            uploadOperation.database = db
+            
+            uploadOperation.perRecordCompletionBlock = { (record: CKRecord, error: Error?) -> Void in
+                let wp = CloudKitConverters.toWordPair(from: record)
+                
+                recordsToUploadDict[record.recordID]!.newWordPair = wp
+                
+                print("Created word pair: \(wp.word)")
+            }
+            
+            // Assign a completion handler
+            uploadOperation.modifyRecordsCompletionBlock = { (savedRecords: [CKRecord]?, deletedRecords: [CKRecordID]?, operationError: Error?) -> Void in
+                if let error = operationError {
+                    // Handle the error
+                    print(error.localizedDescription)
+                    fatalError(error.localizedDescription)
+                }
+                if let records = savedRecords {
+                    print("Created: \(records.count) word pairs.")
+                }
+            }
+            
+            OperationQueue().addOperations([uploadOperation], waitUntilFinished: true)
+        }
+    }
+    
     
     private func toRealWordPair(oldWordPair : OldWordPair) -> WordPair{
         return WordPair(pairId: "", word: oldWordPair.word, definition: oldWordPair.definition, dateCreated: oldWordPair.creationDate, gender: .notset, tags: [], example: oldWordPair.example)
@@ -242,6 +375,8 @@ class Import {
     }
 
 }
+
+
 
 class ImportErrorHandler : ErrorDelegate {
     func onError(message: String) {
