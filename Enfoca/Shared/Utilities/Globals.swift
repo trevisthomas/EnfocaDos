@@ -8,6 +8,8 @@
 
 import Foundation
 
+//OperationQueue.main.addOperation vs main.async
+//https://stackoverflow.com/questions/40764140/operationqueue-main-vs-dispatchqueue-main
 func invokeLater(callback: @escaping ()->()){
     DispatchQueue.main.async {
         callback()

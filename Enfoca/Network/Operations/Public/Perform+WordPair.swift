@@ -98,23 +98,7 @@ extension Perform{
         
     }
     
-    class func deleteDictionary(dictionary: UserDictionary, db: CKDatabase, callback : @escaping (_ dictionaryId : String?, _ error : String?) -> ()){
         
-        let queue = OperationQueue()
-        let errorHandler = ErrorHandler(queue: queue, callback: callback)
-        
-        let deleteRecord = OperationDeleteRecord(recordName: dictionary.dictionaryId, db: db, errorDelegate: errorHandler)
-        let completeOp = BlockOperation {
-            OperationQueue.main.addOperation{
-                callback(deleteRecord.deletedRecordName, nil)
-            }
-        }
-        
-        completeOp.addDependency(deleteRecord)
-        queue.addOperations([deleteRecord, completeOp], waitUntilFinished: false)
-        
-    }
-    
     class func deleteTag(tag: Tag, db: CKDatabase, callback : @escaping (_ pairId : String?, _ error : String?) -> ()){
         
         let queue = OperationQueue()

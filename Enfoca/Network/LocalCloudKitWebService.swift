@@ -376,7 +376,7 @@ class LocalCloudKitWebService : WebService {
         
         showNetworkActivityIndicator = true
         
-        Perform.deleteDictionary(dictionary: dictionary, db: db) { (dictionaryId: String?, error: String?) in
+        Perform.deleteDictionary(dictionary: dictionary, db: db, privateDb: privateDb) { (dictionaryId: String?, error: String?) in
             self.showNetworkActivityIndicator = false
             if let error = error {
                 callback(nil, error)
