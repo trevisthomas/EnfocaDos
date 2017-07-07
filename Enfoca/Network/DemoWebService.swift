@@ -220,6 +220,10 @@ class DemoWebService : WebService {
         fatalError()
     }
     
+    func isDataStoreSynchronized(dictionary: UserDictionary, callback: @escaping (Bool?, String?)->()) {
+        fatalError()
+    }
+    
     func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->()) {
         fatalError()
     }

@@ -559,6 +559,16 @@ class DataStore {
         return metaDataDictionary[wordPair.pairId]
     }
     
+    //A helper functoin to quickly grab the dictionary out of a json blob.  Created so that i can check the conch before importing the whole thing.
+    class func extractDictionary(fromJson json: String) -> UserDictionary {
+        guard let jsonData = json.data(using: .utf8) else { fatalError() }
+        guard let jsonResult: NSDictionary = try! JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary else {fatalError()}
+        
+        guard let rawUserDictionary = jsonResult["userDictionary"] as? String else {fatalError()}
+        
+        return UserDictionary(json: rawUserDictionary)
+    }
+    
     init (json: String) {
         guard let jsonData = json.data(using: .utf8) else { fatalError() }
         guard let jsonResult: NSDictionary = try! JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary else {fatalError()}

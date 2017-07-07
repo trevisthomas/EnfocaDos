@@ -32,10 +32,12 @@ class DictionaryLoadingViewController: UIViewController {
         launch()
     }
     
+    //this one is used when a dict is selected by user
     func initialize(dictionary: UserDictionary) {
         self.dictionary = dictionary
     }
     
+    //This is used when the json is loaded from the disk automatically
     func initialize(json: String) {
         self.dataStoreJson = json
     }
@@ -46,23 +48,47 @@ class DictionaryLoadingViewController: UIViewController {
         
         if let dictionary = dictionary {
             if let json = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) {
-                dataStoreJson = json
+                
+                //conch check
+                let oldDict = DataStore.extractDictionary(fromJson: json)
+                
+                getAppDelegate().webService.isDataStoreSynchronized(dictionary: oldDict, callback: { (isSynched:Bool?, error: String?) in
+                    
+                    if isSynched ?? false {
+                        self.dataStoreJson = json
+                    } else {
+                        self.dataStoreJson = nil
+                    }
+                    self.prepareDataStore()
+                })
+            } else {
+                // user selected a dictionary that wasnt in their local disk cache
+                self.prepareDataStore()
             }
+        } else {
+            // no dictionary was selected by the user, we're doing a json auto init
+            guard let _ = dataStoreJson else { fatalError() }
+            self.prepareDataStore()
         }
         
+        
+        
+    }
+    
+    private func prepareDataStore(){
         getAppDelegate().webService.prepareDataStore(dictionary: dictionary, json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
             
             if let error = error {
                 self.presentFatalAlert(title: "Initialization error", message: error)
             } else {
                 self.endProgress(ofType: "Initializing", message: "Initialization complete.")
+                //Save after successful load.
+                getAppDelegate().saveDefaults()
                 invokeLater {
                     self.performSegue(withIdentifier: "HomeSegue", sender: self)
                 }
             }
-
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

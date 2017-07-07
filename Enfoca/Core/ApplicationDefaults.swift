@@ -108,7 +108,9 @@ class LocalApplicationDefaults : ApplicationDefaults {
         }
         
         let defaults = UserDefaults.standard
-        return defaults.value(forKey: dictionaryId) as? String
+        let json = defaults.value(forKey: dictionaryId) as? String
+        defaults.removeObject(forKey: dictionaryId) //Delete the local cache, it is resaved after successful parse
+        return json
     }
     
 }

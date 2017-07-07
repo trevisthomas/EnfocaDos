@@ -659,7 +659,7 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
-    func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->()) {
+    func isDataStoreSynchronized(dictionary: UserDictionary, callback: @escaping (Bool?, String?)->()) {
         
         if !isDataStoreSynchronized {
             //If the DS it out of sync, there is no point in checking the DB.  You need to reload.
@@ -667,9 +667,12 @@ class LocalCloudKitWebService : WebService {
             return
         }
         
-        guard let enfocaRef = enfocaRef else { return } //If someone tries to sync before loading, this happens.
+//        guard let enfocaRef = enfocaRef else { return } //If someone tries to sync before loading, this happens.
         
-        Perform.loadOrCreateConch(enfocaRef: enfocaRef, db: db, allowCreation: false) { (tuple : (String, Bool)?, error: EnfocaError?) in
+        let recordId = CloudKitConverters.toCKRecordID(fromRecordName: dictionary.enfocaRef)
+        let tempRef = CKReference(recordID: recordId, action: .none)
+        
+        Perform.loadOrCreateConch(enfocaRef: tempRef, db: db, allowCreation: false) { (tuple : (String, Bool)?, error: EnfocaError?) in
             
             if let error = error {
                 callback(nil, error)
@@ -682,8 +685,8 @@ class LocalCloudKitWebService : WebService {
                 }
                 return
             }
-
-            let localConch = self.dataStore.getUserDictionary().conch
+            
+            let localConch = dictionary.conch
             let serverConch = tuple.0
             
             self.isDataStoreSynchronized = localConch == serverConch
@@ -691,6 +694,11 @@ class LocalCloudKitWebService : WebService {
                 callback(self.isDataStoreSynchronized, nil)
             }
         }
+
+    }
+    
+    func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->()) {
+        isDataStoreSynchronized(dictionary: self.dataStore.getUserDictionary(), callback: callback)
     }
     
     func getCurrentDictionary() -> UserDictionary {

@@ -63,9 +63,13 @@ protocol WebService {
     
     func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->())
     
+    func isDataStoreSynchronized(dictionary: UserDictionary, callback: @escaping (Bool?, String?)->())
+    
     func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->())
     
     func getCurrentDictionary() -> UserDictionary
     
     func updateDictionaryCounts(callback : @escaping(UserDictionary?, EnfocaError?)->())
+    
+    
 }
