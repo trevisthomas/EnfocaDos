@@ -89,16 +89,18 @@ extension DictionaryEditorViewController {
     fileprivate func createDictionary() {
         
         validateForm {
+            let alert = presentActivityAlert(title: "Please wait...", message: nil)
             services().createDictionary(termTitle: termTextField!.text!, definitionTitle: definitionTextField!.text!, subject: subjectTextField!.text!, language: "es") { (dictionary: UserDictionary?, error: EnfocaError?) in
-                if let error = error {
-                    self.presentAlert(title: "Failed to create", message: error)
-                    return
-                }
-                
-                guard let dictionary = dictionary else { fatalError() }
-                
-                self.performSegue(withIdentifier: "LoadDictionarySegue", sender: dictionary)
-                
+                alert.dismiss(animated: false, completion: {
+                    if let error = error {
+                        self.presentAlert(title: "Failed to create", message: error)
+                        return
+                    }
+                    
+                    guard let dictionary = dictionary else { fatalError() }
+                    
+                    self.performSegue(withIdentifier: "LoadDictionarySegue", sender: dictionary)
+                })
             }
         }
     }

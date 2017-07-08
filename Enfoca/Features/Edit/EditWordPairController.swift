@@ -190,48 +190,49 @@ class EditWordPairController: Controller {
         return true
     }
     
-    func performDelete() {
+    func performDelete(callback: @escaping ()->()) {
         guard let originalWordPair = originalWordPair else {
+            callback()
             self.delegate.onError(title: "Delete failed", message: "Failed to delete.  The editor is not configured for delete.")
             return
         }
         
         services.deleteWordPair(wordPair: originalWordPair) { (wordPair: WordPair?, error: EnfocaError?) in
             
+            callback()
             if let error = error {
                 self.delegate.onError(title: "Update failed", message: error)
             }
             
             guard let wordPair = wordPair else { return }
             
-            self.delegate.dismissViewController()
-            
             self.fireEvent(source: self, event: Event(type: .wordPairDeleted, data: wordPair))
             
         }
     }
     
-    func performSaveOrCreate(handleFailedValidation: @escaping ()->()) {
+    func performSaveOrCreate(handleFailedValidation: @escaping ()->(), callback: @escaping ()->()) {
         
         //Dont perform this validation on update.  The terms can match then!
         if isEditMode {
-            self.performWordPairAction()
+            self.performWordPairAction(callback: callback)
             return
         }
         
         fetchExatcMatches(callback: { (matchingTerms: [WordPair]) in
             if matchingTerms.count > 0 {
+                callback()
                 handleFailedValidation()
                 return
             } else {
                 //Perform WP action
-                self.performWordPairAction()
+                self.performWordPairAction(callback: callback)
             }
         })
 
     }
     
-    private func performWordPairAction() {
+    private func performWordPairAction(callback: @escaping ()->()) {
         if isEditMode {
             if isTextFieldInvalid() {
                 //                self.delegate.onError(title: "Update failed", message: "Invalid content in word or definition")
@@ -241,13 +242,12 @@ class EditWordPairController: Controller {
             guard let originalWordPair = originalWordPair else { fatalError() }
             services.updateWordPair(oldWordPair: originalWordPair, word: word, definition: definition, gender: .notset, example: nil, tags: selectedTags) { (wordPair:WordPair?, error:EnfocaError?) in
                 
+                callback()
                 if let error = error {
                     self.delegate.onError(title: "Update failed", message: error)
                 }
                 
                 guard let wordPair = wordPair else { return }
-                
-                self.delegate.dismissViewController()
                 
                 self.fireEvent(source: self, event: Event(type: .wordPairUpdated, data: wordPair))
                 
@@ -261,6 +261,7 @@ class EditWordPairController: Controller {
             
             services.createWordPair(word: word, definition: definition, tags: selectedTags, gender: .notset, example: nil, callback: { (wordPair: WordPair?, error: EnfocaError?) in
                 
+                callback()
                 if let error = error {
                     self.delegate.onError(title: "Create failed", message: error)
                 }

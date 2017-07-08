@@ -203,13 +203,22 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     }
     
     func performSave() {
-        controller.performSaveOrCreate { 
-            //Validation failed
+        let alert = presentActivityAlert(title: "Please wait...", message: nil)
+        controller.performSaveOrCreate(handleFailedValidation: { 
             self.editorViewController.failedValidation()
+        }) { 
+            alert.dismiss(animated: false, completion: {
+                self.dismissViewController()
+            })
         }
     }
     func performDelete() {
-        controller.performDelete()
+        let alert = presentActivityAlert(title: "Please wait...", message: nil)
+        controller.performDelete { 
+            alert.dismiss(animated: false, completion: {
+                self.dismissViewController()
+            })
+        }
     }
     func performTagEdit() {
         performSegue(withIdentifier: "editTags", sender: nil)
