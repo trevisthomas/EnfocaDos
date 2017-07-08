@@ -239,5 +239,8 @@ class DemoWebService : WebService {
     func updateDictionaryCounts(callback : @escaping(UserDictionary?, EnfocaError?)->()) {
         fatalError()
     }
+    func fetchCurrentConch(dictionary: UserDictionary, callback: @escaping (String?, String?)->()) {
+        fatalError()
+    }
 }
 

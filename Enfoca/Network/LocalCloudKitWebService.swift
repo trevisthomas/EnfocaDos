@@ -74,11 +74,22 @@ class LocalCloudKitWebService : WebService {
             
             if let error = error { callback(nil, error) }
             
-            guard let dictionary = dictionary else { fatalError("Unhandled error") }
+            guard let dictionary = dictionary else { fatalError("Failed to create dictionary") }
             
-            callback(dictionary, nil)
+            let recordId = CloudKitConverters.toCKRecordID(fromRecordName: dictionary.enfocaRef)
+            let tempRef = CKReference(recordID: recordId, action: .none)
+            
+            Perform.loadOrCreateConch(enfocaRef: tempRef, db: self.db, allowCreation: true, callback: { (tuple:(String, Bool)?, error: EnfocaError?) in
+                if let error = error { callback(nil, error) }
+                guard let tuple = tuple else { fatalError() }
+                dictionary.conch = tuple.0
+                delay(delayInSeconds: 2, callback: {
+                    //Giving cloud kit time to really have this record. :-(
+                    callback(dictionary, nil)
+                })
+                
+            })
         }
-        
     }
     
     func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
@@ -92,6 +103,7 @@ class LocalCloudKitWebService : WebService {
         if let json = json {
             ds = DataStore(json: json)
         } else if let dictionary = dictionary {
+            guard let _ = dictionary.conch else { fatalError("conches are not option at this point anymore") }
             ds = DataStore(dictionary: dictionary)
         } else {
             fatalError() //I need one or the other.
@@ -115,42 +127,22 @@ class LocalCloudKitWebService : WebService {
             let recordId = CloudKitConverters.toCKRecordID(fromRecordName: ds.getUserDictionary().enfocaRef)
             let tempRef = CKReference(recordID: recordId, action: .none)
             
-            
-            Perform.loadOrCreateConch(enfocaRef: tempRef, db: self.db, allowCreation: true, callback: { (tuple:(String, Bool)?, error: EnfocaError?) in
-                if let error = error {
-                    callback(false, error)
-                    return
-                }
-            
-                guard let tuple = tuple else { fatalError() }
-                
-                let conch = tuple.0
-//                Turns out that i dont care if it's new.  I'm doing a fresh load, that means i'm in synch.
-//                let isNew = tuple.1
-                
-                ds.getUserDictionary().conch = conch
-            
-                Perform.initializeDataStore(dataStore: ds, enfocaRef: tempRef, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
-                    invokeLater {
-                        if let error = error {
-                            callback(false, error)
-                        }
-                        guard let dataStore = ds else {
-                            callback(false, "DataStore was nil.  This is a fatal error.")
-                            return;
-                        }
-                        self.dataStore = dataStore
-                        
-                        //                    self.initializeCloudKitSubscriptions(callback: callback)
-                        self.showNetworkActivityIndicator = false
-                        callback(true, nil)
+            Perform.initializeDataStore(dataStore: ds, enfocaRef: tempRef, db: self.db, privateDb: self.privateDb, progressObserver: progressObserver) { (ds : DataStore?, error: EnfocaError?) in
+                invokeLater {
+                    if let error = error {
+                        callback(false, error)
                     }
+                    guard let dataStore = ds else {
+                        callback(false, "DataStore was nil.  This is a fatal error.")
+                        return;
+                    }
+                    self.dataStore = dataStore
+                    //                    self.initializeCloudKitSubscriptions(callback: callback)
+                    self.showNetworkActivityIndicator = false
+                    callback(true, nil)
                 }
-            })
-            
+            }
         }
-
-        
     }
     
     
@@ -659,6 +651,32 @@ class LocalCloudKitWebService : WebService {
                     }
                 }
             })
+        }
+    }
+    
+    func fetchCurrentConch(dictionary: UserDictionary, callback: @escaping (String?, String?)->()) {
+        let recordId = CloudKitConverters.toCKRecordID(fromRecordName: dictionary.enfocaRef)
+        let tempRef = CKReference(recordID: recordId, action: .none)
+        
+        Perform.loadOrCreateConch(enfocaRef: tempRef, db: db, allowCreation: false) { (tuple : (String, Bool)?, error: EnfocaError?) in
+            
+            if let error = error {
+                callback(nil, error)
+                return
+            }
+            
+            guard let tuple = tuple else {
+                invokeLater {
+                    callback(nil, "Conch was nil")
+                }
+                return
+            }
+            
+            let serverConch = tuple.0
+            
+            invokeLater {
+                callback(serverConch, nil)
+            }
         }
     }
     

@@ -44,7 +44,7 @@ class UserDictionary {
     }
     
     convenience init(termTitle: String, definitionTitle: String, subject: String, language: String? = nil) {
-        self.init(dictionaryId: "not-set", userRef: "not-set", enfocaRef: "not-set", termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language, conch: nil)
+        self.init(dictionaryId: "not-set", userRef: "not-set", enfocaRef: "not-set", termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language, conch: "not-set")
         
         isTemporary = true
     }

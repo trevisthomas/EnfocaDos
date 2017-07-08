@@ -60,7 +60,6 @@ class NewAppLaunchViewController: UIViewController {
             } else {
                 self.presentCreateOrLoadView(dictionaryList: dictionaryList)
             }
-            
         }
     }
     

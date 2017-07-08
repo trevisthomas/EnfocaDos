@@ -123,6 +123,8 @@ extension Perform {
         let fetchWordPairs = OperationFetchWordPairs(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
         let fetchMetaData = OperationFetchMetaData(enfocaRef: enfocaRef, db: privateDb, progressObserver: progressObserver, errorDelegate: errorHandler)
         
+        let deleteConch = OperationDeleteConch(enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
+        
         let completeOp = BlockOperation {
             
             
@@ -146,6 +148,8 @@ extension Perform {
                 return CloudKitConverters.toCKRecordID(fromRecordName: meta.metaId)
             }
             
+            
+            
             recordIds.append(contentsOf: tagRecords)
             recordIds.append(contentsOf: pairRecords)
             recordIds.append(contentsOf: assRecords)
@@ -158,6 +162,7 @@ extension Perform {
                 }
                 
                 if !metaOnly {
+                    
                     deleteAllRecords(recordIds: recordIds, db: db, callback: { (_: [CKRecordID]?, error: String?) in
                         invokeLater {
                             if let error = error {
@@ -183,7 +188,8 @@ extension Perform {
             completeOp.addDependency(fetchTags)
             completeOp.addDependency(fetchWordPairs)
             completeOp.addDependency(fetchMetaData)
-            queue.addOperations([fetchWordPairs, fetchTags, fetchTagAssociations, fetchMetaData, completeOp], waitUntilFinished: false)
+            completeOp.addDependency(deleteConch)
+            queue.addOperations([fetchWordPairs, fetchTags, fetchTagAssociations, fetchMetaData, deleteConch, completeOp], waitUntilFinished: false)
         }
         
         

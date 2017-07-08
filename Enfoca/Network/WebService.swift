@@ -71,5 +71,6 @@ protocol WebService {
     
     func updateDictionaryCounts(callback : @escaping(UserDictionary?, EnfocaError?)->())
     
+    func fetchCurrentConch(dictionary: UserDictionary, callback: @escaping (String?, String?)->())
     
 }

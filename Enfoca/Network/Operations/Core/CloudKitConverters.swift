@@ -115,10 +115,6 @@ class CloudKitConverters{
         
         let dict = UserDictionary(dictionaryId: record.recordID.recordName, userRef: userRef.recordID.recordName, enfocaRef: enfocaCkRef.recordID.recordName, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language, conch: nil, countWordPairs: countWordPairs, countTags: countTags, countAssociations: countAssociations, countMeta: countMeta)
         
-        
-        
-
-        
         return dict 
     }
     

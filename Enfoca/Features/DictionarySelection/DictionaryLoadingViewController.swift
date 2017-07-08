@@ -10,12 +10,6 @@ import UIKit
 
 class DictionaryLoadingViewController: UIViewController {
 
-    
-    //TODO: Delete the old HomeAnimator.  Rename this HomeFromQuiz to something else.
-    
-    
-//    @IBOutlet weak var titleLabel: UILabel!
-//    @IBOutlet weak var messageStackView: UIStackView!
     @IBOutlet weak var headerView: UIView!
     fileprivate var dictionary: UserDictionary?
     fileprivate var dataStoreJson: String?
@@ -24,8 +18,6 @@ class DictionaryLoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        launch()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,23 +40,20 @@ class DictionaryLoadingViewController: UIViewController {
         
         if let dictionary = dictionary {
             if let json = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) {
-                
                 conchPreCheckPrepareDataStore(json: json)
-//                //conch check
-//                let oldDict = DataStore.extractDictionary(fromJson: json)
-//                
-//                getAppDelegate().webService.isDataStoreSynchronized(dictionary: oldDict, callback: { (isSynched:Bool?, error: String?) in
-//                    
-//                    if isSynched ?? false {
-//                        self.dataStoreJson = json
-//                    } else {
-//                        self.dataStoreJson = nil
-//                    }
-//                    self.prepareDataStore()
-//                })
             } else {
                 // user selected a dictionary that wasnt in their local disk cache
-                self.prepareDataStore()
+                
+                //fetchCurrentConch and apply it to the dictionary
+                getAppDelegate().webService.fetchCurrentConch(dictionary: dictionary, callback: { (conch: String?, error: String?) in
+                    if let error = error {
+                        self.presentFatalAlert(title: "Initialization error", message: error)
+                    } else {
+                        guard let conch = conch else { fatalError() }
+                        dictionary.conch = conch
+                        self.prepareDataStore()
+                    }
+                })
             }
         } else {
             // no dictionary was selected by the user, we're doing a json auto init
@@ -79,14 +68,23 @@ class DictionaryLoadingViewController: UIViewController {
         getAppDelegate().webService.isDataStoreSynchronized(dictionary: oldDict, callback: { (isSynched:Bool?, error: String?) in
             
             if isSynched ?? false {
-                self.dataStoreJson = json
+                self.dataStoreJson = json //Try to use the json
+                self.prepareDataStore()
             } else {
-                self.dataStoreJson = nil
-                self.dictionary = oldDict
+                self.dataStoreJson = nil  //json is out of synch, dump it
+                
+                //fetchCurrentConch and apply it to the dictionary
+                getAppDelegate().webService.fetchCurrentConch(dictionary: oldDict, callback: { (conch: String?, error: String?) in
+                    if let error = error {
+                        self.presentFatalAlert(title: "Initialization error", message: error)
+                    }
+                    guard let conch = conch else { fatalError() }
+                    oldDict.conch = conch
+                    self.dictionary = oldDict
+                    self.prepareDataStore()
+                })
             }
-            self.prepareDataStore()
         })
-
     }
     
     private func prepareDataStore(){

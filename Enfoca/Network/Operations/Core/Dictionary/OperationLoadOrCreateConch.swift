@@ -55,29 +55,28 @@ class OperationLoadOrCreateConch : BaseOperation {
                     self.conch = nil
                     self.handleError(message: "Synchronization conch does not exist, but allowCreation is set to false.")
                     self.done()
-                }
-                
-                let newRecord = CKRecord(recordType: "Synch")
-                
-                let uuid = UUID().uuidString
-                newRecord.setValue(self.enfocaRef, forKey: "enfocaRef")
-                newRecord.setValue(uuid, forKey: "conch")
-                self.isNew = true
-                
-                self.db.save(newRecord) { (newRecord: CKRecord?, error: Error?) in
-                    if let error = error {
-                        self.handleError(error)
-                    }
+                } else {
+                    let newRecord = CKRecord(recordType: "Synch")
                     
-                    guard let newRecord = newRecord else {
+                    let uuid = UUID().uuidString
+                    newRecord.setValue(self.enfocaRef, forKey: "enfocaRef")
+                    newRecord.setValue(uuid, forKey: "conch")
+                    self.isNew = true
+                    
+                    self.db.save(newRecord) { (newRecord: CKRecord?, error: Error?) in
+                        if let error = error {
+                            self.handleError(error)
+                        }
+                        
+                        guard let newRecord = newRecord else {
+                            self.done()
+                            return
+                        }
+                        
+                        self.conch = CloudKitConverters.toConch(record: newRecord)
                         self.done()
-                        return
                     }
-                    
-                    self.conch = CloudKitConverters.toConch(record: newRecord)
-                    self.done()
                 }
-                
             }
             
             
