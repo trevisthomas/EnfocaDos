@@ -133,6 +133,7 @@ extension Perform{
         queue.addOperations([createMetaData, completeOp], waitUntilFinished: false)
     }
     
+    //Old and busted
     class func updateMetaData(updatedMetaData: MetaData, db: CKDatabase, callback : @escaping(_ metaData: MetaData?, _ error: String?)->()) {
         
         let queue = OperationQueue()
@@ -150,6 +151,22 @@ extension Perform{
         queue.addOperations([updateMetaData, completeOp], waitUntilFinished: false)
     }
     
+    class func updateMetaData(oldMetaData: MetaData, isCorrect: Bool, elapsedTime: Int, db: CKDatabase, callback : @escaping(_ metaData: MetaData?, _ error: String?)->()) {
+        
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        let updateMetaData = OperationMergeUpdateMetaData(oldMetaData: oldMetaData, isCorrect: isCorrect, elapsedTime: elapsedTime, db: db, errorDelegate: errorHandler)
+        
+        let completeOp = BlockOperation {
+            OperationQueue.main.addOperation{
+                callback(updateMetaData.metaData, nil)
+            }
+        }
+        
+        completeOp.addDependency(updateMetaData)
+        queue.addOperations([updateMetaData, completeOp], waitUntilFinished: false)
+    }
     //Reload all tags from DB
     class func reloadTags(db: CKDatabase, enfocaRef: CKReference, callback : @escaping([Tag]?, _ error: String?)->()) {
         

@@ -18,6 +18,8 @@ class QuizPerfectScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sharedViewModel.updateDataStoreCache()
     }
     
     @IBAction func okButtonAction(_ sender: Any) {

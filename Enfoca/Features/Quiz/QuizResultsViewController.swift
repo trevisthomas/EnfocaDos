@@ -24,6 +24,9 @@ class QuizResultsViewController: UIViewController {
         correctLabel.text = "\(sharedViewModel.getCorrectCount())"
         askedLabel.text = "\(sharedViewModel.getWordsAskedCount())"
         scoreLabel.text = sharedViewModel.getScore()
+        
+        
+        sharedViewModel.updateDataStoreCache()
     }
     
     func initialize(sharedViewModel: QuizViewModel){

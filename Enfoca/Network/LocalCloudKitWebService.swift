@@ -98,6 +98,8 @@ class LocalCloudKitWebService : WebService {
         }
         
         if ds.isInitialized {
+            
+            print("DataStore recreated via json")
             self.dataStore = ds
             
             invokeLater {
@@ -108,6 +110,7 @@ class LocalCloudKitWebService : WebService {
             
             return
         } else {
+            print("DataStore needs to be loaded from iCloud")
             
             let recordId = CloudKitConverters.toCKRecordID(fromRecordName: ds.getUserDictionary().enfocaRef)
             let tempRef = CKReference(recordID: recordId, action: .none)
@@ -448,14 +451,14 @@ class LocalCloudKitWebService : WebService {
         let metaData = dataStore.getMetaData(forWordPair: forWordPair)
         
         if let currentMetaData = metaData {
-            //Update
-            self.dataStore.updateScore(metaData: currentMetaData, correct: correct, elapsedTime: elapsedTime)
-            
-            Perform.updateMetaData(updatedMetaData: currentMetaData, db: privateDb) { (metaData: MetaData?, error: String?) in
+            Perform.updateMetaData(oldMetaData: currentMetaData, isCorrect: correct, elapsedTime: elapsedTime, db: privateDb) { (metaData: MetaData?, error: String?) in
                 self.showNetworkActivityIndicator = false
                 
                 if let error = error { callback(nil, error) }
                 guard let metaData = metaData else { fatalError() }
+                
+                self.dataStore.add(metaData: metaData)
+                
                 callback(metaData, nil)
             }
         } else {

@@ -537,6 +537,7 @@ class DataStore {
         
     }
     
+    //Deprecated
     func updateScore(metaData: MetaData, correct: Bool, elapsedTime: Int) {
         if correct {
             metaData.correct(elapsedTime: elapsedTime)

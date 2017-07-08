@@ -93,6 +93,9 @@
 		0F0BAFDB1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDA1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift */; };
 		0F0BAFDC1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDA1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift */; };
 		0F0BAFDD1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDA1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift */; };
+		0F0BAFDF1F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */; };
+		0F0BAFE01F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */; };
+		0F0BAFE11F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */; };
 		0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
 		0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1AAA1D1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
@@ -546,6 +549,7 @@
 		0F0BAFD21F0F4FD9005251AE /* CreateTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTag.swift; sourceTree = "<group>"; };
 		0F0BAFD61F0F662D005251AE /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		0F0BAFDA1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFetchDictionarListForEnfocaRef.swift; sourceTree = "<group>"; };
+		0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationMergeUpdateMetaData.swift; sourceTree = "<group>"; };
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
 		0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
@@ -1151,6 +1155,7 @@
 			isa = PBXGroup;
 			children = (
 				0FA4A5341EC8ECB400F31F9A /* OperationCreateMetaData.swift */,
+				0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */,
 				0FA4A5351EC8ECB400F31F9A /* OperationFetchMetaData.swift */,
 				0F011EB91EEC8B0700939B75 /* OperationUpdateMetaData.swift */,
 			);
@@ -1564,6 +1569,7 @@
 				0F028DD91F000AE5008200E2 /* LookupTextViewController.swift in Sources */,
 				0F028DEC1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */,
 				0F911E251EE75D4600F21855 /* OperationCreateMetaData.swift in Sources */,
+				0F0BAFE01F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */,
 				0F911E261EE75D4600F21855 /* OperationUpdateTag.swift in Sources */,
 				0F911E271EE75D4600F21855 /* ProgressObserver.swift in Sources */,
 				0F911E281EE75D4600F21855 /* InternalUser.swift in Sources */,
@@ -1720,6 +1726,7 @@
 				0F1AAA371F08041700ACC0C3 /* EnfocaDefaultAnimator.swift in Sources */,
 				0F0BAFD11F0F4E74005251AE /* CreateMetaData.swift in Sources */,
 				0F1AAA381F08041700ACC0C3 /* QuizResultsAnimator.swift in Sources */,
+				0F0BAFE11F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */,
 				0F1AAA231F0803F000ACC0C3 /* UserDictionary.swift in Sources */,
 				0F1AAA241F0803F000ACC0C3 /* OperationCreateDictionary.swift in Sources */,
 				0F1AAA251F0803F000ACC0C3 /* OperationUpdateDictionary.swift in Sources */,
@@ -1908,6 +1915,7 @@
 				0F0BAFBB1F0CD124005251AE /* ModularHomeViewController.swift in Sources */,
 				0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */,
 				0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */,
+				0F0BAFDF1F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */,
 				0FA4A5321EC8ECA500F31F9A /* ReadWriteMutex.swift in Sources */,
 				0F0BAFC11F0D778A005251AE /* HomeController.swift in Sources */,
 				0FA4A5221EC8EC9000F31F9A /* BaseUserOperation.swift in Sources */,

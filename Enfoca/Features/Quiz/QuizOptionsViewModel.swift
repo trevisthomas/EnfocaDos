@@ -34,6 +34,8 @@ protocol QuizViewModel {
     
     var timeTakenForCardInMiliSeconds: Int? {get set}
     
+    func updateDataStoreCache()
+    
 }
 
 
@@ -238,5 +240,9 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     
     func getCardTimeoutWarning() -> Int {
         return getAppDelegate().applicationDefaults.cardTimeoutWarning
+    }
+    
+    func updateDataStoreCache() {
+        getAppDelegate().saveDefaults()
     }
 }

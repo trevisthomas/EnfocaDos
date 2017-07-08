@@ -77,6 +77,14 @@ class MetaData : Hashable {
         self.timedViewCount = timedViewCount
     }
 
+    func updateScore(isCorrect: Bool, elapsedTime: Int) {
+        if isCorrect {
+            correct(elapsedTime: elapsedTime)
+        } else {
+            incorrect(elapsedTime: elapsedTime)
+        }
+    }
+    
     func correct(elapsedTime: Int){
         dateUpdated = Date()
         timedViewCount += 1
