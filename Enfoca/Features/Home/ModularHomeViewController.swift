@@ -95,6 +95,9 @@ class ModularHomeViewController: UIViewController {
     //TREVIS, you dropped this here while the animator was disabled
     override func viewDidAppear(_ animated: Bool) {
         self.magifierCloseView.initialize()
+        self.magifierCloseView.isSearchMode = isExpanded()
+        
+        self.searchOrCreateTextField.selectTextIfNotEmpty()
     }
     
     private func presentDataOutOfSynchAlert(){
