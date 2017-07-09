@@ -49,8 +49,11 @@ class EditorViewController: UIViewController {
     fileprivate var delegate : EditorViewControllerDelegate!
     private var tagViewController: TagSelectionViewController!
     
+    private var animateTagSelector: Bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        animateTagSelector = true 
         
         initializeLookAndFeel()
         
@@ -64,7 +67,10 @@ class EditorViewController: UIViewController {
         wordTextField.initialize()
         definitionTextField.initialize()
         
-        tagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true)
+        if animateTagSelector {
+            tagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true)
+            animateTagSelector = false
+        }
     }
     
     func initialize(delegate: EditorViewControllerDelegate) {

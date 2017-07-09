@@ -26,16 +26,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-B8-fPG">
-                                        <rect key="frame" x="48" y="32" width="318" height="26"/>
+                                        <rect key="frame" x="48" y="32" width="302" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvO-LX-Fex">
+                                        <rect key="frame" x="355" y="33" width="51" height="30"/>
+                                        <state key="normal" title="Browse">
+                                            <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="browseButonAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="CxO-VC-BmI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="QvO-LX-Fex" firstAttribute="baseline" secondItem="DXF-B8-fPG" secondAttribute="baseline" id="2v1-Vl-SK5"/>
                                     <constraint firstAttribute="height" constant="64" id="4YW-mC-ZsM"/>
-                                    <constraint firstAttribute="trailing" secondItem="DXF-B8-fPG" secondAttribute="trailing" constant="48" id="OZF-Zl-hjb"/>
+                                    <constraint firstAttribute="trailing" secondItem="DXF-B8-fPG" secondAttribute="trailing" constant="64" id="Dmd-s0-khf"/>
+                                    <constraint firstAttribute="trailing" secondItem="QvO-LX-Fex" secondAttribute="trailing" constant="8" id="IcK-6T-gPG"/>
                                     <constraint firstItem="DXF-B8-fPG" firstAttribute="leading" secondItem="q1d-8s-92l" secondAttribute="leading" constant="48" id="ljz-1o-u3q"/>
                                 </constraints>
                             </view>
@@ -225,11 +236,20 @@
                         <outlet property="topToHeaderBottomConstraint" destination="t5E-b1-DNg" id="yGX-l4-dea"/>
                         <outlet property="wordCountLabel" destination="bfZ-Ux-7sl" id="Gkw-fw-TV3"/>
                         <segue destination="qW3-WU-nJg" kind="show" identifier="BeginQuizSegue" id="oQB-FF-xDm"/>
+                        <segue destination="Jg4-ih-pIt" kind="show" identifier="BrowseSegue" id="Ghc-Ok-RR8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kps-BM-sAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="-1701.358695652174"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="8XJ-KK-eqd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Browse" id="Jg4-ih-pIt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlU-5F-O8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="-1634"/>
         </scene>
         <!--Matching Round View Controller-->
         <scene sceneID="60i-Mq-omf">
@@ -882,8 +902,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AKo-2B-8On"/>
-        <segue reference="rGV-qo-zJg"/>
         <segue reference="Owj-22-ncO"/>
+        <segue reference="oQB-FF-xDm"/>
+        <segue reference="rGV-qo-zJg"/>
     </inferredMetricsTieBreakers>
 </document>

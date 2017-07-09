@@ -333,6 +333,9 @@ class EditWordPairController: Controller {
     }
     
     func applyTag(_ tag: Tag) {
+        
+        appDefaults.insertMostRecentTag(tag: tag)
+        
         if !selectedTags.contains(tag) {
             selectedTags.append(tag)
             delegate.onUpdate()

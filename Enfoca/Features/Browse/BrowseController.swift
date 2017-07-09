@@ -15,7 +15,7 @@ protocol BrowseControllerDelegate {
 }
 
 class BrowseController : Controller {
-    private var tag : Tag
+    private(set) var tag : Tag
     private let delegate: BrowseControllerDelegate
     let wordOrder: WordPairOrder
     
@@ -62,7 +62,5 @@ class BrowseController : Controller {
             }
         default: break
         }
-        
-        
     }
 }

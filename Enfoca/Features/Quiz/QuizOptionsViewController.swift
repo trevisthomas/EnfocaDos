@@ -18,7 +18,7 @@ protocol QuizOptionsViewControllerDelegate {
 }
 
 class QuizOptionsViewController: UIViewController {
-    var delegate : QuizViewControllerDelegate!
+    private var delegate : QuizViewControllerDelegate!
     
     @IBOutlet weak var cardSideSegmentedControl: UISegmentedControl!
     @IBOutlet weak var titleLabel: UILabel!
@@ -36,6 +36,9 @@ class QuizOptionsViewController: UIViewController {
         formatWordCountText()
     }
     
+    func initialize(delegate: QuizViewControllerDelegate) {
+        self.delegate = delegate
+    }
     
     @IBAction func cardSideSegmentedControlValueChanged(_ sender: UISegmentedControl) {
         viewModel.cardSide = CardSide.values[sender.selectedSegmentIndex]
@@ -69,10 +72,15 @@ class QuizOptionsViewController: UIViewController {
     private func formatWordCountText() {
         wordCountLabel.text = "Word Count: \(viewModel.wordCount!)"
     }
+    
     @IBAction func backButtonAction(_ sender: Any) {
         dismiss(animated: true) {
             //whatever
         }
+    }
+    
+    @IBAction func browseButonAction(_ sender: Any) {
+        performSegue(withIdentifier: "BrowseSegue", sender: nil)
     }
    
     @IBAction func cancelAction(_ sender: EnfocaButton) {
@@ -82,10 +90,13 @@ class QuizOptionsViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let cardFrontViewController = segue.destination as? CardFrontViewController else { fatalError() }
-        
-        cardFrontViewController.initialize(viewModel: viewModel)
-        cardFrontViewController.transitioningDelegate = self
+        if let to = segue.destination as? CardFrontViewController {
+            to.initialize(viewModel: viewModel)
+            to.transitioningDelegate = self
+        } else if let to = segue.destination as? BrowseViewController {
+            //Trevis: Notice that when you go straignt from Quiz Options to Browse that you use the app defaults word order, not necessairly the selection on the home view.
+            to.initialize(tag: viewModel.tag, wordOrder: getAppDelegate().applicationDefaults.wordPairOrder)
+        }
     }
     
     @IBAction func startQuizAction(_ sender: EnfocaButton) {

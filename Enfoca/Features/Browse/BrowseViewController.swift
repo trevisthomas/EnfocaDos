@@ -24,7 +24,7 @@ class BrowseViewController: UIViewController {
     
     fileprivate var wordPairTableViewController: WordPairTableViewController!
     
-    var controller : BrowseController!
+    fileprivate var controller : BrowseController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,10 @@ class BrowseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         controller.loadWordPairs()
+    }
+    
+    func initialize(tag: Tag, wordOrder: WordPairOrder){
+        controller = BrowseController(tag: tag, wordOrder: wordOrder, delegate: self)
     }
     
     private func initializeSubViews() {
@@ -62,6 +66,10 @@ class BrowseViewController: UIViewController {
         }
     }
     
+    @IBAction func presentQuizAction(_ sender: Any) {
+        performSegue(withIdentifier: "QuizSegue", sender: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editWordPairVC = segue.destination as? EditWordPairViewController  {
             
@@ -69,8 +77,9 @@ class BrowseViewController: UIViewController {
             
             editWordPairVC.delegate = self
             
+        } else if let to = segue.destination as? QuizOptionsViewController {
+            to.initialize(delegate: self)
         }
-        
     }
     
     
@@ -180,4 +189,10 @@ extension BrowseViewController: EnfocaDefaultAnimatorTarget {
         return tableViewContainer
     }
     
+}
+
+extension BrowseViewController: QuizViewControllerDelegate {
+    func tagSelectedForQuiz() -> Tag {
+        return controller.tag
+    }
 }

@@ -40,7 +40,7 @@ protocol QuizViewModel {
 
 
 class QuizOptionsViewModel: Controller, QuizViewModel {
-    private let tag: Tag
+    let tag: Tag
     private(set) var wordCount: Int!  
     var cardOrder: CardOrder!
     var cardSide: CardSide!
