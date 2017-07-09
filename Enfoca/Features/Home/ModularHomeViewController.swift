@@ -157,6 +157,10 @@ class ModularHomeViewController: UIViewController {
 
     func searchOrCreateTextDidBegin(_ textField: UITextField) {
         showWordTable()
+        
+        invokeLater {
+            self.searchOrCreateTextField.selectTextIfNotEmpty()
+        }
     }
     
     func searchOrCreateTextDidChange(_ textField: UITextField) {
