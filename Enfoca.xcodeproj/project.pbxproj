@@ -156,6 +156,12 @@
 		0F2CB43B1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
 		0F2CB43C1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
 		0F2CB43D1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
+		0F2CB4431F128541002CDE68 /* MruTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */; };
+		0F2CB4441F128541002CDE68 /* MruTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */; };
+		0F2CB4451F128541002CDE68 /* MruTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */; };
+		0F2CB4471F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */; };
+		0F2CB4481F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */; };
+		0F2CB4491F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */; };
 		0F35B03D1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
 		0F35B03E1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
 		0F35B0411F016831001AC511 /* OperationUpdateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */; };
@@ -560,6 +566,8 @@
 		0F1AAA551F09423800ACC0C3 /* OperationLoadOrCreateConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationLoadOrCreateConch.swift; path = Dictionary/OperationLoadOrCreateConch.swift; sourceTree = "<group>"; };
 		0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationDeleteConch.swift; path = Dictionary/OperationDeleteConch.swift; sourceTree = "<group>"; };
+		0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MruTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairStatisticsViewController.swift; sourceTree = "<group>"; };
 		0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateDictionary.swift; path = Enfoca/Network/Operations/Core/Dictionary/OperationCreateDictionary.swift; sourceTree = SOURCE_ROOT; };
 		0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateDictionary.swift; path = Dictionary/OperationUpdateDictionary.swift; sourceTree = "<group>"; };
 		0F35B0431F0173CD001AC511 /* Perform+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Perform+Dictionary.swift"; sourceTree = "<group>"; };
@@ -828,6 +836,8 @@
 			children = (
 				0F911E061EE08DBA00F21855 /* Tag */,
 				0F085B851EDC64DD00FC20A1 /* Edit.storyboard */,
+				0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */,
+				0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */,
 				0FE015A71EFAF42100780184 /* EditorViewController.swift */,
 				0F085B891EDC66A200FC20A1 /* EditWordPairController.swift */,
 				0F085B871EDC667700FC20A1 /* EditWordPairViewController.swift */,
@@ -1600,6 +1610,7 @@
 				0F911E371EE75D4600F21855 /* Event.swift in Sources */,
 				0F911E381EE75D4600F21855 /* WordPairTableViewController.swift in Sources */,
 				0F911E391EE75D4600F21855 /* Tag.swift in Sources */,
+				0F2CB4441F128541002CDE68 /* MruTagCollectionViewCell.swift in Sources */,
 				0F1AAA221F07021200ACC0C3 /* UIView+.swift in Sources */,
 				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
 				0FE015A31EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */,
@@ -1646,6 +1657,7 @@
 				0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */,
 				0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */,
 				0F028DE21F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */,
+				0F2CB4481F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */,
 				0F911E561EE75D4600F21855 /* BaseUserOperation.swift in Sources */,
 				0F911E571EE75D4600F21855 /* TagFilterViewModel.swift in Sources */,
 				0F011EBB1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */,
@@ -1745,6 +1757,7 @@
 				0F1AAA2C1F0803F000ACC0C3 /* Date+.swift in Sources */,
 				0F1AAA2D1F0803F000ACC0C3 /* UIView+.swift in Sources */,
 				0F1AAA2E1F0803F000ACC0C3 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
+				0F2CB4451F128541002CDE68 /* MruTagCollectionViewCell.swift in Sources */,
 				0F1AAA2F1F0803F000ACC0C3 /* CustomAnimations.swift in Sources */,
 				0F1AAA301F0803F000ACC0C3 /* Randomizer.swift in Sources */,
 				0F911F151EE76ED500F21855 /* Import.swift in Sources */,
@@ -1813,6 +1826,7 @@
 				0F0BAFCD1F0F4BC8005251AE /* CreateTagAssociation.swift in Sources */,
 				0F911EC21EE766D900F21855 /* Gender.swift in Sources */,
 				0F911EC31EE766D900F21855 /* OperationDeleteRecord.swift in Sources */,
+				0F2CB4491F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */,
 				0F911EC41EE766D900F21855 /* UIViewController+.swift in Sources */,
 				0F911EC51EE766D900F21855 /* WordPairOrder.swift in Sources */,
 				0F911EC61EE766D900F21855 /* FetchUserRecordOperation.swift in Sources */,
@@ -1836,6 +1850,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2CB4431F128541002CDE68 /* MruTagCollectionViewCell.swift in Sources */,
 				0FE0159F1EF8594800780184 /* ChangeCardAnimator.swift in Sources */,
 				0F0BAFD71F0F662D005251AE /* Array+.swift in Sources */,
 				0F911F2C1EE8573500F21855 /* UITextField+.swift in Sources */,
@@ -1871,6 +1886,7 @@
 				0F011ECE1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */,
 				0FA4A52D1EC8EC9C00F31F9A /* BaseOperation.swift in Sources */,
 				0F911E0C1EE08E8300F21855 /* TagCell.swift in Sources */,
+				0F2CB4471F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */,
 				0F911E181EE30AD100F21855 /* EnfocaButton.swift in Sources */,
 				0FD1E20B1ED08E7900D8BD1A /* WordPairTableViewCell.swift in Sources */,
 				0FA4A5181EC8EC6E00F31F9A /* Perform+Tags.swift in Sources */,
@@ -2230,6 +2246,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -2247,6 +2264,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

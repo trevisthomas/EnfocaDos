@@ -149,6 +149,7 @@ extension EditWordPairViewController: EditWordPairControllerDelegate {
     func onUpdate() {
         updateFields()
         refreshButtonState()
+        editorViewController.refresh()
     }
     
     func dismissViewController() {
@@ -178,6 +179,14 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
 
 //This is maddness.  Why is this delegate here? TODO, get rid of this.  These things should just come straignt from the VM/Controller
 extension EditWordPairViewController: EditorViewControllerDelegate {
+    
+
+    var mostRecentlyUsedTags: [Tag] {
+        get{
+            return controller.mostRecentlyUsedTags
+        }
+    }
+
     var wordText: String {
         get {
             return controller.word
@@ -256,6 +265,10 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     
     func applyTag(_ tag: Tag) {
         controller.applyTag(tag)
+    }
+    
+    func removeTag(_ tag: Tag) {
+        controller.removeTag(tag: tag)
     }
 }
 

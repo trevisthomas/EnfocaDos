@@ -129,6 +129,8 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
         tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
         localTagDictionary[tag] = true
         tagFilterViewModelDelegate?.selectedTagsChanged()
+        
+        getAppDelegate().applicationDefaults.insertMostRecentTag(tag: tag)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -138,6 +140,8 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
         let tag = localTempTagFilters[indexPath.row]
         localTagDictionary[tag] = false
         tagFilterViewModelDelegate?.selectedTagsChanged()
+        
+        getAppDelegate().applicationDefaults.insertMostRecentTag(tag: tag)
     }
     
     

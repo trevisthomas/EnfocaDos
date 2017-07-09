@@ -32,6 +32,8 @@ class EditWordPairController: Controller {
     private var originalWordPair: WordPair?
     private var originalMetaData: MetaData?
     
+    var mostRecentlyUsedTags: [Tag] = []
+    
     init(delegate: EditWordPairControllerDelegate, wordPairOrder order: WordPairOrder, text: String) {
         
         self.delegate = delegate
@@ -44,6 +46,14 @@ class EditWordPairController: Controller {
         case .wordAsc, .wordDesc:
             self.word = text
         }
+        
+        setupMruTags()
+        
+    }
+    
+    private func setupMruTags(){
+        mostRecentlyUsedTags = []
+        mostRecentlyUsedTags.append(contentsOf: appDefaults.getMostRecentlyUsedTags())
     }
     
     init(delegate: EditWordPairControllerDelegate, wordPair: WordPair) {
@@ -51,6 +61,7 @@ class EditWordPairController: Controller {
         isEditMode = true
         loadOriginalWordPair(sourceWordPair: wordPair)
         
+        setupMruTags()
     }
     
     private func loadOriginalWordPair(sourceWordPair: WordPair) {

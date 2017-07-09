@@ -13,6 +13,8 @@ protocol EditorViewControllerDelegate {
     var wordText: String {get set}
     var definitionText: String {get set}
     var selectedTagText : String {get}
+    var mostRecentlyUsedTags:[Tag] {get}
+    var selectedTags: [Tag] {get}
     
     var dateAdded: String{get}
     var dateUpdated: String{get}
@@ -26,6 +28,7 @@ protocol EditorViewControllerDelegate {
     
     func isCreateMode() ->Bool
     func applyTag(_ tag: Tag)
+    func removeTag(_ tag: Tag)
 }
 
 class EditorViewController: UIViewController {
@@ -34,40 +37,41 @@ class EditorViewController: UIViewController {
     @IBOutlet weak var lookupWordButton: EnfocaButton!
     @IBOutlet weak var lookupDefinitionButton: EnfocaButton!
     
-    @IBOutlet weak var selectedTagsLabel: UILabel!
-    
     @IBOutlet weak var wordTextField: AnimatedTextField!
     @IBOutlet weak var definitionTextField: AnimatedTextField!
     @IBOutlet weak var saveButton: EnfocaButton!
     @IBOutlet weak var deleteButton: EnfocaButton!
     @IBOutlet weak var showQuizStatsButton: UIButton!
     
-    @IBOutlet weak var accuracyLabel: UILabel!
-    @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var dateAddedLabel: UILabel!
-    @IBOutlet weak var dateUpdatedLabel: UILabel!
-    @IBOutlet weak var averageTimeLabel: UILabel!
+    @IBOutlet weak var tagCollectionViewContainer: UIView!
+    @IBOutlet weak var mruTagCollectionView: UICollectionView!
     
-    @IBOutlet weak var statisticsWrapperView: UIView!
-    
-    @IBOutlet weak var mostRecientlyUsedButton: UIButton!
-    
-    private var delegate : EditorViewControllerDelegate!
-    private var mostRecientTag: Tag!
+    fileprivate var delegate : EditorViewControllerDelegate!
+    private var tagViewController: TagSelectionViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeLookAndFeel()
+        
+        let layout = mruTagCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.estimatedItemSize = CGSize(width: 20, height: 20)
+        
+        layout.minimumInteritemSpacing = view.frame.width * 0.02133
     }
     
     override func viewDidAppear(_ animated: Bool) {
         wordTextField.initialize()
         definitionTextField.initialize()
+        
+        tagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true)
     }
     
     func initialize(delegate: EditorViewControllerDelegate) {
         self.delegate = delegate
+        
+        initializeSubViews()
+        
         refresh()
     }
     
@@ -79,14 +83,13 @@ class EditorViewController: UIViewController {
         wordTextField.updatePlacelderText(placeholder: getTermTitle())
         
         definitionTextField.updatePlacelderText(placeholder: getDefinitionTitle())
+    }
+    
+    private func initializeSubViews(){
+        tagViewController = createTagSelectionViewController(inContainerView: tagCollectionViewContainer)
+        tagViewController.animateCollectionViewCellCreation = true
+        tagViewController.setScrollDirection(direction: .horizontal)
         
-        if let tag = HomeOverlayViewController.mostRecentTag {
-            mostRecientTag = tag
-            mostRecientlyUsedButton.setTitle("Last: \(tag.name)", for: .normal)
-            mostRecientlyUsedButton.isHidden = false
-        } else {
-            mostRecientlyUsedButton.isHidden = true
-        }
     }
     
     func definitionTextDidChange(_ textField: UITextField) {
@@ -98,13 +101,7 @@ class EditorViewController: UIViewController {
     }
 
     @IBAction func toggleQuizStatistics(_ sender: UIButton) {
-        statisticsWrapperView.isHidden = !statisticsWrapperView.isHidden
-        
-        if statisticsWrapperView.isHidden {
-            sender.setTitle("Show Quiz Statistics", for: .normal)
-        } else {
-            sender.setTitle("Hide Quiz Statistics", for: .normal)
-        }
+        //TODO: Popup stats
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
@@ -115,21 +112,12 @@ class EditorViewController: UIViewController {
         delegate.performDelete()
     }
    
-    @IBAction func selectedTagsTappedAction(_ sender: Any) {
-        print("Tags!")
-        delegate.performTagEdit()
-    }
-    
     @IBAction func lookupWordAction(_ sender: Any) {
         performSegue(withIdentifier: "LookupWordSegue", sender: CardSide.term)
     }
     
     @IBAction func lookupDefinitionAction(_ sender: Any) {
         performSegue(withIdentifier: "LookupDefinitionSegue", sender: CardSide.definition)
-    }
-    
-    @IBAction func applyMruTag(_ sender: Any) {
-        delegate.applyTag(mostRecientTag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -161,14 +149,6 @@ class EditorViewController: UIViewController {
         guard let _ = delegate else { return }
         wordTextField.text = delegate.wordText
         definitionTextField.text = delegate.definitionText
-        selectedTagsLabel.text = delegate.selectedTagText
-        
-        accuracyLabel.text = delegate.score
-        countLabel.text = delegate.count
-        dateAddedLabel.text = delegate.dateAdded
-        dateUpdatedLabel.text = delegate.dateUpdated
-        averageTimeLabel.text = delegate.averageTime
-        
         
         
         //TODO! Learn how to make the custom text field realize that the text was set without breaking the text attribute.
@@ -177,6 +157,9 @@ class EditorViewController: UIViewController {
         
 //        statisticsWrapperView.isHidden = delegate.isCreateMode()
         showQuizStatsButton.isHidden = delegate.isCreateMode()
+        
+        mruTagCollectionView.reloadData()
+//        tagViewController.refresh()
     }
     
     func failedValidation(){
@@ -190,3 +173,36 @@ extension EditorViewController: UIPopoverPresentationControllerDelegate {
         return .none
     }
 }
+
+extension EditorViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate.removeTag(delegate.selectedTags[indexPath.row])
+    }
+}
+
+extension EditorViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return delegate.selectedTags.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MruTagCollectionViewCell.identifier, for: indexPath) as! MruTagCollectionViewCell
+        
+        cell.initialize(tag: delegate.selectedTags[indexPath.row])
+        
+        return cell
+    }
+}
+
+extension EditorViewController: BrowseTagSelectionDelegate {
+    func browseWordsWithTag(withTag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
+        delegate.applyTag(withTag)
+    }
+    
+    func showEditor() {
+        delegate.performTagEdit()
+    }
+    
+}
+

@@ -77,6 +77,7 @@ class DictionaryLoadingViewController: UIViewController {
                 getAppDelegate().webService.fetchCurrentConch(dictionary: oldDict, callback: { (conch: String?, error: String?) in
                     if let error = error {
                         self.presentFatalAlert(title: "Initialization error", message: error)
+                        return
                     }
                     guard let conch = conch else { fatalError() }
                     oldDict.conch = conch

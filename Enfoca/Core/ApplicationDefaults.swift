@@ -27,6 +27,9 @@ protocol ApplicationDefaults {
     var wordPairOrder: WordPairOrder {get set}
     var cardTimeout: Int {get set}
     var cardTimeoutWarning: Int {get set}
+    
+    func insertMostRecentTag(tag: Tag)
+    func getMostRecentlyUsedTags() -> [Tag]
 }
 
 class LocalApplicationDefaults : ApplicationDefaults {
@@ -41,11 +44,23 @@ class LocalApplicationDefaults : ApplicationDefaults {
     var numberOfIncorrectAnswersTillReview: Int = 5
     var cardTimeout: Int = 30
     var cardTimeoutWarning: Int = 5
+    var mostRecentlyUsedTags: [Tag] = []
     
     var fetchWordPairPageSize: Int {
         get {
             return 100
         }
+    }
+    
+    func insertMostRecentTag(tag: Tag) {
+        if let remove = mostRecentlyUsedTags.index(of: tag) {
+            mostRecentlyUsedTags.remove(at: remove)
+        }
+        mostRecentlyUsedTags.insert(tag, at: 0)
+    }
+    
+    func getMostRecentlyUsedTags() -> [Tag] {
+        return mostRecentlyUsedTags
     }
     
     func save(dictionary: UserDictionary, includingDataStore json: String?){
@@ -66,6 +81,7 @@ class LocalApplicationDefaults : ApplicationDefaults {
     
     //Does not delete cached dictionaries, just which one was active
     func clearUserDefauts() {
+        mostRecentlyUsedTags = []
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: dataStoreKey)
     }

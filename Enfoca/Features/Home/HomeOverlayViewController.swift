@@ -20,10 +20,6 @@ class HomeOverlayViewController: UIViewController {
     @IBOutlet weak var segmentedControlLeftConstraint: NSLayoutConstraint!
     
     fileprivate var delegate : HomeOverlayViewControllerDelegate!
-    
-    static var mostRecentTag : Tag?
-    
-    
     fileprivate var tagViewController: TagSelectionViewController!
     
     override func viewDidLoad() {
@@ -63,9 +59,14 @@ extension HomeOverlayViewController {
 }
 
 extension HomeOverlayViewController: BrowseTagSelectionDelegate {
+    func showEditor() {
+        
+    }
+
     func browseWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
         
-        HomeOverlayViewController.mostRecentTag = tag
+        getAppDelegate().applicationDefaults.insertMostRecentTag(tag: tag)
+        
         if browseQuizSegmentedControl.selectedSegmentIndex == 0 {
             delegate.quizWordsWithTag(withTag: tag, atRect: atRect, cell: cell)
         } else {

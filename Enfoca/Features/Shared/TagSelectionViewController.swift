@@ -11,6 +11,7 @@ import UIKit
 
 protocol BrowseTagSelectionDelegate {
     func browseWordsWithTag(withTag: Tag, atRect: CGRect, cell: UICollectionViewCell)
+    func showEditor()
 }
 
 class TagSelectionViewController: UIViewController {
@@ -55,6 +56,12 @@ class TagSelectionViewController: UIViewController {
  * The intended API
  */
 extension TagSelectionViewController {
+    
+    func setScrollDirection(direction: UICollectionViewScrollDirection) {
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = direction
+        }
+    }
     
     func initialize(tags: [Tag], browseDelegate: BrowseTagSelectionDelegate, animated: Bool = false){
         self.browseDelegate = browseDelegate
@@ -114,7 +121,7 @@ extension TagSelectionViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return tags.count
+        return tags.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -122,7 +129,12 @@ extension TagSelectionViewController : UICollectionViewDataSource {
             fatalError()
         }
         
-        let tag = tags[indexPath.row]
+        let tag: Tag
+        if (indexPath.row == 0) {
+            tag = editMarkerTag
+        } else {
+            tag = tags[indexPath.row - 1]
+        }
         
         cell.seed(tag: tag)
         
@@ -138,6 +150,12 @@ extension TagSelectionViewController : UICollectionViewDataSource {
             }
         }
         
+        if (indexPath.row == 0) {
+            cell.backgroundColor = Theme.gray
+        } else {
+            cell.backgroundColor = Theme.green
+        }
+        
         return cell
     }
     
@@ -151,7 +169,12 @@ extension TagSelectionViewController : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let tag = tags[indexPath.row]
+        if indexPath.row == 0 {
+            browseDelegate?.showEditor()
+            return 
+        }
+        
+        let tag = tags[indexPath.row - 1]
         let cell = collectionView.cellForItem(at: indexPath)!
         
         let attributes = collectionView.layoutAttributesForItem(at: indexPath)
