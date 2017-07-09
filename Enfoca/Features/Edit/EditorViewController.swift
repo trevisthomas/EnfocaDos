@@ -101,7 +101,7 @@ class EditorViewController: UIViewController {
     }
 
     @IBAction func toggleQuizStatistics(_ sender: UIButton) {
-        //TODO: Popup stats
+        performSegue(withIdentifier: "WordPairStatisticsSegue", sender: nil)
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
@@ -140,7 +140,12 @@ class EditorViewController: UIViewController {
             
             to.initialize(cardSide: cardSide, arguement: arguement)
             
-        } else {
+        } else if let to = segue.destination as? WordPairStatisticsViewController {
+            to.modalPresentationStyle = UIModalPresentationStyle.popover
+            to.popoverPresentationController!.delegate = self
+            to.initialize(delegate: delegate)
+        }
+        else {
             fatalError("Segue doesn't exist")
         }
     }

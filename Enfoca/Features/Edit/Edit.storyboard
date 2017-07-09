@@ -325,6 +325,9 @@
                         <segue destination="okf-Ve-OvJ" kind="popoverPresentation" identifier="LookupDefinitionSegue" popoverAnchorView="orA-H3-Ad0" id="mCd-OB-Wha">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
+                        <segue destination="1gx-tZ-WM5" kind="popoverPresentation" identifier="WordPairStatisticsSegue" popoverAnchorView="7LZ-Vg-7uY" id="2ae-H2-Oe6">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeY-in-Qc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
