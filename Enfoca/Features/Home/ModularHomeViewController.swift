@@ -14,7 +14,7 @@ class ModularHomeViewController: UIViewController {
     @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
     @IBOutlet weak var backButton: UIButton!
     
-    @IBOutlet weak var searchOrCreateTextField: UITextField!
+    @IBOutlet weak var searchOrCreateTextField: MultiLingualTextField!
     
     
     
@@ -74,6 +74,8 @@ class ModularHomeViewController: UIViewController {
         
         controller.initialize()
         getAppDelegate().addListener(listener: controller)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -142,6 +144,8 @@ class ModularHomeViewController: UIViewController {
         titleLabel.text = getSubject()
         
         searchOrCreateTextField.setPlaceholderTextColor(color: UIColor(hexString: "#ffffff", alpha: 0.19))
+        
+        
         
     }
     
@@ -265,8 +269,10 @@ class ModularHomeViewController: UIViewController {
         switch (sender.selectedSegmentIndex) {
         case 0:
             controller.wordOrder = WordPairOrder.definitionAsc
+            
         case 1:
             controller.wordOrder = WordPairOrder.wordAsc
+            
         default:
             fatalError()
         }
@@ -389,8 +395,18 @@ extension ModularHomeViewController: HomeControllerDelegate {
         switch (order) {
         case .definitionAsc, .definitionDesc:
             languageSegmentedControl.selectedSegmentIndex = 0
+            self.searchOrCreateTextField.language = nil
         case WordPairOrder.wordAsc, WordPairOrder.wordDesc:
             languageSegmentedControl.selectedSegmentIndex = 1
+            let dictionary = self.controller.getCurrentDictionary()
+            self.searchOrCreateTextField.language = dictionary.language
+        }
+        
+        if searchOrCreateTextField.isFirstResponder {
+            searchOrCreateTextField.resignFirstResponder()
+            invokeLater {
+                self.searchOrCreateTextField.becomeFirstResponder()
+            }
         }
     }
 }
