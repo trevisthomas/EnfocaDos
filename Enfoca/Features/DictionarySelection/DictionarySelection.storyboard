@@ -83,7 +83,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zpq-p5-VR6" id="2w9-nj-Mmh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-jP-SAS" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
@@ -246,7 +246,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWB-b5-iS4" id="cYi-Dz-mA4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-hn-12U" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
@@ -407,11 +407,17 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaQ-49-HrU">
-                                        <rect key="frame" x="173" y="388" width="68" height="30"/>
-                                        <state key="normal" title="Language"/>
+                                        <rect key="frame" x="169" y="388" width="76" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Language">
+                                            <color key="titleColor" red="0.47003650670000002" green="0.65289556979999996" blue="0.0026309711390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="languageAction:" destination="IJz-yU-CSp" eventType="touchUpInside" id="qCh-ll-70n"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pPt-VP-q2p">
-                                        <rect key="frame" x="125.66666666666669" y="592" width="163" height="50"/>
+                                        <rect key="frame" x="126" y="592" width="163" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBZ-q6-vwa" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="50"/>
@@ -467,15 +473,111 @@
                         <outlet property="backButton" destination="hW9-tx-ViV" id="059-Jv-zzG"/>
                         <outlet property="createButton" destination="eBZ-q6-vwa" id="iVc-Bi-R0E"/>
                         <outlet property="definitionTextField" destination="fpz-Yq-76V" id="IEC-bV-8Yh"/>
+                        <outlet property="languageButton" destination="TaQ-49-HrU" id="3ye-ey-OpW"/>
                         <outlet property="subjectTextField" destination="b7z-hU-NRQ" id="b5L-gY-NqH"/>
                         <outlet property="termTextField" destination="44O-Ha-znd" id="dpV-hJ-sdh"/>
                         <segue destination="78n-cW-n0M" kind="show" identifier="LoadDictionarySegue" id="Kqj-gi-NaV"/>
                         <segue destination="TN6-Bh-ZUY" kind="show" identifier="LaunchAppSegue" id="U47-08-OY6"/>
+                        <segue destination="DhW-Ud-hf1" kind="popoverPresentation" identifier="LanguageSegue" popoverAnchorView="TaQ-49-HrU" id="gcG-9j-nQE">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYC-cW-NuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1793" y="1264"/>
+        </scene>
+        <!--Language Selection View Controller-->
+        <scene sceneID="mOT-HL-IOO">
+            <objects>
+                <viewController id="DhW-Ud-hf1" customClass="LanguageSelectionViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0sR-N7-gRM"/>
+                        <viewControllerLayoutGuide type="bottom" id="TeL-5u-C3w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="81p-8b-yQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8y-T4-HCQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZI-Rd-zMa">
+                                        <rect key="frame" x="163" y="13" width="89" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PZI-Rd-zMa" firstAttribute="centerY" secondItem="x8y-T4-HCQ" secondAttribute="centerY" id="2Dx-GP-Zmd"/>
+                                    <constraint firstAttribute="height" constant="50" id="Q0f-h9-VgB"/>
+                                    <constraint firstItem="PZI-Rd-zMa" firstAttribute="centerX" secondItem="x8y-T4-HCQ" secondAttribute="centerX" id="qyH-Jx-A5F"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Opz-VG-uGk">
+                                <rect key="frame" x="8" y="58" width="398" height="678"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LanguageTableViewCell" id="3N7-Au-o0M" customClass="LanguageTableViewCell" customModule="Data_Import" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="398" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3N7-Au-o0M" id="BbG-kJ-ZYL">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Language Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdM-DT-VY3">
+                                                    <rect key="frame" x="17" y="10" width="305" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" red="0.47003650670000002" green="0.65289556979999996" blue="0.0026309711390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="en-GB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvt-WH-HMo">
+                                                    <rect key="frame" x="330" y="11" width="52" height="22"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" red="0.65452438589999995" green="0.66682869199999995" blue="0.66264015440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hvt-WH-HMo" firstAttribute="centerY" secondItem="BbG-kJ-ZYL" secondAttribute="centerY" id="1pE-X0-DmH"/>
+                                                <constraint firstItem="SdM-DT-VY3" firstAttribute="leading" secondItem="BbG-kJ-ZYL" secondAttribute="leadingMargin" constant="9" id="86X-za-htX"/>
+                                                <constraint firstItem="SdM-DT-VY3" firstAttribute="centerY" secondItem="BbG-kJ-ZYL" secondAttribute="centerY" id="CXR-XH-KAe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hvt-WH-HMo" secondAttribute="trailing" constant="8" id="R7d-Sr-3YG"/>
+                                                <constraint firstItem="Hvt-WH-HMo" firstAttribute="leading" secondItem="SdM-DT-VY3" secondAttribute="trailing" constant="8" id="TX1-Dz-hYL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="languageCodeLabel" destination="Hvt-WH-HMo" id="rAI-9c-721"/>
+                                            <outlet property="languageNameLabel" destination="SdM-DT-VY3" id="nDl-eb-QGo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DhW-Ud-hf1" id="3T1-1X-L96"/>
+                                    <outlet property="delegate" destination="DhW-Ud-hf1" id="9UM-iA-bXx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Opz-VG-uGk" secondAttribute="trailing" constant="8" id="1jK-RV-Dpx"/>
+                            <constraint firstItem="Opz-VG-uGk" firstAttribute="top" secondItem="x8y-T4-HCQ" secondAttribute="bottom" constant="8" id="V7Q-hN-zNG"/>
+                            <constraint firstItem="x8y-T4-HCQ" firstAttribute="leading" secondItem="81p-8b-yQ4" secondAttribute="leading" id="aWJ-IV-8bP"/>
+                            <constraint firstItem="x8y-T4-HCQ" firstAttribute="top" secondItem="81p-8b-yQ4" secondAttribute="top" id="ccs-Ze-rKX"/>
+                            <constraint firstItem="TeL-5u-C3w" firstAttribute="top" secondItem="Opz-VG-uGk" secondAttribute="bottom" id="h9Q-MZ-5Ba"/>
+                            <constraint firstAttribute="trailing" secondItem="x8y-T4-HCQ" secondAttribute="trailing" id="kTw-Ee-7D1"/>
+                            <constraint firstItem="Opz-VG-uGk" firstAttribute="leading" secondItem="81p-8b-yQ4" secondAttribute="leading" constant="8" id="kUL-W6-Ehn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Opz-VG-uGk" id="Oy5-ba-koG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="It2-AY-bXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898.5507246376815" y="1770.6521739130437"/>
         </scene>
         <!--Dictionary Loading View Controller-->
         <scene sceneID="ykG-Nv-B80">

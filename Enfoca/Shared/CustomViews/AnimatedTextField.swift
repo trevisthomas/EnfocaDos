@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimatedTextField: UITextField, UITextFieldDelegate {
+class AnimatedTextField: MultiLingualTextField, UITextFieldDelegate {
     private var label : UILabel!
     
     var labelScale : CGFloat = 0.45
@@ -98,6 +98,7 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
 //    }
     
     func updatePlacelderText(placeholder: String?) {
+        self.placeholder = placeholder
         
         label.removeFromSuperview()
         label = nil
@@ -206,9 +207,6 @@ class AnimatedTextField: UITextField, UITextFieldDelegate {
             //            }
             
         })
-        
-        
-        
         
     }
     

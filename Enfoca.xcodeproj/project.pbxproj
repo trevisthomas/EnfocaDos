@@ -162,6 +162,18 @@
 		0F2CB4471F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */; };
 		0F2CB4481F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */; };
 		0F2CB4491F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */; };
+		0F2CB44B1F140CF9002CDE68 /* MultiLingualTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB44A1F140CF9002CDE68 /* MultiLingualTextField.swift */; };
+		0F2CB44C1F140CF9002CDE68 /* MultiLingualTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB44A1F140CF9002CDE68 /* MultiLingualTextField.swift */; };
+		0F2CB44D1F140CF9002CDE68 /* MultiLingualTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB44A1F140CF9002CDE68 /* MultiLingualTextField.swift */; };
+		0F2CB44F1F141266002CDE68 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB44E1F141266002CDE68 /* LanguageTableViewCell.swift */; };
+		0F2CB4501F141266002CDE68 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB44E1F141266002CDE68 /* LanguageTableViewCell.swift */; };
+		0F2CB4511F141266002CDE68 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB44E1F141266002CDE68 /* LanguageTableViewCell.swift */; };
+		0F2CB4531F1412C1002CDE68 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4521F1412C1002CDE68 /* LanguageSelectionViewController.swift */; };
+		0F2CB4541F1412C1002CDE68 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4521F1412C1002CDE68 /* LanguageSelectionViewController.swift */; };
+		0F2CB4551F1412C1002CDE68 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4521F1412C1002CDE68 /* LanguageSelectionViewController.swift */; };
+		0F2CB4571F141332002CDE68 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4561F141332002CDE68 /* Language.swift */; };
+		0F2CB4581F141332002CDE68 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4561F141332002CDE68 /* Language.swift */; };
+		0F2CB4591F141332002CDE68 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4561F141332002CDE68 /* Language.swift */; };
 		0F35B03D1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
 		0F35B03E1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
 		0F35B0411F016831001AC511 /* OperationUpdateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */; };
@@ -568,6 +580,10 @@
 		0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationDeleteConch.swift; path = Dictionary/OperationDeleteConch.swift; sourceTree = "<group>"; };
 		0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MruTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairStatisticsViewController.swift; sourceTree = "<group>"; };
+		0F2CB44A1F140CF9002CDE68 /* MultiLingualTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiLingualTextField.swift; sourceTree = "<group>"; };
+		0F2CB44E1F141266002CDE68 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageTableViewCell.swift; path = DictionarySelection/LanguageTableViewCell.swift; sourceTree = "<group>"; };
+		0F2CB4521F1412C1002CDE68 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageSelectionViewController.swift; path = DictionarySelection/LanguageSelectionViewController.swift; sourceTree = "<group>"; };
+		0F2CB4561F141332002CDE68 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateDictionary.swift; path = Enfoca/Network/Operations/Core/Dictionary/OperationCreateDictionary.swift; sourceTree = SOURCE_ROOT; };
 		0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateDictionary.swift; path = Dictionary/OperationUpdateDictionary.swift; sourceTree = "<group>"; };
 		0F35B0431F0173CD001AC511 /* Perform+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Perform+Dictionary.swift"; sourceTree = "<group>"; };
@@ -786,6 +802,8 @@
 				0F35B04C1F01BFA6001AC511 /* NewAppLaunchViewController.swift */,
 				0F35B04F1F02D1F6001AC511 /* DictionaryEditorViewController.swift */,
 				0F35B0521F0315B4001AC511 /* DictionaryLoadingViewController.swift */,
+				0F2CB44E1F141266002CDE68 /* LanguageTableViewCell.swift */,
+				0F2CB4521F1412C1002CDE68 /* LanguageSelectionViewController.swift */,
 			);
 			name = DictionarySelection;
 			sourceTree = "<group>";
@@ -797,6 +815,7 @@
 				0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */,
 				0F011EA91EEAF03500939B75 /* CheckMarkView.swift */,
 				0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */,
+				0F2CB44A1F140CF9002CDE68 /* MultiLingualTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1065,6 +1084,7 @@
 				0FA4A4DB1EC8E91E00F31F9A /* User.swift */,
 				0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */,
 				0FA4A4DD1EC8E91E00F31F9A /* WordPairOrder.swift */,
+				0F2CB4561F141332002CDE68 /* Language.swift */,
 				0F028DDD1F00C42B008200E2 /* UserDictionary.swift */,
 			);
 			path = Models;
@@ -1633,12 +1653,14 @@
 				0F0BAFBC1F0CD124005251AE /* ModularHomeViewController.swift in Sources */,
 				0F911E411EE75D4600F21855 /* String+.swift in Sources */,
 				0F911E421EE75D4600F21855 /* OperationFetchWordPairs.swift in Sources */,
+				0F2CB4501F141266002CDE68 /* LanguageTableViewCell.swift in Sources */,
 				0F911E431EE75D4600F21855 /* MagnifierCloseView.swift in Sources */,
 				0F911E441EE75D4600F21855 /* AppDelegate.swift in Sources */,
 				0F911E451EE75D4600F21855 /* EditWordPairViewController.swift in Sources */,
 				0F911E461EE75D4600F21855 /* OperationCreateTagAssociation.swift in Sources */,
 				0F911E471EE75D4600F21855 /* CloudAuthOperation.swift in Sources */,
 				0F911E481EE75D4600F21855 /* ErrorDelegate.swift in Sources */,
+				0F2CB4541F1412C1002CDE68 /* LanguageSelectionViewController.swift in Sources */,
 				0FE015A01EF8594800780184 /* ChangeCardAnimator.swift in Sources */,
 				0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */,
 				0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */,
@@ -1653,9 +1675,11 @@
 				0F011ECF1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift in Sources */,
 				0F028DD61EFEFC73008200E2 /* AnimatedTextField.swift in Sources */,
 				0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
+				0F2CB44C1F140CF9002CDE68 /* MultiLingualTextField.swift in Sources */,
 				0F911E531EE75D4600F21855 /* TypeAliases.swift in Sources */,
 				0F911E541EE75D4600F21855 /* UITableView+.swift in Sources */,
 				0F911E551EE75D4600F21855 /* ReadWriteMutex.swift in Sources */,
+				0F2CB4581F141332002CDE68 /* Language.swift in Sources */,
 				0F028DE21F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */,
 				0F2CB4481F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */,
 				0F911E561EE75D4600F21855 /* BaseUserOperation.swift in Sources */,
@@ -1728,7 +1752,9 @@
 				0F1AAA4F1F08044B00ACC0C3 /* Theme.swift in Sources */,
 				0F1AAA391F08042C00ACC0C3 /* QuizOptionsViewModel.swift in Sources */,
 				0F1AAA3A1F08042C00ACC0C3 /* QuizOptionsViewController.swift in Sources */,
+				0F2CB44D1F140CF9002CDE68 /* MultiLingualTextField.swift in Sources */,
 				0F1AAA3B1F08042C00ACC0C3 /* CardFrontViewController.swift in Sources */,
+				0F2CB4591F141332002CDE68 /* Language.swift in Sources */,
 				0F1AAA3C1F08042C00ACC0C3 /* CardRearViewController.swift in Sources */,
 				0F1AAA3D1F08042C00ACC0C3 /* MatchingQuizTagCell.swift in Sources */,
 				0F1AAA3E1F08042C00ACC0C3 /* MatchingRoundViewController.swift in Sources */,
@@ -1787,6 +1813,7 @@
 				0F911E951EE766D900F21855 /* EnfocaButton.swift in Sources */,
 				0F911E961EE766D900F21855 /* WordPairTableViewCell.swift in Sources */,
 				0F911E971EE766D900F21855 /* Perform+Tags.swift in Sources */,
+				0F2CB4551F1412C1002CDE68 /* LanguageSelectionViewController.swift in Sources */,
 				0F911E981EE766D900F21855 /* Sequence+.swift in Sources */,
 				0F911E991EE766D900F21855 /* Event.swift in Sources */,
 				0F911E9A1EE766D900F21855 /* WordPairTableViewController.swift in Sources */,
@@ -1829,6 +1856,7 @@
 				0F2CB4491F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */,
 				0F911EC41EE766D900F21855 /* UIViewController+.swift in Sources */,
 				0F911EC51EE766D900F21855 /* WordPairOrder.swift in Sources */,
+				0F2CB4511F141266002CDE68 /* LanguageTableViewCell.swift in Sources */,
 				0F911EC61EE766D900F21855 /* FetchUserRecordOperation.swift in Sources */,
 				0F911EC71EE766D900F21855 /* BrowseFromHomeAnimator.swift in Sources */,
 				0F911EC91EE766D900F21855 /* WebService.swift in Sources */,
@@ -1910,6 +1938,7 @@
 				0F0BAFCB1F0F4BC8005251AE /* CreateTagAssociation.swift in Sources */,
 				0FA4A5671ECBCB7D00F31F9A /* TagCollectionViewCell.swift in Sources */,
 				0FE0158E1EF4B19700780184 /* CustomAnimations.swift in Sources */,
+				0F2CB44F1F141266002CDE68 /* LanguageTableViewCell.swift in Sources */,
 				0FA4A5311EC8ECA500F31F9A /* MonitoredBaseOperation.swift in Sources */,
 				0FA4A4FE1EC8E9AF00F31F9A /* EnfocaError.swift in Sources */,
 				0FD1E20D1ED1E3F400D8BD1A /* String+.swift in Sources */,
@@ -1918,6 +1947,7 @@
 				0F1AAA561F09423800ACC0C3 /* OperationLoadOrCreateConch.swift in Sources */,
 				0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */,
 				0FA4A48D1EC89C0D00F31F9A /* AppDelegate.swift in Sources */,
+				0F2CB4531F1412C1002CDE68 /* LanguageSelectionViewController.swift in Sources */,
 				0F35B0471F01BAD2001AC511 /* DictionaryCreationViewController.swift in Sources */,
 				0FE015931EF5976200780184 /* Randomizer.swift in Sources */,
 				0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */,
@@ -1935,6 +1965,7 @@
 				0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */,
 				0F911E1C1EE5B20600F21855 /* UiTestWebService.swift in Sources */,
 				0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */,
+				0F2CB4571F141332002CDE68 /* Language.swift in Sources */,
 				0F0BAFBB1F0CD124005251AE /* ModularHomeViewController.swift in Sources */,
 				0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */,
 				0FA4A50D1EC8EB2500F31F9A /* UITableView+.swift in Sources */,
@@ -1946,6 +1977,7 @@
 				0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */,
 				0F0BAFBE1F0CD612005251AE /* HomeOverlayViewController.swift in Sources */,
 				0F011EBA1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */,
+				0F2CB44B1F140CF9002CDE68 /* MultiLingualTextField.swift in Sources */,
 				0F011EC91EEDB4AF00939B75 /* QuizResultsViewController.swift in Sources */,
 				0F911E0E1EE08E8300F21855 /* TagFilterViewController.swift in Sources */,
 				0FE0159C1EF6DD9D00780184 /* QuizPerfectScoreViewController.swift in Sources */,

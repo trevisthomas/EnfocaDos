@@ -16,11 +16,17 @@ class DictionaryEditorViewController: UIViewController {
     @IBOutlet weak var subjectTextField: AnimatedTextField!
     @IBOutlet weak var createButton: EnfocaButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var languageButton: UIButton!
+    
+    fileprivate var language : Language? = nil
+    fileprivate var languageButtonText: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         hideKeyboardWhenTappedAround()
+        
+        languageButtonText = languageButton.title(for: .normal)
         
         reload()
     }
@@ -58,21 +64,53 @@ class DictionaryEditorViewController: UIViewController {
         
     }
     
+    @IBAction func languageAction(_ source: UIButton) {
+        performSegue(withIdentifier: "LanguageSegue", sender: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? DictionaryLoadingViewController {
             guard let dictionary = sender as? UserDictionary else { fatalError() }
             to.initialize(dictionary: dictionary)
+        }
+        if let to = segue.destination as? LanguageSelectionViewController {
+            to.modalPresentationStyle = UIModalPresentationStyle.popover
+            to.popoverPresentationController!.delegate = self
+            
+            to.initialize(delegate: self)
         }
         
     }
 
 }
 
+extension DictionaryEditorViewController: LanguageSelectionViewControllerDelegate {
+    func languageSelected(language: Language?) {
+        self.language = language
+        
+        if let name : String = language?.name {
+            languageButton.setTitle("Language: \(name)", for: .normal)
+        } else {
+            languageButton.setTitle(languageButtonText, for: .normal)
+        }
+    }
+}
+
+//For popover on iphone
+extension DictionaryEditorViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+}
+
+
 extension DictionaryEditorViewController {
     fileprivate func updateDictionary() {
         
         validateForm {
-            services().updateDictionary(oldDictionary: dictionary, termTitle: termTextField!.text!, definitionTitle: definitionTextField!.text!, subject: subjectTextField!.text!, language: "es", callback: { (dictionary: UserDictionary?, error: EnfocaError?) in
+            
+            
+            services().updateDictionary(oldDictionary: dictionary, termTitle: termTextField!.text!, definitionTitle: definitionTextField!.text!, subject: subjectTextField!.text!, language: language?.code, callback: { (dictionary: UserDictionary?, error: EnfocaError?) in
                 if let error = error {
                     self.presentAlert(title: "Failed to update", message: error)
                     return
@@ -90,7 +128,7 @@ extension DictionaryEditorViewController {
         
         validateForm {
             let alert = presentActivityAlert(title: "Please wait...", message: nil)
-            services().createDictionary(termTitle: termTextField!.text!, definitionTitle: definitionTextField!.text!, subject: subjectTextField!.text!, language: "es") { (dictionary: UserDictionary?, error: EnfocaError?) in
+            services().createDictionary(termTitle: termTextField!.text!, definitionTitle: definitionTextField!.text!, subject: subjectTextField!.text!, language: language?.code) { (dictionary: UserDictionary?, error: EnfocaError?) in
                 alert.dismiss(animated: false, completion: {
                     if let error = error {
                         self.presentAlert(title: "Failed to create", message: error)

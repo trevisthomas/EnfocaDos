@@ -89,6 +89,8 @@ class EditorViewController: UIViewController {
         wordTextField.updatePlacelderText(placeholder: getTermTitle())
         
         definitionTextField.updatePlacelderText(placeholder: getDefinitionTitle())
+        
+        wordTextField.language = getAppDelegate().webService.getCurrentDictionary().language
     }
     
     private func initializeSubViews(){
