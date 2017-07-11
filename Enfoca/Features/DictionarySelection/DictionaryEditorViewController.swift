@@ -41,6 +41,19 @@ class DictionaryEditorViewController: UIViewController {
         } else {
             createButton.setTitle("Update", for: .normal)
         }
+        
+        let index = Language.languages.index { (language: Language) -> Bool in
+            language.code == dictionary.language
+        }
+        
+        if let index = index {
+            let language: Language? = Language.languages[index]
+            languageSelected(language: language)
+        } else {
+            languageSelected(language: nil)
+        }
+        
+        
     }
 
     func initialize(dictionary: UserDictionary) {

@@ -9,6 +9,15 @@
 import Foundation
 
 class Language {
+    
+    static let languages = [
+        Language("English", "en"),
+        Language("French", "fr"),
+        Language("Spanish", "es"),
+        Language("Chinese (Simplified)", "zh-Hans"),
+        Language("Chinese (Traditional)", "zh-Hant")
+    ]
+    
     let name: String!
     let code: String!
     

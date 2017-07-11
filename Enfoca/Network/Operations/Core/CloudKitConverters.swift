@@ -90,7 +90,7 @@ class CloudKitConverters{
             fatalError()
         }
         
-        guard let language = record.value(forKey: "language") as? String else { fatalError() }
+        let language = record.value(forKey: "language") as? String
         
         var countWordPairs: Int = 0
         var countAssociations: Int = 0

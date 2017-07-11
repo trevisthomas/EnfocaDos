@@ -12,6 +12,7 @@ import UIKit
 protocol LanguageSelectionViewControllerDelegate {
     func languageSelected(language: Language?)
 }
+
 class LanguageSelectionViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,14 +20,6 @@ class LanguageSelectionViewController: UIViewController {
     
     //http://www.ibabbleon.com/iOS-Language-Codes-ISO-639.html
     
-    fileprivate let languages = [
-        Language("English", "en"),
-        Language("French", "fr"),
-        Language("Spanish", "es"),
-        Language("Chinese (Simplified)", "zh-Hans"),
-        Language("Chinese (Traditional)", "zh-Hant")
-    ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -40,20 +33,20 @@ class LanguageSelectionViewController: UIViewController {
 extension LanguageSelectionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.dismiss(animated: true) { 
-            self.delegate.languageSelected(language: self.languages[indexPath.row])
+            self.delegate.languageSelected(language: Language.languages[indexPath.row])
         }
     }
 }
 
 extension LanguageSelectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return languages.count
+        return Language.languages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LanguageTableViewCell.identifier, for: indexPath) as! LanguageTableViewCell
         
-        cell.initialize(language: languages[indexPath.row])
+        cell.initialize(language: Language.languages[indexPath.row])
         
         return cell
     }
