@@ -19,20 +19,25 @@ class MatchingRoundViewModel {
     
     private let delegate: MatchingRoundViewModelDelegate
     
-    init(delegate: MatchingRoundViewModelDelegate, wordPairs: [WordPair]) {
+    private var lookupTable: [Int] = []
+    
+    init(delegate: MatchingRoundViewModelDelegate, wordPairs: [WordPair], shuffled: Bool = false) {
         self.delegate = delegate
+        var i = 0
         for wp in wordPairs {
             matchingPairs.append(MatchingPair(wordPair: wp, cardSide: .term))
+            lookupTable.append(i)
+            i += 1
+        }
+        
+        if shuffled {
+            lookupTable.shuffle()
         }
         
         for wp in wordPairs {
             matchingPairs.append(MatchingPair(wordPair: wp, cardSide: .definition))
         }
     }
-    
-//    func getPairShuffled(cardSide: CardSide, atRow: Int) -> MatchingPair {
-//        
-//    }
     
     func getPair(cardSide: CardSide, atRow: Int) -> MatchingPair {
         
@@ -44,7 +49,8 @@ class MatchingRoundViewModel {
         case .term:
             return matchingPairs[atRow]
         case .definition:
-            return matchingPairs[atRow + matchingPairs.count / 2]
+            let offsetIndex = lookupTable[atRow] + matchingPairs.count / 2
+            return matchingPairs[offsetIndex]
         default: fatalError()
         }
     }

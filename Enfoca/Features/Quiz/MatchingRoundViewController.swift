@@ -32,7 +32,7 @@ class MatchingRoundViewController: UIViewController {
         
         layout.minimumInteritemSpacing = view.frame.width * 0.02133
         
-        viewModel = MatchingRoundViewModel(delegate: self, wordPairs: sharedViewModel.getWordPairsForMatchingRound())
+        viewModel = MatchingRoundViewModel(delegate: self, wordPairs: sharedViewModel.getWordPairsForMatchingRound(), shuffled: true)
         
     }
     
