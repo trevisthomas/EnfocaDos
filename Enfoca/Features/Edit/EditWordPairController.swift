@@ -27,7 +27,7 @@ class EditWordPairController: Controller {
 //    }
     var word: String = ""
     var definition: String = ""
-    let isEditMode: Bool
+    private(set) var isEditMode: Bool
     
     private var originalWordPair: WordPair?
     private var originalMetaData: MetaData?
@@ -73,21 +73,22 @@ class EditWordPairController: Controller {
 
     }
     
-    func initialize(){
+    func initialize(callback: @escaping()->() = {}){
         
         services.isDataStoreSynchronized { (isSynched: Bool?, error: String?) in
             guard let isSynched = isSynched else { fatalError("Fatal error while attempting to check conch state.") }
             
             if isSynched {
-                self.performInitialize()
+                self.performInitialize(callback: callback)
             } else {
-                self.performRefreshInitialize()
+                self.performRefreshInitialize(callback: callback)
             }
         }
     }
     
-    func performInitialize() {
+    func performInitialize(callback: @escaping()->()) {
         services.fetchUserTags { (tags: [Tag]?, error: EnfocaError?) in
+            callback()
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)
             }
@@ -97,6 +98,7 @@ class EditWordPairController: Controller {
         
         if let wp = originalWordPair {
             services.fetchMetaData(forWordPair: wp, callback: { (metaData: MetaData?, error:EnfocaError?) in
+                callback()
                 if let error = error {
                     self.delegate.onError(title: "Failed to load meta data", message: error)
                 }
@@ -108,18 +110,23 @@ class EditWordPairController: Controller {
 
     }
     
-    func performRefreshInitialize() {
+    func performRefreshInitialize(callback: @escaping()->()) {
         
         services.reloadTags { (tags:[Tag]?, error:EnfocaError?) in
             if let error = error {
+                callback()
                 self.delegate.onError(title: "Error fetching tags", message: error)
             }
-            guard let _ = tags else { return }
+            guard let _ = tags else {
+                callback()
+                return
+            }
             
             self.delegate.onTagsLoaded()
             
             if let wp = self.originalWordPair {
                 self.services.reloadWordPair(sourceWordPair: wp, callback: { (tuple: (WordPair, MetaData?)?, error: EnfocaError?) in
+                    callback()
                     if let error = error {
                         self.delegate.onError(title: "Failed to reload word pair", message: error)
                         
@@ -222,7 +229,7 @@ class EditWordPairController: Controller {
         }
     }
     
-    func performSaveOrCreate(handleFailedValidation: @escaping ()->(), callback: @escaping ()->()) {
+    func performSaveOrCreate(handleFailedValidation: @escaping (WordPair)->(), callback: @escaping ()->()) {
         
         //Dont perform this validation on update.  The terms can match then!
         if isEditMode {
@@ -232,7 +239,7 @@ class EditWordPairController: Controller {
         
         fetchExatcMatches(callback: { (matchingTerms: [WordPair]) in
             if matchingTerms.count > 0 {
-                handleFailedValidation()
+                handleFailedValidation(matchingTerms[0])
                 return
             } else {
                 //Perform WP action
@@ -240,6 +247,13 @@ class EditWordPairController: Controller {
             }
         })
 
+    }
+    
+    //This method was added to allow the VC to choose to switch to edit mode when the user has an exact match during edit.
+    func switchToWordPair(wordPair: WordPair, callback: @escaping()->()) {
+        isEditMode = true
+        loadOriginalWordPair(sourceWordPair: wordPair)
+        initialize(callback: callback)
     }
     
     private func performWordPairAction(callback: @escaping ()->()) {

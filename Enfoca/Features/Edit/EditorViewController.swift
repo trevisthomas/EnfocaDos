@@ -8,7 +8,7 @@
 
 import UIKit
 
-//TODO: Get rid of this.  It's not a proper delegate.
+//TODO:  The use of delegates here is inconsistant.  With xcode 9, refactor this.
 protocol EditorViewControllerDelegate {
     var wordText: String {get set}
     var definitionText: String {get set}

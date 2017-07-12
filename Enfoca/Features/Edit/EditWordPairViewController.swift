@@ -50,11 +50,6 @@ class EditWordPairViewController: UIViewController {
         refreshButtonState()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func cancelButtonAction(_ sender: Any) {
         dismiss(animated: true) {
             //done
@@ -65,16 +60,6 @@ class EditWordPairViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         
         updateFields()
-        
-        
-        if controller.isEditMode {
-            editorViewController.saveButton.setTitle("Save", for: .normal)
-            editorViewController.saveButton.isEnabledEnfoca = false
-            editorViewController.deleteButton.isEnabledEnfoca = true
-        } else {
-            editorViewController.saveButton.setTitle("Create", for: .normal)
-            editorViewController.deleteButton.isEnabledEnfoca = false
-        }
         
     }
     
@@ -110,24 +95,19 @@ class EditWordPairViewController: UIViewController {
     fileprivate func updateFields(){
         title = controller.title()
         
-//        tagSummaryLabel.text = controller.tagsAsString()
-//        definitionTextField.text = controller.definition
-//        wordTextField.text = controller.word
+        if controller.isEditMode {
+            editorViewController.saveButton.setTitle("Save", for: .normal)
+            editorViewController.saveButton.isEnabledEnfoca = controller.isValidForSaveOrCreate()
+            editorViewController.deleteButton.isEnabledEnfoca = true
+        } else {
+            editorViewController.saveButton.setTitle("Create", for: .normal)
+            editorViewController.deleteButton.isEnabledEnfoca = false
+        }
+        
         
         editorViewController.refresh()
     }
 
-//    @IBAction func deleteButtonAction(_ sender: UIButton) {
-//        controller.performDelete()
-//    }
-//    
-//    @IBAction func saveOrCreateButtonAction(_ sender: UIButton) {
-//        controller.performSaveOrCreate()
-//    }
-    
-    @IBAction func lookupButtonAction(_ sender: UIButton) {
-    }
-    
     fileprivate func refreshButtonState() {
         editorViewController.saveButton.isEnabledEnfoca = controller.isValidForSaveOrCreate()
     }
@@ -213,13 +193,28 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     
     func performSave() {
         let alert = presentActivityAlert(title: "Please wait...", message: nil)
-        controller.performSaveOrCreate(handleFailedValidation: { 
+        controller.performSaveOrCreate(handleFailedValidation: { (existingWordPair: WordPair) in
             alert.dismiss(animated: true, completion: {
                 self.editorViewController.failedValidation()
+                self.presentOkCancelAlert(title: "Already Exists", message: "'\(self.controller.word)' already exists. Would you like to view the existing item?", callback: { (affirmative: Bool) in
+                    if affirmative {
+                        self.switchToWordPair(wordPair: existingWordPair)
+                    }
+                })
             })
         }) { 
             alert.dismiss(animated: false, completion: {
                 self.dismissViewController()
+            })
+        }
+    }
+    
+    private func switchToWordPair(wordPair: WordPair) {
+        let alert = presentActivityAlert(title: "Please wait...", message: nil)
+        
+        self.controller.switchToWordPair(wordPair: wordPair) {
+            alert.dismiss(animated: true, completion: { 
+                //
             })
         }
     }
