@@ -232,7 +232,6 @@ class EditWordPairController: Controller {
         
         fetchExatcMatches(callback: { (matchingTerms: [WordPair]) in
             if matchingTerms.count > 0 {
-                callback()
                 handleFailedValidation()
                 return
             } else {

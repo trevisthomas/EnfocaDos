@@ -22,6 +22,9 @@ class TagSelectionViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var animateCollectionViewCellCreation : Bool = false
+    fileprivate var cellCreationY: CGFloat?
+    fileprivate var rowDivisor: Double = 1.0
+    
     
     fileprivate let editMarkerTag = Tag(name: "...")
     
@@ -141,9 +144,18 @@ extension TagSelectionViewController : UICollectionViewDataSource {
         if animateCollectionViewCellCreation {
             let origFram = cell.frame
             
+            if cellCreationY == nil {
+                cellCreationY = cell.frame.minY
+            }
+            
+            if cell.frame.minY > cellCreationY! {
+                rowDivisor = rowDivisor + 1.0
+                cellCreationY = cell.frame.minY
+            }
+            
             cell.frame = CGRect(x: origFram.origin.x + collectionView.frame.width, y: origFram.origin.y, width: origFram.width, height: origFram.height)
             
-            UIView.animate(withDuration: 0.33, delay: 0.1 * (Double(indexPath.row)), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [], animations: {
+            UIView.animate(withDuration: 0.33, delay: 0.1 * (Double(indexPath.row) / rowDivisor), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [], animations: {
                 cell.frame = origFram
             }) { (_: Bool) in
                 //

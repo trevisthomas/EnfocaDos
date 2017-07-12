@@ -214,7 +214,9 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     func performSave() {
         let alert = presentActivityAlert(title: "Please wait...", message: nil)
         controller.performSaveOrCreate(handleFailedValidation: { 
-            self.editorViewController.failedValidation()
+            alert.dismiss(animated: true, completion: {
+                self.editorViewController.failedValidation()
+            })
         }) { 
             alert.dismiss(animated: false, completion: {
                 self.dismissViewController()
