@@ -219,13 +219,23 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
         }
     }
     func performDelete() {
+        presentOkCancelAlert(title: "Warning", message: "Are you sure that you want to delete '\(controller.word)'? This operation can not be undone.") { (affirmative: Bool) in
+            if affirmative {
+                self.performDeleteWithoutWarning()
+            }
+        }
+        
+    }
+    
+    private func performDeleteWithoutWarning() {
         let alert = presentActivityAlert(title: "Please wait...", message: nil)
-        controller.performDelete { 
+        controller.performDelete {
             alert.dismiss(animated: false, completion: {
                 self.dismissViewController()
             })
         }
     }
+    
     func performTagEdit() {
         performSegue(withIdentifier: "editTags", sender: nil)
     }
