@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TagAssociation{
+class TagAssociation: NSObject, NSCoding {
     private(set) var associationId : String
     private(set) var wordPairId : String
     private(set) var tagId : String
@@ -33,7 +33,7 @@ struct TagAssociation{
         
     }
     
-    public func toJson() -> String {
+    func toJson() -> String {
         var representation = [String: AnyObject]()
         representation["wordPairId"] = wordPairId as AnyObject?
         representation["tagId"] = tagId as AnyObject?
@@ -44,5 +44,20 @@ struct TagAssociation{
         guard let json = String(data: data, encoding: .utf8) else { fatalError() }
         
         return json
+    }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        guard let wordPairId = aDecoder.decodeObject(forKey:"wordPairId") as? String else {fatalError()}
+        guard let tagId = aDecoder.decodeObject(forKey:"tagId") as? String else {fatalError()}
+        guard let associationId = aDecoder.decodeObject(forKey:"associationId") as? String else {fatalError()}
+        
+        self.init(associationId: associationId, wordPairId: wordPairId, tagId: tagId)
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(wordPairId, forKey: "wordPairId")
+        aCoder.encode(tagId, forKey: "tagId")
+        aCoder.encode(associationId, forKey: "associationId")
+        
     }
 }

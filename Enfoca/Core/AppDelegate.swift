@@ -118,7 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func saveDefaults(){
-        applicationDefaults.save(dictionary: webService.getCurrentDictionary(),includingDataStore: webService.serialize())
+        applicationDefaults.save(dictionary: webService.getCurrentDictionary(),includingDataStore: webService.toData())
     }
     
 }

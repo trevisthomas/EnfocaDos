@@ -11,7 +11,9 @@ import UIKit
 class DemoWebService : WebService {
     
 
-    
+    func toData() -> Data {
+        fatalError()
+    }
 
     
     /**
@@ -25,7 +27,7 @@ class DemoWebService : WebService {
         fatalError()
     }
 
-    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
+    func prepareDataStore(dictionary: UserDictionary?, dataStore: DataStore?, progressObserver: ProgressObserver, callback: @escaping (Bool, EnfocaError?) -> ()) {
         
         callback(true, nil)
     }

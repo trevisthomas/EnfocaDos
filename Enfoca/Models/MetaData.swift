@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MetaData : Hashable {
+class MetaData : NSObject, NSCoding /*, Hashable*/ {
     static let formatter = Formatter()
     /// Returns a Boolean value indicating whether two values are equal.
     ///
@@ -18,13 +18,13 @@ class MetaData : Hashable {
     /// - Parameters:
     ///   - lhs: A value to compare.
     ///   - rhs: Another value to compare.
-    public static func ==(lhs: MetaData, rhs: MetaData) -> Bool {
-        return lhs.metaId == rhs.metaId
-    }
-    
-    var hashValue: Int {
-        return pairId.hashValue
-    }
+//    public static func ==(lhs: MetaData, rhs: MetaData) -> Bool {
+//        return lhs.metaId == rhs.metaId
+//    }
+//    
+//    var hashValue: Int {
+//        return pairId.hashValue
+//    }
     
     
     private(set) var metaId: String
@@ -152,5 +152,33 @@ class MetaData : Hashable {
         guard let json = String(data: data, encoding: .utf8) else { fatalError() }
         
         return json
+    }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        guard let metaId = aDecoder.decodeObject(forKey:"metaId") as? String else {fatalError()}
+        guard let pairId = aDecoder.decodeObject(forKey:"pairId") as? String else {fatalError()}
+        guard let dateCreated = aDecoder.decodeObject(forKey:"dateCreated") as? Date else {fatalError()}
+        
+        let dateUpdated = aDecoder.decodeObject(forKey:"dateUpdated") as? Date
+        
+        let incorrectCount = aDecoder.decodeInteger(forKey:"incorrectCount")
+        let totalTime = aDecoder.decodeInteger(forKey:"totalTime")
+        let timedViewCount = aDecoder.decodeInteger(forKey:"timedViewCount")
+        
+        self.init(metaId: metaId, pairId: pairId, dateCreated: dateCreated, dateUpdated: dateUpdated, incorrectCount: incorrectCount, totalTime: totalTime, timedViewCount: timedViewCount)
+        
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(metaId, forKey: "metaId")
+        aCoder.encode(pairId, forKey: "pairId")
+        aCoder.encode(incorrectCount, forKey: "incorrectCount")
+        aCoder.encode(totalTime, forKey: "totalTime")
+        aCoder.encode(timedViewCount, forKey: "timedViewCount")
+        aCoder.encode(dateCreated, forKey: "dateCreated")
+        if let updated = dateUpdated {
+            aCoder.encode(updated, forKey: "dateUpdated")
+        }
+        
     }
 }

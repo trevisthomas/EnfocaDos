@@ -92,7 +92,7 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
-    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func prepareDataStore(dictionary: UserDictionary?, dataStore: DataStore?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
         showNetworkActivityIndicator = true
         
@@ -100,8 +100,8 @@ class LocalCloudKitWebService : WebService {
         
         let ds: DataStore
         
-        if let json = json {
-            ds = DataStore(json: json)
+        if let dataStore = dataStore {
+            ds = dataStore
         } else if let dictionary = dictionary {
             guard let _ = dictionary.conch else { fatalError("conches are not option at this point anymore") }
             ds = DataStore(dictionary: dictionary)
@@ -111,7 +111,7 @@ class LocalCloudKitWebService : WebService {
         
         if ds.isInitialized {
             
-            print("DataStore recreated via json")
+            print("DataStore recreated via cache")
             self.dataStore = ds
             
             invokeLater {
@@ -148,6 +148,10 @@ class LocalCloudKitWebService : WebService {
     
     func serialize() -> String? {
         return dataStore.toJson()
+    }
+    
+    func toData() -> Data {
+        return NSKeyedArchiver.archivedData(withRootObject: dataStore)
     }
     
     func fetchUserTags(callback : @escaping([Tag]?, EnfocaError?)->()) {

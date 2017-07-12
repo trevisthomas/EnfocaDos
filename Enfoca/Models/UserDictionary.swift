@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserDictionary {
+class UserDictionary: NSObject, NSCoding {
     private(set) var definitionTitle: String
     private(set) var termTitle: String
     private(set) var subject: String
@@ -115,10 +115,10 @@ class UserDictionary {
         representation["language"] = language as AnyObject?
         representation["conch"] = conch as AnyObject?
         
-        representation["countWordPairs"] = conch as AnyObject?
-        representation["countAssociations"] = conch as AnyObject?
-        representation["countTags"] = conch as AnyObject?
-        representation["countMeta"] = conch as AnyObject?
+        representation["countWordPairs"] = countWordPairs as AnyObject?
+        representation["countAssociations"] = countAssociations as AnyObject?
+        representation["countTags"] = countTags as AnyObject?
+        representation["countMeta"] = countMeta as AnyObject?
         
         
         guard let data = try? JSONSerialization.data(withJSONObject: representation, options: []) else { fatalError() }
@@ -126,4 +126,47 @@ class UserDictionary {
         guard let json = String(data: data, encoding: .utf8) else { fatalError() }
         
         return json
-    }}
+    }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        
+        guard let id = aDecoder.decodeObject(forKey:"dictionaryId") as? String else {fatalError()}
+        guard let userRef = aDecoder.decodeObject(forKey:"userRef") as? String else {fatalError()}
+        guard let enfocaRef = aDecoder.decodeObject(forKey:"enfocaRef") as? String else {fatalError()}
+        guard let termTitle = aDecoder.decodeObject(forKey:"termTitle") as? String else {fatalError()}
+        guard let conch = aDecoder.decodeObject(forKey:"conch") as? String else {fatalError()}
+        
+        guard let definitionTitle = aDecoder.decodeObject(forKey:"definitionTitle") as? String else {fatalError()}
+        guard let subject = aDecoder.decodeObject(forKey:"subject") as? String else {fatalError()}
+        let language = aDecoder.decodeObject(forKey:"language") as? String
+        
+        self.init(dictionaryId: id, userRef: userRef, enfocaRef: enfocaRef, termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language, conch: conch)
+        
+        self.countWordPairs = aDecoder.decodeInteger(forKey:"countWordPairs")
+        self.countAssociations = aDecoder.decodeInteger(forKey:"countAssociations")
+        self.countTags = aDecoder.decodeInteger(forKey:"countTags")
+        self.countMeta = aDecoder.decodeInteger(forKey:"countMeta")
+        
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        
+        aCoder.encode(definitionTitle, forKey: "definitionTitle")
+        aCoder.encode(termTitle, forKey: "termTitle")
+        aCoder.encode(subject, forKey: "subject")
+        aCoder.encode(enfocaRef, forKey: "enfocaRef")
+        aCoder.encode(dictionaryId, forKey: "dictionaryId")
+        aCoder.encode(userRef, forKey: "userRef")
+        aCoder.encode(language, forKey: "language")
+        aCoder.encode(conch, forKey: "conch")
+        
+        aCoder.encode(countWordPairs, forKey: "countWordPairs")
+        aCoder.encode(countAssociations, forKey: "countAssociations")
+        aCoder.encode(countTags, forKey: "countTags")
+        aCoder.encode(countMeta, forKey: "countMeta")
+        
+    }
+    
+}
+
+

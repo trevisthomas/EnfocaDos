@@ -17,7 +17,9 @@ class UiTestWebService : WebService {
 //    var wordPairs: [WordPair]
     private var guidIndex = 0
     
-    
+    func toData() -> Data {
+        fatalError()
+    }
     
     var showNetworkActivityIndicator: Bool {
         get {
@@ -54,11 +56,11 @@ class UiTestWebService : WebService {
 //    }
 
     
-    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
+    func prepareDataStore(dictionary: UserDictionary?, dataStore ds: DataStore?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
         
-        if let json = json {
-            dataStore = DataStore(json: json)
+        if let ds = ds {
+            dataStore = ds
         } else {
             
             guard let dictionary = dictionary else { fatalError() }

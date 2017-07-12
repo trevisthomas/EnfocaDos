@@ -12,8 +12,10 @@ protocol WebService {
     
     var showNetworkActivityIndicator : Bool {get set}
     
-    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
+    func prepareDataStore(dictionary: UserDictionary?, dataStore: DataStore?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
     func serialize() -> String?
+    
+    func toData() -> Data 
     
     func fetchUserTags(callback : @escaping([Tag]?, EnfocaError?)->())
     

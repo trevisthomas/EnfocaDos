@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WordPair : Hashable {
+class WordPair : NSObject, NSCoding {
     static let formatter = Formatter()
     /// Returns a Boolean value indicating whether two values are equal.
     ///
@@ -22,9 +22,9 @@ class WordPair : Hashable {
         return lhs.pairId == rhs.pairId
     }
     
-    var hashValue: Int {
-        return pairId.hashValue
-    }
+//    var hashValue: Int {
+//        return pairId.hashValue
+//    }
     
     private(set) var pairId: String
     private(set) var word: String
@@ -114,6 +114,33 @@ class WordPair : Hashable {
         
         return json
     }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        guard let pairId = aDecoder.decodeObject(forKey:"pairId") as? String else {fatalError()}
+        guard let word = aDecoder.decodeObject(forKey:"word") as? String else {fatalError()}
+        guard let definition = aDecoder.decodeObject(forKey:"definition") as? String else {fatalError()}
+        
+        guard let dateString = aDecoder.decodeObject(forKey:"dateCreated") as? String else {fatalError()}
+        guard let genderString = aDecoder.decodeObject(forKey:"gender") as? String else { fatalError() }
+        
+        guard let dateCreated = JsonDateFormatter.instance.date(from: dateString) else {fatalError()}
+        let gender = Gender.fromString(genderString)
+        let example = aDecoder.decodeObject(forKey:"example") as? String
+        
+        
+        self.init(pairId: pairId, word: word, definition: definition, dateCreated: dateCreated, gender: gender, tags: [], example: example)
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(pairId, forKey: "pairId")
+        aCoder.encode(word, forKey: "word")
+        aCoder.encode(definition, forKey: "definition")
+        let dateString = JsonDateFormatter.instance.string(from: dateCreated)
+        aCoder.encode(dateString, forKey: "dateCreated")
+        aCoder.encode(gender.toString(), forKey: "gender")
+        aCoder.encode(example, forKey: "example")
+    }
+
 }
 
 

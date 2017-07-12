@@ -8,20 +8,53 @@
 
 import Foundation
 
-class DataStore {
-    private(set) var metaDataDictionary: [AnyHashable : MetaData] = [:]
-    private(set) var tagDictionary : [AnyHashable : Tag] = [:]
-    private(set) var wordPairDictionary : [AnyHashable :  WordPair] = [:]
+class DataStore: NSObject, NSCoding {
+    
+    private(set) var metaDataDictionary: [String : MetaData] = [:]
+    private(set) var tagDictionary : [String : Tag] = [:]
+    private(set) var wordPairDictionary : [String :  WordPair] = [:]
     private(set) var tagAssociations : [TagAssociation] = []
     private(set) var isInitialized : Bool = false
     private var userDictionary: UserDictionary!
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        guard let metaDataDictionary = aDecoder.decodeObject(forKey:"metaDataDictionary") as? [String : MetaData] else {fatalError()}
+        guard let tagDictionary = aDecoder.decodeObject(forKey:"tagDictionary") as? [String : Tag] else {fatalError()}
+        guard let wordPairDictionary = aDecoder.decodeObject(forKey:"wordPairDictionary") as? [String :  WordPair] else {fatalError()}
+       
+        guard let tagAssociations = aDecoder.decodeObject(forKey:"tagAssociations") as? [TagAssociation] else {fatalError()}
+       
+        guard let userDictionary = aDecoder.decodeObject(forKey:"userDictionary") as? UserDictionary else { fatalError() }
+
+        self.init(userDictionary: userDictionary, metaDataDictionary: metaDataDictionary, tagDictionary: tagDictionary, wordPairDictionary: wordPairDictionary, tagAssociations: tagAssociations)
+        
+    }
+    
+    init(userDictionary: UserDictionary, metaDataDictionary: [String : MetaData], tagDictionary : [String : Tag], wordPairDictionary : [String :  WordPair], tagAssociations : [TagAssociation]){
+        isInitialized = true
+        
+        self.metaDataDictionary = metaDataDictionary
+        self.tagDictionary = tagDictionary
+        self.wordPairDictionary = wordPairDictionary
+        self.tagAssociations = tagAssociations
+        self.userDictionary = userDictionary
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(metaDataDictionary, forKey: "metaDataDictionary")
+        aCoder.encode(tagDictionary, forKey: "tagDictionary")
+        aCoder.encode(wordPairDictionary, forKey: "wordPairDictionary")
+        
+        aCoder.encode(tagAssociations, forKey: "tagAssociations")
+        aCoder.encode(userDictionary, forKey: "userDictionary")
+    }
     
     init(dictionary: UserDictionary) {
         self.userDictionary = dictionary
     }
     
-    init(){
-        
+    override init(){
+        super.init()
     }
     
     var countAssociations : Int {
@@ -61,7 +94,7 @@ class DataStore {
         
         progressObserver?.startProgress(ofType: key, message: "Initializing DataStore")
         
-        self.tagDictionary = tags.reduce([AnyHashable : Tag]()) { (acc, tag) in
+        self.tagDictionary = tags.reduce([String : Tag]()) { (acc, tag) in
             var dict = acc // This shit show is because the seed dictionary isnt mutable
             dict[tag.tagId] = tag
             return dict
@@ -69,7 +102,7 @@ class DataStore {
         
         progressObserver?.updateProgress(ofType: key, message: "DataStore loaded \(tagDictionary.count) tags...")
         
-        self.wordPairDictionary = wordPairs.reduce([AnyHashable : WordPair]()) { (acc, wordPair) in
+        self.wordPairDictionary = wordPairs.reduce([String : WordPair]()) { (acc, wordPair) in
             var dict = acc
             dict[wordPair.pairId] = wordPair
             return dict
@@ -94,7 +127,7 @@ class DataStore {
         
         progressObserver?.updateProgress(ofType: key, message: "DataStore tagged \(tagAssociations.count) words...")
         
-        self.metaDataDictionary = metaData.reduce([AnyHashable: MetaData](), { (acc, meta) -> [AnyHashable: MetaData] in
+        self.metaDataDictionary = metaData.reduce([String: MetaData](), { (acc, meta) -> [String: MetaData] in
             var dict = acc
             dict[meta.pairId] = meta
             
@@ -111,7 +144,7 @@ class DataStore {
         isInitialized = true
     }
     
-    func findWordPair(withId wordPairId : AnyHashable) -> WordPair? {
+    func findWordPair(withId wordPairId : String) -> WordPair? {
         return wordPairDictionary[wordPairId]
     }
     
@@ -211,7 +244,7 @@ class DataStore {
     //func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->())
     func reload(updatedTagList: [Tag]) {
         self.tagDictionary.removeAll()
-        self.tagDictionary = updatedTagList.reduce([AnyHashable : Tag]()) { (acc, tag) in
+        self.tagDictionary = updatedTagList.reduce([String : Tag]()) { (acc, tag) in
             var dict = acc // This shit show is because the seed dictionary isnt mutable
             dict[tag.tagId] = tag
             return dict
@@ -570,7 +603,7 @@ class DataStore {
         return UserDictionary(json: rawUserDictionary)
     }
     
-    init (json: String) {
+    convenience init (json: String) {
         guard let jsonData = json.data(using: .utf8) else { fatalError() }
         guard let jsonResult: NSDictionary = try! JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary else {fatalError()}
         
@@ -580,8 +613,6 @@ class DataStore {
         guard let rawMetaData = jsonResult["metaData"] as? NSArray else {fatalError()}
         guard let rawUserDictionary = jsonResult["userDictionary"] as? String else {fatalError()}
         
-        
-        userDictionary = UserDictionary(json: rawUserDictionary)
         
         var newWordPairs : [WordPair] = []
         for rawWordPair in rawWordPairs {
@@ -607,7 +638,11 @@ class DataStore {
             newMetaData.append(MetaData(json: json))
         }
         
-        initialize(tags: newTags, wordPairs: newWordPairs, tagAssociations: newTagAssociations, metaData: newMetaData)
+        self.init()
+        
+        self.userDictionary = UserDictionary(json: rawUserDictionary)
+        
+        self.initialize(tags: newTags, wordPairs: newWordPairs, tagAssociations: newTagAssociations, metaData: newMetaData)
         
     }
     

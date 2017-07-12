@@ -52,8 +52,8 @@ class NewAppLaunchViewController: UIViewController {
             guard let dictionaryList: [UserDictionary] = dictionaryList else { fatalError() }
             
             if self.autoload {
-                if let json = getAppDelegate().applicationDefaults.load() {
-                    self.performSegue(withIdentifier: "LoadDictionarySegue", sender: json)
+                if let data = getAppDelegate().applicationDefaults.load() {
+                    self.performSegue(withIdentifier: "LoadDictionarySegue", sender: data)
                 } else {
                     self.presentCreateOrLoadView(dictionaryList: dictionaryList)
                 }
@@ -82,8 +82,8 @@ class NewAppLaunchViewController: UIViewController {
             guard let list = sender as? [UserDictionary] else { fatalError() }
             to.initialize(dictionaryList: list)
         } else if let to = segue.destination as? DictionaryLoadingViewController {
-            guard let json = sender as? String else { fatalError() }
-            to.initialize(json: json)
+            guard let data = sender as? Data else { fatalError() }
+            to.initialize(data: data)
         }
     }
 }

@@ -12,7 +12,7 @@ class DictionaryLoadingViewController: UIViewController {
 
     @IBOutlet weak var headerView: UIView!
     fileprivate var dictionary: UserDictionary?
-    fileprivate var dataStoreJson: String?
+    fileprivate var dataStoreData: DataStore?
     
     fileprivate var progressLabels : [String: UILabel] = [:]
     
@@ -30,8 +30,12 @@ class DictionaryLoadingViewController: UIViewController {
     }
     
     //This is used when the json is loaded from the disk automatically
-    func initialize(json: String) {
-        self.dataStoreJson = json
+    func initialize(data: Data) {
+        let dataStore = extractDataStore(from: data)
+        
+        let dict = dataStore.getUserDictionary()
+        getAppDelegate().applicationDefaults.removeDictionary(dict)
+        self.dataStoreData = dataStore
     }
     
     private func launch(){
@@ -39,8 +43,11 @@ class DictionaryLoadingViewController: UIViewController {
 //        startProgress(ofType: "Initializing", message: "Loading app defaults")
         
         if let dictionary = dictionary {
-            if let json = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) {
-                conchPreCheckPrepareDataStore(json: json)
+            if let data = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) {
+                
+                getAppDelegate().applicationDefaults.removeDictionary(dictionary) //Since i have the dictId i'm removing the thing as soon as i can.  Before extract even touches it.
+                let dataStore = extractDataStore(from: data)
+                conchPreCheckPrepareDataStore(dataStore: dataStore)
             } else {
                 // user selected a dictionary that wasnt in their local disk cache
                 
@@ -57,21 +64,21 @@ class DictionaryLoadingViewController: UIViewController {
             }
         } else {
             // no dictionary was selected by the user, we're doing a json auto init
-            guard let json = dataStoreJson else { fatalError() }
-            conchPreCheckPrepareDataStore(json: json)
+            guard let dataStore = dataStoreData else { fatalError() }
+            conchPreCheckPrepareDataStore(dataStore: dataStore)
         }
     }
     
-    private func conchPreCheckPrepareDataStore(json: String) {
-        let oldDict = DataStore.extractDictionary(fromJson: json)
+    private func conchPreCheckPrepareDataStore(dataStore: DataStore) {
+        let oldDict = dataStore.getUserDictionary()
         
         getAppDelegate().webService.isDataStoreSynchronized(dictionary: oldDict, callback: { (isSynched:Bool?, error: String?) in
             
             if isSynched ?? false {
-                self.dataStoreJson = json //Try to use the json
+                self.dataStoreData = dataStore //Try to use the json
                 self.prepareDataStore()
             } else {
-                self.dataStoreJson = nil  //json is out of synch, dump it
+                self.dataStoreData = nil  //json is out of synch, dump it
                 
                 //fetchCurrentConch and apply it to the dictionary
                 getAppDelegate().webService.fetchCurrentConch(dictionary: oldDict, callback: { (conch: String?, error: String?) in
@@ -88,17 +95,22 @@ class DictionaryLoadingViewController: UIViewController {
         })
     }
     
+    private func extractDataStore(from data: Data) -> DataStore {
+        guard let oldDataStore = NSKeyedUnarchiver.unarchiveObject(with: data) as? DataStore else { fatalError("Corrupt local archive data for datastore.") }
+        
+        return oldDataStore
+        
+    }
     private func prepareDataStore(){
         
         //Delete the dictionary from cache prior to load
         if let d = dictionary {
             getAppDelegate().applicationDefaults.removeDictionary(d)
-        } else if let j = dataStoreJson {
-            let d = DataStore.extractDictionary(fromJson: j)
-            getAppDelegate().applicationDefaults.removeDictionary(d)
+        } else if let dataStore = dataStoreData {
+            let d = dataStore.getUserDictionary()
         }
         
-        getAppDelegate().webService.prepareDataStore(dictionary: dictionary, json: dataStoreJson, progressObserver: self) { (success :Bool, error : EnfocaError?) in
+        getAppDelegate().webService.prepareDataStore(dictionary: dictionary, dataStore: dataStoreData, progressObserver: self) { (success :Bool, error : EnfocaError?) in
             
             if let error = error {
                 self.presentFatalAlert(title: "Initialization error", message: error)
