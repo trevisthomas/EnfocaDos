@@ -17,6 +17,25 @@ class DataStore: NSObject, NSCoding {
     private(set) var isInitialized : Bool = false
     private var userDictionary: UserDictionary!
     
+    private var noneTag: Tag!
+    private var anyTag: Tag!
+    
+    func register(anyTag: Tag, noneTag: Tag){
+        self.noneTag = noneTag
+        self.anyTag = anyTag
+        
+        updateAnyAndNone()
+    }
+    
+    private func updateAnyAndNone() {
+        let wordPairsWithoutTags = wordPairDictionary.values.filter({ (wordPair: WordPair) -> Bool in
+            return wordPair.tags.count == 0
+        })
+        
+        self.noneTag.setWordPairs(wordPairs: Array(wordPairsWithoutTags))
+        self.anyTag.setWordPairs(wordPairs: Array(wordPairDictionary.values))
+    }
+    
     required convenience init(coder aDecoder: NSCoder) {
         guard let metaDataDictionary = aDecoder.decodeObject(forKey:"metaDataDictionary") as? [String : MetaData] else {fatalError()}
         guard let tagDictionary = aDecoder.decodeObject(forKey:"tagDictionary") as? [String : Tag] else {fatalError()}
@@ -178,6 +197,7 @@ class DataStore: NSObject, NSCoding {
     
     func add(wordPair : WordPair) {
         wordPairDictionary[wordPair.pairId] = wordPair
+        updateAnyAndNone()
     }
     
     func add(tagAssociation: TagAssociation) {
@@ -188,6 +208,7 @@ class DataStore: NSObject, NSCoding {
         tag.addWordPair(wordPair)
         wordPair.addTag(tag)
         tagAssociations.append(tagAssociation)
+        updateAnyAndNone()
     }
     
     func containsWordPair(withWord: String) -> Bool{
@@ -218,7 +239,7 @@ class DataStore: NSObject, NSCoding {
             }
             return keep
         }
-        
+        updateAnyAndNone()
         return deletedAssociations
     }
     
@@ -234,6 +255,8 @@ class DataStore: NSObject, NSCoding {
             }
             return keep
         }
+        
+        updateAnyAndNone()
         return deletedAssociations
     }
     
@@ -333,29 +356,16 @@ class DataStore: NSObject, NSCoding {
         return newTag
     }
     
-    private func search(value : String, useWordField: Bool = true, withTags tags : [Tag]? = nil) -> [WordPair]{
-        
-        let pattern : String
-        
-        pattern = value
-
-//        pattern = "\\b\(value)"
-        
-        let pairFilter : (WordPair) -> Bool
-        if useWordField {
-            pairFilter = { (wordPair:WordPair) -> Bool in
-                
-                return wordPair.word.range(of: pattern, options: [.regularExpression, .caseInsensitive], range: nil, locale: nil) != nil
-//                return wordPair.word.lowercased().hasPrefix(pattern)
-            }
-        } else {
-            pairFilter = { (wordPair:WordPair) -> Bool in
-//                    return wordPair.definition.lowercased().hasPrefix(pattern)
-                return wordPair.definition.range(of: pattern, options: [.regularExpression, .caseInsensitive], range: nil, locale: nil) != nil
-            }
-        }
-        
-        if let tags = tags, tags.count > 0 {
+    func internalFilterHelper(tags: [Tag]?, pairFilter: ((WordPair) -> Bool)?) -> [WordPair]{
+        if let tags = tags, tags.contains(noneTag) {
+            //None!
+//            return wordPairDictionary.values.filter({ (wordPair: WordPair) -> Bool in
+//                return wordPair.tags.count == 0
+//            })
+            return noneTag.wordPairs
+        } else if let tags = tags, tags.contains(anyTag) {
+            return anyTag.wordPairs
+        } else if let tags = tags, tags.count > 0 {
             
             let tagIds = tags.map({ (tag:Tag) -> AnyHashable in
                 return tag.tagId
@@ -370,18 +380,79 @@ class DataStore: NSObject, NSCoding {
                 wordPairs.insert(wordPairDictionary[ass.wordPairId]!)
             }
             
-            if(pattern == "") {
-                return Array(wordPairs)
-            } else {
+            if let pairFilter = pairFilter {
                 return wordPairs.filter(pairFilter)
+            } else {
+                return Array(wordPairs)
             }
         } else {
-            if(pattern == "") {
-                return Array(wordPairDictionary.values)
-            } else {
+            if let pairFilter = pairFilter {
                 return wordPairDictionary.values.filter(pairFilter)
+            } else {
+                return Array(wordPairDictionary.values)
             }
         }
+    }
+    
+    private func search(value : String, useWordField: Bool = true, withTags tags : [Tag]? = nil) -> [WordPair]{
+        
+        let pattern : String
+        
+        pattern = value
+
+//        pattern = "\\b\(value)"
+        
+        var pairFilter : ((WordPair) -> Bool)? = nil
+        if pattern != "" {
+            if useWordField {
+                pairFilter = { (wordPair:WordPair) -> Bool in
+                    
+                    return wordPair.word.range(of: pattern, options: [.regularExpression, .caseInsensitive], range: nil, locale: nil) != nil
+    //                return wordPair.word.lowercased().hasPrefix(pattern)
+                }
+            } else {
+                pairFilter = { (wordPair:WordPair) -> Bool in
+    //                    return wordPair.definition.lowercased().hasPrefix(pattern)
+                    return wordPair.definition.range(of: pattern, options: [.regularExpression, .caseInsensitive], range: nil, locale: nil) != nil
+                }
+            }
+        }
+        
+        return internalFilterHelper(tags: tags, pairFilter: pairFilter)
+        
+        //Isn't quiz doing the exact same thing?
+//        if let tags = tags, tags.contains(noneTag) {
+//            //None!
+//            return wordPairDictionary.values.filter({ (wordPair: WordPair) -> Bool in
+//                return wordPair.tags.count == 0
+//            })
+//        } else if let tags = tags, tags.count > 0, !tags.contains(anyTag) {
+//            
+//            let tagIds = tags.map({ (tag:Tag) -> AnyHashable in
+//                return tag.tagId
+//            })
+//            
+//            let filteredAssociations = tagAssociations.filter({ (tagAss:TagAssociation) -> Bool in
+//                return tagIds.contains(tagAss.tagId)
+//            })
+//            
+//            var wordPairs = Set<WordPair>()
+//            for ass in filteredAssociations {
+//                wordPairs.insert(wordPairDictionary[ass.wordPairId]!)
+//            }
+//            
+//            if(pattern == "") {
+//                return Array(wordPairs)
+//            } else {
+//                return wordPairs.filter(pairFilter)
+//            }
+//        } else {
+//            if(pattern == "") {
+//                return Array(wordPairDictionary.values)
+//            } else {
+//                return wordPairDictionary.values.filter(pairFilter)
+//            }
+//        }
     }
     
     func searchWordsStartWith(phrase: String, order wordPairOrder: WordPairOrder, withTags tagFilter : [Tag]? = nil) -> [WordPair] {
@@ -463,27 +534,34 @@ class DataStore: NSObject, NSCoding {
     
     func fetchQuiz(cardOrder: CardOrder, wordCount: Int, forTags tags: [Tag]? = nil) -> [WordPair]{
         
-        var wordPairs: [WordPair] = []
-        if let tags = tags, tags.count > 0 {
-            
-            let tagIds = tags.map({ (tag:Tag) -> AnyHashable in
-                return tag.tagId
-            })
-            
-            let filteredAssociations = tagAssociations.filter({ (tagAss:TagAssociation) -> Bool in
-                return tagIds.contains(tagAss.tagId)
-            })
-            
-            var tempPairs = Set<WordPair>()
-            for ass in filteredAssociations {
-                tempPairs.insert(wordPairDictionary[ass.wordPairId]!)
-            }
-            
-            wordPairs = Array(tempPairs)
-            
-        } else {
-            wordPairs = Array(wordPairDictionary.values)
-        }
+        var wordPairs: [WordPair] = internalFilterHelper(tags: tags, pairFilter: nil)
+        
+//        if let tags = tags, tags.contains(noneTag) {
+//            //None!
+//            return wordPairDictionary.values.filter({ (wordPair: WordPair) -> Bool in
+//                return wordPair.tags.count == 0
+//            })
+//            
+//        } else if let tags = tags, tags.count > 0, !tags.contains(anyTag) {
+//            
+//            let tagIds = tags.map({ (tag:Tag) -> AnyHashable in
+//                return tag.tagId
+//            })
+//            
+//            let filteredAssociations = tagAssociations.filter({ (tagAss:TagAssociation) -> Bool in
+//                return tagIds.contains(tagAss.tagId)
+//            })
+//            
+//            var tempPairs = Set<WordPair>()
+//            for ass in filteredAssociations {
+//                tempPairs.insert(wordPairDictionary[ass.wordPairId]!)
+//            }
+//            
+//            wordPairs = Array(tempPairs)
+//            
+//        } else {
+//            wordPairs = Array(wordPairDictionary.values)
+//        }
         
         var sortFunc : ((WordPair, WordPair) -> Bool)?
         

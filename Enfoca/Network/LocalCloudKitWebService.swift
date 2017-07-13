@@ -109,6 +109,8 @@ class LocalCloudKitWebService : WebService {
             fatalError() //I need one or the other.
         }
         
+        ds.register(anyTag: getAppDelegate().applicationDefaults.anyTag, noneTag: getAppDelegate().applicationDefaults.noneTag)
+        
         if ds.isInitialized {
             
             print("DataStore recreated via cache")

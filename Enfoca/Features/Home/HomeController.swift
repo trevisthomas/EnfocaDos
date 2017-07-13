@@ -53,9 +53,12 @@ class HomeController: Controller {
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)
             }
-            guard let tags = tags else {
+            guard var tags = tags else {
                 return
             }
+            
+            tags.insert(self.appDefaults.anyTag, at: 0)
+            tags.insert(self.appDefaults.noneTag, at: 1)
             
             self.delegate.onTagsLoaded(tags: tags)
         }

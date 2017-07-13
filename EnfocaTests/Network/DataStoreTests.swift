@@ -17,6 +17,10 @@ class DataStoreTests: XCTestCase {
     var wpAss : [TagAssociation] = []
     var metaDataList : [MetaData] = []
     
+    var tagNone: Tag!
+    var tagAny: Tag!
+    
+    
     var dictionary: UserDictionary!
     
     override func setUp() {
@@ -26,6 +30,9 @@ class DataStoreTests: XCTestCase {
         
         sut = DataStore(dictionary: dictionary)
         sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
+        
+        tagNone  = Tag(tagId: "none", name: "None")
+        tagAny = Tag(tagId: "any", name: "Any")
     }
     
     func testInit(){
@@ -433,6 +440,24 @@ class DataStoreTests: XCTestCase {
         
     }
     
+    func testSearch_ByTagAny(){
+        mockDataOne()
+        
+        let result = sut.search(forWordsLike : "", withTags: [tagAny])
+        
+        XCTAssertEqual(result.count, 3)
+        
+    }
+    
+    func testSearch_ByTagNone() {
+        mockDataOne()
+        
+        let result = sut.search(forWordsLike : "", withTags: [tagNone])
+        
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result[0], wordPairs[2])
+    }
+    
     func testSearch_ByDefinitionWithTag(){
         mockDataOne()
         let tag = sut.tagDictionary["1"]!
@@ -549,6 +574,30 @@ class DataStoreTests: XCTestCase {
         
         
         XCTAssertEqual(result.count, 3)
+    }
+    
+    func testQuiz_AnyTag(){
+        mockDataOne()
+        
+        sut.register(anyTag: tagAny, noneTag: tagNone)
+        
+        let result = sut.fetchQuiz(cardOrder: .easiest, wordCount: 3, forTags: [tagAny])
+        
+        XCTAssertTrue(sut.getMetaData(forWordPair: result[0])!.score > sut.getMetaData(forWordPair: result[1])!.score)
+        XCTAssertTrue(sut.getMetaData(forWordPair: result[1])!.score > sut.getMetaData(forWordPair: result[2])!.score)
+        
+    }
+    
+    func testQuiz_NoneTag(){
+        mockDataOne()
+        
+        sut.register(anyTag: tagAny, noneTag: tagNone)
+        
+        let result = sut.fetchQuiz(cardOrder: .easiest, wordCount: 3, forTags: [tagNone])
+        
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result[0], wordPairs[2])
+        
     }
     
     func testQuiz_EasiestShouldBeEasy(){
@@ -852,11 +901,88 @@ class DataStoreTests: XCTestCase {
         XCTAssertEqual(dict.countTags, 3)
         XCTAssertEqual(dict.countMeta, 3)
     }
+    
+    func testAny_ShouldContainAny() {
+        mockDataOne()
+        
+        var result = sut.search(forWordsLike : "", withTags: [tagAny])
+        
+        XCTAssertEqual(result.count, 3)
+        
+        _ = sut.remove(wordPair: wordPairs[0])
+        
+        result = sut.search(forWordsLike : "", withTags: [tagAny])
+        XCTAssertEqual(result.count, 2)
+        
+        
+    }
+    
+    func testNone_ShouldContainNone() {
+        mockDataOne()
+        var result = sut.search(forWordsLike : "", withTags: [tagNone])
+        
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result[0], wordPairs[2])
+        
+        _ = sut.remove(tag: tags[0])
+        
+        result = sut.search(forWordsLike : "", withTags: [tagNone])
+        
+        XCTAssertEqual(result.count, 2)
+        
+    }
+    
+    func testAny_ShouldContainAnyAfterAdd() {
+        mockDataOne()
+        
+        var result = sut.search(forWordsLike : "", withTags: [tagAny])
+        
+        XCTAssertEqual(result.count, 3)
+        
+        let word = "Pegajosa"
+        let definition = "Sticky"
+        let gender : Gender = .masculine
+        let example = "La mesa es pegajosa."
+        let date = Date()
+        let wpId = "Eye Dee"
+        
+        let wp = WordPair(pairId: wpId, word: word, definition: definition, dateCreated: date, gender: gender, tags: [], example: example);
+        
+        _ = sut.add(wordPair: wp);
+        
+        result = sut.search(forWordsLike : "", withTags: [tagAny])
+        XCTAssertEqual(result.count, 4)
+        
+        
+    }
+    
+    func testNone_ShouldContainNoneAfterAdd() {
+        mockDataOne()
+        var result = sut.search(forWordsLike : "", withTags: [tagNone])
+        
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result[0], wordPairs[2])
+        
+        let wordPair = wordPairs[2]
+        let tag = tags[1]
+        
+        let newAssociation = TagAssociation(associationId: "14", wordPairId: wordPair.pairId, tagId: tag.tagId)
+        
+        sut.add(tagAssociation: newAssociation)
+        
+        result = sut.search(forWordsLike : "", withTags: [tagNone])
+        
+        XCTAssertEqual(result.count, 0)
+        
+    }
+    
+    
 
 }
 
 
 extension DataStoreTests{
+    
     func mockDataOne(){
         tags.append(Tag(tagId: "1", name: "Noun"))
         tags.append(Tag(tagId: "2", name: "Verb"))
@@ -889,6 +1015,8 @@ extension DataStoreTests{
         
         
         sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
+        
+        sut.register(anyTag: tagAny, noneTag: tagNone)
     }
     
     func mockDataTwo_SomeNilMeta(){
@@ -921,6 +1049,8 @@ extension DataStoreTests{
         
         
         sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
+        
+        sut.register(anyTag: tagAny, noneTag: tagNone)
     }
 
     func mockDataThree_UnscoredMeta(){
@@ -955,6 +1085,8 @@ extension DataStoreTests{
         
         
         sut.initialize(tags: tags, wordPairs: wordPairs, tagAssociations: wpAss, metaData: metaDataList)
+        
+        sut.register(anyTag: tagAny, noneTag: tagNone)
     }
 
     

@@ -31,6 +31,9 @@ protocol ApplicationDefaults {
     
     func insertMostRecentTag(tag: Tag)
     func getMostRecentlyUsedTags() -> [Tag]
+    
+    var noneTag: Tag {get}
+    var anyTag: Tag {get}
 }
 
 class LocalApplicationDefaults : ApplicationDefaults {
@@ -46,6 +49,8 @@ class LocalApplicationDefaults : ApplicationDefaults {
     var cardTimeout: Int = 30
     var cardTimeoutWarning: Int = 5
     var mostRecentlyUsedTags: [Tag] = []
+    let noneTag: Tag = Tag(tagId: "noneTag", name: "None")
+    let anyTag: Tag = Tag(tagId: "anyTag", name: "Any")
     
     var fetchWordPairPageSize: Int {
         get {

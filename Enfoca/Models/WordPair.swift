@@ -123,12 +123,14 @@ class WordPair : NSObject, NSCoding {
         guard let dateString = aDecoder.decodeObject(forKey:"dateCreated") as? String else {fatalError()}
         guard let genderString = aDecoder.decodeObject(forKey:"gender") as? String else { fatalError() }
         
+        let tags = aDecoder.decodeObject(forKey:"tags") as? [Tag] ?? []
+        
         guard let dateCreated = JsonDateFormatter.instance.date(from: dateString) else {fatalError()}
         let gender = Gender.fromString(genderString)
         let example = aDecoder.decodeObject(forKey:"example") as? String
         
         
-        self.init(pairId: pairId, word: word, definition: definition, dateCreated: dateCreated, gender: gender, tags: [], example: example)
+        self.init(pairId: pairId, word: word, definition: definition, dateCreated: dateCreated, gender: gender, tags: tags, example: example)
     }
     
     func encode(with aCoder: NSCoder) {
@@ -139,6 +141,7 @@ class WordPair : NSObject, NSCoding {
         aCoder.encode(dateString, forKey: "dateCreated")
         aCoder.encode(gender.toString(), forKey: "gender")
         aCoder.encode(example, forKey: "example")
+        aCoder.encode(tags, forKey: "tags")
     }
 
 }

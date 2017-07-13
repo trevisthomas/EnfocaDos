@@ -71,7 +71,7 @@ class MockWebService : WebService {
         self.tags = tags
     }
     
-    func prepareDataStore(dictionary: UserDictionary?, json: String?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
+    func prepareDataStore(dictionary: UserDictionary?, dataStore: DataStore?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()) {
         self.tags = makeTags()
         
         self.dictionary = dictionary
@@ -274,6 +274,10 @@ class MockWebService : WebService {
     }
     
     func fetchCurrentConch(dictionary: UserDictionary, callback: @escaping (String?, String?)->()) {
+        fatalError()
+    }
+    
+    func toData() -> Data {
         fatalError()
     }
 }

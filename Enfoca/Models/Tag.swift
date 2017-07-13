@@ -100,4 +100,8 @@ class Tag : NSObject, NSCoding /*, Equatable, Hashable*/ {
         aCoder.encode(name, forKey: "name")
         aCoder.encode(wordPairs, forKey: "wordPairs")
     }
+    
+    func setWordPairs(wordPairs: [WordPair]){
+        self.wordPairs = wordPairs
+    }
 }
