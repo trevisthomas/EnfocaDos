@@ -14,7 +14,10 @@ protocol WordPairTableDelegate {
     func onCreate(atRect: CGRect, cell: UITableViewCell)
 }
 
-class WordPairTableViewController: UITableViewController {
+class WordPairTableViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var summaryLabel: UILabel!
+    
     fileprivate var delegate: WordPairTableDelegate!
     fileprivate var wordPairs: [WordPair] = []
     fileprivate var order: WordPairOrder!
@@ -32,39 +35,62 @@ class WordPairTableViewController: UITableViewController {
         
     }
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        delegate.dismissKeyboard()
+    func getVisibleCells() -> [UITableViewCell] {
+        return tableView.visibleCells
+    }
+    
+    func getTableView() -> UIView {
+        return tableView
+    }
+    
+    fileprivate func refresh() {
+        tableView.reloadData()
+        
+        if wordPairs.count == 1 {
+            summaryLabel.text = "One item loaded."
+        } else if wordPairs.count > 1 {
+            summaryLabel.text = "\(wordPairs.count) items loaded"
+        } else {
+            summaryLabel.text = "No items found."
+        }
+        
     }
     
 
-    // MARK: - Table view data source
+}
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+extension WordPairTableViewController: UITableViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegate.dismissKeyboard()
+    }
+}
+
+extension WordPairTableViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if createText.trim().isEmpty{
             return wordPairs.count
         } else {
             return wordPairs.count + 1
         }
     }
-
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WordPairTableViewCell.identifier, for: indexPath) as! WordPairTableViewCell
-
+        
         if (wordPairs.count <= indexPath.row) {
             cell.initialize(create: createText, order: order)
         } else {
             cell.initialize(wordPair: wordPairs[indexPath.row], order: order)
         }
-
+        
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? WordPairTableViewCell else { fatalError() }
         
         CustomAnimations.bounceAnimation(view: cell, amount: 1.05, duration: 0.23) {
@@ -78,59 +104,6 @@ class WordPairTableViewController: UITableViewController {
         }
     }
     
-    func getVisibleCells() -> [UITableViewCell] {
-        return tableView.visibleCells
-    }
-    
-    func getTableView() -> UIView {
-        return tableView
-    }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension WordPairTableViewController {
@@ -142,12 +115,12 @@ extension WordPairTableViewController {
     func updateWordPairs(order: WordPairOrder, wordPairs: [WordPair]) {
         self.order = order
         self.wordPairs = wordPairs
-        tableView.reloadData()
+        refresh()
     }
     
     func clearWordPairs() {
         self.wordPairs = []
-        tableView.reloadData()
+        refresh()
     }
     
     func scrollToWordPair(wordPair: WordPair) {
@@ -158,7 +131,7 @@ extension WordPairTableViewController {
     
     func offerCreation(withText: String){
         createText = withText
-        tableView.reloadData()
+        refresh()
     }
 }
 
