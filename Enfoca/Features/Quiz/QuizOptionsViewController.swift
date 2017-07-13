@@ -23,7 +23,9 @@ class QuizOptionsViewController: UIViewController {
     @IBOutlet weak var cardSideSegmentedControl: UISegmentedControl!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var wordCountLabel: UILabel!
-    @IBOutlet var headerBackgroundView: UIView!
+    @IBOutlet weak var headerBackgroundView: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var browseButton: UIButton!
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var topToHeaderBottomConstraint: NSLayoutConstraint!
@@ -31,13 +33,16 @@ class QuizOptionsViewController: UIViewController {
     fileprivate var viewModel : QuizOptionsViewModel!
     fileprivate let quizOptionsToCardFrontViewAnimator = QuizOptionsToCardFrontViewAnimator()
     
+    private var showBrowseButton: Bool = false
+    
     @IBAction func incrementWordCountAction(_ sender: UIButton) {
         viewModel.incrementWordCount()
         formatWordCountText()
     }
     
-    func initialize(delegate: QuizViewControllerDelegate) {
+    func initialize(delegate: QuizViewControllerDelegate, showBackButton: Bool = false) {
         self.delegate = delegate
+        self.showBrowseButton = showBackButton
     }
     
     @IBAction func cardSideSegmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -65,6 +70,8 @@ class QuizOptionsViewController: UIViewController {
         
         cardSideSegmentedControl.setTitle(getTermTitle(), forSegmentAt: 2)
         cardSideSegmentedControl.setTitle(getDefinitionTitle(), forSegmentAt: 0)
+        
+        browseButton.isHidden = !showBrowseButton
         
         formatWordCountText()
     }

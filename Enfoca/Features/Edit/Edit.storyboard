@@ -587,9 +587,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycJ-9P-nyX">
-                                        <rect key="frame" x="8" y="30" width="34" height="30"/>
+                                        <rect key="frame" x="8" y="30" width="37" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Back">
+                                        <state key="normal" title="Done">
                                             <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -825,7 +825,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Apply" id="aL9-9l-LZs"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="applyButton" destination="ycJ-9P-nyX" id="gx9-YH-hcj"/>
+                        <outlet property="doneButton" destination="ycJ-9P-nyX" id="lEE-dI-QCN"/>
                         <outlet property="editDoneButton" destination="hCX-ve-AUc" id="Hv5-yD-ZY2"/>
                         <outlet property="headerHeightConstraint" destination="Aiy-6a-kcq" id="MLR-Df-VZF"/>
                         <outlet property="searchMagnifierView" destination="wF2-1p-Fm6" id="YHy-LS-DKN"/>

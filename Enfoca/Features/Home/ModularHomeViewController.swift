@@ -295,13 +295,10 @@ class ModularHomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let toBrowseViewController = segue.destination as? BrowseViewController {
             guard let tag = sender as? Tag else { fatalError() }
-            //TODO: Didnt you decide not to do this? All delegates all the time right?
-            
             
             toBrowseViewController.transitioningDelegate = self
-//            toBrowseViewController.controller = browseController
             
-            toBrowseViewController.initialize(tag: tag, wordOrder: controller.wordOrder)
+            toBrowseViewController.initialize(tag: tag, wordOrder: controller.wordOrder, showBackButton: true)
         }
         
         if let editWordPairVC = segue.destination as? EditWordPairViewController  {
@@ -314,7 +311,7 @@ class ModularHomeViewController: UIViewController {
         
         if let quizViewController = segue.destination as? QuizOptionsViewController {
             quizViewController.transitioningDelegate = self
-            quizViewController.initialize(delegate: self)
+            quizViewController.initialize(delegate: self, showBackButton: true)
         }
         
         if let to = segue.destination as? NewAppLaunchViewController {

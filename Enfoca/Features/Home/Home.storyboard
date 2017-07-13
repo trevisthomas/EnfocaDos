@@ -131,8 +131,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yu-op-YPG">
-                                <rect key="frame" x="10" y="30" width="34" height="30"/>
-                                <state key="normal" title="Back">
+                                <rect key="frame" x="14" y="30" width="30" height="30"/>
+                                <state key="normal" title="Quit">
                                     <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>

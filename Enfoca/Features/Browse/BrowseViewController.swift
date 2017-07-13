@@ -12,6 +12,7 @@ class BrowseViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var quizButton: UIButton!
     @IBOutlet weak var tableViewContainer: UIView!
     @IBOutlet weak var underSidePlaceHolderForWordEditor: UIView!
     
@@ -26,14 +27,16 @@ class BrowseViewController: UIViewController {
     
     fileprivate var controller : BrowseController!
     
+    private var showQuizButton: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         titleLabel.text = controller.title()
         
-        initializeSubViews()
+        initializeLookAndFeel()
         
-//        controller.loadWordPairs()
+        initializeSubViews()
         
         getAppDelegate().addListener(listener: controller)
     }
@@ -42,8 +45,9 @@ class BrowseViewController: UIViewController {
         controller.loadWordPairs()
     }
     
-    func initialize(tag: Tag, wordOrder: WordPairOrder){
+    func initialize(tag: Tag, wordOrder: WordPairOrder, showBackButton: Bool = false){
         controller = BrowseController(tag: tag, wordOrder: wordOrder, delegate: self)
+        self.showQuizButton = showBackButton
     }
     
     private func initializeSubViews() {
@@ -53,6 +57,10 @@ class BrowseViewController: UIViewController {
         wordPairTableViewController.initialize(delegate: self, order: controller.wordOrder)
         
 //        let emptyEditorViewController = createEditorViewController(inContainerView: underSidePlaceHolderForWordEditor)
+    }
+    
+    private func initializeLookAndFeel() {
+        quizButton.isHidden = !showQuizButton
     }
 
     override func didReceiveMemoryWarning() {

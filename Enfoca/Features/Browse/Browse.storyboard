@@ -82,6 +82,7 @@
                         <outlet property="doneButton" destination="biK-m3-sRK" id="oqN-Uf-oBI"/>
                         <outlet property="headerBackgroundView" destination="0F6-9P-Mgk" id="aHA-Jq-1t9"/>
                         <outlet property="headerHeightConstraint" destination="Om8-Yr-XT3" id="ID2-Wc-GrI"/>
+                        <outlet property="quizButton" destination="ato-GZ-FIW" id="H5c-27-ygY"/>
                         <outlet property="tableViewContainer" destination="oZ5-GF-viM" id="Bey-nB-cRh"/>
                         <outlet property="titleLabel" destination="GML-ue-jy4" id="W6b-eJ-Glm"/>
                         <segue destination="rKs-2h-tjs" kind="show" identifier="WordPairEditorViewControllerSegue" id="BGl-Ja-d4P"/>

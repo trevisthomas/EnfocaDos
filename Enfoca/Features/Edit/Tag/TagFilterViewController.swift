@@ -20,7 +20,7 @@ class TagFilterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tagSummaryLabel: UILabel!
     @IBOutlet weak var editDoneButton: UIButton!
-    @IBOutlet weak var applyButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     
     @IBOutlet weak var searchOrCreateTextField: UITextField!
     var tagFilterDelegate : TagFilterViewControllerDelegate!
@@ -144,6 +144,7 @@ class TagFilterViewController: UIViewController {
     }
     
     private func exitEditMode() {
+        doneButton.isHidden = false
         tableView.setEditing(false, animated: true)
         editDoneButton.setTitle("Edit", for: .normal)
         for path in selectedPaths {
@@ -152,7 +153,8 @@ class TagFilterViewController: UIViewController {
     }
     
     private func enterEditMode() {
-        editDoneButton.setTitle("Done", for: .normal)
+        doneButton.isHidden = true
+        editDoneButton.setTitle("Cancel", for: .normal)
         if let paths = tableView.indexPathsForSelectedRows {
             selectedPaths = paths
         }
@@ -210,7 +212,7 @@ extension TagFilterViewController: UITableViewDelegate {
 extension TagFilterViewController: EnfocaDefaultAnimatorTarget {
     
     func getRightNavView() -> UIView? {
-        return applyButton
+        return doneButton
     }
     func getTitleView() -> UIView {
         return titleLabel
