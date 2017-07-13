@@ -109,9 +109,8 @@ class LocalCloudKitWebService : WebService {
             fatalError() //I need one or the other.
         }
         
-        ds.register(anyTag: getAppDelegate().applicationDefaults.anyTag, noneTag: getAppDelegate().applicationDefaults.noneTag)
-        
         if ds.isInitialized {
+            ds.register(anyTag: getAppDelegate().applicationDefaults.anyTag, noneTag: getAppDelegate().applicationDefaults.noneTag)
             
             print("DataStore recreated via cache")
             self.dataStore = ds
@@ -138,6 +137,9 @@ class LocalCloudKitWebService : WebService {
                         callback(false, "DataStore was nil.  This is a fatal error.")
                         return;
                     }
+                    
+                    dataStore.register(anyTag: getAppDelegate().applicationDefaults.anyTag, noneTag: getAppDelegate().applicationDefaults.noneTag)
+                    
                     self.dataStore = dataStore
                     //                    self.initializeCloudKitSubscriptions(callback: callback)
                     self.showNetworkActivityIndicator = false

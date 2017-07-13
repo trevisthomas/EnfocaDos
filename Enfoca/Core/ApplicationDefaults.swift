@@ -59,6 +59,11 @@ class LocalApplicationDefaults : ApplicationDefaults {
     }
     
     func insertMostRecentTag(tag: Tag) {
+        
+        if tag == noneTag || tag == anyTag {
+            return
+        }
+        
         if let remove = mostRecentlyUsedTags.index(of: tag) {
             mostRecentlyUsedTags.remove(at: remove)
         }
