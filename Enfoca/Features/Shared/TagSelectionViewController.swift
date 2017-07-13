@@ -11,7 +11,7 @@ import UIKit
 
 protocol BrowseTagSelectionDelegate {
     func browseWordsWithTag(withTag: Tag, atRect: CGRect, cell: UICollectionViewCell)
-    func showEditor()
+    func showEditor(atRect: CGRect, cell: UICollectionViewCell)
 }
 
 class TagSelectionViewController: UIViewController {
@@ -181,20 +181,20 @@ extension TagSelectionViewController : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.row == 0 {
-            browseDelegate?.showEditor()
-            return 
-        }
-        
-        let tag = tags[indexPath.row - 1]
         let cell = collectionView.cellForItem(at: indexPath)!
         
         let attributes = collectionView.layoutAttributesForItem(at: indexPath)
         let cellRect = attributes!.frame
         let cellFrameInSuperView = collectionView.convert(cellRect, to: view.window)
         
-        
-        browseDelegate?.browseWordsWithTag(withTag: tag, atRect: cellFrameInSuperView, cell: cell)
+        if indexPath.row == 0 {
+            browseDelegate?.showEditor(atRect: cellFrameInSuperView, cell: cell)
+            return
+        } else {
+            let tag = tags[indexPath.row - 1]
+            
+            browseDelegate?.browseWordsWithTag(withTag: tag, atRect: cellFrameInSuperView, cell: cell)
+        }
         
     }
 }

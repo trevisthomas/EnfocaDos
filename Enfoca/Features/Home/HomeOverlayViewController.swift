@@ -11,6 +11,7 @@ import UIKit
 protocol HomeOverlayViewControllerDelegate {
     func browseWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell)
     func quizWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell)
+    func showTagEditor(atRect: CGRect, cell: UICollectionViewCell)
 }
 
 class HomeOverlayViewController: UIViewController {
@@ -59,8 +60,8 @@ extension HomeOverlayViewController {
 }
 
 extension HomeOverlayViewController: BrowseTagSelectionDelegate {
-    func showEditor() {
-        
+    func showEditor(atRect: CGRect, cell: UICollectionViewCell) {
+        delegate.showTagEditor(atRect: atRect, cell: cell)
     }
 
     func browseWordsWithTag(withTag tag: Tag, atRect: CGRect, cell: UICollectionViewCell) {

@@ -68,6 +68,13 @@ class TagCell: UITableViewCell {
         }
     }
     
+    func initialize(isSelectionDisabled: Bool = false) {
+        if isSelectionDisabled {
+            //A shameless 30 second hack to totally hide the check mark when you're not in seelction mode.
+            tagSelectedView?.isHidden = true
+            tagSelectedView = nil
+        }
+    }
     
     func formatDetailText(_ count : Int ) -> String {
         return "\(count) words tagged."

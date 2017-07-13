@@ -67,6 +67,8 @@ class CheckMarkView : UIView {
         
     }
     
+    
+    
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(ovalIn: rect.insetBy(dx: 5, dy: 5))
         

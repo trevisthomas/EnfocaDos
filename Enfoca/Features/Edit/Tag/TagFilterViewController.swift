@@ -23,7 +23,7 @@ class TagFilterViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     
     @IBOutlet weak var searchOrCreateTextField: UITextField!
-    var tagFilterDelegate : TagFilterViewControllerDelegate!
+    private var tagFilterDelegate : TagFilterViewControllerDelegate?
     
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchMagnifierView: MagnifierCloseView!
@@ -37,14 +37,24 @@ class TagFilterViewController: UIViewController {
         
         initLookAndFeel()
         
-        
-        viewModel.initialize(delegate: self, selectedTags: tagFilterDelegate.selectedTags) {
-            self.updateSelectedSummary()
-            self.tableView.reloadData() // Not unit tested :-(
+        if let tagFilterDelegate = tagFilterDelegate {
+            viewModel.initialize(delegate: self, selectedTags: tagFilterDelegate.selectedTags) {
+                self.updateSelectedSummary()
+                self.tableView.reloadData() // Not unit tested :-(
+            }
+        } else {
+            viewModel.initialize(delegate: self, selectedTags: []) {
+                self.updateSelectedSummary()
+                self.tableView.reloadData() // Not unit tested :-(
+            }
         }
         
         getAppDelegate().addListener(listener: viewModel)
         
+    }
+    
+    func initialize(delegate : TagFilterViewControllerDelegate? = nil){
+        self.tagFilterDelegate = delegate
     }
     
     private func initLookAndFeel(){
@@ -61,10 +71,16 @@ class TagFilterViewController: UIViewController {
         
         searchOrCreateTextField.setPlaceholderTextColor(color: UIColor(hexString: "#ffffff", alpha: 0.19))
         
+        tagSummaryLabel.isHidden = isSelectionDisabled()
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 96 //Doesn't matter
         
         hideKeyboardWhenTappedAround()
+    }
+    
+    fileprivate func isSelectionDisabled() -> Bool {
+        return tagFilterDelegate == nil
     }
     
     @IBAction func tappedMagnifierCloseAction(_ sender: Any) {
@@ -106,20 +122,8 @@ class TagFilterViewController: UIViewController {
 
     }
 
-//    private func applyFilter(){
-//        //Clear out the delegates selecions
-////        tagFilterDelegate.selectedTags = []
-//        
-////        viewModel.applySelectedTagsToDelegate()
-//        
-//        
-////        tagFilterDelegate.tagFilterUpdated(nil)
-//        
-//        tagFilterDelegate.selectedTags = viewModel.getSelectedTags()
-//    }
-    
     @IBAction func applyFilterAction(_ sender: UIButton) {
-        tagFilterDelegate.selectedTags = viewModel.getSelectedTags()
+        tagFilterDelegate?.selectedTags = viewModel.getSelectedTags()
         
         self.dismiss(animated: true, completion: nil) //I dont know how to unit test this dismiss
     }
@@ -184,7 +188,11 @@ extension TagFilterViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return viewModel.tableView(tableView, cellForRowAt: indexPath)
+        let cell = viewModel.tableView(tableView, cellForRowAt: indexPath) as! TagCell
+        
+        cell.initialize(isSelectionDisabled: isSelectionDisabled())
+        
+        return cell
     }
     
     

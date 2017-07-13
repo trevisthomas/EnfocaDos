@@ -193,6 +193,7 @@
                         <segue destination="seo-qB-PAl" kind="show" identifier="EditWordPairControllerSegue" id="Ypd-Um-rzk"/>
                         <segue destination="Jed-ek-EHi" kind="show" identifier="DictionarySelectionSeque" id="4Ra-lJ-58t"/>
                         <segue destination="nmb-tk-l9c" kind="show" identifier="DictionaryLoadingSeque" id="h1I-Ky-AdO"/>
+                        <segue destination="uut-3l-KhM" kind="show" identifier="TagEditorSegue" id="vcr-Pk-9OD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mwu-vG-sVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -281,6 +282,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO5-eg-d4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578" y="909"/>
+        </scene>
+        <!--TagFilterVC-->
+        <scene sceneID="FPR-Gz-FpB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Edit" referencedIdentifier="TagFilterVC" id="uut-3l-KhM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slJ-7c-CHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="739"/>
         </scene>
         <!--Edit-->
         <scene sceneID="sRv-om-cox">

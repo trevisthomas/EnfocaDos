@@ -323,6 +323,12 @@ class ModularHomeViewController: UIViewController {
             to.initialize(dictionary: dictionary)
         }
         
+        if let to = segue.destination as? TagFilterViewController {
+//            to.transitioningDelegate = self
+//            to.tagFilterDelegate = self
+            to.initialize()
+        }
+        
     }
 }
 
@@ -489,7 +495,28 @@ extension ModularHomeViewController: HomeOverlayViewControllerDelegate {
         performSegue(withIdentifier: "QuizViewControllerSegue", sender: tag)
         
     }
+    
+    func showTagEditor(atRect: CGRect, cell: UICollectionViewCell) {
+        
+//        browseViewFromHomeAnimator.sourceFrame = atRect
+//        browseViewFromHomeAnimator.sourceCell = cell
+        
+        
+        performSegue(withIdentifier: "TagEditorSegue", sender: nil)
+        
+    }
 }
 
+//extension ModularHomeViewController: TagFilterViewControllerDelegate{
+//    var selectedTags: [Tag] {
+//        get {
+//            return []
+//        }
+//        set {
+//            //Do nothing
+//        }
+//    }
+//    
+//}
 
 

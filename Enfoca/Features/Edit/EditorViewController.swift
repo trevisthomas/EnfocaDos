@@ -24,7 +24,7 @@ protocol EditorViewControllerDelegate {
     
     func performSave()
     func performDelete()
-    func performTagEdit()
+    func performTagEdit(atRect: CGRect, cell: UICollectionViewCell)
     
     func isCreateMode() ->Bool
     func applyTag(_ tag: Tag)
@@ -213,9 +213,8 @@ extension EditorViewController: BrowseTagSelectionDelegate {
         delegate.applyTag(withTag)
     }
     
-    func showEditor() {
-        delegate.performTagEdit()
+    func showEditor(atRect: CGRect, cell: UICollectionViewCell) {
+        delegate.performTagEdit(atRect: atRect, cell: cell)
     }
-    
 }
 

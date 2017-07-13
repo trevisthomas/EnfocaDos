@@ -88,7 +88,7 @@ class EditWordPairViewController: UIViewController {
         if let tagFilterViewController = segue.destination as? TagFilterViewController {
             
             tagFilterViewController.transitioningDelegate = self
-            tagFilterViewController.tagFilterDelegate = self
+            tagFilterViewController.initialize(delegate: self)
         }
     }
     
@@ -236,7 +236,7 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
         }
     }
     
-    func performTagEdit() {
+    func performTagEdit(atRect: CGRect, cell: UICollectionViewCell) {
         performSegue(withIdentifier: "editTags", sender: nil)
     }
     
