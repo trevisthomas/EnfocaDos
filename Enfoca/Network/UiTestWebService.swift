@@ -175,9 +175,9 @@ class UiTestWebService : WebService {
         
     }
     
-    func createTag(tagValue: String, callback: @escaping(Tag?, EnfocaError?)->()){
+    func createTag(fromTag: Tag, callback: @escaping(Tag?, EnfocaError?)->()){
         
-        let tag = Tag(tagId: "\(nextIndex())", name: tagValue)
+        let tag = Tag(tagId: "\(nextIndex())", name: fromTag.name)
         
         showNetworkActivityIndicator = true
         
@@ -189,9 +189,9 @@ class UiTestWebService : WebService {
         
     }
     
-    func updateTag(oldTag : Tag, newTagName: String, callback: @escaping(Tag?, EnfocaError?)->()) {
+    func updateTag(oldTag : Tag, updatedTag: Tag, callback: @escaping(Tag?, EnfocaError?)->()) {
         showNetworkActivityIndicator = true
-        let newTag = dataStore.applyUpdate(oldTag: oldTag, name: newTagName)
+        let newTag = dataStore.applyUpdate(oldTag: oldTag, name: updatedTag.name, color: updatedTag.color)
         
        
         invokeLater {

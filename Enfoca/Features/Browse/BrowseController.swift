@@ -48,19 +48,19 @@ class BrowseController : Controller {
     func onEvent(event: Event) {
         print("Browse controler recieved event \(event.type)")
         
-        switch(event.type) {
-        case .wordPairUpdated, .wordPairCreated, .wordPairDeleted:
-            loadWordPairs(callback: { 
-                //do it
-                self.delegate.scrollToWordPair(wordPair: event.data as! WordPair)
-            })
-        case .tagUpdate:
-            guard let updatedTag = event.data as? Tag else { fatalError() }
-            if self.tag.tagId == updatedTag.tagId {
-                self.tag = updatedTag
-                loadWordPairs()
-            }
-        default: break
-        }
+//        switch(event.type) {
+//        case .wordPairUpdated, .wordPairCreated, .wordPairDeleted:
+//            loadWordPairs(callback: { 
+//                //do it
+//                self.delegate.scrollToWordPair(wordPair: event.data as! WordPair)
+//            })
+//        case .tagUpdate:
+//            guard let updatedTag = event.data as? Tag else { fatalError() }
+//            if self.tag.tagId == updatedTag.tagId {
+//                self.tag = updatedTag
+//                loadWordPairs()
+//            }
+//        default: break
+//        }
     }
 }

@@ -169,7 +169,6 @@ extension QuizOptionsViewController: QuizOptionsViewControllerDelegate {
 //For animated transitions
 extension QuizOptionsViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        print("Presenting \(presenting.description)")
         
         if let _ = presented as? CardFrontViewController, let _ = source as? QuizOptionsViewController {
             quizOptionsToCardFrontViewAnimator.presenting = true

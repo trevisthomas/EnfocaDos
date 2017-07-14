@@ -13,12 +13,12 @@ class OperationCreateTag : BaseOperation {
     private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var tag : Tag?
-    private let tagName : String
+    private let fromTag : Tag
     
-    init (tagName: String, enfocaRef: CKReference, db: CKDatabase, errorDelegate : ErrorDelegate) {
+    init (fromTag: Tag, enfocaRef: CKReference, db: CKDatabase, errorDelegate : ErrorDelegate) {
         self.enfocaRef = enfocaRef
         self.db = db
-        self.tagName = tagName
+        self.fromTag = fromTag
         super.init(errorDelegate: errorDelegate)
     }
     
@@ -26,7 +26,10 @@ class OperationCreateTag : BaseOperation {
         super.start()
         
         let record : CKRecord = CKRecord(recordType: "Tag")
-        record.setValue(tagName, forKey: "name")
+        record.setValue(fromTag.name, forKey: "name")
+        if let color = fromTag.color {
+            record.setValue(color, forKey: "color")
+        }
         record.setValue(enfocaRef, forKey: "enfocaRef")
         
         db.save(record) { (newRecord: CKRecord?, error: Error?) in

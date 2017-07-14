@@ -11,6 +11,8 @@ import UIKit
 class TagCollectionViewCell : UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tagColorView: ColoredAngledEdgeView!
+    
     static let identifier: String = "TagCollectionViewCellId"
     
     var t: Tag!
@@ -18,6 +20,11 @@ class TagCollectionViewCell : UICollectionViewCell {
         t = tag
         
         titleLabel.text = t.name
+        if let color = tag.color {
+            tagColorView.color = UIColor(hexString: color)
+        } else {
+            tagColorView.color = nil
+        }
     }
     
 }

@@ -6,10 +6,11 @@
 //  Copyright © 2017 Trevis Thomas. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol TagFilterViewModelDelegate {
     func selectedTagsChanged()
     func reloadTable()
     func alert(title : String, message : String)
+    func presentColorSelector(colorSelectorDelegate: ColorSelectorViewControllerDelegate, source: UIView)
 }

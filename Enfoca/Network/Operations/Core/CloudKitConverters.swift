@@ -16,7 +16,9 @@ class CloudKitConverters{
             fatalError()
         }
         
-        let t = Tag(tagId: record.recordID.recordName, name: name)
+        let color = record.value(forKey: "color") as? String
+        
+        let t = Tag(tagId: record.recordID.recordName, name: name, color: color)
         return t
     }
     

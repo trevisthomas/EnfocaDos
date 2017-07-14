@@ -26,9 +26,9 @@ protocol WebService {
     func updateWordPair(oldWordPair : WordPair, word: String, definition: String, gender : Gender, example: String?, tags : [Tag], callback :
         @escaping(WordPair?, EnfocaError?)->());
     
-    func createTag(tagValue: String, callback: @escaping(Tag?, EnfocaError?)->())
+    func createTag(fromTag: Tag, callback: @escaping(Tag?, EnfocaError?)->())
     
-    func updateTag(oldTag : Tag, newTagName: String, callback: @escaping(Tag?, EnfocaError?)->())
+    func updateTag(oldTag : Tag, updatedTag: Tag, callback: @escaping(Tag?, EnfocaError?)->())
     
     func deleteWordPair(wordPair: WordPair, callback: @escaping(WordPair?, EnfocaError?)->())
     

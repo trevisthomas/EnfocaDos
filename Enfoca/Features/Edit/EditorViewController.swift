@@ -71,6 +71,8 @@ class EditorViewController: UIViewController {
             tagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true)
             animateTagSelector = false
         }
+        
+        
     }
     
     func initialize(delegate: EditorViewControllerDelegate) {

@@ -165,7 +165,8 @@ extension TagSelectionViewController : UICollectionViewDataSource {
         if (indexPath.row == 0) {
             cell.backgroundColor = Theme.gray
         } else {
-            cell.backgroundColor = Theme.green
+//            cell.backgroundColor = Theme.green
+            cell.backgroundColor = Theme.gray
         }
         
         return cell

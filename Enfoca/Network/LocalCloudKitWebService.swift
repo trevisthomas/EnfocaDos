@@ -23,6 +23,9 @@ class LocalCloudKitWebService : WebService {
         didSet{
             let recordId = CloudKitConverters.toCKRecordID(fromRecordName: dataStore.getUserDictionary().enfocaRef)
             enfocaRef = CKReference(recordID: recordId, action: .none)
+            
+            
+            print("EnfocaRef: \(enfocaRef.recordID.recordName)")
         }
     }
     
@@ -295,11 +298,11 @@ class LocalCloudKitWebService : WebService {
         
     }
     
-    func createTag(tagValue: String, callback: @escaping(Tag?, EnfocaError?)->()){
+    func createTag(fromTag: Tag, callback: @escaping(Tag?, EnfocaError?)->()){
         resetConchIfOutOfSynch()
         
         showNetworkActivityIndicator = true
-        Perform.createTag(tagName: tagValue, enfocaRef: enfocaRef, db: db) { (tag:Tag?, error: String?) in
+        Perform.createTag(fromTag: fromTag, enfocaRef: enfocaRef, db: db) { (tag:Tag?, error: String?) in
             self.showNetworkActivityIndicator = false
             if let error = error {
                 callback(nil, error)
@@ -317,13 +320,14 @@ class LocalCloudKitWebService : WebService {
         
     }
     
-    func updateTag(oldTag : Tag, newTagName: String, callback: @escaping(Tag?, EnfocaError?)->()) {
+    func updateTag(oldTag : Tag, updatedTag: Tag, callback: @escaping(Tag?, EnfocaError?)->()) {
         
         resetConchIfOutOfSynch()
         showNetworkActivityIndicator = true
-        let newTag = dataStore.applyUpdate(oldTag: oldTag, name: newTagName)
         
-        Perform.updateTag(updatedTag: newTag, db: db) { (tag:Tag?, error:String?) in
+        oldTag.applyUpdate(name: updatedTag.name, color: updatedTag.color)
+        
+        Perform.updateTag(updatedTag: oldTag, db: db) { (tag:Tag?, error:String?) in
             self.showNetworkActivityIndicator = false
             
             if let error = error { callback(nil, error) }

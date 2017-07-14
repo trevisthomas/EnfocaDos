@@ -11,12 +11,12 @@ import CloudKit
 
 extension Perform{
 
-    class func createTag(tagName: String, enfocaRef: CKReference, db: CKDatabase, callback : @escaping (_ tag : Tag?, _ error : String?) -> ()){
+    class func createTag(fromTag: Tag, enfocaRef: CKReference, db: CKDatabase, callback : @escaping (_ tag : Tag?, _ error : String?) -> ()){
         
         let queue = OperationQueue()
         let errorHandler = ErrorHandler(queue: queue, callback: callback)
         
-        let createTagOperation = OperationCreateTag(tagName: tagName, enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
+        let createTagOperation = OperationCreateTag(fromTag: fromTag, enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
         let completeOp = BlockOperation {
             OperationQueue.main.addOperation{
                 callback(createTagOperation.tag, nil)

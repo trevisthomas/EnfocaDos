@@ -150,16 +150,16 @@ class MockWebService : WebService {
     var createTagBlockedCallback : ((Tag?, EnfocaError?)->())?
     var createTagBlockCallback : Bool = false
     
-    func createTag(tagValue: String, callback: @escaping (Tag?, EnfocaError?) -> ()) {
+    func createTag(fromTag: Tag, callback: @escaping (Tag?, EnfocaError?) -> ()) {
         
         createTagCallCount += 1
-        createTagValue = tagValue
+        createTagValue = fromTag.name
         
         if let error = errorOnCreateTag {
             callback(nil, error)
             return
         } else {
-            let t = Tag(tagId: "eyedee", name: tagValue)
+            let t = Tag(tagId: "eyedee", name: fromTag.name)
             if (createTagBlockCallback) {
                 createTagBlockedCallback = callback
             } else {
@@ -168,9 +168,9 @@ class MockWebService : WebService {
         }
     }
     
-    func updateTag(oldTag : Tag, newTagName: String, callback: @escaping(Tag?, EnfocaError?)->()) {
+    func updateTag(oldTag : Tag, updatedTag: Tag, callback: @escaping(Tag?, EnfocaError?)->()) {
         
-        callback(Tag(tagId: oldTag.tagId, name: newTagName), nil)
+        callback(Tag(tagId: oldTag.tagId, name: updatedTag.name, color: updatedTag.color), nil)
     }
     
     func deleteWordPair(wordPair: WordPair, callback: @escaping(WordPair?, EnfocaError?)->()){}

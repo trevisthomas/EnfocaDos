@@ -38,34 +38,50 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-HQ-uYC" customClass="ColoredAngledEdgeView" customModule="Data_Import" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="HxL-oV-gSS"/>
+                                                        <constraint firstAttribute="height" constant="32" id="WGs-5B-Ahh"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                            <color key="value" red="0.99943608049999999" green="0.66153633590000005" blue="0.2580698729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One word is a lot of words even more than" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8I-1u-kWm">
                                                     <rect key="frame" x="4" y="4" width="142" height="142"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.6386070251" green="0.80702608819999999" blue="0.64577037100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="vSF-HQ-uYC" firstAttribute="top" secondItem="FIV-Lc-5Qd" secondAttribute="top" id="Cpt-ZI-l2T"/>
                                             <constraint firstItem="k8I-1u-kWm" firstAttribute="leading" secondItem="FIV-Lc-5Qd" secondAttribute="leading" constant="4" id="DOz-4g-Tb3"/>
                                             <constraint firstAttribute="bottom" secondItem="k8I-1u-kWm" secondAttribute="bottom" constant="4" id="Ijg-hE-XMi"/>
                                             <constraint firstItem="k8I-1u-kWm" firstAttribute="top" secondItem="FIV-Lc-5Qd" secondAttribute="top" constant="4" id="Qj1-Oh-fKx"/>
                                             <constraint firstAttribute="trailing" secondItem="k8I-1u-kWm" secondAttribute="trailing" constant="4" id="TsJ-eM-TAs"/>
+                                            <constraint firstItem="vSF-HQ-uYC" firstAttribute="leading" secondItem="FIV-Lc-5Qd" secondAttribute="leading" id="oHb-8a-r1e"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="150"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                <color key="value" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <outlet property="tagColorView" destination="vSF-HQ-uYC" id="CCA-Ug-qst"/>
                                             <outlet property="titleLabel" destination="k8I-1u-kWm" id="eub-To-X2z"/>
                                         </connections>
                                     </collectionViewCell>

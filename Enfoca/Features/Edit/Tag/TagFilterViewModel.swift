@@ -19,6 +19,7 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
     func initialize(delegate: TagFilterViewModelDelegate, selectedTags: [Tag], callback : @escaping()->()){
         tagFilterViewModelDelegate = delegate
         
+        //Hm, i'm thinking that this may not be in use
         self.selectedTags = selectedTags
         
         services.fetchUserTags { (tags:[Tag]?, error : EnfocaError?) in
@@ -68,9 +69,11 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
         return cell
     }
     
-    func createCallback(tagCell : TagCell, tagValue : String){
+    func createCallback(tagCell : TagCell, tagValue : String, color: String? = nil){
         tagCell.activityIndicator.startAnimating()
-        services.createTag(tagValue: tagValue) { (newTag: Tag?, error :EnfocaError?) in
+        
+        let tag = Tag(name: tagValue, color: color)
+        services.createTag(fromTag: tag) { (newTag: Tag?, error :EnfocaError?) in
             
             if let error = error {
                 //Should probably refactor and put this logic in the  cell
@@ -190,37 +193,42 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
         }
         tagFilterViewModelDelegate?.selectedTagsChanged()
     }
-    
     func onEvent(event: Event) {
-        //DONT FORGET, I DONT HEAR MY OWN EVENTS
-        switch(event.type) {
-        case .tagUpdate, .tagDeleted:
-            //If the deleted / updated tag was selected, this will update the summary
-            tagFilterViewModelDelegate?.selectedTagsChanged()
-        case .tagCreated:
-            //Blow the whole table away because there is a new tag.
-            tagFilterViewModelDelegate?.reloadTable()
-        default:
-            break
-        }
         print("TagFilterViewModel recieved event \(event.type)")
     }
+//    func onEvent(event: Event) {
+//        //DONT FORGET, I DONT HEAR MY OWN EVENTS
+//        switch(event.type) {
+//        case .tagUpdate, .tagDeleted:
+//            //If the deleted / updated tag was selected, this will update the summary
+//            tagFilterViewModelDelegate?.selectedTagsChanged()
+//        case .tagCreated:
+//            //Blow the whole table away because there is a new tag.
+//            tagFilterViewModelDelegate?.reloadTable()
+//        default:
+//            break
+//        }
+//        print("TagFilterViewModel recieved event \(event.type)")
+//    }
 }
 
 extension TagFilterViewModel : TagCellDelegate {
-    func update(activityIndicator: ActivityIndicatable, tag oldTag: Tag, newTagName: String) {
+    func update(activityIndicator: ActivityIndicatable, tag oldTag: Tag, updatedTag: Tag, callback: @escaping(Bool)->() ) {
         activityIndicator.startActivity()
-        services.updateTag(oldTag: oldTag, newTagName: newTagName) { (tag:Tag?, error:EnfocaError?) in
+        services.updateTag(oldTag: oldTag, updatedTag: updatedTag) { (tag:Tag?, error:EnfocaError?) in
             activityIndicator.stopActivity()
             if let error = error {
                 //Should probably refactor and put this logic in the  cell
 //                tagCell.createButton.isHidden = false
+                callback(false)
                 self.tagFilterViewModelDelegate?.alert(title: "Error", message: error)
             }
             
             guard let newTag = tag else { return }
             
             guard let oldSelectedState = self.localTagDictionary[oldTag] else { fatalError() }
+            
+            self.localTagDictionary.removeValue(forKey: oldTag)
 
             self.localTagDictionary[newTag] = oldSelectedState
 
@@ -242,6 +250,8 @@ extension TagFilterViewModel : TagCellDelegate {
             //Just letting the delegate know that tag names have changed.  One may be selected.
             self.tagFilterViewModelDelegate?.selectedTagsChanged()
             
+            callback(true)
+            
             getAppDelegate().fireEvent(source: self, event: Event(type: .tagUpdate, data: newTag))
             
         }
@@ -254,5 +264,9 @@ extension TagFilterViewModel : TagCellDelegate {
             return false
         }
         return true
+    }
+    
+    func presentColorSelector(colorSelectorDelegate: ColorSelectorViewControllerDelegate, source: UIView) {
+        tagFilterViewModelDelegate?.presentColorSelector(colorSelectorDelegate: colorSelectorDelegate, source: source)
     }
 }

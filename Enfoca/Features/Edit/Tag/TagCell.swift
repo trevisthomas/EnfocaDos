@@ -10,6 +10,13 @@
 
 import UIKit
 
+protocol TagCellDelegate {
+    func update(activityIndicator: ActivityIndicatable, tag: Tag, updatedTag: Tag, callback: @escaping (Bool)->())
+    func validate(tag: Tag, newTagName: String?) -> Bool
+    func presentColorSelector(colorSelectorDelegate: ColorSelectorViewControllerDelegate, source: UIView)
+}
+
+
 class TagCell: UITableViewCell {
 
     override func awakeFromNib() {
@@ -20,6 +27,7 @@ class TagCell: UITableViewCell {
     @IBOutlet weak var tagSelectedView: CheckMarkView?
     @IBOutlet weak var tagSubtitleLabel: UILabel?
     @IBOutlet weak var tagTitleLabel: UILabel?
+    @IBOutlet weak var colorButton: UIButton!
     
     
     @IBOutlet weak var createButton: UIButton!
@@ -62,6 +70,8 @@ class TagCell: UITableViewCell {
             
             editTagTextField.addTarget(self, action: #selector(wordTextDidChange(_:)), for: [.editingChanged])
             
+            colorButton.backgroundColor = sourceTag.uiColor
+            
             invokeLater {
                 self.applyTagEditingMode()
             }
@@ -80,14 +90,18 @@ class TagCell: UITableViewCell {
         return "\(count) words tagged."
     }
     
+    @IBAction func changeColorAction() {
+        tagUpdateDelegate?.presentColorSelector(colorSelectorDelegate: self, source: colorButton)
+    }
+    
     @IBAction func createButtonAction(_ sender: UIButton) {
         createButton?.isHidden = true
         guard let callback = createTagCallback else {return}
         guard let tagValue = tagTitleLabel?.text else {return}
-        callback(self, tagValue)
+        callback(self, tagValue, nil) //TODO, user Color
     }
     
-    var createTagCallback : ((TagCell, String)->())? = nil {
+    var createTagCallback : ((TagCell, String, String?)->())? = nil {
         didSet{
             createButton?.isHidden = createTagCallback == nil
             
@@ -125,9 +139,16 @@ class TagCell: UITableViewCell {
             tagTitleLabel?.text = editTagTextField.text
             toggleTagEditor()
             
-            tagUpdateDelegate?.update(activityIndicator: self, tag: sourceTag, newTagName: editTagTextField.text!)
+//            tagUpdateDelegate?.update(activityIndicator: self, tag: sourceTag, newTagName: editTagTextField.text!)
+            
+            performUpdate(name: editTagTextField.text!, color: sourceTag.color)
         }
         
+    }
+    
+    fileprivate func performUpdate(name: String, color: String? = nil, callback: @escaping (Bool) -> () = {_ in }) {
+        let updatedTag = Tag(name: name, color: color)
+        tagUpdateDelegate?.update(activityIndicator: self, tag: sourceTag, updatedTag: updatedTag, callback: callback)
     }
     
     func wordTextDidChange(_ textField: UITextField) {
@@ -198,8 +219,20 @@ extension TagCell: ActivityIndicatable {
     }
 }
 
-
-protocol TagCellDelegate {
-    func update(activityIndicator: ActivityIndicatable, tag: Tag, newTagName: String)
-    func validate(tag: Tag, newTagName: String?) -> Bool
+extension TagCell: ColorSelectorViewControllerDelegate {
+    func selectedColor(color: String?) {
+        performUpdate(name: sourceTag.name, color: color) {
+            (success : Bool) in
+            
+            guard success else { return }
+            
+            if let color = color {
+                self.colorButton.backgroundColor = UIColor(hexString: color)
+            } else {
+                self.colorButton.backgroundColor = nil
+            }
+            
+        }
+    }
 }
+

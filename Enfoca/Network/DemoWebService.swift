@@ -36,12 +36,12 @@ class DemoWebService : WebService {
         return nil
     }
 
-    internal func createTag(tagValue: String, callback: @escaping (Tag?, EnfocaError?) -> ()) {
+    internal func createTag(fromTag: Tag, callback: @escaping (Tag?, EnfocaError?) -> ()) {
         
         delay(1) {
-            let t = Tag(tagId: "eyedee", name: tagValue)
+            let t = Tag(tagId: "eyedee", name: fromTag.name)
             
-            print("Dummy create tag \(tagValue)")
+            print("Dummy create tag \(fromTag.name)")
             
             callback(t, nil)
         }
@@ -173,7 +173,7 @@ class DemoWebService : WebService {
         }
     }
     
-    func updateTag(oldTag : Tag, newTagName: String, callback: @escaping(Tag?, EnfocaError?)->()) {
+    func updateTag(oldTag : Tag, updatedTag: Tag, callback: @escaping(Tag?, EnfocaError?)->()) {
         
     }
     

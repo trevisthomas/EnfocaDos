@@ -147,7 +147,6 @@ extension BrowseViewController: WordPairTableDelegate {
 //For animated transitions
 extension BrowseViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        print("Presenting \(presenting.description)")
         
         if let _ = presented as? EditWordPairViewController, let _ = source as? BrowseViewController {
             editWordPairAnimator.presenting = true
@@ -158,8 +157,6 @@ extension BrowseViewController: UIViewControllerTransitioningDelegate {
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        print("Dismissing \(dismissed.description)")
         
         if let _ = dismissed as? EditWordPairViewController {
             editWordPairAnimator.presenting = false

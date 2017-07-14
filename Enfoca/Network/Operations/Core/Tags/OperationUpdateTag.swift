@@ -45,6 +45,7 @@ class OperationUpdateTag : BaseOperation {
             }
             
             record.setValue(self.updatedTag.name, forKey: "name")
+            record.setValue(self.updatedTag.color, forKey: "color")
             
             self.db.save(record) { (newRecord: CKRecord?, error: Error?) in
                 if let error = error {

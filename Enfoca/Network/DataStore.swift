@@ -334,8 +334,9 @@ class DataStore: NSObject, NSCoding {
         return (newWordPair, Array(tagsToAdd), removedAssociations)
     }
     
-    func applyUpdate(oldTag: Tag, name: String) -> Tag{
-        let newTag = Tag(tagId: oldTag.tagId, name: name)
+    func applyUpdate(oldTag: Tag, name: String, color: String? = nil) -> Tag{
+//        let newTag = Tag(tagId: oldTag.tagId, name: name, color: color)
+        oldTag.applyUpdate(name: name, color: color)
         
         let wordPairs = oldTag.wordPairs
         
@@ -347,13 +348,14 @@ class DataStore: NSObject, NSCoding {
             associations.append(ass)
         }
         
-        tagDictionary[oldTag.tagId] = newTag
+//        tagDictionary[oldTag.tagId] = newTag
         
         for ass in associations {
             add(tagAssociation: ass)
         }
         
-        return newTag
+//        return newTag
+        return oldTag
     }
     
     func internalFilterHelper(tags: [Tag]?, pairFilter: ((WordPair) -> Bool)?) -> [WordPair]{

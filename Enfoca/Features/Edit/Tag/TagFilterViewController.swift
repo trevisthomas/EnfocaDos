@@ -165,9 +165,30 @@ class TagFilterViewController: UIViewController {
         tableView.setEditing(true, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tuple = sender as? (ColorSelectorViewControllerDelegate, UIView) else { fatalError() }
+        
+        guard let to = segue.destination as? ColorSelectorViewController else { fatalError() }
+        
+        to.initialize(delegate: tuple.0)
+        to.modalPresentationStyle = UIModalPresentationStyle.popover
+        to.popoverPresentationController!.delegate = self
+        to.popoverPresentationController?.sourceView = tuple.1
+    }
+    
+}
+
+extension TagFilterViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
 }
 
 extension TagFilterViewController : TagFilterViewModelDelegate{
+    func presentColorSelector(colorSelectorDelegate: ColorSelectorViewControllerDelegate, source: UIView) {
+        performSegue(withIdentifier: "ColorSelectorSegue", sender: (colorSelectorDelegate, source))
+    }
+
     func selectedTagsChanged() {
         updateSelectedSummary()
     }

@@ -153,6 +153,18 @@
 		0F1AAA571F09423800ACC0C3 /* OperationLoadOrCreateConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA551F09423800ACC0C3 /* OperationLoadOrCreateConch.swift */; };
 		0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		0F1B05171EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */; };
+		0F299EE51F194571005CD3AF /* ColorSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EE41F194571005CD3AF /* ColorSelectorViewController.swift */; };
+		0F299EE61F194571005CD3AF /* ColorSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EE41F194571005CD3AF /* ColorSelectorViewController.swift */; };
+		0F299EE71F194571005CD3AF /* ColorSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EE41F194571005CD3AF /* ColorSelectorViewController.swift */; };
+		0F299EE91F19459B005CD3AF /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EE81F19459B005CD3AF /* ColorCell.swift */; };
+		0F299EEA1F19459B005CD3AF /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EE81F19459B005CD3AF /* ColorCell.swift */; };
+		0F299EEB1F19459B005CD3AF /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EE81F19459B005CD3AF /* ColorCell.swift */; };
+		0F299EED1F1960CC005CD3AF /* ColoredAngledEdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EEC1F1960CC005CD3AF /* ColoredAngledEdgeView.swift */; };
+		0F299EEE1F1960CC005CD3AF /* ColoredAngledEdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EEC1F1960CC005CD3AF /* ColoredAngledEdgeView.swift */; };
+		0F299EEF1F1960CC005CD3AF /* ColoredAngledEdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EEC1F1960CC005CD3AF /* ColoredAngledEdgeView.swift */; };
+		0F299EF11F196B96005CD3AF /* Tag+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF01F196B96005CD3AF /* Tag+.swift */; };
+		0F299EF21F196B96005CD3AF /* Tag+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF01F196B96005CD3AF /* Tag+.swift */; };
+		0F299EF31F196B96005CD3AF /* Tag+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF01F196B96005CD3AF /* Tag+.swift */; };
 		0F2CB43B1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
 		0F2CB43C1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
 		0F2CB43D1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
@@ -577,6 +589,10 @@
 		0F1AAA201F07021200ACC0C3 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0F1AAA551F09423800ACC0C3 /* OperationLoadOrCreateConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationLoadOrCreateConch.swift; path = Dictionary/OperationLoadOrCreateConch.swift; sourceTree = "<group>"; };
 		0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		0F299EE41F194571005CD3AF /* ColorSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorSelectorViewController.swift; path = Color/ColorSelectorViewController.swift; sourceTree = "<group>"; };
+		0F299EE81F19459B005CD3AF /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorCell.swift; path = Color/ColorCell.swift; sourceTree = "<group>"; };
+		0F299EEC1F1960CC005CD3AF /* ColoredAngledEdgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColoredAngledEdgeView.swift; path = ../../Features/Shared/ColoredAngledEdgeView.swift; sourceTree = "<group>"; };
+		0F299EF01F196B96005CD3AF /* Tag+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+.swift"; sourceTree = "<group>"; };
 		0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationDeleteConch.swift; path = Dictionary/OperationDeleteConch.swift; sourceTree = "<group>"; };
 		0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MruTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairStatisticsViewController.swift; sourceTree = "<group>"; };
@@ -811,6 +827,7 @@
 		0F085B671ED54C1E00FC20A1 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				0F299EEC1F1960CC005CD3AF /* ColoredAngledEdgeView.swift */,
 				0F911E171EE30AD100F21855 /* EnfocaButton.swift */,
 				0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */,
 				0F011EA91EEAF03500939B75 /* CheckMarkView.swift */,
@@ -853,8 +870,8 @@
 		0F085B841EDC642300FC20A1 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
-				0F911E061EE08DBA00F21855 /* Tag */,
 				0F085B851EDC64DD00FC20A1 /* Edit.storyboard */,
+				0F911E061EE08DBA00F21855 /* Tag */,
 				0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */,
 				0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */,
 				0FE015A71EFAF42100780184 /* EditorViewController.swift */,
@@ -875,6 +892,15 @@
 			path = Edit;
 			sourceTree = "<group>";
 		};
+		0F299EE31F194540005CD3AF /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				0F299EE41F194571005CD3AF /* ColorSelectorViewController.swift */,
+				0F299EE81F19459B005CD3AF /* ColorCell.swift */,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
 		0F35B03F1F0167F2001AC511 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -891,6 +917,7 @@
 		0F911E061EE08DBA00F21855 /* Tag */ = {
 			isa = PBXGroup;
 			children = (
+				0F299EE31F194540005CD3AF /* Color */,
 				0F911E071EE08E8300F21855 /* TagCell.swift */,
 				0F911E091EE08E8300F21855 /* TagFilterViewController.swift */,
 				0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */,
@@ -983,8 +1010,8 @@
 				0FA4A4B41EC8A56200F31F9A /* Features */,
 				0FA4A4E81EC8E92500F31F9A /* Models */,
 				0FA4A4F51EC8E94D00F31F9A /* Network */,
-				0FA4A4CB1EC8CC8A00F31F9A /* Resources */,
 				0FA4A4BA1EC8B02300F31F9A /* Shared */,
+				0FA4A4CB1EC8CC8A00F31F9A /* Resources */,
 				0FA4A4931EC89C0D00F31F9A /* Assets.xcassets */,
 				0FA4A4BE1EC8C98000F31F9A /* Enfoca.entitlements */,
 				0FA4A4951EC89C0D00F31F9A /* LaunchScreen.storyboard */,
@@ -1122,6 +1149,7 @@
 				0FA4A5091EC8EB2500F31F9A /* Sequence+.swift */,
 				0FD1E20C1ED1E3F400D8BD1A /* String+.swift */,
 				0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */,
+				0F299EF01F196B96005CD3AF /* Tag+.swift */,
 				0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */,
 				0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */,
 				0F911F2B1EE8573500F21855 /* UITextField+.swift */,
@@ -1594,6 +1622,7 @@
 				0F028DE91F00DC3A008200E2 /* SubjectTableViewCell.swift in Sources */,
 				0F0BAFCC1F0F4BC8005251AE /* CreateTagAssociation.swift in Sources */,
 				0F011EC21EED981100939B75 /* CardFrontViewController.swift in Sources */,
+				0F299EF21F196B96005CD3AF /* Tag+.swift in Sources */,
 				0F2CB43C1F115977002CDE68 /* OperationDeleteConch.swift in Sources */,
 				0F0BAFBF1F0CD612005251AE /* HomeOverlayViewController.swift in Sources */,
 				0F911F321EE915E400F21855 /* ActivityIndicatable.swift in Sources */,
@@ -1606,6 +1635,7 @@
 				0F028DEC1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */,
 				0F911E251EE75D4600F21855 /* OperationCreateMetaData.swift in Sources */,
 				0F0BAFE01F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */,
+				0F299EE61F194571005CD3AF /* ColorSelectorViewController.swift in Sources */,
 				0F911E261EE75D4600F21855 /* OperationUpdateTag.swift in Sources */,
 				0F911E271EE75D4600F21855 /* ProgressObserver.swift in Sources */,
 				0F911E281EE75D4600F21855 /* InternalUser.swift in Sources */,
@@ -1686,6 +1716,7 @@
 				0F911E571EE75D4600F21855 /* TagFilterViewModel.swift in Sources */,
 				0F011EBB1EEC8B0700939B75 /* OperationUpdateMetaData.swift in Sources */,
 				0F911E581EE75D4600F21855 /* TagFilterViewController.swift in Sources */,
+				0F299EEA1F19459B005CD3AF /* ColorCell.swift in Sources */,
 				0F911E5A1EE75D4600F21855 /* OperationFetchTags.swift in Sources */,
 				0F028DDF1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */,
@@ -1707,6 +1738,7 @@
 				0F911E641EE75D4600F21855 /* FetchUserRecordOperation.swift in Sources */,
 				0F0BAFD01F0F4E74005251AE /* CreateMetaData.swift in Sources */,
 				0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */,
+				0F299EEE1F1960CC005CD3AF /* ColoredAngledEdgeView.swift in Sources */,
 				0F911E671EE75D4600F21855 /* WebService.swift in Sources */,
 				0F911E681EE75D4600F21855 /* OperationFetchMetaData.swift in Sources */,
 				0F911E691EE75D4600F21855 /* FetchUserRecordId.swift in Sources */,
@@ -1742,6 +1774,7 @@
 				0F1AAA451F08044B00ACC0C3 /* LookupTableViewCell.swift in Sources */,
 				0F1AAA461F08044B00ACC0C3 /* SubjectTableViewCell.swift in Sources */,
 				0F1AAA471F08044B00ACC0C3 /* DictionarySelectionViewController.swift in Sources */,
+				0F299EEF1F1960CC005CD3AF /* ColoredAngledEdgeView.swift in Sources */,
 				0F1AAA481F08044B00ACC0C3 /* DictionaryCreationViewController.swift in Sources */,
 				0F1AAA491F08044B00ACC0C3 /* DictionaryCreationViewModel.swift in Sources */,
 				0F1AAA4A1F08044B00ACC0C3 /* NewAppLaunchViewController.swift in Sources */,
@@ -1796,6 +1829,7 @@
 				0F911E841EE766D900F21855 /* Style.swift in Sources */,
 				0F911E851EE766D900F21855 /* WordPair.swift in Sources */,
 				0F911E861EE766D900F21855 /* ApplicationDefaults.swift in Sources */,
+				0F299EF31F196B96005CD3AF /* Tag+.swift in Sources */,
 				0F911E871EE766D900F21855 /* OperationCreateMetaData.swift in Sources */,
 				0F911E881EE766D900F21855 /* OperationUpdateTag.swift in Sources */,
 				0F911E891EE766D900F21855 /* ProgressObserver.swift in Sources */,
@@ -1858,6 +1892,7 @@
 				0F911EC51EE766D900F21855 /* WordPairOrder.swift in Sources */,
 				0F2CB4511F141266002CDE68 /* LanguageTableViewCell.swift in Sources */,
 				0F911EC61EE766D900F21855 /* FetchUserRecordOperation.swift in Sources */,
+				0F299EE71F194571005CD3AF /* ColorSelectorViewController.swift in Sources */,
 				0F911EC71EE766D900F21855 /* BrowseFromHomeAnimator.swift in Sources */,
 				0F911EC91EE766D900F21855 /* WebService.swift in Sources */,
 				0F911ECA1EE766D900F21855 /* OperationFetchMetaData.swift in Sources */,
@@ -1865,6 +1900,7 @@
 				0F911ECB1EE766D900F21855 /* FetchUserRecordId.swift in Sources */,
 				0F911ECC1EE766D900F21855 /* TagFilterViewModelDelegate.swift in Sources */,
 				0F911ECD1EE766D900F21855 /* TagAssociation.swift in Sources */,
+				0F299EEB1F19459B005CD3AF /* ColorCell.swift in Sources */,
 				0F911ECE1EE766D900F21855 /* OperationCreateTag.swift in Sources */,
 				0F911ECF1EE766D900F21855 /* TagSelectionViewController.swift in Sources */,
 				0F911ED01EE766D900F21855 /* OperationFetchTagAssociations.swift in Sources */,
@@ -1889,12 +1925,14 @@
 				0F011EAE1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */,
 				0F011ED11EF0490E00939B75 /* MatchingQuizTagCell.swift in Sources */,
 				0F028DE11F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */,
+				0F299EE91F19459B005CD3AF /* ColorCell.swift in Sources */,
 				0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0F0BAFD31F0F4FD9005251AE /* CreateTag.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
 				0F1AAA211F07021200ACC0C3 /* UIView+.swift in Sources */,
 				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,
+				0F299EF11F196B96005CD3AF /* Tag+.swift in Sources */,
 				0FA4A5461EC8ECD200F31F9A /* OperationUpdateTag.swift in Sources */,
 				0FA4A4F31EC8E94700F31F9A /* ProgressObserver.swift in Sources */,
 				0FA4A5281EC8EC9000F31F9A /* InternalUser.swift in Sources */,
@@ -1955,6 +1993,7 @@
 				0F028DDE1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0F0BAFDB1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift in Sources */,
 				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
+				0F299EE51F194571005CD3AF /* ColorSelectorViewController.swift in Sources */,
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,
 				0F011ECB1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
 				0FA4A5161EC8EC6E00F31F9A /* ErrorDelegate.swift in Sources */,
@@ -1965,6 +2004,7 @@
 				0FA4A4E51EC8E91E00F31F9A /* User.swift in Sources */,
 				0F911E1C1EE5B20600F21855 /* UiTestWebService.swift in Sources */,
 				0FA4A4E11EC8E91E00F31F9A /* JsonDateFormatter.swift in Sources */,
+				0F299EED1F1960CC005CD3AF /* ColoredAngledEdgeView.swift in Sources */,
 				0F2CB4571F141332002CDE68 /* Language.swift in Sources */,
 				0F0BAFBB1F0CD124005251AE /* ModularHomeViewController.swift in Sources */,
 				0FA4A5011EC8E9AF00F31F9A /* TypeAliases.swift in Sources */,

@@ -12,12 +12,14 @@ class MruTagCollectionViewCell: UICollectionViewCell {
     static let identifier = "MruTagCollectionViewCell"
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var colorView: UIView!
     
     private var enfocaTag: Tag!
     
     func initialize(tag: Tag) {
         self.enfocaTag = tag
         label.text = tag.name
+        colorView.backgroundColor = tag.uiColor
     }
     
 }

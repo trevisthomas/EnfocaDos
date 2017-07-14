@@ -14,4 +14,5 @@ class Theme {
     static let darkness: UIColor = UIColor.init(hexString: "#53585F")
     static let lightness: UIColor = UIColor.init(hexString: "#FFFFFF")
     static let gray: UIColor = UIColor.init(hexString: "#F4F4F4") //lightest
+//    static let gray: UIColor = UIColor.init(hexString: "#F4F4F4") //lightest
 }
