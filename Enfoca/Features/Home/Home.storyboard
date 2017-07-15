@@ -111,7 +111,7 @@
                                 </connections>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or Create" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBS-ce-c80" customClass="MultiLingualTextField" customModule="Data_Import" customModuleProvider="target">
-                                <rect key="frame" x="10" y="68" width="306" height="50"/>
+                                <rect key="frame" x="12" y="68" width="304" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -161,7 +161,7 @@
                             <constraint firstItem="njc-U6-Dtt" firstAttribute="top" secondItem="ZpS-NT-za4" secondAttribute="bottom" id="YY2-4f-LlB"/>
                             <constraint firstAttribute="trailing" secondItem="6Ls-bg-rgX" secondAttribute="trailing" constant="8" id="Zc1-3g-bGo"/>
                             <constraint firstItem="aOa-mO-l14" firstAttribute="leading" secondItem="tWQ-4z-oNf" secondAttribute="leading" id="ex7-PN-zIP"/>
-                            <constraint firstItem="JBS-ce-c80" firstAttribute="leading" secondItem="tWQ-4z-oNf" secondAttribute="leading" constant="10" id="ffE-6i-sWh"/>
+                            <constraint firstItem="JBS-ce-c80" firstAttribute="leading" secondItem="tWQ-4z-oNf" secondAttribute="leading" constant="12" id="ffE-6i-sWh"/>
                             <constraint firstAttribute="trailing" secondItem="xaL-FF-bnM" secondAttribute="trailing" id="hEy-kQ-kPg"/>
                             <constraint firstItem="ntg-4K-50P" firstAttribute="bottom" secondItem="JBS-ce-c80" secondAttribute="bottom" constant="1" id="j5k-af-b7f"/>
                             <constraint firstItem="njc-U6-Dtt" firstAttribute="top" secondItem="xaL-FF-bnM" secondAttribute="bottom" id="l1k-pJ-chr"/>

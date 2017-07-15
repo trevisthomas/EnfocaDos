@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-B8-fPG">
-                                        <rect key="frame" x="48" y="32" width="302" height="26"/>
+                                        <rect key="frame" x="64" y="32" width="286" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="height" constant="64" id="4YW-mC-ZsM"/>
                                     <constraint firstAttribute="trailing" secondItem="DXF-B8-fPG" secondAttribute="trailing" constant="64" id="Dmd-s0-khf"/>
                                     <constraint firstAttribute="trailing" secondItem="QvO-LX-Fex" secondAttribute="trailing" constant="8" id="IcK-6T-gPG"/>
-                                    <constraint firstItem="DXF-B8-fPG" firstAttribute="leading" secondItem="q1d-8s-92l" secondAttribute="leading" constant="48" id="ljz-1o-u3q"/>
+                                    <constraint firstItem="DXF-B8-fPG" firstAttribute="leading" secondItem="q1d-8s-92l" secondAttribute="leading" constant="64" id="ljz-1o-u3q"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-x1-8ua">
