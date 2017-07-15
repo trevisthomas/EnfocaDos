@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="YrD-6e-jRP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="E8V-fH-HEr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="khl-B3-aHO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="hkd-EH-5Uh">
                                     <size key="itemSize" width="120" height="120"/>
@@ -38,6 +38,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Srt-h9-4aJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="upx-jG-4Tb"/>
+                                                    </constraints>
+                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-HQ-uYC" customClass="ColoredAngledEdgeView" customModule="Data_Import" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -64,9 +71,12 @@
                                             <constraint firstItem="vSF-HQ-uYC" firstAttribute="top" secondItem="FIV-Lc-5Qd" secondAttribute="top" id="Cpt-ZI-l2T"/>
                                             <constraint firstItem="k8I-1u-kWm" firstAttribute="leading" secondItem="FIV-Lc-5Qd" secondAttribute="leading" constant="4" id="DOz-4g-Tb3"/>
                                             <constraint firstAttribute="bottom" secondItem="k8I-1u-kWm" secondAttribute="bottom" constant="4" id="Ijg-hE-XMi"/>
+                                            <constraint firstItem="Srt-h9-4aJ" firstAttribute="top" secondItem="FIV-Lc-5Qd" secondAttribute="top" id="LXt-m8-bHW"/>
                                             <constraint firstItem="k8I-1u-kWm" firstAttribute="top" secondItem="FIV-Lc-5Qd" secondAttribute="top" constant="4" id="Qj1-Oh-fKx"/>
                                             <constraint firstAttribute="trailing" secondItem="k8I-1u-kWm" secondAttribute="trailing" constant="4" id="TsJ-eM-TAs"/>
+                                            <constraint firstItem="Srt-h9-4aJ" firstAttribute="leading" secondItem="FIV-Lc-5Qd" secondAttribute="leading" id="Zce-7Y-lva"/>
                                             <constraint firstItem="vSF-HQ-uYC" firstAttribute="leading" secondItem="FIV-Lc-5Qd" secondAttribute="leading" id="oHb-8a-r1e"/>
+                                            <constraint firstAttribute="trailing" secondItem="Srt-h9-4aJ" secondAttribute="trailing" id="ukx-xr-ZjS"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="150"/>
                                         <userDefinedRuntimeAttributes>
@@ -80,7 +90,13 @@
                                                 <color key="value" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="vSF-HQ-uYC"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
+                                            <outlet property="sideColorView" destination="Srt-h9-4aJ" id="fEB-En-hSt"/>
                                             <outlet property="tagColorView" destination="vSF-HQ-uYC" id="CCA-Ug-qst"/>
                                             <outlet property="titleLabel" destination="k8I-1u-kWm" id="eub-To-X2z"/>
                                         </connections>
@@ -105,14 +121,14 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="150"/>
+                    <size key="freeformSize" width="375" height="200"/>
                     <connections>
                         <outlet property="collectionView" destination="khl-B3-aHO" id="jnc-eh-yXd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEO-QL-KBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325.60000000000002" y="247.37631184407797"/>
+            <point key="canvasLocation" x="326" y="237"/>
         </scene>
     </scenes>
 </document>

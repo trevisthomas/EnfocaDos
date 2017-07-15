@@ -87,7 +87,13 @@ class TagCell: UITableViewCell {
     }
     
     func formatDetailText(_ count : Int ) -> String {
-        return "\(count) words tagged."
+        if count == 0 {
+            return ""
+        } else if count == 1{
+            return "One word tagged"
+        } else {
+            return "\(count) words tagged"
+        }
     }
     
     @IBAction func changeColorAction() {

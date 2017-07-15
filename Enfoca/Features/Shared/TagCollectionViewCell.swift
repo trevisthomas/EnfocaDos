@@ -12,6 +12,7 @@ class TagCollectionViewCell : UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tagColorView: ColoredAngledEdgeView!
+    @IBOutlet weak var sideColorView: UIView!
     
     static let identifier: String = "TagCollectionViewCellId"
     
@@ -20,11 +21,9 @@ class TagCollectionViewCell : UICollectionViewCell {
         t = tag
         
         titleLabel.text = t.name
-        if let color = tag.color {
-            tagColorView.color = UIColor(hexString: color)
-        } else {
-            tagColorView.color = nil
-        }
+        tagColorView.color = nil
+        
+        sideColorView.backgroundColor = tag.uiColor
     }
     
 }
