@@ -22,12 +22,13 @@ class ColorSelectorViewController: UIViewController {
     fileprivate var delegate: ColorSelectorViewControllerDelegate!
     
     fileprivate var colors: [ColorLabel] = [ColorLabel(name: "Default", hexColor: "#EEEEEE"),
-                                            ColorLabel(name: "Red", hexColor: "#EE0000"),
+                                        ColorLabel(name: "Red", hexColor: "#EE0000"),
                                         ColorLabel(name: "Blue", hexColor: "#0000EE"),
                                         ColorLabel(name: "Green", hexColor: "#00EE00")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        preferredContentSize = CGSize(width: 200, height: 200)
     }
 
     override func didReceiveMemoryWarning() {

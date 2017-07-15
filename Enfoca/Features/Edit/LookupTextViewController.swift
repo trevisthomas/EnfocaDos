@@ -31,6 +31,8 @@ class LookupTextViewController: UIViewController {
         
         //Because dictionaries are not ordered
         urlKeys = Array(urls.keys.sorted())
+        
+        preferredContentSize = CGSize(width: 200, height: 200)
     }
     
     func initialize(cardSide: CardSide, arguement: String){

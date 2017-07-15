@@ -11,7 +11,7 @@ import UIKit
 class DemoWebService : WebService {
     
 
-    func toData() -> Data {
+    func toData() -> Data? {
         fatalError()
     }
 

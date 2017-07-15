@@ -17,7 +17,7 @@ class UiTestWebService : WebService {
 //    var wordPairs: [WordPair]
     private var guidIndex = 0
     
-    func toData() -> Data {
+    func toData() -> Data? {
         fatalError()
     }
     

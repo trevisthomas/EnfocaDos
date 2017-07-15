@@ -82,15 +82,11 @@ class ModularHomeViewController: UIViewController {
         controller.reloadTags()
         controller.search()
         
+        
+        
         //I found that when creating a new Dictionary that the conch record might not return.  I think that it was a threading thing, but I'm putting in an explicit delay.
         delay(delayInSeconds: 1) {
-            if ModularHomeViewController.synchRequestDenied == false {
-                self.controller.isDataStoreSynchronized { (isInSynch: Bool) in
-                    if !isInSynch {
-                        self.presentDataOutOfSynchAlert()
-                    }
-                }
-            }
+            getAppDelegate().performCloudSyncCheck()
         }
     }
     

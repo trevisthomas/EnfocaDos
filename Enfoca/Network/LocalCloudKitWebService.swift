@@ -157,7 +157,10 @@ class LocalCloudKitWebService : WebService {
         return dataStore.toJson()
     }
     
-    func toData() -> Data {
+    func toData() -> Data? {
+        if dataStore == nil {
+            return nil
+        }
         return NSKeyedArchiver.archivedData(withRootObject: dataStore)
     }
     
@@ -190,22 +193,29 @@ class LocalCloudKitWebService : WebService {
             self.updateDictionaryCounts()
             
             //Create any tag associations for this new word.
-            for tag in tags {
-                Perform.createTagAssociation(tagId: tag.tagId, wordPairId: wordPair.pairId, enfocaRef: self.enfocaRef, db: self.db, callback: { (tagAss:TagAssociation?, error:String?) in
-                    
-                    if let error = error {
-                        callback(nil, error)
-                    }
+            
+            if tags.count > 0 {
+                var countdownLatchSortOfThing = tags.count
+                for tag in tags {
+                    Perform.createTagAssociation(tagId: tag.tagId, wordPairId: wordPair.pairId, enfocaRef: self.enfocaRef, db: self.db, callback: { (tagAss:TagAssociation?, error:String?) in
+                        
+                        if let error = error {
+                            callback(nil, error)
+                        }
 
-                    guard let association = tagAss else { return }
-                    
-                    self.dataStore.add(tagAssociation: association)
-                })
+                        guard let association = tagAss else { return }
+                        
+                        self.dataStore.add(tagAssociation: association)
+                        countdownLatchSortOfThing = countdownLatchSortOfThing - 1
+                        
+                        if countdownLatchSortOfThing == 0 {
+                            callback(wordPair, nil)
+                        } 
+                    })
+                }
+            } else {
+                callback(wordPair, error)
             }
-            
-            
-            
-            callback(wordPair, error)
         }
     }
     

@@ -277,7 +277,7 @@ class MockWebService : WebService {
         fatalError()
     }
     
-    func toData() -> Data {
+    func toData() -> Data? {
         fatalError()
     }
 }

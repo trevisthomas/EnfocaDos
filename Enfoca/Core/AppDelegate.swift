@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var webService : WebService!
     var applicationDefaults : ApplicationDefaults!
     
+    fileprivate var synchRequestDenied: Bool  = false
+    
+    
     fileprivate var eventListeners: [WeakReference<EventListener>] = []
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -51,6 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
+        synchRequestDenied = false
+        
         saveDefaults()
     }
 
@@ -60,6 +65,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        print("Did become active")
+        performCloudSyncCheck()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -118,7 +126,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func saveDefaults(){
-        applicationDefaults.save(dictionary: webService.getCurrentDictionary(),includingDataStore: webService.toData())
+        guard let data = webService.toData() else { return }
+        
+        applicationDefaults.save(dictionary: webService.getCurrentDictionary(),includingDataStore: data)
     }
     
 }
@@ -157,7 +167,7 @@ extension AppDelegate {
         }
     }
     
-    func presentAlert(title : String, message : String?, completion: @escaping ()->()){
+    func presentAlert(title : String, message : String?, completion: @escaping ()->() = {}){
         invokeLater {
             
             let topWindow = UIWindow(frame: UIScreen.main.bounds)
@@ -169,6 +179,68 @@ extension AppDelegate {
             
 //            self.window?.rootViewController?.presentAlert(title: title, message: message, completion: completion)
         }
+    }
+    
+    private func presentViewController(_ vc: UIViewController, animated: Bool, completion: @escaping ()->() = {}){
+        invokeLater {
+            let topWindow = UIWindow(frame: UIScreen.main.bounds)
+            topWindow.rootViewController = UIViewController()
+            topWindow.windowLevel = UIWindowLevelAlert + 1
+            
+            topWindow.makeKeyAndVisible()
+            topWindow.rootViewController?.present(vc, animated: animated, completion: completion)
+        }
+    }
+    
+    func performCloudSyncCheck() {
+        if synchRequestDenied == true {
+            return
+        }
+        
+        isDataStoreSynchronized { (inSync: Bool) in
+            if !inSync {
+                getAppDelegate().applicationDefaults.removeDictionary(self.webService.getCurrentDictionary())
+                self.presentDataOutOfSynchAlert()
+            }
+        }
+    }
+    
+    func isDataStoreSynchronized(callback: @escaping (Bool)->()) {
+        if webService == nil {
+            return
+        }
+        webService.isDataStoreSynchronized { (inSynch: Bool?, error: String?) in
+            guard let inSynch = inSynch else {
+                fatalError("Synch check crashed with fatal error")
+            }
+            callback(inSynch)
+            
+        }
+        
+    }
+    
+    private func presentDataOutOfSynchAlert(){
+        let dialog = UIAlertController(title: "Refresh Needed", message: "Data is out of synch, would you like to reload now?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        dialog.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            
+            self.presentDictonaryLoadViewController()
+        }))
+        
+        dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            self.synchRequestDenied = true
+        }))
+        
+        presentViewController(dialog, animated: true)
+    }
+    
+    private func presentDictonaryLoadViewController() {
+        // Access the storyboard and fetch an instance of the view controller
+        let storyboard = UIStoryboard(name: "DictionarySelection", bundle: nil);
+        let viewController: DictionaryLoadingViewController = storyboard.instantiateViewController(withIdentifier: "DictionaryLoadingViewController") as! DictionaryLoadingViewController;
+        
+        viewController.initialize(dictionary: webService.getCurrentDictionary())
+        presentViewController(viewController, animated: true)
     }
 }
 

@@ -21,6 +21,8 @@ class WordPairStatisticsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        preferredContentSize = CGSize(width: 200, height: 200)
+        
         refresh()
     }
 

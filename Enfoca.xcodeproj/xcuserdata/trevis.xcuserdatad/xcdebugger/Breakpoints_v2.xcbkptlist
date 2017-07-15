@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
+            startingLineNumber = "487"
+            endingLineNumber = "487"
             landmarkName = "updateScore(forWordPair:correct:elapsedTime:callback:)"
             landmarkType = "7">
             <Locations>
@@ -504,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "520622942.926395"
+            timestampString = "521841578.383746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -520,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "548"
-            endingLineNumber = "548"
+            startingLineNumber = "558"
+            endingLineNumber = "558"
             landmarkName = "performCloudKitSubscription(forRecord:db:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -536,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "550"
-            endingLineNumber = "550"
+            startingLineNumber = "560"
+            endingLineNumber = "560"
             landmarkName = "performCloudKitSubscription(forRecord:db:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -552,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "520655697.52039"
+            timestampString = "521841578.383746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -568,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "521508872.672883"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "presentAlert(title:message:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -584,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "520666472.413619"
+            timestampString = "521841578.383746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -632,11 +632,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "578"
-            endingLineNumber = "578"
+            startingLineNumber = "588"
+            endingLineNumber = "588"
             landmarkName = "remoteWordPairUpdate(pairId:callback:)"
             landmarkType = "7">
             <Locations>
@@ -680,11 +680,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "581"
-            endingLineNumber = "581"
+            startingLineNumber = "591"
+            endingLineNumber = "591"
             landmarkName = "remoteWordPairUpdate(pairId:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -696,11 +696,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "588"
-            endingLineNumber = "588"
+            startingLineNumber = "598"
+            endingLineNumber = "598"
             landmarkName = "remoteWordPairUpdate(pairId:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1109,11 +1109,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
             landmarkName = "deleteDictionary(dictionary:callback:)"
             landmarkType = "7">
             <Locations>
@@ -1349,11 +1349,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "467"
+            endingLineNumber = "467"
             landmarkName = "updateScore(forWordPair:correct:elapsedTime:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1365,11 +1365,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "458"
-            endingLineNumber = "458"
+            startingLineNumber = "468"
+            endingLineNumber = "468"
             landmarkName = "updateScore(forWordPair:correct:elapsedTime:callback:)"
             landmarkType = "7">
             <Locations>
@@ -1477,11 +1477,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "createTag(fromTag:callback:)"
             landmarkType = "7">
             <Locations>
@@ -1525,11 +1525,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "updateWordPair(oldWordPair:word:definition:gender:example:tags:callback:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1541,11 +1541,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Network/LocalCloudKitWebService.swift"
-            timestampString = "521754430.588297"
+            timestampString = "521842190.166621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
             landmarkName = "createTag(fromTag:callback:)"
             landmarkType = "7">
          </BreakpointContent>
