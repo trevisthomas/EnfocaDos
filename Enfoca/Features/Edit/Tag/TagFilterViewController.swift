@@ -9,10 +9,7 @@
 import UIKit
 
 protocol TagFilterViewControllerDelegate {
-//    func tagFilterUpdated(_ callback: (() -> ())?)
     var selectedTags : [Tag] {get set}
-//    func getSelectedTags()->[Tag]
-//    func onSelectedTagsChanged(tags: [Tag])
 }
 
 class TagFilterViewController: UIViewController {
@@ -49,7 +46,7 @@ class TagFilterViewController: UIViewController {
             }
         }
         
-        getAppDelegate().addListener(listener: viewModel)
+//        getAppDelegate().addListener(listener: viewModel)
         
     }
     

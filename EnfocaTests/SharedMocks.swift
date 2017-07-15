@@ -254,7 +254,7 @@ class MockWebService : WebService {
     }
     
     func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->()) {
-        fatalError()
+        callback(true, nil)
     }
     
     func isDataStoreSynchronized(dictionary: UserDictionary, callback: @escaping (Bool?, String?)->()) {

@@ -73,7 +73,7 @@ class ModularHomeViewController: UIViewController {
         
         
         controller.initialize()
-        getAppDelegate().addListener(listener: controller)
+//        getAppDelegate().addListener(listener: controller)
         
         
     }
@@ -507,16 +507,5 @@ extension ModularHomeViewController: HomeOverlayViewControllerDelegate {
     }
 }
 
-//extension ModularHomeViewController: TagFilterViewControllerDelegate{
-//    var selectedTags: [Tag] {
-//        get {
-//            return []
-//        }
-//        set {
-//            //Do nothing
-//        }
-//    }
-//    
-//}
 
 

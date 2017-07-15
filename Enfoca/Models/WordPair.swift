@@ -18,13 +18,17 @@ class WordPair : NSObject, NSCoding {
     /// - Parameters:
     ///   - lhs: A value to compare.
     ///   - rhs: Another value to compare.
-    public static func ==(lhs: WordPair, rhs: WordPair) -> Bool {
-        return lhs.pairId == rhs.pairId
-    }
-    
-//    var hashValue: Int {
-//        return pairId.hashValue
+//    public static func ==(lhs: WordPair, rhs: WordPair) -> Bool {
+//        return lhs.pairId == rhs.pairId
 //    }
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        if let rhs = object as? WordPair {
+            return pairId == rhs.pairId
+        }
+        return false
+    }
+
     
     private(set) var pairId: String
     private(set) var word: String

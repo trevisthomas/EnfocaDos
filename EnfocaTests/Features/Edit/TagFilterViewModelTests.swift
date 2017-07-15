@@ -41,7 +41,12 @@ class TagFilterViewModelTests: XCTestCase {
         XCTAssertEqual(sut.getSelectedTags()[0].name, "Noun")
         
         let activityIndicator = MockActivityIndicatable()
-        sut.update(activityIndicator: activityIndicator, tag: selectedTag, newTagName: "Estiercol")
+        
+        let updatedTag = Tag(name: "Estiercol", color: nil)
+        
+        sut.update(activityIndicator: activityIndicator, tag: selectedTag, updatedTag: updatedTag) { (_:Bool) in
+            //
+        }
         
         XCTAssertEqual(sut.getSelectedTags()[0].name, "Estiercol")
     }
@@ -60,6 +65,11 @@ class MockTagFilterViewModelDelegate : TagFilterViewModelDelegate {
     func alert(title : String, message : String) {
         
     }
+    
+    func presentColorSelector(colorSelectorDelegate: ColorSelectorViewControllerDelegate, source: UIView) {
+        
+    }
+
 }
 
 class MockActivityIndicatable : ActivityIndicatable {

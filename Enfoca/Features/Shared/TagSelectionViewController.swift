@@ -116,6 +116,8 @@ extension TagSelectionViewController {
     func reloadTags(tags: [Tag]){
         self.tags.removeAll()
         self.tags.append(contentsOf: tags)
+        
+        collectionView.reloadData()
     }
     
 }

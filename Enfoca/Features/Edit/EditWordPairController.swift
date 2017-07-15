@@ -32,7 +32,11 @@ class EditWordPairController: Controller {
     private var originalWordPair: WordPair?
     private var originalMetaData: MetaData?
     
-    var mostRecentlyUsedTags: [Tag] = []
+    var mostRecentlyUsedTags: [Tag] {
+        get {
+            return appDefaults.getMostRecentlyUsedTags()
+        }
+    }
     
     init(delegate: EditWordPairControllerDelegate, wordPairOrder order: WordPairOrder, text: String) {
         
@@ -47,21 +51,21 @@ class EditWordPairController: Controller {
             self.word = text
         }
         
-        setupMruTags()
+//        setupMruTags()
         
     }
     
-    private func setupMruTags(){
-        mostRecentlyUsedTags = []
-        mostRecentlyUsedTags.append(contentsOf: appDefaults.getMostRecentlyUsedTags())
-    }
+//    private func setupMruTags(){
+//        mostRecentlyUsedTags = []
+//        mostRecentlyUsedTags.append(contentsOf: appDefaults.getMostRecentlyUsedTags())
+//    }
     
     init(delegate: EditWordPairControllerDelegate, wordPair: WordPair) {
         self.delegate = delegate
         isEditMode = true
         loadOriginalWordPair(sourceWordPair: wordPair)
         
-        setupMruTags()
+//        setupMruTags()
     }
     
     private func loadOriginalWordPair(sourceWordPair: WordPair) {

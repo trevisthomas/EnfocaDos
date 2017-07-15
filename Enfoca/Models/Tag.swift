@@ -25,11 +25,18 @@ class Tag : NSObject, NSCoding /*, Equatable, Hashable*/ {
 //    /// - Parameters:
 //    ///   - lhs: A value to compare.
 //    ///   - rhs: Another value to compare.
-    public static func ==(lhs: Tag, rhs: Tag) -> Bool {
-        //Was this a good idea? I am relying on this implementation in the TagFilter for adding new tags.
-        //Ok, i'm trying to fix this now.
-        return lhs.tagId == rhs.tagId
-//        return lhs.name == rhs.name
+//    public static func ==(lhs: Tag, rhs: Tag) -> Bool {
+//        //Was this a good idea? I am relying on this implementation in the TagFilter for adding new tags.
+//        //Ok, i'm trying to fix this now.
+//        return lhs.tagId == rhs.tagId
+////        return lhs.name == rhs.name
+//    }
+    //http://mgrebenets.github.io/swift/2015/06/21/equatable-nsobject-with-swift-2
+    override func isEqual(_ object: Any?) -> Bool {
+        if let rhs = object as? Tag {
+            return tagId == rhs.tagId
+        }
+        return false
     }
 
     private(set) var tagId : String

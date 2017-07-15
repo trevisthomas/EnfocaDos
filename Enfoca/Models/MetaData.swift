@@ -18,15 +18,15 @@ class MetaData : NSObject, NSCoding /*, Hashable*/ {
     /// - Parameters:
     ///   - lhs: A value to compare.
     ///   - rhs: Another value to compare.
-//    public static func ==(lhs: MetaData, rhs: MetaData) -> Bool {
-//        return lhs.metaId == rhs.metaId
-//    }
-//    
-//    var hashValue: Int {
-//        return pairId.hashValue
-//    }
     
-    
+    //http://mgrebenets.github.io/swift/2015/06/21/equatable-nsobject-with-swift-2
+    override func isEqual(_ object: Any?) -> Bool {
+        if let rhs = object as? MetaData {
+            return metaId == rhs.metaId
+        }
+        return false
+    }
+
     private(set) var metaId: String
     private(set) var pairId: String
     private(set) var dateCreated: Date

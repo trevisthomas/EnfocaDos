@@ -46,7 +46,7 @@ class EditWordPairViewController: UIViewController {
         
         editorViewController.initialize(delegate: self)
         
-        getAppDelegate().addListener(listener: controller)
+//        getAppDelegate().addListener(listener: controller)
         refreshButtonState()
     }
 

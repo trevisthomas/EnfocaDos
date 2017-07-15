@@ -12,7 +12,6 @@ protocol ApplicationDefaults {
     var reverseWordPair : Bool {get set}
     var selectedTags : [Tag] {get set}
     var fetchWordPairPageSize : Int {get}
-//    func save(dictionary: UserDictionary, includingDataStore json: String?)
     func save(dictionary: UserDictionary, includingDataStore data: Data?)
     func load() -> Data?
     func loadDataStore(forDictionaryId dictionaryId: String) -> Data?
@@ -30,6 +29,7 @@ protocol ApplicationDefaults {
     var cardTimeoutWarning: Int {get set}
     
     func insertMostRecentTag(tag: Tag)
+    func removeFromMostRecentTag(tag: Tag)
     func getMostRecentlyUsedTags() -> [Tag]
     
     var noneTag: Tag {get}
@@ -68,6 +68,12 @@ class LocalApplicationDefaults : ApplicationDefaults {
             mostRecentlyUsedTags.remove(at: remove)
         }
         mostRecentlyUsedTags.insert(tag, at: 0)
+    }
+    
+    func removeFromMostRecentTag(tag: Tag) {
+        if let remove = mostRecentlyUsedTags.index(of: tag) {
+            mostRecentlyUsedTags.remove(at: remove)
+        }
     }
     
     func getMostRecentlyUsedTags() -> [Tag] {
@@ -134,25 +140,8 @@ class LocalApplicationDefaults : ApplicationDefaults {
         let defaults = UserDefaults.standard
         let data = defaults.value(forKey: dictionaryId) as? Data
         
-//        if let data = defaults.value(forKey: "test2") as? Data {
-//            let dataStore = NSKeyedUnarchiver.unarchiveObject(with: data) as! DataStore
-//            print(dataStore.allTags())
-//        }
-        
         return data
     }
-    
-//    func loadDataStore(forDictionaryId dictionaryId: String) -> Data? {
-//        
-//        if isTestMode() {
-//            print("Not loading user defaults.  We're in test mode")
-//            return nil
-//        }
-//        
-//        let defaults = UserDefaults.standard
-//        let json = defaults.value(forKey: dictionaryId) as? String
-//        return json
-//    }
     
     func deleteDataStoreFromCache(forDictionaryId dictionaryId: String) {
         let defaults = UserDefaults.standard

@@ -330,8 +330,8 @@
                         <outlet property="deleteButton" destination="PjM-aa-NkI" id="Jkr-2f-xNa"/>
                         <outlet property="lookupDefinitionButton" destination="orA-H3-Ad0" id="eut-di-lXJ"/>
                         <outlet property="lookupWordButton" destination="Bcd-g3-b76" id="Ow0-Ic-TCo"/>
-                        <outlet property="mruTagCollectionView" destination="Pql-Xf-LtC" id="jbJ-Nm-XZ3"/>
                         <outlet property="saveButton" destination="ilH-Kn-NcC" id="GK3-8H-pur"/>
+                        <outlet property="selectedTagViewController" destination="Pql-Xf-LtC" id="iit-rU-BP8"/>
                         <outlet property="showQuizStatsButton" destination="7LZ-Vg-7uY" id="YA1-iH-wvt"/>
                         <outlet property="tagCollectionViewContainer" destination="mhU-c4-pRg" id="qUY-Aa-fqN"/>
                         <outlet property="wordTextField" destination="2qF-GU-hgX" id="J9M-tB-WpE"/>

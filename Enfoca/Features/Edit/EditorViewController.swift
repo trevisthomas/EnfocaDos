@@ -44,10 +44,10 @@ class EditorViewController: UIViewController {
     @IBOutlet weak var showQuizStatsButton: UIButton!
     
     @IBOutlet weak var tagCollectionViewContainer: UIView!
-    @IBOutlet weak var mruTagCollectionView: UICollectionView!
+    @IBOutlet weak var selectedTagViewController: UICollectionView!
     
     fileprivate var delegate : EditorViewControllerDelegate!
-    private var tagViewController: TagSelectionViewController!
+    private var mruTagViewController: TagSelectionViewController!
     
     private var animateTagSelector: Bool = true
     override func viewDidLoad() {
@@ -57,7 +57,7 @@ class EditorViewController: UIViewController {
         
         initializeLookAndFeel()
         
-        let layout = mruTagCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = selectedTagViewController.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize = CGSize(width: 20, height: 20)
         
         layout.minimumInteritemSpacing = view.frame.width * 0.02133
@@ -68,7 +68,7 @@ class EditorViewController: UIViewController {
         definitionTextField.initialize()
         
         if animateTagSelector {
-            tagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true)
+            mruTagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true)
             animateTagSelector = false
         }
         
@@ -96,9 +96,9 @@ class EditorViewController: UIViewController {
     }
     
     private func initializeSubViews(){
-        tagViewController = createTagSelectionViewController(inContainerView: tagCollectionViewContainer)
-        tagViewController.animateCollectionViewCellCreation = true
-        tagViewController.setScrollDirection(direction: .horizontal)
+        mruTagViewController = createTagSelectionViewController(inContainerView: tagCollectionViewContainer)
+        mruTagViewController.animateCollectionViewCellCreation = true
+        mruTagViewController.setScrollDirection(direction: .horizontal)
         
     }
     
@@ -173,8 +173,9 @@ class EditorViewController: UIViewController {
 //        statisticsWrapperView.isHidden = delegate.isCreateMode()
         showQuizStatsButton.isHidden = delegate.isCreateMode()
         
-        mruTagCollectionView.reloadData()
-//        tagViewController.refresh()
+        selectedTagViewController.reloadData()
+
+        mruTagViewController.reloadTags(tags: delegate.mostRecentlyUsedTags)
     }
     
     func failedValidation(){

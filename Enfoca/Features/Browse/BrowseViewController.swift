@@ -38,7 +38,7 @@ class BrowseViewController: UIViewController {
         
         initializeSubViews()
         
-        getAppDelegate().addListener(listener: controller)
+//        getAppDelegate().addListener(listener: controller)
     }
     
     override func viewWillAppear(_ animated: Bool) {

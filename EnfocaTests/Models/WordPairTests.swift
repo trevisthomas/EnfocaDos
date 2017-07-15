@@ -40,6 +40,19 @@ class WordPairTests: XCTestCase {
         XCTAssertTrue(wp1 == wp2) //Only compared field is the pairId
     }
     
+    func testIsEqualsNSCodingStyle_ShouldBeEqual(){
+        let d = Date()
+        let wp1 = WordPair(pairId: "1234", word: "hello", definition: "hola", dateCreated: d )
+        let wp2 = WordPair(pairId: "1234", word: "hello dont care", definition: "nope", dateCreated: d )
+        
+        let a1 = [wp1]
+        let a2 = [wp2]
+        
+        //This nightmare situatuation is because NSCoding says that it is equatable compliant but it will not call your == override. 
+        //
+        XCTAssertEqual(a1, a2)
+    }
+    
     func testEquals_ShouldNotBeEqual(){
         let d = Date()
         let wp1 = WordPair(pairId: "1234", word: "hello", definition: "hola", dateCreated: d )

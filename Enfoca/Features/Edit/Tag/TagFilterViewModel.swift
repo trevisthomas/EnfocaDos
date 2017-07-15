@@ -11,7 +11,6 @@ import UIKit
 class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate, Controller {
     var localTempTagFilters : [Tag] = []
     var localTagDictionary : [Tag: Bool] = [:]
-//    private(set) var tagFilterDelegate : TagFilterViewControllerDelegate!
     var tagFilterViewModelDelegate : TagFilterViewModelDelegate?
     var allTags : [Tag] = []
     fileprivate var selectedTags: [Tag] = []
@@ -39,7 +38,7 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
             
             callback()
             
-            getAppDelegate().addListener(listener: self)
+//            getAppDelegate().addListener(listener: self)
         }
     }
     
@@ -111,7 +110,11 @@ class TagFilterViewModel : NSObject, UITableViewDataSource, UITableViewDelegate,
                     self.tagFilterViewModelDelegate?.alert(title: "Error", message: error)
                 }
                 
-                getAppDelegate().fireEvent(source: self, event: Event(type: .tagDeleted, data: tag))
+                guard let deletedTag = tag else { fatalError() }
+                
+                getAppDelegate().applicationDefaults.removeFromMostRecentTag(tag: deletedTag)
+                
+                getAppDelegate().fireEvent(source: self, event: Event(type: .tagDeleted, data: deletedTag))
             })
         }
     }
@@ -251,6 +254,8 @@ extension TagFilterViewModel : TagCellDelegate {
             self.tagFilterViewModelDelegate?.selectedTagsChanged()
             
             callback(true)
+            
+            getAppDelegate().applicationDefaults.insertMostRecentTag(tag: newTag)
             
             getAppDelegate().fireEvent(source: self, event: Event(type: .tagUpdate, data: newTag))
             
