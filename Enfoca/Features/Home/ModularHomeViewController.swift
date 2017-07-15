@@ -282,6 +282,8 @@ class ModularHomeViewController: UIViewController {
         
         if text.isEmpty {
             wordPairTableViewController.clearWordPairs()
+            controller.phrase = "" //To get it to search for all
+            controller.search() //Because the bound didSet on phrase doesnt trigger a search if the text didnt change.
         } else {
             controller.phrase = text
         }
