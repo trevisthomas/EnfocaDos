@@ -27,7 +27,6 @@ class QuizOptionsViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var browseButton: UIButton!
     
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var topToHeaderBottomConstraint: NSLayoutConstraint!
     
     fileprivate var viewModel : QuizOptionsViewModel!
