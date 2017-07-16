@@ -223,9 +223,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Gzy-Ir-ilw" firstAttribute="centerX" secondItem="wP3-1r-zyq" secondAttribute="centerX" id="1dP-ec-DfZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gzy-Ir-ilw" secondAttribute="bottom" constant="81" id="3K9-Iy-NDd"/>
                                     <constraint firstAttribute="trailing" secondItem="pnF-29-0al" secondAttribute="trailing" constant="8" id="A2J-gw-e6g"/>
                                     <constraint firstItem="8tO-2S-Pie" firstAttribute="centerX" secondItem="wP3-1r-zyq" secondAttribute="centerX" id="Imu-FA-dgm"/>
+                                    <constraint firstItem="Gzy-Ir-ilw" firstAttribute="top" secondItem="KY1-rz-wJI" secondAttribute="bottom" constant="140" id="M50-2G-jkM"/>
                                     <constraint firstItem="hKT-RD-vQo" firstAttribute="top" secondItem="8tO-2S-Pie" secondAttribute="bottom" constant="18" id="Rny-Je-nbh"/>
                                     <constraint firstItem="pnF-29-0al" firstAttribute="leading" secondItem="wP3-1r-zyq" secondAttribute="leading" constant="8" id="k4b-gs-Ao1"/>
                                     <constraint firstItem="8tO-2S-Pie" firstAttribute="top" secondItem="pnF-29-0al" secondAttribute="bottom" constant="16" id="kSi-hT-F5X"/>
@@ -702,6 +702,9 @@
                                         <state key="normal" title="Show Quiz Details">
                                             <color key="titleColor" red="0.47003650670000002" green="0.65289556979999996" blue="0.0026309711390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showDetailedResultsAction:" destination="imM-i9-s0b" eventType="touchUpInside" id="Rjz-F6-aP2"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f3B-bZ-g9c">
                                         <rect key="frame" x="159" y="174" width="97" height="42"/>
@@ -740,6 +743,7 @@
                         <outlet property="scoreLabel" destination="f3B-bZ-g9c" id="6oQ-Qn-Fbd"/>
                         <outlet property="titleLabel" destination="am2-Oj-isH" id="sIc-4M-zOM"/>
                         <segue destination="6QF-1r-2F4" kind="show" identifier="HomeSegue" id="Ixi-5y-OaF"/>
+                        <segue destination="XY1-Tw-OoY" kind="show" identifier="BrowseSegue" id="O0C-w6-pIy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6D-4T-kaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -907,11 +911,20 @@
                         <outlet property="titleLabel" destination="4vd-G3-ZnR" id="Ryx-NW-8ln"/>
                         <segue destination="6QF-1r-2F4" kind="show" identifier="HomeSegue" id="Owj-22-ncO"/>
                         <segue destination="Dm1-0E-fXf" kind="show" identifier="MatchingReviewSegue" id="rGV-qo-zJg"/>
+                        <segue destination="XY1-Tw-OoY" kind="show" identifier="BrowseSegue" id="1jO-wh-KqA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jss-Af-K86" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3432" y="27"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="MK9-Ek-awK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Browse" id="XY1-Tw-OoY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGZ-KR-bdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4437" y="236"/>
         </scene>
         <!--Home-->
         <scene sceneID="2ua-VY-hyw">
@@ -924,7 +937,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="oQB-FF-xDm"/>
-        <segue reference="7OF-2a-AVh"/>
-        <segue reference="Qlk-Ng-Knz"/>
+        <segue reference="rGV-qo-zJg"/>
+        <segue reference="Ixi-5y-OaF"/>
+        <segue reference="O0C-w6-pIy"/>
     </inferredMetricsTieBreakers>
 </document>

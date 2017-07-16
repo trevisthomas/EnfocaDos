@@ -16,6 +16,7 @@ class QuizResultsViewController: UIViewController {
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
     private var sharedViewModel: QuizViewModel!
+    fileprivate var defaultAnimator: EnfocaDefaultAnimator = EnfocaDefaultAnimator()
     
     @IBOutlet weak var contentBodyView: UIView!
     
@@ -39,9 +40,14 @@ class QuizResultsViewController: UIViewController {
         } else if let to = segue.destination as? MatchingRoundViewController {
             to.transitioningDelegate = self
             to.initialize(sharedViewModel: sharedViewModel)
+        } else if let to = segue.destination as? BrowseViewController {
+            to.transitioningDelegate = self
+            let wordPairs = sharedViewModel.getAllWordPairs()
+            to.initialize(wordPairs: wordPairs)
         }
     }
     @IBAction func showDetailedResultsAction(_ sender: Any) {
+        performSegue(withIdentifier: "BrowseSegue", sender: nil)
     }
     @IBAction func retryAction(_ sender: Any) {
         performSegue(withIdentifier: "MatchingReviewSegue", sender: nil)
@@ -70,8 +76,22 @@ extension QuizResultsViewController: UIViewControllerTransitioningDelegate {
             return MatchingRoundAnimator()
         }
         
+        if let _ = presented as? BrowseViewController {
+            defaultAnimator.presenting = true
+            return defaultAnimator
+        }
+        
         fatalError() //Becaue something is wrong
         
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let _ = dismissed as? BrowseViewController {
+            defaultAnimator.presenting = false
+            return defaultAnimator
+        }
+        return nil
     }
 }
 
@@ -111,3 +131,6 @@ extension QuizResultsViewController: HomeFromQuizAnimatorTarget {
         return headerHightConstrant.constant
     }
 }
+
+
+

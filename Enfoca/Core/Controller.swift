@@ -31,6 +31,8 @@ extension Controller {
     }
     
     func fireEvent(source: AnyObject, event: Event) {
+        
+        getAppDelegate().saveDefaults()
         getAppDelegate().fireEvent(source: source, event: event)
     }
 }

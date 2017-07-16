@@ -15,6 +15,7 @@ class QuizPerfectScoreViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentBodyView: UIView!
     fileprivate var sharedViewModel: QuizViewModel!
+    fileprivate var defaultAnimator: EnfocaDefaultAnimator = EnfocaDefaultAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,15 @@ class QuizPerfectScoreViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? ModularHomeViewController {
             to.transitioningDelegate = self
+        } else if let to = segue.destination as? BrowseViewController {
+            to.transitioningDelegate = self
+            let wordPairs = sharedViewModel.getAllWordPairs()
+            to.initialize(wordPairs: wordPairs)
         }
+    }
+    
+    @IBAction func showDetailedResultsAction(_ sender: Any) {
+        performSegue(withIdentifier: "BrowseSegue", sender: nil)
     }
     
     func initialize(sharedViewModel: QuizViewModel){
@@ -40,12 +49,29 @@ class QuizPerfectScoreViewController: UIViewController {
 extension QuizPerfectScoreViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        guard let _ = presented as? ModularHomeViewController, let _ = source as? QuizPerfectScoreViewController else {
-            fatalError()
+        if let _ = presented as? ModularHomeViewController, let _ = source as? QuizPerfectScoreViewController {
+            return HomeFromQuizResultAnimator()
         }
         
-        return HomeFromQuizResultAnimator()
+        
+        if let _ = presented as? BrowseViewController, let _ = source as? QuizPerfectScoreViewController {
+            defaultAnimator.presenting = true
+            return defaultAnimator
+        }
+        
+        fatalError() //Becaue something is wrong
+        
     }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let _ = dismissed as? BrowseViewController {
+            defaultAnimator.presenting = false
+            return defaultAnimator
+        }
+        return nil
+    }
+
 }
 
 extension QuizPerfectScoreViewController: EnfocaDefaultAnimatorTarget {

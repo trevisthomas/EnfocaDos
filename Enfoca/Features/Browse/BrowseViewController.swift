@@ -50,6 +50,31 @@ class BrowseViewController: UIViewController {
         self.showQuizButton = showBackButton
     }
     
+    func initialize(wordPairs: [WordPair]) {
+        sortByScore(wordPairs: wordPairs, callback: { sortedWordPairs in
+            self.controller = BrowseController(wordPairs: sortedWordPairs, delegate: self)
+            self.showQuizButton = false
+        })
+    }
+    
+    private func sortByScore(wordPairs: [WordPair], callback: @escaping ([WordPair])->()) {
+        
+        fetchMetaData(forWordPairs: wordPairs) { (metaDict: [String : MetaData?]) in
+            let sorted = wordPairs.sorted(by: { (wp1:WordPair, wp2:WordPair) -> Bool in
+                guard let meta1 = metaDict[wp1.pairId] as? MetaData else {
+                    return false
+                }
+                
+                guard let meta2 = metaDict[wp2.pairId] as? MetaData else {
+                    return true
+                }
+                
+                return meta1.score > meta2.score
+            })
+            callback(sorted)
+        }
+    }
+    
     private func initializeSubViews() {
         
         wordPairTableViewController = createWordPairTableViewController(inContainerView: tableViewContainer)
@@ -79,27 +104,33 @@ class BrowseViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let editWordPairVC = segue.destination as? EditWordPairViewController  {
+        if let to = segue.destination as? EditWordPairViewController  {
+            guard let sourceWordPair = sender as? WordPair else { fatalError() }
+            to.transitioningDelegate = self
             
-            editWordPairVC.transitioningDelegate = self
-            
-            editWordPairVC.delegate = self
+            to.initialize(delegate: self, wordPair: sourceWordPair)
             
         } else if let to = segue.destination as? QuizOptionsViewController {
             to.initialize(delegate: self)
         }
     }
     
-    
+    private func fetchMetaData(forWordPairs: [WordPair], callback: @escaping ([String: MetaData?])->()) {
+        var metaDataDict: [String: MetaData] = [:]
+        for wordPair in forWordPairs {
+            getAppDelegate().webService.fetchMetaData(forWordPair: wordPair) { (metaData: MetaData?, error) in
+                metaDataDict[wordPair.pairId] = metaData
+                
+                if metaDataDict.count == forWordPairs.count {
+                    callback(metaDataDict)
+                }
+            }
+        }
+    }
 
 }
 
 extension BrowseViewController: EditWordPairViewControllerDelegate {
-    var sourceWordPair: WordPair {
-        get{
-            return controller.selectedWordPair!
-        }
-    }
     func isCreateMode() -> Bool {
         return false
     }
@@ -133,13 +164,8 @@ extension BrowseViewController: WordPairTableDelegate {
     }
 
     func onWordPairSelected(wordPair: WordPair, atRect: CGRect, cell: UITableViewCell) {
-        
 //        editWordPairFromCellAnimator.sourceCell = cell
-        
         //Tap Bounce?
-        
-        controller.selectedWordPair = wordPair 
-        
         performSegue(withIdentifier: "WordPairEditorViewControllerSegue", sender: wordPair)
     }
 }

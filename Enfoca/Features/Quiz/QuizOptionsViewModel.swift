@@ -36,6 +36,8 @@ protocol QuizViewModel {
     
     func updateDataStoreCache()
     
+    func getAllWordPairs() -> [WordPair]
+    
 }
 
 
@@ -75,6 +77,9 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
         cardSide = appDefaults.cardSide
     }
     
+    func getAllWordPairs() -> [WordPair] {
+        return originalWords
+    }
     
     func onEvent(event: Event) {
         
@@ -186,6 +191,8 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
                 self.delegate.onError(title: "Network error", message: error)
             }
 //            localWp.metaData = wp?.metaData
+            
+            getAppDelegate().saveDefaults()
         })
     }
     

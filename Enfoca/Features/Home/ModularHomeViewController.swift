@@ -299,12 +299,13 @@ class ModularHomeViewController: UIViewController {
             toBrowseViewController.initialize(tag: tag, wordOrder: controller.wordOrder, showBackButton: true)
         }
         
-        if let editWordPairVC = segue.destination as? EditWordPairViewController  {
+        if let to = segue.destination as? EditWordPairViewController  {
             
-            editWordPairVC.transitioningDelegate = self
+            let sourceWordPair = sender as? WordPair
             
-            editWordPairVC.delegate = self
+            to.transitioningDelegate = self
             
+            to.initialize(delegate: self, wordPair: sourceWordPair)
         }
         
         if let quizViewController = segue.destination as? QuizOptionsViewController {

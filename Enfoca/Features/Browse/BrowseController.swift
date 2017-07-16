@@ -18,16 +18,31 @@ class BrowseController : Controller {
     private(set) var tag : Tag
     private let delegate: BrowseControllerDelegate
     let wordOrder: WordPairOrder
+    let wordPairs: [WordPair]?
     
-    var selectedWordPair: WordPair? 
+//    var selectedWordPair: WordPair? 
     
     init(tag: Tag, wordOrder: WordPairOrder, delegate: BrowseControllerDelegate) {
         self.tag = tag
         self.delegate = delegate
         self.wordOrder = wordOrder
+        self.wordPairs = nil
+    }
+    
+    init(wordPairs: [WordPair], delegate: BrowseControllerDelegate) {
+        self.tag = Tag(name: "Card Scores")
+        self.wordOrder = .wordDesc
+        self.delegate = delegate
+        self.wordPairs = wordPairs
     }
     
     public func loadWordPairs(callback: @escaping ()->() = {}){
+        
+        if let wordPairs = wordPairs {
+            self.delegate.onBrowseResult(words: wordPairs)
+            return
+        }
+        
         services.fetchWordPairs(tagFilter: [tag], wordPairOrder: wordOrder, pattern: "") { (pairs: [WordPair]?, error:EnfocaError?) in
             if let error = error {
                 self.delegate.onError(title: "Error fetching tags", message: error)

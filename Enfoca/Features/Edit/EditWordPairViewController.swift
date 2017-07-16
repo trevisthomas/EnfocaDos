@@ -9,7 +9,6 @@
 import UIKit
 
 protocol EditWordPairViewControllerDelegate {
-    var sourceWordPair: WordPair {get}
     func isCreateMode() -> Bool
     func getCreateText() -> String
     func getWordPairOrder() -> WordPairOrder
@@ -24,7 +23,8 @@ class EditWordPairViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyView: UIView!
     
-    var delegate: EditWordPairViewControllerDelegate!
+    fileprivate var sourceWordPair: WordPair!
+    fileprivate var delegate: EditWordPairViewControllerDelegate!
     fileprivate let tagEditorAnimator = EnfocaDefaultAnimator()
     
     fileprivate var editorViewController: EditorViewController!
@@ -35,7 +35,7 @@ class EditWordPairViewController: UIViewController {
         if delegate.isCreateMode() {
             controller = EditWordPairController(delegate: self, wordPairOrder: delegate.getWordPairOrder(), text: delegate.getCreateText())
         } else {
-            controller = EditWordPairController(delegate: self, wordPair: delegate.sourceWordPair)
+            controller = EditWordPairController(delegate: self, wordPair: sourceWordPair)
         }
         
         initializeSubViews()
@@ -50,6 +50,11 @@ class EditWordPairViewController: UIViewController {
         refreshButtonState()
     }
 
+    func initialize(delegate: EditWordPairViewControllerDelegate, wordPair: WordPair? ){
+        self.delegate = delegate
+        self.sourceWordPair = wordPair
+    }
+    
     @IBAction func cancelButtonAction(_ sender: Any) {
         dismiss(animated: true) {
             //done
