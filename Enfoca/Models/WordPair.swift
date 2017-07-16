@@ -53,7 +53,7 @@ class WordPair : NSObject, NSCoding {
         self.definition = source.definition
         self.gender = source.gender
         self.example = source.example
-        //Tags?
+        self.tags = source.tags
     }
     
     func addTag(_ tag : Tag) {

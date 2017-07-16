@@ -261,9 +261,10 @@ class DataStore: NSObject, NSCoding {
     }
     
     //Deprecated i think.  This was created during the weekend of cloudkit subscrption hell
-    func applyUpdate(wordPair: WordPair) {
-        wordPairDictionary[wordPair.pairId]?.applyUpdate(source: wordPair)
-    }
+//    func applyUpdate(wordPair: WordPair) {
+//        wordPairDictionary[wordPair.pairId]?.applyUpdate(source: wordPair)
+//    }
+    
     //func reloadTags(callback : @escaping([Tag]?, EnfocaError?)->())
     func reload(updatedTagList: [Tag]) {
         self.tagDictionary.removeAll()

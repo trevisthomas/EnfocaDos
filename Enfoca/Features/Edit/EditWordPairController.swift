@@ -270,13 +270,17 @@ class EditWordPairController: Controller {
             guard let originalWordPair = originalWordPair else { fatalError() }
             services.updateWordPair(oldWordPair: originalWordPair, word: word, definition: definition, gender: .notset, example: nil, tags: selectedTags) { (wordPair:WordPair?, error:EnfocaError?) in
                 
-                callback()
+                
                 if let error = error {
+                    callback()
                     self.delegate.onError(title: "Update failed", message: error)
                 }
                 
                 guard let wordPair = wordPair else { return }
                 
+                originalWordPair.applyUpdate(source: wordPair)
+                
+                callback()
                 self.fireEvent(source: self, event: Event(type: .wordPairUpdated, data: wordPair))
                 
             }

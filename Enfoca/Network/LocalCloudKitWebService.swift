@@ -583,22 +583,22 @@ class LocalCloudKitWebService : WebService {
     }
     
     func remoteWordPairUpdate(pairId: String, callback: @escaping (WordPair)->()) {
-        
-        let recordId = CKRecordID(recordName: pairId)
-        
-        db.fetch(withRecordID: recordId) { (record: CKRecord?, error: Error?) in
-            guard let record = record else { return }
-            
-            //Make sure that this record is in the current dictionary!
-            
-            let wp = CloudKitConverters.toWordPair(from: record)
-            
-            invokeLater {
-                self.dataStore.applyUpdate(wordPair: wp)
-                callback(wp)
-            }
-            
-        }
+        fatalError()
+//        let recordId = CKRecordID(recordName: pairId)
+//        
+//        db.fetch(withRecordID: recordId) { (record: CKRecord?, error: Error?) in
+//            guard let record = record else { return }
+//            
+//            //Make sure that this record is in the current dictionary!
+//            
+//            let wp = CloudKitConverters.toWordPair(from: record)
+//            
+//            invokeLater {
+//                self.dataStore.applyUpdate(wordPair: wp)
+//                callback(wp)
+//            }
+//            
+//        }
     }
     
     
