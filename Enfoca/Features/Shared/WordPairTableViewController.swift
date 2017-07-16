@@ -32,6 +32,8 @@ class WordPairTableViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 96 //Doesn't matter
         
+        tableView.separatorColor = UIColor.clear
+        
         
     }
     
