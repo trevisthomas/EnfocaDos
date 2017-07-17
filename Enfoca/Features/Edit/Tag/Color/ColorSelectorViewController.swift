@@ -19,17 +19,32 @@ protocol ColorSelectorViewControllerDelegate {
 
 class ColorSelectorViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
+    
     fileprivate var delegate: ColorSelectorViewControllerDelegate!
     
-    fileprivate var colors: [ColorLabel] = [ColorLabel(name: "Default", hexColor: "#EEEEEE"),
-                                        ColorLabel(name: "Red", hexColor: "#EE0000"),
-                                        ColorLabel(name: "Blue", hexColor: "#0000EE"),
-                                        ColorLabel(name: "Green", hexColor: "#00EE00")]
+    fileprivate var colors: [ColorLabel] = [
+                                        ColorLabel(name: "Default", hexColor: "#FFFFFF"),
+                                        ColorLabel(name: "Blue", hexColor: "#0369A4"),
+                                        ColorLabel(name: "Green", hexColor: "#1BA95E"),
+                                        ColorLabel(name: "Yellow", hexColor: "#FFD831"),
+                                        ColorLabel(name: "Orange", hexColor: "#FC7D04"),
+                                        ColorLabel(name: "Pink", hexColor: "#F08EB1"),
+                                        ColorLabel(name: "Red", hexColor: "#E31C3F")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        preferredContentSize = CGSize(width: 200, height: 200)
     }
+    
+    override func viewDidLayoutSubviews() {
+        let s = tableView.contentSize
+        
+        preferredContentSize = CGSize(width: s.width, height: s.height + headerView.frame.height)
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

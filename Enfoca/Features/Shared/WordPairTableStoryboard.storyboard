@@ -35,7 +35,7 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSC-Ip-J5i">
                                                     <rect key="frame" x="16" y="102.5" width="359" height="2"/>
-                                                    <color key="backgroundColor" red="0.95675891639999999" green="0.95692259069999996" blue="0.95674854519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.92549019607843142" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="2" id="4ke-t5-Nlk"/>
                                                     </constraints>
@@ -43,25 +43,25 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7w-fH-zFG">
                                                     <rect key="frame" x="315.5" y="41" width="51.5" height="23"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
-                                                    <color key="textColor" red="0.83594208960000005" green="0.65460956100000001" blue="0.25832647089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.52270525693893433" green="0.46987044811248779" blue="0.49846982955932617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="SecondaryText" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foa-iy-c0j">
                                                     <rect key="frame" x="8" y="42.5" width="299.5" height="28"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="24"/>
-                                                    <color key="textColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.52270525693893433" green="0.46987044811248779" blue="0.49846982955932617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags, tags" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCt-hK-f4n">
                                                     <rect key="frame" x="8" y="70.5" width="299.5" height="26"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="13"/>
-                                                    <color key="textColor" red="0.66267138719558716" green="0.66278749704360962" blue="0.66266411542892456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.6342390775680542" green="0.66157263517379761" blue="0.73217785358428955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="753" text="Primary Text Fuckity fuck fuck why doesnt it work" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRl-wU-i9q">
                                                     <rect key="frame" x="8" y="8" width="299.5" height="34.5"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
-                                                    <color key="textColor" red="0.47003650665283203" green="0.65289556980133057" blue="0.0026309711392968893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -85,6 +85,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                                <color key="value" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="primarTextLabel" destination="BRl-wU-i9q" id="jlb-RS-lcd"/>
                                             <outlet property="scoreTextLabel" destination="b7w-fH-zFG" id="NNF-yQ-4Iw"/>

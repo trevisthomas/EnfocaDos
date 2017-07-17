@@ -46,6 +46,7 @@
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mTF-f0-JOp">
                                                 <rect key="frame" x="8" y="6" width="359" height="38"/>
+                                                <color key="backgroundColor" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="7ug-zq-vy0"/>
                                                 </constraints>
@@ -53,13 +54,13 @@
                                                     <segment title="English"/>
                                                     <segment title="Spanish"/>
                                                 </segments>
-                                                <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="languageSegmentedControlChanged:" destination="MEL-57-byf" eventType="valueChanged" id="ylb-OT-cab"/>
                                                 </connections>
                                             </segmentedControl>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="mTF-f0-JOp" firstAttribute="width" secondItem="Xmf-kb-AAj" secondAttribute="width" constant="-16" id="aKE-AI-JOT"/>
                                             <constraint firstItem="mTF-f0-JOp" firstAttribute="centerY" secondItem="Xmf-kb-AAj" secondAttribute="centerY" id="jkr-2p-chA"/>
@@ -69,7 +70,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntg-4K-50P">
                                         <rect key="frame" x="6" y="65" width="363" height="54"/>
-                                        <color key="backgroundColor" red="0.34599548278273473" green="0.36561761401766857" blue="0.38917676445578231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.29411764705882354" green="0.32941176470588235" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="Xf3-Dj-lXF"/>
                                         </constraints>
@@ -80,7 +81,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.3411764705882353" green="0.37647058823529411" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Xmf-kb-AAj" firstAttribute="leading" secondItem="aOa-mO-l14" secondAttribute="leading" id="DHA-jR-QzI"/>
                                     <constraint firstAttribute="bottom" secondItem="Xmf-kb-AAj" secondAttribute="bottom" constant="8" id="Efy-Du-nDK"/>
@@ -141,7 +142,7 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpS-NT-za4">
                                 <rect key="frame" x="0.0" y="192" width="375" height="475"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaL-FF-bnM">
                                 <rect key="frame" x="0.0" y="125" width="375" height="542"/>
@@ -219,6 +220,7 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kWv-OQ-DDG">
                                 <rect key="frame" x="8" y="12" width="359" height="38"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="lny-aa-FhL"/>
                                 </constraints>
@@ -226,17 +228,17 @@
                                     <segment title="Quiz"/>
                                     <segment title="Browse"/>
                                 </segments>
-                                <color key="tintColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSV-18-3e7">
                                 <rect key="frame" x="0.0" y="53" width="375" height="614"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEe-kT-GW1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="4"/>
-                                <color key="backgroundColor" red="0.32549019610000002" green="0.34509803919999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="etv-YL-63q"/>
+                                    <constraint firstAttribute="height" constant="1" id="etv-YL-63q"/>
                                 </constraints>
                             </view>
                         </subviews>

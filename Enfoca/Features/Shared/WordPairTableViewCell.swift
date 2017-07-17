@@ -18,6 +18,9 @@ class WordPairTableViewCell: UITableViewCell {
     @IBOutlet weak var scoreTextLabel: UILabel!
     
     fileprivate(set) var isCreateMode : Bool = false
+    let bgColorView = UIView()
+    
+    @IBInspectable var selectedBackgroundColor : UIColor!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,6 +33,7 @@ class WordPairTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 }
+
 
 extension WordPairTableViewCell {
     func initialize(wordPair: WordPair, order: WordPairOrder){
@@ -54,6 +58,9 @@ extension WordPairTableViewCell {
                 self.scoreTextLabel.text = meta.scoreAsString
             }
         }
+        
+        bgColorView.backgroundColor = selectedBackgroundColor
+        selectedBackgroundView = bgColorView
     }
     
     func initialize(create: String, order: WordPairOrder) {
@@ -63,6 +70,8 @@ extension WordPairTableViewCell {
         self.scoreTextLabel.text = ""
         self.tagsTextLabel.text = ""
         self.secondaryTextLabel.text = ""
+        
+        
     }
     
     

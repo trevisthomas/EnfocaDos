@@ -13,16 +13,20 @@ class AnimatedTextField: MultiLingualTextField, UITextFieldDelegate {
     
     var labelScale : CGFloat = 0.45
     var textInset : CGFloat = 6.0
-    var placeHolderColor = UIColor.black {
+    
+    @IBInspectable
+    var placeHolderColor: UIColor = UIColor.black {
         didSet {
             label.textColor = placeHolderColor
         }
     }
     var placeHolderAlpha : CGFloat = 0.2
-    var borderHighlightColor : UIColor = UIColor.orange
+    
+    @IBInspectable var borderHighlightColor : UIColor = UIColor.orange
     //var borderHighlightColor : UIColor = UIColor(hexString: "#A8D379")
     //    var borderDefaultColor : UIColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
-    var borderDefaultColor : UIColor = UIColor.gray.withAlphaComponent(0.3)
+    
+    @IBInspectable var borderDefaultColor : UIColor = UIColor.gray.withAlphaComponent(0.3)
     var defaultBackgroundColor : UIColor = UIColor.clear
     private var placeholderTextBackup : String?
     

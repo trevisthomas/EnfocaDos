@@ -165,6 +165,9 @@
 		0F299EF11F196B96005CD3AF /* Tag+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF01F196B96005CD3AF /* Tag+.swift */; };
 		0F299EF21F196B96005CD3AF /* Tag+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF01F196B96005CD3AF /* Tag+.swift */; };
 		0F299EF31F196B96005CD3AF /* Tag+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF01F196B96005CD3AF /* Tag+.swift */; };
+		0F299EF51F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */; };
+		0F299EF61F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */; };
+		0F299EF71F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */; };
 		0F2CB43B1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
 		0F2CB43C1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
 		0F2CB43D1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
@@ -593,6 +596,7 @@
 		0F299EE81F19459B005CD3AF /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorCell.swift; path = Color/ColorCell.swift; sourceTree = "<group>"; };
 		0F299EEC1F1960CC005CD3AF /* ColoredAngledEdgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColoredAngledEdgeView.swift; path = ../../Features/Shared/ColoredAngledEdgeView.swift; sourceTree = "<group>"; };
 		0F299EF01F196B96005CD3AF /* Tag+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+.swift"; sourceTree = "<group>"; };
+		0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCelll+.swift"; sourceTree = "<group>"; };
 		0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationDeleteConch.swift; path = Dictionary/OperationDeleteConch.swift; sourceTree = "<group>"; };
 		0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MruTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairStatisticsViewController.swift; sourceTree = "<group>"; };
@@ -1153,6 +1157,7 @@
 				0FA4A50A1EC8EB2500F31F9A /* UITableView+.swift */,
 				0FA4A50B1EC8EB2500F31F9A /* UIViewController+.swift */,
 				0F911F2B1EE8573500F21855 /* UITextField+.swift */,
+				0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */,
 				0FE015981EF5C9C100780184 /* Double+.swift */,
 				0FE015A41EF9D46D00780184 /* CALayer+.swift */,
 				0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */,
@@ -1628,6 +1633,7 @@
 				0F911F321EE915E400F21855 /* ActivityIndicatable.swift in Sources */,
 				0F911F331EE915E400F21855 /* UITextField+.swift in Sources */,
 				0F911E211EE75D4600F21855 /* DataStore.swift in Sources */,
+				0F299EF61F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */,
 				0F911E221EE75D4600F21855 /* Style.swift in Sources */,
 				0F911E231EE75D4600F21855 /* WordPair.swift in Sources */,
 				0F911E241EE75D4600F21855 /* ApplicationDefaults.swift in Sources */,
@@ -1898,6 +1904,7 @@
 				0F911ECA1EE766D900F21855 /* OperationFetchMetaData.swift in Sources */,
 				0F0BAFD51F0F4FD9005251AE /* CreateTag.swift in Sources */,
 				0F911ECB1EE766D900F21855 /* FetchUserRecordId.swift in Sources */,
+				0F299EF71F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */,
 				0F911ECC1EE766D900F21855 /* TagFilterViewModelDelegate.swift in Sources */,
 				0F911ECD1EE766D900F21855 /* TagAssociation.swift in Sources */,
 				0F299EEB1F19459B005CD3AF /* ColorCell.swift in Sources */,
@@ -1992,6 +1999,7 @@
 				0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */,
 				0F028DDE1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0F0BAFDB1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift in Sources */,
+				0F299EF51F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */,
 				0FA4A5421EC8ECD200F31F9A /* OperationCreateTagAssociation.swift in Sources */,
 				0F299EE51F194571005CD3AF /* ColorSelectorViewController.swift in Sources */,
 				0FA4A5231EC8EC9000F31F9A /* CloudAuthOperation.swift in Sources */,

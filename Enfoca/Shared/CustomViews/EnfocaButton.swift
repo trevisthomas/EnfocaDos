@@ -48,7 +48,7 @@ class EnfocaButton: UIButton {
     private func initLookAndFeel(){
         layer.cornerRadius = 10
         
-        backgroundColorDisabled = backgroundColor?.withAlphaComponent(0.2)
+        backgroundColorDisabled = backgroundColor?.withAlphaComponent(0.7)
         backgroundColorNormal = backgroundColor
         
         setTitleColor(titleColor(for: .normal)?.withAlphaComponent(0.2), for: .disabled)

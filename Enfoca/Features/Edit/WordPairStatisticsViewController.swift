@@ -15,15 +15,18 @@ class WordPairStatisticsViewController: UIViewController {
     @IBOutlet weak var dateAddedLabel: UILabel!
     @IBOutlet weak var dateUpdatedLabel: UILabel!
     @IBOutlet weak var averageTimeLabel: UILabel!
+    @IBOutlet weak var contentView: UIView!
     
     private var delegate: EditorViewControllerDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        preferredContentSize = CGSize(width: 200, height: 200)
-        
         refresh()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(contentView.intrinsicContentSize)
+        preferredContentSize = contentView.frame.size
     }
 
     func initialize(delegate: EditorViewControllerDelegate) {
