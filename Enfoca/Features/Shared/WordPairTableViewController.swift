@@ -23,6 +23,8 @@ class WordPairTableViewController: UIViewController {
     fileprivate var order: WordPairOrder!
     fileprivate var createText: String = ""
     
+    private let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,8 +36,27 @@ class WordPairTableViewController: UIViewController {
         
         tableView.separatorColor = UIColor.clear
         
+        tableView.refreshControl = refreshControl
+        
+        // Configure Refresh Control
+        refreshControl.addTarget(self, action: #selector(refreshDataToNextSort(sender:)), for: .valueChanged)
+        
         
     }
+    
+    
+    func refreshDataToNextSort(sender: Any) {
+        let tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
+        let attributes = [ NSForegroundColorAttributeName : tintColor ] as [String: Any]
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Weather Data ...", attributes: attributes)
+        
+        
+        delay(delayInSeconds: 2) {
+            
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
     
     func getVisibleCells() -> [UITableViewCell] {
         return tableView.visibleCells

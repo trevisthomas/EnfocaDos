@@ -14,11 +14,14 @@ class OperationFetchMetaData : MonitoredBaseOperation {
     private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var metaData : [MetaData] = []
-    private let key : String = "FetchMetaData"
+    static let key : String = "FetchMetaData"
+    private let size: Int
+    private var count: Int = 0
     
-    init (enfocaRef: CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
+    init (sizeEstimate: Int, enfocaRef: CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
         self.enfocaRef = enfocaRef
         self.db = db
+        self.size = sizeEstimate
         super.init(progressObserver: progressObserver, errorDelegate: errorDelegate)
     }
     
@@ -32,7 +35,7 @@ class OperationFetchMetaData : MonitoredBaseOperation {
         
         let operation = CKQueryOperation(query: query)
         
-        self.progressObserver.startProgress(ofType: key, message: "Starting load of quiz scores")
+        self.progressObserver.startProgress(ofType: OperationFetchMetaData.key, message: "Starting load of quiz scores", size: self.size)
         
         execute(operation: operation)
     }
@@ -41,7 +44,8 @@ class OperationFetchMetaData : MonitoredBaseOperation {
         operation.recordFetchedBlock = {record in
             let meta = CloudKitConverters.toMetaData(from: record)
             let message = "".appendingFormat("%.0f", meta.score * 100)
-            self.progressObserver.updateProgress(ofType: self.key, message: message)
+            self.count += 1
+            self.progressObserver.updateProgress(ofType: OperationFetchMetaData.key, message: message, count: self.count)
             self.metaData.append(meta)
         }
         
@@ -57,7 +61,7 @@ class OperationFetchMetaData : MonitoredBaseOperation {
                 return
             }
             
-            self.progressObserver.endProgress(ofType: self.key, message: "Done all quiz scores loaded.")
+            self.progressObserver.endProgress(ofType: OperationFetchMetaData.key, message: "Done all quiz scores loaded.", total: self.size)
             self.done()
         }
         

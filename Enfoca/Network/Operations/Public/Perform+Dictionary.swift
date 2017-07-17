@@ -118,10 +118,10 @@ extension Perform {
         let recordId = CloudKitConverters.toCKRecordID(fromRecordName: dictionary.enfocaRef)
         let enfocaRef = CKReference(recordID: recordId, action: .none)
         
-        let fetchTagAssociations = OperationFetchTagAssociations(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
-        let fetchTags = OperationFetchTags(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
-        let fetchWordPairs = OperationFetchWordPairs(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
-        let fetchMetaData = OperationFetchMetaData(enfocaRef: enfocaRef, db: privateDb, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchTagAssociations = OperationFetchTagAssociations(sizeEstimate: 0,enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchTags = OperationFetchTags(sizeEstimate: 0, enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchWordPairs = OperationFetchWordPairs(sizeEstimate: 0, enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchMetaData = OperationFetchMetaData(sizeEstimate: 0, enfocaRef: enfocaRef, db: privateDb, progressObserver: progressObserver, errorDelegate: errorHandler)
         
         let deleteConch = OperationDeleteConch(enfocaRef: enfocaRef, db: db, errorDelegate: errorHandler)
         

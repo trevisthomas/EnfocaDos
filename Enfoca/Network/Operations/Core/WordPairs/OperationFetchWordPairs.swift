@@ -13,11 +13,14 @@ class OperationFetchWordPairs : MonitoredBaseOperation {
     private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var wordPairs : [WordPair] = []
-    private let key : String = "FetchWordPairs"
+    static let key : String = "FetchWordPairs"
+    private let size: Int
+    private var count: Int = 0
     
-    init (enfocaRef : CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
+    init (sizeEstimate: Int, enfocaRef : CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
         self.enfocaRef = enfocaRef
         self.db = db
+        self.size = sizeEstimate
         super.init(progressObserver: progressObserver, errorDelegate: errorDelegate)
     }
     
@@ -34,7 +37,7 @@ class OperationFetchWordPairs : MonitoredBaseOperation {
         
         let operation = CKQueryOperation(query: query)
         
-        self.progressObserver.startProgress(ofType: key, message: "Starting load vocabulary")
+        self.progressObserver.startProgress(ofType: OperationFetchWordPairs.key, message: "Starting load vocabulary", size: self.size)
         
         execute(operation: operation)
     }
@@ -42,7 +45,8 @@ class OperationFetchWordPairs : MonitoredBaseOperation {
     private func execute(operation : CKQueryOperation) {
         operation.recordFetchedBlock = {record in
             let wp = CloudKitConverters.toWordPair(from: record)
-            self.progressObserver.updateProgress(ofType: self.key, message: "loaded \(wp.word)")
+            self.count += 1
+            self.progressObserver.updateProgress(ofType: OperationFetchWordPairs.key, message: "loaded \(wp.word)", count: self.count)
             self.wordPairs.append(wp)
         }
         
@@ -58,7 +62,7 @@ class OperationFetchWordPairs : MonitoredBaseOperation {
                 return
             }
             
-            self.progressObserver.endProgress(ofType: self.key, message: "Done fetching vocabulary.")
+            self.progressObserver.endProgress(ofType: OperationFetchWordPairs.key, message: "Done fetching vocabulary.", total: self.count)
             self.done()
         }
         

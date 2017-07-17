@@ -168,6 +168,9 @@
 		0F299EF51F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */; };
 		0F299EF61F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */; };
 		0F299EF71F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */; };
+		0F299EF91F1D33C5005CD3AF /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF81F1D33C5005CD3AF /* ProgressBarView.swift */; };
+		0F299EFA1F1D33C5005CD3AF /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF81F1D33C5005CD3AF /* ProgressBarView.swift */; };
+		0F299EFB1F1D33C5005CD3AF /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F299EF81F1D33C5005CD3AF /* ProgressBarView.swift */; };
 		0F2CB43B1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
 		0F2CB43C1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
 		0F2CB43D1F115977002CDE68 /* OperationDeleteConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */; };
@@ -552,7 +555,7 @@
 		0F011ECD1EEE52BA00939B75 /* HomeFromQuizResultAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFromQuizResultAnimator.swift; sourceTree = "<group>"; };
 		0F011ED01EF0490E00939B75 /* MatchingQuizTagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingQuizTagCell.swift; path = Quiz/MatchingQuizTagCell.swift; sourceTree = "<group>"; };
 		0F011ED31EF04CA700939B75 /* MatchingRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewController.swift; path = Quiz/MatchingRoundViewController.swift; sourceTree = "<group>"; };
-		0F011ED91EF059E900939B75 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		0F011ED91EF059E900939B75 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = ../Shared/Theme.swift; sourceTree = "<group>"; };
 		0F011EDF1EF0A83E00939B75 /* MatchingRoundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModel.swift; path = Quiz/MatchingRoundViewModel.swift; sourceTree = "<group>"; };
 		0F011EE21EF0B53C00939B75 /* MatchingRoundViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchingRoundViewModelTests.swift; path = Quiz/MatchingRoundViewModelTests.swift; sourceTree = "<group>"; };
 		0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
@@ -597,6 +600,7 @@
 		0F299EEC1F1960CC005CD3AF /* ColoredAngledEdgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColoredAngledEdgeView.swift; path = ../../Features/Shared/ColoredAngledEdgeView.swift; sourceTree = "<group>"; };
 		0F299EF01F196B96005CD3AF /* Tag+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+.swift"; sourceTree = "<group>"; };
 		0F299EF41F1C7DB3005CD3AF /* UITableViewCelll+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCelll+.swift"; sourceTree = "<group>"; };
+		0F299EF81F1D33C5005CD3AF /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		0F2CB43A1F115977002CDE68 /* OperationDeleteConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationDeleteConch.swift; path = Dictionary/OperationDeleteConch.swift; sourceTree = "<group>"; };
 		0F2CB4421F128541002CDE68 /* MruTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MruTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F2CB4461F1287AE002CDE68 /* WordPairStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairStatisticsViewController.swift; sourceTree = "<group>"; };
@@ -837,6 +841,7 @@
 				0F011EA91EEAF03500939B75 /* CheckMarkView.swift */,
 				0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */,
 				0F2CB44A1F140CF9002CDE68 /* MultiLingualTextField.swift */,
+				0F299EF81F1D33C5005CD3AF /* ProgressBarView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1053,6 +1058,7 @@
 				0FA4A58C1ECCD8C400F31F9A /* Controller.swift */,
 				0FA4A58A1ECCAE9C00F31F9A /* Event.swift */,
 				0FA4A5591EC96A7800F31F9A /* Style.swift */,
+				0F011ED91EF059E900939B75 /* Theme.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1087,7 +1093,6 @@
 				0FA4A5031EC8EACD00F31F9A /* Utilities */,
 				0FA4A4F91EC8E9AF00F31F9A /* EnfocaError.swift */,
 				0FA4A4FC1EC8E9AF00F31F9A /* TypeAliases.swift */,
-				0F011ED91EF059E900939B75 /* Theme.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1634,6 +1639,7 @@
 				0F911F331EE915E400F21855 /* UITextField+.swift in Sources */,
 				0F911E211EE75D4600F21855 /* DataStore.swift in Sources */,
 				0F299EF61F1C7DB3005CD3AF /* UITableViewCelll+.swift in Sources */,
+				0F299EFA1F1D33C5005CD3AF /* ProgressBarView.swift in Sources */,
 				0F911E221EE75D4600F21855 /* Style.swift in Sources */,
 				0F911E231EE75D4600F21855 /* WordPair.swift in Sources */,
 				0F911E241EE75D4600F21855 /* ApplicationDefaults.swift in Sources */,
@@ -1792,6 +1798,7 @@
 				0F1AAA391F08042C00ACC0C3 /* QuizOptionsViewModel.swift in Sources */,
 				0F1AAA3A1F08042C00ACC0C3 /* QuizOptionsViewController.swift in Sources */,
 				0F2CB44D1F140CF9002CDE68 /* MultiLingualTextField.swift in Sources */,
+				0F299EFB1F1D33C5005CD3AF /* ProgressBarView.swift in Sources */,
 				0F1AAA3B1F08042C00ACC0C3 /* CardFrontViewController.swift in Sources */,
 				0F2CB4591F141332002CDE68 /* Language.swift in Sources */,
 				0F1AAA3C1F08042C00ACC0C3 /* CardRearViewController.swift in Sources */,
@@ -1934,6 +1941,7 @@
 				0F028DE11F00CDE4008200E2 /* FetchUserDictionaryList.swift in Sources */,
 				0F299EE91F19459B005CD3AF /* ColorCell.swift in Sources */,
 				0F1B05161EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
+				0F299EF91F1D33C5005CD3AF /* ProgressBarView.swift in Sources */,
 				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0F0BAFD31F0F4FD9005251AE /* CreateTag.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,

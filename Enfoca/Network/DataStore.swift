@@ -111,15 +111,15 @@ class DataStore: NSObject, NSCoding {
         
         let key : String = "DataStoreInit"
         
-        progressObserver?.startProgress(ofType: key, message: "Initializing DataStore")
-        
+//        progressObserver?.startProgress(ofType: key, message: "Initializing DataStore")
+//        
         self.tagDictionary = tags.reduce([String : Tag]()) { (acc, tag) in
             var dict = acc // This shit show is because the seed dictionary isnt mutable
             dict[tag.tagId] = tag
             return dict
         }
         
-        progressObserver?.updateProgress(ofType: key, message: "DataStore loaded \(tagDictionary.count) tags...")
+//        progressObserver?.updateProgress(ofType: key, message: "DataStore loaded \(tagDictionary.count) tags...")
         
         self.wordPairDictionary = wordPairs.reduce([String : WordPair]()) { (acc, wordPair) in
             var dict = acc
@@ -127,7 +127,7 @@ class DataStore: NSObject, NSCoding {
             return dict
         }
         
-        progressObserver?.updateProgress(ofType: key, message: "DataStore loaded \(wordPairDictionary.count) words...")
+//        progressObserver?.updateProgress(ofType: key, message: "DataStore loaded \(wordPairDictionary.count) words...")
         
         self.tagAssociations = tagAssociations
         
@@ -144,8 +144,8 @@ class DataStore: NSObject, NSCoding {
             wp.addTag(t)
         }
         
-        progressObserver?.updateProgress(ofType: key, message: "DataStore tagged \(tagAssociations.count) words...")
-        
+//        progressObserver?.updateProgress(ofType: key, message: "DataStore tagged \(tagAssociations.count) words...")
+//        
         self.metaDataDictionary = metaData.reduce([String: MetaData](), { (acc, meta) -> [String: MetaData] in
             var dict = acc
             dict[meta.pairId] = meta
@@ -155,10 +155,10 @@ class DataStore: NSObject, NSCoding {
             return dict
         })
         
-        progressObserver?.updateProgress(ofType: key, message: "Loaded quiz stats for \(metaDataDictionary.count) words...")
+//        progressObserver?.updateProgress(ofType: key, message: "Loaded quiz stats for \(metaDataDictionary.count) words...")
+//        
         
-        
-        progressObserver?.endProgress(ofType: key, message: "DataStore initialization complete.")
+//        progressObserver?.endProgress(ofType: key, message: "DataStore initialization complete.")
         
         isInitialized = true
     }

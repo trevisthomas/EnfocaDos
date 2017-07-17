@@ -16,7 +16,9 @@ protocol LanguageSelectionViewControllerDelegate {
 class LanguageSelectionViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
     fileprivate var delegate: LanguageSelectionViewControllerDelegate!
+    
     
     //http://www.ibabbleon.com/iOS-Language-Codes-ISO-639.html
     
@@ -27,6 +29,20 @@ class LanguageSelectionViewController: UIViewController {
     func initialize(delegate: LanguageSelectionViewControllerDelegate){
         self.delegate = delegate
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        preferredContentSize = CGSize(width: 200, height: 200)
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        let s = tableView.contentSize
+//        
+//        preferredContentSize = CGSize(width: s.width, height: s.height + headerView.frame.height)
+    }
+    
+    
 
 }
 

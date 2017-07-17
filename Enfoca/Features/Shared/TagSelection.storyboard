@@ -122,6 +122,11 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="200"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="refreshTextColor">
+                            <color key="value" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="khl-B3-aHO" id="jnc-eh-yXd"/>
                     </connections>

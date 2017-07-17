@@ -132,15 +132,17 @@ class LocalApplicationDefaults : ApplicationDefaults {
     
     func loadDataStore(forDictionaryId dictionaryId: String) -> Data? {
         
-        if isTestMode() {
-            print("Not loading user defaults.  We're in test mode")
-            return nil
-        }
+//        if isTestMode() {
+//            print("Not loading user defaults.  We're in test mode")
+//            return nil
+//        }
+//        
+//        let defaults = UserDefaults.standard
+//        let data = defaults.value(forKey: dictionaryId) as? Data
+//        
+//        return data
         
-        let defaults = UserDefaults.standard
-        let data = defaults.value(forKey: dictionaryId) as? Data
-        
-        return data
+        return nil
     }
     
     func deleteDataStoreFromCache(forDictionaryId dictionaryId: String) {

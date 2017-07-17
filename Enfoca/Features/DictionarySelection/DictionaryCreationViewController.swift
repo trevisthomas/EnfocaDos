@@ -43,7 +43,7 @@ class DictionaryCreationViewController: UIViewController {
         if let to = segue.destination as? DictionaryEditorViewController {
 //            to.transitioningDelegate = self
             guard let dictionary = sender as? UserDictionary else { fatalError() }
-            to.initialize(dictionary: dictionary)
+            to.initialize(dictionary: dictionary, isLanguageSelectionAvailable: viewModel.isLanguageChoiceNeeded(forDictionary: dictionary))
             
         }
     }

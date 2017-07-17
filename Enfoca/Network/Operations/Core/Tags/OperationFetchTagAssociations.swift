@@ -13,18 +13,21 @@ class OperationFetchTagAssociations : MonitoredBaseOperation {
     private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var tagAssociations : [TagAssociation] = []
-    private let key : String = "FetchTagAssociations"
+    static let key : String = "FetchTagAssociations"
+    private let sizeEstimate: Int
+    private var currentCount: Int = 0
     
-    init (enfocaRef : CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
+    init (sizeEstimate: Int, enfocaRef : CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
         self.enfocaRef = enfocaRef
         self.db = db
+        self.sizeEstimate = sizeEstimate
         super.init(progressObserver: progressObserver, errorDelegate: errorDelegate)
     }
     
     override func start() {
         super.start() //Required for base class state
         
-        self.progressObserver.startProgress(ofType: self.key, message: "Loading tag associations.")
+        self.progressObserver.startProgress(ofType: OperationFetchTagAssociations.key, message: "Loading tag associations.", size: sizeEstimate)
         
         let predicate : NSPredicate = NSPredicate(format: "enfocaRef == %@", enfocaRef)
         
@@ -39,7 +42,10 @@ class OperationFetchTagAssociations : MonitoredBaseOperation {
         operation.recordFetchedBlock = {record in
             let ass = CloudKitConverters.toTagAssociation(from: record)
             self.tagAssociations.append(ass)
-            self.progressObserver.updateProgress(ofType: self.key, message: "association \(self.tagAssociations.count)")
+            self.currentCount += 1
+            self.progressObserver.updateProgress(ofType: OperationFetchTagAssociations.key, message: "association \(self.tagAssociations.count)", count: self.currentCount)
+            
+            
         }
         
         operation.queryCompletionBlock = {(cursor, error) in
@@ -53,7 +59,7 @@ class OperationFetchTagAssociations : MonitoredBaseOperation {
                 self.execute(operation: cursorOp)
                 return
             }
-            self.progressObserver.endProgress(ofType: self.key, message: "Done loading associatoins.")
+            self.progressObserver.endProgress(ofType: OperationFetchTagAssociations.key, message: "Done loading associatoins.", total: self.currentCount)
             self.done()
         }
         

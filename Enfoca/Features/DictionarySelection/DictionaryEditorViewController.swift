@@ -20,6 +20,7 @@ class DictionaryEditorViewController: UIViewController {
     
     fileprivate var language : Language? = nil
     fileprivate var languageButtonText: String!
+    fileprivate var isLanguageSelectionAvailable: Bool!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class DictionaryEditorViewController: UIViewController {
         
         languageButtonText = languageButton.title(for: .normal)
         
+        languageButton.isHidden = !isLanguageSelectionAvailable
         reload()
     }
     
@@ -56,7 +58,8 @@ class DictionaryEditorViewController: UIViewController {
         
     }
 
-    func initialize(dictionary: UserDictionary) {
+    func initialize(dictionary: UserDictionary, isLanguageSelectionAvailable: Bool) {
+        self.isLanguageSelectionAvailable = isLanguageSelectionAvailable
         self.dictionary = dictionary
     }
     

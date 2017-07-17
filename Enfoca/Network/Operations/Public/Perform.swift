@@ -16,13 +16,13 @@ class Perform {
         let queue = OperationQueue()
         let errorHandler = ErrorHandler(queue: queue, callback: callback)
         
+        let dict = dataStore.getUserDictionary()
         
+        let fetchTagAssociations = OperationFetchTagAssociations(sizeEstimate: dict.countAssociations, enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchTags = OperationFetchTags(sizeEstimate: dict.countTags, enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchWordPairs = OperationFetchWordPairs(sizeEstimate: dict.countWordPairs, enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
         
-        let fetchTagAssociations = OperationFetchTagAssociations(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
-        let fetchTags = OperationFetchTags(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
-        let fetchWordPairs = OperationFetchWordPairs(enfocaRef: enfocaRef, db: db, progressObserver: progressObserver, errorDelegate: errorHandler)
-        
-        let fetchMetaData = OperationFetchMetaData(enfocaRef: enfocaRef, db: privateDb, progressObserver: progressObserver, errorDelegate: errorHandler)
+        let fetchMetaData = OperationFetchMetaData(sizeEstimate: dict.countMeta, enfocaRef: enfocaRef, db: privateDb, progressObserver: progressObserver, errorDelegate: errorHandler)
         
         let completeOp = BlockOperation {
             print("Initializing data store")

@@ -14,22 +14,25 @@ class OperationFetchTags : MonitoredBaseOperation {
     private let enfocaRef : CKReference
     private let db : CKDatabase
     private(set) var tags : [Tag] = []
-    private let key : String = "FetchTags"
+    static let key : String = "FetchTags"
+    private let size: Int
+    private var count: Int = 0
     
     convenience init(enfocaRef: CKReference, db: CKDatabase, errorDelegate: ErrorDelegate) {
-        self.init(enfocaRef: enfocaRef, db: db, progressObserver: DefaultProgressObserver(), errorDelegate: errorDelegate)
+        self.init(sizeEstimate: 0, enfocaRef: enfocaRef, db: db, progressObserver: DefaultProgressObserver(), errorDelegate: errorDelegate)
     }
     
-    init (enfocaRef: CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
+    init (sizeEstimate: Int, enfocaRef: CKReference, db: CKDatabase, progressObserver: ProgressObserver, errorDelegate : ErrorDelegate) {
         self.enfocaRef = enfocaRef
         self.db = db
+        self.size = sizeEstimate
         super.init(progressObserver: progressObserver, errorDelegate: errorDelegate)
     }
     
     override func start() {
         super.start() //Required for base class state
         
-        self.progressObserver.startProgress(ofType: self.key, message: "Loading tags")
+        self.progressObserver.startProgress(ofType: OperationFetchTags.key, message: "Loading tags", size: self.size)
         
         let sort : NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         let predicate : NSPredicate = NSPredicate(format: "enfocaRef == %@", enfocaRef)
@@ -44,9 +47,11 @@ class OperationFetchTags : MonitoredBaseOperation {
     
     private func execute(operation : CKQueryOperation) {
         operation.recordFetchedBlock = {record in
+            
             let tag = CloudKitConverters.toTag(from: record)
             self.tags.append(tag)
-            self.progressObserver.updateProgress(ofType: self.key, message: "tag: \(tag.name)")
+            self.count += 1
+            self.progressObserver.updateProgress(ofType: OperationFetchTags.key, message: "tag: \(tag.name)", count: self.count)
         }
         
         operation.queryCompletionBlock = {(cursor, error) in
@@ -60,7 +65,7 @@ class OperationFetchTags : MonitoredBaseOperation {
                 self.execute(operation: cursorOp)
                 return
             }
-            self.progressObserver.endProgress(ofType: self.key, message: "Done loading tags.")
+            self.progressObserver.endProgress(ofType: OperationFetchTags.key, message: "Done loading tags.", total: self.count)
             self.done()
         }
         
@@ -70,13 +75,13 @@ class OperationFetchTags : MonitoredBaseOperation {
 }
 
 class DefaultProgressObserver : ProgressObserver {
-    func startProgress(ofType key : String, message: String) {
+    func startProgress(ofType key : String, message: String, size: Int) {
         
     }
-    func updateProgress(ofType key : String, message: String) {
+    func updateProgress(ofType key : String, message: String, count: Int) {
         
     }
-    func endProgress(ofType key : String, message: String) {
+    func endProgress(ofType key : String, message: String, total: Int) {
         
     }
 }

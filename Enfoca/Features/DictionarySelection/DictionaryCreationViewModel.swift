@@ -19,6 +19,8 @@ class DictionaryCreationViewModel: Controller {
     
     private(set) var dictionaryList: [UserDictionary] = []
     
+    private let dictionaryOther = UserDictionary(termTitle: "Front", definitionTitle: "Back", subject: "Other")
+    
     init(delegate: DictionaryCreationViewModelDelegate) {
         self.delegate = delegate
         
@@ -32,11 +34,14 @@ class DictionaryCreationViewModel: Controller {
         
         dictionaryList.append(UserDictionary(termTitle: "Foreign", definitionTitle: "Native", subject: "Another Language"))
         
-        dictionaryList.append(UserDictionary(termTitle: "Front", definitionTitle: "Back", subject: "Other"))
+        dictionaryList.append(dictionaryOther)
     }
-    
     
     func onEvent(event: Event) {
         
+    }
+    
+    func isLanguageChoiceNeeded(forDictionary: UserDictionary) -> Bool {
+        return forDictionary !== dictionaryOther
     }
 }

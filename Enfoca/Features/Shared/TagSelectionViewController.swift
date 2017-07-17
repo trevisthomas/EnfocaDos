@@ -16,20 +16,30 @@ protocol BrowseTagSelectionDelegate {
 
 class TagSelectionViewController: UIViewController {
     
+    enum TagOrder {
+        case alphabetical
+        case color
+    }
+    
     fileprivate var browseDelegate: BrowseTagSelectionDelegate?
     fileprivate let backgroundColor: UIColor = UIColor(hexString: "#DDDEE0")
     fileprivate let selectedBackgroundColor: UIColor = UIColor(hexString: "#A9D3AA")
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBInspectable var refreshTextColor: UIColor = UIColor.gray
+    
     var animateCollectionViewCellCreation : Bool = false
     fileprivate var cellCreationY: CGFloat?
     fileprivate var rowDivisor: Double = 1.0
     
-    
     fileprivate let editMarkerTag = Tag(name: "...")
+    private let refreshControl = UIRefreshControl()
     
     fileprivate var tags: [Tag] = []
     fileprivate var selectedTags: [Tag] = []
+    
+    fileprivate var tagOrder: TagOrder = .alphabetical
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +61,54 @@ class TagSelectionViewController: UIViewController {
         }
 
         layout.itemSize = CGSize(width: size, height: size)
+        
+        
+        // Configure Refresh Control
+        collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshDataToNextSort(sender:)), for: .valueChanged)
+        
     }
     
+    func refreshDataToNextSort(sender: Any) {
+        
+        let attributes = [ NSForegroundColorAttributeName : refreshTextColor ] as [String: Any]
+        refreshControl.attributedTitle = NSAttributedString(string: "Sorting...", attributes: attributes)
+        
+        
+        delay(delayInSeconds: 1.0) {
+            self.tagOrder = self.tagOrder == .alphabetical ? .color : .alphabetical
+            
+            self.sortTags(tagOrder: self.tagOrder)
+            
+            self.collectionView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
+    private func sortTags(tagOrder: TagOrder){
+        let all = tags.remove(at: 0)
+        let none = tags.remove(at: 0)
+        
+        switch tagOrder {
+        case .color:
+            tags.sort { (t1: Tag, t2: Tag) -> Bool in
+                guard let c1 = t1.color else { return false }
+                guard let c2 = t2.color else { return true }
+                
+                if c1 == c2 {
+                    return t1.name.localizedCaseInsensitiveCompare(t2.name) == ComparisonResult.orderedAscending
+                }
+                return c1.localizedCaseInsensitiveCompare(c2) == ComparisonResult.orderedAscending
+            }
+        case .alphabetical:
+            tags.sort { (t1: Tag, t2: Tag) -> Bool in
+                    return t1.name.localizedCaseInsensitiveCompare(t2.name) == ComparisonResult.orderedAscending
+            }
+        }
+        
+        tags.insert(none, at: 0)
+        tags.insert(all, at: 0)
+    }
 }
 
 /*
