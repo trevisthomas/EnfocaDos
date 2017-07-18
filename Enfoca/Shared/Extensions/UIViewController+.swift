@@ -177,3 +177,48 @@ extension UIViewController {
         return getAppDelegate().webService.getDefinitionTitle()
     }
 }
+
+extension UIViewController {
+    func sortByWord(wordPairs: [WordPair], callback: @escaping ([WordPair])->()) {
+        let sorted = wordPairs.sorted(by: { (wp1:WordPair, wp2:WordPair) -> Bool in
+            return wp1.word < wp2.word
+        })
+        callback(sorted)
+    }
+    
+    func sortByDefinition(wordPairs: [WordPair], callback: @escaping ([WordPair])->()) {
+        let sorted = wordPairs.sorted(by: { (wp1:WordPair, wp2:WordPair) -> Bool in
+            return wp1.definition < wp2.definition
+        })
+        callback(sorted)
+    }
+    
+    
+    func sortByScore(wordPairs: [WordPair], callback: @escaping ([WordPair])->()) {
+        
+        fetchMetaData(forWordPairs: wordPairs) { (metaDict: [String : MetaData?]) in
+            let sorted = wordPairs.sorted(by: { (wp1:WordPair, wp2:WordPair) -> Bool in
+                guard let meta1 = metaDict[wp1.pairId] as? MetaData else {
+                    return false
+                }
+                
+                guard let meta2 = metaDict[wp2.pairId] as? MetaData else {
+                    return true
+                }
+                
+                return meta1.score > meta2.score
+            })
+            callback(sorted)
+        }
+    }
+    
+    func fetchMetaData(forWordPairs: [WordPair], callback: @escaping ([String: MetaData?])->()) {
+        var metaDataDict: [String: MetaData] = [:]
+        for wordPair in forWordPairs {
+            getAppDelegate().webService.fetchMetaData(forWordPair: wordPair) { (metaData: MetaData?, error) in
+                metaDataDict[wordPair.pairId] = metaData
+                callback(metaDataDict)
+            }
+        }
+    }
+}

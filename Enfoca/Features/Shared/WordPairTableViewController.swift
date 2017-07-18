@@ -17,11 +17,20 @@ protocol WordPairTableDelegate {
 class WordPairTableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var summaryLabel: UILabel!
+    @IBInspectable var refreshTextColor: UIColor = UIColor.cyan
     
     fileprivate var delegate: WordPairTableDelegate!
     fileprivate var wordPairs: [WordPair] = []
     fileprivate var order: WordPairOrder!
     fileprivate var createText: String = ""
+    
+    fileprivate var isSortedByScore: Bool = false
+    
+    enum SimplifedSortMode {
+        case term
+        case definition
+        case score
+    }
     
     private let refreshControl = UIRefreshControl()
     
@@ -44,17 +53,59 @@ class WordPairTableViewController: UIViewController {
         
     }
     
+    fileprivate func performWordPairRefresh(_ wordPairs: ([WordPair])) {
+        self.wordPairs = wordPairs
+        self.tableView.reloadData()
+        self.refreshControl.endRefreshing()
+    }
+    
+    fileprivate func performSort() {
+        let sortBy: SimplifedSortMode
+        
+        let message : String
+        if isSortedByScore {
+            message = "Sorting by score"
+            sortBy = .score
+            
+        } else {
+            if order == WordPairOrder.definitionAsc || order == WordPairOrder.definitionDesc {
+                message = "Sorting by \(getAppDelegate().webService.getDefinitionTitle)"
+                sortBy = .definition
+            } else {
+                message = "Sorting by \(getAppDelegate().webService.getTermTitle())"
+                sortBy = .term
+            }
+        }
+        
+        let attributes = [ NSForegroundColorAttributeName : refreshTextColor ] as [String: Any]
+        refreshControl.attributedTitle = NSAttributedString(string: message, attributes: attributes)
+        
+        delay(delayInSeconds: 1) {
+            //perform sort
+            
+            switch sortBy {
+            case .score:
+                self.sortByScore(wordPairs: self.wordPairs, callback: { (wordPairs: [WordPair]) in
+                    self.performWordPairRefresh(wordPairs)
+                })
+            case .definition:
+                self.sortByDefinition(wordPairs: self.self.wordPairs, callback: { (wordPairs: [WordPair]) in
+                    self.performWordPairRefresh(wordPairs)
+                })
+            case .term:
+                self.sortByWord(wordPairs: self.wordPairs, callback: { (wordPairs: [WordPair]) in
+                    self.performWordPairRefresh(wordPairs)
+                })
+            }
+            
+        }
+    }
     
     func refreshDataToNextSort(sender: Any) {
-        let tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
-        let attributes = [ NSForegroundColorAttributeName : tintColor ] as [String: Any]
-        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Weather Data ...", attributes: attributes)
         
+        isSortedByScore = !isSortedByScore
         
-        delay(delayInSeconds: 2) {
-            
-            self.refreshControl.endRefreshing()
-        }
+        performSort()
     }
     
     
@@ -67,6 +118,8 @@ class WordPairTableViewController: UIViewController {
     }
     
     fileprivate func refresh() {
+        performSort()
+        
         tableView.reloadData()
         
         if wordPairs.count == 1 {
@@ -76,8 +129,8 @@ class WordPairTableViewController: UIViewController {
         } else {
             summaryLabel.text = "No items found."
         }
-        
     }
+    
     
 
 }
@@ -130,9 +183,10 @@ extension WordPairTableViewController: UITableViewDataSource {
 }
 
 extension WordPairTableViewController {
-    func initialize(delegate: WordPairTableDelegate, order: WordPairOrder){
+    func initialize(delegate: WordPairTableDelegate, order: WordPairOrder, sortByScore: Bool = false){
         self.delegate = delegate
         self.order = order
+        self.isSortedByScore = sortByScore
     }
     
     func updateWordPairs(order: WordPairOrder, wordPairs: [WordPair]) {

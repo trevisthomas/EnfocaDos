@@ -68,7 +68,7 @@ class EditorViewController: UIViewController {
         definitionTextField.initialize()
         
         if animateTagSelector {
-            mruTagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true)
+            mruTagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true, isSortEnabled: false)
             animateTagSelector = false
         }
         

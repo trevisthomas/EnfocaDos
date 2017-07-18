@@ -145,7 +145,9 @@ class WordPair : NSObject, NSCoding {
         aCoder.encode(dateString, forKey: "dateCreated")
         aCoder.encode(gender.toString(), forKey: "gender")
         aCoder.encode(example, forKey: "example")
-        aCoder.encode(tags, forKey: "tags")
+        if tags.count > 0 {
+            aCoder.encode(tags, forKey: "tags")
+        }
     }
 
 }

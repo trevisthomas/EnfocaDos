@@ -22,8 +22,6 @@ class TagSelectionViewController: UIViewController {
     }
     
     fileprivate var browseDelegate: BrowseTagSelectionDelegate?
-    fileprivate let backgroundColor: UIColor = UIColor(hexString: "#DDDEE0")
-    fileprivate let selectedBackgroundColor: UIColor = UIColor(hexString: "#A9D3AA")
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,12 +32,13 @@ class TagSelectionViewController: UIViewController {
     fileprivate var rowDivisor: Double = 1.0
     
     fileprivate let editMarkerTag = Tag(name: "...")
-    private let refreshControl = UIRefreshControl()
+    fileprivate let refreshControl = UIRefreshControl()
     
     fileprivate var tags: [Tag] = []
     fileprivate var selectedTags: [Tag] = []
     
     fileprivate var tagOrder: TagOrder = .alphabetical
+    fileprivate var isSortEnabled: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,12 +60,6 @@ class TagSelectionViewController: UIViewController {
         }
 
         layout.itemSize = CGSize(width: size, height: size)
-        
-        
-        // Configure Refresh Control
-        collectionView.refreshControl = refreshControl
-        refreshControl.addTarget(self, action: #selector(refreshDataToNextSort(sender:)), for: .valueChanged)
-        
     }
     
     func refreshDataToNextSort(sender: Any) {
@@ -85,9 +78,19 @@ class TagSelectionViewController: UIViewController {
         }
     }
     
-    private func sortTags(tagOrder: TagOrder){
-        let all = tags.remove(at: 0)
-        let none = tags.remove(at: 0)
+    fileprivate func sortTags(tagOrder: TagOrder){
+        
+        var any: Tag? = nil
+        var none: Tag? = nil
+        if let index = tags.index(of: getAppDelegate().applicationDefaults.anyTag) {
+            any = tags[index]
+            tags.remove(at: index)
+        }
+        if let index = tags.index(of: getAppDelegate().applicationDefaults.noneTag) {
+            none = tags[index]
+            tags.remove(at: index)
+        }
+        
         
         switch tagOrder {
         case .color:
@@ -106,8 +109,13 @@ class TagSelectionViewController: UIViewController {
             }
         }
         
-        tags.insert(none, at: 0)
-        tags.insert(all, at: 0)
+        if let none = none {
+            tags.insert(none, at: 0)
+        }
+        
+        if let any = any {
+            tags.insert(any, at: 0)
+        }
     }
 }
 
@@ -122,8 +130,16 @@ extension TagSelectionViewController {
         }
     }
     
-    func initialize(tags: [Tag], browseDelegate: BrowseTagSelectionDelegate, animated: Bool = false){
+    func initialize(tags: [Tag], browseDelegate: BrowseTagSelectionDelegate, animated: Bool = false, isSortEnabled: Bool = true){
         self.browseDelegate = browseDelegate
+        
+        self.isSortEnabled = isSortEnabled
+        
+        // Configure Refresh Control
+        if isSortEnabled {
+            collectionView.refreshControl = refreshControl
+            refreshControl.addTarget(self, action: #selector(refreshDataToNextSort(sender:)), for: .valueChanged)
+        }
         
         if animated {
             turnOnAnimation()
@@ -131,6 +147,7 @@ extension TagSelectionViewController {
         
         self.tags = []
         self.tags.append(contentsOf: tags)
+        self.sortTags(tagOrder: self.tagOrder)
         collectionView.reloadData()
         
         invokeLater {
@@ -151,7 +168,7 @@ extension TagSelectionViewController {
         selectedTags.removeAll()
         selectedTags.append(contentsOf: newSelectedTags)
         
-        collectionView.reloadData() //The only reason this is here is to clear the tag selection before reloading them below.
+//        collectionView.reloadData() //The only reason this is here is to clear the tag selection before reloading them below.
         
         for i in 0..<tags.count {
             let tag = tags[i]

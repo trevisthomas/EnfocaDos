@@ -19,6 +19,7 @@ class BrowseController : Controller {
     private let delegate: BrowseControllerDelegate
     let wordOrder: WordPairOrder
     let wordPairs: [WordPair]?
+    var isSortedByScore: Bool = false 
     
 //    var selectedWordPair: WordPair? 
     

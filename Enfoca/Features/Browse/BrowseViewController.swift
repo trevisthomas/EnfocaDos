@@ -48,38 +48,20 @@ class BrowseViewController: UIViewController {
     func initialize(tag: Tag, wordOrder: WordPairOrder, showBackButton: Bool = false){
         controller = BrowseController(tag: tag, wordOrder: wordOrder, delegate: self)
         self.showQuizButton = showBackButton
+        self.controller.isSortedByScore = false
     }
     
     func initialize(wordPairs: [WordPair]) {
-        sortByScore(wordPairs: wordPairs, callback: { sortedWordPairs in
-            self.controller = BrowseController(wordPairs: sortedWordPairs, delegate: self)
-            self.showQuizButton = false
-        })
-    }
-    
-    private func sortByScore(wordPairs: [WordPair], callback: @escaping ([WordPair])->()) {
-        
-        fetchMetaData(forWordPairs: wordPairs) { (metaDict: [String : MetaData?]) in
-            let sorted = wordPairs.sorted(by: { (wp1:WordPair, wp2:WordPair) -> Bool in
-                guard let meta1 = metaDict[wp1.pairId] as? MetaData else {
-                    return false
-                }
-                
-                guard let meta2 = metaDict[wp2.pairId] as? MetaData else {
-                    return true
-                }
-                
-                return meta1.score > meta2.score
-            })
-            callback(sorted)
-        }
+        self.controller = BrowseController(wordPairs: wordPairs, delegate: self)
+        self.showQuizButton = false
+        self.controller.isSortedByScore = true
     }
     
     private func initializeSubViews() {
         
         wordPairTableViewController = createWordPairTableViewController(inContainerView: tableViewContainer)
         
-        wordPairTableViewController.initialize(delegate: self, order: controller.wordOrder)
+        wordPairTableViewController.initialize(delegate: self, order: controller.wordOrder, sortByScore: controller.isSortedByScore)
         
 //        let emptyEditorViewController = createEditorViewController(inContainerView: underSidePlaceHolderForWordEditor)
     }
@@ -115,18 +97,7 @@ class BrowseViewController: UIViewController {
         }
     }
     
-    private func fetchMetaData(forWordPairs: [WordPair], callback: @escaping ([String: MetaData?])->()) {
-        var metaDataDict: [String: MetaData] = [:]
-        for wordPair in forWordPairs {
-            getAppDelegate().webService.fetchMetaData(forWordPair: wordPair) { (metaData: MetaData?, error) in
-                metaDataDict[wordPair.pairId] = metaData
-                
-                if metaDataDict.count == forWordPairs.count {
-                    callback(metaDataDict)
-                }
-            }
-        }
-    }
+    
 
 }
 
