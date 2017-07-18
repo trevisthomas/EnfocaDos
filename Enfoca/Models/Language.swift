@@ -14,8 +14,29 @@ class Language {
         Language("English", "en"),
         Language("French", "fr"),
         Language("Spanish", "es"),
+        
         Language("Chinese (Simplified)", "zh-Hans"),
-        Language("Chinese (Traditional)", "zh-Hant")
+        Language("Chinese (Traditional)", "zh-Hant"),
+        Language("Portuguese", "pt"),
+        
+        Language("Italian", "it"),
+        Language("German", "de"),
+        
+        Language("Dutch","nl"),
+        Language("Japanese", "ja"),
+        Language("Korean", "ko"),
+        Language("Vietnamese", "vi"),
+        Language("Russian", "ru"),
+        Language("Swedish", "sv"),
+        Language("Danish", "da"),
+        Language("Finnish", "fi"),
+        Language("Norwegian (Bokmal)", "nb"),
+        Language("Turkish", "tr"),
+        Language("Greek", "el"),
+        Language("Indonesian", "id"),
+        Language("Malay", "ms"),
+        Language("Thai", "th"),
+        
     ]
     
     let name: String!

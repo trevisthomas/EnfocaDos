@@ -117,10 +117,11 @@ class ModularHomeViewController: UIViewController {
     private func initializeLookAndFeel(){
         
         originalHeightConstraintConstant = overlayHeightConstraint.constant
-        retractedHeightConstraintConstant = view.frame.height + originalHeightConstraintConstant
+        
+        retractedHeightConstraintConstant = max(view.frame.height, view.frame.width) + originalHeightConstraintConstant
         
         originalBottomConstraintConstant = overlayBottomConstraint.constant
-        retractedBottomConstraintConstant =  -(view.frame.height + originalBottomConstraintConstant)
+        retractedBottomConstraintConstant =  -(max(view.frame.height, view.frame.width) + originalBottomConstraintConstant)
         
         
         searchOrCreateTextField.addTarget(self, action: #selector(searchOrCreateTextDidChange(_:)), for: [.editingChanged])
