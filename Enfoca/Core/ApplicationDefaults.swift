@@ -8,6 +8,16 @@
 
 import Foundation
 
+
+enum TagOrder : String, Equatable {
+    case alphabetical = "alphabetical"
+    case color = "color"
+    
+    static public func ==(lhs: TagOrder, rhs: TagOrder) -> Bool {
+        return lhs.rawValue == rhs.rawValue
+    }
+}
+
 protocol ApplicationDefaults {
     var reverseWordPair : Bool {get set}
     var selectedTags : [Tag] {get set}
@@ -32,6 +42,8 @@ protocol ApplicationDefaults {
     func removeFromMostRecentTag(tag: Tag)
     func getMostRecentlyUsedTags() -> [Tag]
     
+    var tagOrderOnHomeView: TagOrder {get set}
+    
     var noneTag: Tag {get}
     var anyTag: Tag {get}
 }
@@ -39,6 +51,7 @@ protocol ApplicationDefaults {
 class LocalApplicationDefaults : ApplicationDefaults {
     
     let dataStoreKey : String = "ActiveDictionaryKey"
+    let tagOrderKey : String = "TagOrderKey"
     var selectedTags : [Tag] = []
     var reverseWordPair : Bool = false
     var cardOrder: CardOrder = .latestAdded
@@ -51,6 +64,26 @@ class LocalApplicationDefaults : ApplicationDefaults {
     var mostRecentlyUsedTags: [Tag] = []
     let noneTag: Tag = Tag(tagId: "noneTag", name: "None")
     let anyTag: Tag = Tag(tagId: "anyTag", name: "Any")
+    
+    var tagOrderOnHomeView: TagOrder {
+        get {
+            
+            
+            
+            let defaults = UserDefaults.standard
+            guard let tagOrderRaw = defaults.value(forKey: tagOrderKey) as? String else {
+                return .alphabetical
+            }
+            guard let tagOrder = TagOrder(rawValue: tagOrderRaw) else {
+                fatalError()
+            }
+            return tagOrder
+        }
+        set {
+            let defaults = UserDefaults.standard
+            defaults.set(newValue.rawValue, forKey: tagOrderKey)
+        }
+    }
     
     var fetchWordPairPageSize: Int {
         get {

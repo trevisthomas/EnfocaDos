@@ -15,12 +15,6 @@ protocol BrowseTagSelectionDelegate {
 }
 
 class TagSelectionViewController: UIViewController {
-    
-    enum TagOrder {
-        case alphabetical
-        case color
-    }
-    
     fileprivate var browseDelegate: BrowseTagSelectionDelegate?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -37,7 +31,6 @@ class TagSelectionViewController: UIViewController {
     fileprivate var tags: [Tag] = []
     fileprivate var selectedTags: [Tag] = []
     
-    fileprivate var tagOrder: TagOrder = .alphabetical
     fileprivate var isSortEnabled: Bool = true
     
     override func viewDidLoad() {
@@ -51,6 +44,8 @@ class TagSelectionViewController: UIViewController {
         var size : CGFloat = 100.0
         let perRow: CGFloat = 3.0
         //
+        
+        
         
         size = (collectionView.frame.width - layout.sectionInset.left - layout.sectionInset.right - (layout.minimumInteritemSpacing * perRow)) / perRow
         
@@ -69,9 +64,18 @@ class TagSelectionViewController: UIViewController {
         
         
         delay(delayInSeconds: 1.0) {
-            self.tagOrder = self.tagOrder == .alphabetical ? .color : .alphabetical
+            let oldTagOrder = getAppDelegate().applicationDefaults.tagOrderOnHomeView
             
-            self.sortTags(tagOrder: self.tagOrder)
+            let tagOrder: TagOrder
+            if oldTagOrder == TagOrder.alphabetical {
+                tagOrder = .color
+            } else {
+                tagOrder = .alphabetical
+            }
+            
+            getAppDelegate().applicationDefaults.tagOrderOnHomeView = tagOrder
+            
+            self.sortTags(tagOrder: tagOrder)
             
             self.collectionView.reloadData()
             self.refreshControl.endRefreshing()
@@ -147,7 +151,7 @@ extension TagSelectionViewController {
         
         self.tags = []
         self.tags.append(contentsOf: tags)
-        self.sortTags(tagOrder: self.tagOrder)
+        self.sortTags(tagOrder: getAppDelegate().applicationDefaults.tagOrderOnHomeView)
         collectionView.reloadData()
         
         invokeLater {

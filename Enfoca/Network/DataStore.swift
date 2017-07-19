@@ -109,7 +109,7 @@ class DataStore: NSObject, NSCoding {
     
     func initialize(tags: [Tag], wordPairs: [WordPair], tagAssociations: [TagAssociation], metaData : [MetaData], progressObserver: ProgressObserver? = nil){
         
-        let key : String = "DataStoreInit"
+//        let key : String = "DataStoreInit"
         
 //        progressObserver?.startProgress(ofType: key, message: "Initializing DataStore")
 //        

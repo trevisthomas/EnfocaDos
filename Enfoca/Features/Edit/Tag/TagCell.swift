@@ -88,7 +88,7 @@ class TagCell: UITableViewCell {
     
     func formatDetailText(_ count : Int ) -> String {
         if count == 0 {
-            return ""
+            return "unused"
         } else if count == 1{
             return "One word tagged"
         } else {
