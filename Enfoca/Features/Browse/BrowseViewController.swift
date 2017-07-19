@@ -19,13 +19,12 @@ class BrowseViewController: UIViewController {
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerBackgroundView: UIView!
     
-//    fileprivate var editWordPairFromCellAnimator = EditWordPairFromCellAnimator()
-    
     fileprivate var editWordPairAnimator = EnfocaDefaultAnimator()
     
     fileprivate var wordPairTableViewController: WordPairTableViewController!
     
     fileprivate var controller : BrowseController!
+    fileprivate var defaultAnimator = EnfocaDefaultAnimator()
     
     private var showQuizButton: Bool = false
     
@@ -37,8 +36,6 @@ class BrowseViewController: UIViewController {
         initializeLookAndFeel()
         
         initializeSubViews()
-        
-//        getAppDelegate().addListener(listener: controller)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,6 +90,7 @@ class BrowseViewController: UIViewController {
             to.initialize(delegate: self, wordPair: sourceWordPair)
             
         } else if let to = segue.destination as? QuizOptionsViewController {
+            to.transitioningDelegate = self
             to.initialize(delegate: self)
         }
     }
@@ -148,9 +146,11 @@ extension BrowseViewController: UIViewControllerTransitioningDelegate {
         if let _ = presented as? EditWordPairViewController, let _ = source as? BrowseViewController {
             editWordPairAnimator.presenting = true
             return editWordPairAnimator
+        } else {
+            defaultAnimator.presenting = true
+            return defaultAnimator
         }
         
-        return nil
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -158,9 +158,10 @@ extension BrowseViewController: UIViewControllerTransitioningDelegate {
         if let _ = dismissed as? EditWordPairViewController {
             editWordPairAnimator.presenting = false
             return editWordPairAnimator
+        } else {
+            defaultAnimator.presenting = true
+            return defaultAnimator
         }
-        
-        return nil
     }
 }
 
@@ -198,3 +199,5 @@ extension BrowseViewController: QuizViewControllerDelegate {
         return controller.tag
     }
 }
+
+

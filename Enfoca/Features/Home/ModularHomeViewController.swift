@@ -51,9 +51,9 @@ class ModularHomeViewController: UIViewController {
     private var expandedHeightConstraintOnGray: CGFloat!
     private var originalOverlayFrame: CGRect!
     private var retractedOverlayFrame: CGRect!
-
-    
     private static var synchRequestDenied = false
+    
+    fileprivate var defaultAnimator = EnfocaDefaultAnimator()
 
     //I'm proxying a constraint from my sub view
     var segmentedControlLeftConstraint: NSLayoutConstraint {
@@ -168,12 +168,6 @@ class ModularHomeViewController: UIViewController {
         let text = textField.text ?? ""
         
         wordPairTableViewController.offerCreation(withText: text)
-        //        if text.isEmpty {
-        //            hideWordTable()
-        //        } else {
-        //            controller.phrase = text
-        //            showWordTable()
-        //        }
         
         controller.phrase = text
         showWordTable()
@@ -315,16 +309,18 @@ class ModularHomeViewController: UIViewController {
         }
         
         if let to = segue.destination as? NewAppLaunchViewController {
+            to.transitioningDelegate = self
             to.initialize(autoload: false)
         }
         
         if let to = segue.destination as? DictionaryLoadingViewController {
+            to.transitioningDelegate = self
             guard let dictionary = sender as? UserDictionary else { fatalError() }
             to.initialize(dictionary: dictionary)
         }
         
         if let to = segue.destination as? TagFilterViewController {
-//            to.transitioningDelegate = self
+            to.transitioningDelegate = self
 //            to.tagFilterDelegate = self
             to.initialize()
         }
@@ -335,7 +331,6 @@ class ModularHomeViewController: UIViewController {
 //For animated transitions
 extension ModularHomeViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        print("Presenting \(presenting.description)")
         
         if let _ = presented as? BrowseViewController, let _ = source as? ModularHomeViewController {
             browseViewFromHomeAnimator.presenting = true
@@ -352,12 +347,26 @@ extension ModularHomeViewController: UIViewControllerTransitioningDelegate {
             return browseViewFromHomeAnimator
         }
         
-        return nil
+        if let _ = presented as? TagFilterViewController {
+            defaultAnimator.presenting = true
+            return defaultAnimator
+        }
+        
+        if let _ = presented as? DictionaryLoadingViewController {
+            defaultAnimator.presenting = true
+            return defaultAnimator
+        }
+        
+        if let _ = presented as? NewAppLaunchViewController {
+            defaultAnimator.presenting = true
+            return defaultAnimator
+        }
+        
+        fatalError()
+
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        print("Dismissing \(dismissed.description)")
         
         if let _ = dismissed as? BrowseViewController {
             browseViewFromHomeAnimator.presenting = false
@@ -372,9 +381,14 @@ extension ModularHomeViewController: UIViewControllerTransitioningDelegate {
         if let _ = dismissed as? QuizOptionsViewController {
             browseViewFromHomeAnimator.presenting = false
             return browseViewFromHomeAnimator
+        } 
+        
+        if let _ = dismissed as? TagFilterViewController {
+            defaultAnimator.presenting = false
+            return defaultAnimator
         }
         
-        return nil
+        fatalError()
     }
 }
 

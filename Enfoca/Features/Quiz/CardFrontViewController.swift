@@ -89,6 +89,9 @@ class CardFrontViewController: UIViewController {
                 self.timerLabel.isHidden = false
                 guard let t = self.timer else { fatalError() }
                 self.timerLabel.text = "\(t)"
+                CustomAnimations.animatePopIn(target: self.timerLabel, delay: 0.0, duration: 0.33)
+                
+                
             }
             
             if self.timer == 0 {

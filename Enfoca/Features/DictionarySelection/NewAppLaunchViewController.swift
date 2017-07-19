@@ -10,6 +10,13 @@ import UIKit
 
 class NewAppLaunchViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var footerLabel: UILabel!
+    @IBOutlet weak var bodyView: UIView!
+    @IBOutlet weak var activityIndicator: UIView!
+    
+    fileprivate var animator = EnfocaDefaultAnimator()
+    
     private(set) var dictionaryList: [UserDictionary]?
     private var autoload: Bool = true
     
@@ -78,12 +85,42 @@ class NewAppLaunchViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? DictionarySelectionViewController {
-            
+            to.transitioningDelegate = self
             guard let list = sender as? [UserDictionary] else { fatalError() }
             to.initialize(dictionaryList: list)
         } else if let to = segue.destination as? DictionaryLoadingViewController {
             guard let data = sender as? Data else { fatalError() }
+            to.transitioningDelegate = self
             to.initialize(data: data)
         }
+    }
+}
+
+extension NewAppLaunchViewController: EnfocaDefaultAnimatorTarget {
+    func getRightNavView() -> UIView? {
+        return activityIndicator
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    
+    func additionalComponentsToHide() -> [UIView] {
+        return []
+    }
+    func getBodyContentView() -> UIView {
+        return bodyView
+    }
+}
+extension NewAppLaunchViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        animator.presenting = true
+        return animator
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        animator.presenting = false
+        return animator
     }
 }

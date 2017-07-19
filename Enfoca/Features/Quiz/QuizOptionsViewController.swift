@@ -26,6 +26,7 @@ class QuizOptionsViewController: UIViewController {
     @IBOutlet weak var headerBackgroundView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var browseButton: UIButton!
+    @IBOutlet weak var bodyView: UIView!
     
     @IBOutlet weak var topToHeaderBottomConstraint: NSLayoutConstraint!
     
@@ -33,6 +34,7 @@ class QuizOptionsViewController: UIViewController {
     fileprivate let quizOptionsToCardFrontViewAnimator = QuizOptionsToCardFrontViewAnimator()
     
     private var showBrowseButton: Bool = false
+    fileprivate var defaultAnimator = EnfocaDefaultAnimator()
     
     @IBAction func incrementWordCountAction(_ sender: UIButton) {
         viewModel.incrementWordCount()
@@ -101,6 +103,7 @@ class QuizOptionsViewController: UIViewController {
             to.transitioningDelegate = self
         } else if let to = segue.destination as? BrowseViewController {
             //Trevis: Notice that when you go straignt from Quiz Options to Browse that you use the app defaults word order, not necessairly the selection on the home view.
+            to.transitioningDelegate = self
             to.initialize(tag: viewModel.tag, wordOrder: getAppDelegate().applicationDefaults.wordPairOrder)
         }
     }
@@ -172,17 +175,37 @@ extension QuizOptionsViewController: UIViewControllerTransitioningDelegate {
         if let _ = presented as? CardFrontViewController, let _ = source as? QuizOptionsViewController {
             quizOptionsToCardFrontViewAnimator.presenting = true
             return quizOptionsToCardFrontViewAnimator
+        } else {
+            defaultAnimator.presenting = true
+            return defaultAnimator
         }
         
         
-        return nil
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        
-        return nil
+        defaultAnimator.presenting = false 
+        return defaultAnimator
     }
+}
+
+extension QuizOptionsViewController: EnfocaDefaultAnimatorTarget {
+    
+    func getRightNavView() -> UIView? {
+        return backButton
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    
+    func additionalComponentsToHide() -> [UIView] {
+        return [browseButton]
+    }
+    func getBodyContentView() -> UIView {
+        return bodyView
+    }
+    
 }
 
 

@@ -14,9 +14,13 @@ class DictionarySelectionViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIButton!
     
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyView: UIView!
     
     fileprivate var dictionaryList: [UserDictionary] = []
     fileprivate var isEditMode: Bool = false
+    fileprivate let animator = EnfocaDefaultAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,25 +69,18 @@ class DictionarySelectionViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? DictionaryEditorViewController {
-            //            to.transitioningDelegate = self
             guard let dictionary = sender as? UserDictionary else { fatalError() }
+            to.transitioningDelegate = self
             to.initialize(dictionary: dictionary, isLanguageSelectionAvailable: dictionary.language != nil)
             
         } else if let to = segue.destination as? DictionaryLoadingViewController  {
             guard let dictionary = sender as? UserDictionary else { fatalError() }
-            
+            to.transitioningDelegate = self
             print("Loading dictionary: \(dictionary.subject) with enfocaRef \(dictionary.enfocaRef)")
             
             to.initialize(dictionary: dictionary)
-            
-//            if let json = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) {
-//                to.initialize(json: json)
-//            } else {
-//                 to.initialize(dictionary: dictionary)
-//            }
-            
-            
         } else if let to = segue.destination as? DictionaryCreationViewController {
+            to.transitioningDelegate = self
             to.initialize(isBackButtonNeeded: true)
         }
     }
@@ -92,12 +89,6 @@ class DictionarySelectionViewController: UIViewController {
         presentOkCancelAlert(title: "Delete Confirmation", message: "Are you sure that you want to delete \(dictionary.subject) and \(dictionary.countWordPairs) cards?") { (yes:Bool) in
             if yes {
                 let alert = self.presentActivityAlert(title: "Deleting \(dictionary.subject)", message: "Please   wait...")
-                
-//                delay(delayInSeconds: 10) {
-//                    
-//                    alert.dismiss(animated: true, completion: nil)
-//                    callback(true)
-//                }
                 
                 self.performDelete(dictionary: dictionary, callback: { (_: Bool) in
                     alert.dismiss(animated: true, completion: nil)
@@ -141,7 +132,6 @@ extension DictionarySelectionViewController: UITableViewDelegate {
                     self.toggleEditMode()
                 } else {
                     self.toggleEditMode()
-//                    tableView.isEditing = false;
                 }
                 
             })
@@ -174,5 +164,36 @@ extension DictionarySelectionViewController: SubjectTableViewCellDelegate {
         } else {
             performSegue(withIdentifier: "LoadDictionarySegue", sender: dictionary)
         }
+    }
+}
+
+extension DictionarySelectionViewController: EnfocaDefaultAnimatorTarget {
+    func getRightNavView() -> UIView? {
+        return editButton
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    
+    func additionalComponentsToHide() -> [UIView] {
+        return []
+    }
+    func getBodyContentView() -> UIView {
+        return bodyView
+    }
+}
+extension DictionarySelectionViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        animator.presenting = true
+        return animator
+        
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        animator.presenting = false
+        return animator
+        
     }
 }

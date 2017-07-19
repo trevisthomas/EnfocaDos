@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TN6-Bh-ZUY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TN6-Bh-ZUY">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BradleyHand-Bold.ttf">
+            <string>BradleyHandITCTT-Bold</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Dictionary Selection View Controller-->
         <scene sceneID="heS-bw-o0n">
@@ -83,7 +94,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zpq-p5-VR6" id="2w9-nj-Mmh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-jP-SAS" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
@@ -145,8 +156,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bodyView" destination="szs-dI-i9L" id="CH0-M3-XZC"/>
                         <outlet property="editButton" destination="bqC-Bg-vRj" id="wxy-rD-WKH"/>
+                        <outlet property="headerHeightConstraint" destination="zgG-0x-PFS" id="eeJ-OQ-gb9"/>
                         <outlet property="tableView" destination="oo2-Mn-kct" id="e7s-zT-Icx"/>
+                        <outlet property="titleLabel" destination="e6G-Hd-hxH" id="kNb-WS-jl2"/>
                         <segue destination="IJz-yU-CSp" kind="show" identifier="EditDictionarySegue" id="nZR-fD-3Hs"/>
                         <segue destination="78n-cW-n0M" kind="show" identifier="LoadDictionarySegue" id="QEm-8v-cQd"/>
                         <segue destination="CGS-VD-4sj" kind="show" identifier="DictionaryCreationSegue" id="JRL-ud-1m9"/>
@@ -168,17 +182,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-fJ-tks">
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhV-qS-AoI">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-fJ-tks">
                                 <rect key="frame" x="197" y="358" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-De-iND">
+                                <rect key="frame" x="140" y="208" width="133.66666666666669" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="C9w-nq-Wph"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017 Enfoca Software, LLC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZ1-YU-V53">
+                                <rect key="frame" x="103.33333333333331" y="707" width="208.33333333333337" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Nfm-Rq-Vnp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.6342390775680542" green="0.66157263517379761" blue="0.73217785358428955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8Vv-fJ-tks" firstAttribute="centerY" secondItem="ifn-nq-YNn" secondAttribute="centerY" id="06o-zJ-uxA"/>
+                            <constraint firstItem="f5V-wI-liX" firstAttribute="top" secondItem="mhV-qS-AoI" secondAttribute="bottom" id="5ml-FE-qY6"/>
+                            <constraint firstAttribute="trailing" secondItem="mhV-qS-AoI" secondAttribute="trailing" id="8XU-3s-PTM"/>
+                            <constraint firstItem="mhV-qS-AoI" firstAttribute="top" secondItem="POY-bM-4wd" secondAttribute="bottom" constant="44" id="AjP-Yx-8bN"/>
+                            <constraint firstItem="OZ1-YU-V53" firstAttribute="centerX" secondItem="ifn-nq-YNn" secondAttribute="centerX" id="C7G-S0-fzl"/>
+                            <constraint firstItem="C0k-De-iND" firstAttribute="centerX" secondItem="OZ1-YU-V53" secondAttribute="centerX" id="NKC-ZV-vIj"/>
+                            <constraint firstItem="mhV-qS-AoI" firstAttribute="leading" secondItem="ifn-nq-YNn" secondAttribute="leading" id="TkF-h3-Pyp"/>
+                            <constraint firstItem="f5V-wI-liX" firstAttribute="top" secondItem="OZ1-YU-V53" secondAttribute="bottom" constant="8" symbolic="YES" id="cho-xo-x0s"/>
+                            <constraint firstItem="C0k-De-iND" firstAttribute="centerX" secondItem="ifn-nq-YNn" secondAttribute="centerX" id="ctA-N2-chK"/>
                             <constraint firstItem="8Vv-fJ-tks" firstAttribute="centerX" secondItem="ifn-nq-YNn" secondAttribute="centerX" id="f9R-Tt-6KW"/>
+                            <constraint firstItem="C0k-De-iND" firstAttribute="top" secondItem="POY-bM-4wd" secondAttribute="bottom" constant="188" id="jCm-Iv-oND"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="8Vv-fJ-tks" id="qD6-Pg-21a"/>
+                        <outlet property="bodyView" destination="mhV-qS-AoI" id="P8G-6I-Krh"/>
+                        <outlet property="footerLabel" destination="OZ1-YU-V53" id="KrO-4k-dgX"/>
+                        <outlet property="titleLabel" destination="C0k-De-iND" id="xbK-mJ-pIw"/>
                         <segue destination="dbu-3x-1aW" kind="show" identifier="DictionarySelectionSegue" id="BHU-ah-l7T"/>
                         <segue destination="CGS-VD-4sj" kind="show" identifier="DictionaryCreationSegue" id="Yaf-vT-WQV"/>
                         <segue destination="78n-cW-n0M" kind="show" identifier="LoadDictionarySegue" id="Btl-e8-myM"/>
@@ -186,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wt-3y-RpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="329"/>
+            <point key="canvasLocation" x="650.72463768115949" y="328.53260869565219"/>
         </scene>
         <!--Dictionary Creation View Controller-->
         <scene sceneID="9QS-82-VX5">
@@ -246,7 +295,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWB-b5-iS4" id="cYi-Dz-mA4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-hn-12U" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
@@ -306,7 +355,9 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="kgC-Re-3EB" id="158-Lt-cVQ"/>
+                        <outlet property="bodyView" destination="Yop-hx-0V7" id="CeW-qh-b5K"/>
                         <outlet property="tableView" destination="dUx-PG-iIa" id="hRK-Jq-kEF"/>
+                        <outlet property="titleLabel" destination="R0G-Gz-fWU" id="5oH-Yq-qqy"/>
                         <segue destination="IJz-yU-CSp" kind="show" identifier="CreateDictionarySegue" id="MdF-bd-erP"/>
                     </connections>
                 </viewController>
@@ -498,11 +549,13 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="hW9-tx-ViV" id="059-Jv-zzG"/>
+                        <outlet property="bodyView" destination="vPt-FK-zoz" id="l5Z-bQ-Mg1"/>
                         <outlet property="createButton" destination="eBZ-q6-vwa" id="iVc-Bi-R0E"/>
                         <outlet property="definitionTextField" destination="fpz-Yq-76V" id="IEC-bV-8Yh"/>
                         <outlet property="languageButton" destination="TaQ-49-HrU" id="3ye-ey-OpW"/>
                         <outlet property="subjectTextField" destination="b7z-hU-NRQ" id="b5L-gY-NqH"/>
                         <outlet property="termTextField" destination="44O-Ha-znd" id="dpV-hJ-sdh"/>
+                        <outlet property="titleLabel" destination="hzX-Z0-qaj" id="D3K-33-6OZ"/>
                         <segue destination="78n-cW-n0M" kind="show" identifier="LoadDictionarySegue" id="Kqj-gi-NaV"/>
                         <segue destination="TN6-Bh-ZUY" kind="show" identifier="LaunchAppSegue" id="U47-08-OY6"/>
                         <segue destination="DhW-Ud-hf1" kind="popoverPresentation" identifier="LanguageSegue" popoverAnchorView="TaQ-49-HrU" id="gcG-9j-nQE">
@@ -551,7 +604,7 @@
                                         <rect key="frame" x="0.0" y="28" width="284" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3N7-Au-o0M" id="BbG-kJ-ZYL">
-                                            <rect key="frame" x="0.0" y="0.0" width="284" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="284" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Language Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdM-DT-VY3">
@@ -621,6 +674,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rrm-zM-J0y">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-Yo-fZC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
@@ -630,17 +687,14 @@
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DfK-2U-YVm">
-                                        <rect key="frame" x="189" y="350" width="37" height="37"/>
-                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e4-zZ-mgV">
-                                        <rect key="frame" x="8" y="395" width="398" height="15.666666666666686"/>
+                                        <rect key="frame" x="8" y="359.66666666666669" width="398" height="16.666666666666629"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-T2-kHb" customClass="ProgressBarView" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="430.66666666666669" width="200" height="12"/>
+                                        <rect key="frame" x="107" y="396.33333333333331" width="200" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="5Yq-9o-Qb3"/>
@@ -659,7 +713,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6r-P7-BCC" customClass="ProgressBarView" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="450" width="200" height="12"/>
+                                        <rect key="frame" x="107" y="415.66666666666669" width="200" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="HcX-CD-rvl"/>
@@ -678,7 +732,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zel-GG-aKi" customClass="ProgressBarView" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="470" width="200" height="12"/>
+                                        <rect key="frame" x="107" y="435.66666666666669" width="200" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="8Jd-DK-6Hj"/>
@@ -697,7 +751,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iE-23-aPK" customClass="ProgressBarView" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="491" width="200" height="12"/>
+                                        <rect key="frame" x="107" y="456.66666666666669" width="200" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="cNw-50-SqB"/>
@@ -715,25 +769,28 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DfK-2U-YVm">
+                                        <rect key="frame" x="188.66666666666666" y="682" width="37" height="37"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="3e4-zZ-mgV" firstAttribute="top" secondItem="DfK-2U-YVm" secondAttribute="bottom" constant="8" id="3Jt-yW-zSy"/>
                                     <constraint firstItem="3Ma-T2-kHb" firstAttribute="centerX" secondItem="gXL-Yo-fZC" secondAttribute="centerX" id="6C4-lg-WQa"/>
                                     <constraint firstAttribute="trailing" secondItem="3e4-zZ-mgV" secondAttribute="trailing" constant="8" id="CMe-Jn-2FI"/>
                                     <constraint firstItem="3e4-zZ-mgV" firstAttribute="centerX" secondItem="gXL-Yo-fZC" secondAttribute="centerX" id="Cj3-Tn-dol"/>
                                     <constraint firstItem="6iE-23-aPK" firstAttribute="top" secondItem="zel-GG-aKi" secondAttribute="bottom" constant="9" id="DXh-zG-rZx"/>
-                                    <constraint firstItem="DfK-2U-YVm" firstAttribute="centerY" secondItem="gXL-Yo-fZC" secondAttribute="centerY" id="ETb-uZ-dvM"/>
                                     <constraint firstItem="RrH-KV-NBI" firstAttribute="centerX" secondItem="gXL-Yo-fZC" secondAttribute="centerX" id="Mh6-LW-6fW"/>
+                                    <constraint firstAttribute="bottom" secondItem="DfK-2U-YVm" secondAttribute="bottom" constant="17" id="Oz0-l8-PVB"/>
+                                    <constraint firstItem="DfK-2U-YVm" firstAttribute="centerX" secondItem="gXL-Yo-fZC" secondAttribute="centerX" id="PAb-Ug-4no"/>
                                     <constraint firstItem="3e4-zZ-mgV" firstAttribute="leading" secondItem="gXL-Yo-fZC" secondAttribute="leading" constant="8" id="TLt-mp-BBp"/>
                                     <constraint firstItem="F6r-P7-BCC" firstAttribute="top" secondItem="3Ma-T2-kHb" secondAttribute="bottom" constant="7.3333333333333144" id="Tqf-xW-oHc"/>
                                     <constraint firstItem="zel-GG-aKi" firstAttribute="centerX" secondItem="gXL-Yo-fZC" secondAttribute="centerX" id="UhC-ZT-DNy"/>
-                                    <constraint firstItem="DfK-2U-YVm" firstAttribute="centerX" secondItem="gXL-Yo-fZC" secondAttribute="centerX" id="VEn-TJ-sUy"/>
                                     <constraint firstItem="6iE-23-aPK" firstAttribute="centerX" secondItem="gXL-Yo-fZC" secondAttribute="centerX" id="Vt5-Dm-dik"/>
                                     <constraint firstItem="3Ma-T2-kHb" firstAttribute="top" secondItem="3e4-zZ-mgV" secondAttribute="bottom" constant="20" id="bhL-4T-XrA"/>
                                     <constraint firstItem="F6r-P7-BCC" firstAttribute="centerX" secondItem="3Ma-T2-kHb" secondAttribute="centerX" id="i1k-oW-iI5"/>
                                     <constraint firstItem="RrH-KV-NBI" firstAttribute="top" secondItem="gXL-Yo-fZC" secondAttribute="top" constant="30" id="iRo-XU-4zb"/>
                                     <constraint firstItem="zel-GG-aKi" firstAttribute="top" secondItem="F6r-P7-BCC" secondAttribute="bottom" constant="8" id="oVg-Ba-u0G"/>
+                                    <constraint firstItem="3e4-zZ-mgV" firstAttribute="centerY" secondItem="gXL-Yo-fZC" secondAttribute="centerY" id="sQG-ZS-5CT"/>
                                     <constraint firstItem="RrH-KV-NBI" firstAttribute="leading" secondItem="gXL-Yo-fZC" secondAttribute="leading" constant="48" id="xcK-J9-Rbu"/>
                                 </constraints>
                             </view>
@@ -744,14 +801,21 @@
                             <constraint firstItem="SMU-xN-FDc" firstAttribute="top" secondItem="gXL-Yo-fZC" secondAttribute="bottom" id="8ly-Kz-K5K"/>
                             <constraint firstItem="gXL-Yo-fZC" firstAttribute="top" secondItem="sJM-3l-evN" secondAttribute="top" id="F4g-6s-g2l"/>
                             <constraint firstAttribute="trailing" secondItem="gXL-Yo-fZC" secondAttribute="trailing" id="HWo-ud-l4c"/>
+                            <constraint firstItem="Rrm-zM-J0y" firstAttribute="leading" secondItem="sJM-3l-evN" secondAttribute="leading" id="TBL-M7-7T4"/>
+                            <constraint firstAttribute="trailing" secondItem="Rrm-zM-J0y" secondAttribute="trailing" id="TkR-Pe-DGh"/>
+                            <constraint firstItem="SMU-xN-FDc" firstAttribute="top" secondItem="Rrm-zM-J0y" secondAttribute="bottom" id="XCb-CF-PUD"/>
+                            <constraint firstItem="Rrm-zM-J0y" firstAttribute="top" secondItem="Ujy-em-Zc6" secondAttribute="bottom" constant="44" id="vhg-oz-ogN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="DfK-2U-YVm" id="ktL-it-l11"/>
                         <outlet property="associationProgressBar" destination="6iE-23-aPK" id="K9n-7X-nrP"/>
+                        <outlet property="bodyView" destination="Rrm-zM-J0y" id="R9N-4e-aQT"/>
                         <outlet property="headerView" destination="gXL-Yo-fZC" id="Iqj-Tn-56k"/>
                         <outlet property="messageLabel" destination="3e4-zZ-mgV" id="tPR-Gq-Pxl"/>
                         <outlet property="metaProgressBar" destination="F6r-P7-BCC" id="9pi-4x-7qD"/>
                         <outlet property="tagProgressBar" destination="3Ma-T2-kHb" id="Q6Y-At-yiT"/>
+                        <outlet property="titleLabel" destination="RrH-KV-NBI" id="VeL-Na-Ffk"/>
                         <outlet property="wordPairProgressBar" destination="zel-GG-aKi" id="2sO-kc-tYb"/>
                         <segue destination="uv4-Xr-mmn" kind="show" identifier="HomeSegue" id="9TO-Ap-Z98"/>
                     </connections>
@@ -770,8 +834,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MdF-bd-erP"/>
         <segue reference="Yaf-vT-WQV"/>
-        <segue reference="Kqj-gi-NaV"/>
+        <segue reference="nZR-fD-3Hs"/>
+        <segue reference="Btl-e8-myM"/>
     </inferredMetricsTieBreakers>
 </document>

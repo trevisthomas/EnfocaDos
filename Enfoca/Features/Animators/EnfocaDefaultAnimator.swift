@@ -13,7 +13,7 @@ protocol EnfocaDefaultAnimatorTarget {
     
     func getRightNavView() -> UIView?
     func getTitleView() -> UIView
-    func getHeaderHeightConstraint() -> NSLayoutConstraint
+//    func getHeaderHeightConstraint() -> NSLayoutConstraint
     func additionalComponentsToHide() -> [UIView] //Just return an empty list if you dont have any
     func getBodyContentView() -> UIView
 }
@@ -51,11 +51,6 @@ class EnfocaDefaultAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         performPresent(to: toViewController, from: fromViewController, containerView: containerView)
         
-//        if(presenting) {
-//            performPresent(to: toViewController, from: fromViewController, containerView: containerView)
-//        } else {
-//            performDismiss(to: toViewController, from: fromViewController, containerView: containerView)
-//        }
     }
     
     

@@ -14,9 +14,13 @@ class DictionaryCreationViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyView: UIView!
+    
     
     var viewModel: DictionaryCreationViewModel!
     private var isBackButtonNeeded: Bool = false
+    fileprivate var animator = EnfocaDefaultAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +45,9 @@ class DictionaryCreationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let to = segue.destination as? DictionaryEditorViewController {
-//            to.transitioningDelegate = self
+            to.transitioningDelegate = self
             guard let dictionary = sender as? UserDictionary else { fatalError() }
             to.initialize(dictionary: dictionary, isLanguageSelectionAvailable: viewModel.isLanguageChoiceNeeded(forDictionary: dictionary))
-            
         }
     }
 
@@ -87,5 +90,34 @@ extension DictionaryCreationViewController: UITableViewDataSource {
 extension DictionaryCreationViewController: SubjectTableViewCellDelegate {
     func performSelect(dictionary: UserDictionary) {
         performSegue(withIdentifier: "CreateDictionarySegue", sender: dictionary)
+    }
+}
+
+extension DictionaryCreationViewController: EnfocaDefaultAnimatorTarget {
+    func getRightNavView() -> UIView? {
+        return backButton
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    
+    func additionalComponentsToHide() -> [UIView] {
+        return []
+    }
+    func getBodyContentView() -> UIView {
+        return bodyView
+    }
+}
+extension DictionaryCreationViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        animator.presenting = true
+        return animator
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        animator.presenting = false
+        return animator
     }
 }

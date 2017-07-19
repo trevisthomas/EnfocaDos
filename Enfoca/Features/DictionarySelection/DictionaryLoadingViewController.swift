@@ -12,16 +12,17 @@ class DictionaryLoadingViewController: UIViewController {
 
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    fileprivate var dictionary: UserDictionary?
-    fileprivate var dataStoreData: DataStore?
     @IBOutlet weak var associationProgressBar: ProgressBarView!
     @IBOutlet weak var tagProgressBar: ProgressBarView!
     @IBOutlet weak var wordPairProgressBar: ProgressBarView!
     @IBOutlet weak var metaProgressBar: ProgressBarView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIView!
+    @IBOutlet weak var bodyView: UIView!
     
-    
+    fileprivate var dictionary: UserDictionary?
+    fileprivate var dataStoreData: DataStore?
     fileprivate var progressBars:[String: ProgressBarView] = [:]
-    
     fileprivate var progressLabels : [String: UILabel] = [:]
     
     override func viewDidLoad() {
@@ -97,7 +98,7 @@ class DictionaryLoadingViewController: UIViewController {
             messageLabel.text = "Loading local cache..."
             
             // no dictionary was selected by the user, we're doing a json auto init
-            guard let dataStore = dataStoreData else { fatalError() }
+            guard let dataStore = dataStoreData else { fatalError("dataStoreData is nil some how") }
             conchPreCheckPrepareDataStore(dataStore: dataStore)
         }
     }
@@ -224,4 +225,21 @@ extension DictionaryLoadingViewController: HomeFromQuizAnimatorTarget {
         return headerView.frame.height
     }
 }
+
+extension DictionaryLoadingViewController: EnfocaDefaultAnimatorTarget {
+    func getRightNavView() -> UIView? {
+        return activityIndicator
+    }
+    func getTitleView() -> UIView {
+        return titleLabel
+    }
+    
+    func additionalComponentsToHide() -> [UIView] {
+        return [messageLabel]
+    }
+    func getBodyContentView() -> UIView {
+        return bodyView
+    }
+}
+
 
