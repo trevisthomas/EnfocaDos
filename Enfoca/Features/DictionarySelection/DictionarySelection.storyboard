@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -182,13 +183,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightrays" translatesAutoresizingMaskIntoConstraints="NO" id="wzv-dU-fGh">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WZv-Qy-XsL"/>
+                                    <constraint firstAttribute="width" secondItem="wzv-dU-fGh" secondAttribute="height" multiplier="1:1" id="aPe-zX-O4i"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain" translatesAutoresizingMaskIntoConstraints="NO" id="EtS-SC-5V5">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EtS-SC-5V5" secondAttribute="height" multiplier="1:1" id="EQq-kV-hSn"/>
+                                    <constraint firstAttribute="height" constant="100" id="XjN-K3-pnm"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhV-qS-AoI">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-fJ-tks">
+                                        <rect key="frame" x="197" y="358" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="8Vv-fJ-tks" firstAttribute="centerX" secondItem="mhV-qS-AoI" secondAttribute="centerX" id="jKA-EH-m86"/>
+                                </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-fJ-tks">
-                                <rect key="frame" x="197" y="358" width="20" height="20"/>
-                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-De-iND">
                                 <rect key="frame" x="140" y="208" width="133.66666666666669" height="70"/>
                                 <constraints>
@@ -210,23 +230,31 @@
                         </subviews>
                         <color key="backgroundColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8Vv-fJ-tks" firstAttribute="centerY" secondItem="ifn-nq-YNn" secondAttribute="centerY" id="06o-zJ-uxA"/>
                             <constraint firstItem="f5V-wI-liX" firstAttribute="top" secondItem="mhV-qS-AoI" secondAttribute="bottom" id="5ml-FE-qY6"/>
                             <constraint firstAttribute="trailing" secondItem="mhV-qS-AoI" secondAttribute="trailing" id="8XU-3s-PTM"/>
                             <constraint firstItem="mhV-qS-AoI" firstAttribute="top" secondItem="POY-bM-4wd" secondAttribute="bottom" constant="44" id="AjP-Yx-8bN"/>
                             <constraint firstItem="OZ1-YU-V53" firstAttribute="centerX" secondItem="ifn-nq-YNn" secondAttribute="centerX" id="C7G-S0-fzl"/>
+                            <constraint firstItem="wzv-dU-fGh" firstAttribute="width" secondItem="EtS-SC-5V5" secondAttribute="height" multiplier="1:1" id="FJQ-D4-ca7"/>
+                            <constraint firstItem="EtS-SC-5V5" firstAttribute="centerY" secondItem="ifn-nq-YNn" secondAttribute="centerY" id="Hwr-uh-Kag"/>
+                            <constraint firstItem="wzv-dU-fGh" firstAttribute="width" secondItem="EtS-SC-5V5" secondAttribute="width" id="JjU-VB-2DV"/>
                             <constraint firstItem="C0k-De-iND" firstAttribute="centerX" secondItem="OZ1-YU-V53" secondAttribute="centerX" id="NKC-ZV-vIj"/>
                             <constraint firstItem="mhV-qS-AoI" firstAttribute="leading" secondItem="ifn-nq-YNn" secondAttribute="leading" id="TkF-h3-Pyp"/>
+                            <constraint firstItem="wzv-dU-fGh" firstAttribute="centerY" secondItem="EtS-SC-5V5" secondAttribute="centerY" id="Xbr-dz-lSq"/>
+                            <constraint firstItem="8Vv-fJ-tks" firstAttribute="centerY" secondItem="ifn-nq-YNn" secondAttribute="centerY" constant="64" id="YtP-2s-QVP"/>
+                            <constraint firstItem="8Vv-fJ-tks" firstAttribute="centerX" secondItem="ifn-nq-YNn" secondAttribute="centerX" id="c2n-fI-9sK"/>
                             <constraint firstItem="f5V-wI-liX" firstAttribute="top" secondItem="OZ1-YU-V53" secondAttribute="bottom" constant="8" symbolic="YES" id="cho-xo-x0s"/>
                             <constraint firstItem="C0k-De-iND" firstAttribute="centerX" secondItem="ifn-nq-YNn" secondAttribute="centerX" id="ctA-N2-chK"/>
-                            <constraint firstItem="8Vv-fJ-tks" firstAttribute="centerX" secondItem="ifn-nq-YNn" secondAttribute="centerX" id="f9R-Tt-6KW"/>
+                            <constraint firstItem="EtS-SC-5V5" firstAttribute="centerX" secondItem="ifn-nq-YNn" secondAttribute="centerX" id="dV9-Vl-Bhr"/>
+                            <constraint firstItem="wzv-dU-fGh" firstAttribute="centerX" secondItem="EtS-SC-5V5" secondAttribute="centerX" id="hCC-ra-910"/>
                             <constraint firstItem="C0k-De-iND" firstAttribute="top" secondItem="POY-bM-4wd" secondAttribute="bottom" constant="188" id="jCm-Iv-oND"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="8Vv-fJ-tks" id="qD6-Pg-21a"/>
                         <outlet property="bodyView" destination="mhV-qS-AoI" id="P8G-6I-Krh"/>
+                        <outlet property="brainImageView" destination="EtS-SC-5V5" id="cBy-RT-bHU"/>
                         <outlet property="footerLabel" destination="OZ1-YU-V53" id="KrO-4k-dgX"/>
+                        <outlet property="lighrraysImageView" destination="wzv-dU-fGh" id="1G8-zH-r5E"/>
                         <outlet property="titleLabel" destination="C0k-De-iND" id="xbK-mJ-pIw"/>
                         <segue destination="dbu-3x-1aW" kind="show" identifier="DictionarySelectionSegue" id="BHU-ah-l7T"/>
                         <segue destination="CGS-VD-4sj" kind="show" identifier="DictionaryCreationSegue" id="Yaf-vT-WQV"/>
@@ -833,6 +861,10 @@
             <point key="canvasLocation" x="3771" y="779"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="brain" width="100" height="100"/>
+        <image name="lightrays" width="100" height="100"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Yaf-vT-WQV"/>
         <segue reference="nZR-fD-3Hs"/>

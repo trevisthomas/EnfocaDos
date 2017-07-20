@@ -98,6 +98,12 @@ class LocalCloudKitWebService : WebService {
     }
     
     func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String? = nil, callback : @escaping(UserDictionary?, EnfocaError?)->()) {
+        
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
+        
         showNetworkActivityIndicator = true
         
         let dictionary = UserDictionary(dictionaryId: "not-set", userRef: userRecordId.recordName, enfocaRef: "not-set-generated-by-this-method", termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
@@ -206,6 +212,11 @@ class LocalCloudKitWebService : WebService {
     
     func createWordPair(word: String, definition: String, tags : [Tag], gender : Gender, example: String?, callback : @escaping(WordPair?, EnfocaError?)->()){
         
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
+        
         resetConchIfOutOfSynch()
         
         let newWordPair = WordPair(pairId: "", word: word, definition: definition, dateCreated: Date(), gender: gender, tags: tags, example: example)
@@ -252,6 +263,11 @@ class LocalCloudKitWebService : WebService {
     func updateDictionary(oldDictionary : UserDictionary, termTitle: String, definitionTitle: String, subject : String, language: String?, callback :
         @escaping(UserDictionary?, EnfocaError?)->()) {
         
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
+        
         oldDictionary.applyUpdate(termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
         
         Perform.updateDictionary(db: db, dictionary: oldDictionary) { (dictionary: UserDictionary?, error: String?) in
@@ -270,6 +286,11 @@ class LocalCloudKitWebService : WebService {
     
     func updateDictionaryCounts(callback :
         @escaping(UserDictionary?, EnfocaError?)->() = { _,_ in }) {
+        
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
         
         let currentDict = dataStore.getUserDictionary(refreshCounts: true)
         
@@ -290,6 +311,11 @@ class LocalCloudKitWebService : WebService {
     
     func updateWordPair(oldWordPair : WordPair, word: String, definition: String, gender : Gender, example: String?, tags : [Tag], callback :
         @escaping(WordPair?, EnfocaError?)->()){
+        
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
         
         resetConchIfOutOfSynch()
         
@@ -341,6 +367,11 @@ class LocalCloudKitWebService : WebService {
     func createTag(fromTag: Tag, callback: @escaping(Tag?, EnfocaError?)->()){
         resetConchIfOutOfSynch()
         
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
+        
         showNetworkActivityIndicator = true
         Perform.createTag(fromTag: fromTag, enfocaRef: enfocaRef, db: db) { (tag:Tag?, error: String?) in
             self.showNetworkActivityIndicator = false
@@ -362,6 +393,11 @@ class LocalCloudKitWebService : WebService {
     
     func updateTag(oldTag : Tag, updatedTag: Tag, callback: @escaping(Tag?, EnfocaError?)->()) {
         
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
+        
         resetConchIfOutOfSynch()
         showNetworkActivityIndicator = true
         
@@ -379,6 +415,11 @@ class LocalCloudKitWebService : WebService {
     }
     
     func deleteWordPair(wordPair: WordPair, callback: @escaping(WordPair?, EnfocaError?)->()) {
+        
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
         
         showNetworkActivityIndicator = true
         resetConchIfOutOfSynch()
@@ -421,6 +462,11 @@ class LocalCloudKitWebService : WebService {
     
     func deleteDictionary(dictionary: UserDictionary, callback: @escaping(UserDictionary?, EnfocaError?)->()) {
         
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
+        
         showNetworkActivityIndicator = true
         
         Perform.deleteDictionary(dictionary: dictionary, db: db, privateDb: privateDb) { (dictionaryId: String?, error: String?) in
@@ -436,6 +482,11 @@ class LocalCloudKitWebService : WebService {
     }
     
     func deleteTag(tag: Tag, callback: @escaping(Tag?, EnfocaError?)->()){
+        guard isNetworkAvailable else {
+            callback(nil, "Network connection is unavailable.")
+            return
+        }
+        
         showNetworkActivityIndicator = true
         
         resetConchIfOutOfSynch()
@@ -493,6 +544,12 @@ class LocalCloudKitWebService : WebService {
         showNetworkActivityIndicator = true
         
         let metaData = dataStore.getMetaData(forWordPair: forWordPair)
+        
+        guard isNetworkAvailable else {
+            callback(metaData, nil)
+            showNetworkActivityIndicator = false
+            return
+        }
         
         if let currentMetaData = metaData {
             Perform.updateMetaData(oldMetaData: currentMetaData, isCorrect: correct, elapsedTime: elapsedTime, db: privateDb) { (metaData: MetaData?, error: String?) in

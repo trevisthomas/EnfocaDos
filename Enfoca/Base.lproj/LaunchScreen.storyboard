@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +25,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh3-El-5FB">
@@ -37,7 +38,7 @@
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017 Enfoca Software, LLC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyZ-zd-min">
-                                <rect key="frame" x="16" y="638" width="343" height="21"/>
+                                <rect key="frame" x="20" y="707" width="374" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="QFp-WU-DJz"/>
                                 </constraints>
@@ -45,15 +46,43 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain" translatesAutoresizingMaskIntoConstraints="NO" id="3WH-VE-Uhi">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4oa-4n-BLX"/>
+                                    <constraint firstAttribute="width" secondItem="3WH-VE-Uhi" secondAttribute="height" multiplier="1:1" id="Ly4-ym-V9y"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightrays" translatesAutoresizingMaskIntoConstraints="NO" id="kqm-mg-CUc">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kqm-mg-CUc" secondAttribute="height" multiplier="1:1" id="7dO-A8-WKs"/>
+                                    <constraint firstAttribute="height" constant="100" id="Xlm-DF-dCr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yh3-El-5FB" firstAttribute="centerX" secondItem="FyZ-zd-min" secondAttribute="centerX" id="FDk-DO-L4u"/>
+                            <constraint firstItem="3WH-VE-Uhi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="PlJ-9I-boU"/>
+                            <constraint firstItem="FyZ-zd-min" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cLd-1f-aRg"/>
+                            <constraint firstItem="kqm-mg-CUc" firstAttribute="width" secondItem="3WH-VE-Uhi" secondAttribute="height" multiplier="1:1" id="gCE-Tv-UN2"/>
                             <constraint firstItem="Yh3-El-5FB" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="188" id="inS-eq-evC"/>
                             <constraint firstItem="Yh3-El-5FB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jlm-QA-i4C"/>
+                            <constraint firstItem="kqm-mg-CUc" firstAttribute="width" secondItem="3WH-VE-Uhi" secondAttribute="width" id="lOE-24-coI"/>
+                            <constraint firstItem="kqm-mg-CUc" firstAttribute="width" secondItem="kqm-mg-CUc" secondAttribute="height" multiplier="1:1" id="mj3-0d-9jZ"/>
+                            <constraint firstItem="kqm-mg-CUc" firstAttribute="centerX" secondItem="3WH-VE-Uhi" secondAttribute="centerX" id="sQk-Pn-WM9"/>
+                            <constraint firstItem="kqm-mg-CUc" firstAttribute="centerY" secondItem="3WH-VE-Uhi" secondAttribute="centerY" id="txc-QT-680"/>
                             <constraint firstItem="FyZ-zd-min" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="uEp-5t-omn"/>
+                            <constraint firstItem="3WH-VE-Uhi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wc7-aV-MJl"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="FyZ-zd-min" secondAttribute="bottom" constant="8" symbolic="YES" id="z4H-b3-A6y"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Yh3-El-5FB"/>
+                                <exclude reference="kqm-mg-CUc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
@@ -62,4 +91,8 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="brain" width="100" height="100"/>
+        <image name="lightrays" width="100" height="100"/>
+    </resources>
 </document>

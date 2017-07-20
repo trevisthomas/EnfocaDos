@@ -207,9 +207,13 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
                     }
                 })
             })
-        }) { 
+        }) { (error: EnfocaError?) in
             alert.dismiss(animated: false, completion: {
-                self.dismissViewController()
+                if let error = error {
+                    self.presentAlert(title: "Save failed", message: error)
+                } else {
+                    self.dismissViewController()
+                }
             })
         }
     }
@@ -234,10 +238,15 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
     
     private func performDeleteWithoutWarning() {
         let alert = presentActivityAlert(title: "Please wait...", message: nil)
-        controller.performDelete {
+        
+        controller.performDelete { (error: EnfocaError?) in
             alert.dismiss(animated: false, completion: {
-                self.dismissViewController()
-            })
+                    if let error = error {
+                        self.presentAlert(title: "Delete failed", message: error)
+                    } else {
+                        self.dismissViewController()
+                    }
+                })
         }
     }
     

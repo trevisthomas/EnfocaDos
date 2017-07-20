@@ -14,6 +14,8 @@ class NewAppLaunchViewController: UIViewController {
     @IBOutlet weak var footerLabel: UILabel!
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var activityIndicator: UIView!
+    @IBOutlet weak var brainImageView: UIImageView!
+    @IBOutlet weak var lighrraysImageView: UIImageView!
     
     fileprivate var animator = EnfocaDefaultAnimator()
     
@@ -147,7 +149,7 @@ extension NewAppLaunchViewController: EnfocaDefaultAnimatorTarget {
     }
     
     func additionalComponentsToHide() -> [UIView] {
-        return []
+        return [lighrraysImageView]
     }
     func getBodyContentView() -> UIView {
         return bodyView
