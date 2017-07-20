@@ -192,6 +192,9 @@
 		0F2CB4571F141332002CDE68 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4561F141332002CDE68 /* Language.swift */; };
 		0F2CB4581F141332002CDE68 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4561F141332002CDE68 /* Language.swift */; };
 		0F2CB4591F141332002CDE68 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CB4561F141332002CDE68 /* Language.swift */; };
+		0F2D3F401F1FFCAE00A73025 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D3F3F1F1FFCAE00A73025 /* Reachability.swift */; };
+		0F2D3F411F1FFCAE00A73025 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D3F3F1F1FFCAE00A73025 /* Reachability.swift */; };
+		0F2D3F421F1FFCAE00A73025 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D3F3F1F1FFCAE00A73025 /* Reachability.swift */; };
 		0F35B03D1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
 		0F35B03E1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */; };
 		0F35B0411F016831001AC511 /* OperationUpdateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */; };
@@ -608,6 +611,7 @@
 		0F2CB44E1F141266002CDE68 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageTableViewCell.swift; path = DictionarySelection/LanguageTableViewCell.swift; sourceTree = "<group>"; };
 		0F2CB4521F1412C1002CDE68 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageSelectionViewController.swift; path = DictionarySelection/LanguageSelectionViewController.swift; sourceTree = "<group>"; };
 		0F2CB4561F141332002CDE68 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		0F2D3F3F1F1FFCAE00A73025 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		0F35B03C1F015C20001AC511 /* OperationCreateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationCreateDictionary.swift; path = Enfoca/Network/Operations/Core/Dictionary/OperationCreateDictionary.swift; sourceTree = SOURCE_ROOT; };
 		0F35B0401F016831001AC511 /* OperationUpdateDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationUpdateDictionary.swift; path = Dictionary/OperationUpdateDictionary.swift; sourceTree = "<group>"; };
 		0F35B0431F0173CD001AC511 /* Perform+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Perform+Dictionary.swift"; sourceTree = "<group>"; };
@@ -1148,6 +1152,7 @@
 				0F1B05151EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift */,
 				0FE0158D1EF4B19700780184 /* CustomAnimations.swift */,
 				0FE015921EF5976200780184 /* Randomizer.swift */,
+				0F2D3F3F1F1FFCAE00A73025 /* Reachability.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1675,6 +1680,7 @@
 				0F2CB4441F128541002CDE68 /* MruTagCollectionViewCell.swift in Sources */,
 				0F1AAA221F07021200ACC0C3 /* UIView+.swift in Sources */,
 				0F911E3A1EE75D4600F21855 /* DemoWebService.swift in Sources */,
+				0F2D3F411F1FFCAE00A73025 /* Reachability.swift in Sources */,
 				0FE015A31EF9A56700780184 /* MatchingRoundAnimator.swift in Sources */,
 				0FE015941EF5976200780184 /* Randomizer.swift in Sources */,
 				0F35B03E1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */,
@@ -1866,6 +1872,7 @@
 				0F911E9A1EE766D900F21855 /* WordPairTableViewController.swift in Sources */,
 				0F911E9B1EE766D900F21855 /* Tag.swift in Sources */,
 				0F911E9C1EE766D900F21855 /* DemoWebService.swift in Sources */,
+				0F2D3F421F1FFCAE00A73025 /* Reachability.swift in Sources */,
 				0F911E9D1EE766D900F21855 /* BrowseViewController.swift in Sources */,
 				0F911E9F1EE766D900F21855 /* UIColor+.swift in Sources */,
 				0F911EA01EE766D900F21855 /* TagCollectionViewCell.swift in Sources */,
@@ -2054,6 +2061,7 @@
 				0FA4A5271EC8EC9000F31F9A /* FetchUserRecordOperation.swift in Sources */,
 				0F35B0501F02D1F6001AC511 /* DictionaryEditorViewController.swift in Sources */,
 				0F0BAFC71F0F386F005251AE /* CreateWordPair.swift in Sources */,
+				0F2D3F401F1FFCAE00A73025 /* Reachability.swift in Sources */,
 				0F085B831ED8BCF000FC20A1 /* BrowseFromHomeAnimator.swift in Sources */,
 				0FA4A4F41EC8E94700F31F9A /* WebService.swift in Sources */,
 				0F35B04D1F01BFA6001AC511 /* NewAppLaunchViewController.swift in Sources */,

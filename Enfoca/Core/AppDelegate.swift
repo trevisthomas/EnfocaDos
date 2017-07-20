@@ -41,6 +41,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ////                fatalError() //For the moment.
 //        })
         
+        do {
+            Network.reachability = try Reachability(hostname: "www.google.com")
+            do {
+                try Network.reachability?.start()
+            } catch let error as Network.Error {
+                print(error)
+            } catch {
+                print(error)
+            }
+        } catch {
+            print(error)
+        }
+        
         application.registerForRemoteNotifications()
         return true
     }

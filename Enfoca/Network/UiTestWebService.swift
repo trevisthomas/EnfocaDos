@@ -12,6 +12,7 @@ class UiTestWebService : WebService {
     private(set) var dictionary: UserDictionary!
     private(set) var enfocaId : NSNumber!
     private var dataStore: DataStore!
+    var isNetworkAvailable: Bool = true 
     
 //    var tags: [Tag]
 //    var wordPairs: [WordPair]

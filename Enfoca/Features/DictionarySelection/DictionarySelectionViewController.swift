@@ -160,8 +160,20 @@ extension DictionarySelectionViewController: UITableViewDataSource {
 extension DictionarySelectionViewController: SubjectTableViewCellDelegate {
     func performSelect(dictionary: UserDictionary) {
         if isEditMode {
+            guard getAppDelegate().webService.isNetworkAvailable else {
+                presentAlert(title: "Network unavalable", message: "Editing is not possible offline.")
+                return
+            }
             performSegue(withIdentifier: "EditDictionarySegue", sender: dictionary)
         } else {
+            
+            if !getAppDelegate().webService.isNetworkAvailable {
+                //If there is no network, make sure that the dictionary exists offline
+                guard let _ = getAppDelegate().applicationDefaults.loadDataStore(forDictionaryId: dictionary.dictionaryId) else {
+                    presentAlert(title: "Network unavalable", message: "Dictionary unavailable for offline viewing.")
+                    return
+                }
+            }
             performSegue(withIdentifier: "LoadDictionarySegue", sender: dictionary)
         }
     }

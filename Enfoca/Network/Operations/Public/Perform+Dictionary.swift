@@ -45,6 +45,33 @@ extension Perform {
         
     }
     
+    class func initOffline(userRecordId: CKRecordID, db: CKDatabase, callback : @escaping ( (CKRecordID, [UserDictionary])?, String?) -> ()) {
+        
+        let user : InternalUser = InternalUser()
+        let queue = OperationQueue()
+        let errorHandler = ErrorHandler(queue: queue, callback: callback)
+        
+        user.recordId = userRecordId
+        
+        let completeOp = BlockOperation {
+            OperationQueue.main.addOperation{
+                print(user.recordId)
+                
+                guard let list = user.dictionaryList else {
+                    callback((user.recordId, []), nil)
+                    return
+                }
+                callback((user.recordId, list), nil)
+            }
+        }
+        
+        let fetchDictionaryList = FetchUserDictionaryList(user: user, db: db, errorDelegate: errorHandler)
+        
+        completeOp.addDependency(fetchDictionaryList)
+        
+        queue.addOperations([fetchDictionaryList, completeOp], waitUntilFinished: false)
+    }
+    
     class func createDictionary(db: CKDatabase, dictionary: UserDictionary, callback : @escaping (_ dictionary : UserDictionary?, _ error : String?) -> ()){
         
         let queue = OperationQueue()

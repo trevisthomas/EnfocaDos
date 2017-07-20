@@ -12,6 +12,8 @@ protocol WebService {
     
     var showNetworkActivityIndicator : Bool {get set}
     
+    var isNetworkAvailable: Bool {get set}
+    
     func prepareDataStore(dictionary: UserDictionary?, dataStore: DataStore?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ())
     func serialize() -> String?
     
@@ -74,5 +76,6 @@ protocol WebService {
     func updateDictionaryCounts(callback : @escaping(UserDictionary?, EnfocaError?)->())
     
     func fetchCurrentConch(dictionary: UserDictionary, callback: @escaping (String?, String?)->())
+    
     
 }

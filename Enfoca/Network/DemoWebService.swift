@@ -10,11 +10,12 @@ import UIKit
 
 class DemoWebService : WebService {
     
-
+    var isNetworkAvailable: Bool = true
+    
     func toData() -> Data? {
         fatalError()
     }
-
+    
     
     /**
      A null tag is how you ask for words of any tag.

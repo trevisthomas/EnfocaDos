@@ -11,9 +11,9 @@ import CloudKit
 
 
 class LocalCloudKitWebService : WebService {
-
+    private let userDictionaryListKey = "userDictionaryListKey"
+    var isNetworkAvailable: Bool = false
     private var enfocaRef: CKReference!
-    
     private var subscriptionForWordPair: CKSubscription?
     private(set) var db : CKDatabase!
     private(set) var privateDb : CKDatabase!
@@ -29,6 +29,10 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
+    init(isNetworkAvailable: Bool) {
+        self.isNetworkAvailable = isNetworkAvailable
+    }
+    
     var showNetworkActivityIndicator: Bool {
         get {
             return UIApplication.shared.isNetworkActivityIndicatorVisible
@@ -38,13 +42,38 @@ class LocalCloudKitWebService : WebService {
         }
     }
     
+    private func loadUserRecordFromDefaults() -> [UserDictionary]? {
+        let defaults = UserDefaults.standard
+        guard let data = defaults.value(forKey: userDictionaryListKey) as? Data else {
+            return nil
+        }
+        guard let list = NSKeyedUnarchiver.unarchiveObject(with: data) as? [UserDictionary] else { fatalError("Corrupt local user dictionaries.") }
+        
+        return list
+    }
+    
+    private func saveUserRecordToDefaults(_ dictionaryList: [UserDictionary]) {
+        let defaults = UserDefaults.standard
+        
+        let data = NSKeyedArchiver.archivedData(withRootObject: dictionaryList)
+        
+        defaults.set(data, forKey: userDictionaryListKey)
+    }
+    
     //This needs to be called first to initialize the things.  
     //It will eventually replace the old init method.
     //TODO: Rename to pre-initialize?
     func initialize(callback : @escaping([UserDictionary]?, EnfocaError?)->()){
+        guard isNetworkAvailable else {
+            guard let cachedDictionaries = loadUserRecordFromDefaults() else {
+                callback(nil, "Local cache has no dictionaries")
+                return
+            }
+            callback(cachedDictionaries, nil)
+            return
+        }
         
         showNetworkActivityIndicator = true
-        
         
         db = CKContainer.default().publicCloudDatabase
         privateDb = CKContainer.default().privateCloudDatabase
@@ -60,8 +89,9 @@ class LocalCloudKitWebService : WebService {
                 return
             }
             
-            
             self.userRecordId = tuple.0
+            
+            self.saveUserRecordToDefaults(tuple.1)
           
             callback(tuple.1, nil)
         }
@@ -703,6 +733,11 @@ class LocalCloudKitWebService : WebService {
     }
     
     func isDataStoreSynchronized(dictionary: UserDictionary, callback: @escaping (Bool?, String?)->()) {
+        
+        guard isNetworkAvailable else {
+            callback(true, nil)
+            return
+        }
         
         if !isDataStoreSynchronized {
             //If the DS it out of sync, there is no point in checking the DB.  You need to reload.

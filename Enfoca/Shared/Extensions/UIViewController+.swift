@@ -23,9 +23,13 @@ extension UIViewController{
         
         let alertController = UIAlertController(title: title, message:
             message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+            completion()
+        }))
         
-        self.present(alertController, animated: true, completion: completion)
+        
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func presentFatalAlert(title : String, message : String?){

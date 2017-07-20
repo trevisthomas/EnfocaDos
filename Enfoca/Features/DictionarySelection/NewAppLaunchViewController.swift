@@ -23,32 +23,53 @@ class NewAppLaunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        launch()
+        NotificationCenter.default.addObserver(self, selector: #selector(statusManager), name: .flagsChanged, object: Network.reachability)
+        updateUserInterface()
+        
+    }
+    
+    func updateUserInterface() {
+        guard let status = Network.reachability?.status else { return }
+        guard let isNetworkAvailable = Network.reachability?.isReachable else {
+            //Network reachability class is not working properly
+            fatalError("Network reacability returned a nil.")
+            //TODO: Seriously consider if this should be fatal, or if you should just continue
+        }
+        
+        invokeLater {
+            if isNetworkAvailable {
+                print("network connection verfied")
+                self.launch(isNetworkAvailable: isNetworkAvailable)
+            } else {
+                self.presentOkCancelAlert(title: "Network offline", message: "No network connection detected. Would you like to continue offline?", callback: { (proceed: Bool) in
+                    if proceed {
+                        self.launch(isNetworkAvailable: isNetworkAvailable)
+                    } else {
+                        abort()
+                    }
+                })
+            }
+        }
+        
+        
+        
+        print("Reachability Summary")
+        print("Status:", status)
+        print("HostName:", Network.reachability?.hostname ?? "nil")
+        print("Reachable:", Network.reachability?.isReachable ?? "nil")
+        print("Wifi:", Network.reachability?.isReachableViaWiFi ?? "nil")
+    }
+    
+    func statusManager(_ notification: NSNotification) {
+        updateUserInterface()
     }
 
     func initialize(autoload: Bool = true) {
         self.autoload = autoload
     }
     
-    private func launch(){
-        
-        getAppDelegate().applicationDefaults = LocalApplicationDefaults()
-        
-        let service: WebService
-        
-        //TODO: Use this to decide which services implementation to use
-        if isTestMode() {
-            print("We're in test mode")
-            service = UiTestWebService()
-        } else {
-            print("Production")
-            service = LocalCloudKitWebService()
-            //        let service = CloudKitWebService()
-            //        let service = DemoWebService()
-        }
-        
-        
-        service.initialize { (dictionaryList: [UserDictionary]?, error: EnfocaError?) in
+    fileprivate func postInitCallback(_ service: WebService) -> ([UserDictionary]?, EnfocaError?) -> () {
+        return { (dictionaryList: [UserDictionary]?, error: EnfocaError?) in
             if let error = error {
                 self.presentFatalAlert(title: "Failed to initialize app", message: error)
                 return
@@ -68,6 +89,27 @@ class NewAppLaunchViewController: UIViewController {
                 self.presentCreateOrLoadView(dictionaryList: dictionaryList)
             }
         }
+    }
+    
+    private func launch(isNetworkAvailable: Bool){
+        
+        getAppDelegate().applicationDefaults = LocalApplicationDefaults()
+        
+        let service: WebService
+        
+        //TODO: Use this to decide which services implementation to use
+        if isTestMode() {
+            print("We're in test mode")
+            service = UiTestWebService()
+        } else {
+            print("Production")
+            service = LocalCloudKitWebService(isNetworkAvailable: isNetworkAvailable)
+            //        let service = CloudKitWebService()
+            //        let service = DemoWebService()
+        }
+        
+        service.initialize(callback: postInitCallback(service))
+        
     }
     
     private func presentCreateOrLoadView(dictionaryList: [UserDictionary]) {

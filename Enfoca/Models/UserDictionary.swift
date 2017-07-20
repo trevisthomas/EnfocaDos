@@ -134,7 +134,10 @@ class UserDictionary: NSObject, NSCoding {
         guard let userRef = aDecoder.decodeObject(forKey:"userRef") as? String else {fatalError()}
         guard let enfocaRef = aDecoder.decodeObject(forKey:"enfocaRef") as? String else {fatalError()}
         guard let termTitle = aDecoder.decodeObject(forKey:"termTitle") as? String else {fatalError()}
-        guard let conch = aDecoder.decodeObject(forKey:"conch") as? String else {fatalError()}
+//        guard let conch = aDecoder.decodeObject(forKey:"conch") as? String else {fatalError()}
+        
+        //Allowed to be nil due to saving local cached dictionary lists
+        let conch = aDecoder.decodeObject(forKey:"conch") as? String
         
         guard let definitionTitle = aDecoder.decodeObject(forKey:"definitionTitle") as? String else {fatalError()}
         guard let subject = aDecoder.decodeObject(forKey:"subject") as? String else {fatalError()}
@@ -158,7 +161,9 @@ class UserDictionary: NSObject, NSCoding {
         aCoder.encode(dictionaryId, forKey: "dictionaryId")
         aCoder.encode(userRef, forKey: "userRef")
         aCoder.encode(language, forKey: "language")
-        aCoder.encode(conch, forKey: "conch")
+        if let _ = conch { //Added to save full dictionary list for offline mode
+            aCoder.encode(conch, forKey: "conch")
+        }
         
         aCoder.encode(countWordPairs, forKey: "countWordPairs")
         aCoder.encode(countAssociations, forKey: "countAssociations")
