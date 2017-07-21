@@ -35,17 +35,10 @@ class ColorSelectorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        let s = tableView.contentSize
         
-        preferredContentSize = CGSize(width: s.width, height: s.height + headerView.frame.height)
+        preferredContentSize = CGSize(width: 304, height: 375)
     }
     
-    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
