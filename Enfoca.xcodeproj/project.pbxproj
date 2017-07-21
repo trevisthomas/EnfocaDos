@@ -97,6 +97,12 @@
 		0F0BAFE01F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */; };
 		0F0BAFE11F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */; };
 		0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
+		0F1A5F7F1F22609100F82C5D /* Shared.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A5F7E1F22609100F82C5D /* Shared.storyboard */; };
+		0F1A5F801F22609100F82C5D /* Shared.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A5F7E1F22609100F82C5D /* Shared.storyboard */; };
+		0F1A5F811F22609100F82C5D /* Shared.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A5F7E1F22609100F82C5D /* Shared.storyboard */; };
+		0F1A5F831F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */; };
+		0F1A5F841F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */; };
+		0F1A5F851F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */; };
 		0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1AAA1D1F055F0800ACC0C3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */; };
 		0F1AAA1F1F05734A00ACC0C3 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */; };
@@ -593,6 +599,8 @@
 		0F0BAFDA1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFetchDictionarListForEnfocaRef.swift; sourceTree = "<group>"; };
 		0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationMergeUpdateMetaData.swift; sourceTree = "<group>"; };
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
+		0F1A5F7E1F22609100F82C5D /* Shared.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shared.storyboard; sourceTree = "<group>"; };
+		0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAlertViewController.swift; sourceTree = "<group>"; };
 		0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		0F1AAA201F07021200ACC0C3 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -1361,6 +1369,8 @@
 				0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */,
 				0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */,
 				0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */,
+				0F1A5F7E1F22609100F82C5D /* Shared.storyboard */,
+				0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1540,6 +1550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F911E741EE75D4600F21855 /* LaunchScreen.storyboard in Resources */,
+				0F1A5F801F22609100F82C5D /* Shared.storyboard in Resources */,
 				0F028DE61F00D39A008200E2 /* DictionarySelection.storyboard in Resources */,
 				0F911E751EE75D4600F21855 /* Assets.xcassets in Resources */,
 				0F911E761EE75D4600F21855 /* Browse.storyboard in Resources */,
@@ -1569,6 +1580,7 @@
 				0F911F231EE76F0900F21855 /* test.json in Resources */,
 				0F911EEA1EE76B6700F21855 /* DataImport.storyboard in Resources */,
 				0F911ED61EE766D900F21855 /* LaunchScreen.storyboard in Resources */,
+				0F1A5F811F22609100F82C5D /* Shared.storyboard in Resources */,
 				0F911ED71EE766D900F21855 /* Assets.xcassets in Resources */,
 				0F911ED81EE766D900F21855 /* Browse.storyboard in Resources */,
 				0F911ED91EE766D900F21855 /* WordPairTableStoryboard.storyboard in Resources */,
@@ -1593,6 +1605,7 @@
 				0FD1E2091ED0827700D8BD1A /* WordPairTableStoryboard.storyboard in Resources */,
 				0F911EF41EE76CB900F21855 /* small_tag.json in Resources */,
 				0F085B861EDC64DD00FC20A1 /* Edit.storyboard in Resources */,
+				0F1A5F7F1F22609100F82C5D /* Shared.storyboard in Resources */,
 				0F911EF21EE76CB900F21855 /* small_study_item.json in Resources */,
 				0F911EFC1EE76CDD00F21855 /* study_item.json in Resources */,
 				0F911EFD1EE76CDD00F21855 /* tag_associations.json in Resources */,
@@ -1757,6 +1770,7 @@
 				0F0BAFD01F0F4E74005251AE /* CreateMetaData.swift in Sources */,
 				0F911E651EE75D4600F21855 /* BrowseFromHomeAnimator.swift in Sources */,
 				0F299EEE1F1960CC005CD3AF /* ColoredAngledEdgeView.swift in Sources */,
+				0F1A5F841F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */,
 				0F911E671EE75D4600F21855 /* WebService.swift in Sources */,
 				0F911E681EE75D4600F21855 /* OperationFetchMetaData.swift in Sources */,
 				0F911E691EE75D4600F21855 /* FetchUserRecordId.swift in Sources */,
@@ -1841,6 +1855,7 @@
 				0F911F151EE76ED500F21855 /* Import.swift in Sources */,
 				0F911F161EE76ED500F21855 /* OldMetaData.swift in Sources */,
 				0F911F171EE76ED500F21855 /* OldTag.swift in Sources */,
+				0F1A5F851F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */,
 				0F911F181EE76ED500F21855 /* OldTagAssociation.swift in Sources */,
 				0F911F191EE76ED500F21855 /* OldWordPair.swift in Sources */,
 				0F911EE91EE769D400F21855 /* DataImportViewController.swift in Sources */,
@@ -1951,6 +1966,7 @@
 				0F299EF91F1D33C5005CD3AF /* ProgressBarView.swift in Sources */,
 				0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */,
 				0F0BAFD31F0F4FD9005251AE /* CreateTag.swift in Sources */,
+				0F1A5F831F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */,
 				0FA4A5531EC8F0DB00F31F9A /* ApplicationDefaults.swift in Sources */,
 				0F1AAA211F07021200ACC0C3 /* UIView+.swift in Sources */,
 				0FA4A5361EC8ECB400F31F9A /* OperationCreateMetaData.swift in Sources */,

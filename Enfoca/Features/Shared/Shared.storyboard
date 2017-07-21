@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Activity Alert View Controller-->
+        <scene sceneID="F5Q-8X-jgh">
+            <objects>
+                <viewController storyboardIdentifier="ActivityAlertViewController" id="SsY-SP-WeV" customClass="ActivityAlertViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="bfD-Yd-yN4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECk-aS-DgB">
+                                <rect key="frame" x="8" y="32" width="359" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bn8-Zr-cKB">
+                                <rect key="frame" x="168.5" y="64" width="37" height="37"/>
+                                <color key="color" red="0.29411764709999999" green="0.3294117647" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bn8-Zr-cKB" firstAttribute="top" secondItem="ECk-aS-DgB" secondAttribute="bottom" constant="8" id="2bB-vW-9lD"/>
+                            <constraint firstItem="bn8-Zr-cKB" firstAttribute="centerX" secondItem="NBv-ZO-lWb" secondAttribute="centerX" id="775-wz-YZ8"/>
+                            <constraint firstItem="ECk-aS-DgB" firstAttribute="top" secondItem="NBv-ZO-lWb" secondAttribute="top" constant="12" id="9L1-O9-ytA"/>
+                            <constraint firstItem="bn8-Zr-cKB" firstAttribute="centerX" secondItem="ECk-aS-DgB" secondAttribute="centerX" id="WkU-GK-GgT"/>
+                            <constraint firstItem="NBv-ZO-lWb" firstAttribute="trailing" secondItem="ECk-aS-DgB" secondAttribute="trailing" constant="8" id="hnk-yP-372"/>
+                            <constraint firstItem="ECk-aS-DgB" firstAttribute="leading" secondItem="NBv-ZO-lWb" secondAttribute="leading" constant="8" id="lta-Op-f6Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NBv-ZO-lWb"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="bn8-Zr-cKB" id="QOI-SL-rw8"/>
+                        <outlet property="messageLabel" destination="ECk-aS-DgB" id="h1z-zW-P5V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfR-0c-KK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538.39999999999998" y="-154.27286356821591"/>
+        </scene>
+    </scenes>
+</document>
