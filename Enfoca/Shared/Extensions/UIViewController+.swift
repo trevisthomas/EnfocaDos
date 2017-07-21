@@ -57,51 +57,9 @@ extension UIViewController{
         present(dialog, animated: true, completion: nil)
     }
     
-    func presentActivityAlertOrig(title: String?, message: String?) -> UIAlertController{
-        
-        //UIActivityViewController might be an option.
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        //create an activity indicator
-        let indicator = UIActivityIndicatorView(frame: alert.view.bounds)
-        indicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        //add the activity indicator as a subview of the alert controller's view
-        alert.view.addSubview(indicator)
-        indicator.isUserInteractionEnabled = false // required otherwise if there buttons in the UIAlertController you will not be able to press them
-        
-//        alert.add
-        
-        indicator.activityIndicatorViewStyle = .whiteLarge
-        indicator.color = UIColor.black
-        indicator.startAnimating()
-        
-        present(alert, animated: true, completion: nil)
-        
-        return alert
-        
-    }
-    
     func presentActivityAlert(title: String?, message: String?) -> UIAlertController{
         
-        //UIActivityViewController might be an option.
-        
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        
-//        //create an activity indicator
-//        let indicator = UIActivityIndicatorView(frame: alert.view.bounds)
-//        indicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//
-//        //add the activity indicator as a subview of the alert controller's view
-//        alert.view.addSubview(indicator)
-//        indicator.isUserInteractionEnabled = false // required otherwise if there buttons in the UIAlertController you will not be able to press them
-//
-        
-//        //        alert.add
-//
-//        indicator.activityIndicatorViewStyle = .whiteLarge
-//        indicator.color = UIColor.black
-//        indicator.startAnimating()
         
         let storyboard = UIStoryboard(name: "Shared", bundle: Bundle.main)
         
@@ -111,10 +69,6 @@ extension UIViewController{
         viewController.initialize(message: title!) 
         alert.setValue(viewController, forKey: "contentViewController")
         
-//        let subview = alert.view.subviews.first! as UIView
-//        let alertContentView = subview.subviews.first! as UIView
-//        
-//        alertContentView.backgroundColor = viewController.view.backgroundColor
         present(alert, animated: true, completion: nil)
         
         return alert
