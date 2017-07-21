@@ -59,7 +59,8 @@ class WordPairTableViewController: UIViewController {
         self.refreshControl.endRefreshing()
     }
     
-    fileprivate func performSort() {
+    
+    fileprivate func performSort(delayBy: Int? = nil) {
         let sortBy: SimplifedSortMode
         
         let message : String
@@ -80,24 +81,31 @@ class WordPairTableViewController: UIViewController {
         let attributes = [ NSForegroundColorAttributeName : refreshTextColor ] as [String: Any]
         refreshControl.attributedTitle = NSAttributedString(string: message, attributes: attributes)
         
-        delay(delayInSeconds: 1) {
-            //perform sort
-            
-            switch sortBy {
-            case .score:
-                self.sortByScore(wordPairs: self.wordPairs, callback: { (wordPairs: [WordPair]) in
-                    self.performWordPairRefresh(wordPairs)
-                })
-            case .definition:
-                self.sortByDefinition(wordPairs: self.self.wordPairs, callback: { (wordPairs: [WordPair]) in
-                    self.performWordPairRefresh(wordPairs)
-                })
-            case .term:
-                self.sortByWord(wordPairs: self.wordPairs, callback: { (wordPairs: [WordPair]) in
-                    self.performWordPairRefresh(wordPairs)
-                })
+        if let delayBy = delayBy {
+            delay(delayInSeconds: 1) {
+                self.executeSortFunction(sortBy: sortBy)
             }
-            
+        } else {
+            self.executeSortFunction(sortBy: sortBy)
+        }
+    }
+    
+    fileprivate func executeSortFunction(sortBy: SimplifedSortMode) {
+        //perform sort
+        
+        switch sortBy {
+        case .score:
+            self.sortByScore(wordPairs: self.wordPairs, callback: { (wordPairs: [WordPair]) in
+                self.performWordPairRefresh(wordPairs)
+            })
+        case .definition:
+            self.sortByDefinition(wordPairs: self.self.wordPairs, callback: { (wordPairs: [WordPair]) in
+                self.performWordPairRefresh(wordPairs)
+            })
+        case .term:
+            self.sortByWord(wordPairs: self.wordPairs, callback: { (wordPairs: [WordPair]) in
+                self.performWordPairRefresh(wordPairs)
+            })
         }
     }
     
@@ -105,7 +113,7 @@ class WordPairTableViewController: UIViewController {
         
         isSortedByScore = !isSortedByScore
         
-        performSort()
+        performSort(delayBy: 1)
     }
     
     
