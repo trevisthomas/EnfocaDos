@@ -302,8 +302,6 @@ class EditWordPairController: Controller {
                 
                 guard let wordPair = wordPair else { return }
                 
-                self.delegate.dismissViewController()
-                
                 self.fireEvent(source: self, event: Event(type: .wordPairCreated, data: wordPair))
                 callback(nil)
                 
