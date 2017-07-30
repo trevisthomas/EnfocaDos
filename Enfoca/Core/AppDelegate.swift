@@ -41,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ////                fatalError() //For the moment.
 //        })
         
+        if isTestMode() {
+            return true
+        }
+        
         do {
             Network.reachability = try Reachability(hostname: "www.google.com")
             do {
@@ -55,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         application.registerForRemoteNotifications()
+        
         return true
     }
 

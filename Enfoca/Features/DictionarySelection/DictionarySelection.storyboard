@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TN6-Bh-ZUY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TN6-Bh-ZUY">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -95,7 +95,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zpq-p5-VR6" id="2w9-nj-Mmh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-jP-SAS" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
@@ -197,7 +197,7 @@
                                     <constraint firstAttribute="height" constant="100" id="XjN-K3-pnm"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhV-qS-AoI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhV-qS-AoI">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-fJ-tks">
@@ -210,7 +210,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Enfoca!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-De-iND">
-                                <rect key="frame" x="140" y="208" width="133.66666666666669" height="70"/>
+                                <rect key="frame" x="140" y="208" width="134" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="C9w-nq-Wph"/>
                                 </constraints>
@@ -219,7 +219,7 @@
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017 Enfoca Software, LLC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZ1-YU-V53">
-                                <rect key="frame" x="103.33333333333331" y="707" width="208.33333333333337" height="21"/>
+                                <rect key="frame" x="103" y="707" width="209" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Nfm-Rq-Vnp"/>
                                 </constraints>
@@ -323,7 +323,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWB-b5-iS4" id="cYi-Dz-mA4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-hn-12U" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
@@ -448,7 +448,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Definition Text Field"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Subject"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                 <color key="value" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
@@ -477,7 +477,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Definition Text Field"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Card Front Title"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderDefaultColor">
                                                 <color key="value" red="0.89792925119400024" green="0.89802247285842896" blue="0.90201383829116821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
@@ -500,7 +500,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Definition Text Field"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Card Rear Title"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                 <color key="value" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
@@ -632,7 +632,7 @@
                                         <rect key="frame" x="0.0" y="28" width="284" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3N7-Au-o0M" id="BbG-kJ-ZYL">
-                                            <rect key="frame" x="0.0" y="0.0" width="284" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="284" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Language Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdM-DT-VY3">
@@ -702,7 +702,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rrm-zM-J0y">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rrm-zM-J0y">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -716,13 +716,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e4-zZ-mgV">
-                                        <rect key="frame" x="8" y="359.66666666666669" width="398" height="16.666666666666629"/>
+                                        <rect key="frame" x="8" y="360" width="398" height="17"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-T2-kHb" customClass="ProgressBarView" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="396.33333333333331" width="200" height="12"/>
+                                        <rect key="frame" x="107" y="397" width="200" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="5Yq-9o-Qb3"/>
@@ -741,7 +741,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6r-P7-BCC" customClass="ProgressBarView" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="415.66666666666669" width="200" height="12"/>
+                                        <rect key="frame" x="107" y="416" width="200" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="HcX-CD-rvl"/>
@@ -760,7 +760,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zel-GG-aKi" customClass="ProgressBarView" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="435.66666666666669" width="200" height="12"/>
+                                        <rect key="frame" x="107" y="436" width="200" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="8Jd-DK-6Hj"/>
@@ -779,7 +779,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iE-23-aPK" customClass="ProgressBarView" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="456.66666666666669" width="200" height="12"/>
+                                        <rect key="frame" x="107" y="457" width="200" height="12"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="cNw-50-SqB"/>
@@ -798,7 +798,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DfK-2U-YVm">
-                                        <rect key="frame" x="188.66666666666666" y="682" width="37" height="37"/>
+                                        <rect key="frame" x="189" y="682" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -866,8 +866,8 @@
         <image name="lightrays" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yaf-vT-WQV"/>
         <segue reference="nZR-fD-3Hs"/>
-        <segue reference="Btl-e8-myM"/>
+        <segue reference="JRL-ud-1m9"/>
+        <segue reference="Kqj-gi-NaV"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,14 +12,21 @@ class UiTestWebService : WebService {
     private(set) var dictionary: UserDictionary!
     private(set) var enfocaId : NSNumber!
     private var dataStore: DataStore!
-    var isNetworkAvailable: Bool = true 
+    var isNetworkAvailable: Bool = true
+    var currentConch = "conch_1"
+    let userRef = "mockUser_1"
+    let defaultDictId = "mockDict_1"
+    private var dictionaryList: [UserDictionary] = []
     
 //    var tags: [Tag]
 //    var wordPairs: [WordPair]
     private var guidIndex = 0
     
     func toData() -> Data? {
-        fatalError()
+        if dataStore == nil {
+            return nil
+        }
+        return NSKeyedArchiver.archivedData(withRootObject: dataStore)
     }
     
     var showNetworkActivityIndicator: Bool {
@@ -37,25 +44,6 @@ class UiTestWebService : WebService {
     }
 
     
-//    private func makeWordPairWithTag(word: String, definition: String, tags : [Tag]) -> WordPair{
-//        let wp = WordPair( pairId: "1-0-0-1\(nextIndex())", word: word, definition: definition, dateCreated: Date(), tags : tags)
-//        return wp
-//    }
-//    
-//    private func makeWordPair(word: String, definition: String) -> WordPair{
-//        return WordPair( pairId: "1-0-0-1\(nextIndex())", word: word, definition: definition, dateCreated: Date())
-//    }
-    
-//    private func makeTags() -> [Tag] {
-//        var tags: [Tag] = []
-//        tags.append(Tag(tagId: "\(nextIndex())", name: "Noun"))
-//        tags.append(Tag(tagId: "\(nextIndex())", name: "Verb"))
-//        tags.append(Tag(tagId: "\(nextIndex())", name: "Phrase"))
-//        tags.append(Tag(tagId: "\(nextIndex())", name: "Adverb"))
-//        
-//        return tags
-//    }
-
     
     func prepareDataStore(dictionary: UserDictionary?, dataStore ds: DataStore?, progressObserver: ProgressObserver, callback: @escaping (_ success : Bool, _ error : EnfocaError?) -> ()){
         
@@ -66,7 +54,20 @@ class UiTestWebService : WebService {
             
             guard let dictionary = dictionary else { fatalError() }
             
+            self.dictionary = dictionary
+            
             dataStore = DataStore(dictionary: dictionary)
+            
+            dataStore.register(anyTag: getAppDelegate().applicationDefaults.anyTag, noneTag: getAppDelegate().applicationDefaults.noneTag)
+            
+            
+            //If the dictionary is the one that we should mock, mock it.  If not just return
+            if dictionary.dictionaryId != self.defaultDictId {
+                invokeLater {
+                    callback(true, nil)
+                }
+                return
+            }
             
             //Load it mockly
             var tags: [Tag] = []
@@ -239,11 +240,34 @@ class UiTestWebService : WebService {
     }
     
     func initialize(callback: @escaping ([UserDictionary]?, EnfocaError?) -> ()) {
-        callback([], nil) //Hm
+        
+//        UserDictionary(dictionaryId: "mockDict_1", userRef: "mockUser_1", enfocaRef: "enfocaRef_1", termTitle: "Greek", definitionTitle: "Latin", subject: "Pig Latin", language: "es", conch: "conch_1", countWordPairs: <#T##Int#>, countTags: <#T##Int#>, countAssociations: <#T##Int#>, countMeta: <#T##Int#>)
+        
+//        invokeLater {
+        delay(delayInSeconds: 0.1) { //Due to the app getting stuck trying to segue between loading and select.  Not sure why.  Invoke later didnt work. Tried a background thread and that was weird too.
+        
+            
+            let dict = UserDictionary(dictionaryId: self.defaultDictId, userRef: self.userRef, enfocaRef: "enfocaRef_1", termTitle: "Greek", definitionTitle: "Latin", subject: "Pig Latin", language: "es", conch: self.currentConch)
+            
+            if self.dictionaryList.count == 0 {
+                self.dictionaryList.append(dict)
+            }
+        
+            callback(self.dictionaryList, nil)
+        }
+        
+        
     }
     
     func createDictionary(termTitle: String, definitionTitle: String, subject: String, language: String?, callback: @escaping (UserDictionary?, EnfocaError?) -> ()) {
-        fatalError()
+        
+        let dict = UserDictionary(dictionaryId: "dictId_\(nextIndex())", userRef: userRef, enfocaRef: "enfocaRef_\(nextIndex())", termTitle: termTitle, definitionTitle: definitionTitle, subject: subject, language: language)
+        
+        self.dictionaryList.append(dict)
+        
+        delay(delayInSeconds: 0.1) { 
+            callback(dict, nil)
+        }
     }
     
     func updateDictionary(oldDictionary : UserDictionary, termTitle: String, definitionTitle: String, subject : String, language: String?, callback :
@@ -274,7 +298,7 @@ class UiTestWebService : WebService {
     }
     
     func isDataStoreSynchronized(callback: @escaping (Bool?, String?)->()) {
-        fatalError()
+        callback(true, nil)
     }
     
     func isDataStoreSynchronized(dictionary: UserDictionary, callback: @escaping (Bool?, String?)->()) {
@@ -290,7 +314,7 @@ class UiTestWebService : WebService {
     }
     
     func getCurrentDictionary() -> UserDictionary {
-        fatalError()
+        return dictionary
     }
     
     func updateDictionaryCounts(callback : @escaping(UserDictionary?, EnfocaError?)->()) {
@@ -298,6 +322,8 @@ class UiTestWebService : WebService {
     }
     
     func fetchCurrentConch(dictionary: UserDictionary, callback: @escaping (String?, String?)->()) {
-        fatalError()
+        invokeLater {
+            callback(self.currentConch, nil)
+        }
     }
 }

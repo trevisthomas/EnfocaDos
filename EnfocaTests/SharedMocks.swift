@@ -41,6 +41,8 @@ class MockWebService : WebService {
         }
     }
     
+    var isNetworkAvailable: Bool = true
+    
     //Set this to non null values to get errors back in your test
     var errorOnCreateWordPair : String?
     var errorOnUpdateWordPair : String?
@@ -278,7 +280,7 @@ class MockWebService : WebService {
     }
     
     func toData() -> Data? {
-        fatalError()
+        return nil
     }
 }
 

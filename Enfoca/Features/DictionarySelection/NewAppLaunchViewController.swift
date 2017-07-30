@@ -26,11 +26,17 @@ class NewAppLaunchViewController: UIViewController {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(statusManager), name: .flagsChanged, object: Network.reachability)
+        
         updateUserInterface()
         
     }
     
     func updateUserInterface() {
+        
+        if isTestMode() {
+            self.launch(isNetworkAvailable: true)
+        }
+        
         guard let status = Network.reachability?.status else { return }
         guard let isNetworkAvailable = Network.reachability?.isReachable else {
             //Network reachability class is not working properly
@@ -101,10 +107,14 @@ class NewAppLaunchViewController: UIViewController {
         
         //TODO: Use this to decide which services implementation to use
         if isTestMode() {
-            print("We're in test mode")
-            service = UiTestWebService()
+            print("Mock iCloud mode - For UI Testing")
+            if getAppDelegate().webService != nil {
+                service = getAppDelegate().webService
+            } else {
+                service = UiTestWebService()
+            }
         } else {
-            print("Production")
+            print("iCloud mode")
             service = LocalCloudKitWebService(isNetworkAvailable: isNetworkAvailable)
             //        let service = CloudKitWebService()
             //        let service = DemoWebService()

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F011EA61EE9E31100939B75 /* TagEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */; };
 		0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
 		0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
 		0F011EAE1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EAD1EEB25FB00939B75 /* QuizOptionsViewModel.swift */; };
@@ -97,9 +96,6 @@
 		0F0BAFE01F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */; };
 		0F0BAFE11F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */; };
 		0F1336F71EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
-		0F1A5F7F1F22609100F82C5D /* Shared.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A5F7E1F22609100F82C5D /* Shared.storyboard */; };
-		0F1A5F801F22609100F82C5D /* Shared.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A5F7E1F22609100F82C5D /* Shared.storyboard */; };
-		0F1A5F811F22609100F82C5D /* Shared.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A5F7E1F22609100F82C5D /* Shared.storyboard */; };
 		0F1A5F831F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */; };
 		0F1A5F841F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */; };
 		0F1A5F851F2261BC00F82C5D /* ActivityAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */; };
@@ -224,14 +220,13 @@
 		0F45F3EC1F0A9DE700D45594 /* OperationLoadOrCreateConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AAA551F09423800ACC0C3 /* OperationLoadOrCreateConch.swift */; };
 		0F45F3ED1F0A9DE700D45594 /* OperationResetConch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E91F098DEF00D45594 /* OperationResetConch.swift */; };
 		0F45F3EE1F0A9DE700D45594 /* OperationReloadWordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45F3E61F09576A00D45594 /* OperationReloadWordPair.swift */; };
+		0F5A6AC31F2E7A2C00D15364 /* XCUIElement+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A6AC21F2E7A2C00D15364 /* XCUIElement+.swift */; };
 		0F911E0C1EE08E8300F21855 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E071EE08E8300F21855 /* TagCell.swift */; };
 		0F911E0E1EE08E8300F21855 /* TagFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E091EE08E8300F21855 /* TagFilterViewController.swift */; };
 		0F911E0F1EE08E8300F21855 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */; };
 		0F911E101EE08E8300F21855 /* TagFilterViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E0B1EE08E8300F21855 /* TagFilterViewModelDelegate.swift */; };
 		0F911E181EE30AD100F21855 /* EnfocaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E171EE30AD100F21855 /* EnfocaButton.swift */; };
-		0F911E1A1EE518C700F21855 /* BrowseFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E191EE518C700F21855 /* BrowseFeatureTests.swift */; };
 		0F911E1C1EE5B20600F21855 /* UiTestWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */; };
-		0F911E1E1EE736F300F21855 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F911E1D1EE736F300F21855 /* HomeTests.swift */; };
 		0F911E211EE75D4600F21855 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4EA1EC8E94700F31F9A /* DataStore.swift */; };
 		0F911E221EE75D4600F21855 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A5591EC96A7800F31F9A /* Style.swift */; };
 		0F911E231EE75D4600F21855 /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A4DC1EC8E91E00F31F9A /* WordPair.swift */; };
@@ -529,6 +524,8 @@
 		0FE015AC1EFD697F00780184 /* EnfocaDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */; };
 		0FE015B01EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */; };
 		0FE015B11EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */; };
+		0FEB41F71F2E24A000821D8D /* SharedComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */; };
+		0FEB41F81F2E24A000821D8D /* SharedComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -549,7 +546,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagEditorUITests.swift; sourceTree = "<group>"; };
 		0F011EA91EEAF03500939B75 /* CheckMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkView.swift; sourceTree = "<group>"; };
 		0F011EAD1EEB25FB00939B75 /* QuizOptionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizOptionsViewModel.swift; path = Quiz/QuizOptionsViewModel.swift; sourceTree = "<group>"; };
 		0F011EB01EEB2AAB00939B75 /* QuizOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizOptionsViewController.swift; path = Quiz/QuizOptionsViewController.swift; sourceTree = "<group>"; };
@@ -599,7 +595,6 @@
 		0F0BAFDA1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFetchDictionarListForEnfocaRef.swift; sourceTree = "<group>"; };
 		0F0BAFDE1F112F54005251AE /* OperationMergeUpdateMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationMergeUpdateMetaData.swift; sourceTree = "<group>"; };
 		0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOptionsToCardFrontViewAnimator.swift; sourceTree = "<group>"; };
-		0F1A5F7E1F22609100F82C5D /* Shared.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shared.storyboard; sourceTree = "<group>"; };
 		0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAlertViewController.swift; sourceTree = "<group>"; };
 		0F1AAA1B1F055F0800ACC0C3 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		0F1AAA1E1F05734A00ACC0C3 /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
@@ -630,14 +625,13 @@
 		0F35B0521F0315B4001AC511 /* DictionaryLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryLoadingViewController.swift; path = DictionarySelection/DictionaryLoadingViewController.swift; sourceTree = "<group>"; };
 		0F45F3E61F09576A00D45594 /* OperationReloadWordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationReloadWordPair.swift; sourceTree = "<group>"; };
 		0F45F3E91F098DEF00D45594 /* OperationResetConch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResetConch.swift; sourceTree = "<group>"; };
+		0F5A6AC21F2E7A2C00D15364 /* XCUIElement+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+.swift"; sourceTree = "<group>"; };
 		0F911E071EE08E8300F21855 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		0F911E091EE08E8300F21855 /* TagFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterViewController.swift; sourceTree = "<group>"; };
 		0F911E0A1EE08E8300F21855 /* TagFilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterViewModel.swift; sourceTree = "<group>"; };
 		0F911E0B1EE08E8300F21855 /* TagFilterViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterViewModelDelegate.swift; sourceTree = "<group>"; };
 		0F911E171EE30AD100F21855 /* EnfocaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfocaButton.swift; sourceTree = "<group>"; };
-		0F911E191EE518C700F21855 /* BrowseFeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseFeatureTests.swift; sourceTree = "<group>"; };
 		0F911E1B1EE5B20600F21855 /* UiTestWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiTestWebService.swift; sourceTree = "<group>"; };
-		0F911E1D1EE736F300F21855 /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		0F911E7F1EE75D4600F21855 /* Enfoca Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enfoca Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F911E801EE75D4600F21855 /* Enfoca Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Enfoca Dev-Info.plist"; sourceTree = "<group>"; };
 		0F911EE11EE766D900F21855 /* Data Import.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Data Import.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -757,6 +751,7 @@
 		0FE015A71EFAF42100780184 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfocaDefaultAnimator.swift; sourceTree = "<group>"; };
 		0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultsAnimator.swift; sourceTree = "<group>"; };
+		0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SharedComponents.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -879,11 +874,9 @@
 		0F085B791ED8796D00FC20A1 /* EnfocaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0F911E191EE518C700F21855 /* BrowseFeatureTests.swift */,
 				0F085B7A1ED8796D00FC20A1 /* EnfocaUITests.swift */,
-				0F911E1D1EE736F300F21855 /* HomeTests.swift */,
 				0F085B7C1ED8796D00FC20A1 /* Info.plist */,
-				0F011EA51EE9E31100939B75 /* TagEditorUITests.swift */,
+				0F5A6AC21F2E7A2C00D15364 /* XCUIElement+.swift */,
 			);
 			path = EnfocaUITests;
 			sourceTree = "<group>";
@@ -1369,8 +1362,8 @@
 				0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */,
 				0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */,
 				0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */,
-				0F1A5F7E1F22609100F82C5D /* Shared.storyboard */,
 				0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */,
+				0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1549,8 +1542,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FEB41F81F2E24A000821D8D /* SharedComponents.storyboard in Resources */,
 				0F911E741EE75D4600F21855 /* LaunchScreen.storyboard in Resources */,
-				0F1A5F801F22609100F82C5D /* Shared.storyboard in Resources */,
 				0F028DE61F00D39A008200E2 /* DictionarySelection.storyboard in Resources */,
 				0F911E751EE75D4600F21855 /* Assets.xcassets in Resources */,
 				0F911E761EE75D4600F21855 /* Browse.storyboard in Resources */,
@@ -1580,7 +1573,6 @@
 				0F911F231EE76F0900F21855 /* test.json in Resources */,
 				0F911EEA1EE76B6700F21855 /* DataImport.storyboard in Resources */,
 				0F911ED61EE766D900F21855 /* LaunchScreen.storyboard in Resources */,
-				0F1A5F811F22609100F82C5D /* Shared.storyboard in Resources */,
 				0F911ED71EE766D900F21855 /* Assets.xcassets in Resources */,
 				0F911ED81EE766D900F21855 /* Browse.storyboard in Resources */,
 				0F911ED91EE766D900F21855 /* WordPairTableStoryboard.storyboard in Resources */,
@@ -1595,6 +1587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F911EFB1EE76CDD00F21855 /* study_item_meta.json in Resources */,
+				0FEB41F71F2E24A000821D8D /* SharedComponents.storyboard in Resources */,
 				0F028DE51F00D39A008200E2 /* DictionarySelection.storyboard in Resources */,
 				0FA4A4971EC89C0D00F31F9A /* LaunchScreen.storyboard in Resources */,
 				0FA4A4941EC89C0D00F31F9A /* Assets.xcassets in Resources */,
@@ -1605,7 +1598,6 @@
 				0FD1E2091ED0827700D8BD1A /* WordPairTableStoryboard.storyboard in Resources */,
 				0F911EF41EE76CB900F21855 /* small_tag.json in Resources */,
 				0F085B861EDC64DD00FC20A1 /* Edit.storyboard in Resources */,
-				0F1A5F7F1F22609100F82C5D /* Shared.storyboard in Resources */,
 				0F911EF21EE76CB900F21855 /* small_study_item.json in Resources */,
 				0F911EFC1EE76CDD00F21855 /* study_item.json in Resources */,
 				0F911EFD1EE76CDD00F21855 /* tag_associations.json in Resources */,
@@ -1631,9 +1623,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F911E1A1EE518C700F21855 /* BrowseFeatureTests.swift in Sources */,
-				0F011EA61EE9E31100939B75 /* TagEditorUITests.swift in Sources */,
-				0F911E1E1EE736F300F21855 /* HomeTests.swift in Sources */,
+				0F5A6AC31F2E7A2C00D15364 /* XCUIElement+.swift in Sources */,
 				0F085B7B1ED8796D00FC20A1 /* EnfocaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

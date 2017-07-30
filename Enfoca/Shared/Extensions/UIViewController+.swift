@@ -28,7 +28,6 @@ extension UIViewController{
         }))
         
         
-        
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -61,13 +60,16 @@ extension UIViewController{
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
         
-        let storyboard = UIStoryboard(name: "Shared", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "SharedComponents", bundle: Bundle.main)
         
         // Instantiate View Controller
         let viewController = storyboard.instantiateViewController(withIdentifier: "ActivityAlertViewController") as! ActivityAlertViewController
         
-        viewController.initialize(message: title!) 
+        viewController.initialize(message: title!)
+        
         alert.setValue(viewController, forKey: "contentViewController")
+        
+        viewController.view.backgroundColor = UIColor.clear
         
         present(alert, animated: true, completion: nil)
         

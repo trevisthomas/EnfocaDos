@@ -16,6 +16,12 @@ func invokeLater(callback: @escaping ()->()){
     }
 }
 
+func invokeBackground(callback: @escaping()->()){
+    DispatchQueue.global(qos: .background).async {
+        callback()
+    }
+}
+
 func delay(delayInSeconds: Double, callback: @escaping ()->()) {
     DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds, execute: {
         callback()

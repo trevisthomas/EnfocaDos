@@ -60,7 +60,7 @@ class WordPairTableViewController: UIViewController {
     }
     
     
-    fileprivate func performSort(delayBy: Int? = nil) {
+    fileprivate func performSort(delayBy: Double? = nil) {
         let sortBy: SimplifedSortMode
         
         let message : String
@@ -82,7 +82,7 @@ class WordPairTableViewController: UIViewController {
         refreshControl.attributedTitle = NSAttributedString(string: message, attributes: attributes)
         
         if let delayBy = delayBy {
-            delay(delayInSeconds: 1) {
+            delay(delayInSeconds: delayBy) {
                 self.executeSortFunction(sortBy: sortBy)
             }
         } else {

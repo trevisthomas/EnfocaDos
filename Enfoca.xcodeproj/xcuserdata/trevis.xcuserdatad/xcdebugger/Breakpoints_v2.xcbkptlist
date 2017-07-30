@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "522351041.568577"
+            timestampString = "523046975.640507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -504,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "522351041.570277"
+            timestampString = "523046975.640969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -552,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "522351041.570609"
+            timestampString = "523046975.641071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -568,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "522351041.570833"
+            timestampString = "523046975.641116"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "presentAlert(title:message:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -584,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "522351041.571051"
+            timestampString = "523046975.641158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -596,31 +596,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Enfoca.AppDelegate.application(__ObjC.UIApplication, didReceiveRemoteNotification: Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
+                  symbolName = "Enfoca.AppDelegate.application (__ObjC.UIApplication, didReceiveRemoteNotification : Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler : (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Core/AppDelegate.swift"
-                  timestampString = "522386808.926086"
+                  timestampString = "523140973.892689"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "3260">
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "2791">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Enfoca.WordPair) -&gt; () in Enfoca.AppDelegate.application(__ObjC.UIApplication, didReceiveRemoteNotification: Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
+                  symbolName = "Enfoca.AppDelegate.(application (__ObjC.UIApplication, didReceiveRemoteNotification : Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler : (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Core/AppDelegate.swift"
-                  timestampString = "522386808.928108"
+                  timestampString = "523140973.895657"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "29">
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "27">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1249,7 +1249,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Features/DictionarySelection/DictionaryLoadingViewController.swift"
@@ -1345,31 +1345,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Enfoca.LocalCloudKitWebService.createTag(fromTag: Enfoca.Tag, callback: (Swift.Optional&lt;Enfoca.Tag&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Enfoca.LocalCloudKitWebService.createTag (fromTag : Enfoca.Tag, callback : (Swift.Optional&lt;Enfoca.Tag&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/LocalCloudKitWebService.swift"
-                  timestampString = "522386808.953393"
+                  timestampString = "523140973.930412"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "376"
                   endingLineNumber = "376"
-                  offsetFromSymbolStart = "93">
+                  offsetFromSymbolStart = "94">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Enfoca.Tag&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Enfoca.LocalCloudKitWebService.createTag(fromTag: Enfoca.Tag, callback: (Swift.Optional&lt;Enfoca.Tag&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Enfoca.LocalCloudKitWebService.(createTag (fromTag : Enfoca.Tag, callback : (Swift.Optional&lt;Enfoca.Tag&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/LocalCloudKitWebService.swift"
-                  timestampString = "522386808.955251"
+                  timestampString = "523140973.93269"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "377"
                   endingLineNumber = "377"
-                  offsetFromSymbolStart = "66">
+                  offsetFromSymbolStart = "71">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1868,6 +1868,38 @@
             endingLineNumber = "53"
             landmarkName = "execute(operation:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Enfoca.OperationFetchMetaData.((execute in _7522DDCA5C8559F16CB4073907C8A72D) (operation : __ObjC.CKQueryOperation) -&gt; ()).(closure #2)"
+                  moduleName = "Enfoca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/Operations/Core/Meta/OperationFetchMetaData.swift"
+                  timestampString = "523140974.020184"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Enfoca.OperationFetchMetaData.((execute in _7522DDCA5C8559F16CB4073907C8A72D) (operation : __ObjC.CKQueryOperation) -&gt; ()).(closure #2)"
+                  moduleName = "Enfoca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/Operations/Core/Meta/OperationFetchMetaData.swift"
+                  timestampString = "523140974.022956"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "73">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1951,11 +1983,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Shared/Extensions/UIViewController+.swift"
-            timestampString = "522352948.654178"
+            timestampString = "523139588.437515"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "presentFatalAlert(title:message:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2107,31 +2139,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Enfoca.EditWordPairController.(performWordPairAction in _CE73B85154C1F984919A67BD57C8909F)(callback: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Enfoca.EditWordPairController.(performWordPairAction in _CE73B85154C1F984919A67BD57C8909F) (callback : (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "522387223.019909"
+                  timestampString = "523140974.095704"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "273"
                   endingLineNumber = "273"
-                  offsetFromSymbolStart = "226">
+                  offsetFromSymbolStart = "172">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Enfoca.WordPair&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Enfoca.EditWordPairController.(performWordPairAction in _CE73B85154C1F984919A67BD57C8909F)(callback: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Enfoca.EditWordPairController.((performWordPairAction in _CE73B85154C1F984919A67BD57C8909F) (callback : (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "522387223.021693"
+                  timestampString = "523140974.097647"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "276"
                   endingLineNumber = "276"
-                  offsetFromSymbolStart = "74">
+                  offsetFromSymbolStart = "73">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2155,26 +2187,26 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Enfoca.EditWordPairViewController.performSave() -&gt; ()"
+                  symbolName = "Enfoca.EditWordPairViewController.performSave () -&gt; ()"
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairViewController.swift"
-                  timestampString = "522386809.106822"
+                  timestampString = "523140974.103728"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "201"
                   endingLineNumber = "201"
-                  offsetFromSymbolStart = "381">
+                  offsetFromSymbolStart = "368">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Enfoca.WordPair) -&gt; () in Enfoca.EditWordPairViewController.performSave() -&gt; ()"
+                  symbolName = "Enfoca.EditWordPairViewController.(performSave () -&gt; ()).(closure #1)"
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairViewController.swift"
-                  timestampString = "522386809.108952"
+                  timestampString = "523140974.106583"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "202"
@@ -2246,6 +2278,38 @@
             endingLineNumber = "298"
             landmarkName = "performWordPairAction(callback:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Enfoca.EditWordPairController.((performWordPairAction in _CE73B85154C1F984919A67BD57C8909F) (callback : (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #2)"
+                  moduleName = "Enfoca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
+                  timestampString = "523140974.127116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "298"
+                  endingLineNumber = "298"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Enfoca.EditWordPairController.((performWordPairAction in _CE73B85154C1F984919A67BD57C8909F) (callback : (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #2)"
+                  moduleName = "Enfoca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
+                  timestampString = "523140974.130732"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "298"
+                  endingLineNumber = "298"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2261,6 +2325,278 @@
             startingLineNumber = "212"
             endingLineNumber = "212"
             landmarkName = "performSave()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Core/AppDelegate.swift"
+            timestampString = "523046975.64213"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "application(_:didFailToRegisterForRemoteNotificationsWithError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Enfoca.AppDelegate.application (__ObjC.UIApplication, didFailToRegisterForRemoteNotificationsWithError : Swift.Error) -&gt; ()"
+                  moduleName = "Enfoca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Core/AppDelegate.swift"
+                  timestampString = "523140974.152571"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Enfoca.AppDelegate.(application (__ObjC.UIApplication, didFailToRegisterForRemoteNotificationsWithError : Swift.Error) -&gt; ()).(closure #1)"
+                  moduleName = "Enfoca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Core/AppDelegate.swift"
+                  timestampString = "523140974.154374"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Features/DictionarySelection/NewAppLaunchViewController.swift"
+            timestampString = "523123143.292907"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "launch(isNetworkAvailable:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Features/DictionarySelection/NewAppLaunchViewController.swift"
+            timestampString = "523048110.580734"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "postInitCallback(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Features/DictionarySelection/DictionarySelectionViewController.swift"
+            timestampString = "523119931.681174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Features/DictionarySelection/NewAppLaunchViewController.swift"
+            timestampString = "523125241.1956"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Network/UiTestWebService.swift"
+            timestampString = "523124683.669826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "prepareDataStore(dictionary:dataStore:progressObserver:callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Network/UiTestWebService.swift"
+            timestampString = "523124683.669826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
+            landmarkName = "getCurrentDictionary()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Network/UiTestWebService.swift"
+            timestampString = "523124683.669826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
+            landmarkName = "fetchCurrentConch(dictionary:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Enfoca.UiTestWebService.fetchCurrentConch (dictionary : Enfoca.UserDictionary, callback : (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Enfoca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/UiTestWebService.swift"
+                  timestampString = "523140974.188387"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "325"
+                  endingLineNumber = "325"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Enfoca.UiTestWebService.(fetchCurrentConch (dictionary : Enfoca.UserDictionary, callback : (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Enfoca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/UiTestWebService.swift"
+                  timestampString = "523140974.191501"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "326"
+                  endingLineNumber = "326"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Network/UiTestWebService.swift"
+            timestampString = "523124683.669826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
+            landmarkName = "updateDictionaryCounts(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Features/DictionarySelection/DictionarySelectionViewController.swift"
+            timestampString = "523120632.520739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Features/DictionarySelection/DictionaryLoadingViewController.swift"
+            timestampString = "523121326.315379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "prepareDataStore()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Features/DictionarySelection/NewAppLaunchViewController.swift"
+            timestampString = "523123143.292907"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "launch(isNetworkAvailable:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enfoca/Features/DictionarySelection/NewAppLaunchViewController.swift"
+            timestampString = "523125241.1956"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "presentCreateOrLoadView(dictionaryList:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
