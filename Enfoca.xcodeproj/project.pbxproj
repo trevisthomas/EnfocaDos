@@ -1375,14 +1375,14 @@
 		0FAD20CF1ECF5ACC002EACDA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */,
 				0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */,
-				0FAD20CD1ECE65B3002EACDA /* TagSelectionViewController.swift */,
 				0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */,
+				0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */,
+				0FA4A5661ECBCB7D00F31F9A /* TagCollectionViewCell.swift */,
+				0FAD20CD1ECE65B3002EACDA /* TagSelectionViewController.swift */,
 				0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */,
 				0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */,
 				0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */,
-				0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */,
 				0FB0082C1F3118510021CBD9 /* ScoreViewController.swift */,
 			);
 			path = Shared;

@@ -66,14 +66,14 @@
                         <viewControllerLayoutGuide type="bottom" id="sZm-Wh-NRi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Khu-W0-ovt">
-                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fD1-XR-3rG" customClass="AnimatedCircleView" customModule="Enfoca" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjt-h6-Z2c">
-                                        <rect key="frame" x="43" y="67" width="85.5" height="37.5"/>
+                                        <rect key="frame" x="58" y="82" width="85.5" height="37.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
                                         <color key="textColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -87,6 +87,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
                                         <color key="value" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
+                                        <color key="value" red="1" green="0.50619709199999996" blue="0.96769246610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -103,7 +106,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="170" height="170"/>
+                    <size key="freeformSize" width="200" height="200"/>
                     <connections>
                         <outlet property="animatedCircleView" destination="fD1-XR-3rG" id="j1a-nH-q3H"/>
                         <outlet property="scoreLabel" destination="Hjt-h6-Z2c" id="qO7-Hz-o5Z"/>

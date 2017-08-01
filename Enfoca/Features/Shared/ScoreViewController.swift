@@ -25,6 +25,12 @@ class ScoreViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        delay(delayInSeconds: 0.5) { 
+            self.showScore()
+        }
+    }
+    
+    private func showScore() {
         animatedCircleView.showScore(self.score, animated: true)
         
         let growthInterval: Double = 10.0
@@ -35,7 +41,7 @@ class ScoreViewController: UIViewController {
         
         perSecondTimer(interval: interval) { () -> (Bool) in
             currentScore += (self.score / growthInterval)
-
+            
             self.scoreLabel.text = min(currentScore, self.score).asPercent
             
             if currentScore < self.score {
@@ -45,6 +51,7 @@ class ScoreViewController: UIViewController {
                 return false
             }
         }
+
     }
 
     override func didReceiveMemoryWarning() {

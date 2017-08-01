@@ -20,7 +20,7 @@ class TestViewController: UIViewController {
         
         scoreViewController = createScoreViewController(inContainerView: containerView)
         
-        scoreViewController.initialize(score: 0.25)
+        scoreViewController.initialize(score: 0.670)
     }
 
     override func didReceiveMemoryWarning() {

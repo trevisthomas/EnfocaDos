@@ -10,7 +10,6 @@ import UIKit
 
 class QuizResultsViewController: UIViewController {
 
-    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var askedLabel: UILabel!
     @IBOutlet weak var correctLabel: UILabel!
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
@@ -27,7 +26,6 @@ class QuizResultsViewController: UIViewController {
         super.viewDidLoad()
         correctLabel.text = "\(sharedViewModel.getCorrectCount())"
         askedLabel.text = "\(sharedViewModel.getWordsAskedCount())"
-        scoreLabel.text = sharedViewModel.getScore()
         
         scoreViewController = createScoreViewController(inContainerView: animatedScoreContainer)
         
@@ -39,7 +37,7 @@ class QuizResultsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        scoreViewController.initialize(score: sharedViewModel.getScore())
+        self.scoreViewController.initialize(score: self.sharedViewModel.getScore())        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

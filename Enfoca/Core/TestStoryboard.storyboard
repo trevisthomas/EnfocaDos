@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCf-bG-ZbW">
-                                <rect key="frame" x="102" y="248" width="170" height="170"/>
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="6z7-Mj-AeT"/>
+                                    <constraint firstAttribute="height" constant="200" id="6z7-Mj-AeT"/>
                                     <constraint firstAttribute="width" secondItem="LCf-bG-ZbW" secondAttribute="height" multiplier="1:1" id="KIu-vd-vgD"/>
                                 </constraints>
                             </view>

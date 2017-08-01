@@ -66,18 +66,18 @@ class AnimatedCircleView: UIView {
         
         layer.addSublayer(checkLayer)
         
-        if (animated) {
-            UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseIn], animations: {
-                self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-            }, completion: { (_ :Bool) in
-                UIView.animate(withDuration: 0.33, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [.curveEaseOut], animations: {
-                    self.transform = .identity
-                }, completion: { (_ :Bool) in
-                    self.setNeedsDisplay()
-                    self.layer.removeAllAnimations()
-                })
-            })
-        }
+//        if (animated) {
+//            UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseIn], animations: {
+//                self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+//            }, completion: { (_ :Bool) in
+//                UIView.animate(withDuration: 0.33, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [.curveEaseOut], animations: {
+//                    self.transform = .identity
+//                }, completion: { (_ :Bool) in
+//                    self.setNeedsDisplay()
+//                    self.layer.removeAllAnimations()
+//                })
+//            })
+//        }
         
         setNeedsDisplay()
     }
@@ -90,8 +90,8 @@ class AnimatedCircleView: UIView {
         
         let endAngle = (.pi * 2.0) * value
         
-        let path = UIBezierPath(arcCenter: centerPoint, radius: radius, startAngle: 0 + .pi, endAngle: CGFloat(endAngle) + .pi, clockwise: true)
-        return path
+        let path = UIBezierPath(arcCenter: centerPoint, radius: radius, startAngle: 0 - .pi / 2, endAngle: CGFloat(endAngle) - .pi / 2, clockwise: true)
+        return path.reversing()
     }
     
     
