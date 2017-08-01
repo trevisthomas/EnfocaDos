@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xgr-SU-jZW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="QuI-NH-gbS">
+            <objects>
+                <viewController id="xgr-SU-jZW" customClass="TestViewController" customModule="Data_Import" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IGd-tU-eWP"/>
+                        <viewControllerLayoutGuide type="bottom" id="ri0-fI-lzJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oqi-AJ-LmY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCf-bG-ZbW">
+                                <rect key="frame" x="102" y="248" width="170" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="6z7-Mj-AeT"/>
+                                    <constraint firstAttribute="width" secondItem="LCf-bG-ZbW" secondAttribute="height" multiplier="1:1" id="KIu-vd-vgD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LCf-bG-ZbW" firstAttribute="centerX" secondItem="Oqi-AJ-LmY" secondAttribute="centerX" id="Drn-Q8-g5g"/>
+                            <constraint firstItem="LCf-bG-ZbW" firstAttribute="centerY" secondItem="Oqi-AJ-LmY" secondAttribute="centerY" id="hqo-kE-oe1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="LCf-bG-ZbW" id="NDm-e1-5mm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Dz-Hy-HYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40" y="-111"/>
+        </scene>
+    </scenes>
+</document>

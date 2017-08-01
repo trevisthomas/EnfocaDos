@@ -36,6 +36,14 @@ func perSecondTimer(callback: @escaping ()->(Bool)){
         }
     })
 }
+// Calls the callback every second until the callback returns false
+func perSecondTimer(interval: Double, callback: @escaping ()->(Bool)){
+    DispatchQueue.main.asyncAfter(deadline: .now() + interval, qos: .userInteractive, execute: {
+        if callback() {
+            perSecondTimer(interval: interval, callback: callback)
+        }
+    })
+}
 
 func urlEncode(_ string: String) -> String{
     let urlArg = string.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!

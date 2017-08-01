@@ -144,6 +144,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func saveDefaults(){
+        guard let _ = webService else { return }
         guard let data = webService.toData() else { return }
         
         applicationDefaults.save(dictionary: webService.getCurrentDictionary(),includingDataStore: data)

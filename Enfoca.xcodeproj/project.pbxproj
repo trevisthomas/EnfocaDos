@@ -496,6 +496,18 @@
 		0FA4A58D1ECCD8C400F31F9A /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4A58C1ECCD8C400F31F9A /* Controller.swift */; };
 		0FAD20CC1ECE6231002EACDA /* TagSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */; };
 		0FAD20CE1ECE65B3002EACDA /* TagSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD20CD1ECE65B3002EACDA /* TagSelectionViewController.swift */; };
+		0FB008291F3113F70021CBD9 /* AnimatedCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB008281F3113F70021CBD9 /* AnimatedCircleView.swift */; };
+		0FB0082A1F3113F70021CBD9 /* AnimatedCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB008281F3113F70021CBD9 /* AnimatedCircleView.swift */; };
+		0FB0082B1F3113F70021CBD9 /* AnimatedCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB008281F3113F70021CBD9 /* AnimatedCircleView.swift */; };
+		0FB0082D1F3118510021CBD9 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0082C1F3118510021CBD9 /* ScoreViewController.swift */; };
+		0FB0082E1F3118510021CBD9 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0082C1F3118510021CBD9 /* ScoreViewController.swift */; };
+		0FB0082F1F3118510021CBD9 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0082C1F3118510021CBD9 /* ScoreViewController.swift */; };
+		0FB008311F311E520021CBD9 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB008301F311E520021CBD9 /* TestStoryboard.storyboard */; };
+		0FB008321F311E520021CBD9 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB008301F311E520021CBD9 /* TestStoryboard.storyboard */; };
+		0FB008331F311E520021CBD9 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB008301F311E520021CBD9 /* TestStoryboard.storyboard */; };
+		0FB008351F311EEF0021CBD9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB008341F311EEF0021CBD9 /* TestViewController.swift */; };
+		0FB008361F311EEF0021CBD9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB008341F311EEF0021CBD9 /* TestViewController.swift */; };
+		0FB008371F311EEF0021CBD9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB008341F311EEF0021CBD9 /* TestViewController.swift */; };
 		0FD1E2071ED0822900D8BD1A /* WordPairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */; };
 		0FD1E2091ED0827700D8BD1A /* WordPairTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */; };
 		0FD1E20B1ED08E7900D8BD1A /* WordPairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */; };
@@ -735,6 +747,10 @@
 		0FA4A58C1ECCD8C400F31F9A /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		0FAD20CB1ECE6231002EACDA /* TagSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TagSelection.storyboard; sourceTree = "<group>"; };
 		0FAD20CD1ECE65B3002EACDA /* TagSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSelectionViewController.swift; sourceTree = "<group>"; };
+		0FB008281F3113F70021CBD9 /* AnimatedCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedCircleView.swift; sourceTree = "<group>"; };
+		0FB0082C1F3118510021CBD9 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		0FB008301F311E520021CBD9 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
+		0FB008341F311EEF0021CBD9 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairTableViewController.swift; sourceTree = "<group>"; };
 		0FD1E2081ED0827700D8BD1A /* WordPairTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WordPairTableStoryboard.storyboard; sourceTree = "<group>"; };
 		0FD1E20A1ED08E7900D8BD1A /* WordPairTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPairTableViewCell.swift; sourceTree = "<group>"; };
@@ -849,6 +865,7 @@
 				0F028DD41EFEFC73008200E2 /* AnimatedTextField.swift */,
 				0F2CB44A1F140CF9002CDE68 /* MultiLingualTextField.swift */,
 				0F299EF81F1D33C5005CD3AF /* ProgressBarView.swift */,
+				0FB008281F3113F70021CBD9 /* AnimatedCircleView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1064,6 +1081,8 @@
 				0FA4A58A1ECCAE9C00F31F9A /* Event.swift */,
 				0FA4A5591EC96A7800F31F9A /* Style.swift */,
 				0F011ED91EF059E900939B75 /* Theme.swift */,
+				0FB008301F311E520021CBD9 /* TestStoryboard.storyboard */,
+				0FB008341F311EEF0021CBD9 /* TestViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1364,6 +1383,7 @@
 				0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */,
 				0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */,
 				0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */,
+				0FB0082C1F3118510021CBD9 /* ScoreViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1552,6 +1572,7 @@
 				0F011EB51EEB2B2300939B75 /* Quiz.storyboard in Resources */,
 				0F911E7A1EE75D4600F21855 /* TagSelection.storyboard in Resources */,
 				0F911E7B1EE75D4600F21855 /* Home.storyboard in Resources */,
+				0FB008321F311E520021CBD9 /* TestStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1577,6 +1598,7 @@
 				0F911ED81EE766D900F21855 /* Browse.storyboard in Resources */,
 				0F911ED91EE766D900F21855 /* WordPairTableStoryboard.storyboard in Resources */,
 				0F911F281EE78A2100F21855 /* Home.storyboard in Resources */,
+				0FB008331F311E520021CBD9 /* TestStoryboard.storyboard in Resources */,
 				0F911EDA1EE766D900F21855 /* Edit.storyboard in Resources */,
 				0F911EDC1EE766D900F21855 /* TagSelection.storyboard in Resources */,
 			);
@@ -1604,6 +1626,7 @@
 				0F911EFF1EE76CDD00F21855 /* test_ass.json in Resources */,
 				0F911EFE1EE76CDD00F21855 /* tag.json in Resources */,
 				0FAD20CC1ECE6231002EACDA /* TagSelection.storyboard in Resources */,
+				0FB008311F311E520021CBD9 /* TestStoryboard.storyboard in Resources */,
 				0FA4A5561EC8F51B00F31F9A /* Home.storyboard in Resources */,
 				0F911F001EE76CDD00F21855 /* test.json in Resources */,
 			);
@@ -1694,6 +1717,7 @@
 				0FE0159A1EF5C9C100780184 /* Double+.swift in Sources */,
 				0F011ED51EF04CA700939B75 /* MatchingRoundViewController.swift in Sources */,
 				0F35B0541F0315B4001AC511 /* DictionaryLoadingViewController.swift in Sources */,
+				0FB0082A1F3113F70021CBD9 /* AnimatedCircleView.swift in Sources */,
 				0F011EAF1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */,
 				0F911E3D1EE75D4600F21855 /* UIColor+.swift in Sources */,
 				0F45F3E81F09576A00D45594 /* OperationReloadWordPair.swift in Sources */,
@@ -1716,6 +1740,7 @@
 				0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */,
 				0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */,
 				0F911E4C1EE75D4600F21855 /* MetaData.swift in Sources */,
+				0FB0082E1F3118510021CBD9 /* ScoreViewController.swift in Sources */,
 				0FE015A91EFAF42100780184 /* EditorViewController.swift in Sources */,
 				0F911E4D1EE75D4600F21855 /* CardOrder.swift in Sources */,
 				0FE015B11EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */,
@@ -1742,6 +1767,7 @@
 				0F028DDF1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0FE015A61EF9D46D00780184 /* CALayer+.swift in Sources */,
 				0F911E5B1EE75D4600F21855 /* EditWordPairController.swift in Sources */,
+				0FB008361F311EEF0021CBD9 /* TestViewController.swift in Sources */,
 				0F0BAFC21F0D778A005251AE /* HomeController.swift in Sources */,
 				0F35B0481F01BAD2001AC511 /* DictionaryCreationViewController.swift in Sources */,
 				0F0BAFD81F0F662D005251AE /* Array+.swift in Sources */,
@@ -1853,6 +1879,7 @@
 				0F911E841EE766D900F21855 /* Style.swift in Sources */,
 				0F911E851EE766D900F21855 /* WordPair.swift in Sources */,
 				0F911E861EE766D900F21855 /* ApplicationDefaults.swift in Sources */,
+				0FB008371F311EEF0021CBD9 /* TestViewController.swift in Sources */,
 				0F299EF31F196B96005CD3AF /* Tag+.swift in Sources */,
 				0F911E871EE766D900F21855 /* OperationCreateMetaData.swift in Sources */,
 				0F911E881EE766D900F21855 /* OperationUpdateTag.swift in Sources */,
@@ -1910,6 +1937,7 @@
 				0F911EBD1EE766D900F21855 /* EditWordPairController.swift in Sources */,
 				0F911EC01EE766D900F21855 /* CloudKitConverters.swift in Sources */,
 				0F0BAFCD1F0F4BC8005251AE /* CreateTagAssociation.swift in Sources */,
+				0FB0082B1F3113F70021CBD9 /* AnimatedCircleView.swift in Sources */,
 				0F911EC21EE766D900F21855 /* Gender.swift in Sources */,
 				0F911EC31EE766D900F21855 /* OperationDeleteRecord.swift in Sources */,
 				0F2CB4491F1287AE002CDE68 /* WordPairStatisticsViewController.swift in Sources */,
@@ -1917,6 +1945,7 @@
 				0F911EC51EE766D900F21855 /* WordPairOrder.swift in Sources */,
 				0F2CB4511F141266002CDE68 /* LanguageTableViewCell.swift in Sources */,
 				0F911EC61EE766D900F21855 /* FetchUserRecordOperation.swift in Sources */,
+				0FB0082F1F3118510021CBD9 /* ScoreViewController.swift in Sources */,
 				0F299EE71F194571005CD3AF /* ColorSelectorViewController.swift in Sources */,
 				0F911EC71EE766D900F21855 /* BrowseFromHomeAnimator.swift in Sources */,
 				0F911EC91EE766D900F21855 /* WebService.swift in Sources */,
@@ -1945,6 +1974,7 @@
 				0F0BAFD71F0F662D005251AE /* Array+.swift in Sources */,
 				0F911F2C1EE8573500F21855 /* UITextField+.swift in Sources */,
 				0FA4A4F01EC8E94700F31F9A /* DataStore.swift in Sources */,
+				0FB0082D1F3118510021CBD9 /* ScoreViewController.swift in Sources */,
 				0FA4A55A1EC96A7800F31F9A /* Style.swift in Sources */,
 				0F911F091EE76CFA00F21855 /* OldTagAssociation.swift in Sources */,
 				0FA4A4E61EC8E91E00F31F9A /* WordPair.swift in Sources */,
@@ -1997,6 +2027,7 @@
 				0F011EE01EF0A83E00939B75 /* MatchingRoundViewModel.swift in Sources */,
 				0FA4A4E31EC8E91E00F31F9A /* Tag.swift in Sources */,
 				0FA4A4F11EC8E94700F31F9A /* DemoWebService.swift in Sources */,
+				0FB008351F311EEF0021CBD9 /* TestViewController.swift in Sources */,
 				0F911F311EE9053C00F21855 /* ActivityIndicatable.swift in Sources */,
 				0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */,
 				0F911F061EE76CFA00F21855 /* Import.swift in Sources */,
@@ -2017,6 +2048,7 @@
 				0F35B0471F01BAD2001AC511 /* DictionaryCreationViewController.swift in Sources */,
 				0FE015931EF5976200780184 /* Randomizer.swift in Sources */,
 				0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */,
+				0FB008291F3113F70021CBD9 /* AnimatedCircleView.swift in Sources */,
 				0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */,
 				0F028DDE1F00C42B008200E2 /* UserDictionary.swift in Sources */,
 				0F0BAFDB1F0FF2F4005251AE /* OperationFetchDictionarListForEnfocaRef.swift in Sources */,

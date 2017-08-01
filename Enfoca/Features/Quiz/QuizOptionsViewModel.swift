@@ -23,6 +23,7 @@ protocol QuizViewModel {
     func getCorrectCount()->Int
     func getWordsAskedCount()->Int
     func getScore()->String
+    func getScore()->Double
     
     func retry()
     
@@ -209,9 +210,12 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
         return incorrectWords.count > 0
     }
     
+    func getScore() -> Double {
+        return Double(quizWords.count - incorrectWords.count) / Double(quizWords.count)
+    }
+    
     func getScore() -> String {
-        let score = Double(quizWords.count - incorrectWords.count) / Double(quizWords.count)
-        return score.asPercent!
+        return getScore().asPercent!
     }
     
     func retry(shuffle: Bool = true) {

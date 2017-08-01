@@ -130,6 +130,18 @@ extension UIViewController {
         return viewController
     }
     
+    func createScoreViewController(inContainerView: UIView) -> ScoreViewController {
+        let storyboard = UIStoryboard(name: "SharedComponents", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ScoreViewController") as! ScoreViewController
+        
+        //Note, this add is a custom method
+        self.add(asChildViewController: viewController, toContainerView: inContainerView)
+        
+        return viewController
+    }
+    
     func createHomeOverlayViewController(inContainerView: UIView) -> HomeOverlayViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
         

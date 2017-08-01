@@ -15,8 +15,11 @@ class QuizResultsViewController: UIViewController {
     @IBOutlet weak var correctLabel: UILabel!
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var animatedScoreContainer: UIView!
+    
     private var sharedViewModel: QuizViewModel!
     fileprivate var defaultAnimator: EnfocaDefaultAnimator = EnfocaDefaultAnimator()
+    private var scoreViewController: ScoreViewController!
     
     @IBOutlet weak var contentBodyView: UIView!
     
@@ -26,12 +29,17 @@ class QuizResultsViewController: UIViewController {
         askedLabel.text = "\(sharedViewModel.getWordsAskedCount())"
         scoreLabel.text = sharedViewModel.getScore()
         
+        scoreViewController = createScoreViewController(inContainerView: animatedScoreContainer)
         
         sharedViewModel.updateDataStoreCache()
     }
     
     func initialize(sharedViewModel: QuizViewModel){
         self.sharedViewModel = sharedViewModel
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        scoreViewController.initialize(score: sharedViewModel.getScore())
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

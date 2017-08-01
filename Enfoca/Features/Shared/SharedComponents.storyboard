@@ -57,5 +57,61 @@
             </objects>
             <point key="canvasLocation" x="168.80000000000001" y="154.27286356821591"/>
         </scene>
+        <!--Score View Controller-->
+        <scene sceneID="ePc-Y6-VWO">
+            <objects>
+                <viewController storyboardIdentifier="ScoreViewController" id="k3I-b7-emR" customClass="ScoreViewController" customModule="Enfoca" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e7X-9n-N7z"/>
+                        <viewControllerLayoutGuide type="bottom" id="sZm-Wh-NRi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Khu-W0-ovt">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fD1-XR-3rG" customClass="AnimatedCircleView" customModule="Enfoca" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjt-h6-Z2c">
+                                        <rect key="frame" x="43" y="67" width="85.5" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                        <color key="textColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Hjt-h6-Z2c" firstAttribute="centerY" secondItem="fD1-XR-3rG" secondAttribute="centerY" id="Rph-0y-Evt"/>
+                                    <constraint firstItem="Hjt-h6-Z2c" firstAttribute="centerX" secondItem="fD1-XR-3rG" secondAttribute="centerX" id="k7g-95-ONf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fD1-XR-3rG" secondAttribute="trailing" id="32i-OC-RSw"/>
+                            <constraint firstItem="fD1-XR-3rG" firstAttribute="leading" secondItem="Khu-W0-ovt" secondAttribute="leading" id="6Xw-Qb-zJU"/>
+                            <constraint firstItem="sZm-Wh-NRi" firstAttribute="top" secondItem="fD1-XR-3rG" secondAttribute="bottom" id="7Sf-3h-1fO"/>
+                            <constraint firstItem="fD1-XR-3rG" firstAttribute="top" secondItem="e7X-9n-N7z" secondAttribute="bottom" id="Cn5-z0-baG"/>
+                            <constraint firstItem="sZm-Wh-NRi" firstAttribute="top" secondItem="fD1-XR-3rG" secondAttribute="bottom" id="HWc-JI-5Q6"/>
+                            <constraint firstItem="fD1-XR-3rG" firstAttribute="top" secondItem="e7X-9n-N7z" secondAttribute="bottom" id="gMW-3B-kpC"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="170" height="170"/>
+                    <connections>
+                        <outlet property="animatedCircleView" destination="fD1-XR-3rG" id="j1a-nH-q3H"/>
+                        <outlet property="scoreLabel" destination="Hjt-h6-Z2c" id="qO7-Hz-o5Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwD-Lv-WmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="154"/>
+        </scene>
     </scenes>
 </document>
