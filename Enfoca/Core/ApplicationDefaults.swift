@@ -155,6 +155,8 @@ class LocalApplicationDefaults : ApplicationDefaults {
         let defaults = UserDefaults.standard
         if let dictionaryId = defaults.value(forKey: dataStoreKey) as? String {
             data = loadDataStore(forDictionaryId: dictionaryId)
+            
+            
         }
         
         
@@ -172,6 +174,9 @@ class LocalApplicationDefaults : ApplicationDefaults {
         
         let defaults = UserDefaults.standard
         let data = defaults.value(forKey: dictionaryId) as? Data
+        
+        //Remove immediately, a successful launch should resave.
+        defaults.removeObject(forKey: dictionaryId)
         
         return data
         

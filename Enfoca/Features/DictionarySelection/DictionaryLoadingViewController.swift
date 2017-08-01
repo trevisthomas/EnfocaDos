@@ -58,8 +58,9 @@ class DictionaryLoadingViewController: UIViewController {
     func initialize(data: Data) {
         let dataStore = extractDataStore(from: data)
         
-        let dict = dataStore.getUserDictionary()
-        getAppDelegate().applicationDefaults.removeDictionary(dict)
+//        I'm removing these on load now to allow the app to have a fighting chance when the data is corrupt.  Corrupt data will fail the extract line above leaving the user DOA and needing to reinstall
+//        let dict = dataStore.getUserDictionary()
+//        getAppDelegate().applicationDefaults.removeDictionary(dict)
         self.dataStoreData = dataStore
     }
     
