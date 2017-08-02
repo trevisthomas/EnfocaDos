@@ -21,7 +21,7 @@ class ListenViewController: UIViewController {
     private var verifyInProgress: Bool = false
     
     private let listenTitle = "Listen"
-    private let listeningTitle = "..."
+    private let listeningTitle = "Listening..."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class ListenViewController: UIViewController {
 
     @IBAction func listenButtonToggle(_ source: Any){
         let title = listenButton.title(for: .normal)
-        
+        spokenText.removeAll()
         if title == listenTitle {
             //listen
             listenButton.setTitle(self.listeningTitle, for: .normal)

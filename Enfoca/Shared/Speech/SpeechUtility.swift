@@ -140,5 +140,16 @@ class SpeechUtility {
         audioEngine.stop()
         recognitionRequest?.endAudio()
         
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            try audioSession.setMode(AVAudioSessionModeDefault)
+            
+        } catch {
+            print("audioSession properties weren't reset because of an error.")
+        }
+        
+        
     }
 }

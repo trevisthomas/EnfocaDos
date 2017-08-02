@@ -51,7 +51,7 @@ class EditorViewController: UIViewController {
     
     fileprivate var delegate : EditorViewControllerDelegate!
     private var mruTagViewController: TagSelectionViewController!
-    private let speechHelper = TextToSpeech()
+//    private let speechHelper = TextToSpeech()
     private var speechUtility: SpeechUtility?
     private var listenViewController: ListenViewController!
     
@@ -144,6 +144,7 @@ class EditorViewController: UIViewController {
     }
     
     @IBAction func speakAction(_ sender: Any) {
+        let speechHelper = TextToSpeech()
         speechHelper.speak(phrase: delegate.wordText, language: getAppDelegate().webService.getCurrentDictionary().language)
     }
     

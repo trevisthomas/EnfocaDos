@@ -75,7 +75,7 @@ class DictionaryLoadingViewController: UIViewController {
                 
                 getAppDelegate().applicationDefaults.removeDictionary(dictionary) //Since i have the dictId i'm removing the thing as soon as i can.  Before extract even touches it.
                 let dataStore = extractDataStore(from: data)
-                messageLabel.text = "Loading local cache..."
+//                messageLabel.text = "Loading local cache..."
                 
                 conchPreCheckPrepareDataStore(dataStore: dataStore)
             } else {
@@ -125,10 +125,15 @@ class DictionaryLoadingViewController: UIViewController {
         getAppDelegate().webService.isDataStoreSynchronized(dictionary: oldDict, callback: { (isSynched:Bool?, error: String?) in
             
             if isSynched ?? false {
+                self.messageLabel.text = "Loading local cache..."
+                
                 self.dataStoreData = dataStore //Try to use the json
                 self.prepareDataStore()
             } else {
                 self.dataStoreData = nil  //json is out of synch, dump it
+                
+                self.messageLabel.text = "Loading from iCloud..."
+                self.progressBarVisibilities(true)
                 
                 //fetchCurrentConch and apply it to the dictionary
                 getAppDelegate().webService.fetchCurrentConch(dictionary: oldDict, callback: { (conch: String?, error: String?) in
