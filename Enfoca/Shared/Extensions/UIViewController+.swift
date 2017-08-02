@@ -166,6 +166,17 @@ extension UIViewController {
         return viewController
     }
     
+    func createListenViewController(inContainerView: UIView) -> ListenViewController {
+        let storyboard = UIStoryboard(name: "SharedComponents", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ListenViewController") as! ListenViewController
+        
+        //Note, this add is a custom method
+        self.add(asChildViewController: viewController, toContainerView: inContainerView)
+        
+        return viewController
+    }
 }
 
 extension UIViewController {

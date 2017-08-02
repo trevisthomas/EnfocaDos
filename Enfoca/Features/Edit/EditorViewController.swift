@@ -6,6 +6,7 @@
 //  Copyright © 2017 Trevis Thomas. All rights reserved.
 //
 
+import Speech
 import UIKit
 
 //TODO:  The use of delegates here is inconsistant.  With xcode 9, refactor this.
@@ -45,9 +46,14 @@ class EditorViewController: UIViewController {
     
     @IBOutlet weak var tagCollectionViewContainer: UIView!
     @IBOutlet weak var selectedTagViewController: UICollectionView!
+    @IBOutlet weak var listenViewContainer: UIView!
+    @IBOutlet weak var speakButton: UIButton!
     
     fileprivate var delegate : EditorViewControllerDelegate!
     private var mruTagViewController: TagSelectionViewController!
+    private let speechHelper = TextToSpeech()
+    private var speechUtility: SpeechUtility?
+    private var listenViewController: ListenViewController!
     
     private var animateTagSelector: Bool = true
     override func viewDidLoad() {
@@ -93,12 +99,19 @@ class EditorViewController: UIViewController {
         definitionTextField.updatePlacelderText(placeholder: getDefinitionTitle())
         
         wordTextField.language = getAppDelegate().webService.getCurrentDictionary().language
+        
+        
     }
     
     private func initializeSubViews(){
         mruTagViewController = createTagSelectionViewController(inContainerView: tagCollectionViewContainer)
         mruTagViewController.animateCollectionViewCellCreation = true
         mruTagViewController.setScrollDirection(direction: .horizontal)
+        
+        if let language = getAppDelegate().webService.getCurrentDictionary().language {
+            listenViewController = createListenViewController(inContainerView: listenViewContainer)
+            listenViewController.initialize(language: language, phrase: delegate.wordText)
+        }
         
     }
     
@@ -128,6 +141,10 @@ class EditorViewController: UIViewController {
     
     @IBAction func lookupDefinitionAction(_ sender: Any) {
         performSegue(withIdentifier: "LookupDefinitionSegue", sender: CardSide.definition)
+    }
+    
+    @IBAction func speakAction(_ sender: Any) {
+        speechHelper.speak(phrase: delegate.wordText, language: getAppDelegate().webService.getCurrentDictionary().language)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

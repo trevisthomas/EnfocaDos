@@ -15,6 +15,7 @@ class CheckMarkView : UIView {
     @IBInspectable var checkColor: UIColor = UIColor.purple
     @IBInspectable var thickness: CGFloat = 2.0
     @IBInspectable var checkThickness: CGFloat = 4.0
+    @IBInspectable var hideOutline: Bool = false
     
     
     let checkLayer : CAShapeLayer = CAShapeLayer()
@@ -70,12 +71,14 @@ class CheckMarkView : UIView {
     
     
     override func draw(_ rect: CGRect) {
-        let path = UIBezierPath(ovalIn: rect.insetBy(dx: 5, dy: 5))
-        
-        path.lineWidth = thickness
-        color.setStroke()
-        
-        path.stroke()
+        if !hideOutline {
+            let path = UIBezierPath(ovalIn: rect.insetBy(dx: 5, dy: 5))
+            
+            path.lineWidth = thickness
+            color.setStroke()
+            
+            path.stroke()
+        }
         
         // This will draw a check all the time.  I was using it for debugging
         //        if (isChecked) {

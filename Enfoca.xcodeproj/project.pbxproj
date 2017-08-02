@@ -54,6 +54,15 @@
 		0F028DE91F00DC3A008200E2 /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DE71F00DC3A008200E2 /* SubjectTableViewCell.swift */; };
 		0F028DEB1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DEA1F00DCBB008200E2 /* DictionarySelectionViewController.swift */; };
 		0F028DEC1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028DEA1F00DCBB008200E2 /* DictionarySelectionViewController.swift */; };
+		0F029CC01F321A53006BE319 /* TextToSpeach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CBF1F321A53006BE319 /* TextToSpeach.swift */; };
+		0F029CC11F321A53006BE319 /* TextToSpeach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CBF1F321A53006BE319 /* TextToSpeach.swift */; };
+		0F029CC21F321A53006BE319 /* TextToSpeach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CBF1F321A53006BE319 /* TextToSpeach.swift */; };
+		0F029CC41F32357B006BE319 /* SpeechUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CC31F32357B006BE319 /* SpeechUtility.swift */; };
+		0F029CC51F32357B006BE319 /* SpeechUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CC31F32357B006BE319 /* SpeechUtility.swift */; };
+		0F029CC61F32357B006BE319 /* SpeechUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CC31F32357B006BE319 /* SpeechUtility.swift */; };
+		0F029CC81F3253C0006BE319 /* ListenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CC71F3253C0006BE319 /* ListenViewController.swift */; };
+		0F029CC91F3253C0006BE319 /* ListenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CC71F3253C0006BE319 /* ListenViewController.swift */; };
+		0F029CCA1F3253C0006BE319 /* ListenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F029CC71F3253C0006BE319 /* ListenViewController.swift */; };
 		0F085B691ED54C9400FC20A1 /* MagnifierCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */; };
 		0F085B6C1ED748B600FC20A1 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F085B6B1ED748B600FC20A1 /* Browse.storyboard */; };
 		0F085B6E1ED748E800FC20A1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */; };
@@ -583,6 +592,9 @@
 		0F028DE41F00D39A008200E2 /* DictionarySelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DictionarySelection.storyboard; path = DictionarySelection/DictionarySelection.storyboard; sourceTree = "<group>"; };
 		0F028DE71F00DC3A008200E2 /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubjectTableViewCell.swift; path = DictionarySelection/SubjectTableViewCell.swift; sourceTree = "<group>"; };
 		0F028DEA1F00DCBB008200E2 /* DictionarySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionarySelectionViewController.swift; path = DictionarySelection/DictionarySelectionViewController.swift; sourceTree = "<group>"; };
+		0F029CBF1F321A53006BE319 /* TextToSpeach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextToSpeach.swift; path = Speech/TextToSpeach.swift; sourceTree = "<group>"; };
+		0F029CC31F32357B006BE319 /* SpeechUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechUtility.swift; path = Shared/Speech/SpeechUtility.swift; sourceTree = "<group>"; };
+		0F029CC71F3253C0006BE319 /* ListenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListenViewController.swift; sourceTree = "<group>"; };
 		0F085B681ED54C9400FC20A1 /* MagnifierCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierCloseView.swift; sourceTree = "<group>"; };
 		0F085B6B1ED748B600FC20A1 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		0F085B6D1ED748E800FC20A1 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -855,6 +867,15 @@
 			name = DictionarySelection;
 			sourceTree = "<group>";
 		};
+		0F029CBE1F321A1A006BE319 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				0F029CBF1F321A53006BE319 /* TextToSpeach.swift */,
+				0F029CC31F32357B006BE319 /* SpeechUtility.swift */,
+			);
+			name = Speech;
+			sourceTree = "<group>";
+		};
 		0F085B671ED54C1E00FC20A1 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -1036,6 +1057,7 @@
 		0FA4A48B1EC89C0D00F31F9A /* Enfoca */ = {
 			isa = PBXGroup;
 			children = (
+				0F029CBE1F321A1A006BE319 /* Speech */,
 				0FA4A4B01EC8A37200F31F9A /* Core */,
 				0F911EE31EE7687600F21855 /* DataImport */,
 				0FA4A4B41EC8A56200F31F9A /* Features */,
@@ -1384,6 +1406,7 @@
 				0FD1E2061ED0822900D8BD1A /* WordPairTableViewController.swift */,
 				0F1A5F821F2261BC00F82C5D /* ActivityAlertViewController.swift */,
 				0FB0082C1F3118510021CBD9 /* ScoreViewController.swift */,
+				0F029CC71F3253C0006BE319 /* ListenViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1712,6 +1735,7 @@
 				0F35B03E1F015C20001AC511 /* OperationCreateDictionary.swift in Sources */,
 				0F028DDC1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */,
 				0F911E3B1EE75D4600F21855 /* BrowseViewController.swift in Sources */,
+				0F029CC11F321A53006BE319 /* TextToSpeach.swift in Sources */,
 				0F011ECC1EEDD0E000939B75 /* QuizCardAnimator.swift in Sources */,
 				0F0BAFD41F0F4FD9005251AE /* CreateTag.swift in Sources */,
 				0FE0159A1EF5C9C100780184 /* Double+.swift in Sources */,
@@ -1737,6 +1761,7 @@
 				0F911E481EE75D4600F21855 /* ErrorDelegate.swift in Sources */,
 				0F2CB4541F1412C1002CDE68 /* LanguageSelectionViewController.swift in Sources */,
 				0FE015A01EF8594800780184 /* ChangeCardAnimator.swift in Sources */,
+				0F029CC91F3253C0006BE319 /* ListenViewController.swift in Sources */,
 				0F911E4A1EE75D4600F21855 /* BrowseController.swift in Sources */,
 				0F911E4B1EE75D4600F21855 /* CardSide.swift in Sources */,
 				0F911E4C1EE75D4600F21855 /* MetaData.swift in Sources */,
@@ -1801,6 +1826,7 @@
 				0F35B0421F016831001AC511 /* OperationUpdateDictionary.swift in Sources */,
 				0F1B05171EF1673100D0A567 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				0F911E6F1EE75D4600F21855 /* FetchOrCreateEnfocaId.swift in Sources */,
+				0F029CC51F32357B006BE319 /* SpeechUtility.swift in Sources */,
 				0F911E701EE75D4600F21855 /* Perform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1828,6 +1854,7 @@
 				0F1AAA4A1F08044B00ACC0C3 /* NewAppLaunchViewController.swift in Sources */,
 				0F1AAA4B1F08044B00ACC0C3 /* DictionaryEditorViewController.swift in Sources */,
 				0F1AAA4C1F08044B00ACC0C3 /* DictionaryLoadingViewController.swift in Sources */,
+				0F029CC21F321A53006BE319 /* TextToSpeach.swift in Sources */,
 				0F1AAA4D1F08044B00ACC0C3 /* CheckMarkView.swift in Sources */,
 				0F1AAA4E1F08044B00ACC0C3 /* AnimatedTextField.swift in Sources */,
 				0F1AAA4F1F08044B00ACC0C3 /* Theme.swift in Sources */,
@@ -1855,6 +1882,7 @@
 				0F0BAFE11F112F54005251AE /* OperationMergeUpdateMetaData.swift in Sources */,
 				0F1AAA231F0803F000ACC0C3 /* UserDictionary.swift in Sources */,
 				0F1AAA241F0803F000ACC0C3 /* OperationCreateDictionary.swift in Sources */,
+				0F029CCA1F3253C0006BE319 /* ListenViewController.swift in Sources */,
 				0F1AAA251F0803F000ACC0C3 /* OperationUpdateDictionary.swift in Sources */,
 				0F1AAA261F0803F000ACC0C3 /* FetchUserDictionaryList.swift in Sources */,
 				0F1AAA271F0803F000ACC0C3 /* OperationUpdateMetaData.swift in Sources */,
@@ -1908,6 +1936,7 @@
 				0F911E9D1EE766D900F21855 /* BrowseViewController.swift in Sources */,
 				0F911E9F1EE766D900F21855 /* UIColor+.swift in Sources */,
 				0F911EA01EE766D900F21855 /* TagCollectionViewCell.swift in Sources */,
+				0F029CC61F32357B006BE319 /* SpeechUtility.swift in Sources */,
 				0F911EA11EE766D900F21855 /* MonitoredBaseOperation.swift in Sources */,
 				0F911EA21EE766D900F21855 /* EnfocaError.swift in Sources */,
 				0F911EA31EE766D900F21855 /* String+.swift in Sources */,
@@ -1969,6 +1998,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F029CC01F321A53006BE319 /* TextToSpeach.swift in Sources */,
 				0F2CB4431F128541002CDE68 /* MruTagCollectionViewCell.swift in Sources */,
 				0FE0159F1EF8594800780184 /* ChangeCardAnimator.swift in Sources */,
 				0F0BAFD71F0F662D005251AE /* Array+.swift in Sources */,
@@ -2018,6 +2048,7 @@
 				0FA4A58B1ECCAE9C00F31F9A /* Event.swift in Sources */,
 				0F028DEB1F00DCBB008200E2 /* DictionarySelectionViewController.swift in Sources */,
 				0FD1E2071ED0822900D8BD1A /* WordPairTableViewController.swift in Sources */,
+				0F029CC41F32357B006BE319 /* SpeechUtility.swift in Sources */,
 				0F45F3E71F09576A00D45594 /* OperationReloadWordPair.swift in Sources */,
 				0F011EC11EED981100939B75 /* CardFrontViewController.swift in Sources */,
 				0F911F071EE76CFA00F21855 /* OldMetaData.swift in Sources */,
@@ -2090,6 +2121,7 @@
 				0F028DD81F000AE5008200E2 /* LookupTextViewController.swift in Sources */,
 				0F011EDA1EF059E900939B75 /* Theme.swift in Sources */,
 				0FA4A52E1EC8EC9C00F31F9A /* CloudKitConverters.swift in Sources */,
+				0F029CC81F3253C0006BE319 /* ListenViewController.swift in Sources */,
 				0FA4A4E01EC8E91E00F31F9A /* Gender.swift in Sources */,
 				0FA4A5431EC8ECD200F31F9A /* OperationDeleteRecord.swift in Sources */,
 				0F028DDB1F0013A1008200E2 /* LookupTableViewCell.swift in Sources */,
@@ -2372,6 +2404,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Brain";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2390,6 +2424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Brain";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
+				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
