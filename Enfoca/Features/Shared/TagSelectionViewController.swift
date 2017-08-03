@@ -191,10 +191,21 @@ extension TagSelectionViewController {
     }
     
     func reloadTags(tags: [Tag]){
-        self.tags.removeAll()
-        self.tags.append(contentsOf: tags)
+        //Checking to see if the list has different items.  If not, i dont reload them at all.  This was the quick and dirty work around to the anoyance of them moving around when you tag stuff.
+        var reload = false
+        for t in tags {
+            if !self.tags.contains(t) {
+                reload = true
+            }
+        }
         
-        collectionView.reloadData()
+        if reload {
+        
+            self.tags.removeAll()
+            self.tags.append(contentsOf: tags)
+            
+            collectionView.reloadData()
+        }
     }
     
 }

@@ -63,10 +63,6 @@ class EditorViewController: UIViewController {
         
         initializeLookAndFeel()
         
-//        let layout = selectedTagViewController.collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.estimatedItemSize = CGSize(width: 20, height: 20)
-//        
-//        layout.minimumInteritemSpacing = view.frame.width * 0.02133
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,11 +70,9 @@ class EditorViewController: UIViewController {
         definitionTextField.initialize()
         
         if animateTagSelector {
-            mruTagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true, isSortEnabled: false)
+            mruTagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: false, isSortEnabled: false)
             animateTagSelector = false
         }
-        
-        
     }
     
     func initialize(delegate: EditorViewControllerDelegate) {
@@ -188,10 +182,8 @@ class EditorViewController: UIViewController {
         wordTextField.initialize()
         definitionTextField.initialize()
         
-//        statisticsWrapperView.isHidden = delegate.isCreateMode()
         showQuizStatsButton.isHidden = delegate.isCreateMode()
         
-//        selectedTagViewController.reloadData()
         let text = delegate.selectedTags.tagsToText().isEmpty ? "<select tags below>" : delegate.selectedTags.tagsToText()
         
         selectedTagsLabel.text = text
@@ -211,26 +203,6 @@ extension EditorViewController: UIPopoverPresentationControllerDelegate {
     }
 }
 
-extension EditorViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate.removeTag(delegate.selectedTags[indexPath.row])
-    }
-}
-
-extension EditorViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return delegate.selectedTags.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MruTagCollectionViewCell.identifier, for: indexPath) as! MruTagCollectionViewCell
-        
-        cell.initialize(tag: delegate.selectedTags[indexPath.row])
-        
-        return cell
-    }
-}
 
 extension EditorViewController: BrowseTagSelectionDelegate {
     func browseWordsWithTag(withTag: Tag, atRect: CGRect, cell: UICollectionViewCell) {
