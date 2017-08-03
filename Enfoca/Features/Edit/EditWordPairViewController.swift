@@ -164,7 +164,6 @@ extension EditWordPairViewController: TagFilterViewControllerDelegate {
 
 //This is maddness.  Why is this delegate here? TODO, get rid of this.  These things should just come straignt from the VM/Controller
 extension EditWordPairViewController: EditorViewControllerDelegate {
-    
 
     var mostRecentlyUsedTags: [Tag] {
         get{
@@ -201,11 +200,7 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
         controller.performSaveOrCreate(handleFailedValidation: { (existingWordPair: WordPair) in
             alert.dismiss(animated: true, completion: {
                 self.editorViewController.failedValidation()
-                self.presentOkCancelAlert(title: "Already Exists", message: "'\(self.controller.word)' already exists. Would you like to view the existing item?", callback: { (affirmative: Bool) in
-                    if affirmative {
-                        self.switchToWordPair(wordPair: existingWordPair)
-                    }
-                })
+                self.offerToSwitchToMatchedWord(existingWordPair: existingWordPair)
             })
         }) { (error: EnfocaError?) in
             alert.dismiss(animated: false, completion: {
@@ -217,6 +212,23 @@ extension EditWordPairViewController: EditorViewControllerDelegate {
             })
         }
     }
+    
+    func offerToSwitchToMatchedWord(existingWordPair: WordPair) {
+        self.presentOkCancelAlert(title: "Already Exists", message: "'\(self.controller.word)' already exists. Would you like to view the existing item?", callback: { (affirmative: Bool) in
+            if affirmative {
+                self.switchToWordPair(wordPair: existingWordPair)
+            }
+        })
+    }
+    
+    func validateTermForExactMatches() {
+        controller.fetchExatctMatchesForTerm { (matchingWordPairs: [WordPair]) in
+            if matchingWordPairs.count > 0 {
+                self.offerToSwitchToMatchedWord(existingWordPair: matchingWordPairs.first!)
+            }
+        }
+    }
+
     
     private func switchToWordPair(wordPair: WordPair) {
         let alert = presentActivityAlert(title: "Please wait...", message: nil)

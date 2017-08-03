@@ -30,6 +30,8 @@ protocol EditorViewControllerDelegate {
     func isCreateMode() ->Bool
     func applyTag(_ tag: Tag)
     func removeTag(_ tag: Tag)
+    
+    func validateTermForExactMatches()
 }
 
 class EditorViewController: UIViewController {
@@ -51,7 +53,6 @@ class EditorViewController: UIViewController {
     
     fileprivate var delegate : EditorViewControllerDelegate!
     private var mruTagViewController: TagSelectionViewController!
-//    private let speechHelper = TextToSpeech()
     private var speechUtility: SpeechUtility?
     private var listenViewController: ListenViewController!
     
@@ -70,8 +71,12 @@ class EditorViewController: UIViewController {
         definitionTextField.initialize()
         
         if animateTagSelector {
-            mruTagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: false, isSortEnabled: false)
+            mruTagViewController.initialize(tags: delegate.mostRecentlyUsedTags, browseDelegate: self, animated: true, isSortEnabled: false)
             animateTagSelector = false
+        }
+        
+        if delegate.isCreateMode() {
+            wordTextField.becomeFirstResponder()
         }
     }
     
@@ -85,6 +90,8 @@ class EditorViewController: UIViewController {
     
     private func initializeLookAndFeel() {
         wordTextField.addTarget(self, action: #selector(wordTextDidChange(_:)), for: [.editingChanged])
+        
+        wordTextField.addTarget(self, action: #selector(wordTextDidEndEditing(_:)), for: [UIControlEvents.editingDidEnd])
         
         definitionTextField.addTarget(self, action: #selector(definitionTextDidChange(_:)), for: [.editingChanged])
         
@@ -115,6 +122,10 @@ class EditorViewController: UIViewController {
     
     func wordTextDidChange(_ textField: UITextField) {
         delegate.wordText = textField.text!
+    }
+    
+    func wordTextDidEndEditing(_ textField: UITextField) {
+        delegate.validateTermForExactMatches()
     }
 
     @IBAction func toggleQuizStatistics(_ sender: UIButton) {

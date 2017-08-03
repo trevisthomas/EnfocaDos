@@ -243,7 +243,7 @@ class EditWordPairController: Controller {
             return
         }
         
-        fetchExatcMatches(callback: { (matchingTerms: [WordPair]) in
+        fetchExatctMatchesForTerm(callback: { (matchingTerms: [WordPair]) in
             if matchingTerms.count > 0 {
                 handleFailedValidation(matchingTerms[0])
                 return
@@ -310,7 +310,7 @@ class EditWordPairController: Controller {
     }
     
     //Duplicate terms are not allowed. 
-    private func fetchExatcMatches( callback:@escaping([WordPair])->() ) {
+    public func fetchExatctMatchesForTerm( callback:@escaping([WordPair])->() ) {
         let pattern = "^\(word.trim())$"
         services.fetchWordPairs(tagFilter: [], wordPairOrder: .wordDesc, pattern: pattern) { (wordPairs: [WordPair]?, error: EnfocaError?) in
             if let error = error {
