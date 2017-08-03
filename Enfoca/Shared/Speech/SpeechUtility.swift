@@ -27,37 +27,6 @@ class SpeechUtility {
         }
     }
     
-    
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        speechRecognizer.delegate = self
-//        
-//        SFSpeechRecognizer.requestAuthorization { authStatus in
-//            /*
-//             The callback may not be called on the main thread. Add an
-//             operation to the main queue to update the record button's state.
-//             */
-//            OperationQueue.main.addOperation {
-//                switch authStatus {
-//                case .authorized:
-//                    self.recordButton.isEnabled = true
-//                    
-//                case .denied:
-//                    self.recordButton.isEnabled = false
-//                    self.recordButton.setTitle("User denied access to speech recognition", for: .disabled)
-//                    
-//                case .restricted:
-//                    self.recordButton.isEnabled = false
-//                    self.recordButton.setTitle("Speech recognition restricted on this device", for: .disabled)
-//                    
-//                case .notDetermined:
-//                    self.recordButton.isEnabled = false
-//                    self.recordButton.setTitle("Speech recognition not yet authorized", for: .disabled)
-//                }
-//            }
-//        }
-//    }
-//    
     func startRecording(callback: @escaping (String)->()) throws {
         
         // Cancel the previous task if it's running.
@@ -109,28 +78,6 @@ class SpeechUtility {
         
     }
     
-    // MARK: SFSpeechRecognizerDelegate
-//    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
-//        if available {
-//            recordButton.isEnabled = false
-//            recordButton.setTitle("Recognition not available", for: .disabled)
-//        } else {
-//            recordButton.isEnabled = true
-//            self.recordButton.setTitle(self.verbiage["recButton"], for: [])
-//        }
-//    }
-    
-    
-//    @IBAction func talkButton(_ sender: AnyObject) {
-//        
-//        if audioEngine.isRunning {
-//            self.stopRecording()
-//        } else {
-//            try! startRecording()
-//            self.recordButton.setTitle(self.verbiage["recButtonStop"], for: [])
-//        }
-//    }
-    
     func stopRecording(){
         if let recognitionTask = recognitionTask {
             recognitionTask.cancel()
@@ -149,7 +96,5 @@ class SpeechUtility {
         } catch {
             print("audioSession properties weren't reset because of an error.")
         }
-        
-        
     }
 }

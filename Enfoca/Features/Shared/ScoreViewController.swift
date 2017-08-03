@@ -13,6 +13,7 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     private var score: Double!
+    private var completion: ()->() = {}
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,9 @@ class ScoreViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func initialize(score: Double) {
+    func initialize(score: Double, completion: @escaping ()->() = {}) {
         self.score = score
+        self.completion = completion
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +50,10 @@ class ScoreViewController: UIViewController {
                 return true
             } else {
                 CustomAnimations.bounceAnimation(view: self.view)
+                invokeLater {
+                    self.completion()
+                }
+                
                 return false
             }
         }

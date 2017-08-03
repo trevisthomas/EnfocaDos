@@ -10,17 +10,32 @@ import UIKit
 
 class QuizPerfectScoreViewController: UIViewController {
     
-    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentBodyView: UIView!
+    @IBOutlet weak var animatedScoreContainer: UIView!
+    @IBOutlet weak var aceLabel: UILabel!
+    
     fileprivate var sharedViewModel: QuizViewModel!
     fileprivate var defaultAnimator: EnfocaDefaultAnimator = EnfocaDefaultAnimator()
+    private var scoreViewController: ScoreViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sharedViewModel.updateDataStoreCache()
+        
+        scoreViewController = createScoreViewController(inContainerView: animatedScoreContainer)
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        aceLabel.alpha = 0.0
+        self.scoreViewController.initialize(score: self.sharedViewModel.getScore()){
+            CustomAnimations.animatePopIn(target: self.aceLabel, delay: 0.0, duration: 0.33)
+        }
     }
     
     @IBAction func okButtonAction(_ sender: Any) {
