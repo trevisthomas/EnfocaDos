@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class CardRearViewController: UIViewController {
 
     @IBOutlet weak var definitionLabel: UILabel!
@@ -17,6 +16,7 @@ class CardRearViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var headerHightConstrant: NSLayoutConstraint!
+    @IBOutlet weak var speakButton: UIButton!
     
     @IBOutlet weak var abortButton: UIButton!
     
@@ -26,6 +26,14 @@ class CardRearViewController: UIViewController {
         super.viewDidLoad()
         definitionLabel.text = sharedViewModel.getRearWord()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if sharedViewModel.isSpeechRecontitionUsable() {
+            speakButton.isHidden = false
+        } else {
+            speakButton.isHidden = true
+        }
     }
     
     func initialize(quizViewModel: QuizViewModel){
@@ -50,6 +58,11 @@ class CardRearViewController: UIViewController {
     @IBAction func correctButtonAction(_ sender: EnfocaButton) {
         sharedViewModel.correct()
         performSegue(withIdentifier: decideWhichSegueToPerform(), sender: self)
+    }
+    
+    @IBAction func speakButtonAction(_ sender: UIButton ) {
+        let speechHelper = TextToSpeech()
+        speechHelper.speak(phrase: sharedViewModel.getRearWord(), language: getAppDelegate().webService.getCurrentDictionary().language)
     }
     
     private func decideWhichSegueToPerform() -> String{

@@ -16,6 +16,7 @@ class CardFrontViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var listenViewContainer: UIView!
     
     private var sharedViewModel: QuizViewModel!
     private var timer: Int!
@@ -24,6 +25,8 @@ class CardFrontViewController: UIViewController {
     
     private var startTime: Double!
     private var endTime: Double!
+    private var listenViewController: ListenViewController!
+    
     
     fileprivate var animator: QuizCardAnimator = QuizCardAnimator()
     
@@ -32,6 +35,18 @@ class CardFrontViewController: UIViewController {
         termLabel.text = sharedViewModel.getFrontWord()
         
         startTheTimer()
+        
+        if sharedViewModel.isSpeechRecontitionUsable() {
+            
+            guard let language = getAppDelegate().webService.getCurrentDictionary().language else { return }
+            
+            listenViewContainer.isHidden = false
+            listenViewController = createListenViewController(inContainerView: listenViewContainer)
+            listenViewController.initialize(language: language, phrase: sharedViewModel.getRearWord())
+            
+        } else {
+            listenViewContainer.isHidden = true
+        }
     }
     
     

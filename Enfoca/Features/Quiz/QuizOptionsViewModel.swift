@@ -39,6 +39,8 @@ protocol QuizViewModel {
     
     func getAllWordPairs() -> [WordPair]
     
+    func isSpeechRecontitionUsable() -> Bool
+    
 }
 
 
@@ -105,6 +107,8 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
         }
     }
     
+    
+    
     func startQuiz(callback: @escaping ()->()){
         services.fetchQuiz(forTag: tag, cardOrder: cardOrder, wordCount: wordCount) { (wordPairs: [WordPair]?, error: EnfocaError?) in
             
@@ -137,7 +141,10 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
 //        }
     }
     
-    
+    func isSpeechRecontitionUsable() -> Bool {
+        //Only offer speech recogintion if the front side is the forigen language, and the back side is native
+        return cardSide == .definition && services.getCurrentDictionary().language != nil
+    }
     
     func getWordPairsForMatchingRound() -> [WordPair] {
         //How to sort when i dont have meta?  See WordPairTableViewCell
