@@ -45,9 +45,9 @@ class EditorViewController: UIViewController {
     @IBOutlet weak var showQuizStatsButton: UIButton!
     
     @IBOutlet weak var tagCollectionViewContainer: UIView!
-    @IBOutlet weak var selectedTagViewController: UICollectionView!
     @IBOutlet weak var listenViewContainer: UIView!
     @IBOutlet weak var speakButton: UIButton!
+    @IBOutlet weak var selectedTagsLabel: UILabel!
     
     fileprivate var delegate : EditorViewControllerDelegate!
     private var mruTagViewController: TagSelectionViewController!
@@ -63,10 +63,10 @@ class EditorViewController: UIViewController {
         
         initializeLookAndFeel()
         
-        let layout = selectedTagViewController.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.estimatedItemSize = CGSize(width: 20, height: 20)
-        
-        layout.minimumInteritemSpacing = view.frame.width * 0.02133
+//        let layout = selectedTagViewController.collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.estimatedItemSize = CGSize(width: 20, height: 20)
+//        
+//        layout.minimumInteritemSpacing = view.frame.width * 0.02133
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -191,7 +191,10 @@ class EditorViewController: UIViewController {
 //        statisticsWrapperView.isHidden = delegate.isCreateMode()
         showQuizStatsButton.isHidden = delegate.isCreateMode()
         
-        selectedTagViewController.reloadData()
+//        selectedTagViewController.reloadData()
+        let text = delegate.selectedTags.tagsToText().isEmpty ? "<select tags below>" : delegate.selectedTags.tagsToText()
+        
+        selectedTagsLabel.text = text
 
         mruTagViewController.reloadTags(tags: delegate.mostRecentlyUsedTags)
     }

@@ -360,6 +360,10 @@ class EditWordPairController: Controller {
         if !selectedTags.contains(tag) {
             selectedTags.append(tag)
             delegate.onUpdate()
+        } else {
+            guard let index = selectedTags.index(of: tag) else { return }
+            selectedTags.remove(at: index)
+            delegate.onUpdate()
         }
         
     }

@@ -128,16 +128,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-Uw-l92">
-                                <rect key="frame" x="146" y="317.5" width="83" height="32"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Listening...">
-                                    <color key="titleColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="listenButtonToggle:" destination="Bha-cF-WD0" eventType="touchUpInside" id="gXG-lw-Pu2"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcO-L0-oHd">
+                                <rect key="frame" x="162" y="308" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kV6-py-gCa" customClass="CheckMarkView" customModule="Enfoca" customModuleProvider="target">
                                 <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -155,19 +160,33 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-Uw-l92">
+                                <rect key="frame" x="163" y="308" width="50" height="50"/>
+                                <state key="normal" image="microphone">
+                                    <color key="titleColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="listenButtonToggle:" destination="Bha-cF-WD0" eventType="touchUpInside" id="gXG-lw-Pu2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DZu-Uw-l92" firstAttribute="centerX" secondItem="kVy-1k-EJg" secondAttribute="centerX" id="63h-x2-769"/>
+                            <constraint firstItem="UcO-L0-oHd" firstAttribute="centerY" secondItem="kV6-py-gCa" secondAttribute="centerY" id="DdM-7q-MOP"/>
+                            <constraint firstItem="UcO-L0-oHd" firstAttribute="height" secondItem="kV6-py-gCa" secondAttribute="height" id="RY9-cl-gD0"/>
                             <constraint firstItem="DZu-Uw-l92" firstAttribute="centerY" secondItem="kVy-1k-EJg" secondAttribute="centerY" id="S9e-cY-ZMq"/>
                             <constraint firstItem="kV6-py-gCa" firstAttribute="centerX" secondItem="kVy-1k-EJg" secondAttribute="centerX" id="edS-1e-d0W"/>
                             <constraint firstItem="kV6-py-gCa" firstAttribute="centerY" secondItem="kVy-1k-EJg" secondAttribute="centerY" id="fW8-36-Yiy"/>
+                            <constraint firstItem="UcO-L0-oHd" firstAttribute="centerX" secondItem="kV6-py-gCa" secondAttribute="centerX" id="qw6-Br-L0o"/>
+                            <constraint firstItem="UcO-L0-oHd" firstAttribute="width" secondItem="kV6-py-gCa" secondAttribute="width" id="ySf-Lk-xyW"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="activityView" destination="UcO-L0-oHd" id="8jF-c7-uOt"/>
                         <outlet property="checkMark" destination="kV6-py-gCa" id="54N-Ap-w2p"/>
                         <outlet property="listenButton" destination="DZu-Uw-l92" id="zTs-fG-0NU"/>
                     </connections>
@@ -177,4 +196,7 @@
             <point key="canvasLocation" x="892" y="677.81109445277366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="microphone" width="50" height="50"/>
+    </resources>
 </document>

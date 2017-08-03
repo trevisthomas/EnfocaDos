@@ -13,6 +13,7 @@ class ListenViewController: UIViewController {
     
     @IBOutlet weak var listenButton: UIButton!
     @IBOutlet weak var checkMark: CheckMarkView!
+    @IBOutlet weak var activityView: UIView!
     
     private var speechUtility: SpeechUtility?
     private var language: String!
@@ -20,16 +21,20 @@ class ListenViewController: UIViewController {
     private var spokenText: [String] = []
     private var verifyInProgress: Bool = false
     
-    private let listenTitle = "Listen"
-    private let listeningTitle = "Listening..."
+    //private let listenTitle = "Listen"
+    //private let listeningTitle = "Listening..."
+    
+    private let listenImage = UIImage(named: "microphone")
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        listenButton.setTitle(listenTitle, for: .normal)
+        //listenButton.setTitle(listenTitle, for: .normal)
         checkMark.alpha = 0
+        
+        activityView.isHidden = true
     }
     
     func initialize(language: String, phrase: String){
@@ -38,11 +43,11 @@ class ListenViewController: UIViewController {
     }
 
     @IBAction func listenButtonToggle(_ source: Any){
-        let title = listenButton.title(for: .normal)
+        
         spokenText.removeAll()
-        if title == listenTitle {
+        if activityView.isHidden {
             //listen
-            listenButton.setTitle(self.listeningTitle, for: .normal)
+            activityView.isHidden = false
             
             guard let language = getAppDelegate().webService.getCurrentDictionary().language else {
                 return
@@ -65,7 +70,7 @@ class ListenViewController: UIViewController {
                 speechUtility.stopRecording()
             }
             
-            listenButton.setTitle(listenTitle, for: .normal)
+            activityView.isHidden = true
         }
     }
     
@@ -88,7 +93,7 @@ class ListenViewController: UIViewController {
                     self.checkMark.alpha = 1
                 }, completion: { (_: Bool) in
                     self.checkMark.checked(true, animated: true)
-                    self.listenButton.setTitle(self.listenTitle, for: .normal)
+                    self.activityView.isHidden = true
                     UIView.animate(withDuration: 0.33, delay: 0.66, options: [.curveEaseInOut], animations: {
                         self.listenButton.alpha = 1
                         self.checkMark.alpha = 0
@@ -99,7 +104,7 @@ class ListenViewController: UIViewController {
                     })
                 })
             } else {
-                self.listenButton.setTitle(self.listenTitle, for: .normal)
+                self.activityView.isHidden = true
                 //negatve
                 self.verifyInProgress = false
                 self.speechUtility!.stopRecording()
