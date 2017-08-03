@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k4X-WW-dV3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -28,20 +28,20 @@
                         <viewControllerLayoutGuide type="bottom" id="uhx-WB-U6O"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uhf-X2-nf1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-8s-92l">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-B8-fPG">
-                                        <rect key="frame" x="64" y="32" width="247" height="26"/>
+                                        <rect key="frame" x="64" y="32" width="640" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvO-LX-Fex">
-                                        <rect key="frame" x="316" y="33" width="51" height="30"/>
+                                        <rect key="frame" x="709" y="33" width="51" height="30"/>
                                         <state key="normal" title="Browse">
                                             <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -69,10 +69,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wP3-1r-zyq">
-                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <rect key="frame" x="0.0" y="72" width="768" height="952"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8tO-2S-Pie">
-                                        <rect key="frame" x="50" y="71" width="275.5" height="50"/>
+                                        <rect key="frame" x="246.5" y="71" width="275.5" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Word Count: XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfZ-Ux-7sl">
                                                 <rect key="frame" x="0.0" y="0.0" width="159.5" height="50"/>
@@ -134,14 +134,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-RD-vQo">
-                                        <rect key="frame" x="10.5" y="139" width="355" height="254"/>
+                                        <rect key="frame" x="207" y="139" width="355" height="254"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTr-N8-uaL" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
                                                 <color key="backgroundColor" red="0.6342390775680542" green="0.66157263517379761" blue="0.73217785358428955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="9wJ-l2-zJy"/>
-                                                    <constraint firstAttribute="width" constant="355" id="vce-9n-29L"/>
+                                                    <constraint firstAttribute="width" constant="355" id="vce-9n-29L">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                                 <state key="normal" title="Random">
@@ -165,10 +167,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVg-Ww-Eyg" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="68" width="355" height="50"/>
                                                 <color key="backgroundColor" red="0.6342390775680542" green="0.66157263517379761" blue="0.73217785358428955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="355" id="dZM-h9-0dN"/>
-                                                    <constraint firstAttribute="height" constant="50" id="xhW-Ps-NVc"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                                 <state key="normal" title="Hardest">
                                                     <color key="titleColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -191,10 +189,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUV-0w-W77" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="136" width="355" height="50"/>
                                                 <color key="backgroundColor" red="0.6342390775680542" green="0.66157263517379761" blue="0.73217785358428955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="25D-d8-E3S"/>
-                                                    <constraint firstAttribute="width" constant="355" id="jsb-ca-hIp"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                                 <state key="normal" title="Least Studied">
                                                     <color key="titleColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -217,10 +211,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY1-rz-wJI" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="204" width="355" height="50"/>
                                                 <color key="backgroundColor" red="0.6342390775680542" green="0.66157263517379761" blue="0.73217785358428955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="355" id="3wG-56-NOA"/>
-                                                    <constraint firstAttribute="height" constant="50" id="80Z-se-iV5"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                                 <state key="normal" title="Recently Added">
                                                     <color key="titleColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -241,9 +231,17 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VVg-Ww-Eyg" firstAttribute="height" secondItem="mTr-N8-uaL" secondAttribute="height" id="7Bg-53-gpY"/>
+                                            <constraint firstItem="KY1-rz-wJI" firstAttribute="height" secondItem="mTr-N8-uaL" secondAttribute="height" id="Cq3-1r-BOv"/>
+                                            <constraint firstItem="eUV-0w-W77" firstAttribute="width" secondItem="mTr-N8-uaL" secondAttribute="width" id="LKa-mm-mBc"/>
+                                            <constraint firstItem="eUV-0w-W77" firstAttribute="height" secondItem="mTr-N8-uaL" secondAttribute="height" id="RcE-fq-wwj"/>
+                                            <constraint firstItem="VVg-Ww-Eyg" firstAttribute="width" secondItem="mTr-N8-uaL" secondAttribute="width" id="bkb-4F-x5i"/>
+                                            <constraint firstItem="KY1-rz-wJI" firstAttribute="width" secondItem="mTr-N8-uaL" secondAttribute="width" id="ygs-5c-mG2"/>
+                                        </constraints>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pnF-29-0al">
-                                        <rect key="frame" x="8" y="18" width="359" height="38"/>
+                                        <rect key="frame" x="8" y="18" width="752" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="E8i-0S-NWw"/>
                                         </constraints>
@@ -258,10 +256,12 @@
                                         </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Ir-ilw" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="106.5" y="533" width="163" height="50"/>
+                                        <rect key="frame" x="303" y="821" width="163" height="50"/>
                                         <color key="backgroundColor" red="0.7534174919128418" green="0.73358726501464844" blue="0.71666222810745239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="163" id="ORL-JL-iFL"/>
+                                            <constraint firstAttribute="width" constant="163" id="ORL-JL-iFL">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="140"/>
+                                            </constraint>
                                             <constraint firstAttribute="height" constant="50" id="Z7O-ds-wja"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
@@ -289,8 +289,10 @@
                                     <constraint firstItem="Gzy-Ir-ilw" firstAttribute="centerX" secondItem="wP3-1r-zyq" secondAttribute="centerX" id="1dP-ec-DfZ"/>
                                     <constraint firstAttribute="trailing" secondItem="pnF-29-0al" secondAttribute="trailing" constant="8" id="A2J-gw-e6g"/>
                                     <constraint firstItem="8tO-2S-Pie" firstAttribute="centerX" secondItem="wP3-1r-zyq" secondAttribute="centerX" id="Imu-FA-dgm"/>
-                                    <constraint firstItem="Gzy-Ir-ilw" firstAttribute="top" secondItem="KY1-rz-wJI" secondAttribute="bottom" constant="140" id="M50-2G-jkM"/>
                                     <constraint firstItem="hKT-RD-vQo" firstAttribute="top" secondItem="8tO-2S-Pie" secondAttribute="bottom" constant="18" id="Rny-Je-nbh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gzy-Ir-ilw" secondAttribute="bottom" constant="81" id="TdE-ae-uao">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                    </constraint>
                                     <constraint firstItem="pnF-29-0al" firstAttribute="leading" secondItem="wP3-1r-zyq" secondAttribute="leading" constant="8" id="k4b-gs-Ao1"/>
                                     <constraint firstItem="8tO-2S-Pie" firstAttribute="top" secondItem="pnF-29-0al" secondAttribute="bottom" constant="16" id="kSi-hT-F5X"/>
                                     <constraint firstItem="pnF-29-0al" firstAttribute="top" secondItem="wP3-1r-zyq" secondAttribute="top" constant="18" id="vNG-nz-yPo"/>
@@ -346,14 +348,14 @@
                         <viewControllerLayoutGuide type="bottom" id="18w-0f-hie"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="07f-hk-unr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejV-Zt-Klr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matching Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaF-Sg-kko">
-                                        <rect key="frame" x="48" y="32" width="279" height="26"/>
+                                        <rect key="frame" x="48" y="32" width="672" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -368,10 +370,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sod-yw-sBR">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="100" width="768" height="924"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jdv-zM-Aqz">
-                                        <rect key="frame" x="16" y="46" width="343" height="521"/>
+                                        <rect key="frame" x="16" y="46" width="736" height="878"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewLayout key="collectionViewLayout" id="KxW-Dy-gJ8" customClass="CenterAlignedCollectionViewFlowLayout" customModule="Data_Import" customModuleProvider="target"/>
                                         <cells>
@@ -411,7 +413,7 @@
                                         </connections>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBo-si-mrb">
-                                        <rect key="frame" x="173" y="8" width="30" height="30"/>
+                                        <rect key="frame" x="369.5" y="8" width="30" height="30"/>
                                         <state key="normal" title="Skip">
                                             <color key="titleColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -462,14 +464,14 @@
                         <viewControllerLayoutGuide type="bottom" id="xOP-a3-li6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Dp-Pj-bET">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF2-oU-7CL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-ad-9La">
-                                        <rect key="frame" x="48" y="32" width="279" height="26"/>
+                                        <rect key="frame" x="48" y="32" width="672" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -484,14 +486,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5B7-De-YVm">
-                                <rect key="frame" x="8" y="100" width="359" height="559"/>
+                                <rect key="frame" x="8" y="100" width="752" height="916"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv9-Vm-6wE" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="98" y="414" width="163" height="64"/>
+                                        <rect key="frame" x="306.5" y="785" width="140" height="50"/>
                                         <color key="backgroundColor" red="0.63423907759999998" green="0.66157263519999998" blue="0.73217785359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="nHu-O8-59q"/>
-                                            <constraint firstAttribute="width" constant="163" id="sYb-3Q-s7W"/>
+                                            <constraint firstAttribute="height" constant="50" id="nHu-O8-59q"/>
+                                            <constraint firstAttribute="width" constant="140" id="sYb-3Q-s7W"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <state key="normal" title="Ok">
@@ -511,13 +513,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First, but what if there is a lot more text here than you'd figure" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fcQ-zW-8J7">
-                                        <rect key="frame" x="28" y="109" width="303" height="168"/>
+                                        <rect key="frame" x="28" y="109" width="696" height="84"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                         <color key="textColor" red="0.061343669891357422" green="0.092574305832386017" blue="0.16310814023017883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB1-qP-yvu">
-                                        <rect key="frame" x="166" y="20" width="27" height="28"/>
+                                        <rect key="frame" x="362.5" y="20" width="27" height="28"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" red="1" green="0.50619709199999996" blue="0.96769246610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -528,11 +530,15 @@
                                     <constraint firstItem="mB1-qP-yvu" firstAttribute="centerX" secondItem="5B7-De-YVm" secondAttribute="centerX" id="0Gw-LO-6u6"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="fcQ-zW-8J7" secondAttribute="trailing" constant="20" id="5eN-Fs-wet"/>
                                     <constraint firstItem="Kv9-Vm-6wE" firstAttribute="centerX" secondItem="5B7-De-YVm" secondAttribute="centerX" id="7k8-7R-sk1"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kv9-Vm-6wE" secondAttribute="bottom" constant="81" id="STk-sq-zad"/>
                                     <constraint firstItem="fcQ-zW-8J7" firstAttribute="centerX" secondItem="5B7-De-YVm" secondAttribute="centerX" id="Y5m-Dv-uk3"/>
                                     <constraint firstItem="mB1-qP-yvu" firstAttribute="top" secondItem="5B7-De-YVm" secondAttribute="top" constant="20" id="fT3-Qk-I7N"/>
-                                    <constraint firstItem="fcQ-zW-8J7" firstAttribute="top" secondItem="5B7-De-YVm" secondAttribute="top" constant="109" id="uac-53-sGm"/>
+                                    <constraint firstItem="fcQ-zW-8J7" firstAttribute="top" secondItem="5B7-De-YVm" secondAttribute="top" constant="109" id="uac-53-sGm">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                    </constraint>
                                     <constraint firstAttribute="leadingMargin" secondItem="fcQ-zW-8J7" secondAttribute="leading" constant="-20" id="uo7-b2-icM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kv9-Vm-6wE" secondAttribute="bottom" constant="81" id="yPE-fI-7LC">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="46"/>
+                                    </constraint>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -582,20 +588,20 @@
                         <viewControllerLayoutGuide type="bottom" id="6NP-0i-yXs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KMc-Zr-eUE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5y-Mu-LBE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuU-Q7-a9i">
-                                        <rect key="frame" x="48" y="32" width="279" height="26"/>
+                                        <rect key="frame" x="48" y="32" width="672" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btK-eC-8Ih">
-                                        <rect key="frame" x="328" y="30" width="39" height="30"/>
+                                        <rect key="frame" x="721" y="30" width="39" height="30"/>
                                         <state key="normal" title="Abort">
                                             <color key="titleColor" red="0.86644273999999999" green="0.87051200870000001" blue="0.8786925673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -615,17 +621,17 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WaG-kp-efN">
-                                <rect key="frame" x="8" y="100" width="359" height="559"/>
+                                <rect key="frame" x="8" y="100" width="752" height="916"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bWL-SL-xY6">
-                                        <rect key="frame" x="7" y="414" width="346" height="64"/>
+                                        <rect key="frame" x="226" y="785" width="300" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-2R-lnr" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="163" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="50"/>
                                                 <color key="backgroundColor" red="0.6342390775680542" green="0.66157263517379761" blue="0.73217785358428955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="64" id="GNo-pb-1gG"/>
-                                                    <constraint firstAttribute="width" constant="163" id="Sp0-2f-Bg7"/>
+                                                    <constraint firstAttribute="height" constant="50" id="GNo-pb-1gG"/>
+                                                    <constraint firstAttribute="width" constant="140" id="Sp0-2f-Bg7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                                 <state key="normal" title="Got it!">
@@ -637,11 +643,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dl-Lu-kcA" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
-                                                <rect key="frame" x="183" y="0.0" width="163" height="64"/>
+                                                <rect key="frame" x="160" y="0.0" width="140" height="50"/>
                                                 <color key="backgroundColor" red="0.7534174919128418" green="0.73358726501464844" blue="0.71666222810745239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="163" id="8mR-Xd-grL"/>
-                                                    <constraint firstAttribute="height" constant="64" id="OU8-Gy-508"/>
+                                                    <constraint firstAttribute="width" constant="140" id="8mR-Xd-grL"/>
+                                                    <constraint firstAttribute="height" constant="50" id="OU8-Gy-508"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                                 <state key="normal" title="Nope">
@@ -653,9 +659,10 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <variation key="heightClass=regular-widthClass=compact" spacing="15"/>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second, but what if there is a lot more text here than you'd figure" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="41O-AB-x6M">
-                                        <rect key="frame" x="28" y="109" width="303" height="168"/>
+                                        <rect key="frame" x="28" y="109" width="696" height="84"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                         <color key="textColor" red="0.061343669891357422" green="0.092574305832386017" blue="0.16310814023017883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -665,8 +672,12 @@
                                 <constraints>
                                     <constraint firstAttribute="trailingMargin" secondItem="41O-AB-x6M" secondAttribute="trailing" constant="20" id="2Ch-zw-Oig"/>
                                     <constraint firstItem="bWL-SL-xY6" firstAttribute="centerX" secondItem="WaG-kp-efN" secondAttribute="centerX" id="CV4-vP-SfW"/>
-                                    <constraint firstAttribute="bottom" secondItem="bWL-SL-xY6" secondAttribute="bottom" constant="81" id="bNc-KO-dqg"/>
-                                    <constraint firstItem="41O-AB-x6M" firstAttribute="top" secondItem="WaG-kp-efN" secondAttribute="top" constant="109" id="i35-5b-jOT"/>
+                                    <constraint firstAttribute="bottom" secondItem="bWL-SL-xY6" secondAttribute="bottom" constant="81" id="bNc-KO-dqg">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="46"/>
+                                    </constraint>
+                                    <constraint firstItem="41O-AB-x6M" firstAttribute="top" secondItem="WaG-kp-efN" secondAttribute="top" constant="109" id="i35-5b-jOT">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                    </constraint>
                                     <constraint firstItem="41O-AB-x6M" firstAttribute="centerX" secondItem="WaG-kp-efN" secondAttribute="centerX" id="u2A-KU-dfY"/>
                                     <constraint firstAttribute="leadingMargin" secondItem="41O-AB-x6M" secondAttribute="leading" constant="-20" id="u4T-hG-lJ8"/>
                                 </constraints>
@@ -723,14 +734,14 @@
                         <viewControllerLayoutGuide type="bottom" id="jnT-sE-rCM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SGi-Tp-TUi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srE-8m-j4f">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am2-Oj-isH">
-                                        <rect key="frame" x="48" y="32" width="279" height="26"/>
+                                        <rect key="frame" x="48" y="32" width="672" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -745,10 +756,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5M-Ep-1vc">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="100" width="768" height="924"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hA-yu-uDz">
-                                        <rect key="frame" x="125.5" y="391" width="124" height="30"/>
+                                        <rect key="frame" x="322" y="391" width="124" height="30"/>
                                         <state key="normal" title="Show Quiz Details">
                                             <color key="titleColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -757,7 +768,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ0-tE-Bz4">
-                                        <rect key="frame" x="87.5" y="20" width="200" height="200"/>
+                                        <rect key="frame" x="284" y="20" width="200" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZJ0-tE-Bz4" secondAttribute="height" multiplier="1:1" id="2Z9-xY-zYr"/>
@@ -765,11 +776,15 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWI-t1-rlJ" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="106.5" y="441" width="163" height="64"/>
+                                        <rect key="frame" x="303" y="441" width="163" height="64"/>
                                         <color key="backgroundColor" red="0.63423907759999998" green="0.66157263519999998" blue="0.73217785359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="163" id="Q3d-7B-TEW"/>
-                                            <constraint firstAttribute="height" constant="64" id="qjB-CG-0ku"/>
+                                            <constraint firstAttribute="width" constant="163" id="Q3d-7B-TEW">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="140"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="64" id="qjB-CG-0ku">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <state key="normal" title="Ok">
@@ -782,7 +797,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ace!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B2T-9v-J3u">
-                                        <rect key="frame" x="141.5" y="255" width="92" height="54"/>
+                                        <rect key="frame" x="338" y="255" width="92" height="54"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="46"/>
                                         <color key="textColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -798,7 +813,9 @@
                                     <constraint firstItem="B2T-9v-J3u" firstAttribute="centerX" secondItem="g5M-Ep-1vc" secondAttribute="centerX" id="kR1-1e-I1N"/>
                                     <constraint firstItem="ZJ0-tE-Bz4" firstAttribute="width" secondItem="ZJ0-tE-Bz4" secondAttribute="height" multiplier="1:1" id="qLu-eH-d6z"/>
                                     <constraint firstItem="3hA-yu-uDz" firstAttribute="centerX" secondItem="g5M-Ep-1vc" secondAttribute="centerX" id="xOD-oW-zCe"/>
-                                    <constraint firstItem="BWI-t1-rlJ" firstAttribute="top" secondItem="ZJ0-tE-Bz4" secondAttribute="bottom" constant="221" id="zai-LS-TEK"/>
+                                    <constraint firstItem="BWI-t1-rlJ" firstAttribute="top" secondItem="ZJ0-tE-Bz4" secondAttribute="bottom" constant="221" id="zai-LS-TEK">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="175"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                         </subviews>
@@ -836,14 +853,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Lhe-Gn-ZPG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8Ds-dN-vg0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdn-PB-Gvu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vd-G3-ZnR">
-                                        <rect key="frame" x="48" y="32" width="279" height="26"/>
+                                        <rect key="frame" x="48" y="32" width="672" height="26"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -858,10 +875,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dO-lp-ZoK">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="100" width="768" height="924"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-rJ-twc">
-                                        <rect key="frame" x="135.5" y="235" width="105" height="47"/>
+                                        <rect key="frame" x="332" y="235" width="105" height="47"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8N5-Ia-Kac">
                                                 <rect key="frame" x="0.0" y="0.0" width="72.5" height="47"/>
@@ -900,11 +917,15 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TX-oX-aG4" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="106" y="441.5" width="163" height="64"/>
+                                        <rect key="frame" x="302.5" y="420" width="163" height="64"/>
                                         <color key="backgroundColor" red="0.7534174919128418" green="0.73358726501464844" blue="0.71666222810745239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="163" id="59v-Y6-N9Q"/>
-                                            <constraint firstAttribute="height" constant="64" id="VrZ-hP-NPl"/>
+                                            <constraint firstAttribute="width" constant="163" id="59v-Y6-N9Q">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="140"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="64" id="VrZ-hP-NPl">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <state key="normal" title="Done">
@@ -917,11 +938,15 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-lc-Sms" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
-                                        <rect key="frame" x="106" y="361.5" width="163" height="64"/>
+                                        <rect key="frame" x="302.5" y="340" width="163" height="64"/>
                                         <color key="backgroundColor" red="0.63423907759999998" green="0.66157263519999998" blue="0.73217785359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="163" id="Eq6-P2-fbh"/>
-                                            <constraint firstAttribute="height" constant="64" id="ppt-7F-Vf1"/>
+                                            <constraint firstAttribute="width" constant="163" id="Eq6-P2-fbh">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="140"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="64" id="ppt-7F-Vf1">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <state key="normal" title="Retry">
@@ -934,7 +959,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJZ-Qp-WOP">
-                                        <rect key="frame" x="126" y="311.5" width="124" height="30"/>
+                                        <rect key="frame" x="322.5" y="290" width="124" height="30"/>
                                         <state key="normal" title="Show Quiz Details">
                                             <color key="titleColor" red="0.33989286419999998" green="0.37534031270000001" blue="0.44183227419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -943,7 +968,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aj0-w2-n4E">
-                                        <rect key="frame" x="88" y="20" width="200" height="200"/>
+                                        <rect key="frame" x="284.5" y="20" width="200" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="ArC-X6-mv7"/>
@@ -956,7 +981,7 @@
                                     <constraint firstItem="BKX-rJ-twc" firstAttribute="centerX" secondItem="3dO-lp-ZoK" secondAttribute="centerX" id="2qd-RY-PxB"/>
                                     <constraint firstItem="aj0-w2-n4E" firstAttribute="top" secondItem="3dO-lp-ZoK" secondAttribute="top" constant="20" id="52c-we-ulo"/>
                                     <constraint firstItem="BKX-rJ-twc" firstAttribute="top" secondItem="3dO-lp-ZoK" secondAttribute="top" constant="235" id="67Y-3L-S62"/>
-                                    <constraint firstItem="8bs-lc-Sms" firstAttribute="top" secondItem="aj0-w2-n4E" secondAttribute="bottom" constant="142" id="LCZ-qK-7yv"/>
+                                    <constraint firstItem="8bs-lc-Sms" firstAttribute="top" secondItem="aj0-w2-n4E" secondAttribute="bottom" constant="120" id="LCZ-qK-7yv"/>
                                     <constraint firstItem="8bs-lc-Sms" firstAttribute="top" secondItem="VJZ-Qp-WOP" secondAttribute="bottom" constant="20" id="SHr-Qy-KfQ"/>
                                     <constraint firstItem="8bs-lc-Sms" firstAttribute="centerX" secondItem="2TX-oX-aG4" secondAttribute="centerX" id="VzE-SD-13V"/>
                                     <constraint firstItem="aj0-w2-n4E" firstAttribute="centerX" secondItem="3dO-lp-ZoK" secondAttribute="centerX" id="Zmv-3T-RrL"/>
@@ -1013,7 +1038,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="oQB-FF-xDm"/>
         <segue reference="rGV-qo-zJg"/>
-        <segue reference="Ixi-5y-OaF"/>
-        <segue reference="O0C-w6-pIy"/>
+        <segue reference="Owj-22-ncO"/>
+        <segue reference="1jO-wh-KqA"/>
     </inferredMetricsTieBreakers>
 </document>
