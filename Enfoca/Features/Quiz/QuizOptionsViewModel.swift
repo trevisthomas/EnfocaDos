@@ -225,15 +225,24 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
         return getScore().asPercent!
     }
     
-    func retry(shuffle: Bool = true) {
+    func retry(shuffle: Bool = true, excludeCorrectWords:Bool = true) {
         currentWordPairIndex = 0
         incorrectWordCountSinceMatchingRound = 0
         quizWords.removeAll()
         
-        if (shuffle) {
-            quizWords.append(contentsOf: incorrectWords.shuffled())
+        if(excludeCorrectWords){
+            if (shuffle) {
+                quizWords.append(contentsOf: incorrectWords.shuffled())
+            } else {
+                quizWords.append(contentsOf: incorrectWords)
+            }
+            
         } else {
-            quizWords.append(contentsOf: incorrectWords)
+            if (shuffle) {
+                quizWords.append(contentsOf: originalWords.shuffled())
+            } else {
+                quizWords.append(contentsOf: originalWords)
+            }
         }
         
         incorrectWords.removeAll()
@@ -241,7 +250,7 @@ class QuizOptionsViewModel: Controller, QuizViewModel {
     
     //This weirdness is because i couldnt provide a default param in the protocol
     func retry() {
-        retry(shuffle: true)
+        retry(shuffle: true, excludeCorrectWords: false)
     }
     
     func getCorrectCount() -> Int {

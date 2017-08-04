@@ -441,7 +441,7 @@ class QuizOptionsViewModelTests: XCTestCase {
         XCTAssertEqual(sut.originalWords, mockService.wordPairs)
         XCTAssertEqual(sut.getScore(), "25%")
         
-        sut.retry()
+        sut.retry(shuffle: true, excludeCorrectWords: true)
         
         sut.correct()
         sut.correct()
