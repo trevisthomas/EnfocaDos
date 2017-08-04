@@ -10,10 +10,13 @@ import Foundation
 
 class Language {
     
+    //http://www.ibabbleon.com/iOS-Language-Codes-ISO-639.html
+    
     static let languages = [
-        Language("English", "en"),
+        Language("English (US)", "en"),
         Language("French", "fr"),
         Language("Spanish", "es"),
+        Language("Spanish (Mexico)", "es-MX"),
         
         Language("Chinese (Simplified)", "zh-Hans"),
         Language("Chinese (Traditional)", "zh-Hant"),

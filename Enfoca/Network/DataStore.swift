@@ -27,6 +27,10 @@ class DataStore: NSObject, NSCoding {
         updateAnyAndNone()
     }
     
+    func updateUserDictionary(userDictionary updatedDictionary: UserDictionary){
+        userDictionary.applyUpdate(termTitle: updatedDictionary.termTitle, definitionTitle: updatedDictionary.definitionTitle, subject: updatedDictionary.subject, language: updatedDictionary.language)
+    }
+    
     private func updateAnyAndNone() {
         let wordPairsWithoutTags = wordPairDictionary.values.filter({ (wordPair: WordPair) -> Bool in
             return wordPair.tags.count == 0

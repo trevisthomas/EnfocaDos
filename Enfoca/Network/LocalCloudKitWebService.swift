@@ -141,6 +141,9 @@ class LocalCloudKitWebService : WebService {
         
         if let dataStore = dataStore {
             ds = dataStore
+            if let dictionary = dictionary {
+                ds.updateUserDictionary(userDictionary: dictionary) //The user may have changed the language, or something !
+            }
         } else if let dictionary = dictionary {
             guard let _ = dictionary.conch else { fatalError("conches are not option at this point anymore") }
             ds = DataStore(dictionary: dictionary)
