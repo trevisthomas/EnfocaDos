@@ -47,7 +47,10 @@ class DictionaryCreationViewController: UIViewController {
         if let to = segue.destination as? DictionaryEditorViewController {
             to.transitioningDelegate = self
             guard let dictionary = sender as? UserDictionary else { fatalError() }
-            to.initialize(dictionary: dictionary, isLanguageSelectionAvailable: viewModel.isLanguageChoiceNeeded(forDictionary: dictionary))
+            to.initialize(dictionary: dictionary, isLanguageSelectionAvailable: false)
+        } else if let to = segue.destination as? LanguageSelectionViewController {
+            to.transitioningDelegate = self
+            //I dont care what they choose, so i'm not passing in a delegate.
         }
     }
 
@@ -80,16 +83,22 @@ extension DictionaryCreationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SubjectTableViewCell.identifier, for: indexPath) as? SubjectTableViewCell else { fatalError() }
         
-        cell.initialize(delegate: self, dictionary: viewModel.dictionaryList[indexPath.row])
+        cell.initialize(delegate: self, title: viewModel.dictionaryList[indexPath.row])
         
         return cell
     }
-    
 }
 
 extension DictionaryCreationViewController: SubjectTableViewCellDelegate {
     func performSelect(dictionary: UserDictionary) {
-        performSegue(withIdentifier: "CreateDictionarySegue", sender: dictionary)
+        fatalError()
+    }
+    func performSelect(title: String) {
+        if title == viewModel.dictionaryOtherTitle {
+            performSegue(withIdentifier: "CreateDictionarySegue", sender: viewModel.dictionaryOther)
+        } else {
+            performSegue(withIdentifier: "LanguageSelectionSegue", sender: nil)
+        }
     }
 }
 

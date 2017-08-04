@@ -17,24 +17,20 @@ protocol DictionaryCreationViewModelDelegate {
 class DictionaryCreationViewModel: Controller {
     private let delegate: DictionaryCreationViewModelDelegate!
     
-    private(set) var dictionaryList: [UserDictionary] = []
+    private(set) var dictionaryList: [String] = []
     
-    private let dictionaryOther = UserDictionary(termTitle: "Front", definitionTitle: "Back", subject: "Other")
+    let dictionaryOtherTitle = "Other"
+    let dictionaryOther = UserDictionary(termTitle: "Term", definitionTitle: "Definition", subject: "My Flash Cards")
     
     init(delegate: DictionaryCreationViewModelDelegate) {
         self.delegate = delegate
         
         dictionaryList.removeAll()
         
-        dictionaryList.append(UserDictionary(termTitle: "Spanish", definitionTitle: "English", subject: "Spanish Vocabulary", language: "es"))
+        dictionaryList.append("Study a Foreign Language")
+        dictionaryList.append(dictionaryOtherTitle)
         
-        dictionaryList.append(UserDictionary(termTitle: "French", definitionTitle: "English", subject: "French Vocabulary", language: "fr"))
         
-        dictionaryList.append(UserDictionary(termTitle: "English", definitionTitle: "English", subject: "English Vocabulary", language: "en"))
-        
-        dictionaryList.append(UserDictionary(termTitle: "Foreign", definitionTitle: "Native", subject: "Another Language"))
-        
-        dictionaryList.append(dictionaryOther)
     }
     
     func onEvent(event: Event) {

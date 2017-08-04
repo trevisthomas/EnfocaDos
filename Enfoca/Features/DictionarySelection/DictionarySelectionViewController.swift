@@ -158,6 +158,10 @@ extension DictionarySelectionViewController: UITableViewDataSource {
 }
 
 extension DictionarySelectionViewController: SubjectTableViewCellDelegate {
+    
+    func performSelect(title: String) {
+        fatalError()
+    }
     func performSelect(dictionary: UserDictionary) {
         if isEditMode {
             guard getAppDelegate().webService.isNetworkAvailable else {
