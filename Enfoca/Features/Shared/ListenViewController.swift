@@ -13,7 +13,7 @@ class ListenViewController: UIViewController {
     
     @IBOutlet weak var listenButton: UIButton!
     @IBOutlet weak var checkMark: CheckMarkView!
-    @IBOutlet weak var activityView: UIView!
+    @IBOutlet weak var activityView: MicLevelView!
     
     private var speechUtility: SpeechUtility?
     private var language: String!
@@ -58,6 +58,8 @@ class ListenViewController: UIViewController {
                     try! self.speechUtility?.startRecording(callback: { (spokenText: String) in
                         self.spokenText.append(spokenText)
                         self.verifySpokenText()
+                    }, levelHandler: {(level: Float) in
+                        self.activityView.currentLevel(CGFloat(level))
                     })
                 } else {
                     self.speechUtility = nil
@@ -70,6 +72,7 @@ class ListenViewController: UIViewController {
                 speechUtility.stopRecording()
             }
             
+            activityView.currentLevel(0.0)
             activityView.isHidden = true
         }
     }

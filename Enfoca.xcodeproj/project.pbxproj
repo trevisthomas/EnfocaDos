@@ -523,6 +523,9 @@
 		0FD1E20D1ED1E3F400D8BD1A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20C1ED1E3F400D8BD1A /* String+.swift */; };
 		0FD1E20F1ED1E45600D8BD1A /* String+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E20E1ED1E45600D8BD1A /* String+Tests.swift */; };
 		0FD1E2111ED1EF2C00D8BD1A /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */; };
+		0FD79C141F3623B800153CF7 /* MicLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD79C131F3623B800153CF7 /* MicLevelView.swift */; };
+		0FD79C151F3623B800153CF7 /* MicLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD79C131F3623B800153CF7 /* MicLevelView.swift */; };
+		0FD79C161F3623B800153CF7 /* MicLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD79C131F3623B800153CF7 /* MicLevelView.swift */; };
 		0FE0158E1EF4B19700780184 /* CustomAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE0158D1EF4B19700780184 /* CustomAnimations.swift */; };
 		0FE0158F1EF4B20D00780184 /* QuizOptionsToCardFrontViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1336F61EF448EF0077CC59 /* QuizOptionsToCardFrontViewAnimator.swift */; };
 		0FE015901EF4B20D00780184 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EC81EEDB4AF00939B75 /* QuizResultsViewController.swift */; };
@@ -769,6 +772,7 @@
 		0FD1E20C1ED1E3F400D8BD1A /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0FD1E20E1ED1E45600D8BD1A /* String+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Tests.swift"; sourceTree = "<group>"; };
 		0FD1E2101ED1EF2C00D8BD1A /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		0FD79C131F3623B800153CF7 /* MicLevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicLevelView.swift; sourceTree = "<group>"; };
 		0FE0158D1EF4B19700780184 /* CustomAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimations.swift; sourceTree = "<group>"; };
 		0FE015921EF5976200780184 /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 		0FE015981EF5C9C100780184 /* Double+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
@@ -887,6 +891,7 @@
 				0F2CB44A1F140CF9002CDE68 /* MultiLingualTextField.swift */,
 				0F299EF81F1D33C5005CD3AF /* ProgressBarView.swift */,
 				0FB008281F3113F70021CBD9 /* AnimatedCircleView.swift */,
+				0FD79C131F3623B800153CF7 /* MicLevelView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1723,6 +1728,7 @@
 				0F911E341EE75D4600F21855 /* WordPairTableViewCell.swift in Sources */,
 				0F911E351EE75D4600F21855 /* Perform+Tags.swift in Sources */,
 				0F911E361EE75D4600F21855 /* Sequence+.swift in Sources */,
+				0FD79C151F3623B800153CF7 /* MicLevelView.swift in Sources */,
 				0F911E371EE75D4600F21855 /* Event.swift in Sources */,
 				0F911E381EE75D4600F21855 /* WordPairTableViewController.swift in Sources */,
 				0F911E391EE75D4600F21855 /* Tag.swift in Sources */,
@@ -1973,6 +1979,7 @@
 				0F911EC41EE766D900F21855 /* UIViewController+.swift in Sources */,
 				0F911EC51EE766D900F21855 /* WordPairOrder.swift in Sources */,
 				0F2CB4511F141266002CDE68 /* LanguageTableViewCell.swift in Sources */,
+				0FD79C161F3623B800153CF7 /* MicLevelView.swift in Sources */,
 				0F911EC61EE766D900F21855 /* FetchUserRecordOperation.swift in Sources */,
 				0FB0082F1F3118510021CBD9 /* ScoreViewController.swift in Sources */,
 				0F299EE71F194571005CD3AF /* ColorSelectorViewController.swift in Sources */,
@@ -2079,6 +2086,7 @@
 				0F35B0471F01BAD2001AC511 /* DictionaryCreationViewController.swift in Sources */,
 				0FE015931EF5976200780184 /* Randomizer.swift in Sources */,
 				0F085B881EDC667700FC20A1 /* EditWordPairViewController.swift in Sources */,
+				0FD79C141F3623B800153CF7 /* MicLevelView.swift in Sources */,
 				0FB008291F3113F70021CBD9 /* AnimatedCircleView.swift in Sources */,
 				0F1AAA1C1F055F0800ACC0C3 /* Date+.swift in Sources */,
 				0F028DDE1F00C42B008200E2 /* UserDictionary.swift in Sources */,

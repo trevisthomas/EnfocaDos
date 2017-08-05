@@ -16,6 +16,19 @@ class SpeechUtility {
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
+    private var recorder: AVAudioRecorder!
+    private var timer: Timer?
+    private var levelsHandler: ((Float)->Void)?
+    
+    private let url = URL(fileURLWithPath: "/dev/null", isDirectory: true)
+    private let settings: [String: Any] = [
+        AVSampleRateKey: 44100.0,
+        AVNumberOfChannelsKey: 1,
+        AVFormatIDKey: NSNumber(value: kAudioFormatAppleLossless),
+        AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue
+    ]
+
+    
     init(language: String, callback: @escaping (SFSpeechRecognizerAuthorizationStatus)->()){
         
         speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: language))!
@@ -25,9 +38,30 @@ class SpeechUtility {
                 callback(authStatus)
             }
         }
+        
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            //AVAudioSessionCategoryPlayAndRecord
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try audioSession.setMode(AVAudioSessionModeMeasurement)
+            try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+            
+            try recorder = AVAudioRecorder(url: url, settings: settings)
+            
+            
+        } catch {
+            print("Couldn't initialize the mic input")
+        }
+        
+        if let recorder = recorder {
+            //start observing mic levels
+            recorder.prepareToRecord()
+            recorder.isMeteringEnabled = true
+        }
+        
     }
     
-    func startRecording(callback: @escaping (String)->()) throws {
+    func startRecording(callback: @escaping (String)->(), levelHandler: @escaping (Float)->()) throws {
         
         // Cancel the previous task if it's running.
         if let recognitionTask = recognitionTask {
@@ -35,10 +69,12 @@ class SpeechUtility {
             self.recognitionTask = nil
         }
         
-        let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(AVAudioSessionCategoryRecord)
-        try audioSession.setMode(AVAudioSessionModeMeasurement)
-        try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+//        let audioSession = AVAudioSession.sharedInstance()
+//        //AVAudioSessionCategoryPlayAndRecord
+//        try audioSession.setCategory(AVAudioSessionCategoryRecord)
+//        try audioSession.setMode(AVAudioSessionModeMeasurement)
+//        try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+        
         
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         
@@ -72,20 +108,34 @@ class SpeechUtility {
             self.recognitionRequest?.append(buffer)
         }
         
+        
+        
         audioEngine.prepare()
         
         try audioEngine.start()
         
+//        startMonitoringLevels { (level: Float) in
+//            print("Mic level \(level)")
+//        }
+        
+        startMonitoringLevels(levelHandler)
+        
     }
     
     func stopRecording(){
+        
         if let recognitionTask = recognitionTask {
             recognitionTask.cancel()
             self.recognitionTask = nil
         }
         
+        recorder.stop()
+        levelsHandler = nil
+//        stopMonitoringLevels()
+        
         audioEngine.stop()
         recognitionRequest?.endAudio()
+        
         
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -96,5 +146,42 @@ class SpeechUtility {
         } catch {
             print("audioSession properties weren't reset because of an error.")
         }
+//For some reason, if i call stop monitoring, the app crashes if you try to restart.  So im just leaving the monitor active until the view is destroyed
+//        stopMonitoringLevels()
+        
+    }
+    
+    private func startMonitoringLevels(_ handler: ((Float)->Void)?) {
+        levelsHandler = handler
+        
+        if timer == nil {
+            //start meters
+            timer = Timer.scheduledTimer(timeInterval: 0.02, target: self, selector: #selector(SpeechUtility.handleMicLevel(_:)), userInfo: nil, repeats: true)
+        }
+        
+//        delay(delayInSeconds: <#T##Double#>, callback: <#T##() -> ()#>)
+        recorder.record()
+    }
+    
+    private func stopMonitoringLevels() {
+        levelsHandler = nil
+        timer?.invalidate()
+        recorder.stop()
+    }
+    
+    @objc private func handleMicLevel(_ timer: Timer) {
+        recorder.updateMeters()
+        // -160db to 0db
+        let rawLevel = recorder.averagePower(forChannel: 0)
+        
+        //Scalling it.
+        let scaledLevel = max(1, (rawLevel + 60)) / 60
+        
+        levelsHandler?(scaledLevel)
+    }
+    
+    deinit {
+        timer?.invalidate() //This was a hack beause stopping it without
+        stopRecording()
     }
 }
