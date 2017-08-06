@@ -16,6 +16,7 @@ target 'Enfoca' do
   # Pods for Enfoca
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'Google-Mobile-Ads-SDK'
 
   target 'EnfocaTests' do
     inherit! :search_paths

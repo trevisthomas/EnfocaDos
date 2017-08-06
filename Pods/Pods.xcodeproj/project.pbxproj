@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0067D8771465CA894EE4C1F51A456816 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		012D84B57EABEDFC2476014F62F1C1D6 /* Pods-Data Import-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Data Import-dummy.m"; sourceTree = "<group>"; };
 		01924E655F52B0D61B337DF470CC5347 /* Pods-Enfoca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Enfoca.debug.xcconfig"; sourceTree = "<group>"; };
 		045FE218516A0660D236BDA8F5A145D5 /* Pods-EnfocaUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EnfocaUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -32,65 +33,65 @@
 		0EA771892A66BD195B8541F4D322EDE9 /* Pods-EnfocaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnfocaTests.release.xcconfig"; sourceTree = "<group>"; };
 		0FC749DBFA71A9C23C37808E10176983 /* Pods-EnfocaTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EnfocaTests-umbrella.h"; sourceTree = "<group>"; };
 		0FEA52323159C2EF24F5B6A6E1D68322 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1002869B0ABB066C5605273FDFD4AF70 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 		12F8027E1F665E692CAC0F330081B5E3 /* Pods-Enfoca Dev.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Enfoca Dev.modulemap"; sourceTree = "<group>"; };
 		173481ED8497D803ACBE66D17164C141 /* Pods-Data Import.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Data Import.debug.xcconfig"; sourceTree = "<group>"; };
-		200C81134ACADBF4B01AF7F1C51DE9EC /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		1B578F5B6371ACD61B686630611F0AA4 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		20C71BE00042ACFD5A50DCB7355FCBFC /* Pods-EnfocaTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnfocaTests-resources.sh"; sourceTree = "<group>"; };
 		2337DFF15734AB5615D6252847A3D942 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243DA2BF77A31C0F0938C80AFC6F5A15 /* Pods-Enfoca Dev-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Enfoca Dev-acknowledgements.markdown"; sourceTree = "<group>"; };
 		272968598A26EED94A85CB277115091B /* Pods-Data Import-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Data Import-umbrella.h"; sourceTree = "<group>"; };
 		27FB3277FD4FE9934A0718177AE35175 /* Pods-EnfocaUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EnfocaUITests-dummy.m"; sourceTree = "<group>"; };
-		29DE526E5B1D3B37719460B12B391B91 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		2E2CB0A2A40F99A77267C19E275060A4 /* Pods_Data_Import.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Data_Import.framework; path = "Pods-Data Import.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA3C620835CA288FB1EAB736F3C1644 /* Pods-Data Import.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Data Import.modulemap"; sourceTree = "<group>"; };
+		3046F742B9FBF70A2C0026C8C8DDD461 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		32608562B48E40B1B3FE1FA0D6FD2358 /* Pods_EnfocaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EnfocaUITests.framework; path = "Pods-EnfocaUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EF92F57B303077468FA22E00FA1E34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		369304889DFC54A01A1F7521AF9AE14F /* Pods-Enfoca Dev-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Enfoca Dev-umbrella.h"; sourceTree = "<group>"; };
 		38BA03EB01DAB5DD70C6B8450F5A4BF0 /* Pods-Enfoca-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Enfoca-umbrella.h"; sourceTree = "<group>"; };
 		3EB13CD288A0778B7E7D379A45744D59 /* Pods-Enfoca-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Enfoca-frameworks.sh"; sourceTree = "<group>"; };
 		414B73D343FCD4E5AE6310D07453FE25 /* Pods-EnfocaTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnfocaTests-frameworks.sh"; sourceTree = "<group>"; };
-		494C290BDBEAED23BA5743A3CE2FA0D1 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		4CFA1897253FA561744EA6C8F66A78ED /* Pods-EnfocaUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnfocaUITests-frameworks.sh"; sourceTree = "<group>"; };
+		4F2014F46E176B65B3F5ED61F6A7F46E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		4F629680FD1353F10B6D9EEFCF586F68 /* Pods-EnfocaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnfocaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		51D312AF116C40A33FA00A940F15AD72 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
 		52BA78AE557AE6DDCEDFCCC3BBDACBB4 /* Pods-EnfocaTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EnfocaTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		53FA0E6BFEE4A7514659B172700FF11F /* Pods-EnfocaUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EnfocaUITests-umbrella.h"; sourceTree = "<group>"; };
 		560FC8B44C7756417DB5D0A819491531 /* Pods-EnfocaUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EnfocaUITests.modulemap"; sourceTree = "<group>"; };
-		5B0AC4555A08701A9F1760172610E0AF /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7209B478F6CE6E8D452C3A84E9982B6D /* Pods-EnfocaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnfocaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74831FC4C04D096580C3D3371A33DEE8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74A1569E22FE9B33918C490C4CFE377A /* Pods-EnfocaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnfocaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A514DCED23EE23CFDCFFDB9387781D5 /* Pods_Enfoca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Enfoca.framework; path = "Pods-Enfoca.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF38797E2D21E1B014175CC6E4833CF /* Pods-Enfoca-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Enfoca-resources.sh"; sourceTree = "<group>"; };
-		82981FB005A4ED4C556297735FD4ACED /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		8034D9FBAB8B96E4C4E60600F7879A86 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
 		8499248885C0D43F95A96B7C2540D813 /* Pods-Enfoca-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Enfoca-acknowledgements.markdown"; sourceTree = "<group>"; };
-		856A7EF81F93DD33C78FA7140067110C /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
 		8904C92C5C7776180C8B26E444684BDE /* Pods-Data Import-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Data Import-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8A138B3AB014B0C71290CCAC5BF8D606 /* Pods-Enfoca Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Enfoca Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		8B4ABE353CD7802388A3A0D1AA9C18B4 /* Pods-EnfocaUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnfocaUITests-resources.sh"; sourceTree = "<group>"; };
-		8DB331D62E03B90D571016097AB0A7E0 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 		912465E07C3B757ACAD74A8FDC653563 /* Pods-Enfoca Dev-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Enfoca Dev-frameworks.sh"; sourceTree = "<group>"; };
-		92972CC1C216B42A9AB4B6EABB27FC16 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A9C88169BB5B78A0BF21340BE085C6C /* Pods-Enfoca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Enfoca.release.xcconfig"; sourceTree = "<group>"; };
 		9F5A990A82571B6C6AD1B790A5A773D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A56B1335C6890C52066B4F0A0880BF91 /* Pods-EnfocaTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnfocaTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A61E08527EFC3DBEDD4BFA0B5C45104C /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		ABC2A2A9875D9DADE4366CB8D4632C2F /* Pods-Enfoca-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Enfoca-dummy.m"; sourceTree = "<group>"; };
+		AED7D10EB82280EAAA6C50C96FBCE173 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		B08787015D6FEDC5FE3BD89EEFC513BC /* Pods-EnfocaTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EnfocaTests-dummy.m"; sourceTree = "<group>"; };
 		B337AFEF29722E46117AA23FC9796061 /* Pods-Enfoca Dev-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Enfoca Dev-acknowledgements.plist"; sourceTree = "<group>"; };
 		B54F491511541EC8FA80AEFCB2F5DAAF /* Pods_EnfocaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EnfocaTests.framework; path = "Pods-EnfocaTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA79CC214485F97A8254DE6A29C487C6 /* Pods-EnfocaUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnfocaUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BB6995158E9397751E37D99C7E4BBACF /* Pods-Enfoca-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Enfoca-acknowledgements.plist"; sourceTree = "<group>"; };
 		C4F522F24E1224CF86882ADE113FD464 /* Pods-Enfoca Dev-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Enfoca Dev-dummy.m"; sourceTree = "<group>"; };
-		DBA48C54AB315A7317F3DD387EF04883 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		C5CDE4B96ABA6E0F177143EF4B92CA2C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		C68F98075ACF80A671EEE5EA2A785881 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		C7A7DF6CFDE3A89A6DAB7CD360B7974F /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		DC06C9DCC488401883E597878EA11D55 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		DCF79F557B350FC2596FD80261BC8175 /* Pods-Enfoca.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Enfoca.modulemap"; sourceTree = "<group>"; };
 		DE4998477F7EB0200663FB10417446D7 /* Pods-EnfocaTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EnfocaTests.modulemap"; sourceTree = "<group>"; };
 		E0F606E19B253ACEFC49A53BDB61677A /* Pods-Data Import-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Data Import-resources.sh"; sourceTree = "<group>"; };
 		E261E99C1D1F938C1F00FE13AE0CEADA /* Pods-Enfoca Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Enfoca Dev.release.xcconfig"; sourceTree = "<group>"; };
 		E51A7675D7E419C901E8DA26E61909A7 /* Pods-Enfoca Dev-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Enfoca Dev-resources.sh"; sourceTree = "<group>"; };
 		EA15DBB4B11E9C72ACF490E819F5346D /* Pods-Data Import-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Data Import-frameworks.sh"; sourceTree = "<group>"; };
-		EAC88243AB9F702F3015F7068842116A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		EF122D0010AFC882DC563C9428577C62 /* Pods-Data Import.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Data Import.release.xcconfig"; sourceTree = "<group>"; };
 		FD18433DFFDF446508C823B7A0AF29D0 /* Pods-Data Import-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Data Import-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +140,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02A7F044355E0E37D84D102F4C2BFFA3 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				DC06C9DCC488401883E597878EA11D55 /* FABAttributes.h */,
+				51D312AF116C40A33FA00A940F15AD72 /* Fabric.h */,
+				D440AC702182065EBDA22A8ADECE2265 /* Frameworks */,
+			);
+			name = Fabric;
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		052A2FE2524436A2A0576784EEB37B50 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				C68F98075ACF80A671EEE5EA2A785881 /* ANSCompatibility.h */,
+				0067D8771465CA894EE4C1F51A456816 /* Answers.h */,
+				1002869B0ABB066C5605273FDFD4AF70 /* CLSAttributes.h */,
+				1B578F5B6371ACD61B686630611F0AA4 /* CLSLogging.h */,
+				8034D9FBAB8B96E4C4E60600F7879A86 /* CLSReport.h */,
+				C7A7DF6CFDE3A89A6DAB7CD360B7974F /* CLSStackFrame.h */,
+				AED7D10EB82280EAAA6C50C96FBCE173 /* Crashlytics.h */,
+				801D5FCBC283705F639FCD1FEAC3A79D /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
 		058DD706B489947F75F862CC70514BC8 /* Pods-Enfoca */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,37 +185,13 @@
 			path = "Target Support Files/Pods-Enfoca";
 			sourceTree = "<group>";
 		};
-		1DECF7299F0875E9BCB9492390207331 /* Pods */ = {
+		1250CCB0DF35AB83B9B08814A6CEDB8F /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				26F9D6AB1F30C869A5F58AF8EF5A99C8 /* Crashlytics */,
-				D479A0301687E2A8F6F67D392B8551D2 /* Fabric */,
+				962407FEC8C0E9ADB73E5716A2D2CDCD /* Frameworks */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		26F9D6AB1F30C869A5F58AF8EF5A99C8 /* Crashlytics */ = {
-			isa = PBXGroup;
-			children = (
-				5B0AC4555A08701A9F1760172610E0AF /* ANSCompatibility.h */,
-				A61E08527EFC3DBEDD4BFA0B5C45104C /* Answers.h */,
-				8DB331D62E03B90D571016097AB0A7E0 /* CLSAttributes.h */,
-				29DE526E5B1D3B37719460B12B391B91 /* CLSLogging.h */,
-				856A7EF81F93DD33C78FA7140067110C /* CLSReport.h */,
-				DBA48C54AB315A7317F3DD387EF04883 /* CLSStackFrame.h */,
-				200C81134ACADBF4B01AF7F1C51DE9EC /* Crashlytics.h */,
-				E268B07786115FF5D5DFF396150E695F /* Frameworks */,
-			);
-			name = Crashlytics;
-			path = Crashlytics;
-			sourceTree = "<group>";
-		};
-		2DDA681774534EB985F60A3418A4C908 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				92972CC1C216B42A9AB4B6EABB27FC16 /* Fabric.framework */,
-			);
-			name = Frameworks;
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
 		54317C176BE8C730F1ACC2527A10A0CC /* Pods-Data Import */ = {
@@ -249,10 +253,18 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				1DECF7299F0875E9BCB9492390207331 /* Pods */,
+				A98E770F75560939087969303E97D0FF /* Pods */,
 				D0C17D9E778D0A40085A9FB61D7E939E /* Products */,
 				81B2DFEE6A4406CF967AF3C26CF00EE1 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		801D5FCBC283705F639FCD1FEAC3A79D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F2014F46E176B65B3F5ED61F6A7F46E /* Crashlytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		81B2DFEE6A4406CF967AF3C26CF00EE1 /* Targets Support Files */ = {
@@ -285,6 +297,24 @@
 			path = "Target Support Files/Pods-EnfocaTests";
 			sourceTree = "<group>";
 		};
+		962407FEC8C0E9ADB73E5716A2D2CDCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3046F742B9FBF70A2C0026C8C8DDD461 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A98E770F75560939087969303E97D0FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				052A2FE2524436A2A0576784EEB37B50 /* Crashlytics */,
+				02A7F044355E0E37D84D102F4C2BFFA3 /* Fabric */,
+				1250CCB0DF35AB83B9B08814A6CEDB8F /* Google-Mobile-Ads-SDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,21 +343,10 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D479A0301687E2A8F6F67D392B8551D2 /* Fabric */ = {
+		D440AC702182065EBDA22A8ADECE2265 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				494C290BDBEAED23BA5743A3CE2FA0D1 /* FABAttributes.h */,
-				82981FB005A4ED4C556297735FD4ACED /* Fabric.h */,
-				2DDA681774534EB985F60A3418A4C908 /* Frameworks */,
-			);
-			name = Fabric;
-			path = Fabric;
-			sourceTree = "<group>";
-		};
-		E268B07786115FF5D5DFF396150E695F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EAC88243AB9F702F3015F7068842116A /* Crashlytics.framework */,
+				C5CDE4B96ABA6E0F177143EF4B92CA2C /* Fabric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class QuizResultsViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class QuizResultsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var animatedScoreContainer: UIView!
     
+    fileprivate var interstitial: GADInterstitial!
     private var sharedViewModel: QuizViewModel!
     fileprivate var defaultAnimator: EnfocaDefaultAnimator = EnfocaDefaultAnimator()
     private var scoreViewController: ScoreViewController!
@@ -30,6 +32,12 @@ class QuizResultsViewController: UIViewController {
         scoreViewController = createScoreViewController(inContainerView: animatedScoreContainer)
         
         sharedViewModel.updateDataStoreCache()
+        
+        interstitial = createAndLoadInterstitialAd()
+    }
+    
+    override func adComplete() {
+        self.performSegue(withIdentifier: "HomeSegue", sender: nil)
     }
     
     func initialize(sharedViewModel: QuizViewModel){
@@ -59,7 +67,12 @@ class QuizResultsViewController: UIViewController {
         performSegue(withIdentifier: "MatchingReviewSegue", sender: nil)
     }
     @IBAction func doneAction(_ sender: Any) {
-        performSegue(withIdentifier: "HomeSegue", sender: nil)
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+            performSegue(withIdentifier: "HomeSegue", sender: nil)
+        }
     }
     
     
@@ -137,6 +150,7 @@ extension QuizResultsViewController: HomeFromQuizAnimatorTarget {
         return headerHightConstrant.constant
     }
 }
+
 
 
 

@@ -7,8 +7,55 @@
 //
 
 import UIKit
+import GoogleMobileAds
+
+
+
+extension UIViewController: GADInterstitialDelegate {
+    
+    public func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        adComplete()
+    }
+    
+    public func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        print("interstitialDidFail, failed to get ad")
+    }
+    
+    /// Tells the delegate an ad request succeeded.
+    public func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("interstitialDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    public func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    //Override
+    func adComplete() {
+        
+    }
+
+}
 
 extension UIViewController{
+    func createAndLoadInterstitialAd() -> GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3180837286301438/2758544760")
+        
+        
+        interstitial.delegate = self
+        
+        let request = GADRequest()
+        
+        //REMOVE BEFORE RELEAE TO APP STORE!!!!!!!!!!
+        request.testDevices = [ kGADSimulatorID,
+                                "91b2fe5490b84a564216fd2a22530806" // - my iPhone
+        ]
+        
+        interstitial.load(request)
+        return interstitial
+    }
+    
     func presentAlert(title : String, message : String?){
         
         let alertController = UIAlertController(title: title, message:

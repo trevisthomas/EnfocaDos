@@ -286,7 +286,7 @@ class ModularHomeViewController: UIViewController {
         getAppDelegate().saveDefaults()
         performSegue(withIdentifier: "DictionarySelectionSeque", sender: nil)
         
-        Crashlytics.sharedInstance().crash()
+//        Crashlytics.sharedInstance().crash()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
