@@ -9,6 +9,8 @@
 import UIKit
 import CloudKit
 import UserNotifications
+import Fabric
+import Crashlytics
 
 struct WeakReference<T>
 {
@@ -45,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         
+        Fabric.with([Crashlytics.self])
         do {
             Network.reachability = try Reachability(hostname: "www.google.com")
             do {

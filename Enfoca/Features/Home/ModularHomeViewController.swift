@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 class ModularHomeViewController: UIViewController {
     
@@ -77,7 +79,7 @@ class ModularHomeViewController: UIViewController {
         
         
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         controller.reloadTags()
         controller.search()
@@ -283,6 +285,8 @@ class ModularHomeViewController: UIViewController {
     @IBAction func backButtonAction(_ sender: Any) {
         getAppDelegate().saveDefaults()
         performSegue(withIdentifier: "DictionarySelectionSeque", sender: nil)
+        
+        Crashlytics.sharedInstance().crash()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

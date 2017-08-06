@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Data Import.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Enfoca Dev.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Enfoca.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EnfocaTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EnfocaUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1A93F3610DC4B5D3085216CF1A739390</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4455CD06D9909ABB2D40ED381D923D51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E76CABCECC85680A8F1479F6CE435C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A249C50ED17D525C669324B25B2EF0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6AF34A49FBBAB6493DBBB878686B655</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

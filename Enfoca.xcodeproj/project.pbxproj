@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045DECEF57FEEEDC73B383A1 /* Pods_Data_Import.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E675BA8F01B12188CC100184 /* Pods_Data_Import.framework */; };
 		0F011EAA1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
 		0F011EAB1EEAF03500939B75 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EA91EEAF03500939B75 /* CheckMarkView.swift */; };
 		0F011EAE1EEB25FB00939B75 /* QuizOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F011EAD1EEB25FB00939B75 /* QuizOptionsViewModel.swift */; };
@@ -550,6 +551,10 @@
 		0FE015B11EFDA72E00780184 /* QuizResultsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */; };
 		0FEB41F71F2E24A000821D8D /* SharedComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */; };
 		0FEB41F81F2E24A000821D8D /* SharedComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */; };
+		456CDD4FB4667A00B879E626 /* Pods_Enfoca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB9552715F87C80F7F626AB /* Pods_Enfoca.framework */; };
+		47D88C6AAF15B606F46A11AC /* Pods_EnfocaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6921FB5CA3B00C7DED9CC65 /* Pods_EnfocaUITests.framework */; };
+		BB451E2E522D1753381E326B /* Pods_EnfocaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D88CAF85B15F1C7DA764C88 /* Pods_EnfocaTests.framework */; };
+		E27289282FE2019BB0952DFA /* Pods_Enfoca_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C794E034002C5C9650D3E9C /* Pods_Enfoca_Dev.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -570,6 +575,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		063ED8FB78C9420A60A1E159 /* Pods-Data Import.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data Import.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Data Import/Pods-Data Import.debug.xcconfig"; sourceTree = "<group>"; };
 		0F011EA91EEAF03500939B75 /* CheckMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkView.swift; sourceTree = "<group>"; };
 		0F011EAD1EEB25FB00939B75 /* QuizOptionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizOptionsViewModel.swift; path = Quiz/QuizOptionsViewModel.swift; sourceTree = "<group>"; };
 		0F011EB01EEB2AAB00939B75 /* QuizOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizOptionsViewController.swift; path = Quiz/QuizOptionsViewController.swift; sourceTree = "<group>"; };
@@ -784,6 +790,20 @@
 		0FE015AA1EFD697F00780184 /* EnfocaDefaultAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfocaDefaultAnimator.swift; sourceTree = "<group>"; };
 		0FE015AF1EFDA72E00780184 /* QuizResultsAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultsAnimator.swift; sourceTree = "<group>"; };
 		0FEB41F61F2E24A000821D8D /* SharedComponents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SharedComponents.storyboard; sourceTree = "<group>"; };
+		2B4268AF0E062D3C6312A384 /* Pods-EnfocaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnfocaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnfocaTests/Pods-EnfocaTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FB9552715F87C80F7F626AB /* Pods_Enfoca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Enfoca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48A8F01F5B1A9393F4CEC517 /* Pods-Enfoca Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enfoca Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Enfoca Dev/Pods-Enfoca Dev.release.xcconfig"; sourceTree = "<group>"; };
+		7707CE6B6A810FBFE281E925 /* Pods-EnfocaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnfocaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnfocaUITests/Pods-EnfocaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7918B20AD357C6FFA058F229 /* Pods-Enfoca Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enfoca Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Enfoca Dev/Pods-Enfoca Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		7D88CAF85B15F1C7DA764C88 /* Pods_EnfocaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnfocaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9874E84EE3A186F12E0629A5 /* Pods-Enfoca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enfoca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Enfoca/Pods-Enfoca.debug.xcconfig"; sourceTree = "<group>"; };
+		9C794E034002C5C9650D3E9C /* Pods_Enfoca_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Enfoca_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5662995B7BF638BF1B0F60B /* Pods-EnfocaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnfocaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnfocaUITests/Pods-EnfocaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE9281CF694FB5624910DB31 /* Pods-Enfoca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enfoca.release.xcconfig"; path = "Pods/Target Support Files/Pods-Enfoca/Pods-Enfoca.release.xcconfig"; sourceTree = "<group>"; };
+		C1E72D0CB96333B5A4E14E3D /* Pods-EnfocaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnfocaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnfocaTests/Pods-EnfocaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6921FB5CA3B00C7DED9CC65 /* Pods_EnfocaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnfocaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E675BA8F01B12188CC100184 /* Pods_Data_Import.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data_Import.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA536DA1E857D4E7193E83AC /* Pods-Data Import.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data Import.release.xcconfig"; path = "Pods/Target Support Files/Pods-Data Import/Pods-Data Import.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -791,6 +811,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D88C6AAF15B606F46A11AC /* Pods_EnfocaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F911E721EE75D4600F21855 /* CloudKit.framework in Frameworks */,
+				E27289282FE2019BB0952DFA /* Pods_Enfoca_Dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +829,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F911ED41EE766D900F21855 /* CloudKit.framework in Frameworks */,
+				045DECEF57FEEEDC73B383A1 /* Pods_Data_Import.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,6 +838,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FA4A4AF1EC89DEF00F31F9A /* CloudKit.framework in Frameworks */,
+				456CDD4FB4667A00B879E626 /* Pods_Enfoca.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +846,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB451E2E522D1753381E326B /* Pods_EnfocaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,6 +1069,7 @@
 				0F085B791ED8796D00FC20A1 /* EnfocaUITests */,
 				0FA4A4AD1EC89DEF00F31F9A /* Frameworks */,
 				0FA4A48A1EC89C0D00F31F9A /* Products */,
+				6E1CB2D4D965B521FF6C7618 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1095,6 +1121,11 @@
 			isa = PBXGroup;
 			children = (
 				0FA4A4AE1EC89DEF00F31F9A /* CloudKit.framework */,
+				E675BA8F01B12188CC100184 /* Pods_Data_Import.framework */,
+				3FB9552715F87C80F7F626AB /* Pods_Enfoca.framework */,
+				9C794E034002C5C9650D3E9C /* Pods_Enfoca_Dev.framework */,
+				7D88CAF85B15F1C7DA764C88 /* Pods_EnfocaTests.framework */,
+				C6921FB5CA3B00C7DED9CC65 /* Pods_EnfocaUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1416,6 +1447,23 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		6E1CB2D4D965B521FF6C7618 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				063ED8FB78C9420A60A1E159 /* Pods-Data Import.debug.xcconfig */,
+				FA536DA1E857D4E7193E83AC /* Pods-Data Import.release.xcconfig */,
+				9874E84EE3A186F12E0629A5 /* Pods-Enfoca.debug.xcconfig */,
+				BE9281CF694FB5624910DB31 /* Pods-Enfoca.release.xcconfig */,
+				7918B20AD357C6FFA058F229 /* Pods-Enfoca Dev.debug.xcconfig */,
+				48A8F01F5B1A9393F4CEC517 /* Pods-Enfoca Dev.release.xcconfig */,
+				C1E72D0CB96333B5A4E14E3D /* Pods-EnfocaTests.debug.xcconfig */,
+				2B4268AF0E062D3C6312A384 /* Pods-EnfocaTests.release.xcconfig */,
+				B5662995B7BF638BF1B0F60B /* Pods-EnfocaUITests.debug.xcconfig */,
+				7707CE6B6A810FBFE281E925 /* Pods-EnfocaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1423,9 +1471,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F085B811ED8796D00FC20A1 /* Build configuration list for PBXNativeTarget "EnfocaUITests" */;
 			buildPhases = (
+				DF470DB661C99A8871520C74 /* [CP] Check Pods Manifest.lock */,
 				0F085B741ED8796D00FC20A1 /* Sources */,
 				0F085B751ED8796D00FC20A1 /* Frameworks */,
 				0F085B761ED8796D00FC20A1 /* Resources */,
+				861604712B25166EBB3E4320 /* [CP] Embed Pods Frameworks */,
+				C4402B475B3AF0510131E487 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1441,9 +1492,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F911E7C1EE75D4600F21855 /* Build configuration list for PBXNativeTarget "Enfoca Dev" */;
 			buildPhases = (
+				63DC4864A4E834758F19CDC6 /* [CP] Check Pods Manifest.lock */,
 				0F911E201EE75D4600F21855 /* Sources */,
 				0F911E711EE75D4600F21855 /* Frameworks */,
 				0F911E731EE75D4600F21855 /* Resources */,
+				0B48277FD1C4F97F3226312C /* [CP] Embed Pods Frameworks */,
+				FABC2FB9907F8B030E9AE52F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1458,9 +1512,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F911EDE1EE766D900F21855 /* Build configuration list for PBXNativeTarget "Data Import" */;
 			buildPhases = (
+				518DA2E5DF0083BB113A03D1 /* [CP] Check Pods Manifest.lock */,
 				0F911E821EE766D900F21855 /* Sources */,
 				0F911ED31EE766D900F21855 /* Frameworks */,
 				0F911ED51EE766D900F21855 /* Resources */,
+				DB566A76DB6D3303F1BC651C /* [CP] Embed Pods Frameworks */,
+				61CD634A6F04AC041E2722C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1475,9 +1532,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FA4A4A61EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "Enfoca" */;
 			buildPhases = (
+				B3A849454471DC01FB362159 /* [CP] Check Pods Manifest.lock */,
 				0FA4A4851EC89C0D00F31F9A /* Sources */,
 				0FA4A4861EC89C0D00F31F9A /* Frameworks */,
 				0FA4A4871EC89C0D00F31F9A /* Resources */,
+				C83FB6EEA7222FD8C5886A11 /* [CP] Embed Pods Frameworks */,
+				BBA96E0EBB3E5F0127B867BC /* [CP] Copy Pods Resources */,
+				0F35D80D1F3784FD004E872F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1492,9 +1553,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FA4A4A91EC89C0D00F31F9A /* Build configuration list for PBXNativeTarget "EnfocaTests" */;
 			buildPhases = (
+				362DEC658D7408B31937060A /* [CP] Check Pods Manifest.lock */,
 				0FA4A4991EC89C0D00F31F9A /* Sources */,
 				0FA4A49A1EC89C0D00F31F9A /* Frameworks */,
 				0FA4A49B1EC89C0D00F31F9A /* Resources */,
+				0DDDEAF0289E2CC6FBED9DEF /* [CP] Embed Pods Frameworks */,
+				5F3BBA64D75516D98D78BCBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1668,6 +1732,262 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B48277FD1C4F97F3226312C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Enfoca Dev/Pods-Enfoca Dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DDDEAF0289E2CC6FBED9DEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EnfocaTests/Pods-EnfocaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F35D80D1F3784FD004E872F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 622a858380797911de0c671192ba81b53549e6e5 8c6b230d1d7fd244bb79f1397e86d4be3c53383ef6e2184fa1f268143dea0836";
+		};
+		362DEC658D7408B31937060A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnfocaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		518DA2E5DF0083BB113A03D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Data Import-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F3BBA64D75516D98D78BCBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EnfocaTests/Pods-EnfocaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61CD634A6F04AC041E2722C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Data Import/Pods-Data Import-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63DC4864A4E834758F19CDC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Enfoca Dev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		861604712B25166EBB3E4320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EnfocaUITests/Pods-EnfocaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A849454471DC01FB362159 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Enfoca-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBA96E0EBB3E5F0127B867BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Enfoca/Pods-Enfoca-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4402B475B3AF0510131E487 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EnfocaUITests/Pods-EnfocaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C83FB6EEA7222FD8C5886A11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Enfoca/Pods-Enfoca-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB566A76DB6D3303F1BC651C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Data Import/Pods-Data Import-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF470DB661C99A8871520C74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnfocaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FABC2FB9907F8B030E9AE52F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Enfoca Dev/Pods-Enfoca Dev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F085B741ED8796D00FC20A1 /* Sources */ = {
@@ -2222,6 +2542,7 @@
 /* Begin XCBuildConfiguration section */
 		0F085B7F1ED8796D00FC20A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5662995B7BF638BF1B0F60B /* Pods-EnfocaUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = EnfocaUITests/Info.plist;
@@ -2235,6 +2556,7 @@
 		};
 		0F085B801ED8796D00FC20A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7707CE6B6A810FBFE281E925 /* Pods-EnfocaUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = EnfocaUITests/Info.plist;
@@ -2248,6 +2570,7 @@
 		};
 		0F911E7D1EE75D4600F21855 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7918B20AD357C6FFA058F229 /* Pods-Enfoca Dev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -2266,6 +2589,7 @@
 		};
 		0F911E7E1EE75D4600F21855 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A8F01F5B1A9393F4CEC517 /* Pods-Enfoca Dev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -2284,6 +2608,7 @@
 		};
 		0F911EDF1EE766D900F21855 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 063ED8FB78C9420A60A1E159 /* Pods-Data Import.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
@@ -2298,6 +2623,7 @@
 		};
 		0F911EE01EE766D900F21855 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA536DA1E857D4E7193E83AC /* Pods-Data Import.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
@@ -2408,12 +2734,14 @@
 		};
 		0FA4A4A71EC89C0D00F31F9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9874E84EE3A186F12E0629A5 /* Pods-Enfoca.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Brain";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Enfoca/Enfoca.entitlements;
 				DEBUG_ACTIVITY_MODE = "";
 				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = KRNJ229R7J;
 				INFOPLIST_FILE = Enfoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2428,6 +2756,7 @@
 		};
 		0FA4A4A81EC89C0D00F31F9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE9281CF694FB5624910DB31 /* Pods-Enfoca.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Brain";
 				CLANG_ENABLE_MODULES = YES;
@@ -2447,6 +2776,7 @@
 		};
 		0FA4A4AA1EC89C0D00F31F9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1E72D0CB96333B5A4E14E3D /* Pods-EnfocaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2462,6 +2792,7 @@
 		};
 		0FA4A4AB1EC89C0D00F31F9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B4268AF0E062D3C6312A384 /* Pods-EnfocaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

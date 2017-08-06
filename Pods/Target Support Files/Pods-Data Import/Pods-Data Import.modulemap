@@ -1,0 +1,6 @@
+framework module Pods_Data_Import {
+  umbrella header "Pods-Data Import-umbrella.h"
+
+  export *
+  module * { export * }
+}

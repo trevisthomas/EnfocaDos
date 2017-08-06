@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "523491000.661467"
+            timestampString = "523732472.141387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "WeakReference"
             landmarkType = "14">
          </BreakpointContent>
@@ -472,11 +472,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "523491000.661864"
+            timestampString = "523732472.141387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -520,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "523491000.661941"
+            timestampString = "523732472.141387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -536,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "523491000.661985"
+            timestampString = "523732472.141387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "presentAlert(title:message:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -552,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Core/AppDelegate.swift"
-            timestampString = "523491000.662024"
+            timestampString = "523732472.141387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -568,12 +568,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Core/AppDelegate.swift"
-                  timestampString = "523695705.405322"
+                  timestampString = "523732477.21831"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "2024">
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "2791">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -583,12 +583,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Core/AppDelegate.swift"
-                  timestampString = "523695705.406654"
+                  timestampString = "523732477.220528"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
-                  offsetFromSymbolStart = "28">
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "27">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1317,12 +1317,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/LocalCloudKitWebService.swift"
-                  timestampString = "523695705.427839"
+                  timestampString = "523732477.261303"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "379"
                   endingLineNumber = "379"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "94">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1332,12 +1332,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/LocalCloudKitWebService.swift"
-                  timestampString = "523695705.429215"
+                  timestampString = "523732477.264426"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "380"
                   endingLineNumber = "380"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "71">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1589,12 +1589,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "523695705.556437"
+                  timestampString = "523732477.296072"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "246"
                   endingLineNumber = "246"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "97">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1604,12 +1604,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "523695705.558928"
+                  timestampString = "523732477.299591"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "247"
                   endingLineNumber = "247"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1877,12 +1877,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/Operations/Core/Meta/OperationFetchMetaData.swift"
-                  timestampString = "523695705.596308"
+                  timestampString = "523732477.355148"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "26">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1892,12 +1892,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/Operations/Core/Meta/OperationFetchMetaData.swift"
-                  timestampString = "523695705.598076"
+                  timestampString = "523732477.36211"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "72">
+                  offsetFromSymbolStart = "73">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1935,11 +1935,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Enfoca/Features/Home/ModularHomeViewController.swift"
-            timestampString = "522197871.469717"
+            timestampString = "523732753.391843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "377"
-            endingLineNumber = "377"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
             landmarkName = "animationController(forDismissed:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2079,12 +2079,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "523695705.631082"
+                  timestampString = "523732477.673554"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "273"
                   endingLineNumber = "273"
-                  offsetFromSymbolStart = "128">
+                  offsetFromSymbolStart = "172">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2094,12 +2094,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "523695705.632475"
+                  timestampString = "523732477.675457"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "276"
                   endingLineNumber = "276"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "73">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2143,12 +2143,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "523695705.638526"
+                  timestampString = "523732477.728223"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "246"
                   endingLineNumber = "246"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "97">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2158,12 +2158,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "523695705.639902"
+                  timestampString = "523732477.73028"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "247"
                   endingLineNumber = "247"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2191,12 +2191,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "523695705.643322"
+                  timestampString = "523732477.738214"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "298"
                   endingLineNumber = "298"
-                  offsetFromSymbolStart = "72">
+                  offsetFromSymbolStart = "66">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2206,12 +2206,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Features/Edit/EditWordPairController.swift"
-                  timestampString = "523695705.644698"
+                  timestampString = "523732477.740226"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "298"
                   endingLineNumber = "298"
-                  offsetFromSymbolStart = "164">
+                  offsetFromSymbolStart = "200">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2335,12 +2335,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/UiTestWebService.swift"
-                  timestampString = "523695705.661325"
+                  timestampString = "523732478.494612"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "325"
                   endingLineNumber = "325"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2350,12 +2350,12 @@
                   moduleName = "Enfoca"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/trevis/Development/iOS/EnfocaDos/Enfoca/Enfoca/Network/UiTestWebService.swift"
-                  timestampString = "523695705.662696"
+                  timestampString = "523732478.497137"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "326"
                   endingLineNumber = "326"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "23">
                </Location>
             </Locations>
          </BreakpointContent>

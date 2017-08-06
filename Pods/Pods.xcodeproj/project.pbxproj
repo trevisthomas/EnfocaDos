@@ -1,0 +1,1053 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01DC03E0FEBCD2937FB0203BCB7E5611 /* Pods-Enfoca-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC2A2A9875D9DADE4366CB8D4632C2F /* Pods-Enfoca-dummy.m */; };
+		263B996FBE5AA30BAFBBC9CEF30952F2 /* Pods-EnfocaUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53FA0E6BFEE4A7514659B172700FF11F /* Pods-EnfocaUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3263DD1B42FA00ADD358B013FC4DC863 /* Pods-Data Import-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 012D84B57EABEDFC2476014F62F1C1D6 /* Pods-Data Import-dummy.m */; };
+		3FE49BDF9E7130C634E63AF5239BCCB9 /* Pods-EnfocaUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FB3277FD4FE9934A0718177AE35175 /* Pods-EnfocaUITests-dummy.m */; };
+		68A8E1AC7A0F1E8F93D3B83B2AB7254A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8B8A7E5DC5CCBE997A6625762993D0AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9EA8649E4BA15C839BE734B048B77E9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A62D4AE94D4FF990A52A71C1D84FFDB2 /* Pods-Enfoca Dev-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 369304889DFC54A01A1F7521AF9AE14F /* Pods-Enfoca Dev-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADEA3D622C7034AEF35629574EC4888F /* Pods-Data Import-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 272968598A26EED94A85CB277115091B /* Pods-Data Import-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9B455C7FFDD4360606A1C10FF4741FE /* Pods-Enfoca Dev-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F522F24E1224CF86882ADE113FD464 /* Pods-Enfoca Dev-dummy.m */; };
+		DA141779AE0BD045516BC6FDCB6D2BB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E6A03CA63837E516340C2F1345804788 /* Pods-EnfocaTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B08787015D6FEDC5FE3BD89EEFC513BC /* Pods-EnfocaTests-dummy.m */; };
+		EC174BE79CE3C224ACD7830A3EA7E333 /* Pods-EnfocaTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FC749DBFA71A9C23C37808E10176983 /* Pods-EnfocaTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF7AA11C050CE06AF1E5ACFBA79CFAFC /* Pods-Enfoca-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BA03EB01DAB5DD70C6B8450F5A4BF0 /* Pods-Enfoca-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF300BDBF536EBD98E045647AF887254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		012D84B57EABEDFC2476014F62F1C1D6 /* Pods-Data Import-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Data Import-dummy.m"; sourceTree = "<group>"; };
+		01924E655F52B0D61B337DF470CC5347 /* Pods-Enfoca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Enfoca.debug.xcconfig"; sourceTree = "<group>"; };
+		045FE218516A0660D236BDA8F5A145D5 /* Pods-EnfocaUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EnfocaUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0DD97B0DEA4986BBBA79AEAEC399F5BA /* Pods_Enfoca_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Enfoca_Dev.framework; path = "Pods-Enfoca Dev.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA771892A66BD195B8541F4D322EDE9 /* Pods-EnfocaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnfocaTests.release.xcconfig"; sourceTree = "<group>"; };
+		0FC749DBFA71A9C23C37808E10176983 /* Pods-EnfocaTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EnfocaTests-umbrella.h"; sourceTree = "<group>"; };
+		0FEA52323159C2EF24F5B6A6E1D68322 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12F8027E1F665E692CAC0F330081B5E3 /* Pods-Enfoca Dev.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Enfoca Dev.modulemap"; sourceTree = "<group>"; };
+		173481ED8497D803ACBE66D17164C141 /* Pods-Data Import.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Data Import.debug.xcconfig"; sourceTree = "<group>"; };
+		200C81134ACADBF4B01AF7F1C51DE9EC /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		20C71BE00042ACFD5A50DCB7355FCBFC /* Pods-EnfocaTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnfocaTests-resources.sh"; sourceTree = "<group>"; };
+		2337DFF15734AB5615D6252847A3D942 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		243DA2BF77A31C0F0938C80AFC6F5A15 /* Pods-Enfoca Dev-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Enfoca Dev-acknowledgements.markdown"; sourceTree = "<group>"; };
+		272968598A26EED94A85CB277115091B /* Pods-Data Import-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Data Import-umbrella.h"; sourceTree = "<group>"; };
+		27FB3277FD4FE9934A0718177AE35175 /* Pods-EnfocaUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EnfocaUITests-dummy.m"; sourceTree = "<group>"; };
+		29DE526E5B1D3B37719460B12B391B91 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		2E2CB0A2A40F99A77267C19E275060A4 /* Pods_Data_Import.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Data_Import.framework; path = "Pods-Data Import.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA3C620835CA288FB1EAB736F3C1644 /* Pods-Data Import.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Data Import.modulemap"; sourceTree = "<group>"; };
+		32608562B48E40B1B3FE1FA0D6FD2358 /* Pods_EnfocaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EnfocaUITests.framework; path = "Pods-EnfocaUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33EF92F57B303077468FA22E00FA1E34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		369304889DFC54A01A1F7521AF9AE14F /* Pods-Enfoca Dev-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Enfoca Dev-umbrella.h"; sourceTree = "<group>"; };
+		38BA03EB01DAB5DD70C6B8450F5A4BF0 /* Pods-Enfoca-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Enfoca-umbrella.h"; sourceTree = "<group>"; };
+		3EB13CD288A0778B7E7D379A45744D59 /* Pods-Enfoca-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Enfoca-frameworks.sh"; sourceTree = "<group>"; };
+		414B73D343FCD4E5AE6310D07453FE25 /* Pods-EnfocaTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnfocaTests-frameworks.sh"; sourceTree = "<group>"; };
+		494C290BDBEAED23BA5743A3CE2FA0D1 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		4CFA1897253FA561744EA6C8F66A78ED /* Pods-EnfocaUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnfocaUITests-frameworks.sh"; sourceTree = "<group>"; };
+		4F629680FD1353F10B6D9EEFCF586F68 /* Pods-EnfocaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnfocaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		52BA78AE557AE6DDCEDFCCC3BBDACBB4 /* Pods-EnfocaTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EnfocaTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		53FA0E6BFEE4A7514659B172700FF11F /* Pods-EnfocaUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EnfocaUITests-umbrella.h"; sourceTree = "<group>"; };
+		560FC8B44C7756417DB5D0A819491531 /* Pods-EnfocaUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EnfocaUITests.modulemap"; sourceTree = "<group>"; };
+		5B0AC4555A08701A9F1760172610E0AF /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7209B478F6CE6E8D452C3A84E9982B6D /* Pods-EnfocaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnfocaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74831FC4C04D096580C3D3371A33DEE8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74A1569E22FE9B33918C490C4CFE377A /* Pods-EnfocaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnfocaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A514DCED23EE23CFDCFFDB9387781D5 /* Pods_Enfoca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Enfoca.framework; path = "Pods-Enfoca.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF38797E2D21E1B014175CC6E4833CF /* Pods-Enfoca-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Enfoca-resources.sh"; sourceTree = "<group>"; };
+		82981FB005A4ED4C556297735FD4ACED /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		8499248885C0D43F95A96B7C2540D813 /* Pods-Enfoca-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Enfoca-acknowledgements.markdown"; sourceTree = "<group>"; };
+		856A7EF81F93DD33C78FA7140067110C /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		8904C92C5C7776180C8B26E444684BDE /* Pods-Data Import-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Data Import-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8A138B3AB014B0C71290CCAC5BF8D606 /* Pods-Enfoca Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Enfoca Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		8B4ABE353CD7802388A3A0D1AA9C18B4 /* Pods-EnfocaUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnfocaUITests-resources.sh"; sourceTree = "<group>"; };
+		8DB331D62E03B90D571016097AB0A7E0 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		912465E07C3B757ACAD74A8FDC653563 /* Pods-Enfoca Dev-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Enfoca Dev-frameworks.sh"; sourceTree = "<group>"; };
+		92972CC1C216B42A9AB4B6EABB27FC16 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A9C88169BB5B78A0BF21340BE085C6C /* Pods-Enfoca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Enfoca.release.xcconfig"; sourceTree = "<group>"; };
+		9F5A990A82571B6C6AD1B790A5A773D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A56B1335C6890C52066B4F0A0880BF91 /* Pods-EnfocaTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnfocaTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A61E08527EFC3DBEDD4BFA0B5C45104C /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		ABC2A2A9875D9DADE4366CB8D4632C2F /* Pods-Enfoca-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Enfoca-dummy.m"; sourceTree = "<group>"; };
+		B08787015D6FEDC5FE3BD89EEFC513BC /* Pods-EnfocaTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EnfocaTests-dummy.m"; sourceTree = "<group>"; };
+		B337AFEF29722E46117AA23FC9796061 /* Pods-Enfoca Dev-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Enfoca Dev-acknowledgements.plist"; sourceTree = "<group>"; };
+		B54F491511541EC8FA80AEFCB2F5DAAF /* Pods_EnfocaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EnfocaTests.framework; path = "Pods-EnfocaTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA79CC214485F97A8254DE6A29C487C6 /* Pods-EnfocaUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnfocaUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BB6995158E9397751E37D99C7E4BBACF /* Pods-Enfoca-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Enfoca-acknowledgements.plist"; sourceTree = "<group>"; };
+		C4F522F24E1224CF86882ADE113FD464 /* Pods-Enfoca Dev-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Enfoca Dev-dummy.m"; sourceTree = "<group>"; };
+		DBA48C54AB315A7317F3DD387EF04883 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		DCF79F557B350FC2596FD80261BC8175 /* Pods-Enfoca.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Enfoca.modulemap"; sourceTree = "<group>"; };
+		DE4998477F7EB0200663FB10417446D7 /* Pods-EnfocaTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EnfocaTests.modulemap"; sourceTree = "<group>"; };
+		E0F606E19B253ACEFC49A53BDB61677A /* Pods-Data Import-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Data Import-resources.sh"; sourceTree = "<group>"; };
+		E261E99C1D1F938C1F00FE13AE0CEADA /* Pods-Enfoca Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Enfoca Dev.release.xcconfig"; sourceTree = "<group>"; };
+		E51A7675D7E419C901E8DA26E61909A7 /* Pods-Enfoca Dev-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Enfoca Dev-resources.sh"; sourceTree = "<group>"; };
+		EA15DBB4B11E9C72ACF490E819F5346D /* Pods-Data Import-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Data Import-frameworks.sh"; sourceTree = "<group>"; };
+		EAC88243AB9F702F3015F7068842116A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		EF122D0010AFC882DC563C9428577C62 /* Pods-Data Import.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Data Import.release.xcconfig"; sourceTree = "<group>"; };
+		FD18433DFFDF446508C823B7A0AF29D0 /* Pods-Data Import-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Data Import-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10ABE0D06EFA142C044E9C459B87B3AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF300BDBF536EBD98E045647AF887254 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A7B7121E34650AAB2223F7AF8D5CAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A8E1AC7A0F1E8F93D3B83B2AB7254A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B0D6C24BBDFC8142BFB0596DAD98E54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA141779AE0BD045516BC6FDCB6D2BB3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB35962E8952BD106B0B13C1181B8E60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA8649E4BA15C839BE734B048B77E9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0FFA5A290D8423BDAFBA6B9D10D122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B8A7E5DC5CCBE997A6625762993D0AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		058DD706B489947F75F862CC70514BC8 /* Pods-Enfoca */ = {
+			isa = PBXGroup;
+			children = (
+				33EF92F57B303077468FA22E00FA1E34 /* Info.plist */,
+				DCF79F557B350FC2596FD80261BC8175 /* Pods-Enfoca.modulemap */,
+				8499248885C0D43F95A96B7C2540D813 /* Pods-Enfoca-acknowledgements.markdown */,
+				BB6995158E9397751E37D99C7E4BBACF /* Pods-Enfoca-acknowledgements.plist */,
+				ABC2A2A9875D9DADE4366CB8D4632C2F /* Pods-Enfoca-dummy.m */,
+				3EB13CD288A0778B7E7D379A45744D59 /* Pods-Enfoca-frameworks.sh */,
+				7BF38797E2D21E1B014175CC6E4833CF /* Pods-Enfoca-resources.sh */,
+				38BA03EB01DAB5DD70C6B8450F5A4BF0 /* Pods-Enfoca-umbrella.h */,
+				01924E655F52B0D61B337DF470CC5347 /* Pods-Enfoca.debug.xcconfig */,
+				9A9C88169BB5B78A0BF21340BE085C6C /* Pods-Enfoca.release.xcconfig */,
+			);
+			name = "Pods-Enfoca";
+			path = "Target Support Files/Pods-Enfoca";
+			sourceTree = "<group>";
+		};
+		1DECF7299F0875E9BCB9492390207331 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26F9D6AB1F30C869A5F58AF8EF5A99C8 /* Crashlytics */,
+				D479A0301687E2A8F6F67D392B8551D2 /* Fabric */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		26F9D6AB1F30C869A5F58AF8EF5A99C8 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				5B0AC4555A08701A9F1760172610E0AF /* ANSCompatibility.h */,
+				A61E08527EFC3DBEDD4BFA0B5C45104C /* Answers.h */,
+				8DB331D62E03B90D571016097AB0A7E0 /* CLSAttributes.h */,
+				29DE526E5B1D3B37719460B12B391B91 /* CLSLogging.h */,
+				856A7EF81F93DD33C78FA7140067110C /* CLSReport.h */,
+				DBA48C54AB315A7317F3DD387EF04883 /* CLSStackFrame.h */,
+				200C81134ACADBF4B01AF7F1C51DE9EC /* Crashlytics.h */,
+				E268B07786115FF5D5DFF396150E695F /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		2DDA681774534EB985F60A3418A4C908 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92972CC1C216B42A9AB4B6EABB27FC16 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54317C176BE8C730F1ACC2527A10A0CC /* Pods-Data Import */ = {
+			isa = PBXGroup;
+			children = (
+				2337DFF15734AB5615D6252847A3D942 /* Info.plist */,
+				2EA3C620835CA288FB1EAB736F3C1644 /* Pods-Data Import.modulemap */,
+				8904C92C5C7776180C8B26E444684BDE /* Pods-Data Import-acknowledgements.markdown */,
+				FD18433DFFDF446508C823B7A0AF29D0 /* Pods-Data Import-acknowledgements.plist */,
+				012D84B57EABEDFC2476014F62F1C1D6 /* Pods-Data Import-dummy.m */,
+				EA15DBB4B11E9C72ACF490E819F5346D /* Pods-Data Import-frameworks.sh */,
+				E0F606E19B253ACEFC49A53BDB61677A /* Pods-Data Import-resources.sh */,
+				272968598A26EED94A85CB277115091B /* Pods-Data Import-umbrella.h */,
+				173481ED8497D803ACBE66D17164C141 /* Pods-Data Import.debug.xcconfig */,
+				EF122D0010AFC882DC563C9428577C62 /* Pods-Data Import.release.xcconfig */,
+			);
+			name = "Pods-Data Import";
+			path = "Target Support Files/Pods-Data Import";
+			sourceTree = "<group>";
+		};
+		62701911DEAF4A9D4A77C4A0BE252DFE /* Pods-Enfoca Dev */ = {
+			isa = PBXGroup;
+			children = (
+				9F5A990A82571B6C6AD1B790A5A773D1 /* Info.plist */,
+				12F8027E1F665E692CAC0F330081B5E3 /* Pods-Enfoca Dev.modulemap */,
+				243DA2BF77A31C0F0938C80AFC6F5A15 /* Pods-Enfoca Dev-acknowledgements.markdown */,
+				B337AFEF29722E46117AA23FC9796061 /* Pods-Enfoca Dev-acknowledgements.plist */,
+				C4F522F24E1224CF86882ADE113FD464 /* Pods-Enfoca Dev-dummy.m */,
+				912465E07C3B757ACAD74A8FDC653563 /* Pods-Enfoca Dev-frameworks.sh */,
+				E51A7675D7E419C901E8DA26E61909A7 /* Pods-Enfoca Dev-resources.sh */,
+				369304889DFC54A01A1F7521AF9AE14F /* Pods-Enfoca Dev-umbrella.h */,
+				8A138B3AB014B0C71290CCAC5BF8D606 /* Pods-Enfoca Dev.debug.xcconfig */,
+				E261E99C1D1F938C1F00FE13AE0CEADA /* Pods-Enfoca Dev.release.xcconfig */,
+			);
+			name = "Pods-Enfoca Dev";
+			path = "Target Support Files/Pods-Enfoca Dev";
+			sourceTree = "<group>";
+		};
+		675BC6ADBE750B842C6C81DB209D973A /* Pods-EnfocaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0FEA52323159C2EF24F5B6A6E1D68322 /* Info.plist */,
+				560FC8B44C7756417DB5D0A819491531 /* Pods-EnfocaUITests.modulemap */,
+				045FE218516A0660D236BDA8F5A145D5 /* Pods-EnfocaUITests-acknowledgements.markdown */,
+				BA79CC214485F97A8254DE6A29C487C6 /* Pods-EnfocaUITests-acknowledgements.plist */,
+				27FB3277FD4FE9934A0718177AE35175 /* Pods-EnfocaUITests-dummy.m */,
+				4CFA1897253FA561744EA6C8F66A78ED /* Pods-EnfocaUITests-frameworks.sh */,
+				8B4ABE353CD7802388A3A0D1AA9C18B4 /* Pods-EnfocaUITests-resources.sh */,
+				53FA0E6BFEE4A7514659B172700FF11F /* Pods-EnfocaUITests-umbrella.h */,
+				74A1569E22FE9B33918C490C4CFE377A /* Pods-EnfocaUITests.debug.xcconfig */,
+				4F629680FD1353F10B6D9EEFCF586F68 /* Pods-EnfocaUITests.release.xcconfig */,
+			);
+			name = "Pods-EnfocaUITests";
+			path = "Target Support Files/Pods-EnfocaUITests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1DECF7299F0875E9BCB9492390207331 /* Pods */,
+				D0C17D9E778D0A40085A9FB61D7E939E /* Products */,
+				81B2DFEE6A4406CF967AF3C26CF00EE1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81B2DFEE6A4406CF967AF3C26CF00EE1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				54317C176BE8C730F1ACC2527A10A0CC /* Pods-Data Import */,
+				058DD706B489947F75F862CC70514BC8 /* Pods-Enfoca */,
+				62701911DEAF4A9D4A77C4A0BE252DFE /* Pods-Enfoca Dev */,
+				86A6C7A88F793B85FC1EC908A557426D /* Pods-EnfocaTests */,
+				675BC6ADBE750B842C6C81DB209D973A /* Pods-EnfocaUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		86A6C7A88F793B85FC1EC908A557426D /* Pods-EnfocaTests */ = {
+			isa = PBXGroup;
+			children = (
+				74831FC4C04D096580C3D3371A33DEE8 /* Info.plist */,
+				DE4998477F7EB0200663FB10417446D7 /* Pods-EnfocaTests.modulemap */,
+				52BA78AE557AE6DDCEDFCCC3BBDACBB4 /* Pods-EnfocaTests-acknowledgements.markdown */,
+				A56B1335C6890C52066B4F0A0880BF91 /* Pods-EnfocaTests-acknowledgements.plist */,
+				B08787015D6FEDC5FE3BD89EEFC513BC /* Pods-EnfocaTests-dummy.m */,
+				414B73D343FCD4E5AE6310D07453FE25 /* Pods-EnfocaTests-frameworks.sh */,
+				20C71BE00042ACFD5A50DCB7355FCBFC /* Pods-EnfocaTests-resources.sh */,
+				0FC749DBFA71A9C23C37808E10176983 /* Pods-EnfocaTests-umbrella.h */,
+				7209B478F6CE6E8D452C3A84E9982B6D /* Pods-EnfocaTests.debug.xcconfig */,
+				0EA771892A66BD195B8541F4D322EDE9 /* Pods-EnfocaTests.release.xcconfig */,
+			);
+			name = "Pods-EnfocaTests";
+			path = "Target Support Files/Pods-EnfocaTests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0C17D9E778D0A40085A9FB61D7E939E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E2CB0A2A40F99A77267C19E275060A4 /* Pods_Data_Import.framework */,
+				7A514DCED23EE23CFDCFFDB9387781D5 /* Pods_Enfoca.framework */,
+				0DD97B0DEA4986BBBA79AEAEC399F5BA /* Pods_Enfoca_Dev.framework */,
+				B54F491511541EC8FA80AEFCB2F5DAAF /* Pods_EnfocaTests.framework */,
+				32608562B48E40B1B3FE1FA0D6FD2358 /* Pods_EnfocaUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D479A0301687E2A8F6F67D392B8551D2 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				494C290BDBEAED23BA5743A3CE2FA0D1 /* FABAttributes.h */,
+				82981FB005A4ED4C556297735FD4ACED /* Fabric.h */,
+				2DDA681774534EB985F60A3418A4C908 /* Frameworks */,
+			);
+			name = Fabric;
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		E268B07786115FF5D5DFF396150E695F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAC88243AB9F702F3015F7068842116A /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		59BFC121A16135265682A7DE5C2848D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7AA11C050CE06AF1E5ACFBA79CFAFC /* Pods-Enfoca-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6234C66D892AA131E6010E91815300B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC174BE79CE3C224ACD7830A3EA7E333 /* Pods-EnfocaTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DE2B74251EE306B6E55749A0B612F74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62D4AE94D4FF990A52A71C1D84FFDB2 /* Pods-Enfoca Dev-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A2AAFFDF9E8255E40928B9DD9371E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263B996FBE5AA30BAFBBC9CEF30952F2 /* Pods-EnfocaUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E34D9D7F8BF0567FD2A7A584D512CA3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADEA3D622C7034AEF35629574EC4888F /* Pods-Data Import-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A93F3610DC4B5D3085216CF1A739390 /* Pods-Enfoca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45B0B1B9A04B0F929E5A43A5703E686 /* Build configuration list for PBXNativeTarget "Pods-Enfoca" */;
+			buildPhases = (
+				141217334B801298592964E9281FADDF /* Sources */,
+				5A7B7121E34650AAB2223F7AF8D5CAB4 /* Frameworks */,
+				59BFC121A16135265682A7DE5C2848D4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Enfoca";
+			productName = "Pods-Enfoca";
+			productReference = 7A514DCED23EE23CFDCFFDB9387781D5 /* Pods_Enfoca.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4455CD06D9909ABB2D40ED381D923D51 /* Pods-Data Import */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1DF5ABBB99ABF6D24D260D8BFEC1C9D /* Build configuration list for PBXNativeTarget "Pods-Data Import" */;
+			buildPhases = (
+				BD029F6FBC6EEEBE21684DF22065B19B /* Sources */,
+				10ABE0D06EFA142C044E9C459B87B3AF /* Frameworks */,
+				E34D9D7F8BF0567FD2A7A584D512CA3E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Data Import";
+			productName = "Pods-Data Import";
+			productReference = 2E2CB0A2A40F99A77267C19E275060A4 /* Pods_Data_Import.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6E76CABCECC85680A8F1479F6CE435C8 /* Pods-EnfocaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDDB7513E4E4DF1E15067225479F37DC /* Build configuration list for PBXNativeTarget "Pods-EnfocaUITests" */;
+			buildPhases = (
+				DC6F00520C30309CE81B9A5EAD698D14 /* Sources */,
+				6B0D6C24BBDFC8142BFB0596DAD98E54 /* Frameworks */,
+				A5A2AAFFDF9E8255E40928B9DD9371E7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EnfocaUITests";
+			productName = "Pods-EnfocaUITests";
+			productReference = 32608562B48E40B1B3FE1FA0D6FD2358 /* Pods_EnfocaUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7A249C50ED17D525C669324B25B2EF0F /* Pods-EnfocaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53092A1D17EF55862D4816A2138AD367 /* Build configuration list for PBXNativeTarget "Pods-EnfocaTests" */;
+			buildPhases = (
+				C8C7EA1F0634ABC1D1C6F09D2B7DB2C2 /* Sources */,
+				BB35962E8952BD106B0B13C1181B8E60 /* Frameworks */,
+				6234C66D892AA131E6010E91815300B1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EnfocaTests";
+			productName = "Pods-EnfocaTests";
+			productReference = B54F491511541EC8FA80AEFCB2F5DAAF /* Pods_EnfocaTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F6AF34A49FBBAB6493DBBB878686B655 /* Pods-Enfoca Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C76B7E7BD3D97107ED837F39F9CC08E /* Build configuration list for PBXNativeTarget "Pods-Enfoca Dev" */;
+			buildPhases = (
+				C304BE87391A749CDDBC07D2358C66BF /* Sources */,
+				CF0FFA5A290D8423BDAFBA6B9D10D122 /* Frameworks */,
+				8DE2B74251EE306B6E55749A0B612F74 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Enfoca Dev";
+			productName = "Pods-Enfoca Dev";
+			productReference = 0DD97B0DEA4986BBBA79AEAEC399F5BA /* Pods_Enfoca_Dev.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D0C17D9E778D0A40085A9FB61D7E939E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4455CD06D9909ABB2D40ED381D923D51 /* Pods-Data Import */,
+				1A93F3610DC4B5D3085216CF1A739390 /* Pods-Enfoca */,
+				F6AF34A49FBBAB6493DBBB878686B655 /* Pods-Enfoca Dev */,
+				7A249C50ED17D525C669324B25B2EF0F /* Pods-EnfocaTests */,
+				6E76CABCECC85680A8F1479F6CE435C8 /* Pods-EnfocaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		141217334B801298592964E9281FADDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01DC03E0FEBCD2937FB0203BCB7E5611 /* Pods-Enfoca-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD029F6FBC6EEEBE21684DF22065B19B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3263DD1B42FA00ADD358B013FC4DC863 /* Pods-Data Import-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C304BE87391A749CDDBC07D2358C66BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B455C7FFDD4360606A1C10FF4741FE /* Pods-Enfoca Dev-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8C7EA1F0634ABC1D1C6F09D2B7DB2C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A03CA63837E516340C2F1345804788 /* Pods-EnfocaTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6F00520C30309CE81B9A5EAD698D14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE49BDF9E7130C634E63AF5239BCCB9 /* Pods-EnfocaUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		03532E5EE71C5F7252EE07A346EBDBA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A9C88169BB5B78A0BF21340BE085C6C /* Pods-Enfoca.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Enfoca/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Enfoca/Pods-Enfoca.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Enfoca;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1295B71584229E4D4C812A231EBF11CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F629680FD1353F10B6D9EEFCF586F68 /* Pods-EnfocaUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EnfocaUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EnfocaUITests/Pods-EnfocaUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EnfocaUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2A902893F8B9AF81ECBDA16752DFD972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A138B3AB014B0C71290CCAC5BF8D606 /* Pods-Enfoca Dev.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Enfoca Dev/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Enfoca Dev/Pods-Enfoca Dev.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Enfoca_Dev;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		31AA40873463CF72A22BEBA56CB72D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 173481ED8497D803ACBE66D17164C141 /* Pods-Data Import.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Data Import/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Data Import/Pods-Data Import.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Data_Import;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		32964B9F48AC4477E0E4F2BEC5FE3DE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EA771892A66BD195B8541F4D322EDE9 /* Pods-EnfocaTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EnfocaTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EnfocaTests/Pods-EnfocaTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EnfocaTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		503CD0298CDCA5A78EDE298AD50CF009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74A1569E22FE9B33918C490C4CFE377A /* Pods-EnfocaUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EnfocaUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EnfocaUITests/Pods-EnfocaUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EnfocaUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5EF3A7550BF8008ECB6636AEEFB98D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E261E99C1D1F938C1F00FE13AE0CEADA /* Pods-Enfoca Dev.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Enfoca Dev/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Enfoca Dev/Pods-Enfoca Dev.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Enfoca_Dev;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98979946FBCD6DBBC02964E2ED6A8AF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7209B478F6CE6E8D452C3A84E9982B6D /* Pods-EnfocaTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EnfocaTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EnfocaTests/Pods-EnfocaTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EnfocaTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C5F0E9B1324F5E08F25C5CABE901A86B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01924E655F52B0D61B337DF470CC5347 /* Pods-Enfoca.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Enfoca/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Enfoca/Pods-Enfoca.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Enfoca;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EF26A3C5B6EDA309192C6025F703DE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FA8C19580C78A87A4502D3D004ECF24F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF122D0010AFC882DC563C9428577C62 /* Pods-Data Import.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Data Import/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Data Import/Pods-Data Import.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Data_Import;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C76B7E7BD3D97107ED837F39F9CC08E /* Build configuration list for PBXNativeTarget "Pods-Enfoca Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A902893F8B9AF81ECBDA16752DFD972 /* Debug */,
+				5EF3A7550BF8008ECB6636AEEFB98D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF26A3C5B6EDA309192C6025F703DE0A /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53092A1D17EF55862D4816A2138AD367 /* Build configuration list for PBXNativeTarget "Pods-EnfocaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98979946FBCD6DBBC02964E2ED6A8AF3 /* Debug */,
+				32964B9F48AC4477E0E4F2BEC5FE3DE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1DF5ABBB99ABF6D24D260D8BFEC1C9D /* Build configuration list for PBXNativeTarget "Pods-Data Import" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31AA40873463CF72A22BEBA56CB72D9E /* Debug */,
+				FA8C19580C78A87A4502D3D004ECF24F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45B0B1B9A04B0F929E5A43A5703E686 /* Build configuration list for PBXNativeTarget "Pods-Enfoca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5F0E9B1324F5E08F25C5CABE901A86B /* Debug */,
+				03532E5EE71C5F7252EE07A346EBDBA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDDB7513E4E4DF1E15067225479F37DC /* Build configuration list for PBXNativeTarget "Pods-EnfocaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503CD0298CDCA5A78EDE298AD50CF009 /* Debug */,
+				1295B71584229E4D4C812A231EBF11CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
