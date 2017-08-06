@@ -255,47 +255,52 @@
                                             <action selector="cardSideSegmentedControlValueChanged:" destination="k4X-WW-dV3" eventType="valueChanged" id="OxZ-3k-dRG"/>
                                         </connections>
                                     </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Ir-ilw" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-bY-Sjt">
                                         <rect key="frame" x="90.5" y="416" width="140" height="50"/>
-                                        <color key="backgroundColor" red="0.7534174919128418" green="0.73358726501464844" blue="0.71666222810745239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="163" id="ORL-JL-iFL">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="140"/>
-                                            </constraint>
-                                            <constraint firstAttribute="height" constant="50" id="Z7O-ds-wja"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="cancelAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="5fQ-fj-dMc"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Ir-ilw" customClass="EnfocaButton" customModule="Data_Import" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="50"/>
+                                                <color key="backgroundColor" red="0.7534174919128418" green="0.73358726501464844" blue="0.71666222810745239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="163" id="ORL-JL-iFL">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="140"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="50" id="Z7O-ds-wja"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.33989286422729492" green="0.37534031271934509" blue="0.4418322741985321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cancelAction:" destination="k4X-WW-dV3" eventType="touchUpInside" id="5fQ-fj-dMc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Gzy-Ir-ilw" firstAttribute="centerX" secondItem="wP3-1r-zyq" secondAttribute="centerX" id="1dP-ec-DfZ"/>
                                     <constraint firstAttribute="trailing" secondItem="pnF-29-0al" secondAttribute="trailing" constant="8" id="A2J-gw-e6g"/>
                                     <constraint firstItem="8tO-2S-Pie" firstAttribute="centerX" secondItem="wP3-1r-zyq" secondAttribute="centerX" id="Imu-FA-dgm"/>
                                     <constraint firstItem="hKT-RD-vQo" firstAttribute="top" secondItem="8tO-2S-Pie" secondAttribute="bottom" constant="18" id="Rny-Je-nbh"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gzy-Ir-ilw" secondAttribute="bottom" constant="81" id="TdE-ae-uao">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ppm-bY-Sjt" secondAttribute="bottom" constant="30" id="TyP-Xn-9T2">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="81"/>
                                     </constraint>
                                     <constraint firstItem="pnF-29-0al" firstAttribute="leading" secondItem="wP3-1r-zyq" secondAttribute="leading" constant="8" id="k4b-gs-Ao1"/>
                                     <constraint firstItem="8tO-2S-Pie" firstAttribute="top" secondItem="pnF-29-0al" secondAttribute="bottom" constant="16" id="kSi-hT-F5X"/>
                                     <constraint firstItem="pnF-29-0al" firstAttribute="top" secondItem="wP3-1r-zyq" secondAttribute="top" constant="18" id="vNG-nz-yPo"/>
+                                    <constraint firstItem="Ppm-bY-Sjt" firstAttribute="centerX" secondItem="wP3-1r-zyq" secondAttribute="centerX" id="wm2-ix-dpv"/>
                                     <constraint firstItem="hKT-RD-vQo" firstAttribute="centerX" secondItem="wP3-1r-zyq" secondAttribute="centerX" id="zE2-di-xXp"/>
                                 </constraints>
                             </view>
@@ -316,6 +321,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="EqD-x1-8ua" id="XX2-GR-Hah"/>
+                        <outlet property="bodyToBottomConstraint" destination="MVK-qL-E6v" id="eb6-86-abE"/>
                         <outlet property="bodyView" destination="wP3-1r-zyq" id="EBs-Uq-3Vc"/>
                         <outlet property="browseButton" destination="QvO-LX-Fex" id="lG1-8E-1vL"/>
                         <outlet property="cardSideSegmentedControl" destination="pnF-29-0al" id="aoh-4d-HAX"/>
@@ -1064,7 +1070,7 @@
         <image name="speaker" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Exz-4G-xCA"/>
+        <segue reference="oQB-FF-xDm"/>
         <segue reference="Qlk-Ng-Knz"/>
         <segue reference="7OF-2a-AVh"/>
         <segue reference="1jO-wh-KqA"/>

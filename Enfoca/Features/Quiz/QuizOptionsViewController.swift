@@ -30,6 +30,7 @@ class QuizOptionsViewController: UIViewController {
     
     @IBOutlet weak var topToHeaderBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var bodyToBottomConstraint: NSLayoutConstraint!
     fileprivate var viewModel : QuizOptionsViewModel!
     fileprivate let quizOptionsToCardFrontViewAnimator = QuizOptionsToCardFrontViewAnimator()
     

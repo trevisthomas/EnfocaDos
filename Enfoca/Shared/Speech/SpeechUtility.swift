@@ -129,9 +129,7 @@ class SpeechUtility {
             self.recognitionTask = nil
         }
         
-        recorder.stop()
-        levelsHandler = nil
-//        stopMonitoringLevels()
+        stopMonitoringLevels()
         
         audioEngine.stop()
         recognitionRequest?.endAudio()
@@ -146,8 +144,6 @@ class SpeechUtility {
         } catch {
             print("audioSession properties weren't reset because of an error.")
         }
-//For some reason, if i call stop monitoring, the app crashes if you try to restart.  So im just leaving the monitor active until the view is destroyed
-//        stopMonitoringLevels()
         
     }
     
@@ -159,13 +155,14 @@ class SpeechUtility {
             timer = Timer.scheduledTimer(timeInterval: 0.02, target: self, selector: #selector(SpeechUtility.handleMicLevel(_:)), userInfo: nil, repeats: true)
         }
         
-//        delay(delayInSeconds: <#T##Double#>, callback: <#T##() -> ()#>)
         recorder.record()
     }
     
     private func stopMonitoringLevels() {
         levelsHandler = nil
-        timer?.invalidate()
+        //For some reason, if i stop the timer, the app crashes if you try do voice recognition.  So im just leaving the monitor active until the view is destroyed
+
+//        timer?.invalidate()
         recorder.stop()
     }
     

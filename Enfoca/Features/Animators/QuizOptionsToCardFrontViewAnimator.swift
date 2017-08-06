@@ -48,9 +48,13 @@ public class QuizOptionsToCardFrontViewAnimator: NSObject, UIViewControllerAnima
         
         let oldTopToHeaderBottomConstraint = fromViewController.topToHeaderBottomConstraint.constant
         
+        let oldBodyToBottomConstraint = fromViewController.bodyToBottomConstraint.constant
+        
         fromViewController.view.layoutIfNeeded()
         
         fromViewController.topToHeaderBottomConstraint.constant = oldTopToHeaderBottomConstraint + fromViewController.view.frame.height
+        
+        fromViewController.bodyToBottomConstraint.constant = oldBodyToBottomConstraint - fromViewController.view.frame.height
         
         let oldTitle = fromViewController.titleLabel.text
         CustomAnimations.animateExpandAndPullOut(target: fromViewController.titleLabel, delay: 0, duration: duration * 0.35, callback: {
