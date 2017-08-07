@@ -49,7 +49,8 @@ extension UIViewController{
         
         //REMOVE BEFORE RELEAE TO APP STORE!!!!!!!!!!
         request.testDevices = [ kGADSimulatorID,
-                                "91b2fe5490b84a564216fd2a22530806" // - my iPhone
+                                "91b2fe5490b84a564216fd2a22530806", // - my iPhone
+                                "ffd8eef13b33d7fbb0d5946cd96cbe38" // - trev ipad
         ]
         
         interstitial.load(request)
